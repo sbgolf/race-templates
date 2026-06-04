@@ -1,0 +1,24 @@
+{
+  "identity": {
+    "template": "destination-major",
+    "name": "Cascade Marathon",
+    "colors": {
+      "primary": "#FF5B2E"
+    }
+  },
+  "event": {
+    "date": "2026-09-20",
+    "location": "Portland \u2192 Pacific City, Oregon"
+  },
+  "registration": {
+    "url": "https://example.com/register",
+    "platform": "other"
+  },
+  "seo": {
+    "meta_title": "Cascade Marathon \u2014 September 20, 2026",
+    "meta_description": "Cascade Marathon is a point-to-point Boston qualifying race from the Cascade foothills to Pacific City, Oregon on September 20, 2026."
+  },
+  "analytics": {
+    "ga4_measurement_id": "G-XXXXXXXXXX"
+  }
+}
