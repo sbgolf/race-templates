@@ -1,0 +1,50 @@
+---
+const { race } = Astro.props;
+---
+<section class="pace" id="pace">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Pace Your Race</div>
+      <h2 class="sec-title">Pick your goal.<br>We'll show you <em>the math</em>.</h2>
+      <p class="lead">Every finish time is a series of splits you have to hit. Pick yours below — pace, mile splits, and elapsed time for every checkpoint, including the half. Print it, write it on your forearm, run by it.</p>
+    </div>
+
+    <div class="pace-card reveal">
+      <div class="pace-tabs" aria-label="Goal time picker">
+        <button class="pace-tab" data-goal="245" onclick="pickPace(this)">2:45</button>
+        <button class="pace-tab" data-goal="300" onclick="pickPace(this)">3:00</button>
+        <button class="pace-tab" data-goal="315" onclick="pickPace(this)">3:15</button>
+        <button class="pace-tab active bq" data-goal="330" onclick="pickPace(this)">3:30 <small>· BQ M 18-34</small></button>
+        <button class="pace-tab" data-goal="345" onclick="pickPace(this)">3:45</button>
+        <button class="pace-tab" data-goal="400" onclick="pickPace(this)">4:00 <small>· BQ M 50-54</small></button>
+        <button class="pace-tab" data-goal="415" onclick="pickPace(this)">4:15</button>
+      </div>
+
+      <div class="pace-body">
+        <div class="pace-summary">
+          <div class="pace-sum hl"><div class="l">Goal Finish</div><div class="v" id="paceGoal">3:30:00</div></div>
+          <div class="pace-sum"><div class="l">Pace / Mile</div><div class="v" id="paceMile">8:01</div></div>
+          <div class="pace-sum"><div class="l">Pace / Km</div><div class="v" id="paceKm">4:58</div></div>
+          <div class="pace-sum"><div class="l">Half Target</div><div class="v" id="paceHalf">1:45:00</div></div>
+        </div>
+
+        <div class="pace-table">
+          <div class="pace-row head">
+            <div>Marker</div>
+            <div>Split</div>
+            <div>Pace</div>
+            <div>Elapsed</div>
+          </div>
+          <div class="pace-row body" data-mile="1"><div>Mile 1</div><div class="split">8:01</div><div>8:01</div><div class="elapsed">0:08:01</div></div>
+          <div class="pace-row body" data-mile="5"><div>Mile 5</div><div class="split">40:05</div><div>8:01</div><div class="elapsed">0:40:05</div></div>
+          <div class="pace-row body" data-mile="10"><div>Mile 10</div><div class="split">1:20:10</div><div>8:01</div><div class="elapsed">1:20:10</div></div>
+          <div class="pace-row body highlight" data-mile="13.1"><div>Half · 13.1</div><div class="split">1:45:00</div><div>8:01</div><div class="elapsed">1:45:00</div></div>
+          <div class="pace-row body" data-mile="15"><div>Mile 15</div><div class="split">2:00:15</div><div>8:01</div><div class="elapsed">2:00:15</div></div>
+          <div class="pace-row body" data-mile="20"><div>Mile 20</div><div class="split">2:40:20</div><div>8:01</div><div class="elapsed">2:40:20</div></div>
+          <div class="pace-row body" data-mile="25"><div>Mile 25</div><div class="split">3:20:25</div><div>8:01</div><div class="elapsed">3:20:25</div></div>
+          <div class="pace-row body highlight" data-mile="26.2"><div>Finish · 26.2</div><div class="split">3:30:00</div><div>8:01</div><div class="elapsed">3:30:00</div></div>
+        </div>
+      </div>
+    </div>
+</div>
+</section>

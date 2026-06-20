@@ -1,0 +1,43 @@
+---
+const { race } = Astro.props;
+---
+<section class="hero" id="top">
+  <div class="hero-grid">
+    <div class="reveal">
+      <div class="hero-eyebrow">USATF Certified · Net -12 ft</div>
+      <h1>This is where<br>you run your<br><span class="accent">best time.</span></h1>
+      <div class="hero-date">
+        <strong>Sunday, November 8, 2026</strong>
+        <span>·</span>
+        <span>Capital City</span>
+        <span>·</span>
+        <span>7:00 AM gun</span>
+      </div>
+      <p class="lead">Flat. Fast. Pancake-flat. The Capital Marathon is built for one thing: clocking the time you came here to clock. 22% of last year's field qualified for Boston.</p>
+      <div class="hero-cta">
+        <button class="btn btn-accent" onclick="scrollToId('entry')">Register · $145</button>
+<button class="btn btn-ghost" style="color:var(--paper);border-color:rgba(250,250,252,.3)" onclick="scrollToId('pace')">Pace your race</button>
+      </div>
+      <div class="hero-keystat">
+        <div class="label">2025 BQ Rate</div>
+        <div class="v">22%<small>of 4,200 finishers</small></div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="race-clock">
+        <div class="rc-label">Race Clock · Lead Pack</div>
+        <div class="rc-time">2:11:24</div>
+        <div class="rc-splits">
+          <div class="rc-split"><div class="l">Mile 10</div><div class="v">50:18</div></div>
+          <div class="rc-split fast"><div class="l">Half</div><div class="v">1:05:42</div></div>
+          <div class="rc-split fast"><div class="l">Mile 20</div><div class="v">1:40:15</div></div>
+        </div>
+        <div class="rc-foot">
+          <span>2025 Course Record · M</span>
+          <span class="live">LIVE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

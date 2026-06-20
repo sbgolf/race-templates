@@ -12,7 +12,10 @@
     "scaffold:customer": "node scripts/scaffold-customer.mjs"
   },
   "dependencies": {
+    "@fontsource/big-shoulders-display": "^5.2.5",
     "@fontsource/fraunces": "^5.2.9",
+    "@fontsource/ibm-plex-mono": "^5.2.7",
+    "@fontsource/ibm-plex-sans": "^5.2.8",
     "@fontsource/nunito": "^5.2.7",
     "astro": "latest"
   }

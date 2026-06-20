@@ -1,0 +1,22 @@
+---
+const { race } = Astro.props;
+---
+<nav id="nav">
+  <a href="#top" class="brand">
+    <svg class="mark" viewBox="0 0 40 40" fill="none">
+      <rect x="3" y="3" width="34" height="34" rx="6" fill="#2D5BFF"/>
+      <path d="M11 24 L15 17 L21 24 L26 14 L31 24" stroke="#FAFAFC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <div class="name">THE CAPITAL<small>Marathon · 2026</small></div>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#course">Course</a>
+    <a href="#pace">Pace</a>
+    <a href="#records">Records</a>
+    <a href="#gallery">Race Day</a>
+    <a href="#entry">Register</a>
+    <a href="#travel">Travel</a>
+    <button class="btn btn-accent" onclick="scrollToId('entry')">Enter →</button>
+  </div>
+  <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
