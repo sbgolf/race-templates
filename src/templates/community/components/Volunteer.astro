@@ -1,5 +1,6 @@
 ---
 const { race } = Astro.props;
+const volunteerUrl = race.volunteer?.signup_url;
 ---
 
 <section class="vol" id="volunteer">
@@ -8,14 +9,14 @@ const { race } = Astro.props;
       <div class="reveal">
         <div class="kicker">Volunteers</div>
         <h2>The race only works because <em>340 people</em> show up to help.</h2>
-        <p>Every aid station, every cheer corner, every finish-line photo — it's all volunteers. Most of them have never run a half marathon. They show up because Hartwell takes care of Hartwell.</p>
+        <p>{race.volunteer?.description || 'Every aid station, cheer corner, and finish-line moment depends on volunteers.'}</p>
         <ul class="vol-list">
           <li>3–4 hour shifts, Friday or Saturday</li>
           <li>Free race entry credit for next year's event</li>
           <li>Volunteer brunch Sunday morning at Tory's</li>
           <li>Kids 12+ welcome alongside a parent</li>
         </ul>
-        <button class="btn btn-accent" onclick="notify(this,'Volunteer signup sent — demo only')">Volunteer with us →</button>
+        {volunteerUrl ? <a class="btn btn-accent" href={volunteerUrl} target="_blank" rel="noopener">Volunteer with us →</a> : null}
       </div>
       <div class="reveal">
         <div class="vol-photo">

@@ -1,11 +1,15 @@
 ---
+import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 const { race } = Astro.props;
+const registerAttrs = registerClickAttributes(race, 'finale');
+const eventDate = race.event?.date ? new Date(`${race.event.date}T12:00:00`) : null;
+const displayDate = eventDate ? eventDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) : 'Race day';
 ---
 
 <section class="finale">
   <div class="wrap">
     <h2 class="reveal">See you on the <em>start line</em>.</h2>
-    <p class="reveal">Saturday, May 18, 2026. Hartwell Town Common. Bring a friend, bring your kids, bring a cowbell. We'll bring the pancakes.</p>
-    <button class="btn btn-dark reveal" onclick="scrollToId('entry')">Register now →</button>
+    <p class="reveal">{displayDate}. {race.event?.venue || race.event?.location}. Bring a friend, bring your family, and join the community on the start line.</p>
+    <a class="btn btn-dark reveal" href={race.registration?.url} target="_blank" rel="noopener" {...registerAttrs}>{race.registration?.cta_label || 'Register now'} →</a>
   </div>
 </section>

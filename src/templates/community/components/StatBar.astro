@@ -1,12 +1,15 @@
 ---
 const { race } = Astro.props;
+const stats = race.stats || [
+  { value: String(race.distances?.length || 0), label: 'Distances' },
+  { value: race.event?.location, label: 'Host community' },
+  { value: race.identity?.edition || 'Annual', label: 'Race tradition' },
+  { value: race.registration?.opens || 'Open', label: 'Registration' }
+];
 ---
 
 <div class="statbar">
   <div class="statbar-grid stagger">
-    <div class="stat"><div class="n">3,200</div><div class="l">Runners</div></div>
-    <div class="stat"><div class="n"><em>4</em> Distances</div><div class="l">For Every Age</div></div>
-    <div class="stat"><div class="n">14<sup style="font-size:.55em;color:var(--honey)">th</sup></div><div class="l">Annual Race</div></div>
-    <div class="stat"><div class="n">$420K</div><div class="l">For Local Schools</div></div>
+    {stats.map((stat) => <div class="stat"><div class="n">{stat.value}</div><div class="l">{stat.label}</div></div>)}
   </div>
 </div>

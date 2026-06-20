@@ -3,6 +3,7 @@
     "template": "community",
     "name": "Hartwell Hometown Half",
     "tagline": "The race that brings a town together.",
+    "edition": "14th Annual",
     "hero_image": {
       "alt": "Illustrated sunrise over Hartwell Town Common",
       "placeholder": "inline-svg"
@@ -17,11 +18,20 @@
     "location": "Hartwell, MA",
     "venue": "Hartwell Town Common"
   },
+  "organization": {
+    "name": "Hartwell Education Foundation"
+  },
+  "stats": [
+    {"value": "3,200", "label": "Runners"},
+    {"value": "4", "label": "Distances"},
+    {"value": "14th", "label": "Annual Race"},
+    {"value": "$420K", "label": "For Local Schools"}
+  ],
   "distances": [
-    {"id": "half", "name": "Half Marathon", "distance": "13.1 mi", "elevation_gain": "+247 ft", "start_time": "7:30 AM", "aid_stations": 6, "profile": "Rolling", "map_label": "Half Marathon Loop", "featured": true},
-    {"id": "10k", "name": "10K", "distance": "6.2 mi", "elevation_gain": "+118 ft", "start_time": "7:30 AM", "aid_stations": 3, "profile": "Rolling", "map_label": "10K Loop"},
-    {"id": "5k", "name": "5K", "distance": "3.1 mi", "elevation_gain": "+42 ft", "start_time": "8:00 AM", "aid_stations": 1, "profile": "Flat", "map_label": "5K Loop"},
-    {"id": "kids", "name": "Kids' Mile", "distance": "1 mi", "elevation_gain": "Flat", "start_time": "9:30 AM", "aid_stations": 1, "profile": "Flat", "map_label": "Kids' Loop"}
+    {"id": "half", "name": "Half Marathon", "distance": "13.1 mi", "elevation_gain": "+247 ft", "start_time": "7:30 AM", "aid_stations": 6, "profile": "Rolling", "map_label": "Half Marathon Loop", "featured": true, "price": "$75", "price_amount": "75", "highlights": ["Tech shirt + finisher medal", "Chip timing + certified course", "Post-race pancake breakfast"]},
+    {"id": "10k", "name": "10K", "distance": "6.2 mi", "elevation_gain": "+118 ft", "start_time": "7:30 AM", "aid_stations": 3, "profile": "Rolling", "map_label": "10K Loop", "price": "$45", "price_amount": "45", "highlights": ["Tech shirt + finisher medal", "Chip timing", "Pancake breakfast included"]},
+    {"id": "5k", "name": "5K", "distance": "3.1 mi", "elevation_gain": "+42 ft", "start_time": "8:00 AM", "aid_stations": 1, "profile": "Flat", "map_label": "5K Loop", "price": "$30", "price_amount": "30", "highlights": ["Race shirt + medal", "Family-friendly · strollers welcome", "Pancake breakfast included"]},
+    {"id": "kids", "name": "Kids' Mile", "distance": "1 mi", "elevation_gain": "Flat", "start_time": "9:30 AM", "aid_stations": 1, "profile": "Flat", "map_label": "Kids' Loop", "price": "Free", "price_amount": "0", "highlights": ["Race shirt + medal", "Parent escort welcome", "Pre-race warm-up"]}
   ],
   "registration": {
     "url": "https://example.com/register",
@@ -49,6 +59,7 @@
     "meta_description": "Hartwell Hometown Half is a community race in Hartwell, MA with Half Marathon, 10K, 5K, and Kids' Mile distances supporting local schools."
   },
   "analytics": {
-    "ga4_measurement_id": "G-XXXXXXXXXX"
+    "ga4_measurement_id": "G-XXXXXXXXXX",
+    "register_click_event_name": "register_click"
   }
 }

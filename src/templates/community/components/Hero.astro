@@ -1,22 +1,26 @@
 ---
+import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 const { race } = Astro.props;
+const registerAttrs = registerClickAttributes(race, 'hero');
+const registerUrl = race.registration?.url || '#entry';
+const registerLabel = race.registration?.cta_label || 'Register now';
+const eventDate = race.event?.date ? new Date(`${race.event.date}T12:00:00`) : null;
+const displayDate = eventDate ? eventDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) : 'Race day';
+const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];
 ---
 
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="reveal">
-      <div class="hero-eyebrow">14th Annual · Hartwell, MA</div>
-      <h1>The race that <em>brings</em> a town together.</h1>
-      <div class="hero-date">Saturday, May 18, 2026</div>
-      <p class="lead">Four distances. One town. One Saturday morning every May since 2012 — when Hartwell wakes up early and lines the streets to cheer.</p>
+      <div class="hero-eyebrow">{race.identity?.edition || 'Community race'} · {race.event?.location}</div>
+      <h1>{race.identity?.tagline || race.identity?.name}</h1>
+      <div class="hero-date">{displayDate}</div>
+      <p class="lead">{race.seo?.meta_description}</p>
       <div class="hero-distances">
-        <span class="dist-chip flagship">Half Marathon</span>
-        <span class="dist-chip">10K</span>
-        <span class="dist-chip">5K</span>
-        <span class="dist-chip">Kids' Mile</span>
+        {race.distances?.map((distance) => <span class:list={["dist-chip", { flagship: distance.id === featuredDistance?.id }]}>{distance.name}</span>)}
       </div>
       <div class="hero-cta">
-<button class="btn btn-accent" onclick="scrollToId('entry')">Register Now</button>
+        <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel}</a>
         <button class="btn btn-ghost" onclick="scrollToId('course')">See the Course</button>
       </div>
     </div>
@@ -24,7 +28,7 @@ const { race } = Astro.props;
       <div class="hero-photo">
         <div class="hero-meta-strip">
           <span class="hero-meta-pill">RACE DAY</span>
-          <span class="hero-meta-pill right">May 18 · 7:30 AM</span>
+          <span class="hero-meta-pill right">{race.event?.date} · {featuredDistance?.start_time}</span>
         </div>
         <div class="ph-img ph-town">
           <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
