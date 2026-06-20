@@ -17,6 +17,12 @@ This applies universally across all race templates, including:
 - Travel/logistics
 - Footer/final CTA
 
+## Template-specific exceptions
+
+### Community
+
+The Community template intentionally uses a map placeholder plus a simple elevation-gain note for each distance rather than the interactive elevation profile used by Destination Major. This preserves the small-town/community positioning and keeps the distance picker focused on distance, elevation gain, start time, aid stations, course profile, map label, and schedule filtering.
+
 ## Launch gate
 
 Every template preview must pass before review:

@@ -1,0 +1,77 @@
+---
+import Nav from "./Nav.astro";
+import Hero from "./Hero.astro";
+import StatBar from "./StatBar.astro";
+import CoursePicker from "./CoursePicker.astro";
+import Schedule from "./Schedule.astro";
+import Story from "./Story.astro";
+import Gallery from "./Gallery.astro";
+import Volunteer from "./Volunteer.astro";
+import Entry from "./Entry.astro";
+import Sponsors from "./Sponsors.astro";
+import FAQ from "./FAQ.astro";
+import Finale from "./Finale.astro";
+import Footer from "./Footer.astro";
+const { race } = Astro.props;
+---
+<Nav race={race} />
+<main id="main-content">
+  <Hero race={race} />
+  <StatBar race={race} />
+  <CoursePicker race={race} />
+  <Schedule race={race} />
+  <Story race={race} />
+  <Gallery race={race} />
+  <Volunteer race={race} />
+  <Entry race={race} />
+  <Sponsors race={race} />
+  <FAQ race={race} />
+  <Finale race={race} />
+</main>
+<Footer race={race} />
+
+<script is:inline>
+  function scrollToId(id){const target=document.getElementById(id);if(target)target.scrollIntoView({behavior:'smooth'});closeMenu();}
+
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav?.classList.toggle('scrolled',scrollY>40));
+
+  const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+  function closeMenu(){navLinks?.classList.remove('open');nav?.classList.remove('menu-open');document.body.classList.remove('no-scroll')}
+  function toggleMenu(){
+    const isOpen=navLinks?.classList.toggle('open');
+    nav?.classList.toggle('menu-open',!!isOpen);
+    document.body.classList.toggle('no-scroll',!!isOpen);
+  }
+  burger?.addEventListener('click',toggleMenu);
+  navLinks?.querySelectorAll('a,button').forEach(el=>el.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeMenu()});
+
+  document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click',()=>{
+      const item=q.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+      if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+    });
+  });
+
+  function notify(btn,msg){const orig=btn.textContent;btn.textContent=msg;btn.disabled=true;setTimeout(()=>{btn.textContent=orig;btn.disabled=false},2400);}
+
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){
+        const el=en.target;
+        if(el.classList.contains('stagger')){[...el.children].forEach((c,i)=>{c.style.transitionDelay=(i*90)+'ms';});}
+        el.classList.add('in');io.unobserve(el);
+      }
+    });
+  },{threshold:.14});
+  document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',(e)=>{
+      const href=a.getAttribute('href');
+      if(href && href.length>1){e.preventDefault();scrollToId(href.substring(1));}
+    });
+  });
+</script>

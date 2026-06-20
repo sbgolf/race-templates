@@ -1,0 +1,48 @@
+---
+const { race } = Astro.props;
+---
+
+<section class="vol" id="volunteer">
+  <div class="wrap">
+    <div class="vol-grid">
+      <div class="reveal">
+        <div class="kicker">Volunteers</div>
+        <h2>The race only works because <em>340 people</em> show up to help.</h2>
+        <p>Every aid station, every cheer corner, every finish-line photo — it's all volunteers. Most of them have never run a half marathon. They show up because Hartwell takes care of Hartwell.</p>
+        <ul class="vol-list">
+          <li>3–4 hour shifts, Friday or Saturday</li>
+          <li>Free race entry credit for next year's event</li>
+          <li>Volunteer brunch Sunday morning at Tory's</li>
+          <li>Kids 12+ welcome alongside a parent</li>
+        </ul>
+        <button class="btn btn-accent" onclick="notify(this,'Volunteer signup sent — demo only')">Volunteer with us →</button>
+      </div>
+      <div class="reveal">
+        <div class="vol-photo">
+          <div class="ph-img ph-vol">
+            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <ellipse cx="200" cy="100" rx="220" ry="80" fill="#A8C8A8" opacity=".4"/>
+              <path d="M0 200 L400 200 L400 300 L0 300Z" fill="#4F6F58" opacity=".7"/>
+              <g fill="#2D4435" opacity=".88">
+                <ellipse cx="120" cy="170" rx="14" ry="18"/>
+                <rect x="113" y="185" width="14" height="40"/>
+                <ellipse cx="170" cy="172" rx="14" ry="18"/>
+                <rect x="163" y="187" width="14" height="38"/>
+                <ellipse cx="220" cy="168" rx="14" ry="18"/>
+                <rect x="213" y="183" width="14" height="42"/>
+                <ellipse cx="270" cy="172" rx="14" ry="18"/>
+                <rect x="263" y="187" width="14" height="38"/>
+              </g>
+              <g fill="#D89B2A" opacity=".82">
+                <circle cx="120" cy="172" r="5"/>
+<circle cx="170" cy="174" r="5"/>
+                <circle cx="220" cy="170" r="5"/>
+                <circle cx="270" cy="174" r="5"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

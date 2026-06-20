@@ -1,0 +1,113 @@
+---
+const { race } = Astro.props;
+---
+
+<section class="course" id="course">
+  <div class="wrap">
+    <div class="course-head">
+      <div class="reveal">
+        <div class="kicker">The Course</div>
+        <h2 class="sec-title">Same town, <em>four ways</em> to run it.</h2>
+        <p class="lead">Every distance starts and finishes at Hartwell Town Common. Pick yours, and the course updates to match — including aid stations, mile markers, and a simple elevation note.</p>
+      </div>
+    </div>
+
+    <div class="picker reveal" role="tablist" aria-label="Distance picker">
+      <button class="pk active" role="tab" aria-selected="true" data-distance="half" onclick="pickDistance(this)">Half <small>· 13.1 mi</small></button>
+      <button class="pk" role="tab" aria-selected="false" data-distance="10k" onclick="pickDistance(this)">10K <small>· 6.2 mi</small></button>
+      <button class="pk" role="tab" aria-selected="false" data-distance="5k" onclick="pickDistance(this)">5K <small>· 3.1 mi</small></button>
+<button class="pk" role="tab" aria-selected="false" data-distance="kids" onclick="pickDistance(this)">Kids' Mile</button>
+    </div>
+
+    <div class="course-grid">
+      <div class="course-map reveal">
+        <div class="ph-img ph-route">
+          <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <!-- river -->
+            <path d="M0 280 Q 100 260 200 290 T 400 280 T 500 290 L500 320 Q 400 310 300 320 T 100 310 T 0 320 Z" fill="#A8C8D8" opacity=".55"/>
+            <!-- forest blocks -->
+            <g fill="#7BA483" opacity=".4">
+              <ellipse cx="80" cy="120" rx="35" ry="30"/>
+              <ellipse cx="120" cy="100" rx="32" ry="28"/>
+              <ellipse cx="380" cy="150" rx="40" ry="35"/>
+              <ellipse cx="420" cy="180" rx="32" ry="28"/>
+            </g>
+            <!-- roads / route -->
+            <path id="routePath" d="M 250 360 Q 200 330 180 280 Q 160 230 200 200 Q 240 180 290 160 Q 340 140 310 110 Q 280 90 250 100 Q 220 110 200 130 Q 180 150 220 170 Q 260 190 280 230 Q 290 270 250 290 Q 220 300 230 340 Q 240 360 250 360"
+                  fill="none" stroke="#C6643D" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 4" opacity=".88"/>
+            <!-- start/finish marker -->
+            <circle cx="250" cy="360" r="9" fill="#2A1F18"/>
+            <circle cx="250" cy="360" r="4" fill="#FAF6EE"/>
+            <!-- mile markers -->
+            <g fill="#9F4A26">
+              <circle cx="180" cy="280" r="4"/>
+              <circle cx="200" cy="200" r="4"/>
+              <circle cx="290" cy="160" r="4"/>
+              <circle cx="310" cy="110" r="4"/>
+              <circle cx="220" cy="170" r="4"/>
+              <circle cx="280" cy="230" r="4"/>
+            </g>
+          </svg>
+        </div>
+        <div class="map-info">
+          <span>HARTWELL TOWN COMMON</span>
+          <b id="mapDistance">Half Marathon Loop</b>
+        </div>
+      </div>
+
+      <div class="course-details reveal">
+        <div class="detail-row">
+          <span class="l">Distance</span>
+          <span class="v" id="dDistance">13.1 <em>mi</em></span>
+        </div>
+        <div class="detail-row">
+          <span class="l">Elevation Gain</span>
+          <span class="v" id="dGain">+247 ft</span>
+        </div>
+        <div class="detail-row">
+          <span class="l">Start Time</span>
+          <span class="v" id="dStart">7:30 <em>AM</em></span>
+        </div>
+        <div class="detail-row">
+          <span class="l">Aid Stations</span>
+          <span class="v" id="dAid">6</span>
+        </div>
+        <div class="detail-row">
+          <span class="l">Course Profile</span>
+          <span class="v" id="dProfile">Rolling</span>
+        </div>
+        <div class="detail-row">
+          <span class="l">USATF Certified</span>
+          <span class="v" id="dCert" style="font-size:1rem;font-family:'Nunito';font-weight:700;color:var(--sage-deep)">✓ #MA-2024-HHH</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  // Community CoursePicker owns selected-distance state and publishes it to other sections.
+  const distanceData={
+    half:{name:'Half Marathon',distance:'13.1 <em>mi</em>',gain:'+247 ft',start:'7:30 <em>AM</em>',aid:6,profile:'Rolling',mapLabel:'Half Marathon Loop'},
+    '10k':{name:'10K',distance:'6.2 <em>mi</em>',gain:'+118 ft',start:'7:30 <em>AM</em>',aid:3,profile:'Rolling',mapLabel:'10K Loop'},
+    '5k':{name:'5K',distance:'3.1 <em>mi</em>',gain:'+42 ft',start:'8:00 <em>AM</em>',aid:1,profile:'Flat',mapLabel:'5K Loop'},
+    kids:{name:"Kids' Mile",distance:'1 <em>mi</em>',gain:'Flat',start:'9:30 <em>AM</em>',aid:1,profile:'Flat',mapLabel:"Kids' Loop"}
+  };
+
+  function pickDistance(btn){
+    document.querySelectorAll('.pk').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-selected','false');});
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected','true');
+    const selected=btn.dataset.distance;
+    const data=distanceData[selected];
+
+    document.getElementById('dDistance').innerHTML=data.distance;
+    document.getElementById('dGain').textContent=data.gain;
+    document.getElementById('dStart').innerHTML=data.start;
+    document.getElementById('dAid').textContent=data.aid;
+    document.getElementById('dProfile').textContent=data.profile;
+    document.getElementById('mapDistance').textContent=data.mapLabel;
+
+    document.dispatchEvent(new CustomEvent('community-distance-change',{detail:{selected,data}}));
+  }
+</script>

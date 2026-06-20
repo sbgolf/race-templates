@@ -1,0 +1,18 @@
+:root {
+  --ink:#2A1F18;
+  --ink-2:#3D2E22;
+  --paper:#FAF6EE;
+  --paper-2:#F2EAD8;
+  --paper-3:#EBE0CB;
+  --accent:#9F4A26;
+  --accent-deep:#7A3217;
+  --sage:#6B8E6F;
+  --sage-deep:#3D5C3F;
+  --gold:#D89B2A;
+  --honey:#E8B863;
+  --line:rgba(42,31,24,.14);
+  --line-dark:rgba(250,246,238,.18);
+  --maxw:1180px;
+  --r:18px;
+  --r-sm:10px;
+}
