@@ -1,0 +1,460 @@
+---
+const { race } = Astro.props;
+---
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#top" class="brand">
+    <svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M2 32 14 10l7 12 5-8 12 18z" fill="#FF5B2E"/><path d="M2 32 14 10l4.5 7.7L9 32z" fill="#F0A94B"/></svg>
+    <span>CASCADE<small>Marathon</small></span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#course">Course</a>
+    <a href="#raceday">Race Day</a>
+    <a href="#qualify">Qualify</a>
+    <a href="#entry">Entry</a>
+    <a href="#weekend">Weekend</a>
+    <a href="#travel">Travel</a>
+    <a href="#faq">FAQ</a>
+    <button class="btn btn-accent" onclick="scrollToId('entry')">Enter the Ballot</button>
+  </div>
+  <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="sky"></div>
+  <div class="sun"></div>
+
+  <div class="ridge r4"><svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0 200 L0 120 L160 60 L320 110 L520 30 L700 100 L900 45 L1120 105 L1280 55 L1440 110 L1440 200Z" fill="#241B30"/></svg></div>
+  <div class="ridge r3"><svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0 200 L0 140 L200 70 L380 130 L560 55 L760 120 L980 60 L1180 125 L1360 70 L1440 110 L1440 200Z" fill="#1B2433"/></svg></div>
+  <div class="ridge r2"><svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0 200 L0 150 L180 95 L420 150 L640 80 L880 145 L1100 90 L1320 150 L1440 120 L1440 200Z" fill="#121A27"/></svg></div>
+  <div class="ridge r1"><svg viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0 220 L0 170 L240 120 L480 175 L720 110 L960 175 L1200 125 L1440 170 L1440 220Z" fill="#0B0E13"/></svg></div>
+  <div class="haze"></div>
+
+  <div class="hero-inner">
+    <span class="eyebrow">Abbott-track candidate · Pacific Northwest</span>
+    <h1>Cascade<span class="thin">The marathon that runs downhill to the sea.</span></h1>
+    <div class="hero-meta">
+      <span><span class="dot">●</span> Sunday, September 20, 2026</span>
+      <span><span class="dot">●</span> Portland → Pacific City, Oregon</span>
+      <span><span class="dot">●</span> 26.2 miles · net downhill</span>
+    </div>
+
+    <div class="countdown" id="countdown" aria-label="Countdown to race day">
+<div class="cd-unit"><div class="cd-num" id="cd-d">--</div><div class="cd-lab">Days</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-h">--</div><div class="cd-lab">Hours</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-m">--</div><div class="cd-lab">Minutes</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-s">--</div><div class="cd-lab">Seconds</div></div>
+    </div>
+
+    <div class="hero-cta">
+      <button class="btn btn-accent" onclick="scrollToId('entry')">Enter the 2026 Ballot →</button>
+      <button class="btn btn-ghost" onclick="scrollToId('course')">Explore the Course</button>
+    </div>
+  </div>
+
+  <div class="scrollcue"><span>Scroll</span><span class="line"></span></div>
+</header>
+
+<!-- STAT BAR -->
+<div class="statbar">
+  <div class="statbar-grid stagger" id="statbar">
+    <div class="stat"><div class="n">12,000</div><div class="l">Runners</div></div>
+    <div class="stat"><div class="n">−948 ft</div><div class="l">Net Drop</div></div>
+    <div class="stat"><div class="n">58%</div><div class="l">BQ Rate '25</div></div>
+    <div class="stat"><div class="n">41</div><div class="l">Countries</div></div>
+    <div class="stat"><div class="n">$2.1M</div><div class="l">Raised for Charity</div></div>
+  </div>
+</div>
+
+<!-- COURSE -->
+<section class="course" id="course">
+  <div class="wrap">
+    <div class="course-head">
+      <div class="reveal">
+        <div class="kicker">The Course</div>
+        <h2 class="sec-title">A fast line from the Cascades to the coast.</h2>
+      </div>
+      <p class="lead reveal">Point-to-point, paved end to end, and net downhill the whole way — a true PR-and-qualifier course with the scenery of a destination race. Hover the profile to read any point on the route.</p>
+    </div>
+
+    <div class="elev-card reveal">
+      <div class="elev-top">
+        <h3>Elevation Profile</h3>
+        <div class="elev-readout">Mile <b id="elMile">0.0</b> &nbsp;·&nbsp; <span id="elElev">1,180</span> ft</div>
+      </div>
+      <div class="elev-wrap">
+        <svg id="elevSvg" viewBox="0 0 1000 240" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="elevFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FF5B2E" stop-opacity=".55"/>
+              <stop offset="100%" stop-color="#FF5B2E" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g id="gridLines"></g>
+          <path id="elevArea" fill="url(#elevFill)"/>
+          <path id="elevLine" fill="none" stroke="#FF5B2E" stroke-width="2.5" stroke-linejoin="round"/>
+          <line class="elev-cursor" id="elCursor" y1="0" y2="240"/>
+          <circle class="elev-dot" id="elDot" r="5"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="course-feats stagger" id="courseFeats">
+      <div class="feat"><div class="ic">⛰️</div><h3>Start at altitude</h3><p>Gun goes off at 1,180 ft in the Cascade foothills — crisp September air, sunrise over the ridgeline.</p></div>
+      <div class="feat"><div class="ic">📉</div><h3>Gravity on your side</h3><p>A steady, runnable descent through miles 4–18. No quad-shredding drops — graded for fast legal times.</p></div>
+      <div class="feat"><div class="ic">🌊</div><h3>Finish at the Pacific</h3><p>The final straight runs onto the boardwalk at Pacific City, the ocean in full view as you cross.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RACE DAY GALLERY -->
+<section class="gallery" id="raceday">
+  <div class="wrap">
+    <div class="gal-head">
+      <div class="reveal">
+        <div class="kicker">Race Day</div>
+        <h2 class="sec-title">What the day looks like.</h2>
+      </div>
+      <p class="lead reveal">From the gun in the Cascade foothills to the boardwalk at Pacific City — three hours of running through some of the most photographed terrain on the West Coast.</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <figure class="g-photo g-1">
+        <div class="ph-img ph-sunrise">
+          <svg viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<circle cx="200" cy="240" r="130" fill="#FFE7B8" opacity=".18"/>
+            <circle cx="200" cy="240" r="80" fill="#FFE7B8" opacity=".45"/>
+            <circle cx="200" cy="240" r="55" fill="#FFEFC8" opacity=".85"/>
+            <path d="M0 380 L80 330 L160 360 L240 310 L320 350 L400 320 L400 600 L0 600Z" fill="#5A2A40" opacity=".55"/>
+            <path d="M0 450 L70 405 L150 430 L230 380 L310 415 L400 395 L400 600 L0 600Z" fill="#3A1A2D" opacity=".75"/>
+            <path d="M0 520 L90 475 L180 500 L270 450 L360 480 L400 470 L400 600 L0 600Z" fill="#1A0E18"/>
+          </svg>
+        </div>
+        <figcaption>Mile 0 · Gun off at first light, 1,180 ft.</figcaption>
+      </figure>
+      <figure class="g-photo g-2">
+        <div class="ph-img ph-descent">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <ellipse cx="200" cy="100" rx="150" ry="40" fill="#5CB89D" opacity=".18"/>
+            <path d="M0 170 L70 145 L140 160 L210 138 L280 152 L350 142 L400 155 L400 300 L0 300Z" fill="#0F2B23" opacity=".7"/>
+            <path d="M0 215 L80 188 L160 205 L240 182 L320 200 L400 192 L400 300 L0 300Z" fill="#06140F"/>
+          </svg>
+        </div>
+        <figcaption>The descent into mile 8.</figcaption>
+      </figure>
+      <figure class="g-photo g-3">
+        <div class="ph-img ph-pack">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect x="0" y="130" width="400" height="50" fill="#7E5C9C" opacity=".25"/>
+            <ellipse cx="320" cy="155" rx="180" ry="25" fill="#A881C4" opacity=".3"/>
+            <path d="M0 200 L80 180 L160 195 L240 175 L320 188 L400 182 L400 300 L0 300Z" fill="#0A0E1F" opacity=".88"/>
+          </svg>
+        </div>
+        <figcaption>Lead pack at mile 18.</figcaption>
+      </figure>
+      <figure class="g-photo g-4">
+        <div class="ph-img ph-coast">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <ellipse cx="200" cy="80" rx="180" ry="40" fill="#A8DCE8" opacity=".25"/>
+            <line x1="0" y1="158" x2="400" y2="158" stroke="#1F5A6E" stroke-width="1" opacity=".55"/>
+            <ellipse cx="200" cy="170" rx="12" ry="55" fill="#FFEFC8" opacity=".2"/>
+            <ellipse cx="200" cy="170" rx="5" ry="40" fill="#FFEFC8" opacity=".7"/>
+          </svg>
+        </div>
+        <figcaption>First sight of the Pacific.</figcaption>
+      </figure>
+      <figure class="g-photo g-5">
+        <div class="ph-img ph-finish">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <ellipse cx="200" cy="200" rx="200" ry="60" fill="#FFD79B" opacity=".3"/>
+            <rect x="0" y="128" width="400" height="22" fill="#FFEFC8" opacity=".88"/>
+            <rect x="0" y="148" width="400" height="3" fill="#F0A94B"/>
+          </svg>
+        </div>
+        <figcaption>Pacific City. The finish.</figcaption>
+      </figure>
+    </div>
+
+    <p class="gallery-note reveal">Placeholder visuals — race photography swaps in before launch.</p>
+  </div>
+</section>
+
+<!-- QUALIFYING -->
+<section class="bq" id="qualify">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Boston Qualifying</div>
+      <h2 class="sec-title">Built so your time actually counts.</h2>
+    </div>
+    <p class="lead reveal">Cascade is USATF-certified (course #OR-26-CASCADE) and a Boston Marathon qualifying race. Run your number here and you'll have a verified result that the B.A.A. accepts.</p>
+
+    <div class="bq-grid">
+      <div class="bq-note reveal">
+        <h3>Why runners chase a BQ here</h3>
+        <p>The net-downhill profile plays to even-paced running, the September date sits in the sweet spot of fall fitness, and the small, fast field means clean lines from gun to tape.</p>
+        <p>Live, chip-verified splits post to your B.A.A.-ready certificate within 24 hours of finishing — no waiting, no manual submission.</p>
+        <span class="bq-badge">✓ B.A.A.
+Qualifier · Certified Course</span>
+      </div>
+
+      <div class="reveal">
+        <table class="bq-table">
+          <thead><tr><th>Age Group</th><th>Men</th><th>Women</th></tr></thead>
+          <tbody>
+            <tr><td>18–34</td><td class="t">2:55:00</td><td class="t">3:25:00</td></tr>
+            <tr><td>35–39</td><td class="t">3:00:00</td><td class="t">3:30:00</td></tr>
+            <tr><td>40–44</td><td class="t">3:05:00</td><td class="t">3:35:00</td></tr>
+            <tr><td>45–49</td><td class="t">3:15:00</td><td class="t">3:45:00</td></tr>
+            <tr><td>50–54</td><td class="t">3:20:00</td><td class="t">3:50:00</td></tr>
+            <tr><td>55–59</td><td class="t">3:30:00</td><td class="t">4:00:00</td></tr>
+            <tr><td>60–64</td><td class="t">3:50:00</td><td class="t">4:20:00</td></tr>
+            <tr><td>65–69</td><td class="t">4:05:00</td><td class="t">4:35:00</td></tr>
+            <tr><td>70+</td><td class="t">4:20:00</td><td class="t">4:50:00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTRY -->
+<section id="entry">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Secure Your Place</div>
+      <h2 class="sec-title">Three ways through the start line.</h2>
+    </div>
+
+    <div class="entry-grid">
+      <div class="tier reveal">
+        <h3>Ballot</h3>
+        <div class="sub">Open Sept 1 – Oct 15, 2025</div>
+        <div class="tprice">$185<span>/ entry</span></div>
+        <ul>
+          <li>Randomized draw, results in November</li>
+          <li>Full refund if not drawn</li>
+          <li>Technical race tee + finisher medal</li>
+          <li>Chip timing & B.A.A. certificate</li>
+        </ul>
+        <button class="btn btn-dark" onclick="notify(this,'Ballot entry saved — demo only')">Enter the Ballot</button>
+      </div>
+
+      <div class="tier featured reveal">
+        <span class="tier-tag">Most Popular</span>
+        <h3>Guaranteed</h3>
+        <div class="sub">For runners with a recent qualifying time</div>
+        <div class="tprice">$245<span>/ entry</span></div>
+        <ul>
+          <li>Skip the draw — instant confirmation</li>
+          <li>Sub-3:30 proof from the last 24 months</li>
+          <li>Preferred corral placement</li>
+          <li>Premium kit + expo fast-track</li>
+          <li>Reserved gear-check & start village</li>
+        </ul>
+        <button class="btn btn-accent" onclick="notify(this,'Guaranteed entry saved — demo only')">Claim Guaranteed Spot</button>
+      </div>
+
+      <div class="tier reveal">
+        <h3>Charity</h3>
+        <div class="sub">Run for one of 40 partner causes</div>
+        <div class="tprice">$0<span>+ fundraising</span></div>
+        <ul>
+          <li>Guaranteed bib, no ballot needed</li>
+          <li>$1,500 minimum fundraising goal</li>
+          <li>Dedicated charity cheer zones</li>
+          <li>Fundraiser coaching & toolkit</li>
+        </ul>
+        <button class="btn btn-dark" onclick="notify(this,'Charity interest saved — demo only')">Run for a Cause</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKEND -->
+<section class="sched" id="weekend">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Race Weekend</div>
+      <h2 class="sec-title">Three days of festival, one perfect morning.</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal"><div class="tl-day">Friday · Sept 18</div><h3>Cascade Expo opens</h3><p>Bib pickup, gear from 60+ brands, and the elite athlete panel at the Portland Convention Center.</p><span class="tl-time">10:00 AM – 8:00 PM</span></div>
+      <div class="tl-item reveal"><div class="tl-day">Saturday · Sept 19</div><h3>Shakeout run & 5K</h3><p>A 3-mile guided shakeout along the river, followed by the family 5K and kids' dash.</p><span class="tl-time">8:00 AM</span></div>
+      <div class="tl-item reveal"><div class="tl-day">Sunday · Sept 20</div><h3>Marathon start</h3><p>Wave starts from the foothills village. Sunrise gun, net-downhill miles, Pacific finish.
+</p><span class="tl-time">6:45 AM</span></div>
+      <div class="tl-item reveal"><div class="tl-day">Sunday · Sept 20</div><h3>Finish festival</h3><p>Boardwalk celebration at Pacific City — local food, live music, and ocean-side recovery zone.</p><span class="tl-time">9:30 AM – 3:00 PM</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAVEL -->
+<section id="travel">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Plan Your Trip</div>
+      <h2 class="sec-title">Everything sorted before you toe the line.</h2>
+    </div>
+    <div class="travel-grid stagger" id="travelGrid">
+      <div class="tcard tc1"><span class="ic">✈️</span><h3>Getting here</h3><p>Fly into PDX, 35 min from the start village. Free race shuttle from 12 host hotels.</p></div>
+      <div class="tcard tc2"><span class="ic">🏨</span><h3>Where to stay</h3><p>Discounted host-hotel blocks downtown and on the coast. Book early — they fill fast.</p></div>
+      <div class="tcard tc3"><span class="ic">📣</span><h3>Spectator guide</h3><p>Five cheer zones with live tracking, plus the can't-miss oceanfront finish straight.</p></div>
+      <div class="tcard tc4"><span class="ic">🌤️</span><h3>Race-day weather</h3><p>Average start 48°F, finish 61°F. Crisp, dry September mornings — ideal for fast times.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<div class="sponsors">
+  <div class="wrap">
+    <div class="sp-lab">Proudly supported by</div>
+    <div class="sp-row">
+      <span>NORTHWIND</span><span>Summit&nbsp;Labs</span><span>RIDGELINE</span><span>Pacifica</span><span>TERRA&nbsp;Fuel</span><span>Meridian</span>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Good to Know</div>
+      <h2 class="sec-title">Questions, answered.</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item"><button class="faq-q">What's the time limit?<span class="pm"></span></button><div class="faq-a"><p>A generous 7-hour course limit, with a rolling sweep behind the final runner. Aid stations stay open the full window.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Is the course really a legal Boston qualifier?<span class="pm"></span></button><div class="faq-a"><p>Yes. The route is USATF-certified and meets B.A.A. requirements, with a net elevation drop well within the allowable limit. Your time counts.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can I defer or transfer my entry?<span class="pm"></span></button><div class="faq-a"><p>One free deferral to the following year is allowed until 30 days out. Transfers to another runner are supported through the official portal until August 20.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Are there pacers?<span class="pm"></span></button><div class="faq-a"><p>Official pace groups run from 3:00 through 4:30 in 15-minute bands, plus dedicated qualifying-time pacers for the most common BQ standards.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What's included with my entry?<span class="pm"></span></button><div class="faq-a"><p>Chip timing, finisher medal, technical shirt, on-course nutrition, gear check, finish-line festival access, and your B.A.A.-ready certificate.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="finale">
+  <div class="wrap">
+    <h2>Your fastest<br>marathon awaits.</h2>
+    <p>Join the list for ballot reminders, training plans, and first access to the 2026 start line.</p>
+    <div class="signup">
+      <input type="email" id="emailInput" placeholder="you@email.com" aria-label="Email address">
+      <button class="btn btn-accent" onclick="subscribe()">Notify Me</button>
+    </div>
+    <div class="msg" id="signupMsg"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot">
+    <div>
+      <div class="brand"><svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M2 32 14 10l7 12 5-8 12 18z" fill="#FF5B2E"/><path d="M2 32 14 10l4.5 7.7L9 32z" fill="#F0A94B"/></svg><span>CASCADE<small>Marathon</small></span></div>
+      <p>A point-to-point Boston qualifier from the Cascade foothills to the Pacific coast. September 20, 2026.</p>
+    </div>
+    <div><h2 class="foot-title">Race</h2><ul><li><a href="#course">Course</a></li><li><a href="#qualify">Qualifying</a></li><li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
+    <div><h2 class="foot-title">Runners</h2><ul><li><a href="#travel">Travel</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Results</a></li><li><a href="#">Volunteer</a></li></ul></div>
+    <div><h2 class="foot-title">Connect</h2><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Cascade Marathon. A demo concept site.</span>
+    <span>Built as a proof of concept.</span>
+  </div>
+</footer>
+
+<script is:inline>
+  // ---- smooth scroll helper ----
+  function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});closeMenu();}
+
+  // ---- nav scroll state ----
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+
+  // ---- mobile menu ----
+  const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+  function closeMenu(){navLinks.classList.remove('open')}
+  burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+
+  // ---- countdown ----
+  const RACE=new Date('2026-09-20T06:45:00-07:00').getTime();
+  function tick(){
+    const now=Date.now(),d=RACE-now;
+    if(d<0)return;
+    const dd=Math.floor(d/86400000),hh=Math.floor(d%86400000/3600000),mm=Math.floor(d%3600000/60000),ss=Math.floor(d%60000/1000);
+    document.getElementById('cd-d').textContent=dd;
+    document.getElementById('cd-h').textContent=String(hh).padStart(2,'0');
+    document.getElementById('cd-m').textContent=String(mm).padStart(2,'0');
+    document.getElementById('cd-s').textContent=String(ss).padStart(2,'0');
+  }
+  tick();setInterval(tick,1000);
+
+  // ---- elevation profile ----
+  // [mile, elevation ft] — net downhill from 1180 to ~30
+  const pts=[[0,1180],[2,1130],[4,1090],[6,980],[8,870],[10,760],[12,690],[14,640],[16,560],[18,470],[19,520],[20,440],[22,300],[24,180],[25,90],[26.2,30]];
+  const MAXM=26.2, W=1000, H=240, PADT=18, PADB=16;
+  const elev=pts.map(p=>p[1]), maxE=Math.max(...elev), minE=Math.min(...elev);
+  const x=m=>m/MAXM*W;
+  const y=e=>PADT+(1-(e-minE)/(maxE-minE))*(H-PADT-PADB);
+  let dLine='M'+pts.map(p=>x(p[0]).toFixed(1)+' '+y(p[1]).toFixed(1)).join(' L');
+  document.getElementById('elevLine').setAttribute('d',dLine);
+  document.getElementById('elevArea').setAttribute('d',dLine+` L${W} ${H} L0 ${H} Z`);
+  // gridlines
+  let g='';for(let i=1;i<5;i++){const yy=PADT+i/5*(H-PADT-PADB);g+=`<line x1="0" y1="${yy}" x2="${W}" y2="${yy}" stroke="rgba(246,242,234,.08)" stroke-width="1"/>`}
+  document.getElementById('gridLines').innerHTML=g;
+  // interpolate elevation at a given mile
+  function elevAt(mi){
+    for(let i=0;i<pts.length-1;i++){
+      if(mi>=pts[i][0]&&mi<=pts[i+1][0]){
+        const t=(mi-pts[i][0])/(pts[i+1][0]-pts[i][0]);
+        return pts[i][1]+t*(pts[i+1][1]-pts[i][1]);
+      }
+    }
+    return pts[pts.length-1][1];
+  }
+  const svg=document.getElementById('elevSvg'),cur=document.getElementById('elCursor'),dot=document.getElementById('elDot'),
+        elMile=document.getElementById('elMile'),elElev=document.getElementById('elElev');
+  function moveCursor(clientX){
+    const r=svg.getBoundingClientRect();
+    let px=(clientX-r.left)/r.width;px=Math.max(0,Math.min(1,px));
+    const mi=px*MAXM, e=elevAt(mi), vx=x(mi), vy=y(e);
+    cur.setAttribute('x1',vx);cur.setAttribute('x2',vx);cur.style.opacity=1;
+    dot.setAttribute('cx',vx);dot.setAttribute('cy',vy);dot.style.opacity=1;
+    elMile.textContent=mi.toFixed(1);
+    elElev.textContent=Math.round(e).toLocaleString();
+  }
+  svg.addEventListener('mousemove',e=>moveCursor(e.clientX));
+  svg.addEventListener('touchmove',e=>{moveCursor(e.touches[0].clientX);},{passive:true});
+  svg.addEventListener('mouseleave',()=>{cur.style.opacity=0;dot.style.opacity=0;elMile.textContent='0.0';elElev.textContent='1,180';});
+
+  // ---- FAQ accordion ----
+  document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click',()=>{
+      const item=q.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+      if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+    });
+  });
+
+  // ---- button micro-confirmation ----
+  function notify(btn,msg){const o=btn.textContent;btn.textContent='✓ '+msg;btn.style.opacity='.85';setTimeout(()=>{btn.textContent=o;btn.style.opacity='1';},2200);}
+  function subscribe(){
+    const i=document.getElementById('emailInput'),m=document.getElementById('signupMsg');
+    if(/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value)){m.textContent="You're on the list — see you at the start line. (Demo only)";i.value='';}
+    else{m.textContent='Please enter a valid email address.';}
+  }
+
+  // ---- scroll reveal ----
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach((en)=>{
+      if(en.isIntersecting){
+        const el=en.target;
+        if(el.classList.contains('stagger')){
+          [...el.children].forEach((c,i)=>{c.style.transitionDelay=(i*90)+'ms';});
+        }
+        el.classList.add('in');io.unobserve(el);
+      }
+    });
+  },{threshold:.16});
+  document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>

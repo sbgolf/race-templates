@@ -1,35 +1,24 @@
 ---
-import config from '../../data/samples/cascade-marathon.json';
-import { registerClickAttributes, registerClickListenerScript, ga4Snippet } from '../../shared/analytics/register-click.mjs';
-const registerAttrs = registerClickAttributes(config, 'preview-hero');
+import DestinationMajorPreview from "../../templates/destination-major/pages/DestinationMajorPreview.astro";
+import cascade from "../../data/samples/cascade-marathon.json";
+import { ga4Snippet, registerClickListenerScript } from "../../shared/analytics/register-click.mjs";
 ---
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{config.seo.meta_title}</title>
-    <meta name="description" content={config.seo.meta_description} />
-    <Fragment set:html={ga4Snippet(config)} />
-    <style>
-      :root { color-scheme: light; font-family: system-ui, sans-serif; }
-      body { margin: 0; background: #fff8f2; color: #132033; }
-      main { min-height: 100vh; display: grid; place-items: center; padding: 2rem; }
-      section { max-width: 760px; }
-      .eyebrow { color: #ff5b2e; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
-      h1 { font-size: clamp(3rem, 9vw, 7rem); line-height: .9; margin: .25rem 0; }
-      a { display: inline-flex; margin-top: 1rem; padding: 1rem 1.25rem; background: #ff5b2e; color: white; border-radius: 999px; font-weight: 800; text-decoration: none; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <section>
-        <p class="eyebrow">{config.event.date} · {config.event.location}</p>
-        <h1>{config.identity.name}</h1>
-        <p>{config.identity.tagline}</p>
-        <p>{config.distances[0].name} · {config.distances[0].distance} · Starts {config.distances[0].start_time}</p>
-        <a href={config.registration.url} {...registerAttrs}>{config.registration.cta_label}</a>
-      </section>
-    </main>
-    <Fragment set:html={registerClickListenerScript()} />
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{cascade.seo.meta_title}</title>
+  <meta name="description" content={cascade.seo.meta_description}>
+  <Fragment set:html={ga4Snippet(cascade)} />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%230B0E13'/%3E%3Cpath d='M2 32 14 10l7 12 5-8 12 18z' fill='%23FF5B2E'/%3E%3Cpath d='M2 32 14 10l4.5 7.7L9 32z' fill='%23F0A94B'/%3E%3C/svg%3E">
+</head>
+<body>
+  <DestinationMajorPreview race={cascade} />
+  <script type="module">
+    import { initDestinationMajorInteractions } from '../../shared/utils/destination-major-interactions.js';
+    initDestinationMajorInteractions();
+  </script>
+  <Fragment set:html={registerClickListenerScript()} />
+</body>
 </html>
