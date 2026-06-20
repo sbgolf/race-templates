@@ -23,6 +23,10 @@ This applies universally across all race templates, including:
 
 The Community template intentionally uses a map placeholder plus a simple elevation-gain note for each distance rather than the interactive elevation profile used by Destination Major. This preserves the small-town/community positioning and keeps the distance picker focused on distance, elevation gain, start time, aid stations, course profile, map label, and schedule filtering.
 
+### Performance
+
+The Performance template intentionally uses a single-distance conversion funnel with pace, records, and BQ proof sections instead of a distance picker. Keep all performance bands high-contrast, explicitly colored, and tuned for fast-scanning race-day proof points.
+
 ## Launch gate
 
 Every template preview must pass before review:

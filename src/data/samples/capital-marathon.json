@@ -1,43 +1,171 @@
 {
   "identity": {
     "template": "performance",
-    "name": "Capital City Marathon",
-    "tagline": "Fast streets. Serious goals.",
+    "name": "The Capital Marathon",
+    "slug": "capital-marathon",
     "colors": {
-      "primary": "#D71920",
-      "secondary": "#111827"
-    }
+      "primary": "#2D5BFF",
+      "secondary": "#FFD600",
+      "success": "#00C853",
+      "ink": "#0A0A12"
+    },
+    "tagline": "Flat. Fast. Built for your Boston qualifier."
   },
   "event": {
-    "date": "2026-04-12",
-    "location": "Capital City, USA",
-    "venue": "Capitol Plaza"
+    "date": "2026-11-08",
+    "time": "07:00",
+    "location": "Capital City",
+    "timezone": "America/New_York"
   },
   "distances": [
     {
-      "id": "marathon",
       "name": "Marathon",
-      "distance": "26.2 mi",
-      "start_time": "6:45 AM",
-      "featured": true
+      "distance_miles": 26.2,
+      "start_time": "07:00",
+      "cutoff": "6:00:00",
+      "id": "marathon",
+      "distance": "26.2 mi"
+    }
+  ],
+  "course": {
+    "type": "Point-to-Point",
+    "certification": "MA-25-CFM",
+    "net_elevation": -12,
+    "max_climb": {
+      "feet": 86,
+      "mile": 11
+    },
+    "elevation_profile": [
+      {
+        "mile": 0,
+        "feet": 142
+      },
+      {
+        "mile": 3,
+        "feet": 147
+      },
+      {
+        "mile": 6,
+        "feet": 154
+      },
+      {
+        "mile": 9,
+        "feet": 150
+      },
+      {
+        "mile": 13.1,
+        "feet": 158
+      },
+      {
+        "mile": 17,
+        "feet": 146
+      },
+      {
+        "mile": 21,
+        "feet": 138
+      },
+      {
+        "mile": 26.2,
+        "feet": 130
+      }
+    ],
+    "pace_groups": [
+      "3:00",
+      "3:15",
+      "3:30",
+      "3:45",
+      "4:00",
+      "4:15",
+      "4:30",
+      "4:45",
+      "5:00"
+    ]
+  },
+  "proof": {
+    "bq_rate": 22,
+    "bq_finishers": 924,
+    "field_cap": 4200,
+    "sold_out_years": 4
+  },
+  "records": [
+    {
+      "year": 2025,
+      "mens_time": "2:11:24",
+      "womens_time": "2:28:50",
+      "mens_winner": "Tadesse Yemane",
+      "womens_winner": "Marisol Vega"
+    },
+    {
+      "year": 2024,
+      "mens_time": "2:12:08",
+      "womens_time": "2:30:14",
+      "mens_winner": "Jonas Eriksen",
+      "womens_winner": "Amina Diallo"
+    },
+    {
+      "year": 2023,
+      "mens_time": "2:13:42",
+      "womens_time": "2:31:22",
+      "mens_winner": "Mateo Rios",
+      "womens_winner": "Claire Benton"
+    },
+    {
+      "year": 2022,
+      "mens_time": "2:15:09",
+      "womens_time": "2:33:01",
+      "mens_winner": "Peter Kimani",
+      "womens_winner": "Hannah Weiss"
+    },
+    {
+      "year": 2021,
+      "mens_time": "2:16:30",
+      "womens_time": "2:34:48",
+      "mens_winner": "Dylan Porter",
+      "womens_winner": "Nora Sato"
+    }
+  ],
+  "entry_tiers": [
+    {
+      "name": "Standard Entry",
+      "price": 145,
+      "subtitle": "Open until cap",
+      "corral_upgrade": false,
+      "features": [
+        "Bib + B-tag chip timing",
+        "Tech race shirt + finisher's medal",
+        "Pre-race expo + packet pickup",
+        "Post-race meal + recovery zone",
+        "Course photos \u00b7 free download",
+        "Boston Athletic Association certificate if you qualify"
+      ]
+    },
+    {
+      "name": "Sub-Elite Corral",
+      "price": 145,
+      "subtitle": "Qualifier: sub-3:00 (M) / sub-3:30 (W)",
+      "corral_upgrade": true,
+      "verification_required": true,
+      "features": [
+        "Everything in Standard",
+        "Front-corral start \u00b7 behind the elites",
+        "Dedicated pre-race warm-up area",
+        "Personal bag check at finish line",
+        "Recovery zone access \u00b7 ice baths + PT",
+        "Submit qualifying time at registration"
+      ]
     }
   ],
   "registration": {
-    "url": "https://example.com/capital/register",
-    "platform": "runsignup",
-    "cta_label": "Claim your spot"
+    "url": "https://example.com/register",
+    "platform": "other",
+    "cta_label": "Register now"
   },
   "seo": {
-    "meta_title": "Capital City Marathon — Fast BQ Course",
-    "meta_description": "Capital City Marathon is a performance-focused marathon with a fast Boston-qualifying course."
+    "meta_title": "The Capital Marathon \u2014 November 8, 2026",
+    "meta_description": "The Capital Marathon is a flat, fast, USATF-certified Boston qualifying marathon in Capital City on November 8, 2026."
   },
   "analytics": {
-    "ga4_measurement_id": "G-XXXXXXXXXX",
-    "register_click_event_name": "register_click"
-  },
-  "proof": {
-    "bq_rate": "18%",
-    "bq_finishers": 412
+    "ga4_measurement_id": "G-XXXXXXXXXX"
   },
   "contacts": {
     "race_director_email": "director@example.com"

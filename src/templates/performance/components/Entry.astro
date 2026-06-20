@@ -1,0 +1,44 @@
+---
+const { race } = Astro.props;
+---
+<section class="entry" id="entry">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Registration</div>
+      <h2 class="sec-title">Enter the <em>chase</em>.</h2>
+      <p class="lead">Field caps at 4,200. We sell out by mid-July every year — and faster the closer the race gets. Pick a tier, secure your bib, focus on the training.</p>
+    </div>
+
+    <div class="entry-grid stagger">
+      <div class="etier">
+        <h3>Standard Entry</h3>
+        <div class="sub">Open until cap</div>
+        <div class="pp">$145<small>/ bib</small></div>
+        <ul>
+          <li>Bib + B-tag chip timing</li>
+          <li>Tech race shirt + finisher's medal</li>
+          <li>Pre-race expo + packet pickup</li>
+          <li>Post-race meal + recovery zone</li>
+          <li>Course photos · free download</li>
+          <li>Boston Athletic Association certificate if you qualify</li>
+        </ul>
+        <button class="btn btn-accent" onclick="notify(this,'Registration started · Demo')">Register Standard</button>
+      </div>
+
+      <div class="etier featured">
+        <h3>Sub-Elite Corral</h3>
+        <div class="sub">Qualifier: sub-3:00 (M) / sub-3:30 (W)</div>
+        <div class="pp">$145<small>/ bib + proof</small></div>
+        <ul>
+          <li>Everything in Standard</li>
+          <li>Front-corral start · behind the elites</li>
+          <li>Dedicated pre-race warm-up area</li>
+          <li>Personal bag check at finish line</li>
+          <li>Recovery zone access · ice baths + PT</li>
+          <li>Submit qualifying time at registration</li>
+        </ul>
+        <button class="btn btn-yellow" onclick="notify(this,'Sub-elite app started · Demo')">Apply for Sub-Elite</button>
+      </div>
+    </div>
+  </div>
+</section>
