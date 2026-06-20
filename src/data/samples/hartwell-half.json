@@ -1,0 +1,54 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Hartwell Hometown Half",
+    "tagline": "The race that brings a town together.",
+    "hero_image": {
+      "alt": "Illustrated sunrise over Hartwell Town Common",
+      "placeholder": "inline-svg"
+    },
+    "colors": {
+      "primary": "#C6643D",
+      "secondary": "#6B8E6F"
+    }
+  },
+  "event": {
+    "date": "2026-05-18",
+    "location": "Hartwell, MA",
+    "venue": "Hartwell Town Common"
+  },
+  "distances": [
+    {"id": "half", "name": "Half Marathon", "distance": "13.1 mi", "elevation_gain": "+247 ft", "start_time": "7:30 AM", "aid_stations": 6, "profile": "Rolling", "map_label": "Half Marathon Loop", "featured": true},
+    {"id": "10k", "name": "10K", "distance": "6.2 mi", "elevation_gain": "+118 ft", "start_time": "7:30 AM", "aid_stations": 3, "profile": "Rolling", "map_label": "10K Loop"},
+    {"id": "5k", "name": "5K", "distance": "3.1 mi", "elevation_gain": "+42 ft", "start_time": "8:00 AM", "aid_stations": 1, "profile": "Flat", "map_label": "5K Loop"},
+    {"id": "kids", "name": "Kids' Mile", "distance": "1 mi", "elevation_gain": "Flat", "start_time": "9:30 AM", "aid_stations": 1, "profile": "Flat", "map_label": "Kids' Loop"}
+  ],
+  "registration": {
+    "url": "https://example.com/register",
+    "platform": "other",
+    "cta_label": "Register now",
+    "opens": "2026-01-15"
+  },
+  "volunteer": {
+    "signup_url": "https://example.com/volunteer",
+    "description": "3–4 hour race-weekend shifts supporting aid stations, cheer corners, packet pickup, and finish-line hospitality.",
+    "photo": {
+      "alt": "Illustrated Hartwell volunteers on race morning",
+      "placeholder": "inline-svg"
+    }
+  },
+  "schedule": [
+    {"day": "Friday · May 17", "name": "Bib + Race Kit Pickup", "time": "3 – 7 PM", "location": "Hartwell Town Hall", "applies_to_distances": ["all"]},
+    {"day": "Saturday · May 18", "name": "Half Marathon & 10K Start", "time": "7:30 AM", "location": "Town Common", "applies_to_distances": ["half", "10k"]},
+    {"day": "Saturday · May 18", "name": "5K Start", "time": "8:00 AM", "location": "Town Common", "applies_to_distances": ["5k"]},
+    {"day": "Saturday · May 18", "name": "Kids' Mile", "time": "9:30 AM", "location": "Town Common", "applies_to_distances": ["kids"]}
+  ],
+  "sponsors": ["Hartwell Bank", "Tory's Diner", "SUMMIT ORTHO", "The Lighthouse Café", "Bridgepoint Realty", "Mountain & Co."],
+  "seo": {
+    "meta_title": "Hartwell Hometown Half — May 18, 2026",
+    "meta_description": "Hartwell Hometown Half is a community race in Hartwell, MA with Half Marathon, 10K, 5K, and Kids' Mile distances supporting local schools."
+  },
+  "analytics": {
+    "ga4_measurement_id": "G-XXXXXXXXXX"
+  }
+}

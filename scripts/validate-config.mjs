@@ -6,7 +6,8 @@ import { validateRaceConfig } from '../src/shared/schema/race-config-schema.mjs'
 const files = process.argv.slice(2);
 const targets = files.length ? files : [
   'src/data/samples/cascade-marathon.json',
-  'src/data/samples/capital-marathon.json'
+  'src/data/samples/capital-marathon.json',
+  'src/data/samples/hartwell-half.json'
 ];
 
 let failed = false;

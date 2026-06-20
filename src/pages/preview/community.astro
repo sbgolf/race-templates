@@ -1,0 +1,17 @@
+---
+import CommunityPreview from "../../templates/community/pages/CommunityPreview.astro";
+import hartwell from "../../data/samples/hartwell-half.json";
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{hartwell.seo.meta_title}</title>
+  <meta name="description" content={hartwell.seo.meta_description}>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23FAF6EE'/%3E%3Ccircle cx='20' cy='20' r='16' fill='%23C6643D'/%3E%3Cpath d='M12 20 L17 25 L28 14' stroke='%23FAF6EE' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+</head>
+<body>
+  <CommunityPreview race={hartwell} />
+</body>
+</html>

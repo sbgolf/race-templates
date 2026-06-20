@@ -1,0 +1,128 @@
+---
+const { race } = Astro.props;
+---
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="gallery-head reveal">
+      <div class="kicker">Race Day, captured</div>
+      <h2 class="sec-title">What it actually <em>looks like</em>.</h2>
+      <p class="lead">A morning unlike any other Saturday in May — the only day all year when our small town fills up with 3,200 runners and the people who love them.</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <figure class="g-photo g1">
+        <div class="ph-img ph-startline">
+          <svg viewBox="0 0 600 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <ellipse cx="300" cy="80" rx="280" ry="60" fill="#FFE7B8" opacity=".5"/>
+            <rect x="0" y="60" width="600" height="6" fill="#C6643D" opacity=".55"/>
+            <rect x="280" y="50" width="40" height="50" fill="#9F4A26" opacity=".75"/>
+            <g fill="#2A1F18" opacity=".72">
+              <rect x="80" y="155" width="14" height="60"/>
+              <rect x="120" y="160" width="14" height="55"/>
+              <rect x="160" y="155" width="14" height="60"/>
+              <rect x="200" y="158" width="14" height="57"/>
+              <rect x="240" y="155" width="14" height="60"/>
+              <rect x="280" y="160" width="14" height="55"/>
+              <rect x="320" y="155" width="14" height="60"/>
+              <rect x="360" y="158" width="14" height="57"/>
+              <rect x="400" y="155" width="14" height="60"/>
+              <rect x="440" y="160" width="14" height="55"/>
+              <rect x="480" y="156" width="14" height="59"/>
+              <rect x="520" y="158" width="14" height="57"/>
+            </g>
+          </svg>
+        </div>
+        <figcaption>7:30 AM. The Half + 10K wave on Main Street.</figcaption>
+      </figure>
+
+      <figure class="g-photo g2">
+        <div class="ph-img ph-crowd">
+          <svg viewBox="0 0 300 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <ellipse cx="150" cy="90" rx="180" ry="50" fill="#FFD79B" opacity=".35"/>
+            <path d="M0 180 L40 160 L80 170 L120 155 L160 165 L200 155 L240 170 L300 160 L300 280 L0 280Z" fill="#5C3A2F" opacity=".65"/>
+            <g fill="#3A2515" opacity=".85">
+              <circle cx="60" cy="200" r="14"/>
+              <circle cx="100" cy="195" r="13"/>
+              <circle cx="140" cy="205" r="14"/>
+              <circle cx="180" cy="195" r="13"/>
+              <circle cx="225" cy="205" r="14"/>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Mile 7. Cheer station with cowbells.</figcaption>
+      </figure>
+
+      <figure class="g-photo g3">
+        <div class="ph-img ph-kid">
+          <svg viewBox="0 0 300 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <ellipse cx="150" cy="120" rx="180" ry="80" fill="#FFE7B8" opacity=".45"/>
+            <path d="M0 220 L300 220 L300 280 L0 280Z" fill="#8B5E47" opacity=".6"/>
+            <g fill="#2A1F18" opacity=".82">
+              <ellipse cx="150" cy="170" rx="12" ry="15"/>
+              <rect x="146" y="180" width="8" height="35"/>
+            </g>
+            <circle cx="200" cy="100" r="40" fill="#FFEFC8" opacity=".6"/>
+          </svg>
+        </div>
+        <figcaption>The Kids' Mile, age 6.</figcaption>
+      </figure>
+<figure class="g-photo g4">
+        <div class="ph-img ph-aid">
+          <svg viewBox="0 0 300 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <path d="M0 100 L300 100 L300 280 L0 280Z" fill="#7BA483" opacity=".55"/>
+            <rect x="80" y="60" width="140" height="80" fill="#C6643D" opacity=".85"/>
+            <polygon points="80,60 150,30 220,60" fill="#9F4A26"/>
+            <rect x="135" y="80" width="30" height="60" fill="#3A2515" opacity=".7"/>
+            <g fill="#FAF6EE" opacity=".88">
+              <circle cx="110" cy="120" r="8"/>
+              <circle cx="125" cy="120" r="8"/>
+              <circle cx="140" cy="120" r="8"/>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Aid station 3. Cups, oranges, Gatorade.</figcaption>
+      </figure>
+
+      <figure class="g-photo g5">
+        <div class="ph-img ph-finish">
+          <svg viewBox="0 0 300 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <ellipse cx="150" cy="180" rx="200" ry="60" fill="#FFD79B" opacity=".4"/>
+            <rect x="0" y="110" width="300" height="22" fill="#FFEFC8" opacity=".9"/>
+            <rect x="0" y="130" width="300" height="3" fill="#C6643D"/>
+            <g fill="#2A1F18" opacity=".88">
+              <path d="M140 230 L142 195 L137 175 L142 158 L148 168 L150 195 L154 230Z"/>
+            </g>
+          </svg>
+        </div>
+        <figcaption>The finish at 1:42:08.</figcaption>
+      </figure>
+
+      <figure class="g-photo g6">
+        <div class="ph-img ph-medal">
+          <svg viewBox="0 0 600 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <ellipse cx="300" cy="120" rx="280" ry="80" fill="#FFEFC8" opacity=".4"/>
+            <circle cx="300" cy="170" r="55" fill="#D89B2A"/>
+            <circle cx="300" cy="170" r="42" fill="#E8B863"/>
+            <circle cx="300" cy="170" r="20" fill="#9F6614" opacity=".6"/>
+            <rect x="290" y="100" width="20" height="60" fill="#9F4A26" opacity=".8"/>
+          </svg>
+        </div>
+        <figcaption>The finisher's medal, designed by Lila P., grade 7.</figcaption>
+      </figure>
+
+      <figure class="g-photo g7">
+        <div class="ph-img ph-startline"><svg viewBox="0 0 300 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="95" cy="95" r="52" fill="#FFE7B8" opacity=".55"/><path d="M0 210 L70 175 L140 198 L210 165 L300 195 L300 280 L0 280Z" fill="#6B8E6F" opacity=".72"/></svg></div>
+        <figcaption>Town Common before sunrise.</figcaption>
+      </figure>
+      <figure class="g-photo g8">
+        <div class="ph-img ph-crowd"><svg viewBox="0 0 300 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="280" fill="#F2EAD8"/><path d="M0 175 Q75 145 150 175 T300 175 L300 280 L0 280Z" fill="#C6643D" opacity=".45"/><g fill="#2A1F18" opacity=".75"><circle cx="80" cy="190" r="12"/><circle cx="135" cy="182" r="12"/><circle cx="190" cy="192" r="12"/><circle cx="240" cy="184" r="12"/></g></svg></div>
+        <figcaption>Neighbors on the course.</figcaption>
+      </figure>
+      <figure class="g-photo g9">
+        <div class="ph-img ph-medal"><svg viewBox="0 0 300 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="280" fill="#E8B863" opacity=".7"/><circle cx="150" cy="150" r="64" fill="#FAF6EE" opacity=".35"/><path d="M105 70 L150 135 L195 70" stroke="#9F4A26" stroke-width="18" fill="none" opacity=".8"/></svg></div>
+        <figcaption>Volunteer-made keepsakes.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>

@@ -12,6 +12,8 @@
     "scaffold:customer": "node scripts/scaffold-customer.mjs"
   },
   "dependencies": {
+    "@fontsource/fraunces": "^5.2.9",
+    "@fontsource/nunito": "^5.2.7",
     "astro": "latest"
   }
 }
