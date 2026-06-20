@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "validate:config": "node scripts/validate-config.mjs",
+    "launch:check": "node scripts/launch-check.mjs",
+    "scaffold:customer": "node scripts/scaffold-customer.mjs"
   },
   "dependencies": {
     "astro": "latest"

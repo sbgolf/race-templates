@@ -1,0 +1,45 @@
+{
+  "identity": {
+    "template": "performance",
+    "name": "Capital City Marathon",
+    "tagline": "Fast streets. Serious goals.",
+    "colors": {
+      "primary": "#D71920",
+      "secondary": "#111827"
+    }
+  },
+  "event": {
+    "date": "2026-04-12",
+    "location": "Capital City, USA",
+    "venue": "Capitol Plaza"
+  },
+  "distances": [
+    {
+      "id": "marathon",
+      "name": "Marathon",
+      "distance": "26.2 mi",
+      "start_time": "6:45 AM",
+      "featured": true
+    }
+  ],
+  "registration": {
+    "url": "https://example.com/capital/register",
+    "platform": "runsignup",
+    "cta_label": "Claim your spot"
+  },
+  "seo": {
+    "meta_title": "Capital City Marathon — Fast BQ Course",
+    "meta_description": "Capital City Marathon is a performance-focused marathon with a fast Boston-qualifying course."
+  },
+  "analytics": {
+    "ga4_measurement_id": "G-XXXXXXXXXX",
+    "register_click_event_name": "register_click"
+  },
+  "proof": {
+    "bq_rate": "18%",
+    "bq_finishers": 412
+  },
+  "contacts": {
+    "race_director_email": "director@example.com"
+  }
+}
