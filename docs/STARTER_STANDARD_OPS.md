@@ -22,6 +22,20 @@ The validator checks required launch-critical fields:
 
 Warnings are non-blocking but should be resolved before customer review when practical.
 
+## Community Standard path
+
+Community is the first customer-ready Standard template path. Use `src/data/samples/hartwell-half.json` as the current reference shape for config-driven Community pages: identity, event details, distances/prices/highlights, schedule, registration, optional volunteer URL, SEO, analytics, and organization metadata.
+
+Before customer review, run:
+
+```bash
+npm run validate:config -- src/data/samples/hartwell-half.json
+npm run build
+npm run launch:check -- src/data/samples/hartwell-half.json
+```
+
+The Community launch check inspects the rendered preview output for configured registration links, register-click analytics attributes, SportsEvent JSON-LD, and no demo-only registration actions.
+
 ## Registration-click analytics pattern
 
 Use `src/shared/analytics/register-click.mjs` for GA4 wiring:
@@ -60,13 +74,13 @@ The gate currently verifies config validity, registration URL readiness, SEO met
 Generate a local Starter/Standard thin repo scaffold with:
 
 ```bash
-npm run scaffold:customer -- river-city-marathon destination-major
+npm run scaffold:customer -- river-city-half community
 ```
 
 Output is written to `customer-scaffolds/<slug>/` and includes:
 
 - placeholder `src/data/race-config.json`
-- minimal Astro `src/pages/index.astro`
+- Astro `src/pages/index.astro` that renders the selected template, including Community's GA4/register-click/SportsEvent JSON-LD wiring
 - package scripts for config validation, build, and launch check
 - a README with next steps
 

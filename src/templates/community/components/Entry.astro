@@ -1,5 +1,7 @@
 ---
+import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 const { race } = Astro.props;
+const registerUrl = race.registration?.url || '#';
 ---
 
 <section class="entry" id="entry">
@@ -7,54 +9,22 @@ const { race } = Astro.props;
     <div class="reveal">
       <div class="kicker">Register</div>
       <h2 class="sec-title">Pick a distance, <em>save your spot</em>.</h2>
-      <p class="lead">Early-bird pricing through March 1. Field caps: Half 1,500 · 10K 800 · 5K 600 · Kids' Mile 300. Past years have all sold out by mid-April.</p>
+      <p class="lead">{race.registration?.opens ? `Registration opens ${race.registration.opens}. ` : ''}Choose your distance and complete registration through the official race platform.</p>
     </div>
 
     <div class="entry-grid stagger">
-      <div class="etier flagship">
-        <h3>Half Marathon</h3>
-        <div class="sub">13.1 mi · 7:30 AM</div>
-        <div class="pp">$75<small>/ entry</small></div>
-        <ul>
-          <li>Tech shirt + finisher medal</li>
-          <li>Chip timing + USATF certified</li>
-          <li>Post-race pancake breakfast</li>
-        </ul>
-        <button class="btn btn-accent" onclick="notify(this,'Half registration started — demo only')">Register</button>
-      </div>
-      <div class="etier">
-        <h3>10K</h3>
-        <div class="sub">6.2 mi · 7:30 AM</div>
-        <div class="pp">$45<small>/ entry</small></div>
-        <ul>
-          <li>Tech shirt + finisher medal</li>
-          <li>Chip timing</li>
-          <li>Pancake breakfast included</li>
-        </ul>
-        <button class="btn btn-dark" onclick="notify(this,'10K registration started — demo only')">Register</button>
-      </div>
-      <div class="etier">
-        <h3>5K</h3>
-        <div class="sub">3.1 mi · 8:00 AM</div>
-        <div class="pp">$30<small>/ entry</small></div>
-        <ul>
-          <li>Race shirt + medal</li>
-          <li>Family-friendly · strollers welcome</li>
-          <li>Pancake breakfast included</li>
-        </ul>
-        <button class="btn btn-dark" onclick="notify(this,'5K registration started — demo only')">Register</button>
-      </div>
-      <div class="etier">
-        <h3>Kids' Mile</h3>
-        <div class="sub">1 mi · 9:30 AM</div>
-        <div class="pp">Free<small>· ages 5–12</small></div>
-        <ul>
-          <li>Race shirt + medal</li>
-          <li>Parent escort welcome</li>
-          <li>Pre-race warm-up with Coach B</li>
-        </ul>
-        <button class="btn btn-dark" onclick="notify(this,'Kids Mile signup started — demo only')">Sign up kid</button>
-      </div>
+      {race.distances?.map((distance) => {
+        const attrs = registerClickAttributes(race, `entry-${distance.id}`);
+        return <div class:list={["etier", { flagship: distance.featured }]}>
+          <h3>{distance.name}</h3>
+          <div class="sub">{distance.distance} · {distance.start_time || 'Start time TBA'}</div>
+          {distance.price ? <div class="pp">{distance.price}<small>/ entry</small></div> : null}
+          <ul>
+            {(distance.highlights || ['Official timing', 'Race-day support', 'Community finish-line experience']).map((item) => <li>{item}</li>)}
+          </ul>
+          <a class:list={["btn", distance.featured ? "btn-accent" : "btn-dark"]} href={registerUrl} target="_blank" rel="noopener" {...attrs}>{race.registration?.cta_label || 'Register'}</a>
+        </div>;
+      })}
     </div>
 
     <div class="charity-note reveal">
@@ -63,7 +33,7 @@ const { race } = Astro.props;
         <h4>Run for the Hartwell Education Foundation</h4>
         <p>Add a $50, $100, or $250 donation at checkout. 100% goes to local schools. Top fundraisers get pre-race shoutouts and gear.</p>
       </div>
-      <button class="btn btn-ghost" onclick="notify(this,'Donation info shown — demo only')">Learn more</button>
+      <a class="btn btn-ghost" href={registerUrl} target="_blank" rel="noopener" {...registerClickAttributes(race, 'entry-charity')}>Learn more about race donations</a>
     </div>
   </div>
 </section>

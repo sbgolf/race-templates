@@ -3,19 +3,70 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { launchGateChecks } from '../src/shared/schema/race-config-schema.mjs';
 
-const target = process.argv[2] || 'src/data/samples/cascade-marathon.json';
+const target = process.argv[2] || 'src/data/samples/hartwell-half.json';
 const absolute = path.resolve(process.cwd(), target);
 const config = JSON.parse(await readFile(absolute, 'utf8'));
 const result = launchGateChecks(config);
+
+async function renderedOutputChecks() {
+  if (config.identity?.template !== 'community') return [];
+
+  const renderedPath = path.resolve(process.cwd(), 'dist', 'preview', 'community', 'index.html');
+  let html = '';
+  try {
+    html = await readFile(renderedPath, 'utf8');
+  } catch {
+    return [{
+      id: 'community-rendered-output',
+      label: 'Community rendered output checked',
+      pass: false,
+      details: [`Build first so ${path.relative(process.cwd(), renderedPath)} exists.`]
+    }];
+  }
+
+  const registrationUrl = config.registration?.url || '';
+  return [
+    {
+      id: 'community-registration-links',
+      label: 'Community CTAs link to configured registration URL',
+      pass: html.includes(`href="${registrationUrl}"`),
+      details: html.includes(`href="${registrationUrl}"`) ? [] : [`Missing rendered href for ${registrationUrl}`]
+    },
+    {
+      id: 'community-register-analytics',
+      label: 'Community CTAs include register-click analytics attributes',
+      pass: html.includes('data-analytics-event="register_click"') && html.includes('data-analytics-placement='),
+      details: []
+    },
+    {
+      id: 'community-json-ld',
+      label: 'Community page renders SportsEvent JSON-LD',
+      pass: html.includes('application/ld+json') && html.includes('"@type":"SportsEvent"'),
+      details: []
+    },
+    {
+      id: 'community-no-demo-registration',
+      label: 'Community registration path has no demo-only registration buttons',
+      pass: !/registration started — demo only|Donation info shown — demo only/.test(html),
+      details: []
+    }
+  ];
+}
+
+const renderedChecks = await renderedOutputChecks();
 
 console.log(`Launch gate: ${target}`);
 for (const check of result.checks) {
   console.log(`${check.pass ? '✓' : '✗'} ${check.id}: ${check.label}`);
   for (const detail of check.details || []) console.log(`  - ${detail}`);
 }
+for (const check of renderedChecks) {
+  console.log(`${check.pass ? '✓' : '✗'} ${check.id}: ${check.label}`);
+  for (const detail of check.details || []) console.log(`  - ${detail}`);
+}
 for (const warning of result.warnings) console.warn(`⚠ ${warning.path}: ${warning.message}`);
 
-if (!result.ok) {
+if (!result.ok || renderedChecks.some((check) => !check.pass)) {
   console.error('Launch gate failed. Fix the failed checks before customer review or production launch.');
   process.exit(1);
 }

@@ -1,5 +1,12 @@
 ---
 const { race } = Astro.props;
+const scheduleByDay = (race.schedule || []).reduce((groups, item) => {
+  const key = item.day || 'Race Day';
+  groups[key] ||= [];
+  groups[key].push(item);
+  return groups;
+}, {});
+const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];
 ---
 
 <section class="sched" id="schedule">
@@ -10,95 +17,22 @@ const { race } = Astro.props;
       <p class="lead">Pickup Friday, race Saturday morning, awards and pancakes after. Schedule below filters based on your selected distance.</p>
       <div class="sched-filter">
         <span class="dot"></span>
-        Showing schedule for: <b id="filterLabel">Half Marathon</b>
+        Showing schedule for: <b id="filterLabel">{featuredDistance?.name}</b>
       </div>
     </div>
 
     <div class="timeline">
-      <div class="tl-day">
-        <div class="date">Friday · May 17</div>
-        <h3>Packet Pickup</h3>
-        <div class="tl-event" data-distance="all">
+      {Object.entries(scheduleByDay).map(([day, items]) => <div class="tl-day">
+        <div class="date">{day}</div>
+        <h3>{day.includes('Friday') ? 'Packet Pickup' : 'Race Day'}</h3>
+        {items.map((item) => <div class="tl-event" data-distance={(item.applies_to_distances || ['all']).join(',')}>
           <div>
-            <div class="tl-event-name">Bib + Race Kit Pickup</div>
-            <small>Hartwell Town Hall</small>
+            <div class="tl-event-name">{item.name}</div>
+            <small>{item.location}</small>
           </div>
-          <div class="tl-event-time">3 – 7 PM</div>
-        </div>
-        <div class="tl-event" data-distance="all">
-          <div>
-            <div class="tl-event-name">Pre-Race Pasta Dinner</div>
-<small>$15 · Lions Club hosts</small>
-          </div>
-          <div class="tl-event-time">6 PM</div>
-        </div>
-        <div class="tl-event" data-distance="all">
-          <div>
-            <div class="tl-event-name">Course Walk-Through</div>
-            <small>Optional · Coach Brian leads</small>
-          </div>
-          <div class="tl-event-time">5 PM</div>
-        </div>
-      </div>
-
-      <div class="tl-day">
-        <div class="date">Saturday · May 18</div>
-        <h3>Race Day</h3>
-        <div class="tl-event" data-distance="all">
-          <div>
-            <div class="tl-event-name">Race Day Pickup</div>
-            <small>Town Common</small>
-          </div>
-          <div class="tl-event-time">5:30 AM</div>
-        </div>
-        <div class="tl-event" data-distance="half,10k">
-          <div>
-            <div class="tl-event-name">Half Marathon &amp; 10K Start</div>
-            <small>Wave start</small>
-          </div>
-          <div class="tl-event-time">7:30 AM</div>
-        </div>
-        <div class="tl-event" data-distance="5k">
-          <div>
-            <div class="tl-event-name">5K Start</div>
-            <small>Single wave</small>
-          </div>
-          <div class="tl-event-time">8:00 AM</div>
-        </div>
-        <div class="tl-event" data-distance="kids">
-          <div>
-            <div class="tl-event-name">Kids' Mile</div>
-            <small>Ages 5–12 · Free entry</small>
-          </div>
-          <div class="tl-event-time">9:30 AM</div>
-        </div>
-        <div class="tl-event" data-distance="all">
-          <div>
-            <div class="tl-event-name">Pancakes &amp; Awards</div>
-            <small>Lawn of the Common</small>
-          </div>
-          <div class="tl-event-time">10:30 AM</div>
-        </div>
-      </div>
-
-      <div class="tl-day">
-        <div class="date">Sunday · May 19</div>
-        <h3>Recovery</h3>
-        <div class="tl-event" data-distance="all">
-          <div>
-            <div class="tl-event-name">Recovery Run + Coffee</div>
-            <small>Easy 3 miles · Optional</small>
-          </div>
-          <div class="tl-event-time">8 AM</div>
-        </div>
-        <div class="tl-event" data-distance="all">
-          <div>
-            <div class="tl-event-name">Volunteer Brunch</div>
-            <small>Tory's Diner · By invite</small>
-          </div>
-          <div class="tl-event-time">10 AM</div>
-        </div>
-      </div>
+          <div class="tl-event-time">{item.time}</div>
+        </div>)}
+      </div>)}
     </div>
   </div>
 </section>

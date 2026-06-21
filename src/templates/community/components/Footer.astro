@@ -1,5 +1,6 @@
 ---
 const { race } = Astro.props;
+const year = race.event?.date ? new Date(`${race.event.date}T12:00:00`).getFullYear() : new Date().getFullYear();
 ---
 
 <footer>
@@ -10,16 +11,16 @@ const { race } = Astro.props;
           <circle cx="20" cy="20" r="18" fill="#C6643D"/>
           <path d="M12 20 L17 25 L28 14" stroke="#FAF6EE" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
-        <span>HARTWELL<small>Hometown Half</small></span>
+        <span>{race.identity?.name}<small>{race.identity?.tagline}</small></span>
       </div>
-      <p>The race that brings a town together. 14 years and counting — every dollar to local schools.</p>
+      <p>{race.seo?.meta_description || race.identity?.tagline}</p>
     </div>
     <div><div class="foot-heading">Race</div><ul><li><a href="#course">Course</a></li><li><a href="#schedule">Weekend</a></li><li><a href="#entry">Register</a></li><li><a href="#volunteer">Volunteer</a></li></ul></div>
     <div><div class="foot-heading">About</div><ul><li><a href="#story">Our Race</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
     <div><div class="foot-heading">Connect</div><ul><li><a href="#">Newsletter</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">Race Photos</a></li></ul></div>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 Hartwell Hometown Half · A program of Hartwell Education Foundation</span>
+    <span>© {year} {race.identity?.name}{race.organization?.name ? ` · A program of ${race.organization.name}` : ''}</span>
     <span>Powered by [BRAND]</span>
   </div>
 </footer>

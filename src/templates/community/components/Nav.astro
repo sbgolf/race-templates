@@ -1,5 +1,9 @@
 ---
+import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 const { race } = Astro.props;
+const registerAttrs = registerClickAttributes(race, 'nav');
+const registerUrl = race.registration?.url || '#entry';
+const registerLabel = race.registration?.cta_label || 'Register';
 ---
 
 <nav id="nav">
@@ -8,7 +12,7 @@ const { race } = Astro.props;
       <circle cx="20" cy="20" r="18" fill="#C6643D"/>
       <path d="M12 20 L17 25 L28 14" stroke="#FAF6EE" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </svg>
-    <span>HARTWELL<small>Hometown Half</small></span>
+    <span>{race.identity?.name || 'Community Race'}<small>{race.identity?.tagline || 'Race weekend'}</small></span>
   </a>
   <div class="nav-links" id="navLinks">
     <a href="#course">Course</a>
@@ -16,8 +20,8 @@ const { race } = Astro.props;
     <a href="#story">Our Race</a>
     <a href="#gallery">Gallery</a>
     <a href="#volunteer">Volunteer</a>
-    <a href="#entry">Register</a>
-    <button class="btn btn-accent" onclick="scrollToId('entry')">Sign up →</button>
+    <a href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>Register</a>
+    <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel} →</a>
   </div>
   <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
