@@ -1,0 +1,144 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Ashland City Half Marathon",
+    "tagline": "A fast, flat Cumberland River half marathon concept",
+    "edition": "Private StartLine concept for Steve review",
+    "hero_image": {
+      "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/1-d63e0778e1.png",
+      "alt": "Public image captured from nashvilletrackclub.org",
+      "source": "https://nashvilletrackclub.org/wp-content/uploads/2021/02/Ashland-City_Half-Marathon_Graphic.png"
+    },
+    "colors": {
+      "primary": "#C6643D",
+      "secondary": "#1F5E64"
+    }
+  },
+  "event": {
+    "date": "2026-03-07",
+    "location": "Ashland City, TN",
+    "venue": "Riverbluff Park"
+  },
+  "organization": {
+    "name": "Nashville Track Club"
+  },
+  "stats": [
+    {
+      "value": "Mar 7",
+      "label": "2026 race date"
+    },
+    {
+      "value": "7:30 AM",
+      "label": "Start time"
+    },
+    {
+      "value": "USATF",
+      "label": "Sanctioned + certified"
+    },
+    {
+      "value": "3 hrs",
+      "label": "Course time limit"
+    }
+  ],
+  "distances": [
+    {
+      "id": "half",
+      "name": "Half Marathon",
+      "distance": "13.1 mi",
+      "elevation_gain": "Flat / fast",
+      "start_time": "7:30 AM",
+      "aid_stations": 5,
+      "profile": "Fast, flat USATF-certified course",
+      "map_label": "Cumberland River out-and-back",
+      "featured": true,
+      "price": "$60\u2013$80",
+      "price_amount": "80",
+      "highlights": [
+        "Starts and finishes at Riverbluff Park",
+        "USATF-certified course TN22002MS",
+        "Aid stations with water and Gatorade at 3.3, 4.4, 7.3, 9.3 and 11.5 miles"
+      ]
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "opens": "2025-12-31"
+  },
+  "volunteer": {
+    "signup_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
+    "description": "This concept keeps volunteer/support needs close to race-day logistics so runners and helpers can quickly understand where support is needed."
+  },
+  "schedule": [
+    {
+      "day": "Friday \u00b7 March 6",
+      "name": "Packet pickup at Nashville Running Company",
+      "time": "11:00 AM \u2013 6:00 PM",
+      "location": "820 Woodland St, Nashville, TN 37206",
+      "applies_to_distances": [
+        "half"
+      ]
+    },
+    {
+      "day": "Saturday \u00b7 March 7",
+      "name": "Race-day registration + packet pickup",
+      "time": "5:45 \u2013 7:15 AM",
+      "location": "Riverbluff Park, Ashland City",
+      "applies_to_distances": [
+        "half"
+      ]
+    },
+    {
+      "day": "Saturday \u00b7 March 7",
+      "name": "Half marathon start",
+      "time": "7:30 AM",
+      "location": "Riverbluff Park",
+      "applies_to_distances": [
+        "half"
+      ]
+    },
+    {
+      "day": "Saturday \u00b7 March 7",
+      "name": "Post-race celebration",
+      "time": "10:30 AM / 11:00 AM awards",
+      "location": "Sidelines Bar & Grill",
+      "applies_to_distances": [
+        "half"
+      ]
+    }
+  ],
+  "sponsors": [
+    "Nashville Track Club",
+    "Public sponsor section placeholder"
+  ],
+  "seo": {
+    "meta_title": "Ashland City Half Marathon \u2014 Private StartLine Concept",
+    "meta_description": "Private StartLine concept preview for the Ashland City Half Marathon audit handoff."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
+    "captured_at": "2026-06-27T21:52:27.200Z",
+    "access_token": "e6e18fe20474d344e2b82718edbfb2c7",
+    "race_slug": "ashland-city-half",
+    "route": "/private/mockups/e6e18fe20474d344e2b82718edbfb2c7/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/1-d63e0778e1.png",
+        "alt": "Public image captured from nashvilletrackclub.org",
+        "caption": "Public race-site image used for concept direction.",
+        "source": "https://nashvilletrackclub.org/wp-content/uploads/2021/02/Ashland-City_Half-Marathon_Graphic.png"
+      },
+      {
+        "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/2-9799347d35.png",
+        "alt": "Public image captured from nashvilletrackclub.org",
+        "caption": "Additional public race-site visual reference.",
+        "source": "https://nashvilletrackclub.org/wp-content/uploads/2024/02/Riverbluff-Park-Map-AC-24.png"
+      }
+    ],
+    "notes": "Generated from public Ashland City Half Marathon race information. Public facts were cleaned up for Steve review; verify any final customer-facing details before delivery."
+  }
+}
