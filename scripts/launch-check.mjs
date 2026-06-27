@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readFile } from 'node:fs/promises';
+import { readFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { launchGateChecks } from '../src/shared/schema/race-config-schema.mjs';
 
@@ -7,6 +7,15 @@ const target = process.argv[2] || 'src/data/samples/hartwell-half.json';
 const absolute = path.resolve(process.cwd(), target);
 const config = JSON.parse(await readFile(absolute, 'utf8'));
 const result = launchGateChecks(config);
+
+async function fileExists(filePath) {
+  try {
+    await access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 async function renderedOutputChecks() {
   if (config.identity?.template !== 'community') return [];
@@ -55,11 +64,37 @@ async function renderedOutputChecks() {
   ];
 
   if (config.private_mockup?.route) {
+    const privateRootIndex = path.resolve(process.cwd(), 'dist', 'private', 'mockups', 'index.html');
+    const slugOnlyIndex = config.private_mockup.race_slug
+      ? path.resolve(process.cwd(), 'dist', 'private', 'mockups', config.private_mockup.race_slug, 'index.html')
+      : null;
+    const privateRoutePattern = /^\/private\/mockups\/[a-f0-9]{32,}\/$/i;
+    const privateRootExists = await fileExists(privateRootIndex);
+    const slugOnlyExists = slugOnlyIndex ? await fileExists(slugOnlyIndex) : false;
+
+    checks.push({
+      id: 'private-mockup-tokenized-route',
+      label: 'Private mockup route requires an unguessable token',
+      pass: privateRoutePattern.test(config.private_mockup.route || ''),
+      details: privateRoutePattern.test(config.private_mockup.route || '') ? [] : [`Route is not token-gated: ${config.private_mockup.route || '(missing)'}`]
+    });
     checks.push({
       id: 'private-mockup-noindex',
       label: 'Private mockup route emits noindex,nofollow robots metadata',
       pass: html.includes('name="robots"') && html.includes('noindex,nofollow'),
       details: html.includes('name="robots"') && html.includes('noindex,nofollow') ? [] : ['Missing private noindex,nofollow robots tag.']
+    });
+    checks.push({
+      id: 'private-mockup-no-listing',
+      label: '/private/mockups/ does not render a mockup listing',
+      pass: !privateRootExists,
+      details: privateRootExists ? [`Unexpected listing file exists at ${path.relative(process.cwd(), privateRootIndex)}.`] : []
+    });
+    checks.push({
+      id: 'private-mockup-slug-only-404',
+      label: 'Slug-only private mockup URLs fall back to 404/not found',
+      pass: !slugOnlyExists,
+      details: slugOnlyExists && slugOnlyIndex ? [`Unexpected slug-only file exists at ${path.relative(process.cwd(), slugOnlyIndex)}.`] : []
     });
   }
 

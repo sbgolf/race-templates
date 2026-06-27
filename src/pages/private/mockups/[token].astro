@@ -4,10 +4,19 @@ import "../../../templates/community/styles/community.css";
 import { sportsEventJsonLdScript } from "../../../shared/schema/sports-event-jsonld.mjs";
 
 export function getStaticPaths() {
+  const tokenPattern = /^[a-f0-9]{32,}$/i;
   const mockups = import.meta.glob("../../../data/private-mockups/*.json", { eager: true });
-  return Object.entries(mockups).map(([file, module]) => {
-    const slug = file.split('/').pop().replace(/\.json$/, '');
-    return { params: { slug }, props: { race: module.default } };
+  return Object.entries(mockups).flatMap(([file, module]) => {
+    const race = module.default;
+    const fileSlug = file.split('/').pop().replace(/\.json$/, '');
+    const token = race.private_mockup?.access_token;
+    const slug = race.private_mockup?.race_slug || fileSlug;
+
+    if (!tokenPattern.test(token || '')) {
+      return [];
+    }
+
+    return { params: { token, slug }, props: { race } };
   });
 }
 
@@ -30,7 +39,7 @@ const capturedAt = race.private_mockup?.captured_at ? new Date(race.private_mock
 <body data-private-mockup="true">
   <aside class="private-concept-banner" aria-label="Private concept preview notice">
     <strong>Private StartLine concept preview</strong>
-    <span>Noindex/nofollow. For Steve/internal review only — do not send this URL to a prospect until approved.</span>
+    <span>Noindex/nofollow. Token-gated for Steve/internal review only — do not send this URL to a prospect until approved.</span>
     {sourceUrl && <a href={sourceUrl} target="_blank" rel="noopener noreferrer nofollow">Source site</a>}
     <small>Captured {capturedAt}</small>
   </aside>

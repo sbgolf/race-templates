@@ -5,7 +5,7 @@
     "tagline": "Boston Marathon",
     "edition": "Private StartLine concept",
     "hero_image": {
-      "src": "/mockups/boston-marathon-private-test/1-a40629fb41.png",
+      "src": "/mockups/35a001229594dde99d184e2ab18b50e9/1-a40629fb41.png",
       "alt": "Public image captured from www.baa.org",
       "source": "https://www.baa.org/wp-content/uploads/2025/10/BAALogo-1.png"
     },
@@ -184,17 +184,19 @@
     "noindex": true,
     "source_url": "https://www.baa.org/races/boston-marathon",
     "captured_at": "2026-06-27T19:58:43.344Z",
-    "route": "/private/mockups/boston-marathon-private-test/",
+    "access_token": "35a001229594dde99d184e2ab18b50e9",
+    "race_slug": "boston-marathon-private-test",
+    "route": "/private/mockups/35a001229594dde99d184e2ab18b50e9/",
     "template": "community",
     "assets": [
       {
-        "src": "/mockups/boston-marathon-private-test/1-a40629fb41.png",
+        "src": "/mockups/35a001229594dde99d184e2ab18b50e9/1-a40629fb41.png",
         "alt": "Public image captured from www.baa.org",
         "caption": "Public race-site image used for concept direction.",
         "source": "https://www.baa.org/wp-content/uploads/2025/10/BAALogo-1.png"
       },
       {
-        "src": "/mockups/boston-marathon-private-test/2-ca09e38448.png",
+        "src": "/mockups/35a001229594dde99d184e2ab18b50e9/2-ca09e38448.png",
         "alt": "Public image captured from www.baa.org",
         "caption": "Additional public race-site visual reference.",
         "source": "https://www.baa.org/wp-content/uploads/2025/11/BAALogo-1.png"
