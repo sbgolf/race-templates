@@ -7,6 +7,8 @@ const registerLabel = race.registration?.cta_label || 'Register now';
 const eventDate = race.event?.date ? new Date(`${race.event.date}T12:00:00`) : null;
 const displayDate = eventDate ? eventDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) : 'Race day';
 const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];
+const heroImage = race.identity?.hero_image?.src || race.private_mockup?.assets?.[0]?.src;
+const heroImageAlt = race.identity?.hero_image?.alt || `Race day image for ${race.identity?.name}`;
 ---
 
 <section class="hero" id="top">
@@ -30,6 +32,11 @@ const featuredDistance = race.distances?.find((distance) => distance.featured) |
           <span class="hero-meta-pill">RACE DAY</span>
           <span class="hero-meta-pill right">{race.event?.date} · {featuredDistance?.start_time}</span>
         </div>
+        {heroImage ? (
+        <div class="ph-img ph-town mockup-photo-fill">
+          <img src={heroImage} alt={heroImageAlt} loading="eager" decoding="async" />
+        </div>
+        ) : (
         <div class="ph-img ph-town">
           <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <!-- soft dawn glow -->
@@ -68,6 +75,7 @@ const featuredDistance = race.distances?.find((distance) => distance.featured) |
             <rect x="0" y="465" width="400" height="2" fill="#D89B2A" opacity=".4"/>
           </svg>
         </div>
+        )}
       </div>
     </div>
   </div>
