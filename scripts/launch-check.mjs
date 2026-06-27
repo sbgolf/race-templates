@@ -11,7 +11,9 @@ const result = launchGateChecks(config);
 async function renderedOutputChecks() {
   if (config.identity?.template !== 'community') return [];
 
-  const renderedPath = path.resolve(process.cwd(), 'dist', 'preview', 'community', 'index.html');
+  const renderedPath = config.private_mockup?.route
+    ? path.resolve(process.cwd(), 'dist', config.private_mockup.route.replace(/^\//, ''), 'index.html')
+    : path.resolve(process.cwd(), 'dist', 'preview', 'community', 'index.html');
   let html = '';
   try {
     html = await readFile(renderedPath, 'utf8');
@@ -25,7 +27,7 @@ async function renderedOutputChecks() {
   }
 
   const registrationUrl = config.registration?.url || '';
-  return [
+  const checks = [
     {
       id: 'community-registration-links',
       label: 'Community CTAs link to configured registration URL',
@@ -51,6 +53,17 @@ async function renderedOutputChecks() {
       details: []
     }
   ];
+
+  if (config.private_mockup?.route) {
+    checks.push({
+      id: 'private-mockup-noindex',
+      label: 'Private mockup route emits noindex,nofollow robots metadata',
+      pass: html.includes('name="robots"') && html.includes('noindex,nofollow'),
+      details: html.includes('name="robots"') && html.includes('noindex,nofollow') ? [] : ['Missing private noindex,nofollow robots tag.']
+    });
+  }
+
+  return checks;
 }
 
 const renderedChecks = await renderedOutputChecks();
