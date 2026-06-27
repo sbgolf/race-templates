@@ -12,9 +12,9 @@ npm run build
 
 Output:
 
-- Config: `src/data/private-mockups/<slug>.json`
-- Captured public images: `public/mockups/<slug>/`
-- Static preview route after build/deploy: `/private/mockups/<slug>/`
+- Config: `src/data/private-mockups/<race-slug>.json`
+- Captured public images: `public/mockups/<access-token>/`
+- Static preview route after build/deploy: `/private/mockups/<access-token>/`
 
 ## What the generator does
 
@@ -22,11 +22,12 @@ Output:
 - Extracts public metadata (`title`, `description`, JSON-LD event fields when present) and up to two public JPG/PNG/WebP images from `og:image`, `twitter:image`, and page `<img>` tags.
 - Builds a small Community-template config by default, because Community is the safest generic fit unless the audit workflow identifies an obvious Destination Major or Performance fit.
 - Stores source/capture metadata under `private_mockup` in the JSON config.
+- Generates `private_mockup.access_token` with Node crypto randomness (`randomBytes(16).toString('hex')`), producing an unguessable 128-bit token that is not derived from the race name, race slug, hostname, or source URL.
 - Leaves generated race logistics as placeholders where the public source did not expose structured details; customer-specific production should replace those before launch.
 
 ## Privacy/indexing guardrails
 
-The generated route is intentionally under `/private/mockups/<slug>/` and emits:
+The generated route is intentionally under `/private/mockups/<access-token>/` and emits:
 
 ```html
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
@@ -34,6 +35,14 @@ The generated route is intentionally under `/private/mockups/<slug>/` and emits:
 ```
 
 The page also shows a visible private-concept banner: internal/Steve review only, not prospect-ready until approved.
+
+Token rules:
+
+- Do not use race names, hostnames, dates, or slugs in private mockup URLs.
+- Let the generator create the token by default. If a token must be supplied during a migration, pass only a 32+ character hex value created from at least 128 bits of crypto randomness.
+- `private_mockup.route` must exactly match `/private/mockups/<private_mockup.access_token>/`.
+- The Astro route builds only configured token paths; `/private/mockups/`, slug-only URLs, and unknown or guessed `/private/mockups/.../` paths fall through to the site's normal 404.
+- Marketing-site handoff should store only the final tokenized URL, never a race-slug URL.
 
 ## Fallback behavior
 
@@ -43,6 +52,6 @@ If image capture fails, is blocked, or finds only unsupported/low-size files, th
 
 After a branch deploy/preview is available, combine the deployment origin with the generated route, e.g.:
 
-`https://<deploy-preview-host>/private/mockups/example-race/`
+`https://<deploy-preview-host>/private/mockups/35a001229594dde99d184e2ab18b50e9/`
 
 Do not send localhost URLs to prospects. Do not merge the branch until Steve approves.

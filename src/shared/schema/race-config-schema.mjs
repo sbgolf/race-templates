@@ -2,6 +2,7 @@ const TEMPLATE_IDS = new Set(['destination-major', 'performance', 'community']);
 const URL_PATTERN = /^https?:\/\//i;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PRIVATE_MOCKUP_TOKEN_PATTERN = /^[a-f0-9]{32,}$/i;
 
 function isPlainObject(value) {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -89,6 +90,23 @@ export function validateRaceConfig(config) {
 
   if (config.contacts?.race_director_email && !EMAIL_PATTERN.test(config.contacts.race_director_email)) {
     add(errors, 'contacts.race_director_email', 'Race director email must be a valid email address.');
+  }
+
+  if (config.private_mockup !== undefined) {
+    if (!isPlainObject(config.private_mockup)) {
+      add(errors, 'private_mockup', 'Private mockup metadata must be an object when provided.');
+    } else {
+      if (!PRIVATE_MOCKUP_TOKEN_PATTERN.test(config.private_mockup.access_token || '')) {
+        add(errors, 'private_mockup.access_token', 'Private mockup access token must be 32+ hex characters generated from at least 128 bits of crypto randomness.');
+      }
+      const expectedRoute = `/private/mockups/${config.private_mockup.access_token}/`;
+      if (config.private_mockup.route !== expectedRoute) {
+        add(errors, 'private_mockup.route', `Private mockup route must be tokenized as ${expectedRoute}.`);
+      }
+      if (!config.private_mockup.noindex) {
+        add(errors, 'private_mockup.noindex', 'Private mockups must explicitly set noindex: true.');
+      }
+    }
   }
 
   return { ok: errors.length === 0, errors, warnings };

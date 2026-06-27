@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { createHash } from 'node:crypto';
+import { createHash, randomBytes } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -8,8 +8,17 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const args = parseArgs(process.argv.slice(2));
 
+if (args.help) {
+  console.log(`Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community] [--token 32-hex-token]
+
+Generates a private/noindex StartLine concept preview config.
+Access URLs are always tokenized: /private/mockups/<32+ hex chars>/
+If --token is omitted, a cryptographically random 128-bit token is generated.`);
+  process.exit(0);
+}
+
 if (!args.url) {
-  console.error('Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community]');
+  console.error('Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community] [--token 32-hex-token]');
   process.exit(1);
 }
 
@@ -25,11 +34,16 @@ const capturedAt = new Date().toISOString();
 const page = await fetchText(sourceUrl);
 const facts = extractFacts(page, sourceUrl);
 const slug = sanitizeSlug(args.slug || facts.name || new URL(sourceUrl).hostname.replace(/^www\./, ''));
+const token = args.token || generateAccessToken();
+if (!isValidAccessToken(token)) {
+  console.error('Private mockup tokens must be at least 128 bits of entropy encoded as 32+ hex characters. Omit --token to generate one safely.');
+  process.exit(1);
+}
 
 const samplePath = path.join(root, 'src/data/samples/hartwell-half.json');
 const sample = JSON.parse(await readFile(samplePath, 'utf8'));
-const assets = await captureImages(facts.images, slug);
-const config = buildConfig(sample, facts, assets, { sourceUrl, capturedAt, slug, template });
+const assets = await captureImages(facts.images, token);
+const config = buildConfig(sample, facts, assets, { sourceUrl, capturedAt, slug, token, template });
 
 const outDir = path.join(root, 'src/data/private-mockups');
 await mkdir(outDir, { recursive: true });
@@ -37,7 +51,8 @@ const outPath = path.join(outDir, `${slug}.json`);
 await writeFile(outPath, `${JSON.stringify(config, null, 2)}\n`);
 
 console.log(`Private mockup config written: ${path.relative(root, outPath)}`);
-console.log(`Private preview route: /private/mockups/${slug}/`);
+console.log(`Private preview route: /private/mockups/${token}/`);
+console.log(`Private access token: ${token}`);
 console.log(`Captured public images: ${assets.length}`);
 assets.forEach((asset) => console.log(`- ${asset.src} (${asset.source})`));
 
@@ -48,6 +63,8 @@ function parseArgs(argv) {
     if (arg === '--url') parsed.url = argv[++i];
     else if (arg === '--slug') parsed.slug = argv[++i];
     else if (arg === '--template') parsed.template = argv[++i];
+    else if (arg === '--token') parsed.token = argv[++i];
+    else if (arg === '--help' || arg === '-h') parsed.help = true;
   }
   return parsed;
 }
@@ -123,9 +140,9 @@ function safeResolve(src, baseUrl) {
   }
 }
 
-async function captureImages(urls, slug) {
+async function captureImages(urls, assetNamespace) {
   const assets = [];
-  const assetDir = path.join(root, 'public/mockups', slug);
+  const assetDir = path.join(root, 'public/mockups', assetNamespace);
   await mkdir(assetDir, { recursive: true });
 
   for (const url of urls) {
@@ -141,7 +158,7 @@ async function captureImages(urls, slug) {
       const ext = extensionFor(contentType, url);
       const name = `${assets.length + 1}-${createHash('sha1').update(url).digest('hex').slice(0, 10)}.${ext}`;
       await writeFile(path.join(assetDir, name), bytes);
-      assets.push({ src: `/mockups/${slug}/${name}`, alt: `Public image captured from ${new URL(url).hostname}`, caption: assets.length === 0 ? 'Public race-site image used for concept direction.' : 'Additional public race-site visual reference.', source: url });
+      assets.push({ src: `/mockups/${assetNamespace}/${name}`, alt: `Public image captured from ${new URL(url).hostname}`, caption: assets.length === 0 ? 'Public race-site image used for concept direction.' : 'Additional public race-site visual reference.', source: url });
     } catch {
       // Keep generation resilient; missing/blocked images should fall back to illustrated placeholders.
     }
@@ -186,7 +203,9 @@ function buildConfig(sample, facts, assets, metaInfo) {
       noindex: true,
       source_url: metaInfo.sourceUrl,
       captured_at: metaInfo.capturedAt,
-      route: `/private/mockups/${metaInfo.slug}/`,
+      access_token: metaInfo.token,
+      race_slug: metaInfo.slug,
+      route: `/private/mockups/${metaInfo.token}/`,
       template: metaInfo.template,
       assets,
       notes: 'Generated from public page metadata and public image URLs. Replace placeholder race details during customer-specific production.'
@@ -214,6 +233,14 @@ function nextYearDate() {
 
 function sanitizeSlug(value) {
   return String(value || 'race-preview').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70) || 'race-preview';
+}
+
+function generateAccessToken() {
+  return randomBytes(16).toString('hex');
+}
+
+function isValidAccessToken(value) {
+  return /^[a-f0-9]{32,}$/i.test(String(value || ''));
 }
 
 function unique(values) {
