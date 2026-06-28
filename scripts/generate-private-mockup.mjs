@@ -6,66 +6,76 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
-const args = parseArgs(process.argv.slice(2));
+const userAgent = 'StartLine private mockup generator (+https://startline.example; public preview capture)';
 
-if (args.help) {
-  console.log(`Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community] [--token 32-hex-token]
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch((error) => {
+    console.error(error?.message || error);
+    process.exit(1);
+  });
+}
+
+async function main() {
+  const args = parseArgs(process.argv.slice(2));
+
+  if (args.help) {
+    console.log(`Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community] [--token 32-hex-token]
 
 Generates a private/noindex StartLine concept preview config.
 Access URLs are always tokenized: /private/mockups/<32+ hex chars>/
 Only source-backed facts are populated; missing or uncertain fields are recorded in private_mockup.uncertainties.
 If --token is omitted, a cryptographically random 128-bit token is generated.`);
-  process.exit(0);
+    return;
+  }
+
+  if (!args.url) {
+    console.error('Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community] [--token 32-hex-token]');
+    process.exit(1);
+  }
+
+  const sourceUrl = new URL(args.url).toString();
+  const template = args.template || 'community';
+  if (template !== 'community') {
+    console.error('Private mockup generation currently supports the community template only.');
+    process.exit(1);
+  }
+
+  const capturedAt = new Date().toISOString();
+  const page = await fetchText(sourceUrl);
+  const facts = extractFacts(page, sourceUrl);
+  const slug = sanitizeSlug(args.slug || facts.name?.value || new URL(sourceUrl).hostname.replace(/^www\./, ''));
+  const token = args.token || generateAccessToken();
+  if (!isValidAccessToken(token)) {
+    console.error('Private mockup tokens must be at least 128 bits of entropy encoded as 32+ hex characters. Omit --token to generate one safely.');
+    process.exit(1);
+  }
+
+  const missingRequired = ['name', 'eventDate', 'location', 'distances'].filter((key) => {
+    if (key === 'distances') return facts.distances.length === 0;
+    return !facts[key]?.value;
+  });
+  if (missingRequired.length) {
+    console.error(`Source page did not expose required launch-safe facts: ${missingRequired.join(', ')}.`);
+    console.error('No config was written. Re-run with a more specific public event URL or hand-author a source-backed config.');
+    process.exit(1);
+  }
+
+  const assets = await captureImages(facts.images.map((image) => image.value), token);
+  const config = buildConfig(facts, assets, { sourceUrl, capturedAt, slug, token, template });
+
+  const outDir = path.join(root, 'src/data/private-mockups');
+  await mkdir(outDir, { recursive: true });
+  const outPath = path.join(outDir, `${slug}.json`);
+  await writeFile(outPath, `${JSON.stringify(config, null, 2)}\n`);
+
+  console.log(`Private mockup config written: ${path.relative(root, outPath)}`);
+  console.log(`Private preview route: /private/mockups/${token}/`);
+  console.log(`Private access token: ${token}`);
+  console.log(`Captured public images: ${assets.length}`);
+  console.log(`Source-backed facts: ${config.private_mockup.provenance.items.length}`);
+  console.log(`Uncertainties recorded: ${config.private_mockup.uncertainty.items.length}`);
+  assets.forEach((asset) => console.log(`- ${asset.src} (${asset.source})`));
 }
-
-if (!args.url) {
-  console.error('Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community] [--token 32-hex-token]');
-  process.exit(1);
-}
-
-const sourceUrl = new URL(args.url).toString();
-const template = args.template || 'community';
-if (template !== 'community') {
-  console.error('Private mockup generation currently supports the community template only.');
-  process.exit(1);
-}
-
-const userAgent = 'StartLine private mockup generator (+https://startline.example; public preview capture)';
-const capturedAt = new Date().toISOString();
-const page = await fetchText(sourceUrl);
-const facts = extractFacts(page, sourceUrl);
-const slug = sanitizeSlug(args.slug || facts.name?.value || new URL(sourceUrl).hostname.replace(/^www\./, ''));
-const token = args.token || generateAccessToken();
-if (!isValidAccessToken(token)) {
-  console.error('Private mockup tokens must be at least 128 bits of entropy encoded as 32+ hex characters. Omit --token to generate one safely.');
-  process.exit(1);
-}
-
-const missingRequired = ['name', 'eventDate', 'location', 'distances'].filter((key) => {
-  if (key === 'distances') return facts.distances.length === 0;
-  return !facts[key]?.value;
-});
-if (missingRequired.length) {
-  console.error(`Source page did not expose required launch-safe facts: ${missingRequired.join(', ')}.`);
-  console.error('No config was written. Re-run with a more specific public event URL or hand-author a source-backed config.');
-  process.exit(1);
-}
-
-const assets = await captureImages(facts.images.map((image) => image.value), token);
-const config = buildConfig(facts, assets, { sourceUrl, capturedAt, slug, token, template });
-
-const outDir = path.join(root, 'src/data/private-mockups');
-await mkdir(outDir, { recursive: true });
-const outPath = path.join(outDir, `${slug}.json`);
-await writeFile(outPath, `${JSON.stringify(config, null, 2)}\n`);
-
-console.log(`Private mockup config written: ${path.relative(root, outPath)}`);
-console.log(`Private preview route: /private/mockups/${token}/`);
-console.log(`Private access token: ${token}`);
-console.log(`Captured public images: ${assets.length}`);
-console.log(`Source-backed facts: ${config.private_mockup.provenance.items.length}`);
-console.log(`Uncertainties recorded: ${config.private_mockup.uncertainty.items.length}`);
-assets.forEach((asset) => console.log(`- ${asset.src} (${asset.source})`));
 
 function parseArgs(argv) {
   const parsed = {};
@@ -200,9 +210,15 @@ function extractScheduleItems(sections, { eventDate, location, distances }) {
 function extractFaqs(sections) {
   const faqs = [];
   const add = (question, answer, source) => {
-    const cleaned = cleanSentence(answer, 360);
+    const extracted = extractStructuredLinks(answer);
+    const cleaned = cleanSentence(extracted.text, 360);
     if (cleaned && !faqs.some((item) => item.question === question)) {
-      faqs.push({ question, answer: cleaned, provenance: source });
+      faqs.push({
+        question,
+        answer: cleaned,
+        ...(extracted.links.length ? { links: uniqueLinks(extracted.links).slice(0, 3) } : {}),
+        provenance: source
+      });
     }
   };
 
@@ -384,9 +400,10 @@ function labelForResourceUrl(url) {
   try { host = new URL(url).hostname.replace(/^www\./, '').toLowerCase(); } catch { return 'View course resource'; }
   if (host.includes('strava.com')) return 'View Strava route';
   if (host.includes('runningahead.com')) return 'View RunningAHEAD map';
-  if (host.includes('runsignup.com')) return 'View official registration';
+  if (host.includes('runsignup.com')) return 'View RunSignup registration';
   if (/map|route|course/i.test(url)) return 'View course resource';
-  return 'View source resource';
+  const label = host.split('.')[0]?.replace(/[-_]+/g, ' ');
+  return label ? `View ${titleCase(label)} resource` : 'View source resource';
 }
 
 function uniqueLinks(links) {
@@ -748,10 +765,9 @@ function normalizeDisplayCopy(value) {
     .replace(/\s+([,.;:!?])/g, '$1')
     .replace(/([([{])\s+/g, '$1')
     .replace(/\s+([)\]}])/g, '$1')
-    .replace(/\b(\d+)(?:st|nd|rd|th),\s+(20\d{2})\b/gi, '$1, $2')
-    .replace(/\b(\d+)(?:st|nd|rd|th)\b/gi, '$1')
-    .replace(/(\b\d+(?:st|nd|rd|th)?\s*)[-–—]\s*\$/gi, '$1 – $')
-    .replace(/\s*[-–—]\s*\$/g, ' – $')
+    .replace(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d+)(?:st|nd|rd|th),\s+(20\d{2})\b/gi, '$1 $2, $3')
+    .replace(/\b(\d+(?:st|nd|rd|th)?)(?:\s*)[-–—]\s*\$/gi, '$1 — $')
+    .replace(/\s+[-–—]\s*\$/g, ' — $')
     .replace(/\s+([,.;:!?])/g, '$1')
     .replace(/\s+/g, ' ')
     .trim();
@@ -770,3 +786,5 @@ function titleCase(value) {
 function formatTimeLabel(value) {
   return String(value || '').replace(/\b(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b/gi, (_, hour, minute = '00', period) => `${Number(hour)}:${minute} ${period.toUpperCase()}`);
 }
+
+export { extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy };

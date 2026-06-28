@@ -122,6 +122,7 @@ for (const file of files) {
     validateSampleImages(config, errors);
     validateSourceDerivedPlaceholders(config, errors);
     validateDisplayCopyPolish(config, errors);
+    validateFaqLinks(config, errors);
   }
 
   if (errors.length > 0) {
@@ -163,6 +164,19 @@ function validateDisplayCopyPolish(config, errors) {
       if (pattern.test(value)) errors.push(`${jsonPath}: Display copy contains punctuation/spacing artifact "${pattern.source}".`);
     }
   }
+}
+
+function validateFaqLinks(config, errors) {
+  asArray(config.faqs || config.faq).forEach((faq, index) => {
+    const base = `faqs[${index}]`;
+    if (rawVisibleUrlPattern.test(String(faq?.answer || ''))) {
+      errors.push(`${base}.answer: FAQ answers must remove visible URL text and preserve URLs as labeled links.`);
+    }
+    asArray(faq?.links).forEach((link, linkIndex) => {
+      if (!link?.url || !/^https?:\/\//i.test(link.url)) errors.push(`${base}.links[${linkIndex}].url: FAQ links must include an absolute HTTP(S) URL.`);
+      if (!link?.label || rawVisibleUrlPattern.test(String(link.label))) errors.push(`${base}.links[${linkIndex}].label: FAQ links must use a human-readable label, not a raw URL.`);
+    });
+  });
 }
 
 function isDisplayCopyPath(jsonPath) {

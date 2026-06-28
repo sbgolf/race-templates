@@ -23,8 +23,21 @@ const headline = configured.headline || defaultValue.headline;
 const intro = configured.intro || defaultValue.intro;
 const improved = Array.isArray(configured.improved) && configured.improved.length ? configured.improved : defaultValue.improved;
 const paidIncludes = Array.isArray(configured.paid_includes) && configured.paid_includes.length ? configured.paid_includes : defaultValue.paid_includes;
+const platformLabels = {
+  runsignup: 'RunSignup',
+  race_roster: 'Race Roster',
+  raceroster: 'Race Roster',
+  active: 'ACTIVE',
+  letsdothis: "Let's Do This",
+  other: 'official race platform'
+};
+const platformLabel = race.registration?.platform
+  ? platformLabels[String(race.registration.platform).toLowerCase()] || String(race.registration.platform)
+      .replace(/[-_]+/g, ' ')
+      .replace(/\b\w/g, (letter) => letter.toUpperCase())
+  : null;
 const registrationFacts = [
-  race.registration?.platform ? `Registration platform: ${race.registration.platform}` : null,
+  platformLabel ? `Registration platform: ${platformLabel}` : null,
   race.registration?.url ? 'Official registration link is configured for every primary CTA.' : null
 ].filter(Boolean);
 const distanceFacts = (race.distances || [])

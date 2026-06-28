@@ -10,6 +10,7 @@
     "validate:config": "node scripts/validate-config.mjs",
     "validate:private-mockups": "node scripts/validate-private-mockups.mjs",
     "validate:rendered-private-mockups": "node scripts/validate-rendered-private-mockups.mjs",
+    "test:private-mockup-generator": "node scripts/test-private-mockup-generator.mjs",
     "launch:check": "node scripts/launch-check.mjs",
     "scaffold:customer": "node scripts/scaffold-customer.mjs",
     "mockup:private": "node scripts/generate-private-mockup.mjs"

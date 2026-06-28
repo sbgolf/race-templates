@@ -7,7 +7,9 @@ Use this loop when an audit record needs a Steve-only StartLine concept URL gene
 ```bash
 npm run mockup:private -- --url https://example-race-site.org --slug example-race
 npm run validate:config
+npm run validate:private-mockups
 npm run build
+npm run validate:rendered-private-mockups
 ```
 
 Output:
@@ -15,6 +17,8 @@ Output:
 - Config: `src/data/private-mockups/<race-slug>.json`
 - Captured public images: `public/mockups/<access-token>/`
 - Static preview route after build/deploy: `/private/mockups/<access-token>/`
+
+The validation flow has two private-mockup gates: `npm run validate:private-mockups` checks source-backed config data before rendering, and `npm run validate:rendered-private-mockups` checks the built private pages after `npm run build`.
 
 ## What the generator does
 
