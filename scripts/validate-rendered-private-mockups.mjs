@@ -36,7 +36,6 @@ for (const file of files) {
   const registrationUrl = registrationUrlForRenderedFile(file);
   const config = configForRenderedFile(file);
   const template = config?.private_mockup?.template || config?.identity?.template || 'community';
-  const isPerformance = template === 'performance';
   const shouldRenderTrustSignals = shouldRenderTrustSignalsBand(config);
   if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible text exposes a raw URL or bare domain.');
   for (const pattern of visiblePlaceholderPatterns) {
@@ -47,17 +46,15 @@ for (const file of files) {
   }
   if (!html.includes('data-private-value-narrative')) errors.push(`Private ${template} mockup is missing the StartLine value narrative.`);
   const checklistItemCount = (html.match(/data-checklist-item-id=/g) || []).length;
-  if (!isPerformance) {
-    if (!html.includes('data-runner-decision-checklist')) errors.push('Private Community mockup is missing the runner decision checklist.');
-    if (checklistItemCount < 3) errors.push(`Runner decision checklist renders ${checklistItemCount} items; expected at least 3.`);
-    if (!html.includes("scrollToId('runner-checklist')") || !html.includes('Review key race details')) {
-      errors.push('Private hero secondary CTA must point to the runner checklist when private_mockup metadata and a checklist are present.');
-    }
-    if (!html.includes('data-registration-decision-card')) errors.push('Private Community mockup is missing the registration decision card.');
-    if (!html.includes('data-measurement-ready-panel')) errors.push('Private Community mockup is missing the measurement-ready panel.');
-    if (shouldRenderTrustSignals && !html.includes('data-trust-signals-band')) errors.push('Private Community mockup has enough substantive runner-facing trust facts but is missing the trust-signal band.');
-    if (!shouldRenderTrustSignals && html.includes('data-trust-signals-band')) errors.push('Private Community mockup renders the trust-signal band without enough substantive runner-facing trust facts.');
+  if (!html.includes('data-runner-decision-checklist')) errors.push(`Private ${template} mockup is missing the runner decision checklist.`);
+  if (checklistItemCount < 3) errors.push(`Runner decision checklist renders ${checklistItemCount} items; expected at least 3.`);
+  if (!html.includes("scrollToId('runner-checklist')") || !html.includes('Review key race details')) {
+    errors.push('Private hero secondary CTA must point to the runner checklist when private_mockup metadata and a checklist are present.');
   }
+  if (!html.includes('data-registration-decision-card')) errors.push(`Private ${template} mockup is missing the registration decision card.`);
+  if (!html.includes('data-measurement-ready-panel')) errors.push(`Private ${template} mockup is missing the measurement-ready panel.`);
+  if (shouldRenderTrustSignals && !html.includes('data-trust-signals-band')) errors.push(`Private ${template} mockup has enough substantive runner-facing trust facts but is missing the trust-signal band.`);
+  if (!shouldRenderTrustSignals && html.includes('data-trust-signals-band')) errors.push(`Private ${template} mockup renders the trust-signal band without enough substantive runner-facing trust facts.`);
   if (/happen on (?:runsignup|race_roster|raceroster|haku|letsdothis|lets_do_this|other)\b/.test(text)) {
     errors.push('Registration decision copy exposes a raw registration platform key instead of a prospect-facing label.');
   }
@@ -76,9 +73,7 @@ for (const file of files) {
   });
 
   const placements = registrationAnchors.map((anchor) => anchor.attrs['data-analytics-placement']).filter(Boolean);
-  const requiredPlacements = isPerformance
-    ? ['nav-button', 'hero-primary', 'finale-primary']
-    : ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary'];
+  const requiredPlacements = ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary'];
   for (const required of requiredPlacements) {
     if (!placements.includes(required)) errors.push(`Missing required register-click placement "${required}".`);
   }

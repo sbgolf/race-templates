@@ -4,6 +4,10 @@ import Nav from './Nav.astro';
 import Hero from './Hero.astro';
 import StatBar from './StatBar.astro';
 import PrivateValueNarrative from './PrivateValueNarrative.astro';
+import RunnerDecisionChecklist from './RunnerDecisionChecklist.astro';
+import RegistrationDecisionCard from './RegistrationDecisionCard.astro';
+import TrustSignalsBand from './TrustSignalsBand.astro';
+import MeasurementReadyPanel from './MeasurementReadyPanel.astro';
 import Course from './Course.astro';
 import PacePicker from './PacePicker.astro';
 import Records from './Records.astro';
@@ -22,14 +26,18 @@ const isPrivateMockup = Boolean(race.private_mockup);
 <Hero race={race} />
 <StatBar race={race} />
 {isPrivateMockup && <PrivateValueNarrative race={race} />}
+{isPrivateMockup && <TrustSignalsBand race={race} />}
 <Course race={race} />
 <PacePicker race={race} />
 <Records race={race} />
 <Gallery race={race} />
+{isPrivateMockup && <RunnerDecisionChecklist race={race} />}
+{isPrivateMockup && <RegistrationDecisionCard race={race} />}
 <Entry race={race} />
 <Travel race={race} />
 <Sponsors race={race} />
 <FAQ race={race} />
+{isPrivateMockup && <MeasurementReadyPanel race={race} />}
 <Finale race={race} />
 </main>
 <Footer race={race} />

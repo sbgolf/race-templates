@@ -179,19 +179,19 @@ Implemented for Destination Major:
 - Generator accepts `--template destination-major` and writes matching `identity.template` / `private_mockup.template` metadata.
 - Rendered private validation and launch checks now apply the private value contract to Destination Major as well as Community.
 
-Implemented for Performance foundation:
+Implemented for Performance:
 
 - Added a fictional, tokenized Performance private mockup fixture with matching `identity.template` and `private_mockup.template` metadata.
 - Tokenized private mockup routing can render the Performance template.
-- Performance private rendering now includes the private-only StartLine value narrative focused on BQ, PR, field-cap, and registration-click value.
-- Public `/preview/performance` remains clean: the private value narrative and later private sales modules are not rendered there.
-- Performance registration CTAs link to `registration.url` and include basic `register_click` analytics attributes.
-- Rendered/launch validation recognizes Performance as foundation-only for this item: private Performance requires the value narrative, public Performance forbids it, and later modules are not required yet.
+- Performance private rendering includes the private-only StartLine value narrative focused on BQ, PR, field-cap, and registration-click value.
+- Performance private mockups now render the runner decision checklist, registration decision card, trust-signal band when enough source-backed runner facts exist, and measurement-ready handoff panel in the Performance visual language.
+- Public `/preview/performance` remains clean: the private value narrative and private sales/value modules are not rendered there.
+- Performance registration CTAs link to `registration.url` and include distinct `register_click` analytics placements across nav, hero, runner checklist, registration decision card, entry, and finale.
+- Rendered/launch validation now applies the full private value contract to Performance as well as Community and Destination Major; public Performance previews must forbid private modules.
 
 Remaining deliverables:
 
 - Shared private-value utilities/copy model.
-- Performance runner checklist, registration decision card, trust-signal band, and measurement panel.
 - Trail implementation when created.
 - Charity implementation when created.
 - Template standards update requiring all new templates to implement the value contract before merge.
