@@ -48,7 +48,7 @@ export function trustSignalsForRace(race) {
 
   for (const distance of asArray(race.distances)) {
     const suffix = distance?.name ? ` (${distance.name})` : '';
-    add(`certification-${distance?.id || signals.length}`, 'Certification', distance?.certification, `Source-backed distance detail${suffix}`);
+    add(`certification-${distance?.id || signals.length}`, 'Certification', distance?.certification, `Distance detail${suffix}`);
     add(`profile-${distance?.id || signals.length}`, 'Course profile', distance?.profile, distance?.certification ? distance.certification : 'Configured course detail');
     if (distance?.aid_stations !== undefined && distance?.aid_stations !== null) {
       add(`aid-count-${distance?.id || signals.length}`, 'On-course support', `${distance.aid_stations} aid stations listed`, suffix ? `Applies to ${distance.name}` : '');
@@ -61,7 +61,7 @@ export function trustSignalsForRace(race) {
   }
 
   if (race.organization?.name) {
-    add('organizer', 'Organizer identified', race.organization.name, 'Organizer detail is present in the source/config.');
+    add('organizer', 'Organizer identified', race.organization.name, 'Organizer detail is configured for this concept.');
   }
 
   const provenanceItems = asArray(race.private_mockup?.provenance?.items);
@@ -70,8 +70,8 @@ export function trustSignalsForRace(race) {
   if (race.private_mockup?.source_url || race.private_mockup?.provenance?.source_url) {
     const summaryParts = [];
     if (highConfidenceCount) summaryParts.push(`${highConfidenceCount} high-confidence facts`);
-    if (sourceSections) summaryParts.push(`${sourceSections} source-confirmed sections`);
-    add('source-backed', 'Source-backed concept', summaryParts.join(' · ') || 'Public source reviewed', 'Unavailable details are omitted instead of filled with placeholders.');
+    if (sourceSections) summaryParts.push(`${sourceSections} detailed sections`);
+    add('source-backed', 'Fact-checked concept', summaryParts.join(' · ') || 'Race details reviewed', 'Unavailable details are omitted instead of filled with placeholders.');
   }
 
   return signals.slice(0, 8);

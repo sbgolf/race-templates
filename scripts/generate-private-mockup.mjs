@@ -489,8 +489,8 @@ function buildConfig(facts, assets, metaInfo) {
       headline: 'A race website concept built around registration intent — not just a prettier homepage.',
       intro: 'StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.',
       improved: [
-        'Reduced runner friction by placing source-backed race facts near the registration path.',
-        'Surfaced trust signals from configured distances, schedule details, FAQs, and source provenance when available.',
+        'Reduced runner friction by placing key race facts near the registration path.',
+        'Surfaced trust signals from configured distances, schedule details, and FAQs when available.',
         'Made registration CTAs easier to find on mobile and desktop with measurement-ready registration-click tracking.'
       ],
       paid_includes: [
@@ -589,7 +589,7 @@ function buildRunnerDecisionChecklist(facts, metaInfo) {
   if (!items.length) return undefined;
   return {
     headline: 'Before you register',
-    intro: 'A quick, source-backed checklist of race details to review before you continue to official registration.',
+    intro: 'A quick checklist of race details to review before you continue to official registration.',
     items
   };
 }

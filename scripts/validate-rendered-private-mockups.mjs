@@ -14,6 +14,16 @@ const visiblePlaceholderPatterns = [
   /\bunknown\b/i,
   /\bcoming soon\b/i
 ];
+const visibleInternalChromePatterns = [
+  /\bPrimary source\b/i,
+  /\bSource-confirmed\b/i,
+  /\bsource-backed\b/i,
+  /\bprovenance\b/i,
+  /\bUncertainty\b/i,
+  /\bPrivate concept note\b/i,
+  /\bStartLine value wrapper\b/i,
+  /\bshould be reviewed before prospect sharing\b/i
+];
 const punctuationArtifactPatterns = [
   /\b20\d{2}\s+\./,
   /\b\d+\s+hours?\s+\./i,
@@ -43,6 +53,9 @@ for (const file of files) {
   if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible text exposes a raw URL or bare domain.');
   for (const pattern of visiblePlaceholderPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains placeholder copy "${pattern.source}".`);
+  }
+  for (const pattern of visibleInternalChromePatterns) {
+    if (pattern.test(text)) errors.push(`Rendered visible text contains internal/source chrome "${pattern.source}".`);
   }
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);

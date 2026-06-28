@@ -128,7 +128,7 @@
   },
   "runner_decision_checklist": {
     "headline": "Before you register",
-    "intro": "A quick, source-backed checklist of race details to review before you continue to official registration.",
+    "intro": "A quick checklist of race details to review before you continue to official registration.",
     "items": [
       {
         "id": "date",
