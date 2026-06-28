@@ -20,7 +20,7 @@
     "venue": "Ashland City, TN"
   },
   "organization": {
-    "name": "nashvilletrackclub.org"
+    "name": "Nashville Track Club"
   },
   "distances": [
     {
@@ -48,24 +48,34 @@
   ],
   "registration": {
     "url": "https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon",
-    "platform": "other",
-    "cta_label": "Visit official race site"
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
   },
   "story": {
     "kicker": "Race overview",
     "title": "About 6th ANNUAL ASHLAND CITY HALF-MARATHON",
     "paragraphs": [
-      "Nashville Track Club is excited to bring you the 6th annual Ashland City Half-Marathon on Saturday, March 7th, 2026 . This race is a USA Track & Field-sanctioned event. It will take place on a fast, flat, USATF-certified course that is absolutely gorgeous, starting and finishing right next to the Cumberland River at Riverbluff Park in Ashland City, TN.",
-      "Online registration is at runsignup.com . Entry fee is $60 until 11:59pm Wednesday December 31, 2025. $70 until 11:59pm Saturday, January 31. After that, it will increase to $80. Online Registration is open until 07:00am on Saturday, March 7th (race day) . You may also enter in-person on race day between 5:45am and 7:15am. Each participant will receive an incredibly soft Next Level race T-shirt and more swag to be announced as sponsorships firm up. All finishers will receive a medal.",
-      "In 2022, the course had to be redesigned, re-measured, and re-certified due to construction on Tennessee Waltz Parkway east of Riverbluff Park. The 2025 course is identical to the one used the last three years – beautiful, flat, and very fast (see links below). The course’s USATF certification number is TN22002MS . This course is eligible for Tennessee single-age state records . https://www.strava.com/routes/2926228840853429002 https://www.runningahead.com/maps/c388a7bfd01a4a9bb12b686eb6d79b74?",
-      "We will have crewed aid stations – offering both Water and Gatorade – at the following points on the course: 3.3 miles, 4.4 miles, 7.3 miles, and 9.3 miles, and 11.5 miles. We will NOT be handing out gels, so if you plan to use gels, please bring your own. In the unlikely occurrence of a medical emergency during the event, each aid station will have a direct line to EMS.",
-      "We will conduct our awards and post-race celebration at Sidelines Bar & Grill at 11:00am (they will open early for us at 10:30am). All registered participants will receive one drink ticket for a complimentary beverage upon arrival – you must show your bib number to receive your drink ticket."
+      "Nashville Track Club is excited to bring you the 6th annual Ashland City Half-Marathon on Saturday, March 7, 2026. This race is a USA Track & Field-sanctioned event. It will take place on a fast, flat, USATF-certified course that starts and finishes next to the Cumberland River at Riverbluff Park in Ashland City, TN.",
+      "Online registration is available on the official registration page. Entry fee is $60 until 11:59pm Wednesday December 31, 2025. $70 until 11:59pm Saturday, January 31. After that, it will increase to $80. Online registration is open until 07:00am on Saturday, March 7 (race day). You may also enter in person on race day between 5:45am and 7:15am. Each participant will receive a Next Level race T-shirt and more swag to be announced as sponsorships firm up. All finishers will receive a medal.",
+      "In 2022, the course had to be redesigned, re-measured, and re-certified due to construction on Tennessee Waltz Parkway east of Riverbluff Park. The 2025 course is identical to the one used the last three years — beautiful, flat, and very fast. The course’s USATF certification number is TN22002MS. This course is eligible for Tennessee single-age state records.",
+      "We will have crewed aid stations — offering both water and Gatorade — at the following points on the course: 3.3 miles, 4.4 miles, 7.3 miles, 9.3 miles, and 11.5 miles. We will not be handing out gels, so if you plan to use gels, please bring your own. In the unlikely occurrence of a medical emergency during the event, each aid station will have a direct line to EMS.",
+      "We will conduct awards and the post-race celebration at Sidelines Bar & Grill at 11:00am (they will open early at 10:30am). All registered participants will receive one drink ticket for a complimentary beverage upon arrival — you must show your bib number to receive your drink ticket."
     ],
     "image": {
       "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/2-9799347d35.png",
       "alt": "Course or race image for 6th ANNUAL ASHLAND CITY HALF-MARATHON",
       "source": "https://nashvilletrackclub.org/wp-content/uploads/2024/02/Riverbluff-Park-Map-AC-24.png"
-    }
+    },
+    "links": [
+      {
+        "label": "View Strava route",
+        "url": "https://www.strava.com/routes/2926228840853429002"
+      },
+      {
+        "label": "View RunningAHEAD map",
+        "url": "https://www.runningahead.com/maps/c388a7bfd01a4a9bb12b686eb6d79b74?"
+      }
+    ]
   },
   "schedule": [
     {
@@ -116,20 +126,20 @@
     },
     {
       "question": "Where is packet pick-up?",
-      "answer": "Packet pick-up is available at Nashville Running Company at 820 Woodland St, Nashville, TN 37206 from 11am – 6pm on Friday, March 6th. You can also pick up your packet at Athlete Registration between 5:45am – 7:15am on race morning (Saturday, March 7th) at Riverbluff Park in Ashland City"
+      "answer": "Packet pick-up is available at Nashville Running Company at 820 Woodland St, Nashville, TN 37206 from 11am – 6pm on Friday, March 6. You can also pick up your packet at Athlete Registration between 5:45am – 7:15am on race morning (Saturday, March 7) at Riverbluff Park in Ashland City."
     },
     {
       "question": "Is there a course time limit?",
-      "answer": "the course is only open for 3 hours ."
+      "answer": "The course is open for 3 hours."
     },
     {
       "question": "Are awards or prize money listed?",
-      "answer": "Prizing is as follows: Male & Female Overall: 1st – $300, 2nd -$200, 3rd – $100 *$250 bonus for Course record – 1:03:52 (Men) & 1:12:51 (Women) Male & Female Masters (Over 40): 1st – $100 Winner of each age group (male and female): $50 gift card Age Groups: 0-19, 20-29, 30-39, 40-49, 50-59, 60-69, 70+ Placing and prize money in the male and female overall"
+      "answer": "Prizing is listed as follows: male and female overall awards are 1st — $300, 2nd — $200, and 3rd — $100. A $250 course-record bonus is listed, with masters and age-group awards also noted by the source page."
     }
   ],
   "seo": {
     "meta_title": "6th ANNUAL ASHLAND CITY HALF-MARATHON — Race Website Preview",
-    "meta_description": "Nashville Track Club is excited to bring you the 6th annual Ashland City Half-Marathon on Saturday, March 7th, 2026 ."
+    "meta_description": "Nashville Track Club is excited to bring you the 6th annual Ashland City Half-Marathon on Saturday, March 7, 2026."
   },
   "private_mockup": {
     "generated": true,

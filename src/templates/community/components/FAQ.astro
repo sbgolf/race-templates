@@ -12,7 +12,7 @@ const faqs = (race.faqs || race.faq || []).filter((item) => item?.question && it
     </div>
     <div class="faq-list">
       {faqs.map((item) => (
-        <div class="faq-item"><button class="faq-q">{item.question}<span class="pm"></span></button><div class="faq-a"><p>{item.answer}</p></div></div>
+        <div class="faq-item"><button class="faq-q">{item.question}<span class="pm"></span></button><div class="faq-a"><p>{item.answer}</p>{(item.links || []).length ? <div class="faq-links">{item.links.map((link) => <a href={link.url} target="_blank" rel="noopener">{link.label}</a>)}</div> : null}</div></div>
       ))}
     </div>
   </div>

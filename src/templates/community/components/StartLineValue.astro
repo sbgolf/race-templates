@@ -23,8 +23,21 @@ const headline = configured.headline || defaultValue.headline;
 const intro = configured.intro || defaultValue.intro;
 const improved = Array.isArray(configured.improved) && configured.improved.length ? configured.improved : defaultValue.improved;
 const paidIncludes = Array.isArray(configured.paid_includes) && configured.paid_includes.length ? configured.paid_includes : defaultValue.paid_includes;
+const platformLabels = {
+  runsignup: 'RunSignup',
+  race_roster: 'Race Roster',
+  raceroster: 'Race Roster',
+  active: 'ACTIVE',
+  letsdothis: "Let's Do This",
+  other: 'official race platform'
+};
+const platformLabel = race.registration?.platform
+  ? platformLabels[String(race.registration.platform).toLowerCase()] || String(race.registration.platform)
+      .replace(/[-_]+/g, ' ')
+      .replace(/\b\w/g, (letter) => letter.toUpperCase())
+  : null;
 const registrationFacts = [
-  race.registration?.platform ? `Registration platform: ${race.registration.platform}` : null,
+  platformLabel ? `Registration platform: ${platformLabel}` : null,
   race.registration?.url ? 'Official registration link is configured for every primary CTA.' : null
 ].filter(Boolean);
 const distanceFacts = (race.distances || [])
@@ -90,7 +103,7 @@ const factGroups = [
       <p>
         This private mockup is framed around registration click-through readiness and uses only configured or source-backed race details. It avoids overpromising registration outcomes and should be reviewed before prospect sharing.
       </p>
-      {sourceUrl ? <p>Primary source: <a href={sourceUrl} target="_blank" rel="noopener">{sourceUrl}</a></p> : null}
+      {sourceUrl ? <p>Primary source: <a href={sourceUrl} target="_blank" rel="noopener">View original source page</a></p> : null}
       {sourceSections.length ? <p>Source-confirmed sections: {sourceSections.join(', ')}</p> : null}
       {uncertaintySummary ? <p>Uncertainty: {uncertaintySummary}</p> : null}
     </aside>
