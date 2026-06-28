@@ -24,13 +24,15 @@ const visibleInternalChromePatterns = [
   /\bprovenance\b/i,
   /\bUncertainty\b/i,
   /\bPrivate concept note\b/i,
-  /\bPrivate StartLine concept preview\b/i,
+  /\bPrivate StartLine concept\b/i,
+  /\bStartLine private concept\b/i,
   /\bPrivate StartLine race website concept preview\b/i,
   /\bStartLine value wrapper\b/i,
   /\bshould be reviewed before prospect sharing\b/i
 ];
 const customerFacingInternalChromePatterns = [
-  /\bPrivate StartLine concept preview\b/i,
+  /\bPrivate StartLine concept\b/i,
+  /\bStartLine private concept\b/i,
   /\bPrivate StartLine race website concept preview\b/i
 ];
 const punctuationArtifactPatterns = [
