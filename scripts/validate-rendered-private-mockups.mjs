@@ -24,8 +24,14 @@ const visibleInternalChromePatterns = [
   /\bprovenance\b/i,
   /\bUncertainty\b/i,
   /\bPrivate concept note\b/i,
+  /\bPrivate StartLine concept preview\b/i,
+  /\bPrivate StartLine race website concept preview\b/i,
   /\bStartLine value wrapper\b/i,
   /\bshould be reviewed before prospect sharing\b/i
+];
+const customerFacingInternalChromePatterns = [
+  /\bPrivate StartLine concept preview\b/i,
+  /\bPrivate StartLine race website concept preview\b/i
 ];
 const punctuationArtifactPatterns = [
   /\b20\d{2}\s+\./,
@@ -48,6 +54,7 @@ if (!files.length) {
 for (const file of files) {
   const html = await readFile(file, 'utf8');
   const text = visibleText(html);
+  const customerFacingCopy = customerFacingCopySurface(html);
   const errors = [];
   const registrationUrl = registrationUrlForRenderedFile(file);
   const config = configForRenderedFile(file);
@@ -59,6 +66,9 @@ for (const file of files) {
   }
   for (const pattern of visibleInternalChromePatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains internal/source chrome "${pattern.source}".`);
+  }
+  for (const pattern of customerFacingInternalChromePatterns) {
+    if (pattern.test(customerFacingCopy)) errors.push(`Rendered customer-facing HTML contains internal/source chrome "${pattern.source}".`);
   }
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);
@@ -208,6 +218,14 @@ function visibleText(html) {
     .replace(/&#39;/g, "'")
     .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
     .replace(/&#x([a-f0-9]+);/gi, (_, code) => String.fromCharCode(parseInt(code, 16)))
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function customerFacingCopySurface(html) {
+  return String(html || '')
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
