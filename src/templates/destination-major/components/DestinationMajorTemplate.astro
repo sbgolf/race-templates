@@ -1,12 +1,36 @@
 ---
+import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
+import { registrationPlatformLabel } from "../../../shared/registration-platform-label.mjs";
+import { shouldRenderTrustSignalsBand, trustSignalsForRace } from "../../../shared/private-mockup-trust.mjs";
+
 const { race } = Astro.props;
+const isPrivateMockup = Boolean(race.private_mockup);
+const registrationUrl = race.registration?.url || '#entry';
+const registrationLabel = race.registration?.cta_label || 'Register now';
+const platformLabel = registrationPlatformLabel(race.registration?.platform);
+const registerAttrs = (placement) => registerClickAttributes(race, placement);
+const checklistItems = Array.isArray(race.runner_decision_checklist?.items) ? race.runner_decision_checklist.items : [];
+const hasRunnerChecklist = isPrivateMockup && checklistItems.length > 0;
+const trustSignals = trustSignalsForRace(race);
+const showTrustSignalsBand = isPrivateMockup && shouldRenderTrustSignalsBand(race);
+const primaryDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0] || {};
+const entryTiers = (race.distances?.length ? race.distances : [primaryDistance]).filter(Boolean);
+const formatDate = (value) => {
+  if (!value) return 'Race day';
+  const date = new Date(`${value}T12:00:00Z`);
+  return Number.isNaN(date.getTime()) ? value : date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+};
+const raceDateLabel = formatDate(race.event?.date);
+const raceLocation = race.event?.location || 'Destination course';
+const raceName = race.identity?.name || 'Cascade Marathon';
+const raceTagline = race.identity?.tagline || 'The marathon that runs downhill to the sea.';
 ---
 
 <!-- NAV -->
 <nav id="nav">
   <a href="#top" class="brand">
     <svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M2 32 14 10l7 12 5-8 12 18z" fill="#FF5B2E"/><path d="M2 32 14 10l4.5 7.7L9 32z" fill="#F0A94B"/></svg>
-    <span>CASCADE<small>Marathon</small></span>
+    <span>{raceName}<small>{race.identity?.edition || 'Marathon'}</small></span>
   </a>
   <div class="nav-links" id="navLinks">
     <a href="#course">Course</a>
@@ -16,7 +40,7 @@ const { race } = Astro.props;
     <a href="#weekend">Weekend</a>
     <a href="#travel">Travel</a>
     <a href="#faq">FAQ</a>
-    <button class="btn btn-accent" onclick="scrollToId('entry')">Enter the Ballot</button>
+    <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('nav-button')}>{registrationLabel}</a>
   </div>
   <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
@@ -33,12 +57,12 @@ const { race } = Astro.props;
   <div class="haze"></div>
 
   <div class="hero-inner">
-    <span class="eyebrow">Abbott-track candidate · Pacific Northwest</span>
-    <h1>Cascade<span class="thin">The marathon that runs downhill to the sea.</span></h1>
+    <span class="eyebrow">{isPrivateMockup ? 'Private StartLine concept · destination major' : 'Abbott-track candidate · Pacific Northwest'}</span>
+    <h1>{raceName}<span class="thin">{raceTagline}</span></h1>
     <div class="hero-meta">
-      <span><span class="dot">●</span> Sunday, September 20, 2026</span>
-      <span><span class="dot">●</span> Portland → Pacific City, Oregon</span>
-      <span><span class="dot">●</span> 26.2 miles · net downhill</span>
+      <span><span class="dot">●</span> {raceDateLabel}</span>
+      <span><span class="dot">●</span> {raceLocation}</span>
+      <span><span class="dot">●</span> {primaryDistance.distance || '26.2 miles'}{primaryDistance.profile ? ` · ${primaryDistance.profile}` : ' · net downhill'}</span>
     </div>
 
     <div class="countdown" id="countdown" aria-label="Countdown to race day">
@@ -49,8 +73,8 @@ const { race } = Astro.props;
     </div>
 
     <div class="hero-cta">
-      <button class="btn btn-accent" onclick="scrollToId('entry')">Enter the 2026 Ballot →</button>
-      <button class="btn btn-ghost" onclick="scrollToId('course')">Explore the Course</button>
+      <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('hero-primary')}>{registrationLabel} →</a>
+      {hasRunnerChecklist ? <button class="btn btn-ghost" onclick="scrollToId('runner-checklist')">Review key race details</button> : <button class="btn btn-ghost" onclick="scrollToId('course')">Explore the Course</button>}
     </div>
   </div>
 
@@ -67,6 +91,92 @@ const { race } = Astro.props;
     <div class="stat"><div class="n">$2.1M</div><div class="l">Raised for Charity</div></div>
   </div>
 </div>
+
+{isPrivateMockup && (
+  <section class="private-value major-private" data-private-value-narrative>
+    <div class="wrap private-grid">
+      <div>
+        <div class="kicker">StartLine private concept</div>
+        <h2 class="sec-title">A premium race story with the registration path pulled into focus.</h2>
+      </div>
+      <div class="private-panel">
+        <p>{race.startline_value?.intro || 'This private mockup keeps the cinematic destination race language while making source-backed runner decisions, trust signals, and registration clicks easier to see.'}</p>
+        <ul>
+          {(race.startline_value?.improved || [
+            'Source-backed race details sit before registration decisions.',
+            'Registration calls-to-action use distinct measurement-ready placements.',
+            'Private-only proof modules stay out of the public destination preview.'
+          ]).slice(0, 4).map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+)}
+
+{hasRunnerChecklist && (
+  <section id="runner-checklist" class="runner-checklist major-private" data-runner-decision-checklist>
+    <div class="wrap">
+      <div class="private-section-head">
+        <div>
+          <div class="kicker">Before runners commit</div>
+          <h2 class="sec-title">{race.runner_decision_checklist?.headline || 'Runner decision checklist'}</h2>
+        </div>
+        <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('runner-checklist-top')}>{registrationLabel}</a>
+      </div>
+      <p class="lead">{race.runner_decision_checklist?.intro || 'Key facts a runner needs before continuing to the official registration handoff.'}</p>
+      <div class="checklist-grid">
+        {checklistItems.map((item) => (
+          <article class="check-card reveal" data-checklist-item-id={item.id}>
+            <span>{item.label}</span>
+            <strong>{item.value}</strong>
+            {item.detail && <p>{item.detail}</p>}
+          </article>
+        ))}
+      </div>
+      <div class="checklist-footer">
+        <span>Registration continues on {platformLabel}; this preview tracks the click-through path only.</span>
+        <a class="btn btn-dark" href={registrationUrl} {...registerAttrs('runner-checklist-footer')}>Continue to registration</a>
+      </div>
+    </div>
+  </section>
+)}
+
+{isPrivateMockup && (
+  <section class="registration-decision major-private" data-registration-decision-card>
+    <div class="wrap decision-wrap">
+      <div>
+        <div class="kicker">Registration decision</div>
+        <h2 class="sec-title">Make the next step unmistakable.</h2>
+      </div>
+      <div class="decision-card">
+        <p>Runners stay in the destination experience until they are ready to move to the official registration provider.</p>
+        <dl>
+          <div><dt>Official handoff</dt><dd>{platformLabel}</dd></div>
+          <div><dt>Primary CTA</dt><dd>{registrationLabel}</dd></div>
+          <div><dt>Measurement</dt><dd>Registration click intent by placement</dd></div>
+        </dl>
+        <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('registration-decision-card')}>Continue to official registration</a>
+      </div>
+    </div>
+  </section>
+)}
+
+{showTrustSignalsBand && (
+  <section class="trust-band major-private" data-trust-signals-band>
+    <div class="wrap">
+      <div class="kicker">Source-backed trust signals</div>
+      <div class="trust-grid">
+        {trustSignals.map((signal) => (
+          <article>
+            <span>{signal.label}</span>
+            <strong>{signal.value}</strong>
+            {signal.detail && <p>{signal.detail}</p>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
 
 <!-- COURSE -->
 <section class="course" id="course">
@@ -177,7 +287,7 @@ const { race } = Astro.props;
       </figure>
     </div>
 
-    <p class="gallery-note reveal">Placeholder visuals — race photography swaps in before launch.</p>
+    <p class="gallery-note reveal">Concept visuals — race photography swaps in before launch.</p>
   </div>
 </section>
 
@@ -238,7 +348,7 @@ Qualifier · Certified Course</span>
           <li>Technical race tee + finisher medal</li>
           <li>Chip timing & B.A.A. certificate</li>
         </ul>
-        <button class="btn btn-dark" onclick="notify(this,'Ballot entry saved — demo only')">Enter the Ballot</button>
+        <a class="btn btn-dark" href={registrationUrl} {...registerAttrs(`entry-distance-${primaryDistance.id || 'ballot'}`)}>Enter the Ballot</a>
       </div>
 
       <div class="tier featured reveal">
@@ -253,7 +363,7 @@ Qualifier · Certified Course</span>
           <li>Premium kit + expo fast-track</li>
           <li>Reserved gear-check & start village</li>
         </ul>
-        <button class="btn btn-accent" onclick="notify(this,'Guaranteed entry saved — demo only')">Claim Guaranteed Spot</button>
+        <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('entry-guaranteed')}>Claim Guaranteed Spot</a>
       </div>
 
       <div class="tier reveal">
@@ -266,7 +376,7 @@ Qualifier · Certified Course</span>
           <li>Dedicated charity cheer zones</li>
           <li>Fundraiser coaching & toolkit</li>
         </ul>
-        <button class="btn btn-dark" onclick="notify(this,'Charity interest saved — demo only')">Run for a Cause</button>
+        <a class="btn btn-dark" href={registrationUrl} {...registerAttrs('entry-charity')}>Run for a Cause</a>
       </div>
     </div>
   </div>
@@ -332,14 +442,31 @@ Qualifier · Certified Course</span>
   </div>
 </section>
 
+{isPrivateMockup && (
+  <section class="measurement-panel major-private" data-measurement-ready-panel>
+    <div class="wrap measurement-wrap">
+      <div>
+        <div class="kicker">Measurement-ready handoff</div>
+        <h2 class="sec-title">Every registration click has a clean placement.</h2>
+      </div>
+      <div class="measurement-list">
+        {['nav-button', 'hero-primary', hasRunnerChecklist ? 'runner-checklist-footer' : 'runner-checklist-top', 'registration-decision-card', `entry-distance-${primaryDistance.id || 'primary'}`, 'finale-primary'].map((placement) => (
+          <span>{placement}</span>
+        ))}
+      </div>
+      <p>StartLine records registration click intent and platform metadata without claiming completed registration outcomes.</p>
+    </div>
+  </section>
+)}
+
 <!-- FINAL CTA -->
 <section class="finale">
   <div class="wrap">
     <h2>Your fastest<br>marathon awaits.</h2>
     <p>Join the list for ballot reminders, training plans, and first access to the 2026 start line.</p>
     <div class="signup">
-      <input type="email" id="emailInput" placeholder="you@email.com" aria-label="Email address">
-      <button class="btn btn-accent" onclick="subscribe()">Notify Me</button>
+      <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('finale-primary')}>Register for {raceName}</a>
+      <button class="btn btn-ghost" onclick="scrollToId('entry')">Compare entry options</button>
     </div>
     <div class="msg" id="signupMsg"></div>
   </div>

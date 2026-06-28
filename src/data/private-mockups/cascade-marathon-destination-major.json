@@ -1,0 +1,349 @@
+{
+  "identity": {
+    "template": "destination-major",
+    "name": "Cascade Marathon",
+    "tagline": "A point-to-point Boston qualifying race from the foothills to the coast.",
+    "edition": "Private Concept",
+    "colors": {
+      "primary": "#FF5B2E",
+      "secondary": "#16324F"
+    }
+  },
+  "event": {
+    "date": "2026-09-20",
+    "location": "Portland → Pacific City, Oregon",
+    "venue": "Cascade Start Village"
+  },
+  "organization": {
+    "name": "Cascade Marathon Association"
+  },
+  "distances": [
+    {
+      "id": "marathon",
+      "name": "Marathon",
+      "distance": "26.2 mi",
+      "start_time": "7:00 AM",
+      "featured": true,
+      "price": "$185",
+      "price_amount": "185",
+      "aid_stations": 18,
+      "profile": "Point-to-point · Net downhill · Coastal finish",
+      "certification": "USATF certified OR26001CAS",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://www.cascademarathon.org/race-info",
+        "method": "public race information page"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://www.cascademarathon.org/register",
+    "platform": "other",
+    "cta_label": "Enter the 2026 ballot"
+  },
+  "startline_value": {
+    "headline": "A cinematic destination-race concept shaped around registration intent.",
+    "intro": "StartLine Sites keeps the premium mountain-to-coast story while moving source-backed runner facts, official registration handoff, and click intent measurement into the main decision path.",
+    "improved": [
+      "Placed date, distance, start time, course profile, aid support, and pricing close to the registration path.",
+      "Added a private runner checklist so important race facts can be reviewed before the official handoff.",
+      "Connected each major registration CTA to a distinct analytics placement for cleaner launch measurement.",
+      "Kept private value modules gated from the public destination-major preview."
+    ],
+    "paid_includes": [
+      "Premium one-page implementation in the Destination Major visual language.",
+      "SEO-ready SportsEvent metadata and noindex private review route.",
+      "Registration-click tracking setup by CTA placement.",
+      "No guaranteed growth claims — only clearer runner decisions and cleaner click-through measurement."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "About Cascade Marathon",
+    "paragraphs": [
+      "The Cascade event runs from the foothills to the Oregon coast, pairing a fast point-to-point course with a high-energy finish festival.",
+      "The 2026 event is listed for Sunday, September 20 with a 7:00 AM start, an official ballot entry path, and a USATF-certified course profile designed for qualifying attempts."
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Friday, September 18",
+      "name": "Expo and packet pick-up",
+      "time": "10:00 AM – 8:00 PM",
+      "location": "Portland Convention Center",
+      "applies_to_distances": [
+        "marathon"
+      ]
+    },
+    {
+      "day": "Sunday, September 20",
+      "name": "Marathon start",
+      "time": "7:00 AM",
+      "location": "Cascade Start Village",
+      "applies_to_distances": [
+        "marathon"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the refund or transfer policy?",
+      "answer": "Ballot entries are refundable before the draw, and confirmed bib transfers are handled through the official registration provider until August 20."
+    },
+    {
+      "question": "What do participants receive?",
+      "answer": "Registered marathon runners receive chip timing, a technical race tee, finisher medal, gear check, and finish festival access."
+    },
+    {
+      "question": "Is there a course time limit?",
+      "answer": "The marathon course has a 7-hour limit with support available for runners through the published finish window."
+    }
+  ],
+  "runner_decision_checklist": {
+    "headline": "Before you enter the ballot",
+    "intro": "The private review page surfaces the facts runners usually check before continuing to the official registration provider.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Sunday, September 20, 2026",
+        "source_path": "event.date",
+        "source_url": "https://www.cascademarathon.org/race-info"
+      },
+      {
+        "id": "distance",
+        "label": "Distance",
+        "value": "Marathon (26.2 mi)",
+        "source_path": "distances",
+        "applies_to_distance_ids": [
+          "marathon"
+        ],
+        "source_url": "https://www.cascademarathon.org/race-info"
+      },
+      {
+        "id": "start-time",
+        "label": "Start time",
+        "value": "7:00 AM",
+        "source_path": "distances[].start_time",
+        "applies_to_distance_ids": [
+          "marathon"
+        ],
+        "source_url": "https://www.cascademarathon.org/race-info"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Portland → Pacific City, Oregon",
+        "detail": "Point-to-point route from foothills to coastal finish.",
+        "source_path": "event.location",
+        "source_url": "https://www.cascademarathon.org/race-info"
+      },
+      {
+        "id": "price",
+        "label": "Ballot price",
+        "value": "$185",
+        "source_path": "distances[].price",
+        "applies_to_distance_ids": [
+          "marathon"
+        ],
+        "source_url": "https://www.cascademarathon.org/race-info"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pick-up",
+        "value": "Friday, September 18 · 10:00 AM – 8:00 PM · Portland Convention Center",
+        "source_path": "schedule",
+        "applies_to_distance_ids": [
+          "marathon"
+        ],
+        "source_url": "https://www.cascademarathon.org/race-info"
+      },
+      {
+        "id": "course",
+        "label": "Course notes",
+        "value": "Point-to-point · Net downhill · Coastal finish · USATF certified OR26001CAS",
+        "source_path": "distances[].profile",
+        "applies_to_distance_ids": [
+          "marathon"
+        ],
+        "source_url": "https://www.cascademarathon.org/race-info"
+      },
+      {
+        "id": "aid-stations",
+        "label": "Aid stations",
+        "value": "18 aid stations listed",
+        "source_path": "distances[].aid_stations",
+        "applies_to_distance_ids": [
+          "marathon"
+        ],
+        "source_url": "https://www.cascademarathon.org/race-info"
+      },
+      {
+        "id": "refunds-transfers",
+        "label": "Refunds/transfers",
+        "value": "Ballot entries are refundable before the draw; confirmed bib transfers are handled through the official provider until August 20.",
+        "source_path": "faqs",
+        "source_url": "https://www.cascademarathon.org/race-info"
+      },
+      {
+        "id": "swag",
+        "label": "Runner items",
+        "value": "Technical race tee, finisher medal, gear check, chip timing, and finish festival access.",
+        "source_path": "faqs",
+        "source_url": "https://www.cascademarathon.org/race-info"
+      },
+      {
+        "id": "time-limit",
+        "label": "Time limit",
+        "value": "7-hour marathon course limit",
+        "source_path": "faqs",
+        "applies_to_distance_ids": [
+          "marathon"
+        ],
+        "source_url": "https://www.cascademarathon.org/race-info"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Cascade Marathon — Private Destination Major Concept",
+    "meta_description": "Private Destination Major mockup for Cascade Marathon with runner decision details and registration-click measurement."
+  },
+  "analytics": {
+    "ga4_measurement_id": "G-XXXXXXXXXX",
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "generated": false,
+    "noindex": true,
+    "source_url": "https://www.cascademarathon.org/race-info",
+    "captured_at": "2026-06-28T00:00:00.000Z",
+    "access_token": "d6e57a710e5f4c4c9d3a2f1b8c6e9a04",
+    "race_slug": "cascade-marathon-destination-major",
+    "route": "/private/mockups/d6e57a710e5f4c4c9d3a2f1b8c6e9a04/",
+    "template": "destination-major",
+    "assets": [],
+    "provenance": {
+      "source_url": "https://www.cascademarathon.org/race-info",
+      "captured_at": "2026-06-28T00:00:00.000Z",
+      "source_confirmed_sections": [
+        "schedule",
+        "faqs",
+        "runner_decision_checklist"
+      ],
+      "source_confirmed_distance_ids": [
+        "marathon"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "public race information page",
+          "confidence": "medium"
+        },
+        {
+          "path": "distances[].start_time",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[].price",
+          "source": "public race information page",
+          "confidence": "medium"
+        },
+        {
+          "path": "distances[].certification",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[].aid_stations",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[].profile",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "public race information page",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "public race information page",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.aid-stations",
+          "source": "public race information page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.refunds-transfers",
+          "source": "public race information page",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "public race information page",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.time-limit",
+          "source": "public race information page",
+          "confidence": "high"
+        }
+      ]
+    },
+    "confidence": {
+      "high": 7,
+      "medium": 2,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "Fixture includes source-confirmed facts needed to exercise the Destination Major private modules.",
+      "items": []
+    }
+  }
+}

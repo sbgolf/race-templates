@@ -167,12 +167,21 @@ Registration-click value:
 
 ### Sprint 6 — Cross-template adoption
 
+Status: in progress — Destination Major adopted in this sprint.
+
 Goal: make the value system foundational for every current and future template.
 
-Deliverables:
+Implemented for Destination Major:
+
+- Tokenized private mockups now route by template, rendering Community or Destination Major without exposing private modules on public previews.
+- Destination Major private mockups render private-only value narrative, runner decision checklist, registration decision card, trust-signal band when facts meet the threshold, and measurement-ready panel in the premium cinematic visual language.
+- Destination Major registration CTAs use distinct `register_click` placements across nav, hero, runner checklist, decision card, entry, and finale.
+- Generator accepts `--template destination-major` and writes matching `identity.template` / `private_mockup.template` metadata.
+- Rendered private validation and launch checks now apply the private value contract to Destination Major as well as Community.
+
+Remaining deliverables:
 
 - Shared private-value utilities/copy model.
-- Destination Major implementation.
 - Performance implementation.
 - Trail implementation when created.
 - Charity implementation when created.

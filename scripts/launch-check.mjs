@@ -44,11 +44,12 @@ function parseAttrs(source) {
 }
 
 async function renderedOutputChecks() {
-  if (config.identity?.template !== 'community') return [];
+  if (!['community', 'destination-major'].includes(config.identity?.template)) return [];
 
+  const previewSlug = config.identity?.template === 'destination-major' ? 'destination-major' : 'community';
   const renderedPath = config.private_mockup?.route
     ? path.resolve(process.cwd(), 'dist', config.private_mockup.route.replace(/^\//, ''), 'index.html')
-    : path.resolve(process.cwd(), 'dist', 'preview', 'community', 'index.html');
+    : path.resolve(process.cwd(), 'dist', 'preview', previewSlug, 'index.html');
   let html = '';
   try {
     html = await readFile(renderedPath, 'utf8');

@@ -1,6 +1,6 @@
 ---
 import CommunityPreview from "../../../templates/community/pages/CommunityPreview.astro";
-import "../../../templates/community/styles/community.css";
+import DestinationMajorPreview from "../../../templates/destination-major/pages/DestinationMajorPreview.astro";
 import { ga4Snippet, registerClickListenerScript } from "../../../shared/analytics/register-click.mjs";
 import { sportsEventJsonLdScript } from "../../../shared/schema/sports-event-jsonld.mjs";
 
@@ -22,6 +22,8 @@ export function getStaticPaths() {
 }
 
 const { race } = Astro.props;
+const template = race.private_mockup?.template || race.identity?.template || 'community';
+const isDestinationMajor = template === 'destination-major';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +39,7 @@ const { race } = Astro.props;
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%232A1F18'/%3E%3Cpath d='M10 22 L17 29 L30 11' stroke='%23FAF6EE' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
 </head>
 <body data-private-mockup="true">
-  <CommunityPreview race={race} />
+  {isDestinationMajor ? <DestinationMajorPreview race={race} /> : <CommunityPreview race={race} />}
   <Fragment set:html={registerClickListenerScript()} />
 </body>
 </html>

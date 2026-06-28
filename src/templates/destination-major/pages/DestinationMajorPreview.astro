@@ -1,6 +1,7 @@
 ---
 import DestinationMajorTemplate from "../components/DestinationMajorTemplate.astro";
-import "../styles/destination-major.css";
+import destinationMajorCss from "../styles/destination-major.css?raw";
 const { race } = Astro.props;
 ---
+<style is:global set:html={destinationMajorCss}></style>
 <DestinationMajorTemplate race={race} />
