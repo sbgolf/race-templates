@@ -26,7 +26,7 @@ The validation flow has two private-mockup gates: `npm run validate:private-mock
 - Extracts public metadata, event date/location, event distances confirmed from the event name/heading/title, registration links, selected logistics, and up to two public JPG/PNG/WebP images from `og:image`, `twitter:image`, and page `<img>` tags.
 - Builds a minimal Community-template config by default, because Community is the safest generic fit unless the audit workflow identifies an obvious Destination Major or Performance fit.
 - Never spreads a sample race config into a private mockup. Sample distances, schedules, sponsors, FAQs, charity copy, images, and local boilerplate must not appear unless the source page backs them.
-- Stores source/capture metadata, provenance, confidence counts, and `private_mockup.uncertainties` in the JSON config.
+- Stores source/capture metadata, provenance, confidence counts, and `private_mockup.uncertainty` in the JSON config.
 - Adds a conservative `startline_value` narrative for Community private mockups. The rendered private page explains how StartLine reduces runner friction, surfaces trust signals, makes registration CTAs easier to find, supports mobile/SEO readiness, and prepares registration-click tracking without promising registration growth.
 - Normalizes generated display copy so source paragraphs do not expose raw URLs/domains or common scrape artifacts; course/map resources are moved into labeled links and RunSignup registration links are labeled with the RunSignup platform/CTA.
 - Generates `private_mockup.access_token` with Node crypto randomness (`randomBytes(16).toString('hex')`), producing an unguessable 128-bit token that is not derived from the race name, race slug, hostname, or source URL.
