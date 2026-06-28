@@ -15,6 +15,8 @@ const trustSignals = trustSignalsForRace(race);
 const showTrustSignalsBand = isPrivateMockup && shouldRenderTrustSignalsBand(race);
 const primaryDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0] || {};
 const entryTiers = (race.distances?.length ? race.distances : [primaryDistance]).filter(Boolean);
+const scheduleItems = Array.isArray(race.schedule) ? race.schedule : [];
+const faqItems = Array.isArray(race.faqs) ? race.faqs : [];
 const formatDate = (value) => {
   if (!value) return 'Race day';
   const date = new Date(`${value}T12:00:00Z`);
@@ -24,6 +26,49 @@ const raceDateLabel = formatDate(race.event?.date);
 const raceLocation = race.event?.location || 'Destination course';
 const raceName = race.identity?.name || 'Cascade Marathon';
 const raceTagline = race.identity?.tagline || 'The marathon that runs downhill to the sea.';
+const privateStatItems = isPrivateMockup ? [
+  primaryDistance.distance ? { value: primaryDistance.distance, label: primaryDistance.name || 'Distance' } : null,
+  primaryDistance.start_time ? { value: primaryDistance.start_time, label: 'Start time' } : null,
+  primaryDistance.price ? { value: primaryDistance.price, label: 'Entry price' } : null,
+  primaryDistance.aid_stations ? { value: String(primaryDistance.aid_stations), label: 'Aid stations' } : null,
+  primaryDistance.certification ? { value: primaryDistance.certification, label: 'Certification' } : null
+].filter(Boolean) : [];
+const hasCertification = Boolean(primaryDistance.certification);
+const sourceCourseFacts = [primaryDistance.profile, primaryDistance.certification].filter(Boolean).join(' · ');
+const courseTitle = isPrivateMockup ? (race.story?.title || `${raceName} course`) : 'A fast line from the Cascades to the coast.';
+const courseLead = isPrivateMockup ? (race.story?.paragraphs?.join(' ') || sourceCourseFacts || raceTagline) : 'Point-to-point, paved end to end, and net downhill the whole way — a true PR-and-qualifier course with the scenery of a destination race. Hover the profile to read any point on the route.';
+const courseFeatureItems = isPrivateMockup
+  ? [
+      primaryDistance.profile ? { icon: '🗺️', title: 'Course profile', text: primaryDistance.profile } : null,
+      primaryDistance.aid_stations ? { icon: '💧', title: 'Aid support', text: `${primaryDistance.aid_stations} aid stations listed` } : null,
+      race.event?.venue ? { icon: '📍', title: 'Start venue', text: race.event.venue } : null
+    ].filter(Boolean)
+  : [
+      { icon: '⛰️', title: 'Start at altitude', text: 'Gun goes off at 1,180 ft in the Cascade foothills — crisp September air, sunrise over the ridgeline.' },
+      { icon: '📉', title: 'Gravity on your side', text: 'A steady, runnable descent through miles 4–18. No quad-shredding drops — graded for fast legal times.' },
+      { icon: '🌊', title: 'Finish at the Pacific', text: 'The final straight runs onto the boardwalk at Pacific City, the ocean in full view as you cross.' }
+    ];
+const galleryLead = isPrivateMockup ? (race.story?.paragraphs?.[0] || raceTagline) : 'From the gun in the Cascade foothills to the boardwalk at Pacific City — three hours of running through some of the most photographed terrain on the West Coast.';
+const privateEntryPlacements = entryTiers.map((tier) => `entry-distance-${tier.id || 'primary'}`);
+const measurementPlacements = [
+  'nav-button',
+  'hero-primary',
+  ...(hasRunnerChecklist ? ['runner-checklist-top', 'runner-checklist-footer'] : []),
+  'registration-decision-card',
+  ...(isPrivateMockup ? privateEntryPlacements : [`entry-distance-${primaryDistance.id || 'ballot'}`, 'entry-guaranteed', 'entry-charity']),
+  'finale-primary'
+];
+const parseStartTime = (value) => {
+  const match = String(value || '').trim().match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)?$/i);
+  if (!match) return '00:00:00';
+  let hour = Number(match[1]);
+  const minute = match[2] || '00';
+  const meridiem = match[3]?.toUpperCase();
+  if (meridiem === 'PM' && hour < 12) hour += 12;
+  if (meridiem === 'AM' && hour === 12) hour = 0;
+  return `${String(hour).padStart(2, '0')}:${minute}:00`;
+};
+const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(primaryDistance.start_time || '6:45 AM')}-07:00`;
 ---
 
 <!-- NAV -->
@@ -35,10 +80,10 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
   <div class="nav-links" id="navLinks">
     <a href="#course">Course</a>
     <a href="#raceday">Race Day</a>
-    <a href="#qualify">Qualify</a>
+    {(!isPrivateMockup || hasCertification) && <a href="#qualify">Qualify</a>}
     <a href="#entry">Entry</a>
     <a href="#weekend">Weekend</a>
-    <a href="#travel">Travel</a>
+    {!isPrivateMockup && <a href="#travel">Travel</a>}
     <a href="#faq">FAQ</a>
     <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('nav-button')}>{registrationLabel}</a>
   </div>
@@ -84,11 +129,15 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
 <!-- STAT BAR -->
 <div class="statbar">
   <div class="statbar-grid stagger" id="statbar">
-    <div class="stat"><div class="n">12,000</div><div class="l">Runners</div></div>
-    <div class="stat"><div class="n">−948 ft</div><div class="l">Net Drop</div></div>
-    <div class="stat"><div class="n">58%</div><div class="l">BQ Rate '25</div></div>
-    <div class="stat"><div class="n">41</div><div class="l">Countries</div></div>
-    <div class="stat"><div class="n">$2.1M</div><div class="l">Raised for Charity</div></div>
+    {isPrivateMockup ? privateStatItems.map((item) => <div class="stat"><div class="n">{item.value}</div><div class="l">{item.label}</div></div>) : (
+      <>
+        <div class="stat"><div class="n">12,000</div><div class="l">Runners</div></div>
+        <div class="stat"><div class="n">−948 ft</div><div class="l">Net Drop</div></div>
+        <div class="stat"><div class="n">58%</div><div class="l">BQ Rate '25</div></div>
+        <div class="stat"><div class="n">41</div><div class="l">Countries</div></div>
+        <div class="stat"><div class="n">$2.1M</div><div class="l">Raised for Charity</div></div>
+      </>
+    )}
   </div>
 </div>
 
@@ -184,12 +233,12 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
     <div class="course-head">
       <div class="reveal">
         <div class="kicker">The Course</div>
-        <h2 class="sec-title">A fast line from the Cascades to the coast.</h2>
+        <h2 class="sec-title">{courseTitle}</h2>
       </div>
-      <p class="lead reveal">Point-to-point, paved end to end, and net downhill the whole way — a true PR-and-qualifier course with the scenery of a destination race. Hover the profile to read any point on the route.</p>
+      <p class="lead reveal">{courseLead}</p>
     </div>
 
-    <div class="elev-card reveal">
+    {!isPrivateMockup && <div class="elev-card reveal">
       <div class="elev-top">
         <h3>Elevation Profile</h3>
         <div class="elev-readout">Mile <b id="elMile">0.0</b> &nbsp;·&nbsp; <span id="elElev">1,180</span> ft</div>
@@ -209,12 +258,10 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
           <circle class="elev-dot" id="elDot" r="5"/>
         </svg>
       </div>
-    </div>
+    </div>}
 
     <div class="course-feats stagger" id="courseFeats">
-      <div class="feat"><div class="ic">⛰️</div><h3>Start at altitude</h3><p>Gun goes off at 1,180 ft in the Cascade foothills — crisp September air, sunrise over the ridgeline.</p></div>
-      <div class="feat"><div class="ic">📉</div><h3>Gravity on your side</h3><p>A steady, runnable descent through miles 4–18. No quad-shredding drops — graded for fast legal times.</p></div>
-      <div class="feat"><div class="ic">🌊</div><h3>Finish at the Pacific</h3><p>The final straight runs onto the boardwalk at Pacific City, the ocean in full view as you cross.</p></div>
+      {courseFeatureItems.map((feature) => <div class="feat"><div class="ic">{feature.icon}</div><h3>{feature.title}</h3><p>{feature.text}</p></div>)}
     </div>
   </div>
 </section>
@@ -227,7 +274,7 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
         <div class="kicker">Race Day</div>
         <h2 class="sec-title">What the day looks like.</h2>
       </div>
-      <p class="lead reveal">From the gun in the Cascade foothills to the boardwalk at Pacific City — three hours of running through some of the most photographed terrain on the West Coast.</p>
+      <p class="lead reveal">{galleryLead}</p>
     </div>
 
     <div class="gallery-grid reveal">
@@ -242,7 +289,7 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
             <path d="M0 520 L90 475 L180 500 L270 450 L360 480 L400 470 L400 600 L0 600Z" fill="#1A0E18"/>
           </svg>
         </div>
-        <figcaption>Mile 0 · Gun off at first light, 1,180 ft.</figcaption>
+        <figcaption>{isPrivateMockup ? `${primaryDistance.name || 'Race'} start` : 'Mile 0 · Gun off at first light, 1,180 ft.'}</figcaption>
       </figure>
       <figure class="g-photo g-2">
         <div class="ph-img ph-descent">
@@ -252,7 +299,7 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
             <path d="M0 215 L80 188 L160 205 L240 182 L320 200 L400 192 L400 300 L0 300Z" fill="#06140F"/>
           </svg>
         </div>
-        <figcaption>The descent into mile 8.</figcaption>
+        <figcaption>{isPrivateMockup ? (primaryDistance.profile || 'Course profile') : 'The descent into mile 8.'}</figcaption>
       </figure>
       <figure class="g-photo g-3">
         <div class="ph-img ph-pack">
@@ -262,7 +309,7 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
             <path d="M0 200 L80 180 L160 195 L240 175 L320 188 L400 182 L400 300 L0 300Z" fill="#0A0E1F" opacity=".88"/>
           </svg>
         </div>
-        <figcaption>Lead pack at mile 18.</figcaption>
+        <figcaption>{isPrivateMockup ? (primaryDistance.distance || 'Race distance') : 'Lead pack at mile 18.'}</figcaption>
       </figure>
       <figure class="g-photo g-4">
         <div class="ph-img ph-coast">
@@ -273,7 +320,7 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
             <ellipse cx="200" cy="170" rx="5" ry="40" fill="#FFEFC8" opacity=".7"/>
           </svg>
         </div>
-        <figcaption>First sight of the Pacific.</figcaption>
+        <figcaption>{isPrivateMockup ? raceLocation : 'First sight of the Pacific.'}</figcaption>
       </figure>
       <figure class="g-photo g-5">
         <div class="ph-img ph-finish">
@@ -283,7 +330,7 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
             <rect x="0" y="148" width="400" height="3" fill="#F0A94B"/>
           </svg>
         </div>
-        <figcaption>Pacific City. The finish.</figcaption>
+        <figcaption>{isPrivateMockup ? 'Finish experience' : 'Pacific City. The finish.'}</figcaption>
       </figure>
     </div>
 
@@ -292,24 +339,22 @@ const raceTagline = race.identity?.tagline || 'The marathon that runs downhill t
 </section>
 
 <!-- QUALIFYING -->
-<section class="bq" id="qualify">
+{(!isPrivateMockup || hasCertification) && <section class="bq" id="qualify">
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Boston Qualifying</div>
-      <h2 class="sec-title">Built so your time actually counts.</h2>
+      <h2 class="sec-title">{isPrivateMockup ? 'Course certification on the page.' : 'Built so your time actually counts.'}</h2>
     </div>
-    <p class="lead reveal">Cascade is USATF-certified (course #OR-26-CASCADE) and a Boston Marathon qualifying race. Run your number here and you'll have a verified result that the B.A.A. accepts.</p>
+    <p class="lead reveal">{isPrivateMockup ? primaryDistance.certification : "Cascade is USATF-certified (course #OR-26-CASCADE) and a Boston Marathon qualifying race. Run your number here and you'll have a verified result that the B.A.A. accepts."}</p>
 
     <div class="bq-grid">
       <div class="bq-note reveal">
-        <h3>Why runners chase a BQ here</h3>
-        <p>The net-downhill profile plays to even-paced running, the September date sits in the sweet spot of fall fitness, and the small, fast field means clean lines from gun to tape.</p>
-        <p>Live, chip-verified splits post to your B.A.A.-ready certificate within 24 hours of finishing — no waiting, no manual submission.</p>
-        <span class="bq-badge">✓ B.A.A.
-Qualifier · Certified Course</span>
+        <h3>{isPrivateMockup ? 'Source-backed course facts' : 'Why runners chase a BQ here'}</h3>
+        {isPrivateMockup ? <p>{sourceCourseFacts}</p> : <><p>The net-downhill profile plays to even-paced running, the September date sits in the sweet spot of fall fitness, and the small, fast field means clean lines from gun to tape.</p><p>Live, chip-verified splits post to your B.A.A.-ready certificate within 24 hours of finishing — no waiting, no manual submission.</p></>}
+        <span class="bq-badge">✓ {isPrivateMockup ? 'Source-listed course certification' : 'B.A.A. Qualifier · Certified Course'}</span>
       </div>
 
-      <div class="reveal">
+      {!isPrivateMockup && <div class="reveal">
         <table class="bq-table">
           <thead><tr><th>Age Group</th><th>Men</th><th>Women</th></tr></thead>
           <tbody>
@@ -324,60 +369,73 @@ Qualifier · Certified Course</span>
             <tr><td>70+</td><td class="t">4:20:00</td><td class="t">4:50:00</td></tr>
           </tbody>
         </table>
-      </div>
+      </div>}
     </div>
   </div>
-</section>
+</section>}
 
 <!-- ENTRY -->
 <section id="entry">
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Secure Your Place</div>
-      <h2 class="sec-title">Three ways through the start line.</h2>
+      <h2 class="sec-title">{isPrivateMockup ? 'Registration options from the source config.' : 'Three ways through the start line.'}</h2>
     </div>
 
     <div class="entry-grid">
-      <div class="tier reveal">
-        <h3>Ballot</h3>
-        <div class="sub">Open Sept 1 – Oct 15, 2025</div>
-        <div class="tprice">$185<span>/ entry</span></div>
+      {isPrivateMockup ? entryTiers.map((tier) => <div class="tier reveal">
+        <h3>{tier.name || 'Race entry'}</h3>
+        {tier.start_time && <div class="sub">Start time: {tier.start_time}</div>}
+        {tier.price && <div class="tprice">{tier.price}<span>/ entry</span></div>}
         <ul>
-          <li>Randomized draw, results in November</li>
-          <li>Full refund if not drawn</li>
-          <li>Technical race tee + finisher medal</li>
-          <li>Chip timing & B.A.A. certificate</li>
+          {tier.distance && <li>{tier.distance}</li>}
+          {tier.profile && <li>{tier.profile}</li>}
+          {tier.certification && <li>{tier.certification}</li>}
+          {tier.aid_stations && <li>{tier.aid_stations} aid stations listed</li>}
         </ul>
-        <a class="btn btn-dark" href={registrationUrl} {...registerAttrs(`entry-distance-${primaryDistance.id || 'ballot'}`)}>Enter the Ballot</a>
-      </div>
+        <a class="btn btn-dark" href={registrationUrl} {...registerAttrs(`entry-distance-${tier.id || 'primary'}`)}>{registrationLabel}</a>
+      </div>) : <>
+        <div class="tier reveal">
+          <h3>Ballot</h3>
+          <div class="sub">Open Sept 1 – Oct 15, 2025</div>
+          <div class="tprice">$185<span>/ entry</span></div>
+          <ul>
+            <li>Randomized draw, results in November</li>
+            <li>Full refund if not drawn</li>
+            <li>Technical race tee + finisher medal</li>
+            <li>Chip timing & B.A.A. certificate</li>
+          </ul>
+          <a class="btn btn-dark" href={registrationUrl} {...registerAttrs(`entry-distance-${primaryDistance.id || 'ballot'}`)}>Enter the Ballot</a>
+        </div>
 
-      <div class="tier featured reveal">
-        <span class="tier-tag">Most Popular</span>
-        <h3>Guaranteed</h3>
-        <div class="sub">For runners with a recent qualifying time</div>
-        <div class="tprice">$245<span>/ entry</span></div>
-        <ul>
-          <li>Skip the draw — instant confirmation</li>
-          <li>Sub-3:30 proof from the last 24 months</li>
-          <li>Preferred corral placement</li>
-          <li>Premium kit + expo fast-track</li>
-          <li>Reserved gear-check & start village</li>
-        </ul>
-        <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('entry-guaranteed')}>Claim Guaranteed Spot</a>
-      </div>
+        <div class="tier featured reveal">
+          <span class="tier-tag">Most Popular</span>
+          <h3>Guaranteed</h3>
+          <div class="sub">For runners with a recent qualifying time</div>
+          <div class="tprice">$245<span>/ entry</span></div>
+          <ul>
+            <li>Skip the draw — instant confirmation</li>
+            <li>Sub-3:30 proof from the last 24 months</li>
+            <li>Preferred corral placement</li>
+            <li>Premium kit + expo fast-track</li>
+            <li>Reserved gear-check & start village</li>
+          </ul>
+          <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('entry-guaranteed')}>Claim Guaranteed Spot</a>
+        </div>
 
-      <div class="tier reveal">
-        <h3>Charity</h3>
-        <div class="sub">Run for one of 40 partner causes</div>
-        <div class="tprice">$0<span>+ fundraising</span></div>
-        <ul>
-          <li>Guaranteed bib, no ballot needed</li>
-          <li>$1,500 minimum fundraising goal</li>
-          <li>Dedicated charity cheer zones</li>
-          <li>Fundraiser coaching & toolkit</li>
-        </ul>
-        <a class="btn btn-dark" href={registrationUrl} {...registerAttrs('entry-charity')}>Run for a Cause</a>
-      </div>
+        <div class="tier reveal">
+          <h3>Charity</h3>
+          <div class="sub">Run for one of 40 partner causes</div>
+          <div class="tprice">$0<span>+ fundraising</span></div>
+          <ul>
+            <li>Guaranteed bib, no ballot needed</li>
+            <li>$1,500 minimum fundraising goal</li>
+            <li>Dedicated charity cheer zones</li>
+            <li>Fundraiser coaching & toolkit</li>
+          </ul>
+          <a class="btn btn-dark" href={registrationUrl} {...registerAttrs('entry-charity')}>Run for a Cause</a>
+        </div>
+      </>}
     </div>
   </div>
 </section>
@@ -387,20 +445,21 @@ Qualifier · Certified Course</span>
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Race Weekend</div>
-      <h2 class="sec-title">Three days of festival, one perfect morning.</h2>
+      <h2 class="sec-title">{isPrivateMockup ? 'Source-backed race-weekend schedule.' : 'Three days of festival, one perfect morning.'}</h2>
     </div>
     <div class="timeline">
-      <div class="tl-item reveal"><div class="tl-day">Friday · Sept 18</div><h3>Cascade Expo opens</h3><p>Bib pickup, gear from 60+ brands, and the elite athlete panel at the Portland Convention Center.</p><span class="tl-time">10:00 AM – 8:00 PM</span></div>
-      <div class="tl-item reveal"><div class="tl-day">Saturday · Sept 19</div><h3>Shakeout run & 5K</h3><p>A 3-mile guided shakeout along the river, followed by the family 5K and kids' dash.</p><span class="tl-time">8:00 AM</span></div>
-      <div class="tl-item reveal"><div class="tl-day">Sunday · Sept 20</div><h3>Marathon start</h3><p>Wave starts from the foothills village. Sunrise gun, net-downhill miles, Pacific finish.
-</p><span class="tl-time">6:45 AM</span></div>
-      <div class="tl-item reveal"><div class="tl-day">Sunday · Sept 20</div><h3>Finish festival</h3><p>Boardwalk celebration at Pacific City — local food, live music, and ocean-side recovery zone.</p><span class="tl-time">9:30 AM – 3:00 PM</span></div>
+      {isPrivateMockup ? scheduleItems.map((item) => <div class="tl-item reveal"><div class="tl-day">{item.day}</div><h3>{item.name}</h3>{item.location && <p>{item.location}</p>}<span class="tl-time">{item.time}</span></div>) : <>
+        <div class="tl-item reveal"><div class="tl-day">Friday · Sept 18</div><h3>Cascade Expo opens</h3><p>Bib pickup, gear from 60+ brands, and the elite athlete panel at the Portland Convention Center.</p><span class="tl-time">10:00 AM – 8:00 PM</span></div>
+        <div class="tl-item reveal"><div class="tl-day">Saturday · Sept 19</div><h3>Shakeout run & 5K</h3><p>A 3-mile guided shakeout along the river, followed by the family 5K and kids' dash.</p><span class="tl-time">8:00 AM</span></div>
+        <div class="tl-item reveal"><div class="tl-day">Sunday · Sept 20</div><h3>Marathon start</h3><p>Wave starts from the foothills village. Sunrise gun, net-downhill miles, Pacific finish.</p><span class="tl-time">6:45 AM</span></div>
+        <div class="tl-item reveal"><div class="tl-day">Sunday · Sept 20</div><h3>Finish festival</h3><p>Boardwalk celebration at Pacific City — local food, live music, and ocean-side recovery zone.</p><span class="tl-time">9:30 AM – 3:00 PM</span></div>
+      </>}
     </div>
   </div>
 </section>
 
 <!-- TRAVEL -->
-<section id="travel">
+{!isPrivateMockup && <section id="travel">
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Plan Your Trip</div>
@@ -413,17 +472,17 @@ Qualifier · Certified Course</span>
       <div class="tcard tc4"><span class="ic">🌤️</span><h3>Race-day weather</h3><p>Average start 48°F, finish 61°F. Crisp, dry September mornings — ideal for fast times.</p></div>
     </div>
   </div>
-</section>
+</section>}
 
 <!-- SPONSORS -->
-<div class="sponsors">
+{!isPrivateMockup && <div class="sponsors">
   <div class="wrap">
     <div class="sp-lab">Proudly supported by</div>
     <div class="sp-row">
       <span>NORTHWIND</span><span>Summit&nbsp;Labs</span><span>RIDGELINE</span><span>Pacifica</span><span>TERRA&nbsp;Fuel</span><span>Meridian</span>
     </div>
   </div>
-</div>
+</div>}
 
 <!-- FAQ -->
 <section id="faq">
@@ -433,11 +492,13 @@ Qualifier · Certified Course</span>
       <h2 class="sec-title">Questions, answered.</h2>
     </div>
     <div class="faq-list" id="faqList">
-      <div class="faq-item"><button class="faq-q">What's the time limit?<span class="pm"></span></button><div class="faq-a"><p>A generous 7-hour course limit, with a rolling sweep behind the final runner. Aid stations stay open the full window.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Is the course really a legal Boston qualifier?<span class="pm"></span></button><div class="faq-a"><p>Yes. The route is USATF-certified and meets B.A.A. requirements, with a net elevation drop well within the allowable limit. Your time counts.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Can I defer or transfer my entry?<span class="pm"></span></button><div class="faq-a"><p>One free deferral to the following year is allowed until 30 days out. Transfers to another runner are supported through the official portal until August 20.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Are there pacers?<span class="pm"></span></button><div class="faq-a"><p>Official pace groups run from 3:00 through 4:30 in 15-minute bands, plus dedicated qualifying-time pacers for the most common BQ standards.</p></div></div>
-      <div class="faq-item"><button class="faq-q">What's included with my entry?<span class="pm"></span></button><div class="faq-a"><p>Chip timing, finisher medal, technical shirt, on-course nutrition, gear check, finish-line festival access, and your B.A.A.-ready certificate.</p></div></div>
+      {isPrivateMockup ? faqItems.map((faq) => <div class="faq-item"><button class="faq-q">{faq.question}<span class="pm"></span></button><div class="faq-a"><p>{faq.answer}</p></div></div>) : <>
+        <div class="faq-item"><button class="faq-q">What's the time limit?<span class="pm"></span></button><div class="faq-a"><p>A generous 7-hour course limit, with a rolling sweep behind the final runner. Aid stations stay open the full window.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Is the course really a legal Boston qualifier?<span class="pm"></span></button><div class="faq-a"><p>Yes. The route is USATF-certified and meets B.A.A. requirements, with a net elevation drop well within the allowable limit. Your time counts.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Can I defer or transfer my entry?<span class="pm"></span></button><div class="faq-a"><p>One free deferral to the following year is allowed until 30 days out. Transfers to another runner are supported through the official portal until August 20.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Are there pacers?<span class="pm"></span></button><div class="faq-a"><p>Official pace groups run from 3:00 through 4:30 in 15-minute bands, plus dedicated qualifying-time pacers for the most common BQ standards.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What's included with my entry?<span class="pm"></span></button><div class="faq-a"><p>Chip timing, finisher medal, technical shirt, on-course nutrition, gear check, finish-line festival access, and your B.A.A.-ready certificate.</p></div></div>
+      </>}
     </div>
   </div>
 </section>
@@ -450,7 +511,7 @@ Qualifier · Certified Course</span>
         <h2 class="sec-title">Every registration click has a clean placement.</h2>
       </div>
       <div class="measurement-list">
-        {['nav-button', 'hero-primary', hasRunnerChecklist ? 'runner-checklist-footer' : 'runner-checklist-top', 'registration-decision-card', `entry-distance-${primaryDistance.id || 'primary'}`, 'finale-primary'].map((placement) => (
+        {measurementPlacements.map((placement) => (
           <span>{placement}</span>
         ))}
       </div>
@@ -462,8 +523,8 @@ Qualifier · Certified Course</span>
 <!-- FINAL CTA -->
 <section class="finale">
   <div class="wrap">
-    <h2>Your fastest<br>marathon awaits.</h2>
-    <p>Join the list for ballot reminders, training plans, and first access to the 2026 start line.</p>
+    <h2>{isPrivateMockup ? 'Ready to review the official entry path?' : 'Your fastest'}{!isPrivateMockup && <><br/>marathon awaits.</>}</h2>
+    <p>{isPrivateMockup ? 'Continue from this private concept to the official registration provider.' : 'Join the list for ballot reminders, training plans, and first access to the 2026 start line.'}</p>
     <div class="signup">
       <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('finale-primary')}>Register for {raceName}</a>
       <button class="btn btn-ghost" onclick="scrollToId('entry')">Compare entry options</button>
@@ -476,16 +537,16 @@ Qualifier · Certified Course</span>
 <footer>
   <div class="foot">
     <div>
-      <div class="brand"><svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M2 32 14 10l7 12 5-8 12 18z" fill="#FF5B2E"/><path d="M2 32 14 10l4.5 7.7L9 32z" fill="#F0A94B"/></svg><span>CASCADE<small>Marathon</small></span></div>
-      <p>A point-to-point Boston qualifier from the Cascade foothills to the Pacific coast. September 20, 2026.</p>
+      <div class="brand"><svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M2 32 14 10l7 12 5-8 12 18z" fill="#FF5B2E"/><path d="M2 32 14 10l4.5 7.7L9 32z" fill="#F0A94B"/></svg><span>{raceName}<small>{race.identity?.edition || 'Marathon'}</small></span></div>
+      <p>{isPrivateMockup ? `${raceDateLabel}. ${raceLocation}.` : 'A point-to-point Boston qualifier from the Cascade foothills to the Pacific coast. September 20, 2026.'}</p>
     </div>
-    <div><h2 class="foot-title">Race</h2><ul><li><a href="#course">Course</a></li><li><a href="#qualify">Qualifying</a></li><li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
-    <div><h2 class="foot-title">Runners</h2><ul><li><a href="#travel">Travel</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Results</a></li><li><a href="#">Volunteer</a></li></ul></div>
-    <div><h2 class="foot-title">Connect</h2><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>
+    <div><h2 class="foot-title">Race</h2><ul><li><a href="#course">Course</a></li>{(!isPrivateMockup || hasCertification) && <li><a href="#qualify">Qualifying</a></li>}<li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
+    <div><h2 class="foot-title">Runners</h2><ul>{!isPrivateMockup && <li><a href="#travel">Travel</a></li>}<li><a href="#faq">FAQ</a></li>{!isPrivateMockup && <><li><a href="#">Results</a></li><li><a href="#">Volunteer</a></li></>}</ul></div>
+    {!isPrivateMockup && <div><h2 class="foot-title">Connect</h2><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>}
   </div>
   <div class="foot-bottom">
-    <span>© 2026 Cascade Marathon. A demo concept site.</span>
-    <span>Built as a proof of concept.</span>
+    <span>© 2026 {raceName}. {isPrivateMockup ? 'Private StartLine concept.' : 'A demo concept site.'}</span>
+    <span>{isPrivateMockup ? 'Built for private review.' : 'Built as a proof of concept.'}</span>
   </div>
 </footer>
 
@@ -504,7 +565,7 @@ Qualifier · Certified Course</span>
   navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 
   // ---- countdown ----
-  const RACE=new Date('2026-09-20T06:45:00-07:00').getTime();
+  const RACE=new Date({JSON.stringify(countdownIso)}).getTime();
   function tick(){
     const now=Date.now(),d=RACE-now;
     if(d<0)return;
@@ -517,6 +578,7 @@ Qualifier · Certified Course</span>
   tick();setInterval(tick,1000);
 
   // ---- elevation profile ----
+  if(document.getElementById('elevSvg')){
   // [mile, elevation ft] — net downhill from 1180 to ~30
   const pts=[[0,1180],[2,1130],[4,1090],[6,980],[8,870],[10,760],[12,690],[14,640],[16,560],[18,470],[19,520],[20,440],[22,300],[24,180],[25,90],[26.2,30]];
   const MAXM=26.2, W=1000, H=240, PADT=18, PADB=16;
@@ -552,7 +614,8 @@ Qualifier · Certified Course</span>
   }
   svg.addEventListener('mousemove',e=>moveCursor(e.clientX));
   svg.addEventListener('touchmove',e=>{moveCursor(e.touches[0].clientX);},{passive:true});
-  svg.addEventListener('mouseleave',()=>{cur.style.opacity=0;dot.style.opacity=0;elMile.textContent='0.0';elElev.textContent='1,180';});
+  svg.addEventListener('mouseleave',()=>{cur.style.opacity=0;dot.style.opacity=0;elMile.textContent='0.0';elElev.textContent=pts[0][1].toLocaleString();});
+  }
 
   // ---- FAQ accordion ----
   document.querySelectorAll('.faq-q').forEach(q=>{

@@ -81,11 +81,11 @@ for (const file of files) {
   const incorrectlyTracked = anchors.filter((anchor) => anchor.attrs['data-analytics-event'] === 'register_click' && anchor.attrs.href !== registrationUrl);
   incorrectlyTracked.forEach((anchor) => errors.push(`Non-registration anchor is tracked as register_click: ${anchor.attrs.href || '(missing href)'}.`));
 
-  const relative = path.relative(root, file);
+  const relative = redactPrivateTokens(path.relative(root, file));
   if (errors.length) {
     failed = true;
     console.error(`✗ ${relative}`);
-    errors.forEach((error) => console.error(`  - ${error}`));
+    errors.forEach((error) => console.error(`  - ${redactPrivateTokens(error)}`));
   } else {
     console.log(`✓ ${relative}`);
   }
@@ -159,4 +159,10 @@ function visibleText(html) {
     .replace(/&#x([a-f0-9]+);/gi, (_, code) => String.fromCharCode(parseInt(code, 16)))
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function redactPrivateTokens(value) {
+  return String(value || '')
+    .replace(/(private[\\/]mockups[\\/])[a-f0-9]{32,}(?=[\\/]|$)/gi, '$1[REDACTED]')
+    .replace(/(\/private\/mockups\/)[a-f0-9]{32,}(?=\/|$)/gi, '$1[REDACTED]');
 }

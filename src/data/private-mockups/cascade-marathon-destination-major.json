@@ -208,10 +208,6 @@
     "meta_title": "Cascade Marathon — Private Destination Major Concept",
     "meta_description": "Private Destination Major mockup for Cascade Marathon with runner decision details and registration-click measurement."
   },
-  "analytics": {
-    "ga4_measurement_id": "G-XXXXXXXXXX",
-    "register_click_event_name": "register_click"
-  },
   "private_mockup": {
     "generated": false,
     "noindex": true,
