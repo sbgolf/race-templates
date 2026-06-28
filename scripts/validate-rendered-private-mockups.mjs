@@ -5,6 +5,12 @@ import path from 'node:path';
 const root = process.cwd();
 const privateDir = path.resolve(root, 'dist/private/mockups');
 const rawVisibleUrlPattern = /\b(?:https?:\/\/|www\.|[a-z0-9-]+\.(?:com|org|net|io|gov|edu)\b)/i;
+const visiblePlaceholderPatterns = [
+  /\bTBD\b/i,
+  /\bTBA\b/i,
+  /\bunknown\b/i,
+  /\bcoming soon\b/i
+];
 const punctuationArtifactPatterns = [
   /\b20\d{2}\s+\./,
   /\b\d+\s+hours?\s+\./i,
@@ -26,9 +32,16 @@ for (const file of files) {
   const text = visibleText(html);
   const errors = [];
   if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible text exposes a raw URL or bare domain.');
+  for (const pattern of visiblePlaceholderPatterns) {
+    if (pattern.test(text)) errors.push(`Rendered visible text contains placeholder copy "${pattern.source}".`);
+  }
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);
   }
+  const checklistItemCount = (html.match(/data-checklist-item-id=/g) || []).length;
+  if (!html.includes('data-runner-decision-checklist')) errors.push('Private Community mockup is missing the runner decision checklist.');
+  if (checklistItemCount < 3) errors.push(`Runner decision checklist renders ${checklistItemCount} items; expected at least 3.`);
+  if (!html.includes('data-analytics-placement="runner-checklist"')) errors.push('Runner decision checklist CTA is missing register-click tracking placement "runner-checklist".');
 
   const relative = path.relative(root, file);
   if (errors.length) {

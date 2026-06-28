@@ -8,6 +8,7 @@ import Schedule from "./Schedule.astro";
 import Story from "./Story.astro";
 import Gallery from "./Gallery.astro";
 import Volunteer from "./Volunteer.astro";
+import RunnerDecisionChecklist from "./RunnerDecisionChecklist.astro";
 import Entry from "./Entry.astro";
 import Sponsors from "./Sponsors.astro";
 import FAQ from "./FAQ.astro";
@@ -26,6 +27,7 @@ const isPrivateMockup = Boolean(race.private_mockup);
   <Story race={race} />
   <Gallery race={race} />
   <Volunteer race={race} />
+  {isPrivateMockup && <RunnerDecisionChecklist race={race} />}
   <Entry race={race} />
   <Sponsors race={race} />
   <FAQ race={race} />

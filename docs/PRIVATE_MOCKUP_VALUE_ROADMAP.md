@@ -102,13 +102,18 @@ Registration-click value:
 
 ### Sprint 3 — Runner-decision checklist
 
+Status: implemented in PR #16.
+
 Goal: answer the questions runners ask before clicking registration.
 
-Deliverables:
+Implemented behavior:
 
-- “Before you register” checklist from source-backed/configured facts.
-- Candidate items: date, distance, start time, location, price, price deadline, packet pickup, aid stations, course certification, refund/transfer policy, swag, medal, awards, time limit.
-- Graceful hiding for missing facts.
+- Community private mockups render a private-only “Before you register” runner checklist immediately before the final registration section.
+- `runner_decision_checklist` supports display-ready `headline`, `intro`, and `items` with stable ids, labels, values, optional details, source paths/URLs, and distance applicability.
+- Generator output builds checklist items only from source-backed facts: date, distance, start time, location, price, packet pickup, aid stations, certification/course profile, and FAQ-derived policies, swag/medals, awards, and time limits when present.
+- Sparse races omit missing facts instead of using `TBD`, `TBA`, `unknown`, or “coming soon.”
+- Private validation requires checklist provenance/source paths, known item ids, unique ids, non-empty values, no raw URLs/domains in display copy, and `runner_decision_checklist` in `source_confirmed_sections` when rendered.
+- Rendered and launch checks require private Community checklist output with at least three items and a `runner-checklist` register-click CTA; public Community previews must not render the private checklist.
 
 Registration-click value:
 

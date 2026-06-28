@@ -5,6 +5,20 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PRIVATE_MOCKUP_TOKEN_PATTERN = /^[a-f0-9]{32,}$/i;
 const STARTLINE_VALUE_STRING_FIELDS = ['headline', 'intro'];
 const STARTLINE_VALUE_ARRAY_FIELDS = ['improved', 'paid_includes'];
+const RUNNER_CHECKLIST_ITEM_IDS = new Set([
+  'date',
+  'distance',
+  'start-time',
+  'location',
+  'price',
+  'packet-pickup',
+  'course',
+  'aid-stations',
+  'refunds-transfers',
+  'swag',
+  'awards',
+  'time-limit'
+]);
 
 function isPlainObject(value) {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -129,6 +143,45 @@ export function validateRaceConfig(config) {
             if (!hasText(item)) add(errors, `startline_value.${field}[${index}]`, 'Must be a non-empty string.');
           });
         }
+      }
+    }
+  }
+
+  if (config.runner_decision_checklist !== undefined) {
+    if (!isPlainObject(config.runner_decision_checklist)) {
+      add(errors, 'runner_decision_checklist', 'Runner decision checklist must be an object when provided.');
+    } else {
+      const checklist = config.runner_decision_checklist;
+      if (!hasText(checklist.headline)) add(errors, 'runner_decision_checklist.headline', 'Headline is required.');
+      if (!hasText(checklist.intro)) add(errors, 'runner_decision_checklist.intro', 'Intro is required.');
+      if (!Array.isArray(checklist.items) || checklist.items.length === 0) {
+        add(errors, 'runner_decision_checklist.items', 'At least one checklist item is required when checklist is provided.');
+      } else {
+        const itemIds = new Set();
+        const distanceIds = new Set(Array.isArray(config.distances) ? config.distances.map((distance) => distance?.id).filter(Boolean) : []);
+        checklist.items.forEach((item, index) => {
+          const base = `runner_decision_checklist.items[${index}]`;
+          if (!isPlainObject(item)) {
+            add(errors, base, 'Checklist item must be an object.');
+            return;
+          }
+          if (!hasText(item.id)) add(errors, `${base}.id`, 'Checklist item id is required.');
+          else if (!RUNNER_CHECKLIST_ITEM_IDS.has(item.id)) add(errors, `${base}.id`, 'Checklist item id is not recognized.');
+          else if (itemIds.has(item.id)) add(errors, `${base}.id`, 'Checklist item id must be unique.');
+          else itemIds.add(item.id);
+          if (!hasText(item.label)) add(errors, `${base}.label`, 'Checklist item label is required.');
+          if (!hasText(item.value)) add(errors, `${base}.value`, 'Checklist item value is required; omit unknown facts instead of using placeholders.');
+          if (item.detail !== undefined && !hasText(item.detail)) add(errors, `${base}.detail`, 'Checklist item detail must be non-empty when provided.');
+          if (item.source_path !== undefined && !hasText(item.source_path)) add(errors, `${base}.source_path`, 'Checklist source path must be non-empty when provided.');
+          if (item.source_url !== undefined && (!hasText(item.source_url) || !URL_PATTERN.test(item.source_url))) add(errors, `${base}.source_url`, 'Checklist source URL must be absolute when provided.');
+          if (item.applies_to_distance_ids !== undefined) {
+            if (!Array.isArray(item.applies_to_distance_ids)) add(errors, `${base}.applies_to_distance_ids`, 'Must be an array of configured distance ids when provided.');
+            else item.applies_to_distance_ids.forEach((id, idIndex) => {
+              if (!hasText(id)) add(errors, `${base}.applies_to_distance_ids[${idIndex}]`, 'Distance id must be non-empty.');
+              else if (distanceIds.size && !distanceIds.has(id)) add(errors, `${base}.applies_to_distance_ids[${idIndex}]`, 'Distance id must match a configured distance.');
+            });
+          }
+        });
       }
     }
   }

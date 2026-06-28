@@ -1,0 +1,158 @@
+---
+import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
+const { race } = Astro.props;
+const checklist = race.runner_decision_checklist;
+const items = Array.isArray(checklist?.items) ? checklist.items.filter((item) => item?.label && item?.value) : [];
+const registerUrl = race.registration?.url || '#';
+const registerAttrs = registerClickAttributes(race, 'runner-checklist');
+---
+{items.length ? (
+  <section class="runner-checklist reveal" id="runner-checklist" data-runner-decision-checklist>
+    <div class="wrap checklist-wrap">
+      <div class="checklist-head">
+        <div>
+          <div class="kicker">Runner checklist</div>
+          <h2 class="sec-title">{checklist?.headline || 'Before you register'}</h2>
+          <p class="lead">{checklist?.intro || 'Review the key race details, then continue to the official registration page.'}</p>
+        </div>
+        <a class="btn btn-accent checklist-cta top" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{race.registration?.cta_label || 'Register'}</a>
+      </div>
+
+      <div class="checklist-grid">
+        {items.map((item) => (
+          <article class="check-card" data-checklist-item-id={item.id}>
+            <div class="check-label">{item.label}</div>
+            <div class="check-value">{item.value}</div>
+            {item.detail ? <p class="check-detail">{item.detail}</p> : null}
+          </article>
+        ))}
+      </div>
+
+      <div class="checklist-foot">
+        <p>Ready to confirm availability and complete registration?</p>
+        <a class="btn btn-dark checklist-cta" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{race.registration?.cta_label || 'Register'}</a>
+      </div>
+    </div>
+  </section>
+) : null}
+
+<style>
+  .runner-checklist {
+    background: linear-gradient(135deg, rgba(255, 248, 239, 0.95), rgba(247, 239, 226, 0.8));
+    border-block: 1px solid rgba(65, 45, 32, 0.12);
+    overflow-x: clip;
+  }
+
+  .checklist-wrap {
+    padding-block: clamp(3rem, 7vw, 5.5rem);
+  }
+
+  .checklist-head {
+    align-items: end;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .checklist-head .lead {
+    max-width: 66ch;
+  }
+
+  .checklist-grid {
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 1.75rem;
+  }
+
+  .check-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(65, 45, 32, 0.12);
+    border-radius: 1rem;
+    box-shadow: 0 14px 34px rgba(39, 29, 19, 0.08);
+    min-width: 0;
+    padding: 1rem;
+  }
+
+  .check-label {
+    color: rgba(39, 29, 19, 0.64);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .check-value {
+    color: var(--ink, #241b15);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 0.42rem;
+    overflow-wrap: anywhere;
+  }
+
+  .check-detail {
+    color: rgba(39, 29, 19, 0.72);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0.65rem 0 0;
+    overflow-wrap: anywhere;
+  }
+
+  .checklist-foot {
+    align-items: center;
+    background: rgba(36, 27, 21, 0.06);
+    border-radius: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+    min-width: 0;
+    padding: 1rem;
+  }
+
+  .checklist-foot p {
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .checklist-cta {
+    flex: 0 0 auto;
+    white-space: normal;
+  }
+
+  @media (max-width: 760px) {
+    .checklist-head,
+    .checklist-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .checklist-cta.top {
+      display: none;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .checklist-wrap {
+      padding-inline: 0.85rem;
+    }
+
+    .check-card,
+    .checklist-foot {
+      border-radius: 0.85rem;
+      padding: 0.85rem;
+    }
+
+    .checklist-foot {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .checklist-foot .btn {
+      justify-content: center;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+</style>

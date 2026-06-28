@@ -49,6 +49,7 @@ async function renderedOutputChecks() {
 
   const registrationUrl = config.registration?.url || '';
   const hasPrivateValueNarrative = html.includes('data-private-value-narrative');
+  const hasRunnerChecklist = html.includes('data-runner-decision-checklist');
   const claimCheckHtml = allowedNegatedGrowthClaimPhrases
     .reduce((content, pattern) => content.replace(pattern, 'no overpromising claims'), html);
   const forbiddenClaims = forbiddenGrowthClaimPatterns
@@ -94,6 +95,22 @@ async function renderedOutputChecks() {
       details: config.private_mockup?.route && !hasPrivateValueNarrative
         ? ['Missing data-private-value-narrative in private rendered HTML.']
         : (!config.private_mockup?.route && hasPrivateValueNarrative ? ['Public rendered HTML contains data-private-value-narrative.'] : [])
+    },
+    {
+      id: config.private_mockup?.route ? 'private-runner-checklist-present' : 'public-runner-checklist-absent',
+      label: config.private_mockup?.route
+        ? 'Private Community page renders runner decision checklist with tracked CTA'
+        : 'Public Community page does not render the private runner checklist',
+      pass: config.private_mockup?.route
+        ? hasRunnerChecklist && (html.match(/data-checklist-item-id=/g) || []).length >= 3 && html.includes('data-analytics-placement="runner-checklist"')
+        : !hasRunnerChecklist,
+      details: config.private_mockup?.route
+        ? [
+            ...(hasRunnerChecklist ? [] : ['Missing data-runner-decision-checklist in private rendered HTML.']),
+            ...((html.match(/data-checklist-item-id=/g) || []).length >= 3 ? [] : ['Runner checklist has fewer than 3 rendered items.']),
+            ...(html.includes('data-analytics-placement="runner-checklist"') ? [] : ['Missing runner-checklist register-click placement.'])
+          ]
+        : (hasRunnerChecklist ? ['Public rendered HTML contains private runner checklist.'] : [])
     }
   ];
 
