@@ -25,6 +25,9 @@
       "distance_miles": 26.2,
       "start_time": "07:00",
       "cutoff": "6:00:00",
+      "certification": "MA-25-CFM",
+      "profile": "Point-to-point course with 12 feet of net drop and an 86-foot max climb",
+      "aid_stations": 14,
       "provenance": {
         "verified": true,
         "source_url": "https://capitalmarathonrace.org/race-info"
@@ -111,6 +114,78 @@
       ]
     }
   ],
+  "organization": {
+    "name": "Capital Marathon Race Committee"
+  },
+  "runner_decision_checklist": {
+    "headline": "Before you chase a bib",
+    "intro": "Key race facts for runners deciding whether this certified, fast-course marathon fits their goal window.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Sunday, November 8, 2026",
+        "detail": "Fall timing gives runners a clear marathon training target.",
+        "source_path": "event.date",
+        "source_url": "https://capitalmarathonrace.org/race-info",
+        "applies_to_distance_ids": ["marathon"]
+      },
+      {
+        "id": "start-time",
+        "label": "Gun time",
+        "value": "7:00 AM",
+        "detail": "The marathon start time is configured from the race source.",
+        "source_path": "distances[0].start_time",
+        "source_url": "https://capitalmarathonrace.org/race-info",
+        "applies_to_distance_ids": ["marathon"]
+      },
+      {
+        "id": "course",
+        "label": "Certified course",
+        "value": "MA-25-CFM",
+        "detail": "Point-to-point course with 12 feet of net drop and an 86-foot max climb.",
+        "source_path": "course.certification",
+        "source_url": "https://capitalmarathonrace.org/race-info",
+        "applies_to_distance_ids": ["marathon"]
+      },
+      {
+        "id": "price",
+        "label": "Entry price",
+        "value": "$145 standard entry",
+        "detail": "Standard and Sub-Elite Corral entries use the same configured bib price.",
+        "source_path": "entry_tiers[0].price",
+        "source_url": "https://capitalmarathonrace.org/race-info",
+        "applies_to_distance_ids": ["marathon"]
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Pre-race expo and packet pickup",
+        "detail": "Included in the Standard Entry feature list.",
+        "source_path": "entry_tiers[0].features[2]",
+        "source_url": "https://capitalmarathonrace.org/race-info",
+        "applies_to_distance_ids": ["marathon"]
+      },
+      {
+        "id": "aid-stations",
+        "label": "On-course support",
+        "value": "14 aid stations listed",
+        "detail": "Aid-station count is configured for the marathon course.",
+        "source_path": "distances[0].aid_stations",
+        "source_url": "https://capitalmarathonrace.org/race-info",
+        "applies_to_distance_ids": ["marathon"]
+      },
+      {
+        "id": "time-limit",
+        "label": "Time limit",
+        "value": "6:00:00 cutoff",
+        "detail": "Cutoff is configured with the marathon distance.",
+        "source_path": "distances[0].cutoff",
+        "source_url": "https://capitalmarathonrace.org/race-info",
+        "applies_to_distance_ids": ["marathon"]
+      }
+    ]
+  },
   "startline_value": {
     "headline": "Make the fast-course case before runners compare another marathon.",
     "intro": "This Performance concept turns certification, BQ potential, field-cap urgency, and pace planning into a focused path toward registration.",
@@ -151,11 +226,11 @@
     "generated": true,
     "provenance": {
       "source_url": "https://capitalmarathonrace.org/race-info",
-      "source_confirmed_sections": ["course"],
+      "source_confirmed_sections": ["course", "runner_decision_checklist"],
       "source_confirmed_distance_ids": ["marathon"],
       "items": [
         {
-          "path": "distances.marathon",
+          "path": "distances[0]",
           "source_url": "https://capitalmarathonrace.org/race-info",
           "note": "Fictional source confirms the marathon distance and start time."
         },
@@ -163,6 +238,41 @@
           "path": "course.certification",
           "source_url": "https://capitalmarathonrace.org/race-info",
           "note": "Fictional source confirms certification and course profile facts."
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source_url": "https://capitalmarathonrace.org/race-info",
+          "note": "Fictional source confirms race date."
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source_url": "https://capitalmarathonrace.org/race-info",
+          "note": "Fictional source confirms marathon start time."
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source_url": "https://capitalmarathonrace.org/race-info",
+          "note": "Fictional source confirms course certification and profile."
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source_url": "https://capitalmarathonrace.org/race-info",
+          "note": "Fictional source confirms entry price."
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source_url": "https://capitalmarathonrace.org/race-info",
+          "note": "Fictional source confirms packet pickup."
+        },
+        {
+          "path": "runner_decision_checklist.items.aid-stations",
+          "source_url": "https://capitalmarathonrace.org/race-info",
+          "note": "Fictional source confirms aid-station count."
+        },
+        {
+          "path": "runner_decision_checklist.items.time-limit",
+          "source_url": "https://capitalmarathonrace.org/race-info",
+          "note": "Fictional source confirms marathon cutoff."
         }
       ]
     },

@@ -19,7 +19,7 @@ const paidIncludes = Array.isArray(value.paid_includes) && value.paid_includes.l
 <section class="performance-private-value" data-private-value-narrative>
   <div class="wrap performance-private-value-wrap">
     <div class="performance-value-copy reveal">
-      <div class="kicker">StartLine performance concept</div>
+      <div class="kicker">Performance race concept</div>
       <h2 class="sec-title">{value.headline || 'Show runners why this is the race for their next best time.'}</h2>
       <p>{value.intro || 'This mockup keeps the Performance template centered on pace, proof, and the registration decision: BQ potential, PR confidence, field limits, and clear next steps.'}</p>
     </div>
@@ -31,7 +31,7 @@ const paidIncludes = Array.isArray(value.paid_includes) && value.paid_includes.l
         </ul>
       </div>
       <div class="performance-value-card accent-card">
-        <h3>What a paid StartLine build includes</h3>
+        <h3>What a paid race-site build includes</h3>
         <ul>
           {paidIncludes.map((item) => <li>{item}</li>)}
         </ul>

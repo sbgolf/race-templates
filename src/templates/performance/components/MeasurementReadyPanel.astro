@@ -1,0 +1,26 @@
+---
+import { registrationPlatformLabel } from '../../../shared/registration-platform-label.mjs';
+const { race } = Astro.props;
+const platform = registrationPlatformLabel(race.registration?.platform);
+---
+<section class="perf-measurement-panel" data-measurement-ready-panel>
+  <div class="wrap perf-measurement-wrap">
+    <div class="perf-measurement-card reveal">
+      <div>
+        <div class="kicker">Measurement-ready handoff</div>
+        <h2 class="sec-title">Know which registration path runners choose.</h2>
+        <p class="lead">Each official-registration CTA is prepared for a `register_click` event with placement, platform, and destination metadata.</p>
+      </div>
+      <div class="perf-measurement-points" aria-label="Measurement details">
+        <article>
+          <strong>What the race site can report</strong>
+          <p>Outbound registration handoff intent: which CTA sent a visitor toward {platform} and where that CTA appeared on the page.</p>
+        </article>
+        <article>
+          <strong>What stays with registration</strong>
+          <p>Race entry, payment, and confirmation remain inside the official registration platform unless later reporting or an approved integration is connected.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

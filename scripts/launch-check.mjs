@@ -46,8 +46,6 @@ function parseAttrs(source) {
 async function renderedOutputChecks() {
   if (!['community', 'destination-major', 'performance'].includes(config.identity?.template)) return [];
 
-  const template = config.private_mockup?.template || config.identity?.template || 'community';
-  const isPerformance = template === 'performance';
   const previewSlug = config.identity?.template === 'destination-major' ? 'destination-major' : config.identity?.template === 'performance' ? 'performance' : 'community';
   const renderedPath = config.private_mockup?.route
     ? path.resolve(process.cwd(), 'dist', config.private_mockup.route.replace(/^\//, ''), 'index.html')
@@ -68,9 +66,7 @@ async function renderedOutputChecks() {
   const anchors = extractAnchors(html);
   const registrationAnchors = anchors.filter((anchor) => anchor.attrs.href === registrationUrl);
   const placements = registrationAnchors.map((anchor) => anchor.attrs['data-analytics-placement']).filter(Boolean);
-  const requiredPrivatePlacements = isPerformance
-    ? ['nav-button', 'hero-primary', 'finale-primary']
-    : ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary'];
+  const requiredPrivatePlacements = ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary'];
   const missingPrivatePlacements = requiredPrivatePlacements.filter((placement) => !placements.includes(placement));
   const duplicatePlacements = [...new Set(placements.filter((placement, index) => placements.indexOf(placement) !== index))];
   const registrationAnchorErrors = registrationAnchors.flatMap((anchor, index) => [
@@ -146,17 +142,13 @@ async function renderedOutputChecks() {
     },
     {
       id: config.private_mockup?.route ? 'private-runner-checklist-present' : 'public-runner-checklist-absent',
-      label: isPerformance
-        ? (config.private_mockup?.route
-          ? 'Private Performance foundation mockup does not render the later runner checklist module'
-          : 'Public Performance preview does not render the private runner checklist')
-        : (config.private_mockup?.route
-          ? 'Private mockup page renders runner decision checklist with tracked CTA'
-          : 'Public preview page does not render the private runner checklist'),
-      pass: config.private_mockup?.route && !isPerformance
+      label: config.private_mockup?.route
+        ? 'Private mockup page renders runner decision checklist with tracked CTA'
+        : 'Public preview page does not render the private runner checklist',
+      pass: config.private_mockup?.route
         ? hasRunnerChecklist && (html.match(/data-checklist-item-id=/g) || []).length >= 3 && html.includes('data-analytics-placement="runner-checklist-footer"')
         : !hasRunnerChecklist,
-      details: config.private_mockup?.route && !isPerformance
+      details: config.private_mockup?.route
         ? [
             ...(hasRunnerChecklist ? [] : ['Missing data-runner-decision-checklist in private rendered HTML.']),
             ...((html.match(/data-checklist-item-id=/g) || []).length >= 3 ? [] : ['Runner checklist has fewer than 3 rendered items.']),
@@ -166,31 +158,23 @@ async function renderedOutputChecks() {
     },
     {
       id: config.private_mockup?.route ? 'private-hero-secondary-checklist' : 'public-hero-secondary-course',
-      label: isPerformance
-        ? (config.private_mockup?.route
-          ? 'Private Performance foundation mockup keeps hero secondary CTA outside later checklist flow'
-          : 'Public Performance preview keeps hero secondary CTA outside private checklist flow')
-        : (config.private_mockup?.route
-          ? 'Private mockup hero secondary CTA points to runner checklist from private_mockup presence'
-          : 'Public preview hero secondary CTA remains course-oriented'),
-      pass: config.private_mockup?.route && !isPerformance ? hasHeroChecklistSecondary : !hasHeroChecklistSecondary,
-      details: config.private_mockup?.route && !isPerformance && !hasHeroChecklistSecondary
+      label: config.private_mockup?.route
+        ? 'Private mockup hero secondary CTA points to runner checklist from private_mockup presence'
+        : 'Public preview hero secondary CTA remains course-oriented',
+      pass: config.private_mockup?.route ? hasHeroChecklistSecondary : !hasHeroChecklistSecondary,
+      details: config.private_mockup?.route && !hasHeroChecklistSecondary
         ? ['Private hero secondary CTA should render “Review key race details” and scroll to runner-checklist.']
         : (!config.private_mockup?.route && hasHeroChecklistSecondary ? ['Public hero secondary CTA unexpectedly points to runner checklist.'] : [])
     },
     {
       id: config.private_mockup?.route ? 'private-registration-decision-card-present' : 'public-registration-decision-card-absent',
-      label: isPerformance
-        ? (config.private_mockup?.route
-          ? 'Private Performance foundation mockup does not render the later registration decision card module'
-          : 'Public Performance preview does not render the private registration decision card')
-        : (config.private_mockup?.route
-          ? 'Private mockup page renders the registration decision card with tracked CTA'
-          : 'Public preview page does not render the private registration decision card'),
-      pass: config.private_mockup?.route && !isPerformance
+      label: config.private_mockup?.route
+        ? 'Private mockup page renders the registration decision card with tracked CTA'
+        : 'Public preview page does not render the private registration decision card',
+      pass: config.private_mockup?.route
         ? hasRegistrationDecisionCard && placements.includes('registration-decision-card')
         : !hasRegistrationDecisionCard,
-      details: config.private_mockup?.route && !isPerformance
+      details: config.private_mockup?.route
         ? [
             ...(hasRegistrationDecisionCard ? [] : ['Missing data-registration-decision-card in private rendered HTML.']),
             ...(placements.includes('registration-decision-card') ? [] : ['Missing registration-decision-card register-click placement.'])
@@ -199,15 +183,11 @@ async function renderedOutputChecks() {
     },
     {
       id: config.private_mockup?.route ? 'private-trust-signals-band-appropriate' : 'public-trust-signals-band-absent',
-      label: isPerformance
-        ? (config.private_mockup?.route
-          ? 'Private Performance foundation mockup does not render the later trust-signal band module'
-          : 'Public Performance preview does not render the private trust-signal band')
-        : (config.private_mockup?.route
-          ? 'Private mockup page renders source-backed trust signals when enough substantive runner-facing facts exist'
-          : 'Public preview page does not render the private trust-signal band'),
-      pass: config.private_mockup?.route && !isPerformance ? (shouldRenderTrustSignals ? hasTrustSignalsBand : !hasTrustSignalsBand) : !hasTrustSignalsBand,
-      details: config.private_mockup?.route && !isPerformance
+      label: config.private_mockup?.route
+        ? 'Private mockup page renders source-backed trust signals when enough substantive runner-facing facts exist'
+        : 'Public preview page does not render the private trust-signal band',
+      pass: config.private_mockup?.route ? (shouldRenderTrustSignals ? hasTrustSignalsBand : !hasTrustSignalsBand) : !hasTrustSignalsBand,
+      details: config.private_mockup?.route
         ? [
             ...(shouldRenderTrustSignals && !hasTrustSignalsBand ? ['Missing data-trust-signals-band despite enough substantive runner-facing trust facts.'] : []),
             ...(!shouldRenderTrustSignals && hasTrustSignalsBand ? ['Rendered data-trust-signals-band without enough substantive runner-facing trust facts.'] : [])
@@ -216,15 +196,11 @@ async function renderedOutputChecks() {
     },
     {
       id: config.private_mockup?.route ? 'private-measurement-ready-panel-present' : 'public-measurement-ready-panel-absent',
-      label: isPerformance
-        ? (config.private_mockup?.route
-          ? 'Private Performance foundation mockup does not render the later measurement-ready panel module'
-          : 'Public Performance preview does not render the private measurement-ready panel')
-        : (config.private_mockup?.route
-          ? 'Private mockup page renders measurement-ready registration handoff panel'
-          : 'Public preview page does not render the private measurement-ready panel'),
-      pass: config.private_mockup?.route && !isPerformance ? hasMeasurementReadyPanel : !hasMeasurementReadyPanel,
-      details: config.private_mockup?.route && !isPerformance && !hasMeasurementReadyPanel
+      label: config.private_mockup?.route
+        ? 'Private mockup page renders measurement-ready registration handoff panel'
+        : 'Public preview page does not render the private measurement-ready panel',
+      pass: config.private_mockup?.route ? hasMeasurementReadyPanel : !hasMeasurementReadyPanel,
+      details: config.private_mockup?.route && !hasMeasurementReadyPanel
         ? ['Missing data-measurement-ready-panel in private rendered HTML.']
         : (!config.private_mockup?.route && hasMeasurementReadyPanel ? ['Public rendered HTML contains private measurement-ready panel.'] : [])
     },

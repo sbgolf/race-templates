@@ -1,0 +1,20 @@
+---
+import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
+import { registrationPlatformLabel } from '../../../shared/registration-platform-label.mjs';
+const { race } = Astro.props;
+const registerUrl = race.registration?.url || '#entry';
+const registerLabel = race.registration?.cta_label || 'Register now';
+const platform = registrationPlatformLabel(race.registration?.platform);
+---
+<section class="perf-registration-decision" data-registration-decision-card>
+  <div class="wrap perf-decision-wrap">
+    <div class="perf-decision-card reveal">
+      <div>
+        <div class="kicker">Registration handoff</div>
+        <h2 class="sec-title">Keep the next split clean: decide here, register on the official platform.</h2>
+        <p class="lead">StartLine keeps pace, proof, and decision details together until a runner is ready to move to {platform}. Availability, payment, and confirmation stay with the official registration provider; this site prepares the outbound click-through for measurement.</p>
+      </div>
+      <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerClickAttributes(race, 'registration-decision-card')}>{registerLabel}</a>
+    </div>
+  </div>
+</section>
