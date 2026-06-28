@@ -19,7 +19,7 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
 
   if (args.help) {
-    console.log(`Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community] [--token 32-hex-token]
+    console.log(`Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community|destination-major] [--token 32-hex-token]
 
 Generates a private/noindex StartLine concept preview config.
 Access URLs are always tokenized: /private/mockups/<32+ hex chars>/
@@ -29,14 +29,14 @@ If --token is omitted, a cryptographically random 128-bit token is generated.`);
   }
 
   if (!args.url) {
-    console.error('Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community] [--token 32-hex-token]');
+    console.error('Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community|destination-major] [--token 32-hex-token]');
     process.exit(1);
   }
 
   const sourceUrl = new URL(args.url).toString();
   const template = args.template || 'community';
-  if (template !== 'community') {
-    console.error('Private mockup generation currently supports the community template only.');
+  if (!['community', 'destination-major'].includes(template)) {
+    console.error('Private mockup generation supports community and destination-major templates only.');
     process.exit(1);
   }
 
@@ -461,6 +461,9 @@ function buildConfig(facts, assets, metaInfo) {
     return details;
   });
   const runnerDecisionChecklist = buildRunnerDecisionChecklist(facts, metaInfo);
+  const identityColors = metaInfo.template === 'destination-major'
+    ? { primary: '#FF5B2E', secondary: '#16324F' }
+    : { primary: '#C6643D', secondary: '#6B8E6F' };
 
   return removeUndefined({
     identity: {
@@ -469,7 +472,7 @@ function buildConfig(facts, assets, metaInfo) {
       tagline: facts.name.value,
       edition: facts.location.value,
       ...(assets[0] ? { hero_image: { src: assets[0].src, alt: assets[0].alt, source: assets[0].source } } : {}),
-      colors: { primary: '#C6643D', secondary: '#6B8E6F' }
+      colors: identityColors
     },
     event: {
       date: facts.eventDate.value,

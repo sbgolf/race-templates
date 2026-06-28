@@ -44,11 +44,12 @@ function parseAttrs(source) {
 }
 
 async function renderedOutputChecks() {
-  if (config.identity?.template !== 'community') return [];
+  if (!['community', 'destination-major'].includes(config.identity?.template)) return [];
 
+  const previewSlug = config.identity?.template === 'destination-major' ? 'destination-major' : 'community';
   const renderedPath = config.private_mockup?.route
     ? path.resolve(process.cwd(), 'dist', config.private_mockup.route.replace(/^\//, ''), 'index.html')
-    : path.resolve(process.cwd(), 'dist', 'preview', 'community', 'index.html');
+    : path.resolve(process.cwd(), 'dist', 'preview', previewSlug, 'index.html');
   let html = '';
   try {
     html = await readFile(renderedPath, 'utf8');
@@ -57,7 +58,7 @@ async function renderedOutputChecks() {
       id: 'community-rendered-output',
       label: 'Community rendered output checked',
       pass: false,
-      details: [`Build first so ${path.relative(process.cwd(), renderedPath)} exists.`]
+      details: [`Build first so ${redactPrivateTokens(path.relative(process.cwd(), renderedPath))} exists.`]
     }];
   }
 
@@ -248,7 +249,7 @@ async function renderedOutputChecks() {
       id: 'private-mockup-tokenized-route',
       label: 'Private mockup route requires an unguessable token',
       pass: privateRoutePattern.test(config.private_mockup.route || ''),
-      details: privateRoutePattern.test(config.private_mockup.route || '') ? [] : [`Route is not token-gated: ${config.private_mockup.route || '(missing)'}`]
+      details: privateRoutePattern.test(config.private_mockup.route || '') ? [] : [`Route is not token-gated: ${redactPrivateTokens(config.private_mockup.route || '(missing)')}`]
     });
     checks.push({
       id: 'private-mockup-noindex',
@@ -260,13 +261,13 @@ async function renderedOutputChecks() {
       id: 'private-mockup-no-listing',
       label: '/private/mockups/ does not render a mockup listing',
       pass: !privateRootExists,
-      details: privateRootExists ? [`Unexpected listing file exists at ${path.relative(process.cwd(), privateRootIndex)}.`] : []
+      details: privateRootExists ? [`Unexpected listing file exists at ${redactPrivateTokens(path.relative(process.cwd(), privateRootIndex))}.`] : []
     });
     checks.push({
       id: 'private-mockup-slug-only-404',
       label: 'Slug-only private mockup URLs fall back to 404/not found',
       pass: !slugOnlyExists,
-      details: slugOnlyExists && slugOnlyIndex ? [`Unexpected slug-only file exists at ${path.relative(process.cwd(), slugOnlyIndex)}.`] : []
+      details: slugOnlyExists && slugOnlyIndex ? [`Unexpected slug-only file exists at ${redactPrivateTokens(path.relative(process.cwd(), slugOnlyIndex))}.`] : []
     });
   }
 
@@ -275,14 +276,14 @@ async function renderedOutputChecks() {
 
 const renderedChecks = await renderedOutputChecks();
 
-console.log(`Launch gate: ${target}`);
+console.log(`Launch gate: ${redactPrivateTokens(target)}`);
 for (const check of result.checks) {
   console.log(`${check.pass ? '✓' : '✗'} ${check.id}: ${check.label}`);
-  for (const detail of check.details || []) console.log(`  - ${detail}`);
+  for (const detail of check.details || []) console.log(`  - ${redactPrivateTokens(detail)}`);
 }
 for (const check of renderedChecks) {
   console.log(`${check.pass ? '✓' : '✗'} ${check.id}: ${check.label}`);
-  for (const detail of check.details || []) console.log(`  - ${detail}`);
+  for (const detail of check.details || []) console.log(`  - ${redactPrivateTokens(detail)}`);
 }
 for (const warning of result.warnings) console.warn(`⚠ ${warning.path}: ${warning.message}`);
 
@@ -292,3 +293,9 @@ if (!result.ok || renderedChecks.some((check) => !check.pass)) {
 }
 
 console.log('Launch gate passed.');
+
+function redactPrivateTokens(value) {
+  return String(value || '')
+    .replace(/(private[\\/]mockups[\\/])[a-f0-9]{32,}(?=[\\/]|$)/gi, '$1[REDACTED]')
+    .replace(/(\/private\/mockups\/)[a-f0-9]{32,}(?=\/|$)/gi, '$1[REDACTED]');
+}
