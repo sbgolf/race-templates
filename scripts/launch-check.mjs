@@ -75,8 +75,15 @@ async function renderedOutputChecks() {
   const incorrectlyTrackedRegistrationClicks = anchors.filter((anchor) => anchor.attrs['data-analytics-event'] === 'register_click' && anchor.attrs.href !== registrationUrl);
   const hasPrivateValueNarrative = html.includes('data-private-value-narrative');
   const hasRunnerChecklist = html.includes('data-runner-decision-checklist');
+  const hasHeroChecklistSecondary = html.includes("scrollToId('runner-checklist')") && html.includes('Review key race details');
   const hasRegistrationDecisionCard = html.includes('data-registration-decision-card');
   const hasRegisterClickListener = html.includes("document.addEventListener('click', function (event)");
+  const visibleText = html
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ');
+  const rawPlatformCopyPattern = /happen on (?:runsignup|race_roster|raceroster|haku|letsdothis|lets_do_this|other)\b/;
   const claimCheckHtml = allowedNegatedGrowthClaimPhrases
     .reduce((content, pattern) => content.replace(pattern, 'no overpromising claims'), html);
   const forbiddenClaims = forbiddenGrowthClaimPatterns
@@ -144,6 +151,16 @@ async function renderedOutputChecks() {
         : (hasRunnerChecklist ? ['Public rendered HTML contains private runner checklist.'] : [])
     },
     {
+      id: config.private_mockup?.route ? 'private-hero-secondary-checklist' : 'public-hero-secondary-course',
+      label: config.private_mockup?.route
+        ? 'Private Community hero secondary CTA points to runner checklist from private_mockup presence'
+        : 'Public Community hero secondary CTA remains course-oriented',
+      pass: config.private_mockup?.route ? hasHeroChecklistSecondary : !hasHeroChecklistSecondary,
+      details: config.private_mockup?.route && !hasHeroChecklistSecondary
+        ? ['Private hero secondary CTA should render “Review key race details” and scroll to runner-checklist.']
+        : (!config.private_mockup?.route && hasHeroChecklistSecondary ? ['Public hero secondary CTA unexpectedly points to runner checklist.'] : [])
+    },
+    {
       id: config.private_mockup?.route ? 'private-registration-decision-card-present' : 'public-registration-decision-card-absent',
       label: config.private_mockup?.route
         ? 'Private Community page renders the registration decision card with tracked CTA'
@@ -157,6 +174,12 @@ async function renderedOutputChecks() {
             ...(placements.includes('registration-decision-card') ? [] : ['Missing registration-decision-card register-click placement.'])
           ]
         : (hasRegistrationDecisionCard ? ['Public rendered HTML contains private registration decision card.'] : [])
+    },
+    {
+      id: 'community-registration-platform-copy',
+      label: 'Registration handoff copy uses prospect-facing platform labels',
+      pass: !rawPlatformCopyPattern.test(visibleText),
+      details: rawPlatformCopyPattern.test(visibleText) ? ['Rendered copy exposes a raw registration.platform key in “happen on …” prose.'] : []
     },
     {
       id: 'community-registration-placement-hierarchy',

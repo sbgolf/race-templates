@@ -43,7 +43,13 @@ for (const file of files) {
   const checklistItemCount = (html.match(/data-checklist-item-id=/g) || []).length;
   if (!html.includes('data-runner-decision-checklist')) errors.push('Private Community mockup is missing the runner decision checklist.');
   if (checklistItemCount < 3) errors.push(`Runner decision checklist renders ${checklistItemCount} items; expected at least 3.`);
+  if (!html.includes("scrollToId('runner-checklist')") || !html.includes('Review key race details')) {
+    errors.push('Private hero secondary CTA must point to the runner checklist when private_mockup metadata and a checklist are present.');
+  }
   if (!html.includes('data-registration-decision-card')) errors.push('Private Community mockup is missing the registration decision card.');
+  if (/happen on (?:runsignup|race_roster|raceroster|haku|letsdothis|lets_do_this|other)\b/.test(text)) {
+    errors.push('Registration decision copy exposes a raw registration platform key instead of a prospect-facing label.');
+  }
   if (!html.includes("document.addEventListener('click', function (event)")) errors.push('Private rendered HTML is missing register-click listener wiring.');
 
   const anchors = extractAnchors(html);

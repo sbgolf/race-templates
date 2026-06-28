@@ -6,7 +6,7 @@ const registerUrl = race.registration?.url || '#entry';
 const registerLabel = race.registration?.cta_label || 'Register now';
 const eventDate = race.event?.date ? new Date(`${race.event.date}T12:00:00`) : null;
 const displayDate = eventDate ? eventDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) : 'Race day';
-const isPrivateMockup = Boolean(race.private_mockup?.generated);
+const isPrivateMockup = Boolean(race.private_mockup);
 const editionLabel = race.identity?.edition || 'Community race';
 const heroEyebrow = isPrivateMockup ? race.event?.location : `${editionLabel} · ${race.event?.location}`;
 const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];

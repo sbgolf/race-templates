@@ -1,9 +1,10 @@
 ---
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
+import { registrationPlatformLabel } from "../../../shared/registration-platform-label.mjs";
 const { race } = Astro.props;
 const registerUrl = race.registration?.url || '#';
 const registerLabel = race.registration?.cta_label || 'Continue to official registration';
-const platform = race.registration?.platform || 'the official registration platform';
+const platform = registrationPlatformLabel(race.registration?.platform);
 const registerAttrs = registerClickAttributes(race, 'registration-decision-card');
 ---
 
