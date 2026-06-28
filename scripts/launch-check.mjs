@@ -5,12 +5,16 @@ import { launchGateChecks } from '../src/shared/schema/race-config-schema.mjs';
 
 const target = process.argv[2] || 'src/data/samples/hartwell-half.json';
 const forbiddenGrowthClaimPatterns = [
-  /guaranteed\s+registrations?/i,
-  /guaranteed\s+signups?/i,
-  /double\s+signups?/i,
-  /increase\s+registrations?/i,
-  /boost\s+registrations?/i,
-  /conversion\s+lift/i
+  /\bguaranteed\s+growth\b/i,
+  /\bguaranteed\s+registrations?\b/i,
+  /\bguaranteed\s+signups?\b/i,
+  /\bdouble\s+(?:signups?|registrations?)\b/i,
+  /\bincreas(?:e|es|ed|ing)\s+registrations?\b/i,
+  /\bboost(?:s|ed|ing)?\s+registrations?\b/i,
+  /\bconversion\s+lift\b/i
+];
+const allowedNegatedGrowthClaimPhrases = [
+  /\bno\s+guaranteed\s+growth\s+claims?\b/gi
 ];
 const absolute = path.resolve(process.cwd(), target);
 const config = JSON.parse(await readFile(absolute, 'utf8'));
@@ -45,8 +49,10 @@ async function renderedOutputChecks() {
 
   const registrationUrl = config.registration?.url || '';
   const hasPrivateValueNarrative = html.includes('data-private-value-narrative');
+  const claimCheckHtml = allowedNegatedGrowthClaimPhrases
+    .reduce((content, pattern) => content.replace(pattern, 'no overpromising claims'), html);
   const forbiddenClaims = forbiddenGrowthClaimPatterns
-    .filter((pattern) => pattern.test(html))
+    .filter((pattern) => pattern.test(claimCheckHtml))
     .map((pattern) => pattern.source);
   const checks = [
     {

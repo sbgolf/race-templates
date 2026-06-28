@@ -272,12 +272,14 @@ section{position:relative}
 .pk small{font-size:.7rem;font-weight:500;color:var(--accent);letter-spacing:.04em}
 
 .course-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:start}
+.course-grid > *{min-width:0}
 .course-map{
   border-radius:var(--r);overflow:hidden;
   background:var(--paper);border:1px solid var(--line);
-  aspect-ratio:5/4;position:relative;
+  aspect-ratio:5/4;position:relative;width:100%;max-width:100%;min-width:0;
 }
-.course-map .ph-img{width:100%;height:100%;display:block;position:relative}
+.course-map .ph-img{width:100%;max-width:100%;height:100%;display:block;position:relative;min-width:0;overflow:hidden}
+.course-map .ph-img svg{display:block;width:100%;max-width:100%;height:100%}
 .ph-route{background:linear-gradient(135deg,#F5EFE2 0%,#E8DCC4 60%,#D4C49E 100%)}
 .course-map .map-info{
   position:absolute;left:18px;bottom:18px;right:18px;

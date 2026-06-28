@@ -415,7 +415,7 @@ function buildConfig(facts, assets, metaInfo) {
         'Mobile-first implementation shaped around the runner registration path.',
         'SEO-ready page structure and event metadata for clearer discovery and sharing.',
         'Registration-click tracking setup so runner intent can be measured after launch.',
-        'No guaranteed growth claims — just a clearer, faster, more measurable path from runner interest to registration click-through.'
+        'No registration-growth guarantees — just a clearer, faster, more measurable path from runner interest to registration click-through.'
       ]
     },
     story: storyParagraphs.length ? {
