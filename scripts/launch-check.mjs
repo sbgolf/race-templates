@@ -3,6 +3,7 @@ import { readFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { launchGateChecks } from '../src/shared/schema/race-config-schema.mjs';
 import { shouldRenderTrustSignalsBand } from '../src/shared/private-mockup-trust.mjs';
+import { PRIVATE_VALUE_CONTRACT_MARKERS, PRIVATE_VALUE_REQUIRED_MARKERS, PRIVATE_VALUE_SUPPORTED_TEMPLATES, privateValuePublicMarkerLeaks } from '../src/shared/private-mockup-value.mjs';
 
 const target = process.argv[2] || 'src/data/samples/hartwell-half.json';
 const forbiddenGrowthClaimPatterns = [
@@ -44,9 +45,9 @@ function parseAttrs(source) {
 }
 
 async function renderedOutputChecks() {
-  if (!['community', 'destination-major', 'performance'].includes(config.identity?.template)) return [];
+  if (!PRIVATE_VALUE_SUPPORTED_TEMPLATES.includes(config.identity?.template)) return [];
 
-  const previewSlug = config.identity?.template === 'destination-major' ? 'destination-major' : config.identity?.template === 'performance' ? 'performance' : 'community';
+  const previewSlug = config.identity.template;
   const renderedPath = config.private_mockup?.route
     ? path.resolve(process.cwd(), 'dist', config.private_mockup.route.replace(/^\//, ''), 'index.html')
     : path.resolve(process.cwd(), 'dist', 'preview', previewSlug, 'index.html');
@@ -75,13 +76,14 @@ async function renderedOutputChecks() {
     ...(anchor.attrs['data-registration-platform'] ? [] : [`Registration anchor #${index + 1} is missing data-registration-platform.`])
   ]);
   const incorrectlyTrackedRegistrationClicks = anchors.filter((anchor) => anchor.attrs['data-analytics-event'] === 'register_click' && anchor.attrs.href !== registrationUrl);
-  const hasPrivateValueNarrative = html.includes('data-private-value-narrative');
-  const hasRunnerChecklist = html.includes('data-runner-decision-checklist');
+  const hasPrivateValueNarrative = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative);
+  const hasRunnerChecklist = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.runnerDecisionChecklist);
   const hasHeroChecklistSecondary = html.includes("scrollToId('runner-checklist')") && html.includes('Review key race details');
-  const hasRegistrationDecisionCard = html.includes('data-registration-decision-card');
-  const hasTrustSignalsBand = html.includes('data-trust-signals-band');
+  const hasRegistrationDecisionCard = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard);
+  const hasTrustSignalsBand = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand);
   const shouldRenderTrustSignals = shouldRenderTrustSignalsBand(config);
-  const hasMeasurementReadyPanel = html.includes('data-measurement-ready-panel');
+  const hasMeasurementReadyPanel = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel);
+  const publicPrivateMarkerLeaks = config.private_mockup?.route ? [] : privateValuePublicMarkerLeaks(html);
   const hasRegisterClickListener = html.includes("document.addEventListener('click', function (event)");
   const visibleText = html
     .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
@@ -139,6 +141,18 @@ async function renderedOutputChecks() {
       details: config.private_mockup?.route && !hasPrivateValueNarrative
         ? ['Missing data-private-value-narrative in private rendered HTML.']
         : (!config.private_mockup?.route && hasPrivateValueNarrative ? ['Public rendered HTML contains data-private-value-narrative.'] : [])
+    },
+    {
+      id: config.private_mockup?.route ? 'private-value-contract-required-markers-present' : 'public-private-value-contract-markers-absent',
+      label: config.private_mockup?.route
+        ? 'Private mockup page renders required private value contract markers'
+        : 'Public preview page does not render any private value contract markers',
+      pass: config.private_mockup?.route
+        ? PRIVATE_VALUE_REQUIRED_MARKERS.every((marker) => html.includes(marker))
+        : publicPrivateMarkerLeaks.length === 0,
+      details: config.private_mockup?.route
+        ? PRIVATE_VALUE_REQUIRED_MARKERS.filter((marker) => !html.includes(marker)).map((marker) => `Missing required private value marker ${marker}.`)
+        : publicPrivateMarkerLeaks.map((marker) => `Public rendered HTML contains private value marker ${marker}.`)
     },
     {
       id: config.private_mockup?.route ? 'private-runner-checklist-present' : 'public-runner-checklist-absent',

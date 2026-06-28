@@ -3,6 +3,7 @@ import CommunityPreview from "../../../templates/community/pages/CommunityPrevie
 import DestinationMajorPreview from "../../../templates/destination-major/pages/DestinationMajorPreview.astro";
 import PerformancePreview from "../../../templates/performance/pages/PerformancePreview.astro";
 import { ga4Snippet, registerClickListenerScript } from "../../../shared/analytics/register-click.mjs";
+import { templateForPrivateMockup } from "../../../shared/private-mockup-value.mjs";
 import { sportsEventJsonLdScript } from "../../../shared/schema/sports-event-jsonld.mjs";
 
 export function getStaticPaths() {
@@ -23,7 +24,7 @@ export function getStaticPaths() {
 }
 
 const { race } = Astro.props;
-const template = race.private_mockup?.template || race.identity?.template || 'community';
+const template = templateForPrivateMockup(race);
 const isDestinationMajor = template === 'destination-major';
 const isPerformance = template === 'performance';
 ---

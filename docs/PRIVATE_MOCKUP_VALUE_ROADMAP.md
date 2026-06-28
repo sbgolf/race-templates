@@ -189,12 +189,18 @@ Implemented for Performance:
 - Performance registration CTAs link to `registration.url` and include distinct `register_click` analytics placements across nav, hero, runner checklist, registration decision card, entry, and finale.
 - Rendered/launch validation now applies the full private value contract to Performance as well as Community and Destination Major; public Performance previews must forbid private modules.
 
+Implemented in Sprint 6 cleanup:
+
+- Shared private-value utilities/copy model added in `src/shared/private-mockup-value.mjs`.
+- Community, Destination Major, and Performance private modules now consume shared private-value copy/contract helpers where practical while keeping template-specific rendering.
+- Rendered validation and launch checks use stable contract markers for value narrative, runner checklist, registration decision card, trust-signal band, and measurement-ready panel.
+- Public preview rendered validation forbids private value markers.
+- Template standards now require new archetypes to implement the private value contract before merge.
+
 Remaining deliverables:
 
-- Shared private-value utilities/copy model.
 - Trail implementation when created.
 - Charity implementation when created.
-- Template standards update requiring all new templates to implement the value contract before merge.
 
 Acceptance criteria:
 

@@ -1,30 +1,13 @@
 ---
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
+import { privateValueNarrativeForRace } from "../../../shared/private-mockup-value.mjs";
 import { registrationPlatformLabel } from "../../../shared/registration-platform-label.mjs";
 const { race } = Astro.props;
 const isPrivateMockup = Boolean(race.private_mockup?.generated || race.private_mockup);
 
-const defaultValue = {
-  headline: 'A race website concept built around registration intent — not just a prettier homepage.',
-  intro: 'StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.',
-  improved: [
-    'Reduced runner friction by placing key race facts and the official registration path in predictable sections.',
-    'Surfaced trust signals such as source-backed event details, distances, schedule items, FAQs, and provenance when available.',
-    'Made registration CTAs easier to find across mobile and desktop, with measurement-ready registration-click tracking attributes.'
-  ],
-  paid_includes: [
-    'A mobile-first StartLine build shaped around the registration path, not a generic brochure page.',
-    'SEO-ready metadata and structured event content so runners can understand the race before leaving to register.',
-    'Registration-click tracking setup for measuring runner intent and next-click behavior after launch.',
-    'No registration-growth guarantees — just a clearer, faster, more measurable path from runner interest to registration click-through.'
-  ]
-};
-
-const configured = race.startline_value || {};
-const headline = configured.headline || defaultValue.headline;
-const intro = configured.intro || defaultValue.intro;
-const improved = Array.isArray(configured.improved) && configured.improved.length ? configured.improved : defaultValue.improved;
-const paidIncludes = Array.isArray(configured.paid_includes) && configured.paid_includes.length ? configured.paid_includes : defaultValue.paid_includes;
+const value = privateValueNarrativeForRace(race);
+const { headline, intro, improved } = value;
+const paidIncludes = value.paid_includes;
 const platformLabel = race.registration?.platform
   ? registrationPlatformLabel(race.registration.platform)
   : null;

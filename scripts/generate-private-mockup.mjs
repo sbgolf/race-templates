@@ -3,10 +3,13 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { createHash, randomBytes } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PRIVATE_VALUE_SUPPORTED_TEMPLATES } from '../src/shared/private-mockup-value.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const userAgent = 'StartLine private mockup generator (+https://startline.example; public preview capture)';
+const supportedTemplateList = PRIVATE_VALUE_SUPPORTED_TEMPLATES.join('|');
+const supportedTemplateCopy = PRIVATE_VALUE_SUPPORTED_TEMPLATES.join(', ');
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   main().catch((error) => {
@@ -19,7 +22,7 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
 
   if (args.help) {
-    console.log(`Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community|destination-major] [--token 32-hex-token]
+    console.log(`Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template ${supportedTemplateList}] [--token 32-hex-token]
 
 Generates a private/noindex StartLine concept preview config.
 Access URLs are always tokenized: /private/mockups/<32+ hex chars>/
@@ -29,14 +32,14 @@ If --token is omitted, a cryptographically random 128-bit token is generated.`);
   }
 
   if (!args.url) {
-    console.error('Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template community|destination-major] [--token 32-hex-token]');
+    console.error(`Usage: npm run mockup:private -- --url https://race-site.example [--slug race-slug] [--template ${supportedTemplateList}] [--token 32-hex-token]`);
     process.exit(1);
   }
 
   const sourceUrl = new URL(args.url).toString();
   const template = args.template || 'community';
-  if (!['community', 'destination-major'].includes(template)) {
-    console.error('Private mockup generation supports community and destination-major templates only.');
+  if (!PRIVATE_VALUE_SUPPORTED_TEMPLATES.includes(template)) {
+    console.error(`Private mockup generation supports ${supportedTemplateCopy} templates only.`);
     process.exit(1);
   }
 

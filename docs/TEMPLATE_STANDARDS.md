@@ -31,6 +31,8 @@ The Performance template intentionally uses a single-distance conversion funnel 
 
 Every current and future template must support the StartLine private mockup value contract before it is considered sales-ready. Visual language can vary by archetype, but the value contract does not vary.
 
+The shared implementation lives in `src/shared/private-mockup-value.mjs`. Template components should use that shared copy/contract model where practical, while preserving archetype-specific layout and styling. Do not duplicate or weaken the measurement/registration-handoff language in a one-off template component.
+
 Private mockups must explain how StartLine helps turn runner interest into official registration click-throughs by:
 
 - Reducing runner friction with scannable race details.
@@ -40,9 +42,29 @@ Private mockups must explain how StartLine helps turn runner interest into offic
 - Preparing CTAs for `register_click` measurement.
 - Explaining what the paid StartLine build includes beyond the free/private concept.
 
+Private mockup rendered output must include these stable contract markers when applicable:
+
+- `data-private-value-narrative`
+- `data-runner-decision-checklist`
+- `data-registration-decision-card`
+- `data-trust-signals-band` when `shouldRenderTrustSignalsBand(config)` allows it
+- `data-measurement-ready-panel`
+
+Public preview routes must not render any of those private markers.
+
 Do not promise guaranteed traffic, rankings, registrations, revenue, signup growth, or conversion lift. Use accurate language such as registration path, registration click-through, registration intent, and measurement-ready.
 
 See `PRIVATE_MOCKUP_VALUE_ROADMAP.md` for the working roadmap and future enhancements.
+
+### New archetype acceptance gate
+
+A PR that adds a new archetype (including Trail/Ultra/Adventure, Charity/Cause-Driven, or any future template) is not merge-ready until it:
+
+- Adds a tokenized private mockup path for that archetype.
+- Adds the archetype to the shared private value contract template set only after the rendered private path emits the required markers.
+- Keeps public `/preview/<template>` output free of private value markers and private sales/value narrative.
+- Passes `npm run validate:private-mockups`, `npm run build`, and `npm run validate:rendered-private-mockups`.
+- Documents in the PR how the archetype reduces runner friction, surfaces source-backed trust, preserves the official registration platform, and supports `register_click` measurement.
 
 ## Launch gate
 
