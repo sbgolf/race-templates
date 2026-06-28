@@ -4,6 +4,14 @@ import path from 'node:path';
 import { launchGateChecks } from '../src/shared/schema/race-config-schema.mjs';
 
 const target = process.argv[2] || 'src/data/samples/hartwell-half.json';
+const forbiddenGrowthClaimPatterns = [
+  /guaranteed\s+registrations?/i,
+  /guaranteed\s+signups?/i,
+  /double\s+signups?/i,
+  /increase\s+registrations?/i,
+  /boost\s+registrations?/i,
+  /conversion\s+lift/i
+];
 const absolute = path.resolve(process.cwd(), target);
 const config = JSON.parse(await readFile(absolute, 'utf8'));
 const result = launchGateChecks(config);
@@ -36,6 +44,10 @@ async function renderedOutputChecks() {
   }
 
   const registrationUrl = config.registration?.url || '';
+  const hasPrivateValueNarrative = html.includes('data-private-value-narrative');
+  const forbiddenClaims = forbiddenGrowthClaimPatterns
+    .filter((pattern) => pattern.test(html))
+    .map((pattern) => pattern.source);
   const checks = [
     {
       id: 'community-registration-links',
@@ -60,6 +72,22 @@ async function renderedOutputChecks() {
       label: 'Community registration path has no demo-only registration buttons',
       pass: !/registration started — demo only|Donation info shown — demo only/.test(html),
       details: []
+    },
+    {
+      id: 'community-no-forbidden-growth-claims',
+      label: 'Rendered page avoids forbidden registration growth claims',
+      pass: forbiddenClaims.length === 0,
+      details: forbiddenClaims.map((pattern) => `Matched forbidden phrase pattern: ${pattern}`)
+    },
+    {
+      id: config.private_mockup?.route ? 'private-value-narrative-present' : 'public-value-narrative-absent',
+      label: config.private_mockup?.route
+        ? 'Private Community page renders the StartLine value narrative'
+        : 'Public Community page does not render the private value narrative',
+      pass: config.private_mockup?.route ? hasPrivateValueNarrative : !hasPrivateValueNarrative,
+      details: config.private_mockup?.route && !hasPrivateValueNarrative
+        ? ['Missing data-private-value-narrative in private rendered HTML.']
+        : (!config.private_mockup?.route && hasPrivateValueNarrative ? ['Public rendered HTML contains data-private-value-narrative.'] : [])
     }
   ];
 

@@ -1,0 +1,99 @@
+---
+const { race } = Astro.props;
+const isPrivateMockup = Boolean(race.private_mockup?.generated || race.private_mockup);
+
+const defaultValue = {
+  headline: 'A race website concept built around registration intent — not just a prettier homepage.',
+  intro: 'StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.',
+  improved: [
+    'Reduced runner friction by placing key race facts and the official registration path in predictable sections.',
+    'Surfaced trust signals such as source-backed event details, distances, schedule items, FAQs, and provenance when available.',
+    'Made registration CTAs easier to find across mobile and desktop, with measurement-ready registration-click tracking attributes.'
+  ],
+  paid_includes: [
+    'A mobile-first StartLine build shaped around the registration path, not a generic brochure page.',
+    'SEO-ready metadata and structured event content so runners can understand the race before leaving to register.',
+    'Registration-click tracking setup for measuring runner intent and next-click behavior after launch.',
+    'No guaranteed growth claims — just a clearer, faster, more measurable path from runner interest to registration click-through.'
+  ]
+};
+
+const configured = race.startline_value || {};
+const headline = configured.headline || defaultValue.headline;
+const intro = configured.intro || defaultValue.intro;
+const improved = Array.isArray(configured.improved) && configured.improved.length ? configured.improved : defaultValue.improved;
+const paidIncludes = Array.isArray(configured.paid_includes) && configured.paid_includes.length ? configured.paid_includes : defaultValue.paid_includes;
+const registrationFacts = [
+  race.registration?.platform ? `Registration platform: ${race.registration.platform}` : null,
+  race.registration?.url ? 'Official registration link is configured for every primary CTA.' : null
+].filter(Boolean);
+const distanceFacts = (race.distances || [])
+  .filter((distance) => distance?.name || distance?.distance || distance?.start_time)
+  .map((distance) => [distance.name, distance.distance, distance.start_time].filter(Boolean).join(' · '));
+const scheduleFacts = (race.schedule || [])
+  .filter((item) => item?.name || item?.time || item?.location)
+  .slice(0, 3)
+  .map((item) => [item.time, item.name, item.location].filter(Boolean).join(' · '));
+const faqCount = (race.faqs || race.faq || []).filter((item) => item?.question && item?.answer).length;
+const sourceUrl = race.private_mockup?.source_url || race.private_mockup?.provenance?.source_url;
+const uncertaintySummary = race.private_mockup?.uncertainty?.summary;
+const sourceSections = race.private_mockup?.provenance?.source_confirmed_sections || [];
+const factGroups = [
+  registrationFacts.length ? { title: 'Registration path', items: registrationFacts } : null,
+  distanceFacts.length ? { title: 'Source-backed distances', items: distanceFacts } : null,
+  scheduleFacts.length ? { title: 'Schedule signals', items: scheduleFacts } : null,
+  faqCount ? { title: 'Runner questions', items: [`${faqCount} source-backed FAQ${faqCount === 1 ? '' : 's'} rendered.`] } : null
+].filter(Boolean);
+---
+
+{isPrivateMockup ? (
+<section class="startline-value" id="startline-value" data-private-value-narrative>
+  <div class="wrap startline-value-wrap">
+    <div class="startline-value-hero reveal">
+      <div class="kicker">StartLine value wrapper</div>
+      <h2>{headline}</h2>
+      <p>{intro}</p>
+    </div>
+
+    <div class="startline-value-grid stagger">
+      <article class="startline-value-card startline-value-card-primary">
+        <span class="startline-value-label">What StartLine improved</span>
+        <ul>
+          {improved.map((item) => <li>{item}</li>)}
+        </ul>
+      </article>
+
+      <article class="startline-value-card">
+        <span class="startline-value-label">What a paid StartLine build includes</span>
+        <ul>
+          {paidIncludes.map((item) => <li>{item}</li>)}
+        </ul>
+      </article>
+    </div>
+
+    {factGroups.length ? (
+      <div class="startline-value-facts reveal">
+        <span class="startline-value-label">Source-backed race facts used in this concept</span>
+        <div class="startline-fact-grid">
+          {factGroups.map((group) => (
+            <article class="startline-fact-card">
+              <h3>{group.title}</h3>
+              <ul>{group.items.map((item) => <li>{item}</li>)}</ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    ) : null}
+
+    <aside class="startline-source-note reveal">
+      <strong>Private concept note</strong>
+      <p>
+        This private mockup is framed around registration click-through readiness and uses only configured or source-backed race details. It avoids guaranteed growth claims and should be reviewed before prospect sharing.
+      </p>
+      {sourceUrl ? <p>Primary source: <a href={sourceUrl} target="_blank" rel="noopener">{sourceUrl}</a></p> : null}
+      {sourceSections.length ? <p>Source-confirmed sections: {sourceSections.join(', ')}</p> : null}
+      {uncertaintySummary ? <p>Uncertainty: {uncertaintySummary}</p> : null}
+    </aside>
+  </div>
+</section>
+) : null}

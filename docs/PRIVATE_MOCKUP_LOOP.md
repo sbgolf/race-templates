@@ -23,6 +23,7 @@ Output:
 - Builds a minimal Community-template config by default, because Community is the safest generic fit unless the audit workflow identifies an obvious Destination Major or Performance fit.
 - Never spreads a sample race config into a private mockup. Sample distances, schedules, sponsors, FAQs, charity copy, images, and local boilerplate must not appear unless the source page backs them.
 - Stores source/capture metadata, provenance, confidence counts, and `private_mockup.uncertainties` in the JSON config.
+- Adds a conservative `startline_value` narrative for Community private mockups. The rendered private page explains how StartLine reduces runner friction, surfaces trust signals, makes registration CTAs easier to find, supports mobile/SEO readiness, and prepares registration-click tracking without promising registration growth.
 - Generates `private_mockup.access_token` with Node crypto randomness (`randomBytes(16).toString('hex')`), producing an unguessable 128-bit token that is not derived from the race name, race slug, hostname, or source URL.
 - Fails without writing a config when source-backed required fields (race name, event date, location, at least one event distance) cannot be confirmed. Optional logistics are omitted and recorded as uncertainties instead of filled with placeholders.
 
@@ -36,6 +37,8 @@ The generated route is intentionally under `/private/mockups/<access-token>/` an
 ```
 
 The page also shows a visible private-concept banner: internal/Steve review only, not prospect-ready until approved.
+
+Community private mockups also render a private StartLine value narrative marked with `data-private-value-narrative`. Public sample previews must not render this block. Frame outcomes around a clearer registration path, registration click-throughs, registration intent, and measurement-ready tracking. Do not use guaranteed growth claims such as guaranteed registrations, double signups, increased registrations, boosted registrations, or conversion lift.
 
 Token rules:
 

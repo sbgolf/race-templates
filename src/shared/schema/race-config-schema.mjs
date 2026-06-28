@@ -3,6 +3,8 @@ const URL_PATTERN = /^https?:\/\//i;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PRIVATE_MOCKUP_TOKEN_PATTERN = /^[a-f0-9]{32,}$/i;
+const STARTLINE_VALUE_STRING_FIELDS = ['headline', 'intro'];
+const STARTLINE_VALUE_ARRAY_FIELDS = ['improved', 'paid_includes'];
 
 function isPlainObject(value) {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -105,6 +107,28 @@ export function validateRaceConfig(config) {
       }
       if (!config.private_mockup.noindex) {
         add(errors, 'private_mockup.noindex', 'Private mockups must explicitly set noindex: true.');
+      }
+    }
+  }
+
+  if (config.startline_value !== undefined) {
+    if (!isPlainObject(config.startline_value)) {
+      add(errors, 'startline_value', 'StartLine value narrative must be an object when provided.');
+    } else {
+      for (const field of STARTLINE_VALUE_STRING_FIELDS) {
+        if (config.startline_value[field] !== undefined && !hasText(config.startline_value[field])) {
+          add(errors, `startline_value.${field}`, 'Must be a non-empty string when provided.');
+        }
+      }
+      for (const field of STARTLINE_VALUE_ARRAY_FIELDS) {
+        if (config.startline_value[field] === undefined) continue;
+        if (!Array.isArray(config.startline_value[field])) {
+          add(errors, `startline_value.${field}`, 'Must be an array of non-empty strings when provided.');
+        } else {
+          config.startline_value[field].forEach((item, index) => {
+            if (!hasText(item)) add(errors, `startline_value.${field}[${index}]`, 'Must be a non-empty string.');
+          });
+        }
       }
     }
   }
