@@ -208,21 +208,23 @@ Acceptance criteria:
 
 ### Sprint 7 — Mockup readiness QA gate
 
+Status: implemented — rendered private mockup validation is the readiness gate.
+
 Goal: prevent weak mockups from reaching Steve or prospects.
 
-Deliverables:
+Implemented behavior:
 
-- Rendered checks for value narrative presence/absence.
-- Raw URL-in-paragraph checks.
-- Punctuation artifact checks.
-- No internal/private metadata chrome.
-- CTA count checks.
-- Trust/value section presence checks.
-- Mobile overflow checks at 320, 375, 414, 768, and desktop widths.
+- Rendered private routes require the shared private value contract markers, runner checklist, registration decision card, measurement-ready panel, and trust-signal band when enough source-backed facts exist.
+- Public previews for supported templates are scanned to prevent leakage of private value markers.
+- Tokenized private routes must emit `noindex,nofollow,noarchive,nosnippet` for both `robots` and `googlebot`.
+- Paragraph-like visible copy fails on raw URLs/bare domains, placeholder copy, scrape punctuation artifacts, raw registration platform keys, and completed-registration tracking claims while leaving href/src/meta/JSON-LD data alone.
+- Customer-facing rendered HTML is scanned for internal source/provenance/uncertainty chrome that should never reach prospects.
+- Official registration CTAs must link to the configured registration URL, include analytics/platform attributes, meet the required placement contract, avoid duplicate placements, and render at least the minimum expected CTA count.
+- Static mobile-readiness safeguards require viewport metadata and reject fixed width/min-width CSS rules that would obviously overflow 320px or exceed 100vw without adding browser dependencies.
 
 Registration-click value:
 
-- Keeps every sales preview consistent, polished, and credible.
+- Keeps every sales preview consistent, polished, credible, and ready for Steve review before a prospect sees it.
 
 ### Sprint 8 — Audit → mockup → offer workflow
 

@@ -8,6 +8,7 @@ const root = process.cwd();
 const privateDir = path.resolve(root, 'dist/private/mockups');
 const publicPreviewDir = path.resolve(root, 'dist/preview');
 const rawVisibleUrlPattern = /\b(?:https?:\/\/|www\.|[a-z0-9-]+\.(?:com|org|net|io|gov|edu)\b)/i;
+const requiredPrivateRobotsDirectives = ['noindex', 'nofollow', 'noarchive', 'nosnippet'];
 const visiblePlaceholderPatterns = [
   /\bTBD\b/i,
   /\bTBA\b/i,
@@ -33,7 +34,16 @@ const visibleInternalChromePatterns = [
 const customerFacingInternalChromePatterns = [
   /\bPrivate StartLine concept\b/i,
   /\bStartLine private concept\b/i,
-  /\bPrivate StartLine race website concept preview\b/i
+  /\bPrivate StartLine race website concept preview\b/i,
+  /\bsource[-\s]?confirmed\b/i,
+  /\bsource[-\s]?backed\b/i,
+  /\bprovenance\b/i,
+  /\buncertainty\b/i,
+  /\bsource_url\b/i,
+  /\bcaptured_at\b/i,
+  /\baccess_token\b/i,
+  /\bpublic image URL on source page\b/i,
+  /\bshould be reviewed before prospect sharing\b/i
 ];
 const punctuationArtifactPatterns = [
   /\b20\d{2}\s+\./,
@@ -57,12 +67,15 @@ for (const file of files) {
   const html = await readFile(file, 'utf8');
   const text = visibleText(html);
   const customerFacingCopy = customerFacingCopySurface(html);
+  const paragraphLikeText = paragraphLikeVisibleText(html);
   const errors = [];
   const registrationUrl = registrationUrlForRenderedFile(file);
   const config = configForRenderedFile(file);
   const template = templateForPrivateMockup(config);
   const shouldRenderTrustSignals = shouldRenderTrustSignalsBand(config);
-  if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible text exposes a raw URL or bare domain.');
+  validatePrivateRobotsMetadata(html, errors);
+  validateMobileOverflowReadiness(html, errors);
+  if (rawVisibleUrlPattern.test(paragraphLikeText)) errors.push('Rendered paragraph-like visible copy exposes a raw URL or bare domain; use labeled links/buttons instead.');
   for (const pattern of visiblePlaceholderPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains placeholder copy "${pattern.source}".`);
   }
@@ -84,6 +97,7 @@ for (const file of files) {
   }
   if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)) errors.push(`Private ${template} mockup is missing the registration decision card.`);
   if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel)) errors.push(`Private ${template} mockup is missing the measurement-ready panel.`);
+  validatePrivateValueSectionOrder(html, errors);
   if (shouldRenderTrustSignals && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup has enough substantive runner-facing trust facts but is missing the trust-signal band.`);
   if (!shouldRenderTrustSignals && html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup renders the trust-signal band without enough substantive runner-facing trust facts.`);
   for (const marker of PRIVATE_VALUE_REQUIRED_MARKERS) {
@@ -108,10 +122,13 @@ for (const file of files) {
 
   const placements = registrationAnchors.map((anchor) => anchor.attrs['data-analytics-placement']).filter(Boolean);
   const requiredPlacements = ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary'];
+  const minimumRegistrationCtaCount = requiredPlacements.length + 1;
+  if (registrationAnchors.length < minimumRegistrationCtaCount) errors.push(`Only ${registrationAnchors.length} registration CTAs point to the official registration URL; expected at least ${minimumRegistrationCtaCount}.`);
   for (const required of requiredPlacements) {
     if (!placements.includes(required)) errors.push(`Missing required register-click placement "${required}".`);
   }
   if (!placements.some((placement) => placement.startsWith('entry-distance-'))) errors.push('Missing at least one entry-distance-* register-click placement.');
+  if (!placements.slice(0, 2).some((placement) => ['nav-button', 'hero-primary'].includes(placement))) errors.push('Early registration CTA hierarchy must include nav-button or hero-primary in the first two registration links.');
   const duplicates = [...new Set(placements.filter((placement, index) => placements.indexOf(placement) !== index))];
   if (duplicates.length) errors.push(`Duplicate major registration CTA placements found: ${duplicates.join(', ')}.`);
 
@@ -224,16 +241,82 @@ function visibleText(html) {
     .trim();
 }
 
+function paragraphLikeVisibleText(html) {
+  const blocks = [];
+  for (const match of String(html || '').matchAll(/<(p|li|figcaption|blockquote|summary|dt|dd|h[1-6])\b[^>]*>([\s\S]*?)<\/\1>/gi)) {
+    blocks.push(visibleText(match[2] || ''));
+  }
+  return blocks.join(' ');
+}
+
 function customerFacingCopySurface(html) {
   return String(html || '')
+    .replace(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, ' ')
     .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<svg\b[\s\S]*?<\/svg>/gi, ' ')
+    .replace(/\bdata-private-(?:mockup|value-narrative)\b/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function validatePrivateRobotsMetadata(html, errors) {
+  for (const name of ['robots', 'googlebot']) {
+    const content = metaContent(html, name);
+    if (!content) {
+      errors.push(`Private route is missing <meta name="${name}"> robots metadata.`);
+      continue;
+    }
+    const directives = content.split(',').map((directive) => directive.trim().toLowerCase()).filter(Boolean);
+    for (const required of requiredPrivateRobotsDirectives) {
+      if (!directives.includes(required)) errors.push(`Private ${name} robots metadata is missing "${required}".`);
+    }
+  }
+}
+
+function validatePrivateValueSectionOrder(html, errors) {
+  const orderedMarkers = [
+    PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative,
+    PRIVATE_VALUE_CONTRACT_MARKERS.runnerDecisionChecklist,
+    PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard,
+    PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel
+  ];
+  const positions = orderedMarkers.map((marker) => html.indexOf(marker));
+  if (positions.some((position) => position < 0)) return;
+  for (let index = 1; index < positions.length; index += 1) {
+    if (positions[index] <= positions[index - 1]) {
+      errors.push('Private value sections must preserve the decision flow: value narrative → runner checklist → registration decision card → measurement-ready panel.');
+      return;
+    }
+  }
+}
+
+function validateMobileOverflowReadiness(html, errors) {
+  if (!/<meta\b[^>]*name=["']viewport["'][^>]*content=["'][^"']*width=device-width/i.test(html)) {
+    errors.push('Rendered page is missing a mobile viewport meta tag with width=device-width.');
+  }
+  const styles = [...String(html || '').matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi)].map((match) => match[1] || '').join('\n');
+  const fixedWidthRules = [...styles.matchAll(/(?:^|[;{\s])(width|min-width)\s*:\s*(\d+)px/gi)]
+    .filter((match) => Number(match[2]) > 320)
+    .map((match) => `${match[1]}:${match[2]}px`);
+  const viewportOverflowRules = [...styles.matchAll(/(?:^|[;{\s])(width|min-width)\s*:\s*(\d+(?:\.\d+)?)vw/gi)]
+    .filter((match) => Number(match[2]) > 100)
+    .map((match) => `${match[1]}:${match[2]}vw`);
+  if (fixedWidthRules.length) errors.push(`Mobile overflow readiness failed: fixed width/min-width above 320px found (${fixedWidthRules.slice(0, 5).join(', ')}). Use max-width/min()/clamp()/responsive grids instead.`);
+  if (viewportOverflowRules.length) errors.push(`Mobile overflow readiness failed: width/min-width above 100vw found (${viewportOverflowRules.slice(0, 5).join(', ')}).`);
+}
+
+function metaContent(html, name) {
+  const pattern = new RegExp(`<meta\\b(?=[^>]*\\bname=["']${escapeRegExp(name)}["'])(?=[^>]*\\bcontent=(["'])([^"']*)\\1)[^>]*>`, 'i');
+  return String(html || '').match(pattern)?.[2] || '';
 }
 
 function redactPrivateTokens(value) {
   return String(value || '')
     .replace(/(private[\\/]mockups[\\/])[a-f0-9]{32,}(?=[\\/]|$)/gi, '$1[REDACTED]')
     .replace(/(\/private\/mockups\/)[a-f0-9]{32,}(?=\/|$)/gi, '$1[REDACTED]');
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
