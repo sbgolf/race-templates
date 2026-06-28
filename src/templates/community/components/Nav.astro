@@ -1,7 +1,8 @@
 ---
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 const { race } = Astro.props;
-const registerAttrs = registerClickAttributes(race, 'nav');
+const registerLinkAttrs = registerClickAttributes(race, 'nav-link');
+const registerButtonAttrs = registerClickAttributes(race, 'nav-button');
 const registerUrl = race.registration?.url || '#entry';
 const registerLabel = race.registration?.cta_label || 'Register';
 const hasSchedule = (race.schedule || []).length > 0;
@@ -24,8 +25,8 @@ const hasVolunteer = Boolean(race.volunteer?.description || race.volunteer?.sign
     {hasStory ? <a href="#story">Details</a> : null}
     {hasGallery ? <a href="#gallery">Gallery</a> : null}
     {hasVolunteer ? <a href="#volunteer">Volunteer</a> : null}
-    <a href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>Register</a>
-    <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel} →</a>
+    <a href={registerUrl} target="_blank" rel="noopener" {...registerLinkAttrs}>Register</a>
+    <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerButtonAttrs}>{registerLabel} →</a>
   </div>
   <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>

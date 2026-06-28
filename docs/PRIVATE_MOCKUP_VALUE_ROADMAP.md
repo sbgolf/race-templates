@@ -121,15 +121,22 @@ Registration-click value:
 
 ### Sprint 4 — Registration conversion components
 
+Status: implemented in PR #17.
+
 Goal: make registration CTAs obvious at decision points.
 
-Deliverables:
+Implemented behavior:
 
-- Registration decision card.
-- Improved CTA labels such as “View official registration” or “Register on official site.”
-- Optional mobile sticky registration CTA.
-- Minimum CTA coverage validation.
-- Analytics attributes on every registration CTA.
+- Community private mockups render a private-only registration decision card between the runner checklist and Entry/Register section.
+- The card clarifies that StartLine sends runners to official registration, while availability, payment, and confirmation happen on the official platform; tracking measures click-through only.
+- Major registration CTA placements are distinct: `nav-link`, `nav-button`, `hero-primary`, `runner-checklist-top`, `runner-checklist-footer`, `registration-decision-card`, `entry-distance-*`, and `finale-primary`.
+- Private hero secondary CTA points to the runner checklist when present, keeping the official registration CTA as the primary action and avoiding a competing course CTA at the top of private mockups.
+- Private routes include GA4 setup when configured and always include register-click listener wiring; placeholder GA4 IDs intentionally omit the external GA script without breaking pages.
+- Rendered and launch checks require complete analytics metadata on every anchor to the configured registration URL, reject non-registration links tracked as `register_click`, require Sprint 4 placements, and ensure public Community previews do not leak private decision/checklist/value sections.
+
+Deferred:
+
+- Mobile sticky registration CTA remains optional and was not added in PR #17 to avoid introducing mobile overlap risk.
 
 Registration-click value:
 
