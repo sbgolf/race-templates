@@ -6,7 +6,7 @@
     "edition": "Boston, MA",
     "hero_image": {
       "src": "/mockups/35a001229594dde99d184e2ab18b50e9/1-a40629fb41.png",
-      "alt": "Race image for Boston Marathon",
+      "alt": "Public race-site image captured for concept direction",
       "source": "https://www.baa.org/wp-content/uploads/2025/10/BAALogo-1.png"
     },
     "colors": {
@@ -60,14 +60,14 @@
     "assets": [
       {
         "src": "/mockups/35a001229594dde99d184e2ab18b50e9/1-a40629fb41.png",
-        "alt": "Race image for Boston Marathon",
-        "caption": "",
+        "alt": "Public race-site image captured for concept direction",
+        "caption": "Public race-site image used for concept direction.",
         "source": "https://www.baa.org/wp-content/uploads/2025/10/BAALogo-1.png"
       },
       {
         "src": "/mockups/35a001229594dde99d184e2ab18b50e9/2-ca09e38448.png",
-        "alt": "Race image for Boston Marathon",
-        "caption": "",
+        "alt": "Public race-site image captured for concept direction",
+        "caption": "Additional public race-site visual reference.",
         "source": "https://www.baa.org/wp-content/uploads/2025/11/BAALogo-1.png"
       }
     ],

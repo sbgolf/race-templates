@@ -736,7 +736,7 @@ async function captureImages(urls, assetNamespace) {
       const ext = extensionFor(contentType, url);
       const name = `${assets.length + 1}-${createHash('sha1').update(url).digest('hex').slice(0, 10)}.${ext}`;
       await writeFile(path.join(assetDir, name), bytes);
-      assets.push({ src: `/mockups/${assetNamespace}/${name}`, alt: 'Race image', caption: '', source: url });
+      assets.push(buildCapturedImageAsset({ assetNamespace, name, sourceUrl: url, index: assets.length }));
     } catch {
       // Keep generation resilient; missing/blocked images are recorded as an uncertainty.
     }
@@ -749,6 +749,15 @@ function extensionFor(contentType, url) {
   if (/png/i.test(contentType)) return 'png';
   const match = new URL(url).pathname.match(/\.([a-z0-9]+)$/i);
   return match && /jpe?g/i.test(match[1]) ? match[1].toLowerCase() : 'jpg';
+}
+
+function buildCapturedImageAsset({ assetNamespace, name, sourceUrl, index }) {
+  return {
+    src: `/mockups/${assetNamespace}/${name}`,
+    alt: 'Public race-site image captured for concept direction',
+    caption: index === 0 ? 'Public race-site image used for concept direction.' : 'Additional public race-site visual reference.',
+    source: sourceUrl
+  };
 }
 
 function normalizeDate(value) {
@@ -872,4 +881,4 @@ function formatTimeLabel(value) {
   return String(value || '').replace(/\b(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b/gi, (_, hour, minute = '00', period) => `${Number(hour)}:${minute} ${period.toUpperCase()}`);
 }
 
-export { buildRunnerDecisionChecklist, extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy };
+export { buildCapturedImageAsset, buildRunnerDecisionChecklist, extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy };
