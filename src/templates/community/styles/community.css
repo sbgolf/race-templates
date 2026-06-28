@@ -261,8 +261,9 @@ section{position:relative}
 /* STORY */
 .story{background:var(--paper-3)}
 .story-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:60px;align-items:center}
+.story-grid > *{min-width:0}
 .story h2{font-size:clamp(2rem,4.5vw,3.4rem);max-width:14ch;margin-bottom:24px}
-.story p{font-size:1.05rem;color:rgba(42,31,24,.74);line-height:1.65;margin-bottom:16px;max-width:52ch}
+.story p{font-size:1.05rem;color:rgba(42,31,24,.74);line-height:1.65;margin-bottom:16px;max-width:52ch;overflow-wrap:anywhere}
 .story-quote{
   font-family:"Fraunces",serif;font-style:italic;font-size:1.4rem;
   color:var(--ink);line-height:1.4;margin:32px 0 18px;
