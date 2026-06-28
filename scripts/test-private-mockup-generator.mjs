@@ -43,7 +43,7 @@ assert(strongChecklist.items.some((item) => item.id === 'start-time' && item.val
 assert(strongChecklist.items.every((item) => !/https?:\/\/|www\.|\bT(?:BD|BA)\b|unknown|coming soon/i.test(item.value)));
 
 const sparseChecklist = buildRunnerDecisionChecklist({
-  eventDate: { value: '2027-05-18', source: 'date source', confidence: 'medium' },
+  eventDate: { value: '2027-04-19', source: 'date source', confidence: 'medium' },
   location: { value: 'Boston, MA', source: 'location source', confidence: 'medium' },
   startTime: null,
   distances: [{ id: 'marathon', name: 'Marathon', distance: '26.2 mi', provenance: { source: 'title', confidence: 'high' } }],
@@ -56,6 +56,7 @@ const sparseChecklist = buildRunnerDecisionChecklist({
   faqs: []
 }, { sourceUrl: 'https://www.baa.org/races/boston-marathon' });
 assert.deepEqual(sparseChecklist.items.map((item) => item.id), ['date', 'distance', 'location']);
+assert.equal(sparseChecklist.items.find((item) => item.id === 'date')?.value, 'Monday, April 19, 2027');
 assert(!sparseChecklist.items.some((item) => /TBD|TBA|unknown|coming soon/i.test(item.value)));
 
 console.log('✓ private mockup generator regressions');

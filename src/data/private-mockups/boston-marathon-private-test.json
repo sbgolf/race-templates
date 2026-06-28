@@ -15,7 +15,7 @@
     }
   },
   "event": {
-    "date": "2027-05-18",
+    "date": "2027-04-19",
     "location": "Boston, MA",
     "venue": "Boston, MA"
   },
@@ -133,7 +133,7 @@
       {
         "id": "date",
         "label": "Race date",
-        "value": "Tuesday, May 18, 2027",
+        "value": "Monday, April 19, 2027",
         "source_path": "event.date",
         "source_url": "https://www.baa.org/races/boston-marathon"
       },
