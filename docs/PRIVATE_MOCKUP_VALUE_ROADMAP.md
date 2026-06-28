@@ -144,14 +144,22 @@ Registration-click value:
 
 ### Sprint 5 — Trust and measurement modules
 
+Status: implemented in PR #18.
+
 Goal: show directors that StartLine builds credibility and measurable intent.
 
-Deliverables:
+Implemented behavior:
 
-- Trust-signal band from source-backed/configured facts.
-- Measurement-ready panel explaining `register_click` tracking.
-- Clear distinction between registration clicks and completed registrations.
-- Mock monthly report/dashboard example later, once analytics flow is ready.
+- Community private mockups render a private-only trust-signal band marked with `data-trust-signals-band` when enough configured/source-backed trust facts exist.
+- Trust signals are derived from existing race config/checklist/provenance facts such as certification, course profile, aid stations, packet pickup, refund/transfer policy, awards, swag/medal, time limit, official registration platform, organizer identity, and source-confidence metadata.
+- Sparse mockups omit the band unless the available facts meet the threshold; missing facts are not replaced with `TBD`, `TBA`, `unknown`, or “coming soon.”
+- Community private mockups render a private-only measurement-ready panel marked with `data-measurement-ready-panel`.
+- The measurement panel explains that `register_click` captures outbound official-registration handoff intent by placement/platform/link, while completed registrations, payment, and confirmation remain inside the official registration platform unless reporting or an approved integration exists.
+- Rendered validation and launch checks require the measurement panel on private Community mockups, require/forbid the trust-signal band according to available facts, reject public Community leakage, reject completed-registration measurement claims, continue rejecting forbidden growth/lift claims, and continue enforcing distinct registration CTA placements plus no `register_click` tracking on non-registration links.
+
+Deferred:
+
+- Mock monthly report/dashboard example remains later work, once analytics flow and reporting format are ready.
 
 Registration-click value:
 

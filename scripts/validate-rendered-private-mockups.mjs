@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
+import { shouldRenderTrustSignalsBand } from '../src/shared/private-mockup-trust.mjs';
 
 const root = process.cwd();
 const privateDir = path.resolve(root, 'dist/private/mockups');
@@ -21,7 +22,7 @@ const punctuationArtifactPatterns = [
 
 let failed = false;
 const files = await renderedPrivateMockupFiles();
-const registrationUrlsByToken = await privateRegistrationUrlsByToken();
+const privateConfigsByToken = await privateConfigsByTokenMap();
 
 if (!files.length) {
   console.log('✓ No rendered private mockup pages found. Run npm run build first to scan rendered visible text.');
@@ -33,6 +34,8 @@ for (const file of files) {
   const text = visibleText(html);
   const errors = [];
   const registrationUrl = registrationUrlForRenderedFile(file);
+  const config = configForRenderedFile(file);
+  const shouldRenderTrustSignals = shouldRenderTrustSignalsBand(config);
   if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible text exposes a raw URL or bare domain.');
   for (const pattern of visiblePlaceholderPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains placeholder copy "${pattern.source}".`);
@@ -47,8 +50,14 @@ for (const file of files) {
     errors.push('Private hero secondary CTA must point to the runner checklist when private_mockup metadata and a checklist are present.');
   }
   if (!html.includes('data-registration-decision-card')) errors.push('Private Community mockup is missing the registration decision card.');
+  if (!html.includes('data-measurement-ready-panel')) errors.push('Private Community mockup is missing the measurement-ready panel.');
+  if (shouldRenderTrustSignals && !html.includes('data-trust-signals-band')) errors.push('Private Community mockup has enough trust facts but is missing the trust-signal band.');
+  if (!shouldRenderTrustSignals && html.includes('data-trust-signals-band')) errors.push('Private Community mockup renders the trust-signal band without enough configured/source-backed trust facts.');
   if (/happen on (?:runsignup|race_roster|raceroster|haku|letsdothis|lets_do_this|other)\b/.test(text)) {
     errors.push('Registration decision copy exposes a raw registration platform key instead of a prospect-facing label.');
+  }
+  if (/\b(?:track|tracks|tracked|count|counts|counted|measure|measures|measured)\s+(?:completed\s+)?(?:registrations?|signups?|conversions?)\b/i.test(text)) {
+    errors.push('Measurement copy must not say StartLine tracks/counts/measures completed registrations, signups, or conversions.');
   }
   if (!html.includes("document.addEventListener('click', function (event)")) errors.push('Private rendered HTML is missing register-click listener wiring.');
 
@@ -99,24 +108,29 @@ async function renderedPrivateMockupFiles() {
 
 function registrationUrlForRenderedFile(file) {
   const token = path.basename(path.dirname(file));
-  return registrationUrlsByToken.get(token) || '';
+  return privateConfigsByToken.get(token)?.registration?.url || '';
 }
 
-async function privateRegistrationUrlsByToken() {
+function configForRenderedFile(file) {
+  const token = path.basename(path.dirname(file));
+  return privateConfigsByToken.get(token) || null;
+}
+
+async function privateConfigsByTokenMap() {
   const dataDir = path.resolve(root, 'src/data/private-mockups');
-  const urls = new Map();
+  const configs = new Map();
   try {
     const entries = await readdir(dataDir, { withFileTypes: true });
     for (const entry of entries.filter((candidate) => candidate.isFile() && candidate.name.endsWith('.json'))) {
       const config = JSON.parse(await readFile(path.join(dataDir, entry.name), 'utf8'));
-      if (config.private_mockup?.access_token && config.registration?.url) {
-        urls.set(config.private_mockup.access_token, config.registration.url);
+      if (config.private_mockup?.access_token) {
+        configs.set(config.private_mockup.access_token, config);
       }
     }
   } catch (error) {
     if (error.code !== 'ENOENT') throw error;
   }
-  return urls;
+  return configs;
 }
 
 function extractAnchors(html) {
