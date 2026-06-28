@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import { buildRunnerDecisionChecklist, extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy } from './generate-private-mockup.mjs';
+import { shouldRenderTrustSignalsBand, substantiveTrustSignalsForRace, trustSignalsForRace } from '../src/shared/private-mockup-trust.mjs';
 
 assert.equal(
   normalizeDisplayCopy('The 6th annual race returns with awards for 1st -$300, 2nd -$200, and 3rd -$100.'),
@@ -58,5 +60,35 @@ const sparseChecklist = buildRunnerDecisionChecklist({
 assert.deepEqual(sparseChecklist.items.map((item) => item.id), ['date', 'distance', 'location']);
 assert.equal(sparseChecklist.items.find((item) => item.id === 'date')?.value, 'Monday, April 19, 2027');
 assert(!sparseChecklist.items.some((item) => /TBD|TBA|unknown|coming soon/i.test(item.value)));
+
+const bostonSparseFixture = JSON.parse(await readFile(new URL('../src/data/private-mockups/boston-marathon-private-test.json', import.meta.url), 'utf8'));
+assert.equal(shouldRenderTrustSignalsBand(bostonSparseFixture), false);
+assert.deepEqual(substantiveTrustSignalsForRace(bostonSparseFixture).map((signal) => signal.id), []);
+assert(trustSignalsForRace(bostonSparseFixture).some((signal) => signal.id === 'official-registration-platform'));
+assert(trustSignalsForRace(bostonSparseFixture).some((signal) => signal.id === 'organizer'));
+assert(trustSignalsForRace(bostonSparseFixture).some((signal) => signal.id === 'source-backed'));
+
+const ashlandRichFixture = JSON.parse(await readFile(new URL('../src/data/private-mockups/ashland-city-half.json', import.meta.url), 'utf8'));
+assert.equal(shouldRenderTrustSignalsBand(ashlandRichFixture), true);
+assert(substantiveTrustSignalsForRace(ashlandRichFixture).length >= 3);
+
+const genericOnlyFixture = {
+  private_mockup: {
+    source_url: 'https://example.org/race',
+    provenance: {
+      items: [
+        { confidence: 'high' },
+        { confidence: 'high' },
+        { confidence: 'high' }
+      ],
+      source_confirmed_sections: ['runner_decision_checklist']
+    }
+  },
+  organization: { name: 'Example Organizer' },
+  registration: { url: 'https://example.org/register', platform: 'runsignup' }
+};
+assert.equal(trustSignalsForRace(genericOnlyFixture).length, 3);
+assert.deepEqual(substantiveTrustSignalsForRace(genericOnlyFixture), []);
+assert.equal(shouldRenderTrustSignalsBand(genericOnlyFixture), false);
 
 console.log('✓ private mockup generator regressions');

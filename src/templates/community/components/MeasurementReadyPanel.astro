@@ -1,0 +1,98 @@
+---
+import { registrationPlatformLabel } from "../../../shared/registration-platform-label.mjs";
+const { race } = Astro.props;
+const platform = registrationPlatformLabel(race.registration?.platform);
+---
+<section class="measurement-ready-panel reveal" data-measurement-ready-panel>
+  <div class="wrap measurement-ready-wrap">
+    <div class="measurement-ready-card">
+      <div>
+        <div class="kicker">Measurement-ready handoff</div>
+        <h2 class="sec-title">Registration intent can be separated from platform results.</h2>
+        <p class="lead">
+          StartLine prepares a `register_click` event for each outbound official-registration CTA, including its placement, platform, and link destination.
+        </p>
+      </div>
+      <div class="measurement-ready-points" aria-label="Measurement details">
+        <article>
+          <strong>What this page can report</strong>
+          <p>Outbound handoff intent: which registration CTA a visitor used, where it appeared, and that it sent them toward {platform}.</p>
+        </article>
+        <article>
+          <strong>What remains separate</strong>
+          <p>Completed registrations, payment, and confirmation happen inside the official registration platform unless that platform later provides reporting or an approved integration.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .measurement-ready-panel {
+    background: #fffaf1;
+    overflow-x: clip;
+  }
+
+  .measurement-ready-wrap {
+    padding-block: clamp(2.25rem, 5vw, 3.75rem);
+  }
+
+  .measurement-ready-card {
+    background: linear-gradient(135deg, rgba(107, 142, 111, 0.14), rgba(216, 155, 42, 0.16));
+    border: 1px solid rgba(65, 45, 32, 0.12);
+    border-radius: clamp(1.1rem, 3vw, 1.7rem);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    min-width: 0;
+    padding: clamp(1.35rem, 4vw, 2.2rem);
+  }
+
+  .measurement-ready-card .sec-title {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+
+  .measurement-ready-card .lead {
+    max-width: 64ch;
+  }
+
+  .measurement-ready-points {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: 1fr;
+  }
+
+  .measurement-ready-points article {
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(65, 45, 32, 0.11);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .measurement-ready-points strong {
+    color: var(--sage-deep, #3d5c3f);
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .measurement-ready-points p {
+    color: rgba(39, 29, 19, 0.76);
+    line-height: 1.55;
+    margin: 0.5rem 0 0;
+  }
+
+  @media (max-width: 860px) {
+    .measurement-ready-card {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .measurement-ready-wrap {
+      padding-inline: 0.85rem;
+    }
+  }
+</style>

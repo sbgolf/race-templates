@@ -2,6 +2,7 @@
 import { readFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { launchGateChecks } from '../src/shared/schema/race-config-schema.mjs';
+import { shouldRenderTrustSignalsBand } from '../src/shared/private-mockup-trust.mjs';
 
 const target = process.argv[2] || 'src/data/samples/hartwell-half.json';
 const forbiddenGrowthClaimPatterns = [
@@ -77,6 +78,9 @@ async function renderedOutputChecks() {
   const hasRunnerChecklist = html.includes('data-runner-decision-checklist');
   const hasHeroChecklistSecondary = html.includes("scrollToId('runner-checklist')") && html.includes('Review key race details');
   const hasRegistrationDecisionCard = html.includes('data-registration-decision-card');
+  const hasTrustSignalsBand = html.includes('data-trust-signals-band');
+  const shouldRenderTrustSignals = shouldRenderTrustSignalsBand(config);
+  const hasMeasurementReadyPanel = html.includes('data-measurement-ready-panel');
   const hasRegisterClickListener = html.includes("document.addEventListener('click', function (event)");
   const visibleText = html
     .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
@@ -84,6 +88,7 @@ async function renderedOutputChecks() {
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ');
   const rawPlatformCopyPattern = /happen on (?:runsignup|race_roster|raceroster|haku|letsdothis|lets_do_this|other)\b/;
+  const completedRegistrationMeasurementPattern = /\b(?:track|tracks|tracked|count|counts|counted|measure|measures|measured)\s+(?:completed\s+)?(?:registrations?|signups?|conversions?)\b/i;
   const claimCheckHtml = allowedNegatedGrowthClaimPhrases
     .reduce((content, pattern) => content.replace(pattern, 'no overpromising claims'), html);
   const forbiddenClaims = forbiddenGrowthClaimPatterns
@@ -176,10 +181,39 @@ async function renderedOutputChecks() {
         : (hasRegistrationDecisionCard ? ['Public rendered HTML contains private registration decision card.'] : [])
     },
     {
+      id: config.private_mockup?.route ? 'private-trust-signals-band-appropriate' : 'public-trust-signals-band-absent',
+      label: config.private_mockup?.route
+        ? 'Private Community page renders source-backed trust signals when enough substantive runner-facing facts exist'
+        : 'Public Community page does not render the private trust-signal band',
+      pass: config.private_mockup?.route ? (shouldRenderTrustSignals ? hasTrustSignalsBand : !hasTrustSignalsBand) : !hasTrustSignalsBand,
+      details: config.private_mockup?.route
+        ? [
+            ...(shouldRenderTrustSignals && !hasTrustSignalsBand ? ['Missing data-trust-signals-band despite enough substantive runner-facing trust facts.'] : []),
+            ...(!shouldRenderTrustSignals && hasTrustSignalsBand ? ['Rendered data-trust-signals-band without enough substantive runner-facing trust facts.'] : [])
+          ]
+        : (hasTrustSignalsBand ? ['Public rendered HTML contains private trust-signal band.'] : [])
+    },
+    {
+      id: config.private_mockup?.route ? 'private-measurement-ready-panel-present' : 'public-measurement-ready-panel-absent',
+      label: config.private_mockup?.route
+        ? 'Private Community page renders measurement-ready registration handoff panel'
+        : 'Public Community page does not render the private measurement-ready panel',
+      pass: config.private_mockup?.route ? hasMeasurementReadyPanel : !hasMeasurementReadyPanel,
+      details: config.private_mockup?.route && !hasMeasurementReadyPanel
+        ? ['Missing data-measurement-ready-panel in private rendered HTML.']
+        : (!config.private_mockup?.route && hasMeasurementReadyPanel ? ['Public rendered HTML contains private measurement-ready panel.'] : [])
+    },
+    {
       id: 'community-registration-platform-copy',
       label: 'Registration handoff copy uses prospect-facing platform labels',
       pass: !rawPlatformCopyPattern.test(visibleText),
       details: rawPlatformCopyPattern.test(visibleText) ? ['Rendered copy exposes a raw registration.platform key in “happen on …” prose.'] : []
+    },
+    {
+      id: 'community-no-completed-registration-measurement-copy',
+      label: 'Measurement copy does not claim StartLine tracks completed registrations/signups/conversions',
+      pass: !completedRegistrationMeasurementPattern.test(visibleText),
+      details: completedRegistrationMeasurementPattern.test(visibleText) ? ['Rendered copy says tracking/counting/measuring completed registrations, signups, or conversions.'] : []
     },
     {
       id: 'community-registration-placement-hierarchy',

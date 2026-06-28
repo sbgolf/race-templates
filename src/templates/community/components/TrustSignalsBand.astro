@@ -1,0 +1,116 @@
+---
+import { shouldRenderTrustSignalsBand, trustSignalsForRace } from "../../../shared/private-mockup-trust.mjs";
+const { race } = Astro.props;
+const signals = trustSignalsForRace(race);
+const shouldRender = shouldRenderTrustSignalsBand(race);
+---
+{shouldRender ? (
+  <section class="trust-signals-band reveal" id="trust-signals" data-trust-signals-band>
+    <div class="wrap trust-signals-wrap">
+      <div class="trust-signals-head">
+        <div>
+          <div class="kicker">Source-backed trust signals</div>
+          <h2 class="sec-title">Credibility runners can scan before the handoff.</h2>
+        </div>
+        <p class="lead">
+          StartLine surfaces only configured or source-backed facts here, so runners see confidence-building details without placeholder claims.
+        </p>
+      </div>
+      <div class="trust-signals-grid">
+        {signals.map((signal) => (
+          <article class="trust-signal-card" data-trust-signal-id={signal.id}>
+            <div class="trust-signal-label">{signal.label}</div>
+            <h3>{signal.value}</h3>
+            {signal.detail ? <p>{signal.detail}</p> : null}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+) : null}
+
+<style>
+  .trust-signals-band {
+    background: #f5eddf;
+    border-block: 1px solid rgba(65, 45, 32, 0.12);
+    overflow-x: clip;
+  }
+
+  .trust-signals-wrap {
+    padding-block: clamp(2.5rem, 6vw, 4.75rem);
+  }
+
+  .trust-signals-head {
+    align-items: end;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.62fr);
+  }
+
+  .trust-signals-head .lead {
+    margin: 0;
+  }
+
+  .trust-signals-grid {
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 1.5rem;
+  }
+
+  .trust-signal-card {
+    background: rgba(255, 250, 241, 0.92);
+    border: 1px solid rgba(65, 45, 32, 0.13);
+    border-radius: 1rem;
+    box-shadow: 0 18px 40px rgba(39, 29, 19, 0.08);
+    min-width: 0;
+    padding: 1rem;
+  }
+
+  .trust-signal-label {
+    color: var(--accent, #9f4a26);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .trust-signal-card h3 {
+    color: var(--ink, #241b15);
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 0.45rem;
+    overflow-wrap: anywhere;
+  }
+
+  .trust-signal-card p {
+    color: rgba(39, 29, 19, 0.7);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0.55rem 0 0;
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 920px) {
+    .trust-signals-head,
+    .trust-signals-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .trust-signals-head,
+    .trust-signals-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .trust-signals-wrap {
+      padding-inline: 0.85rem;
+    }
+  }
+</style>
