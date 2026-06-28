@@ -6,6 +6,9 @@ const registerUrl = race.registration?.url || '#entry';
 const registerLabel = race.registration?.cta_label || 'Register now';
 const eventDate = race.event?.date ? new Date(`${race.event.date}T12:00:00`) : null;
 const displayDate = eventDate ? eventDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) : 'Race day';
+const isPrivateMockup = Boolean(race.private_mockup?.generated);
+const editionLabel = race.identity?.edition || 'Community race';
+const heroEyebrow = isPrivateMockup ? race.event?.location : `${editionLabel} · ${race.event?.location}`;
 const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];
 const heroImage = race.identity?.hero_image?.src || race.private_mockup?.assets?.[0]?.src;
 const heroImageAlt = race.identity?.hero_image?.alt || `Race day image for ${race.identity?.name}`;
@@ -14,7 +17,7 @@ const heroImageAlt = race.identity?.hero_image?.alt || `Race day image for ${rac
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="reveal">
-      <div class="hero-eyebrow">{race.identity?.edition || 'Community race'} · {race.event?.location}</div>
+      <div class="hero-eyebrow">{heroEyebrow}</div>
       <h1>{race.identity?.tagline || race.identity?.name}</h1>
       <div class="hero-date">{displayDate}</div>
       <p class="lead">{race.seo?.meta_description}</p>

@@ -3,10 +3,10 @@
     "template": "community",
     "name": "6th ANNUAL ASHLAND CITY HALF-MARATHON",
     "tagline": "6th ANNUAL ASHLAND CITY HALF-MARATHON",
-    "edition": "Private StartLine concept",
+    "edition": "Ashland City, TN",
     "hero_image": {
       "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/1-d63e0778e1.png",
-      "alt": "Public image captured from nashvilletrackclub.org",
+      "alt": "Race image for 6th ANNUAL ASHLAND CITY HALF-MARATHON",
       "source": "https://nashvilletrackclub.org/wp-content/uploads/2021/02/Ashland-City_Half-Marathon_Graphic.png"
     },
     "colors": {
@@ -63,7 +63,7 @@
     }
   ],
   "seo": {
-    "meta_title": "6th ANNUAL ASHLAND CITY HALF-MARATHON — Private StartLine Concept",
+    "meta_title": "6th ANNUAL ASHLAND CITY HALF-MARATHON — Race Website Preview",
     "meta_description": "Nashville Track Club is excited to bring you the 6th annual Ashland City Half-Marathon on Saturday, March 7th, 2026 . This race is a USA Track & Field-sanctioned ev…"
   },
   "private_mockup": {
@@ -78,14 +78,14 @@
     "assets": [
       {
         "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/1-d63e0778e1.png",
-        "alt": "Public image captured from nashvilletrackclub.org",
-        "caption": "Public race-site image used for concept direction.",
+        "alt": "Race image for 6th ANNUAL ASHLAND CITY HALF-MARATHON",
+        "caption": "",
         "source": "https://nashvilletrackclub.org/wp-content/uploads/2021/02/Ashland-City_Half-Marathon_Graphic.png"
       },
       {
         "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/2-9799347d35.png",
-        "alt": "Public image captured from nashvilletrackclub.org",
-        "caption": "Additional public race-site visual reference.",
+        "alt": "Race image for 6th ANNUAL ASHLAND CITY HALF-MARATHON",
+        "caption": "",
         "source": "https://nashvilletrackclub.org/wp-content/uploads/2024/02/Riverbluff-Park-Map-AC-24.png"
       }
     ],

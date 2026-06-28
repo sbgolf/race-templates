@@ -287,7 +287,7 @@ function buildConfig(facts, assets, metaInfo) {
       template: metaInfo.template,
       name: facts.name.value,
       tagline: facts.name.value,
-      edition: 'Private StartLine concept',
+      edition: facts.location.value,
       ...(assets[0] ? { hero_image: { src: assets[0].src, alt: assets[0].alt, source: assets[0].source } } : {}),
       colors: { primary: '#C6643D', secondary: '#6B8E6F' }
     },
@@ -301,7 +301,7 @@ function buildConfig(facts, assets, metaInfo) {
     registration: { url: facts.registrationUrl.value, platform: 'other', cta_label: 'Visit official race site' },
     schedule: facts.startTime?.value ? [{ day: formatDateForCopy(facts.eventDate.value), name: `${distances[0].name} start`, time: facts.startTime.value, location: facts.location.value, applies_to_distances: [distances[0].id] }] : [],
     seo: {
-      meta_title: `${facts.name.value} — Private StartLine Concept`,
+      meta_title: `${facts.name.value} — Race Website Preview`,
       meta_description: description
     },
     analytics: undefined,
@@ -446,7 +446,7 @@ async function captureImages(urls, assetNamespace) {
       const ext = extensionFor(contentType, url);
       const name = `${assets.length + 1}-${createHash('sha1').update(url).digest('hex').slice(0, 10)}.${ext}`;
       await writeFile(path.join(assetDir, name), bytes);
-      assets.push({ src: `/mockups/${assetNamespace}/${name}`, alt: `Public image captured from ${new URL(url).hostname}`, caption: assets.length === 0 ? 'Public race-site image used for concept direction.' : 'Additional public race-site visual reference.', source: url });
+      assets.push({ src: `/mockups/${assetNamespace}/${name}`, alt: 'Race image', caption: '', source: url });
     } catch {
       // Keep generation resilient; missing/blocked images are recorded as an uncertainty.
     }
