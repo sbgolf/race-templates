@@ -282,13 +282,6 @@ function buildConfig(facts, assets, metaInfo) {
     return details;
   });
 
-  const stats = [
-    { value: 'Private', label: 'Noindex concept' },
-    { value: String(distances.length), label: distances.length === 1 ? 'Confirmed distance' : 'Confirmed distances' },
-    { value: facts.location.value, label: 'Source-listed location' }
-  ];
-  if (assets.length) stats.push({ value: String(assets.length), label: assets.length === 1 ? 'Public image' : 'Public images' });
-
   return removeUndefined({
     identity: {
       template: metaInfo.template,
@@ -304,7 +297,6 @@ function buildConfig(facts, assets, metaInfo) {
       venue: facts.location.value
     },
     organization: { name: sourceHost(metaInfo.sourceUrl) },
-    stats,
     distances,
     registration: { url: facts.registrationUrl.value, platform: 'other', cta_label: 'Visit official race site' },
     schedule: facts.startTime?.value ? [{ day: formatDateForCopy(facts.eventDate.value), name: `${distances[0].name} start`, time: facts.startTime.value, location: facts.location.value, applies_to_distances: [distances[0].id] }] : [],
@@ -323,7 +315,7 @@ function buildConfig(facts, assets, metaInfo) {
       route: `/private/mockups/${metaInfo.token}/`,
       template: metaInfo.template,
       assets,
-      provenance: buildPrivateMockupProvenance(facts, metaInfo, { hasStats: stats.length > 0, hasSchedule: Boolean(facts.startTime?.value) }),
+      provenance: buildPrivateMockupProvenance(facts, metaInfo, { hasSchedule: Boolean(facts.startTime?.value) }),
       confidence: summarizeConfidence(facts),
       uncertainty: {
         summary: facts.uncertainties.length ? 'Some source facts were not available with high confidence and were omitted from rendered sections.' : 'Required private mockup fields were source-confirmed during capture.',
@@ -339,7 +331,6 @@ function buildPrivateMockupProvenance(facts, metaInfo, rendered) {
     source_url: metaInfo.sourceUrl,
     captured_at: metaInfo.capturedAt,
     source_confirmed_sections: [
-      ...(rendered.hasStats ? ['stats'] : []),
       ...(rendered.hasSchedule ? ['schedule'] : [])
     ],
     source_confirmed_distance_ids: facts.distances.map((distance) => distance.id),

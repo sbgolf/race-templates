@@ -13,11 +13,12 @@ import FAQ from "./FAQ.astro";
 import Finale from "./Finale.astro";
 import Footer from "./Footer.astro";
 const { race } = Astro.props;
+const isPrivateMockup = Boolean(race.private_mockup);
 ---
 <Nav race={race} />
 <main id="main-content">
   <Hero race={race} />
-  <StatBar race={race} />
+  {!isPrivateMockup && <StatBar race={race} />}
   <CoursePicker race={race} />
   <Schedule race={race} />
   <Story race={race} />

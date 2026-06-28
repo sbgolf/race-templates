@@ -21,8 +21,6 @@ export function getStaticPaths() {
 }
 
 const { race } = Astro.props;
-const sourceUrl = race.private_mockup?.source_url;
-const capturedAt = race.private_mockup?.captured_at ? new Date(race.private_mockup.captured_at).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) : 'recently';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -37,12 +35,6 @@ const capturedAt = race.private_mockup?.captured_at ? new Date(race.private_mock
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%232A1F18'/%3E%3Cpath d='M10 22 L17 29 L30 11' stroke='%23FAF6EE' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
 </head>
 <body data-private-mockup="true">
-  <aside class="private-concept-banner" aria-label="Private concept preview notice">
-    <strong>Private StartLine concept preview</strong>
-    <span>Noindex/nofollow. Token-gated for Steve/internal review only — do not send this URL to a prospect until approved.</span>
-    {sourceUrl && <a href={sourceUrl} target="_blank" rel="noopener noreferrer nofollow">Source site</a>}
-    <small>Captured {capturedAt}</small>
-  </aside>
   <CommunityPreview race={race} />
 </body>
 </html>

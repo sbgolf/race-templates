@@ -22,24 +22,6 @@
   "organization": {
     "name": "nashvilletrackclub.org"
   },
-  "stats": [
-    {
-      "value": "Private",
-      "label": "Noindex concept"
-    },
-    {
-      "value": "1",
-      "label": "Confirmed distance"
-    },
-    {
-      "value": "Ashland City, TN",
-      "label": "Source-listed location"
-    },
-    {
-      "value": "2",
-      "label": "Public images"
-    }
-  ],
   "distances": [
     {
       "id": "half-marathon",
@@ -111,7 +93,6 @@
       "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
       "captured_at": "2026-06-28T00:38:36.195Z",
       "source_confirmed_sections": [
-        "stats",
         "schedule"
       ],
       "source_confirmed_distance_ids": [

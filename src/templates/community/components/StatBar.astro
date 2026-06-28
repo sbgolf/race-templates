@@ -1,15 +1,19 @@
 ---
 const { race } = Astro.props;
-const stats = race.stats || [
+const fallbackStats = [
   { value: String(race.distances?.length || 0), label: 'Distances' },
   { value: race.event?.location, label: 'Host community' },
   { value: race.identity?.edition || 'Annual', label: 'Race tradition' },
   { value: race.registration?.opens || 'Open', label: 'Registration' }
 ];
+const stats = (Array.isArray(race.stats) ? race.stats : fallbackStats)
+  .filter((stat) => stat?.value && stat?.label);
 ---
 
-<div class="statbar">
-  <div class="statbar-grid stagger">
-    {stats.map((stat) => <div class="stat"><div class="n">{stat.value}</div><div class="l">{stat.label}</div></div>)}
+{stats.length > 0 && (
+  <div class="statbar">
+    <div class="statbar-grid stagger">
+      {stats.map((stat) => <div class="stat"><div class="n">{stat.value}</div><div class="l">{stat.label}</div></div>)}
+    </div>
   </div>
-</div>
+)}

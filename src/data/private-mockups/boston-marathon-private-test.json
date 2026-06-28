@@ -22,20 +22,6 @@
   "organization": {
     "name": "Boston Marathon"
   },
-  "stats": [
-    {
-      "value": "Private",
-      "label": "Noindex concept"
-    },
-    {
-      "value": "1",
-      "label": "Confirmed distance"
-    },
-    {
-      "value": "2",
-      "label": "Public images"
-    }
-  ],
   "distances": [
     {
       "id": "marathon",
@@ -88,7 +74,7 @@
     "provenance": {
       "source_url": "https://www.baa.org/races/boston-marathon",
       "captured_at": "2026-06-27T19:58:43.344Z",
-      "source_confirmed_sections": ["stats"],
+      "source_confirmed_sections": [],
       "source_confirmed_distance_ids": ["marathon"],
       "items": [
         {
