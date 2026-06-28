@@ -51,8 +51,8 @@ for (const file of files) {
   }
   if (!html.includes('data-registration-decision-card')) errors.push('Private Community mockup is missing the registration decision card.');
   if (!html.includes('data-measurement-ready-panel')) errors.push('Private Community mockup is missing the measurement-ready panel.');
-  if (shouldRenderTrustSignals && !html.includes('data-trust-signals-band')) errors.push('Private Community mockup has enough trust facts but is missing the trust-signal band.');
-  if (!shouldRenderTrustSignals && html.includes('data-trust-signals-band')) errors.push('Private Community mockup renders the trust-signal band without enough configured/source-backed trust facts.');
+  if (shouldRenderTrustSignals && !html.includes('data-trust-signals-band')) errors.push('Private Community mockup has enough substantive runner-facing trust facts but is missing the trust-signal band.');
+  if (!shouldRenderTrustSignals && html.includes('data-trust-signals-band')) errors.push('Private Community mockup renders the trust-signal band without enough substantive runner-facing trust facts.');
   if (/happen on (?:runsignup|race_roster|raceroster|haku|letsdothis|lets_do_this|other)\b/.test(text)) {
     errors.push('Registration decision copy exposes a raw registration platform key instead of a prospect-facing label.');
   }

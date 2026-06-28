@@ -7,12 +7,24 @@ const TRUST_SIGNAL_LABELS = {
   'refunds-transfers': 'Policy clarity',
   swag: 'Runner value',
   awards: 'Awards / recognition',
-  'time-limit': 'Time limit clarity'
+  'time-limit': 'Time limit clarity',
+  'start-time': 'Schedule clarity',
+  price: 'Price clarity'
 };
 
 const TRUST_CHECKLIST_IDS = new Set(Object.keys(TRUST_SIGNAL_LABELS));
+const GENERIC_SUPPLEMENTAL_TRUST_SIGNAL_IDS = new Set([
+  'official-registration-platform',
+  'organizer',
+  'source-backed'
+]);
+const SUBSTANTIVE_TRUST_SIGNAL_ID_PATTERNS = [
+  /^certification-/,
+  /^profile-/,
+  /^aid-count-/
+];
 const PLACEHOLDER_PATTERN = /\b(?:TBD|TBA|unknown|coming soon|to be announced)\b/i;
-const MIN_TRUST_SIGNALS = 3;
+const MIN_SUBSTANTIVE_TRUST_SIGNALS = 3;
 
 export function trustSignalsForRace(race) {
   if (!race?.private_mockup) return [];
@@ -65,8 +77,18 @@ export function trustSignalsForRace(race) {
   return signals.slice(0, 8);
 }
 
+export function substantiveTrustSignalsForRace(race) {
+  return trustSignalsForRace(race).filter((signal) => isSubstantiveTrustSignal(signal));
+}
+
 export function shouldRenderTrustSignalsBand(race) {
-  return trustSignalsForRace(race).length >= MIN_TRUST_SIGNALS;
+  return substantiveTrustSignalsForRace(race).length >= MIN_SUBSTANTIVE_TRUST_SIGNALS;
+}
+
+function isSubstantiveTrustSignal(signal) {
+  const id = String(signal?.id || '');
+  if (!id || GENERIC_SUPPLEMENTAL_TRUST_SIGNAL_IDS.has(id)) return false;
+  return TRUST_CHECKLIST_IDS.has(id) || SUBSTANTIVE_TRUST_SIGNAL_ID_PATTERNS.some((pattern) => pattern.test(id));
 }
 
 function cleanTrustValue(value) {

@@ -183,13 +183,13 @@ async function renderedOutputChecks() {
     {
       id: config.private_mockup?.route ? 'private-trust-signals-band-appropriate' : 'public-trust-signals-band-absent',
       label: config.private_mockup?.route
-        ? 'Private Community page renders source-backed trust signals when enough facts exist'
+        ? 'Private Community page renders source-backed trust signals when enough substantive runner-facing facts exist'
         : 'Public Community page does not render the private trust-signal band',
       pass: config.private_mockup?.route ? (shouldRenderTrustSignals ? hasTrustSignalsBand : !hasTrustSignalsBand) : !hasTrustSignalsBand,
       details: config.private_mockup?.route
         ? [
-            ...(shouldRenderTrustSignals && !hasTrustSignalsBand ? ['Missing data-trust-signals-band despite enough configured/source-backed trust facts.'] : []),
-            ...(!shouldRenderTrustSignals && hasTrustSignalsBand ? ['Rendered data-trust-signals-band without enough configured/source-backed trust facts.'] : [])
+            ...(shouldRenderTrustSignals && !hasTrustSignalsBand ? ['Missing data-trust-signals-band despite enough substantive runner-facing trust facts.'] : []),
+            ...(!shouldRenderTrustSignals && hasTrustSignalsBand ? ['Rendered data-trust-signals-band without enough substantive runner-facing trust facts.'] : [])
           ]
         : (hasTrustSignalsBand ? ['Public rendered HTML contains private trust-signal band.'] : [])
     },
