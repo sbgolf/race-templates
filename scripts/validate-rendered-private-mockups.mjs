@@ -15,6 +15,9 @@ const visiblePlaceholderPatterns = [
   /\bcoming soon\b/i
 ];
 const visibleInternalChromePatterns = [
+  /\bSource page\b/i,
+  /\bsource config\b/i,
+  /\brace source\b/i,
   /\bPrimary source\b/i,
   /\bSource-confirmed\b/i,
   /\bsource-backed\b/i,

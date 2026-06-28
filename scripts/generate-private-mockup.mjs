@@ -843,6 +843,10 @@ function cleanSentence(value, max) {
 function normalizeDisplayCopy(value) {
   let text = String(value || '')
     .replace(/\s+/g, ' ')
+    .replace(/\blisted\s+by\s+the\s+source\s+page\b/gi, 'listed')
+    .replace(/\bnoted\s+by\s+the\s+source\s+page\b/gi, 'noted')
+    .replace(/\bfrom\s+the\s+race\s+source\b/gi, 'for this race')
+    .replace(/\bfrom\s+the\s+source\s+config\b/gi, 'for race day')
     .replace(/\s+([,.;:!?])/g, '$1')
     .replace(/([([{])\s+/g, '$1')
     .replace(/\s+([)\]}])/g, '$1')
