@@ -2,7 +2,12 @@
 const { race } = Astro.props;
 const capturedAssets = race.private_mockup?.assets || [];
 const galleryImages = race.gallery || race.gallery_images || [];
-const images = [...capturedAssets, ...galleryImages].filter((asset) => asset?.src);
+const images = [...capturedAssets, ...galleryImages].filter((asset) => asset?.src).slice(0, 9);
+const galleryCount = images.length;
+const desktopRows = Math.max(1, Math.ceil(galleryCount / 3));
+const tabletRows = galleryCount <= 1 ? 1 : galleryCount <= 3 ? 2 : galleryCount <= 5 ? 3 : 5;
+const mobileRows = galleryCount;
+const galleryStyle = `--gallery-rows-desktop: repeat(${desktopRows}, 280px); --gallery-rows-tablet: repeat(${tabletRows}, 240px); --gallery-rows-mobile: repeat(${mobileRows}, 200px);`;
 ---
 
 {images.length > 0 ? (
@@ -14,7 +19,7 @@ const images = [...capturedAssets, ...galleryImages].filter((asset) => asset?.sr
       <p class="lead">Images shown here come from configured race assets or public source images captured for this private concept.</p>
     </div>
 
-    <div class="gallery-grid reveal">
+    <div class="gallery-grid reveal" style={galleryStyle}>
       {images.map((asset, index) => (
       <figure class={`g-photo g${(index % 9) + 1}`}>
         <div class="ph-img mockup-photo-fill">
