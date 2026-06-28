@@ -1,5 +1,4 @@
 ---
-import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 import { privateValueNarrativeForRace } from "../../../shared/private-mockup-value.mjs";
 import { registrationPlatformLabel } from "../../../shared/registration-platform-label.mjs";
 const { race } = Astro.props;
@@ -23,15 +22,11 @@ const scheduleFacts = (race.schedule || [])
   .slice(0, 3)
   .map((item) => [item.time, item.name, item.location].filter(Boolean).join(' · '));
 const faqCount = (race.faqs || race.faq || []).filter((item) => item?.question && item?.answer).length;
-const sourceUrl = race.private_mockup?.source_url || race.private_mockup?.provenance?.source_url;
-const sourceLinkAttrs = sourceUrl && sourceUrl === race.registration?.url ? registerClickAttributes(race, 'private-source-registration') : {};
-const uncertaintySummary = race.private_mockup?.uncertainty?.summary;
-const sourceSections = race.private_mockup?.provenance?.source_confirmed_sections || [];
 const factGroups = [
   registrationFacts.length ? { title: 'Registration path', items: registrationFacts } : null,
-  distanceFacts.length ? { title: 'Source-backed distances', items: distanceFacts } : null,
+  distanceFacts.length ? { title: 'Race distances', items: distanceFacts } : null,
   scheduleFacts.length ? { title: 'Schedule signals', items: scheduleFacts } : null,
-  faqCount ? { title: 'Runner questions', items: [`${faqCount} source-backed FAQ${faqCount === 1 ? '' : 's'} rendered.`] } : null
+  faqCount ? { title: 'Runner questions', items: [`${faqCount} runner FAQ${faqCount === 1 ? '' : 's'} highlighted.`] } : null
 ].filter(Boolean);
 ---
 
@@ -39,7 +34,7 @@ const factGroups = [
 <section class="startline-value" id="startline-value" data-private-value-narrative>
   <div class="wrap startline-value-wrap">
     <div class="startline-value-hero reveal">
-      <div class="kicker">StartLine value wrapper</div>
+      <div class="kicker">StartLine website concept</div>
       <h2>{headline}</h2>
       <p>{intro}</p>
     </div>
@@ -62,7 +57,7 @@ const factGroups = [
 
     {factGroups.length ? (
       <div class="startline-value-facts reveal">
-        <span class="startline-value-label">Configured race facts used in this concept</span>
+        <span class="startline-value-label">Race details highlighted in this concept</span>
         <div class="startline-fact-grid">
           {factGroups.map((group) => (
             <article class="startline-fact-card">
@@ -75,13 +70,10 @@ const factGroups = [
     ) : null}
 
     <aside class="startline-source-note reveal">
-      <strong>Private concept note</strong>
+      <strong>Concept scope</strong>
       <p>
-        This private mockup is framed around registration click-through readiness and uses only configured or source-backed race details. It avoids overpromising registration outcomes and should be reviewed before prospect sharing.
+        This preview focuses on a clearer registration path, easier runner decision-making, and measurement-ready calls to action without promising registration outcomes.
       </p>
-      {sourceUrl ? <p>Primary source: <a href={sourceUrl} target="_blank" rel="noopener" {...sourceLinkAttrs}>View original source page</a></p> : null}
-      {sourceSections.length ? <p>Source-confirmed sections: {sourceSections.join(', ')}</p> : null}
-      {uncertaintySummary ? <p>Uncertainty: {uncertaintySummary}</p> : null}
     </aside>
   </div>
 </section>

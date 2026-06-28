@@ -134,7 +134,7 @@
         "id": "start-time",
         "label": "Gun time",
         "value": "7:00 AM",
-        "detail": "The marathon start time is configured from the race source.",
+        "detail": "The marathon start time is configured for this race.",
         "source_path": "distances[0].start_time",
         "source_url": "https://capitalmarathonrace.org/race-info",
         "applies_to_distance_ids": ["marathon"]

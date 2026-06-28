@@ -46,7 +46,7 @@ The generated route is intentionally under `/private/mockups/<access-token>/` an
 <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
 ```
 
-The page also shows a visible private-concept banner: internal/Steve review only, not prospect-ready until approved.
+Private pages should read like customer-facing website concepts while staying `noindex`: keep provenance, source URLs, confidence, and uncertainty metadata in JSON for validation/auditability, but do not render visible debug chrome such as “Primary source,” “Source-confirmed,” uncertainty summaries, or internal review instructions on the page.
 
 Community private mockups also render a private StartLine value narrative marked with `data-private-value-narrative`, when configured a private runner decision checklist marked with `data-runner-decision-checklist`, a private trust-signal band marked with `data-trust-signals-band` when enough source-backed trust facts exist, a private registration decision card marked with `data-registration-decision-card`, and a private measurement-ready panel marked with `data-measurement-ready-panel`. Public sample previews must not render these private blocks. Frame outcomes around a clearer registration path, registration click-throughs, registration intent, and measurement-ready tracking. `register_click` describes outbound official-registration handoff intent only; completed registrations, payment, and confirmation remain inside the official registration platform unless platform reporting or an approved integration is added. Do not use guaranteed growth claims such as guaranteed registrations, double signups, increased registrations, boosted registrations, or conversion lift.
 

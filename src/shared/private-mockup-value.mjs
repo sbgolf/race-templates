@@ -24,7 +24,7 @@ const BASE_VALUE_COPY = Object.freeze({
   intro: 'StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.',
   improved: [
     'Reduced runner friction by placing key race facts and the official registration path in predictable sections.',
-    'Surfaced trust signals such as source-backed event details, distances, schedule items, FAQs, and provenance when available.',
+    'Surfaced trust signals such as event details, distances, schedule items, and FAQs when available.',
     'Made registration CTAs easier to find across mobile and desktop, with measurement-ready registration-click tracking attributes.'
   ],
   paid_includes: [

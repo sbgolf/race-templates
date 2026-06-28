@@ -11,9 +11,9 @@ const registrationLabel = race.registration?.cta_label || 'Register now';
 const platformLabel = registrationPlatformLabel(race.registration?.platform);
 const privateValue = privateValueNarrativeForRace(race, {
   headline: 'A premium race story with the registration path pulled into focus.',
-  intro: 'This private mockup keeps the cinematic destination race language while making source-backed runner decisions, trust signals, and registration clicks easier to see.',
+  intro: 'This concept keeps the cinematic destination race language while making runner decisions, trust signals, and registration clicks easier to see.',
   improved: [
-    'Source-backed race details sit before registration decisions.',
+    'Clear race details sit before registration decisions.',
     'Registration calls-to-action use distinct measurement-ready placements.',
     'Private-only proof modules stay out of the public destination preview.'
   ]
@@ -121,7 +121,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
   <div class="haze"></div>
 
   <div class="hero-inner">
-    <span class="eyebrow">{isPrivateMockup ? 'Private StartLine concept · destination major' : 'Abbott-track candidate · Pacific Northwest'}</span>
+    <span class="eyebrow">{isPrivateMockup ? 'Private race preview · destination major' : 'Abbott-track candidate · Pacific Northwest'}</span>
     <h1>{raceName}<span class="thin">{raceTagline}</span></h1>
     <div class="hero-meta">
       <span><span class="dot">●</span> {raceDateLabel}</span>
@@ -164,7 +164,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
   <section class="private-value major-private" data-private-value-narrative>
     <div class="wrap private-grid">
       <div>
-        <div class="kicker">StartLine private concept</div>
+        <div class="kicker">Race website preview</div>
         <h2 class="sec-title">{privateValue.headline}</h2>
       </div>
       <div class="private-panel">
@@ -228,7 +228,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
 {showTrustSignalsBand && (
   <section class="trust-band major-private" data-trust-signals-band>
     <div class="wrap">
-      <div class="kicker">Source-backed trust signals</div>
+      <div class="kicker">Runner trust signals</div>
       <div class="trust-grid">
         {trustSignals.map((signal) => (
           <article>
@@ -364,9 +364,9 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
 
     <div class="bq-grid">
       <div class="bq-note reveal">
-        <h3>{isPrivateMockup ? 'Source-backed course facts' : 'Why runners chase a BQ here'}</h3>
+        <h3>{isPrivateMockup ? 'Course facts' : 'Why runners chase a BQ here'}</h3>
         {isPrivateMockup ? <p>{sourceCourseFacts}</p> : <><p>The net-downhill profile plays to even-paced running, the September date sits in the sweet spot of fall fitness, and the small, fast field means clean lines from gun to tape.</p><p>Live, chip-verified splits post to your B.A.A.-ready certificate within 24 hours of finishing — no waiting, no manual submission.</p></>}
-        <span class="bq-badge">✓ {isPrivateMockup ? 'Source-listed course certification' : 'B.A.A. Qualifier · Certified Course'}</span>
+        <span class="bq-badge">✓ {isPrivateMockup ? 'Course certification listed' : 'B.A.A. Qualifier · Certified Course'}</span>
       </div>
 
       {!isPrivateMockup && <div class="reveal">
@@ -394,7 +394,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Secure Your Place</div>
-      <h2 class="sec-title">{isPrivateMockup ? 'Registration options from the source config.' : 'Three ways through the start line.'}</h2>
+      <h2 class="sec-title">{isPrivateMockup ? 'Registration options for race day.' : 'Three ways through the start line.'}</h2>
     </div>
 
     <div class="entry-grid">
@@ -460,7 +460,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Race Weekend</div>
-      <h2 class="sec-title">{isPrivateMockup ? 'Source-backed race-weekend schedule.' : 'Three days of festival, one perfect morning.'}</h2>
+      <h2 class="sec-title">{isPrivateMockup ? 'Race-weekend schedule.' : 'Three days of festival, one perfect morning.'}</h2>
     </div>
     <div class="timeline">
       {isPrivateMockup ? scheduleItems.map((item) => <div class="tl-item reveal"><div class="tl-day">{item.day}</div><h3>{item.name}</h3>{item.location && <p>{item.location}</p>}<span class="tl-time">{item.time}</span></div>) : <>
@@ -560,7 +560,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
     {!isPrivateMockup && <div><h2 class="foot-title">Connect</h2><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>}
   </div>
   <div class="foot-bottom">
-    <span>© 2026 {raceName}. {isPrivateMockup ? 'Private StartLine concept.' : 'A demo concept site.'}</span>
+    <span>© 2026 {raceName}. {isPrivateMockup ? 'Private race preview.' : 'A demo concept site.'}</span>
     <span>{isPrivateMockup ? 'Built for private review.' : 'Built as a proof of concept.'}</span>
   </div>
 </footer>

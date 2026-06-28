@@ -14,6 +14,27 @@ const visiblePlaceholderPatterns = [
   /\bunknown\b/i,
   /\bcoming soon\b/i
 ];
+const visibleInternalChromePatterns = [
+  /\bSource page\b/i,
+  /\bsource config\b/i,
+  /\brace source\b/i,
+  /\bPrimary source\b/i,
+  /\bSource-confirmed\b/i,
+  /\bsource-backed\b/i,
+  /\bprovenance\b/i,
+  /\bUncertainty\b/i,
+  /\bPrivate concept note\b/i,
+  /\bPrivate StartLine concept\b/i,
+  /\bStartLine private concept\b/i,
+  /\bPrivate StartLine race website concept preview\b/i,
+  /\bStartLine value wrapper\b/i,
+  /\bshould be reviewed before prospect sharing\b/i
+];
+const customerFacingInternalChromePatterns = [
+  /\bPrivate StartLine concept\b/i,
+  /\bStartLine private concept\b/i,
+  /\bPrivate StartLine race website concept preview\b/i
+];
 const punctuationArtifactPatterns = [
   /\b20\d{2}\s+\./,
   /\b\d+\s+hours?\s+\./i,
@@ -35,6 +56,7 @@ if (!files.length) {
 for (const file of files) {
   const html = await readFile(file, 'utf8');
   const text = visibleText(html);
+  const customerFacingCopy = customerFacingCopySurface(html);
   const errors = [];
   const registrationUrl = registrationUrlForRenderedFile(file);
   const config = configForRenderedFile(file);
@@ -43,6 +65,12 @@ for (const file of files) {
   if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible text exposes a raw URL or bare domain.');
   for (const pattern of visiblePlaceholderPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains placeholder copy "${pattern.source}".`);
+  }
+  for (const pattern of visibleInternalChromePatterns) {
+    if (pattern.test(text)) errors.push(`Rendered visible text contains internal/source chrome "${pattern.source}".`);
+  }
+  for (const pattern of customerFacingInternalChromePatterns) {
+    if (pattern.test(customerFacingCopy)) errors.push(`Rendered customer-facing HTML contains internal/source chrome "${pattern.source}".`);
   }
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);
@@ -192,6 +220,14 @@ function visibleText(html) {
     .replace(/&#39;/g, "'")
     .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
     .replace(/&#x([a-f0-9]+);/gi, (_, code) => String.fromCharCode(parseInt(code, 16)))
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function customerFacingCopySurface(html) {
+  return String(html || '')
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
