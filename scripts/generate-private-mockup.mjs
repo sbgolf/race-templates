@@ -91,6 +91,7 @@ function extractFacts(html, baseUrl) {
   const h1 = fact(decode(tagText(html, 'h1')), 'h1', 'high');
   const title = fact(decode(meta(html, 'property', 'og:title') || meta(html, 'name', 'twitter:title') || tagText(html, 'title')), 'page metadata/title', 'medium');
   const visibleText = htmlToText(html);
+  const sourceSections = extractSourceSections(visibleText);
   const description = extractDescription(html, jsonLd, visibleText);
   const name = selectName(h1, title);
   const eventDate = normalizeDate(jsonLd.startDate)
@@ -106,6 +107,8 @@ function extractFacts(html, baseUrl) {
   const certification = extractCertification(visibleText);
   const aidStations = extractAidStations(visibleText);
   const courseProfile = extractCourseProfile(visibleText);
+  const scheduleItems = extractScheduleItems(sourceSections, { eventDate, location, distances });
+  const faqs = extractFaqs(sourceSections);
   const images = [
     meta(html, 'property', 'og:image'),
     meta(html, 'name', 'twitter:image'),
@@ -125,17 +128,105 @@ function extractFacts(html, baseUrl) {
     certification,
     aidStations,
     courseProfile,
+    sourceSections,
+    scheduleItems,
+    faqs,
     images: uniqueFacts(images).slice(0, 12),
     uncertainties: buildUncertainties({ eventDate, location, startTime, distances, price, certification, aidStations, courseProfile, images })
   };
 }
 
 function extractDescription(html, jsonLd, visibleText) {
-  const value = decode(meta(html, 'name', 'description') || meta(html, 'property', 'og:description') || jsonLd.description || '');
-  if (value) return fact(value, 'page description metadata', 'medium');
-  const about = visibleText.match(/ABOUT\s+(.{80,500}?)(?:\s+REGISTRATION\b|\s+COURSE\b|\s+AID\b)/i)?.[1];
+  const about = visibleText.match(/ABOUT\s+(.{80,900}?)(?:\s+REGISTRATION\b|\s+PACKET PICK-UP\b)/i)?.[1];
   if (about) return fact(about.trim(), 'ABOUT section text', 'medium');
+  const value = decode(meta(html, 'name', 'description') || meta(html, 'property', 'og:description') || jsonLd.description || '');
+  if (value && !looksTruncated(value)) return fact(value, 'page description metadata', 'medium');
   return null;
+}
+
+function extractSourceSections(text) {
+  const markers = [
+    'ABOUT',
+    'REGISTRATION',
+    'PACKET PICK-UP',
+    'RACE DAY SCHEDULE',
+    'PARKING',
+    'COURSE',
+    'AID STATIONS / FLUIDS',
+    'ELITE ATHLETES',
+    'TIMING/RESULTS',
+    'AWARDS & PRIZE MONEY',
+    'Post-Race Awards & Celebration',
+    'ALL-TIME TOP 10 LISTS'
+  ];
+  const sections = {};
+  markers.forEach((marker) => {
+    const start = text.search(new RegExp(`\\b${escapeRegExp(marker)}\\b`));
+    if (start < 0) return;
+    const rest = text.slice(start + marker.length);
+    const nextMarkers = markers.filter((candidate) => candidate !== marker).map(escapeRegExp).join('|');
+    const next = rest.search(new RegExp(`\\b(?:${nextMarkers})\\b`));
+    const sectionText = (next >= 0 ? rest.slice(0, next) : rest).replace(/\s+/g, ' ').trim();
+    const key = marker.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+    if (sectionText) sections[key] = fact(sectionText, `${marker} section text`, 'medium');
+  });
+  return sections;
+}
+
+function extractScheduleItems(sections, { eventDate, location, distances }) {
+  const items = [];
+  const raceDay = eventDate?.value ? formatDateForCopy(eventDate.value) : 'Race Day';
+  const distanceIds = distances.map((distance) => distance.id);
+  const add = (day, name, time, itemLocation, source) => {
+    if (!time || items.some((item) => item.day === day && item.name === name && item.time === time)) return;
+    items.push(removeUndefined({ day, name, time: formatTimeLabel(time), location: itemLocation, applies_to_distances: distanceIds, provenance: source }));
+  };
+
+  const packet = sections.packet_pick_up?.value || '';
+  const packetMatch = packet.match(/at\s+(.+?)\s+from\s+([0-9]{1,2}(?::[0-9]{2})?\s*(?:am|pm))\s*[–-]\s*([0-9]{1,2}(?::[0-9]{2})?\s*(?:am|pm))\s+on\s+([^.]*)/i);
+  if (packetMatch) {
+    add(packetMatch[4].trim().replace(/\s+/g, ' '), 'Packet pick-up', `${packetMatch[2]} – ${packetMatch[3]}`, packetMatch[1].trim(), sections.packet_pick_up);
+  }
+
+  const schedule = sections.race_day_schedule?.value || '';
+  Array.from(schedule.matchAll(/([0-9]{1,2}:[0-9]{2}\s*(?:am|pm))\s*[–-]\s*([^0-9]+?)(?=\s+[0-9]{1,2}:[0-9]{2}\s*(?:am|pm)\s*[–-]|$)/gi)).forEach((match) => {
+    const name = match[2].replace(/\s+/g, ' ').trim().replace(/\s+Free parking.*$/i, '');
+    if (/\bTBC\b/i.test(name)) return;
+    add(raceDay, name, match[1], location?.value, sections.race_day_schedule);
+  });
+  return items;
+}
+
+function extractFaqs(sections) {
+  const faqs = [];
+  const add = (question, answer, source) => {
+    const cleaned = cleanSentence(answer, 360);
+    if (cleaned && !faqs.some((item) => item.question === question)) {
+      faqs.push({ question, answer: cleaned, provenance: source });
+    }
+  };
+
+  const registration = sections.registration?.value || '';
+  const refund = registration.match(/In the event that you are unable[^.]+\.\s*However,[^.]+\./i)?.[0];
+  if (refund) add('What is the refund or transfer policy?', refund, sections.registration);
+  const swag = registration.match(/Each participant[^.]+\.\s*All finishers[^.]+\./i)?.[0];
+  if (swag) add('What do participants receive?', swag, sections.registration);
+
+  const packet = sections.packet_pick_up?.value || '';
+  if (packet) add('Where is packet pick-up?', packet, sections.packet_pick_up);
+
+  const course = sections.course?.value || '';
+  const limit = course.match(/the course is only open for 3 hours[^.]+\./i)?.[0];
+  if (limit) add('Is there a course time limit?', limit, sections.course);
+
+  const aid = sections.aid_stations_fluids?.value || '';
+  const aidSummary = aid.match(/We will have crewed aid stations[^.]+\.\s*We will NOT be handing out gels[^.]+\./i)?.[0];
+  if (aidSummary) add('What is available at aid stations?', aidSummary, sections.aid_stations_fluids);
+
+  const awards = sections.awards_prize_money?.value || '';
+  const awardsSummary = awards.match(/Prizing is as follows:.{0,260}?Age Groups:[^.]+\./i)?.[0];
+  if (awardsSummary) add('Are awards or prize money listed?', awardsSummary, sections.awards_prize_money);
+  return faqs.slice(0, 6);
 }
 
 function selectName(h1, title) {
@@ -255,8 +346,21 @@ function buildUncertainties(facts) {
   return uncertainties;
 }
 
+function buildStoryParagraphs(facts) {
+  const sections = facts.sourceSections || {};
+  return unique([
+    facts.description?.value,
+    sections.registration?.value ? cleanSentence(sections.registration.value, 520) : '',
+    sections.course?.value ? cleanSentence(sections.course.value, 520) : '',
+    sections.aid_stations_fluids?.value ? cleanSentence(sections.aid_stations_fluids.value, 420) : '',
+    sections.post_race_awards_celebration?.value ? cleanSentence(sections.post_race_awards_celebration.value, 360) : ''
+  ].filter(Boolean).map((item) => item.replace(/\s+/g, ' ').trim())).slice(0, 5);
+}
+
 function buildConfig(facts, assets, metaInfo) {
-  const description = truncate(facts.description?.value || `${facts.name.value} is listed for ${formatDateForCopy(facts.eventDate.value)} in ${facts.location.value}.`, 165);
+  const overview = facts.description?.value || `${facts.name.value} is listed for ${formatDateForCopy(facts.eventDate.value)} in ${facts.location.value}.`;
+  const description = cleanSentence(overview, 165);
+  const storyParagraphs = buildStoryParagraphs(facts);
   const distances = facts.distances.map((distance) => {
     const details = {
       id: distance.id,
@@ -299,7 +403,14 @@ function buildConfig(facts, assets, metaInfo) {
     organization: { name: sourceHost(metaInfo.sourceUrl) },
     distances,
     registration: { url: facts.registrationUrl.value, platform: 'other', cta_label: 'Visit official race site' },
-    schedule: facts.startTime?.value ? [{ day: formatDateForCopy(facts.eventDate.value), name: `${distances[0].name} start`, time: facts.startTime.value, location: facts.location.value, applies_to_distances: [distances[0].id] }] : [],
+    story: storyParagraphs.length ? {
+      kicker: 'Race overview',
+      title: `About ${facts.name.value}`,
+      paragraphs: storyParagraphs,
+      ...(assets[1] ? { image: { src: assets[1].src, alt: `Course or race image for ${facts.name.value}`, source: assets[1].source } } : {})
+    } : undefined,
+    schedule: facts.scheduleItems.length ? facts.scheduleItems.map(({ provenance, ...item }) => item) : (facts.startTime?.value ? [{ day: formatDateForCopy(facts.eventDate.value), name: `${distances[0].name} start`, time: facts.startTime.value, location: facts.location.value, applies_to_distances: [distances[0].id] }] : []),
+    faqs: facts.faqs.map(({ provenance, ...item }) => item),
     seo: {
       meta_title: `${facts.name.value} — Race Website Preview`,
       meta_description: description
@@ -331,7 +442,8 @@ function buildPrivateMockupProvenance(facts, metaInfo, rendered) {
     source_url: metaInfo.sourceUrl,
     captured_at: metaInfo.capturedAt,
     source_confirmed_sections: [
-      ...(rendered.hasSchedule ? ['schedule'] : [])
+      ...(rendered.hasSchedule ? ['schedule'] : []),
+      ...(facts.faqs.length ? ['faqs'] : [])
     ],
     source_confirmed_distance_ids: facts.distances.map((distance) => distance.id),
     items: collectProvenance(facts)
@@ -347,6 +459,10 @@ function collectProvenance(facts) {
   add('event.date', facts.eventDate);
   add('event.location', facts.location);
   add('seo.meta_description', facts.description);
+  add('story.paragraphs', facts.description);
+  add('story.paragraphs', facts.sourceSections?.registration);
+  add('story.paragraphs', facts.sourceSections?.course);
+  add('story.paragraphs', facts.sourceSections?.aid_stations_fluids);
   add('registration.url', facts.registrationUrl);
   add('distances[].start_time', facts.startTime);
   add('distances[].price', facts.price);
@@ -354,6 +470,8 @@ function collectProvenance(facts) {
   add('distances[].aid_stations', facts.aidStations);
   add('distances[].profile', facts.courseProfile);
   facts.distances.forEach((distance, index) => add(`distances[${index}]`, distance.provenance));
+  facts.scheduleItems.forEach((item, index) => add(`schedule[${index}]`, item.provenance));
+  facts.faqs.forEach((item, index) => add(`faqs[${index}]`, item.provenance));
   facts.images.forEach((image, index) => add(`private_mockup.assets[${index}]`, image));
   return items;
 }
@@ -532,4 +650,24 @@ function escapeRegExp(value) {
 function truncate(value, max) {
   const text = String(value || '').replace(/\s+/g, ' ').trim();
   return text.length <= max ? text : `${text.slice(0, max - 1).trim()}…`;
+}
+
+function looksTruncated(value) {
+  return /(?:…|\.\.\.)\s*$/.test(String(value || '').trim());
+}
+
+function cleanSentence(value, max) {
+  const text = String(value || '').replace(/\s+/g, ' ').trim();
+  if (text.length <= max) return text;
+  const clipped = text.slice(0, max + 1);
+  const sentenceEnd = Math.max(clipped.lastIndexOf('.'), clipped.lastIndexOf('!'), clipped.lastIndexOf('?'));
+  if (sentenceEnd >= Math.floor(max * 0.55)) return clipped.slice(0, sentenceEnd + 1).trim();
+  const comma = clipped.lastIndexOf(',');
+  const space = clipped.lastIndexOf(' ');
+  const cut = Math.max(comma, space);
+  return clipped.slice(0, cut > 0 ? cut : max).trim();
+}
+
+function formatTimeLabel(value) {
+  return String(value || '').replace(/\b(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b/gi, (_, hour, minute = '00', period) => `${Number(hour)}:${minute} ${period.toUpperCase()}`);
 }
