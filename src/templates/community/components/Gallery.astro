@@ -3,6 +3,7 @@ const { race } = Astro.props;
 const capturedAssets = race.private_mockup?.assets || [];
 const galleryImages = race.gallery || race.gallery_images || [];
 const images = [...capturedAssets, ...galleryImages].filter((asset) => asset?.src).slice(0, 9);
+const isPrivateMockup = Boolean(race.private_mockup?.generated);
 const galleryCount = images.length;
 const desktopRows = Math.max(1, Math.ceil(galleryCount / 3));
 const tabletRows = galleryCount <= 1 ? 1 : galleryCount <= 3 ? 2 : galleryCount <= 5 ? 3 : 5;
@@ -16,7 +17,7 @@ const galleryStyle = `--gallery-rows-desktop: repeat(${desktopRows}, 280px); --g
     <div class="gallery-head reveal">
       <div class="kicker">Race Day, captured</div>
       <h2 class="sec-title">What it actually <em>looks like</em>.</h2>
-      <p class="lead">Images shown here come from configured race assets or public source images captured for this private concept.</p>
+      <p class="lead">{isPrivateMockup ? 'A quick look at the race visuals and course materials.' : 'Images shown here come from configured race assets.'}</p>
     </div>
 
     <div class="gallery-grid reveal" style={galleryStyle}>

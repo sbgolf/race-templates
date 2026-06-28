@@ -17,7 +17,7 @@ const raceLinks = [
   hasVolunteer ? { href: '#volunteer', label: 'Volunteer' } : null
 ].filter(Boolean);
 const aboutLinks = [
-  hasStory ? { href: '#story', label: race.private_mockup?.generated ? 'Source-backed details' : 'Our Race' } : null,
+  hasStory ? { href: '#story', label: race.private_mockup?.generated ? 'Race overview' : 'Our Race' } : null,
   hasGallery ? { href: '#gallery', label: 'Gallery' } : null,
   hasSponsors ? { href: '#sponsors', label: 'Sponsors' } : null,
   hasFaq ? { href: '#faq', label: 'FAQ' } : null
@@ -38,10 +38,10 @@ const aboutLinks = [
     </div>
     <div><div class="foot-heading">Race</div><ul>{raceLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div>
     {aboutLinks.length ? <div><div class="foot-heading">About</div><ul>{aboutLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div> : null}
-    <div><div class="foot-heading">Official site</div><ul><li><a href={registerUrl} target="_blank" rel="noopener">{registerLabel}</a></li>{race.private_mockup?.source_url ? <li><a href={race.private_mockup.source_url} target="_blank" rel="noopener">Source page</a></li> : null}</ul></div>
+    <div><div class="foot-heading">Official site</div><ul><li><a href={registerUrl} target="_blank" rel="noopener">{registerLabel}</a></li></ul></div>
   </div>
   <div class="foot-bottom">
     <span>© {year} {race.identity?.name}{race.organization?.name ? ` · A program of ${race.organization.name}` : ''}</span>
-    <span>{race.private_mockup?.generated ? 'Private StartLine concept preview' : 'Powered by StartLine Sites'}</span>
+    <span>Powered by StartLine Sites</span>
   </div>
 </footer>

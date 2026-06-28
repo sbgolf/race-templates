@@ -3,10 +3,10 @@
     "template": "community",
     "name": "Boston Marathon",
     "tagline": "Boston Marathon",
-    "edition": "Private StartLine concept",
+    "edition": "baa.org",
     "hero_image": {
       "src": "/mockups/35a001229594dde99d184e2ab18b50e9/1-a40629fb41.png",
-      "alt": "Public image captured from www.baa.org",
+      "alt": "Race image for Boston Marathon",
       "source": "https://www.baa.org/wp-content/uploads/2025/10/BAALogo-1.png"
     },
     "colors": {
@@ -22,20 +22,6 @@
   "organization": {
     "name": "Boston Marathon"
   },
-  "stats": [
-    {
-      "value": "Private",
-      "label": "Noindex concept"
-    },
-    {
-      "value": "1",
-      "label": "Confirmed distance"
-    },
-    {
-      "value": "2",
-      "label": "Public images"
-    }
-  ],
   "distances": [
     {
       "id": "marathon",
@@ -59,7 +45,7 @@
     "cta_label": "Visit official race site"
   },
   "seo": {
-    "meta_title": "Boston Marathon — Private StartLine Concept",
+    "meta_title": "Boston Marathon — Race Website Preview",
     "meta_description": "A private StartLine concept preview generated from public Boston Marathon race information."
   },
   "private_mockup": {
@@ -74,22 +60,24 @@
     "assets": [
       {
         "src": "/mockups/35a001229594dde99d184e2ab18b50e9/1-a40629fb41.png",
-        "alt": "Public image captured from www.baa.org",
-        "caption": "Public race-site image used for concept direction.",
+        "alt": "Race image for Boston Marathon",
+        "caption": "",
         "source": "https://www.baa.org/wp-content/uploads/2025/10/BAALogo-1.png"
       },
       {
         "src": "/mockups/35a001229594dde99d184e2ab18b50e9/2-ca09e38448.png",
-        "alt": "Public image captured from www.baa.org",
-        "caption": "Additional public race-site visual reference.",
+        "alt": "Race image for Boston Marathon",
+        "caption": "",
         "source": "https://www.baa.org/wp-content/uploads/2025/11/BAALogo-1.png"
       }
     ],
     "provenance": {
       "source_url": "https://www.baa.org/races/boston-marathon",
       "captured_at": "2026-06-27T19:58:43.344Z",
-      "source_confirmed_sections": ["stats"],
-      "source_confirmed_distance_ids": ["marathon"],
+      "source_confirmed_sections": [],
+      "source_confirmed_distance_ids": [
+        "marathon"
+      ],
       "items": [
         {
           "path": "identity.name",

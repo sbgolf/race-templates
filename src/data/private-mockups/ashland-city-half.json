@@ -3,10 +3,10 @@
     "template": "community",
     "name": "6th ANNUAL ASHLAND CITY HALF-MARATHON",
     "tagline": "6th ANNUAL ASHLAND CITY HALF-MARATHON",
-    "edition": "Private StartLine concept",
+    "edition": "Ashland City, TN",
     "hero_image": {
       "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/1-d63e0778e1.png",
-      "alt": "Public image captured from nashvilletrackclub.org",
+      "alt": "Race image",
       "source": "https://nashvilletrackclub.org/wp-content/uploads/2021/02/Ashland-City_Half-Marathon_Graphic.png"
     },
     "colors": {
@@ -22,24 +22,6 @@
   "organization": {
     "name": "nashvilletrackclub.org"
   },
-  "stats": [
-    {
-      "value": "Private",
-      "label": "Noindex concept"
-    },
-    {
-      "value": "1",
-      "label": "Confirmed distance"
-    },
-    {
-      "value": "Ashland City, TN",
-      "label": "Source-listed location"
-    },
-    {
-      "value": "2",
-      "label": "Public images"
-    }
-  ],
   "distances": [
     {
       "id": "half-marathon",
@@ -69,10 +51,53 @@
     "platform": "other",
     "cta_label": "Visit official race site"
   },
+  "story": {
+    "kicker": "Race overview",
+    "title": "About 6th ANNUAL ASHLAND CITY HALF-MARATHON",
+    "paragraphs": [
+      "Nashville Track Club is excited to bring you the 6th annual Ashland City Half-Marathon on Saturday, March 7th, 2026 . This race is a USA Track & Field-sanctioned event. It will take place on a fast, flat, USATF-certified course that is absolutely gorgeous, starting and finishing right next to the Cumberland River at Riverbluff Park in Ashland City, TN.",
+      "Online registration is at runsignup.com . Entry fee is $60 until 11:59pm Wednesday December 31, 2025. $70 until 11:59pm Saturday, January 31. After that, it will increase to $80. Online Registration is open until 07:00am on Saturday, March 7th (race day) . You may also enter in-person on race day between 5:45am and 7:15am. Each participant will receive an incredibly soft Next Level race T-shirt and more swag to be announced as sponsorships firm up. All finishers will receive a medal.",
+      "In 2022, the course had to be redesigned, re-measured, and re-certified due to construction on Tennessee Waltz Parkway east of Riverbluff Park. The 2025 course is identical to the one used the last three years – beautiful, flat, and very fast (see links below). The course’s USATF certification number is TN22002MS . This course is eligible for Tennessee single-age state records . https://www.strava.com/routes/2926228840853429002 https://www.runningahead.com/maps/c388a7bfd01a4a9bb12b686eb6d79b74?",
+      "We will have crewed aid stations – offering both Water and Gatorade – at the following points on the course: 3.3 miles, 4.4 miles, 7.3 miles, and 9.3 miles, and 11.5 miles. We will NOT be handing out gels, so if you plan to use gels, please bring your own. In the unlikely occurrence of a medical emergency during the event, each aid station will have a direct line to EMS.",
+      "We will conduct our awards and post-race celebration at Sidelines Bar & Grill at 11:00am (they will open early for us at 10:30am). All registered participants will receive one drink ticket for a complimentary beverage upon arrival – you must show your bib number to receive your drink ticket."
+    ],
+    "image": {
+      "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/2-9799347d35.png",
+      "alt": "Course or race image for 6th ANNUAL ASHLAND CITY HALF-MARATHON",
+      "source": "https://nashvilletrackclub.org/wp-content/uploads/2024/02/Riverbluff-Park-Map-AC-24.png"
+    }
+  },
   "schedule": [
     {
+      "day": "Friday, March 6th",
+      "name": "Packet pick-up",
+      "time": "11:00 AM – 6:00 PM",
+      "location": "Nashville Running Company at 820 Woodland St, Nashville, TN 37206",
+      "applies_to_distances": [
+        "half-marathon"
+      ]
+    },
+    {
       "day": "Saturday, March 7, 2026",
-      "name": "Half Marathon start",
+      "name": "In-person registration and packet pick-up opens",
+      "time": "5:45 AM",
+      "location": "Ashland City, TN",
+      "applies_to_distances": [
+        "half-marathon"
+      ]
+    },
+    {
+      "day": "Saturday, March 7, 2026",
+      "name": "In-person registration and packet pick-up closes",
+      "time": "7:15 AM",
+      "location": "Ashland City, TN",
+      "applies_to_distances": [
+        "half-marathon"
+      ]
+    },
+    {
+      "day": "Saturday, March 7, 2026",
+      "name": "Race start",
       "time": "7:30 AM",
       "location": "Ashland City, TN",
       "applies_to_distances": [
@@ -80,15 +105,37 @@
       ]
     }
   ],
+  "faqs": [
+    {
+      "question": "What is the refund or transfer policy?",
+      "answer": "In the event that you are unable to take part in the race, refunds will NOT be issued. However, bibs may be transferred up to 5pm Wednesday March 4th, and you can have a friend pick up your T-shirt."
+    },
+    {
+      "question": "What do participants receive?",
+      "answer": "Each participant will receive an incredibly soft Next Level race T-shirt and more swag to be announced as sponsorships firm up. All finishers will receive a medal."
+    },
+    {
+      "question": "Where is packet pick-up?",
+      "answer": "Packet pick-up is available at Nashville Running Company at 820 Woodland St, Nashville, TN 37206 from 11am – 6pm on Friday, March 6th. You can also pick up your packet at Athlete Registration between 5:45am – 7:15am on race morning (Saturday, March 7th) at Riverbluff Park in Ashland City"
+    },
+    {
+      "question": "Is there a course time limit?",
+      "answer": "the course is only open for 3 hours ."
+    },
+    {
+      "question": "Are awards or prize money listed?",
+      "answer": "Prizing is as follows: Male & Female Overall: 1st – $300, 2nd -$200, 3rd – $100 *$250 bonus for Course record – 1:03:52 (Men) & 1:12:51 (Women) Male & Female Masters (Over 40): 1st – $100 Winner of each age group (male and female): $50 gift card Age Groups: 0-19, 20-29, 30-39, 40-49, 50-59, 60-69, 70+ Placing and prize money in the male and female overall"
+    }
+  ],
   "seo": {
-    "meta_title": "6th ANNUAL ASHLAND CITY HALF-MARATHON — Private StartLine Concept",
-    "meta_description": "Nashville Track Club is excited to bring you the 6th annual Ashland City Half-Marathon on Saturday, March 7th, 2026 . This race is a USA Track & Field-sanctioned ev…"
+    "meta_title": "6th ANNUAL ASHLAND CITY HALF-MARATHON — Race Website Preview",
+    "meta_description": "Nashville Track Club is excited to bring you the 6th annual Ashland City Half-Marathon on Saturday, March 7th, 2026 ."
   },
   "private_mockup": {
     "generated": true,
     "noindex": true,
     "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
-    "captured_at": "2026-06-28T00:38:36.195Z",
+    "captured_at": "2026-06-28T01:31:14.363Z",
     "access_token": "e6e18fe20474d344e2b82718edbfb2c7",
     "race_slug": "ashland-city-half",
     "route": "/private/mockups/e6e18fe20474d344e2b82718edbfb2c7/",
@@ -96,23 +143,23 @@
     "assets": [
       {
         "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/1-d63e0778e1.png",
-        "alt": "Public image captured from nashvilletrackclub.org",
-        "caption": "Public race-site image used for concept direction.",
+        "alt": "Race image",
+        "caption": "",
         "source": "https://nashvilletrackclub.org/wp-content/uploads/2021/02/Ashland-City_Half-Marathon_Graphic.png"
       },
       {
         "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/2-9799347d35.png",
-        "alt": "Public image captured from nashvilletrackclub.org",
-        "caption": "Additional public race-site visual reference.",
+        "alt": "Race image",
+        "caption": "",
         "source": "https://nashvilletrackclub.org/wp-content/uploads/2024/02/Riverbluff-Park-Map-AC-24.png"
       }
     ],
     "provenance": {
       "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
-      "captured_at": "2026-06-28T00:38:36.195Z",
+      "captured_at": "2026-06-28T01:31:14.363Z",
       "source_confirmed_sections": [
-        "stats",
-        "schedule"
+        "schedule",
+        "faqs"
       ],
       "source_confirmed_distance_ids": [
         "half-marathon"
@@ -136,6 +183,26 @@
         {
           "path": "seo.meta_description",
           "source": "ABOUT section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "story.paragraphs",
+          "source": "ABOUT section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "story.paragraphs",
+          "source": "REGISTRATION section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "story.paragraphs",
+          "source": "COURSE section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "story.paragraphs",
+          "source": "AID STATIONS / FLUIDS section text",
           "confidence": "medium"
         },
         {
@@ -174,6 +241,51 @@
           "confidence": "high"
         },
         {
+          "path": "schedule[0]",
+          "source": "PACKET PICK-UP section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "schedule[1]",
+          "source": "RACE DAY SCHEDULE section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "schedule[2]",
+          "source": "RACE DAY SCHEDULE section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "schedule[3]",
+          "source": "RACE DAY SCHEDULE section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "faqs[0]",
+          "source": "REGISTRATION section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "faqs[1]",
+          "source": "REGISTRATION section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "faqs[2]",
+          "source": "PACKET PICK-UP section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "faqs[3]",
+          "source": "COURSE section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "faqs[4]",
+          "source": "AWARDS & PRIZE MONEY section text",
+          "confidence": "medium"
+        },
+        {
           "path": "private_mockup.assets[0]",
           "source": "public image URL on source page",
           "confidence": "medium"
@@ -187,7 +299,7 @@
     },
     "confidence": {
       "high": 7,
-      "medium": 6,
+      "medium": 19,
       "low": 0
     },
     "uncertainty": {

@@ -2,14 +2,10 @@
 const { race } = Astro.props;
 const story = race.story;
 const isPrivateMockup = Boolean(race.private_mockup?.generated);
-const sourceFacts = race.source_facts || race.private_mockup?.source_facts || [];
-const sourceUrl = race.private_mockup?.source_url;
-const shouldRender = story || (isPrivateMockup && (race.seo?.meta_description || sourceFacts.length || sourceUrl));
-const title = story?.title || (isPrivateMockup ? `${race.identity?.name} private concept` : 'Our Race');
+const shouldRender = story || (isPrivateMockup && race.seo?.meta_description);
+const title = story?.title || (isPrivateMockup ? `About ${race.identity?.name}` : 'Our Race');
 const paragraphs = story?.paragraphs || [
   race.seo?.meta_description,
-  sourceFacts.length ? `Source-backed course notes: ${sourceFacts.join(' · ')}.` : '',
-  sourceUrl ? `This private mockup uses public race information from the current race site and avoids unsupported claims until the organizer verifies final details.` : '',
 ].filter(Boolean);
 ---
 
@@ -18,7 +14,7 @@ const paragraphs = story?.paragraphs || [
   <div class="wrap">
     <div class="story-grid">
       <div class="reveal">
-        <div class="kicker">{story?.kicker || (isPrivateMockup ? 'Source-backed concept' : 'Our Race')}</div>
+        <div class="kicker">{story?.kicker || (isPrivateMockup ? 'Race overview' : 'Our Race')}</div>
         <h2 set:html={title}></h2>
         {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
         {story?.quote ? <div class="story-quote">{story.quote}</div> : null}
