@@ -3,6 +3,7 @@ import '../styles/tokens.css';
 import Nav from './Nav.astro';
 import Hero from './Hero.astro';
 import StatBar from './StatBar.astro';
+import PrivateValueNarrative from './PrivateValueNarrative.astro';
 import Course from './Course.astro';
 import PacePicker from './PacePicker.astro';
 import Records from './Records.astro';
@@ -14,11 +15,13 @@ import FAQ from './FAQ.astro';
 import Finale from './Finale.astro';
 import Footer from './Footer.astro';
 const { race } = Astro.props;
+const isPrivateMockup = Boolean(race.private_mockup);
 ---
 <Nav race={race} />
 <main id="main-content">
 <Hero race={race} />
 <StatBar race={race} />
+{isPrivateMockup && <PrivateValueNarrative race={race} />}
 <Course race={race} />
 <PacePicker race={race} />
 <Records race={race} />

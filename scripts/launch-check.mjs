@@ -44,9 +44,11 @@ function parseAttrs(source) {
 }
 
 async function renderedOutputChecks() {
-  if (!['community', 'destination-major'].includes(config.identity?.template)) return [];
+  if (!['community', 'destination-major', 'performance'].includes(config.identity?.template)) return [];
 
-  const previewSlug = config.identity?.template === 'destination-major' ? 'destination-major' : 'community';
+  const template = config.private_mockup?.template || config.identity?.template || 'community';
+  const isPerformance = template === 'performance';
+  const previewSlug = config.identity?.template === 'destination-major' ? 'destination-major' : config.identity?.template === 'performance' ? 'performance' : 'community';
   const renderedPath = config.private_mockup?.route
     ? path.resolve(process.cwd(), 'dist', config.private_mockup.route.replace(/^\//, ''), 'index.html')
     : path.resolve(process.cwd(), 'dist', 'preview', previewSlug, 'index.html');
@@ -55,8 +57,8 @@ async function renderedOutputChecks() {
     html = await readFile(renderedPath, 'utf8');
   } catch {
     return [{
-      id: 'community-rendered-output',
-      label: 'Community rendered output checked',
+      id: 'template-rendered-output',
+      label: 'Template rendered output checked',
       pass: false,
       details: [`Build first so ${redactPrivateTokens(path.relative(process.cwd(), renderedPath))} exists.`]
     }];
@@ -66,7 +68,9 @@ async function renderedOutputChecks() {
   const anchors = extractAnchors(html);
   const registrationAnchors = anchors.filter((anchor) => anchor.attrs.href === registrationUrl);
   const placements = registrationAnchors.map((anchor) => anchor.attrs['data-analytics-placement']).filter(Boolean);
-  const requiredPrivatePlacements = ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary'];
+  const requiredPrivatePlacements = isPerformance
+    ? ['nav-button', 'hero-primary', 'finale-primary']
+    : ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary'];
   const missingPrivatePlacements = requiredPrivatePlacements.filter((placement) => !placements.includes(placement));
   const duplicatePlacements = [...new Set(placements.filter((placement, index) => placements.indexOf(placement) !== index))];
   const registrationAnchorErrors = registrationAnchors.flatMap((anchor, index) => [
@@ -98,13 +102,13 @@ async function renderedOutputChecks() {
   const checks = [
     {
       id: 'community-registration-links',
-      label: 'Community CTAs link to configured registration URL',
+      label: 'Rendered registration CTAs link to configured registration URL',
       pass: html.includes(`href="${registrationUrl}"`),
       details: html.includes(`href="${registrationUrl}"`) ? [] : [`Missing rendered href for ${registrationUrl}`]
     },
     {
       id: 'community-register-analytics',
-      label: 'Community registration CTAs include complete register-click analytics attributes',
+      label: 'Rendered registration CTAs include complete register-click analytics attributes',
       pass: registrationAnchors.length > 0 && registrationAnchorErrors.length === 0 && incorrectlyTrackedRegistrationClicks.length === 0,
       details: [
         ...(registrationAnchors.length ? [] : [`Missing rendered registration anchors for ${registrationUrl}`]),
@@ -114,13 +118,13 @@ async function renderedOutputChecks() {
     },
     {
       id: 'community-json-ld',
-      label: 'Community page renders SportsEvent JSON-LD',
+      label: 'Rendered page includes SportsEvent JSON-LD',
       pass: html.includes('application/ld+json') && html.includes('"@type":"SportsEvent"'),
       details: []
     },
     {
       id: 'community-no-demo-registration',
-      label: 'Community registration path has no demo-only registration buttons',
+      label: 'Rendered registration path has no demo-only registration buttons',
       pass: !/registration started — demo only|Donation info shown — demo only/.test(html),
       details: []
     },
@@ -133,8 +137,8 @@ async function renderedOutputChecks() {
     {
       id: config.private_mockup?.route ? 'private-value-narrative-present' : 'public-value-narrative-absent',
       label: config.private_mockup?.route
-        ? 'Private Community page renders the StartLine value narrative'
-        : 'Public Community page does not render the private value narrative',
+        ? 'Private mockup page renders the StartLine value narrative'
+        : 'Public preview page does not render the private value narrative',
       pass: config.private_mockup?.route ? hasPrivateValueNarrative : !hasPrivateValueNarrative,
       details: config.private_mockup?.route && !hasPrivateValueNarrative
         ? ['Missing data-private-value-narrative in private rendered HTML.']
@@ -142,13 +146,17 @@ async function renderedOutputChecks() {
     },
     {
       id: config.private_mockup?.route ? 'private-runner-checklist-present' : 'public-runner-checklist-absent',
-      label: config.private_mockup?.route
-        ? 'Private Community page renders runner decision checklist with tracked CTA'
-        : 'Public Community page does not render the private runner checklist',
-      pass: config.private_mockup?.route
+      label: isPerformance
+        ? (config.private_mockup?.route
+          ? 'Private Performance foundation mockup does not render the later runner checklist module'
+          : 'Public Performance preview does not render the private runner checklist')
+        : (config.private_mockup?.route
+          ? 'Private mockup page renders runner decision checklist with tracked CTA'
+          : 'Public preview page does not render the private runner checklist'),
+      pass: config.private_mockup?.route && !isPerformance
         ? hasRunnerChecklist && (html.match(/data-checklist-item-id=/g) || []).length >= 3 && html.includes('data-analytics-placement="runner-checklist-footer"')
         : !hasRunnerChecklist,
-      details: config.private_mockup?.route
+      details: config.private_mockup?.route && !isPerformance
         ? [
             ...(hasRunnerChecklist ? [] : ['Missing data-runner-decision-checklist in private rendered HTML.']),
             ...((html.match(/data-checklist-item-id=/g) || []).length >= 3 ? [] : ['Runner checklist has fewer than 3 rendered items.']),
@@ -158,23 +166,31 @@ async function renderedOutputChecks() {
     },
     {
       id: config.private_mockup?.route ? 'private-hero-secondary-checklist' : 'public-hero-secondary-course',
-      label: config.private_mockup?.route
-        ? 'Private Community hero secondary CTA points to runner checklist from private_mockup presence'
-        : 'Public Community hero secondary CTA remains course-oriented',
-      pass: config.private_mockup?.route ? hasHeroChecklistSecondary : !hasHeroChecklistSecondary,
-      details: config.private_mockup?.route && !hasHeroChecklistSecondary
+      label: isPerformance
+        ? (config.private_mockup?.route
+          ? 'Private Performance foundation mockup keeps hero secondary CTA outside later checklist flow'
+          : 'Public Performance preview keeps hero secondary CTA outside private checklist flow')
+        : (config.private_mockup?.route
+          ? 'Private mockup hero secondary CTA points to runner checklist from private_mockup presence'
+          : 'Public preview hero secondary CTA remains course-oriented'),
+      pass: config.private_mockup?.route && !isPerformance ? hasHeroChecklistSecondary : !hasHeroChecklistSecondary,
+      details: config.private_mockup?.route && !isPerformance && !hasHeroChecklistSecondary
         ? ['Private hero secondary CTA should render “Review key race details” and scroll to runner-checklist.']
         : (!config.private_mockup?.route && hasHeroChecklistSecondary ? ['Public hero secondary CTA unexpectedly points to runner checklist.'] : [])
     },
     {
       id: config.private_mockup?.route ? 'private-registration-decision-card-present' : 'public-registration-decision-card-absent',
-      label: config.private_mockup?.route
-        ? 'Private Community page renders the registration decision card with tracked CTA'
-        : 'Public Community page does not render the private registration decision card',
-      pass: config.private_mockup?.route
+      label: isPerformance
+        ? (config.private_mockup?.route
+          ? 'Private Performance foundation mockup does not render the later registration decision card module'
+          : 'Public Performance preview does not render the private registration decision card')
+        : (config.private_mockup?.route
+          ? 'Private mockup page renders the registration decision card with tracked CTA'
+          : 'Public preview page does not render the private registration decision card'),
+      pass: config.private_mockup?.route && !isPerformance
         ? hasRegistrationDecisionCard && placements.includes('registration-decision-card')
         : !hasRegistrationDecisionCard,
-      details: config.private_mockup?.route
+      details: config.private_mockup?.route && !isPerformance
         ? [
             ...(hasRegistrationDecisionCard ? [] : ['Missing data-registration-decision-card in private rendered HTML.']),
             ...(placements.includes('registration-decision-card') ? [] : ['Missing registration-decision-card register-click placement.'])
@@ -183,11 +199,15 @@ async function renderedOutputChecks() {
     },
     {
       id: config.private_mockup?.route ? 'private-trust-signals-band-appropriate' : 'public-trust-signals-band-absent',
-      label: config.private_mockup?.route
-        ? 'Private Community page renders source-backed trust signals when enough substantive runner-facing facts exist'
-        : 'Public Community page does not render the private trust-signal band',
-      pass: config.private_mockup?.route ? (shouldRenderTrustSignals ? hasTrustSignalsBand : !hasTrustSignalsBand) : !hasTrustSignalsBand,
-      details: config.private_mockup?.route
+      label: isPerformance
+        ? (config.private_mockup?.route
+          ? 'Private Performance foundation mockup does not render the later trust-signal band module'
+          : 'Public Performance preview does not render the private trust-signal band')
+        : (config.private_mockup?.route
+          ? 'Private mockup page renders source-backed trust signals when enough substantive runner-facing facts exist'
+          : 'Public preview page does not render the private trust-signal band'),
+      pass: config.private_mockup?.route && !isPerformance ? (shouldRenderTrustSignals ? hasTrustSignalsBand : !hasTrustSignalsBand) : !hasTrustSignalsBand,
+      details: config.private_mockup?.route && !isPerformance
         ? [
             ...(shouldRenderTrustSignals && !hasTrustSignalsBand ? ['Missing data-trust-signals-band despite enough substantive runner-facing trust facts.'] : []),
             ...(!shouldRenderTrustSignals && hasTrustSignalsBand ? ['Rendered data-trust-signals-band without enough substantive runner-facing trust facts.'] : [])
@@ -196,11 +216,15 @@ async function renderedOutputChecks() {
     },
     {
       id: config.private_mockup?.route ? 'private-measurement-ready-panel-present' : 'public-measurement-ready-panel-absent',
-      label: config.private_mockup?.route
-        ? 'Private Community page renders measurement-ready registration handoff panel'
-        : 'Public Community page does not render the private measurement-ready panel',
-      pass: config.private_mockup?.route ? hasMeasurementReadyPanel : !hasMeasurementReadyPanel,
-      details: config.private_mockup?.route && !hasMeasurementReadyPanel
+      label: isPerformance
+        ? (config.private_mockup?.route
+          ? 'Private Performance foundation mockup does not render the later measurement-ready panel module'
+          : 'Public Performance preview does not render the private measurement-ready panel')
+        : (config.private_mockup?.route
+          ? 'Private mockup page renders measurement-ready registration handoff panel'
+          : 'Public preview page does not render the private measurement-ready panel'),
+      pass: config.private_mockup?.route && !isPerformance ? hasMeasurementReadyPanel : !hasMeasurementReadyPanel,
+      details: config.private_mockup?.route && !isPerformance && !hasMeasurementReadyPanel
         ? ['Missing data-measurement-ready-panel in private rendered HTML.']
         : (!config.private_mockup?.route && hasMeasurementReadyPanel ? ['Public rendered HTML contains private measurement-ready panel.'] : [])
     },
@@ -218,7 +242,7 @@ async function renderedOutputChecks() {
     },
     {
       id: 'community-registration-placement-hierarchy',
-      label: 'Community registration CTAs use distinct Sprint 4 measurement placements',
+      label: 'Registration CTAs use distinct measurement placements',
       pass: config.private_mockup?.route
         ? missingPrivatePlacements.length === 0 && placements.some((placement) => placement.startsWith('entry-distance-')) && duplicatePlacements.length === 0
         : duplicatePlacements.length === 0,
@@ -230,7 +254,7 @@ async function renderedOutputChecks() {
     },
     {
       id: config.private_mockup?.route ? 'private-register-click-listener-present' : 'public-register-click-listener-present',
-      label: 'Community page renders register-click listener wiring',
+      label: 'Rendered page includes register-click listener wiring',
       pass: hasRegisterClickListener,
       details: hasRegisterClickListener ? [] : ['Missing register-click listener script marker.']
     }

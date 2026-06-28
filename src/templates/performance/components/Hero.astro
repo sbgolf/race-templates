@@ -1,5 +1,7 @@
 ---
+import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
 const { race } = Astro.props;
+const registrationUrl = race.registration?.url || '#entry';
 ---
 <section class="hero" id="top">
   <div class="hero-grid">
@@ -15,7 +17,7 @@ const { race } = Astro.props;
       </div>
       <p class="lead">Flat. Fast. Pancake-flat. The Capital Marathon is built for one thing: clocking the time you came here to clock. 22% of last year's field qualified for Boston.</p>
       <div class="hero-cta">
-        <button class="btn btn-accent" onclick="scrollToId('entry')">Register · $145</button>
+        <a class="btn btn-accent" href={registrationUrl} {...registerClickAttributes(race, 'hero-primary')}>Register · $145</a>
 <button class="btn btn-ghost" style="color:var(--paper);border-color:rgba(250,250,252,.3)" onclick="scrollToId('pace')">Pace your race</button>
       </div>
       <div class="hero-keystat">
