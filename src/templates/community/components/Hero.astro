@@ -1,7 +1,7 @@
 ---
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 const { race } = Astro.props;
-const registerAttrs = registerClickAttributes(race, 'hero');
+const registerAttrs = registerClickAttributes(race, 'hero-primary');
 const registerUrl = race.registration?.url || '#entry';
 const registerLabel = race.registration?.cta_label || 'Register now';
 const eventDate = race.event?.date ? new Date(`${race.event.date}T12:00:00`) : null;
@@ -12,6 +12,9 @@ const heroEyebrow = isPrivateMockup ? race.event?.location : `${editionLabel} ·
 const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];
 const heroImage = race.identity?.hero_image?.src || race.private_mockup?.assets?.[0]?.src;
 const heroImageAlt = race.identity?.hero_image?.alt || `Race day image for ${race.identity?.name}`;
+const hasRunnerChecklist = Boolean(isPrivateMockup && (race.runner_decision_checklist?.items || []).length);
+const secondaryCtaLabel = hasRunnerChecklist ? 'Review key race details' : 'See the Course';
+const secondaryCtaTarget = hasRunnerChecklist ? 'runner-checklist' : 'course';
 ---
 
 <section class="hero" id="top">
@@ -28,7 +31,7 @@ const heroImageAlt = race.identity?.hero_image?.alt || `Race day image for ${rac
       ) : null}
       <div class="hero-cta">
         <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel}</a>
-        <button class="btn btn-ghost" onclick="scrollToId('course')">See the Course</button>
+        <button class="btn btn-ghost" onclick={`scrollToId('${secondaryCtaTarget}')`}>{secondaryCtaLabel}</button>
       </div>
     </div>
     <div class="reveal">

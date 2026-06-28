@@ -4,7 +4,8 @@ const { race } = Astro.props;
 const checklist = race.runner_decision_checklist;
 const items = Array.isArray(checklist?.items) ? checklist.items.filter((item) => item?.label && item?.value) : [];
 const registerUrl = race.registration?.url || '#';
-const registerAttrs = registerClickAttributes(race, 'runner-checklist');
+const registerTopAttrs = registerClickAttributes(race, 'runner-checklist-top');
+const registerFooterAttrs = registerClickAttributes(race, 'runner-checklist-footer');
 ---
 {items.length ? (
   <section class="runner-checklist reveal" id="runner-checklist" data-runner-decision-checklist>
@@ -15,7 +16,7 @@ const registerAttrs = registerClickAttributes(race, 'runner-checklist');
           <h2 class="sec-title">{checklist?.headline || 'Before you register'}</h2>
           <p class="lead">{checklist?.intro || 'Review the key race details, then continue to the official registration page.'}</p>
         </div>
-        <a class="btn btn-accent checklist-cta top" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{race.registration?.cta_label || 'Register'}</a>
+        <a class="btn btn-accent checklist-cta top" href={registerUrl} target="_blank" rel="noopener" {...registerTopAttrs}>{race.registration?.cta_label || 'Register'}</a>
       </div>
 
       <div class="checklist-grid">
@@ -30,7 +31,7 @@ const registerAttrs = registerClickAttributes(race, 'runner-checklist');
 
       <div class="checklist-foot">
         <p>Ready to confirm availability and complete registration?</p>
-        <a class="btn btn-dark checklist-cta" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{race.registration?.cta_label || 'Register'}</a>
+        <a class="btn btn-dark checklist-cta" href={registerUrl} target="_blank" rel="noopener" {...registerFooterAttrs}>{race.registration?.cta_label || 'Register'}</a>
       </div>
     </div>
   </section>

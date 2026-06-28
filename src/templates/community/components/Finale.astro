@@ -1,7 +1,7 @@
 ---
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 const { race } = Astro.props;
-const registerAttrs = registerClickAttributes(race, 'finale');
+const registerAttrs = registerClickAttributes(race, 'finale-primary');
 const eventDate = race.event?.date ? new Date(`${race.event.date}T12:00:00`) : null;
 const displayDate = eventDate ? eventDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) : 'Race day';
 ---

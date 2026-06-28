@@ -29,6 +29,19 @@ async function fileExists(filePath) {
   }
 }
 
+function extractAnchors(html) {
+  return [...String(html || '').matchAll(/<a\b([^>]*)>/gi)].map((match) => ({ attrs: parseAttrs(match[1] || '') }));
+}
+
+function parseAttrs(source) {
+  const attrs = {};
+  for (const match of String(source || '').matchAll(/([:\w-]+)(?:=("[^"]*"|'[^']*'|[^\s"'>]+))?/g)) {
+    const [, key, rawValue = ''] = match;
+    attrs[key] = rawValue.replace(/^['"]|['"]$/g, '');
+  }
+  return attrs;
+}
+
 async function renderedOutputChecks() {
   if (config.identity?.template !== 'community') return [];
 
@@ -48,8 +61,22 @@ async function renderedOutputChecks() {
   }
 
   const registrationUrl = config.registration?.url || '';
+  const anchors = extractAnchors(html);
+  const registrationAnchors = anchors.filter((anchor) => anchor.attrs.href === registrationUrl);
+  const placements = registrationAnchors.map((anchor) => anchor.attrs['data-analytics-placement']).filter(Boolean);
+  const requiredPrivatePlacements = ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary'];
+  const missingPrivatePlacements = requiredPrivatePlacements.filter((placement) => !placements.includes(placement));
+  const duplicatePlacements = [...new Set(placements.filter((placement, index) => placements.indexOf(placement) !== index))];
+  const registrationAnchorErrors = registrationAnchors.flatMap((anchor, index) => [
+    ...(anchor.attrs['data-analytics-event'] === 'register_click' ? [] : [`Registration anchor #${index + 1} is missing data-analytics-event="register_click".`]),
+    ...(anchor.attrs['data-analytics-placement'] ? [] : [`Registration anchor #${index + 1} is missing data-analytics-placement.`]),
+    ...(anchor.attrs['data-registration-platform'] ? [] : [`Registration anchor #${index + 1} is missing data-registration-platform.`])
+  ]);
+  const incorrectlyTrackedRegistrationClicks = anchors.filter((anchor) => anchor.attrs['data-analytics-event'] === 'register_click' && anchor.attrs.href !== registrationUrl);
   const hasPrivateValueNarrative = html.includes('data-private-value-narrative');
   const hasRunnerChecklist = html.includes('data-runner-decision-checklist');
+  const hasRegistrationDecisionCard = html.includes('data-registration-decision-card');
+  const hasRegisterClickListener = html.includes("document.addEventListener('click', function (event)");
   const claimCheckHtml = allowedNegatedGrowthClaimPhrases
     .reduce((content, pattern) => content.replace(pattern, 'no overpromising claims'), html);
   const forbiddenClaims = forbiddenGrowthClaimPatterns
@@ -64,9 +91,13 @@ async function renderedOutputChecks() {
     },
     {
       id: 'community-register-analytics',
-      label: 'Community CTAs include register-click analytics attributes',
-      pass: html.includes('data-analytics-event="register_click"') && html.includes('data-analytics-placement='),
-      details: []
+      label: 'Community registration CTAs include complete register-click analytics attributes',
+      pass: registrationAnchors.length > 0 && registrationAnchorErrors.length === 0 && incorrectlyTrackedRegistrationClicks.length === 0,
+      details: [
+        ...(registrationAnchors.length ? [] : [`Missing rendered registration anchors for ${registrationUrl}`]),
+        ...registrationAnchorErrors,
+        ...incorrectlyTrackedRegistrationClicks.map((anchor) => `Non-registration anchor is tracked as register_click: ${anchor.attrs.href || '(missing href)'}.`)
+      ]
     },
     {
       id: 'community-json-ld',
@@ -102,15 +133,48 @@ async function renderedOutputChecks() {
         ? 'Private Community page renders runner decision checklist with tracked CTA'
         : 'Public Community page does not render the private runner checklist',
       pass: config.private_mockup?.route
-        ? hasRunnerChecklist && (html.match(/data-checklist-item-id=/g) || []).length >= 3 && html.includes('data-analytics-placement="runner-checklist"')
+        ? hasRunnerChecklist && (html.match(/data-checklist-item-id=/g) || []).length >= 3 && html.includes('data-analytics-placement="runner-checklist-footer"')
         : !hasRunnerChecklist,
       details: config.private_mockup?.route
         ? [
             ...(hasRunnerChecklist ? [] : ['Missing data-runner-decision-checklist in private rendered HTML.']),
             ...((html.match(/data-checklist-item-id=/g) || []).length >= 3 ? [] : ['Runner checklist has fewer than 3 rendered items.']),
-            ...(html.includes('data-analytics-placement="runner-checklist"') ? [] : ['Missing runner-checklist register-click placement.'])
+            ...(html.includes('data-analytics-placement="runner-checklist-footer"') ? [] : ['Missing runner-checklist-footer register-click placement.'])
           ]
         : (hasRunnerChecklist ? ['Public rendered HTML contains private runner checklist.'] : [])
+    },
+    {
+      id: config.private_mockup?.route ? 'private-registration-decision-card-present' : 'public-registration-decision-card-absent',
+      label: config.private_mockup?.route
+        ? 'Private Community page renders the registration decision card with tracked CTA'
+        : 'Public Community page does not render the private registration decision card',
+      pass: config.private_mockup?.route
+        ? hasRegistrationDecisionCard && placements.includes('registration-decision-card')
+        : !hasRegistrationDecisionCard,
+      details: config.private_mockup?.route
+        ? [
+            ...(hasRegistrationDecisionCard ? [] : ['Missing data-registration-decision-card in private rendered HTML.']),
+            ...(placements.includes('registration-decision-card') ? [] : ['Missing registration-decision-card register-click placement.'])
+          ]
+        : (hasRegistrationDecisionCard ? ['Public rendered HTML contains private registration decision card.'] : [])
+    },
+    {
+      id: 'community-registration-placement-hierarchy',
+      label: 'Community registration CTAs use distinct Sprint 4 measurement placements',
+      pass: config.private_mockup?.route
+        ? missingPrivatePlacements.length === 0 && placements.some((placement) => placement.startsWith('entry-distance-')) && duplicatePlacements.length === 0
+        : duplicatePlacements.length === 0,
+      details: config.private_mockup?.route ? [
+        ...missingPrivatePlacements.map((placement) => `Missing required placement: ${placement}`),
+        ...(placements.some((placement) => placement.startsWith('entry-distance-')) ? [] : ['Missing required entry-distance-* placement.']),
+        ...duplicatePlacements.map((placement) => `Duplicate registration CTA placement: ${placement}`)
+      ] : duplicatePlacements.map((placement) => `Duplicate registration CTA placement: ${placement}`)
+    },
+    {
+      id: config.private_mockup?.route ? 'private-register-click-listener-present' : 'public-register-click-listener-present',
+      label: 'Community page renders register-click listener wiring',
+      pass: hasRegisterClickListener,
+      details: hasRegisterClickListener ? [] : ['Missing register-click listener script marker.']
     }
   ];
 

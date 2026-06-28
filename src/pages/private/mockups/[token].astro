@@ -1,6 +1,7 @@
 ---
 import CommunityPreview from "../../../templates/community/pages/CommunityPreview.astro";
 import "../../../templates/community/styles/community.css";
+import { ga4Snippet, registerClickListenerScript } from "../../../shared/analytics/register-click.mjs";
 import { sportsEventJsonLdScript } from "../../../shared/schema/sports-event-jsonld.mjs";
 
 export function getStaticPaths() {
@@ -31,10 +32,12 @@ const { race } = Astro.props;
   <meta name="description" content={race.seo?.meta_description || 'Private StartLine race website concept preview.'}>
   <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
   <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
+  <Fragment set:html={ga4Snippet(race)} />
   <Fragment set:html={sportsEventJsonLdScript(race)} />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%232A1F18'/%3E%3Cpath d='M10 22 L17 29 L30 11' stroke='%23FAF6EE' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
 </head>
 <body data-private-mockup="true">
   <CommunityPreview race={race} />
+  <Fragment set:html={registerClickListenerScript()} />
 </body>
 </html>

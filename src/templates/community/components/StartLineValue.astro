@@ -1,4 +1,5 @@
 ---
+import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 const { race } = Astro.props;
 const isPrivateMockup = Boolean(race.private_mockup?.generated || race.private_mockup);
 
@@ -49,6 +50,7 @@ const scheduleFacts = (race.schedule || [])
   .map((item) => [item.time, item.name, item.location].filter(Boolean).join(' · '));
 const faqCount = (race.faqs || race.faq || []).filter((item) => item?.question && item?.answer).length;
 const sourceUrl = race.private_mockup?.source_url || race.private_mockup?.provenance?.source_url;
+const sourceLinkAttrs = sourceUrl && sourceUrl === race.registration?.url ? registerClickAttributes(race, 'private-source-registration') : {};
 const uncertaintySummary = race.private_mockup?.uncertainty?.summary;
 const sourceSections = race.private_mockup?.provenance?.source_confirmed_sections || [];
 const factGroups = [
@@ -103,7 +105,7 @@ const factGroups = [
       <p>
         This private mockup is framed around registration click-through readiness and uses only configured or source-backed race details. It avoids overpromising registration outcomes and should be reviewed before prospect sharing.
       </p>
-      {sourceUrl ? <p>Primary source: <a href={sourceUrl} target="_blank" rel="noopener">View original source page</a></p> : null}
+      {sourceUrl ? <p>Primary source: <a href={sourceUrl} target="_blank" rel="noopener" {...sourceLinkAttrs}>View original source page</a></p> : null}
       {sourceSections.length ? <p>Source-confirmed sections: {sourceSections.join(', ')}</p> : null}
       {uncertaintySummary ? <p>Uncertainty: {uncertaintySummary}</p> : null}
     </aside>

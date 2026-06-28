@@ -15,7 +15,7 @@ const distanceMeta = (distance) => [distance?.distance, distance?.start_time].fi
 
     <div class="entry-grid stagger">
       {race.distances?.map((distance) => {
-        const attrs = registerClickAttributes(race, `entry-${distance.id}`);
+        const attrs = registerClickAttributes(race, `entry-distance-${distance.id}`);
         return <div class:list={["etier", { flagship: distance.featured }]}>
           <h3>{distance.name}</h3>
           {distanceMeta(distance) ? <div class="sub">{distanceMeta(distance)}</div> : null}
@@ -35,7 +35,7 @@ const distanceMeta = (distance) => [distance?.distance, distance?.start_time].fi
         {race.charity?.headline ? <h4>{race.charity.headline}</h4> : null}
         {race.charity?.description ? <p>{race.charity.description}</p> : null}
       </div>
-      {race.charity?.url ? <a class="btn btn-ghost" href={race.charity.url} target="_blank" rel="noopener" {...registerClickAttributes(race, 'entry-charity')}>{race.charity?.cta_label || 'Learn more'}</a> : null}
+      {race.charity?.url ? <a class="btn btn-ghost" href={race.charity.url} target="_blank" rel="noopener">{race.charity?.cta_label || 'Learn more'}</a> : null}
     </div>
     ) : null}
   </div>

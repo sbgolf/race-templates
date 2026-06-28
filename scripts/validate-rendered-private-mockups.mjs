@@ -21,6 +21,7 @@ const punctuationArtifactPatterns = [
 
 let failed = false;
 const files = await renderedPrivateMockupFiles();
+const registrationUrlsByToken = await privateRegistrationUrlsByToken();
 
 if (!files.length) {
   console.log('✓ No rendered private mockup pages found. Run npm run build first to scan rendered visible text.');
@@ -31,6 +32,7 @@ for (const file of files) {
   const html = await readFile(file, 'utf8');
   const text = visibleText(html);
   const errors = [];
+  const registrationUrl = registrationUrlForRenderedFile(file);
   if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible text exposes a raw URL or bare domain.');
   for (const pattern of visiblePlaceholderPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains placeholder copy "${pattern.source}".`);
@@ -41,7 +43,28 @@ for (const file of files) {
   const checklistItemCount = (html.match(/data-checklist-item-id=/g) || []).length;
   if (!html.includes('data-runner-decision-checklist')) errors.push('Private Community mockup is missing the runner decision checklist.');
   if (checklistItemCount < 3) errors.push(`Runner decision checklist renders ${checklistItemCount} items; expected at least 3.`);
-  if (!html.includes('data-analytics-placement="runner-checklist"')) errors.push('Runner decision checklist CTA is missing register-click tracking placement "runner-checklist".');
+  if (!html.includes('data-registration-decision-card')) errors.push('Private Community mockup is missing the registration decision card.');
+  if (!html.includes("document.addEventListener('click', function (event)")) errors.push('Private rendered HTML is missing register-click listener wiring.');
+
+  const anchors = extractAnchors(html);
+  const registrationAnchors = anchors.filter((anchor) => anchor.attrs.href === registrationUrl);
+  if (!registrationAnchors.length) errors.push(`No rendered anchors point to registration URL ${registrationUrl}.`);
+  registrationAnchors.forEach((anchor, index) => {
+    if (anchor.attrs['data-analytics-event'] !== 'register_click') errors.push(`Registration anchor #${index + 1} is missing data-analytics-event="register_click".`);
+    if (!anchor.attrs['data-analytics-placement']) errors.push(`Registration anchor #${index + 1} is missing data-analytics-placement.`);
+    if (!anchor.attrs['data-registration-platform']) errors.push(`Registration anchor #${index + 1} is missing data-registration-platform.`);
+  });
+
+  const placements = registrationAnchors.map((anchor) => anchor.attrs['data-analytics-placement']).filter(Boolean);
+  for (const required of ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary']) {
+    if (!placements.includes(required)) errors.push(`Missing required register-click placement "${required}".`);
+  }
+  if (!placements.some((placement) => placement.startsWith('entry-distance-'))) errors.push('Missing at least one entry-distance-* register-click placement.');
+  const duplicates = [...new Set(placements.filter((placement, index) => placements.indexOf(placement) !== index))];
+  if (duplicates.length) errors.push(`Duplicate major registration CTA placements found: ${duplicates.join(', ')}.`);
+
+  const incorrectlyTracked = anchors.filter((anchor) => anchor.attrs['data-analytics-event'] === 'register_click' && anchor.attrs.href !== registrationUrl);
+  incorrectlyTracked.forEach((anchor) => errors.push(`Non-registration anchor is tracked as register_click: ${anchor.attrs.href || '(missing href)'}.`));
 
   const relative = path.relative(root, file);
   if (errors.length) {
@@ -66,6 +89,41 @@ async function renderedPrivateMockupFiles() {
     if (error.code === 'ENOENT') return [];
     throw error;
   }
+}
+
+function registrationUrlForRenderedFile(file) {
+  const token = path.basename(path.dirname(file));
+  return registrationUrlsByToken.get(token) || '';
+}
+
+async function privateRegistrationUrlsByToken() {
+  const dataDir = path.resolve(root, 'src/data/private-mockups');
+  const urls = new Map();
+  try {
+    const entries = await readdir(dataDir, { withFileTypes: true });
+    for (const entry of entries.filter((candidate) => candidate.isFile() && candidate.name.endsWith('.json'))) {
+      const config = JSON.parse(await readFile(path.join(dataDir, entry.name), 'utf8'));
+      if (config.private_mockup?.access_token && config.registration?.url) {
+        urls.set(config.private_mockup.access_token, config.registration.url);
+      }
+    }
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+  }
+  return urls;
+}
+
+function extractAnchors(html) {
+  return [...String(html || '').matchAll(/<a\b([^>]*)>/gi)].map((match) => ({ attrs: parseAttrs(match[1] || '') }));
+}
+
+function parseAttrs(source) {
+  const attrs = {};
+  for (const match of String(source || '').matchAll(/([:\w-]+)(?:=("[^"]*"|'[^']*'|[^\s"'>]+))?/g)) {
+    const [, key, rawValue = ''] = match;
+    attrs[key] = rawValue.replace(/^['"]|['"]$/g, '');
+  }
+  return attrs;
 }
 
 function visibleText(html) {

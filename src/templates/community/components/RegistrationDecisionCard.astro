@@ -1,0 +1,84 @@
+---
+import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
+const { race } = Astro.props;
+const registerUrl = race.registration?.url || '#';
+const registerLabel = race.registration?.cta_label || 'Continue to official registration';
+const platform = race.registration?.platform || 'the official registration platform';
+const registerAttrs = registerClickAttributes(race, 'registration-decision-card');
+---
+
+<section class="registration-decision reveal" data-registration-decision-card>
+  <div class="wrap decision-wrap">
+    <div class="decision-card">
+      <div>
+        <div class="kicker">Registration handoff</div>
+        <h2 class="sec-title">Ready to register?</h2>
+        <p class="lead">
+          StartLine sends runners to official registration. Availability, payment, and confirmation happen on {platform}; this page measures the click-through to help the race team understand registration interest.
+        </p>
+      </div>
+      <a class="btn btn-accent decision-cta" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .registration-decision {
+    background: #fffaf1;
+    overflow-x: clip;
+  }
+
+  .decision-wrap {
+    padding-block: clamp(2.25rem, 5vw, 4rem);
+  }
+
+  .decision-card {
+    align-items: center;
+    background: linear-gradient(135deg, rgba(36, 27, 21, 0.96), rgba(78, 50, 32, 0.94));
+    border-radius: clamp(1.1rem, 3vw, 1.7rem);
+    box-shadow: 0 24px 60px rgba(39, 29, 19, 0.18);
+    color: #fff8ee;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
+    padding: clamp(1.35rem, 4vw, 2.2rem);
+  }
+
+  .decision-card .kicker,
+  .decision-card .lead {
+    color: rgba(255, 248, 238, 0.78);
+  }
+
+  .decision-card .sec-title {
+    color: #fff8ee;
+    margin-bottom: 0.55rem;
+  }
+
+  .decision-card .lead {
+    margin: 0;
+    max-width: 72ch;
+  }
+
+  .decision-cta {
+    justify-self: end;
+    text-align: center;
+    white-space: normal;
+  }
+
+  @media (max-width: 760px) {
+    .decision-card {
+      grid-template-columns: 1fr;
+    }
+
+    .decision-cta {
+      justify-self: stretch;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .decision-wrap {
+      padding-inline: 0.85rem;
+    }
+  }
+</style>
