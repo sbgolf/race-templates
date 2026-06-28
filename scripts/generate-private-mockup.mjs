@@ -403,6 +403,21 @@ function buildConfig(facts, assets, metaInfo) {
     organization: { name: sourceHost(metaInfo.sourceUrl) },
     distances,
     registration: { url: facts.registrationUrl.value, platform: 'other', cta_label: 'Visit official race site' },
+    startline_value: {
+      headline: 'A race website concept built around registration intent — not just a prettier homepage.',
+      intro: 'StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.',
+      improved: [
+        'Reduced runner friction by placing source-backed race facts near the registration path.',
+        'Surfaced trust signals from configured distances, schedule details, FAQs, and source provenance when available.',
+        'Made registration CTAs easier to find on mobile and desktop with measurement-ready registration-click tracking.'
+      ],
+      paid_includes: [
+        'Mobile-first implementation shaped around the runner registration path.',
+        'SEO-ready page structure and event metadata for clearer discovery and sharing.',
+        'Registration-click tracking setup so runner intent can be measured after launch.',
+        'No registration-growth guarantees — just a clearer, faster, more measurable path from runner interest to registration click-through.'
+      ]
+    },
     story: storyParagraphs.length ? {
       kicker: 'Race overview',
       title: `About ${facts.name.value}`,
