@@ -1,0 +1,174 @@
+{
+  "identity": {
+    "template": "performance",
+    "name": "The Capital Marathon",
+    "slug": "capital-marathon-performance-private",
+    "colors": {
+      "primary": "#2D5BFF",
+      "secondary": "#FFD600",
+      "success": "#00C853",
+      "ink": "#0A0A12"
+    },
+    "tagline": "Flat, certified, and built for a fast fall marathon."
+  },
+  "event": {
+    "date": "2026-11-08",
+    "time": "07:00",
+    "location": "Capital City",
+    "timezone": "America/New_York"
+  },
+  "distances": [
+    {
+      "id": "marathon",
+      "name": "Marathon",
+      "distance": "26.2 mi",
+      "distance_miles": 26.2,
+      "start_time": "07:00",
+      "cutoff": "6:00:00",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://capitalmarathonrace.org/race-info"
+      }
+    }
+  ],
+  "course": {
+    "type": "Point-to-Point",
+    "certification": "MA-25-CFM",
+    "net_elevation": -12,
+    "max_climb": {
+      "feet": 86,
+      "mile": 11
+    },
+    "elevation_profile": [
+      { "mile": 0, "feet": 142 },
+      { "mile": 3, "feet": 147 },
+      { "mile": 6, "feet": 154 },
+      { "mile": 9, "feet": 150 },
+      { "mile": 13.1, "feet": 158 },
+      { "mile": 17, "feet": 146 },
+      { "mile": 21, "feet": 138 },
+      { "mile": 26.2, "feet": 130 }
+    ],
+    "pace_groups": ["3:00", "3:15", "3:30", "3:45", "4:00", "4:15", "4:30", "4:45", "5:00"]
+  },
+  "proof": {
+    "bq_rate": 22,
+    "bq_finishers": 924,
+    "field_cap": 4200,
+    "sold_out_years": 4
+  },
+  "records": [
+    {
+      "year": 2025,
+      "mens_time": "2:11:24",
+      "womens_time": "2:28:50",
+      "mens_winner": "Tadesse Yemane",
+      "womens_winner": "Marisol Vega"
+    },
+    {
+      "year": 2024,
+      "mens_time": "2:12:08",
+      "womens_time": "2:30:14",
+      "mens_winner": "Jonas Eriksen",
+      "womens_winner": "Amina Diallo"
+    },
+    {
+      "year": 2023,
+      "mens_time": "2:13:42",
+      "womens_time": "2:31:22",
+      "mens_winner": "Mateo Rios",
+      "womens_winner": "Claire Benton"
+    }
+  ],
+  "entry_tiers": [
+    {
+      "name": "Standard Entry",
+      "price": 145,
+      "subtitle": "Open until cap",
+      "corral_upgrade": false,
+      "features": [
+        "Bib and B-tag chip timing",
+        "Technical race shirt and finisher medal",
+        "Pre-race expo and packet pickup",
+        "Post-race meal and recovery zone",
+        "Course photos with download access",
+        "Qualifier certificate if you meet the standard"
+      ]
+    },
+    {
+      "name": "Sub-Elite Corral",
+      "price": 145,
+      "subtitle": "Qualifier: sub-3:00 men or sub-3:30 women",
+      "corral_upgrade": true,
+      "verification_required": true,
+      "features": [
+        "Everything in Standard Entry",
+        "Front-corral start behind the elites",
+        "Dedicated pre-race warm-up area",
+        "Personal bag check at the finish",
+        "Recovery zone access",
+        "Submit qualifying time during registration"
+      ]
+    }
+  ],
+  "startline_value": {
+    "headline": "Make the fast-course case before runners compare another marathon.",
+    "intro": "This Performance concept turns certification, BQ potential, field-cap urgency, and pace planning into a focused path toward registration.",
+    "improved": [
+      "Lead with the runner outcome: a clear BQ and PR proposition supported by course profile, start time, and field proof.",
+      "Give competitive runners the facts they scan first: certified course, net elevation, pace groups, record times, and corral expectations.",
+      "Keep registration momentum visible while preserving the clean public Performance preview."
+    ],
+    "paid_includes": [
+      "A Performance-template page structure tuned for BQ, PR, and field-cap decision making",
+      "Official registration CTAs pointed at the configured provider instead of competing side paths",
+      "Registration-click tracking attributes that prepare the site to measure outbound handoff intent"
+    ]
+  },
+  "registration": {
+    "url": "https://capitalmarathonrace.org/register",
+    "platform": "other",
+    "cta_label": "Register now"
+  },
+  "seo": {
+    "meta_title": "The Capital Marathon StartLine Concept",
+    "meta_description": "StartLine concept for a fictional fast, certified fall marathon focused on BQ and PR-minded runners."
+  },
+  "analytics": {
+    "ga4_measurement_id": "G-XXXXXXXXXX"
+  },
+  "contacts": {
+    "race_director_email": "director@capitalmarathonrace.org"
+  },
+  "private_mockup": {
+    "template": "performance",
+    "source_url": "https://capitalmarathonrace.org/race-info",
+    "captured_at": "2026-06-28T12:00:00.000Z",
+    "access_token": "6e103d6b15cfdf05383b4b9084875d12",
+    "route": "/private/mockups/6e103d6b15cfdf05383b4b9084875d12/",
+    "race_slug": "capital-marathon-performance",
+    "noindex": true,
+    "generated": true,
+    "provenance": {
+      "source_url": "https://capitalmarathonrace.org/race-info",
+      "source_confirmed_sections": ["course"],
+      "source_confirmed_distance_ids": ["marathon"],
+      "items": [
+        {
+          "path": "distances.marathon",
+          "source_url": "https://capitalmarathonrace.org/race-info",
+          "note": "Fictional source confirms the marathon distance and start time."
+        },
+        {
+          "path": "course.certification",
+          "source_url": "https://capitalmarathonrace.org/race-info",
+          "note": "Fictional source confirms certification and course profile facts."
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Fictional private mockup fixture for routing and value-narrative validation; no real prospect or customer data is used.",
+      "items": []
+    }
+  }
+}

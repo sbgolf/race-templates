@@ -167,7 +167,7 @@ Registration-click value:
 
 ### Sprint 6 — Cross-template adoption
 
-Status: in progress — Destination Major adopted in this sprint.
+Status: in progress — Destination Major adopted, and Performance foundation implemented.
 
 Goal: make the value system foundational for every current and future template.
 
@@ -179,10 +179,19 @@ Implemented for Destination Major:
 - Generator accepts `--template destination-major` and writes matching `identity.template` / `private_mockup.template` metadata.
 - Rendered private validation and launch checks now apply the private value contract to Destination Major as well as Community.
 
+Implemented for Performance foundation:
+
+- Added a fictional, tokenized Performance private mockup fixture with matching `identity.template` and `private_mockup.template` metadata.
+- Tokenized private mockup routing can render the Performance template.
+- Performance private rendering now includes the private-only StartLine value narrative focused on BQ, PR, field-cap, and registration-click value.
+- Public `/preview/performance` remains clean: the private value narrative and later private sales modules are not rendered there.
+- Performance registration CTAs link to `registration.url` and include basic `register_click` analytics attributes.
+- Rendered/launch validation recognizes Performance as foundation-only for this item: private Performance requires the value narrative, public Performance forbids it, and later modules are not required yet.
+
 Remaining deliverables:
 
 - Shared private-value utilities/copy model.
-- Performance implementation.
+- Performance runner checklist, registration decision card, trust-signal band, and measurement panel.
 - Trail implementation when created.
 - Charity implementation when created.
 - Template standards update requiring all new templates to implement the value contract before merge.

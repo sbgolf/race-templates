@@ -122,6 +122,13 @@ export function validateRaceConfig(config) {
       if (!config.private_mockup.noindex) {
         add(errors, 'private_mockup.noindex', 'Private mockups must explicitly set noindex: true.');
       }
+      if (!hasText(config.private_mockup.template)) {
+        add(errors, 'private_mockup.template', 'Private mockups must declare the template used for routing.');
+      } else if (!TEMPLATE_IDS.has(config.private_mockup.template)) {
+        add(errors, 'private_mockup.template', `Template must be one of: ${Array.from(TEMPLATE_IDS).join(', ')}.`);
+      } else if (config.identity?.template && config.private_mockup.template !== config.identity.template) {
+        add(errors, 'private_mockup.template', 'Private mockup template must match identity.template.');
+      }
     }
   }
 

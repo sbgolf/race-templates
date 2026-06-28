@@ -1,10 +1,12 @@
 ---
+import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
 const { race } = Astro.props;
+const registrationUrl = race.registration?.url || '#entry';
 ---
 <section class="finale">
   <div class="wrap">
     <h2 class="reveal">Train for it. Run it. <em>Time it.</em></h2>
     <p class="reveal">Sunday, November 8, 2026. 7:00 AM. The gun goes off and the only thing that matters is the clock you bring with you.</p>
-    <button class="btn btn-light reveal" onclick="scrollToId('entry')">Register · $145 →</button>
+    <a class="btn btn-light reveal" href={registrationUrl} {...registerClickAttributes(race, 'finale-primary')}>Register · $145 →</a>
   </div>
 </section>

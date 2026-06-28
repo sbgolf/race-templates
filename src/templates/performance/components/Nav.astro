@@ -1,5 +1,7 @@
 ---
+import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
 const { race } = Astro.props;
+const registrationUrl = race.registration?.url || '#entry';
 ---
 <nav id="nav">
   <a href="#top" class="brand">
@@ -16,7 +18,7 @@ const { race } = Astro.props;
     <a href="#gallery">Race Day</a>
     <a href="#entry">Register</a>
     <a href="#travel">Travel</a>
-    <button class="btn btn-accent" onclick="scrollToId('entry')">Enter →</button>
+    <a class="btn btn-accent" href={registrationUrl} {...registerClickAttributes(race, 'nav-button')}>Enter →</a>
   </div>
   <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>

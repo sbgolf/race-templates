@@ -1,0 +1,41 @@
+---
+const { race } = Astro.props;
+const value = race.startline_value || {};
+const improved = Array.isArray(value.improved) && value.improved.length
+  ? value.improved
+  : [
+    'Make Boston-qualifying details, course speed factors, field-cap urgency, and registration pricing easy to evaluate before runners leave the page.',
+    'Turn performance proof into scannable decision support for runners chasing a PR, qualifier, or front-corral start.',
+    'Keep the page focused on the registration click while preserving the technical, clock-driven feel of a performance race.'
+  ];
+const paidIncludes = Array.isArray(value.paid_includes) && value.paid_includes.length
+  ? value.paid_includes
+  : [
+    'A performance-focused page structure tuned for BQ, PR, course-certification, and field-cap decisions',
+    'Official registration CTAs tied to the configured registration URL instead of competing side paths',
+    'Registration-click tracking attributes that prepare the site to measure outbound handoff intent'
+  ];
+---
+<section class="performance-private-value" data-private-value-narrative>
+  <div class="wrap performance-private-value-wrap">
+    <div class="performance-value-copy reveal">
+      <div class="kicker">StartLine performance concept</div>
+      <h2 class="sec-title">{value.headline || 'Show runners why this is the race for their next best time.'}</h2>
+      <p>{value.intro || 'This mockup keeps the Performance template centered on pace, proof, and the registration decision: BQ potential, PR confidence, field limits, and clear next steps.'}</p>
+    </div>
+    <div class="performance-value-grid stagger" aria-label="StartLine value narrative">
+      <div class="performance-value-card">
+        <h3>What this concept clarifies</h3>
+        <ul>
+          {improved.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="performance-value-card accent-card">
+        <h3>What a paid StartLine build includes</h3>
+        <ul>
+          {paidIncludes.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
