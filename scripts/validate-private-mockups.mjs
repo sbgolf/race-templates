@@ -2,7 +2,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { validateRaceConfig } from '../src/shared/schema/race-config-schema.mjs';
-import { PRIVATE_VALUE_SUPPORTED_TEMPLATES, supportsPrivateValueContract } from '../src/shared/private-mockup-value.mjs';
+import { PRIVATE_VALUE_SUPPORTED_TEMPLATES, supportsPrivateValueContract, templateForPrivateMockup } from '../src/shared/private-mockup-value.mjs';
 
 const root = process.cwd();
 const mockupDir = path.resolve(root, 'src/data/private-mockups');
@@ -151,7 +151,7 @@ if (failed) {
 }
 
 function validatePrivateValueContractMetadata(config, errors) {
-  const template = config.private_mockup?.template || config.identity?.template || 'community';
+  const template = templateForPrivateMockup(config);
   if (!supportsPrivateValueContract(template)) {
     errors.push(`private_mockup.template: "${template}" is not listed in the shared private value contract template set (${PRIVATE_VALUE_SUPPORTED_TEMPLATES.join(', ')}). Add the template contract implementation before merging a new archetype.`);
   }

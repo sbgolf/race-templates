@@ -3,7 +3,7 @@ import { readFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { launchGateChecks } from '../src/shared/schema/race-config-schema.mjs';
 import { shouldRenderTrustSignalsBand } from '../src/shared/private-mockup-trust.mjs';
-import { PRIVATE_VALUE_CONTRACT_MARKERS, PRIVATE_VALUE_REQUIRED_MARKERS, privateValuePublicMarkerLeaks } from '../src/shared/private-mockup-value.mjs';
+import { PRIVATE_VALUE_CONTRACT_MARKERS, PRIVATE_VALUE_REQUIRED_MARKERS, PRIVATE_VALUE_SUPPORTED_TEMPLATES, privateValuePublicMarkerLeaks } from '../src/shared/private-mockup-value.mjs';
 
 const target = process.argv[2] || 'src/data/samples/hartwell-half.json';
 const forbiddenGrowthClaimPatterns = [
@@ -45,9 +45,9 @@ function parseAttrs(source) {
 }
 
 async function renderedOutputChecks() {
-  if (!['community', 'destination-major', 'performance'].includes(config.identity?.template)) return [];
+  if (!PRIVATE_VALUE_SUPPORTED_TEMPLATES.includes(config.identity?.template)) return [];
 
-  const previewSlug = config.identity?.template === 'destination-major' ? 'destination-major' : config.identity?.template === 'performance' ? 'performance' : 'community';
+  const previewSlug = config.identity.template;
   const renderedPath = config.private_mockup?.route
     ? path.resolve(process.cwd(), 'dist', config.private_mockup.route.replace(/^\//, ''), 'index.html')
     : path.resolve(process.cwd(), 'dist', 'preview', previewSlug, 'index.html');

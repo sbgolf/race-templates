@@ -1,4 +1,6 @@
-const TEMPLATE_IDS = new Set(['destination-major', 'performance', 'community']);
+import { PRIVATE_VALUE_SUPPORTED_TEMPLATES } from '../private-mockup-value.mjs';
+
+const TEMPLATE_IDS = new Set(PRIVATE_VALUE_SUPPORTED_TEMPLATES);
 const URL_PATTERN = /^https?:\/\//i;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

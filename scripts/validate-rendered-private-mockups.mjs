@@ -2,7 +2,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { shouldRenderTrustSignalsBand } from '../src/shared/private-mockup-trust.mjs';
-import { PRIVATE_VALUE_CONTRACT_MARKERS, PRIVATE_VALUE_REQUIRED_MARKERS, privateValuePublicMarkerLeaks } from '../src/shared/private-mockup-value.mjs';
+import { PRIVATE_VALUE_CONTRACT_MARKERS, PRIVATE_VALUE_REQUIRED_MARKERS, PRIVATE_VALUE_SUPPORTED_TEMPLATES, privateValuePublicMarkerLeaks, templateForPrivateMockup } from '../src/shared/private-mockup-value.mjs';
 
 const root = process.cwd();
 const privateDir = path.resolve(root, 'dist/private/mockups');
@@ -38,7 +38,7 @@ for (const file of files) {
   const errors = [];
   const registrationUrl = registrationUrlForRenderedFile(file);
   const config = configForRenderedFile(file);
-  const template = config?.private_mockup?.template || config?.identity?.template || 'community';
+  const template = templateForPrivateMockup(config);
   const shouldRenderTrustSignals = shouldRenderTrustSignalsBand(config);
   if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible text exposes a raw URL or bare domain.');
   for (const pattern of visiblePlaceholderPatterns) {
@@ -132,7 +132,7 @@ async function renderedPublicPreviewFiles() {
   try {
     const entries = await readdir(publicPreviewDir, { withFileTypes: true });
     return entries
-      .filter((entry) => entry.isDirectory() && ['community', 'destination-major', 'performance'].includes(entry.name))
+      .filter((entry) => entry.isDirectory() && PRIVATE_VALUE_SUPPORTED_TEMPLATES.includes(entry.name))
       .map((entry) => path.join(publicPreviewDir, entry.name, 'index.html'))
       .sort();
   } catch (error) {
