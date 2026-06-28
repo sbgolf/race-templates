@@ -2,9 +2,11 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { shouldRenderTrustSignalsBand } from '../src/shared/private-mockup-trust.mjs';
+import { PRIVATE_VALUE_CONTRACT_MARKERS, PRIVATE_VALUE_REQUIRED_MARKERS, privateValuePublicMarkerLeaks } from '../src/shared/private-mockup-value.mjs';
 
 const root = process.cwd();
 const privateDir = path.resolve(root, 'dist/private/mockups');
+const publicPreviewDir = path.resolve(root, 'dist/preview');
 const rawVisibleUrlPattern = /\b(?:https?:\/\/|www\.|[a-z0-9-]+\.(?:com|org|net|io|gov|edu)\b)/i;
 const visiblePlaceholderPatterns = [
   /\bTBD\b/i,
@@ -23,6 +25,7 @@ const punctuationArtifactPatterns = [
 let failed = false;
 const files = await renderedPrivateMockupFiles();
 const privateConfigsByToken = await privateConfigsByTokenMap();
+const publicFiles = await renderedPublicPreviewFiles();
 
 if (!files.length) {
   console.log('✓ No rendered private mockup pages found. Run npm run build first to scan rendered visible text.');
@@ -44,17 +47,20 @@ for (const file of files) {
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);
   }
-  if (!html.includes('data-private-value-narrative')) errors.push(`Private ${template} mockup is missing the StartLine value narrative.`);
+  if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)) errors.push(`Private ${template} mockup is missing the StartLine value narrative.`);
   const checklistItemCount = (html.match(/data-checklist-item-id=/g) || []).length;
-  if (!html.includes('data-runner-decision-checklist')) errors.push(`Private ${template} mockup is missing the runner decision checklist.`);
+  if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.runnerDecisionChecklist)) errors.push(`Private ${template} mockup is missing the runner decision checklist.`);
   if (checklistItemCount < 3) errors.push(`Runner decision checklist renders ${checklistItemCount} items; expected at least 3.`);
   if (!html.includes("scrollToId('runner-checklist')") || !html.includes('Review key race details')) {
     errors.push('Private hero secondary CTA must point to the runner checklist when private_mockup metadata and a checklist are present.');
   }
-  if (!html.includes('data-registration-decision-card')) errors.push(`Private ${template} mockup is missing the registration decision card.`);
-  if (!html.includes('data-measurement-ready-panel')) errors.push(`Private ${template} mockup is missing the measurement-ready panel.`);
-  if (shouldRenderTrustSignals && !html.includes('data-trust-signals-band')) errors.push(`Private ${template} mockup has enough substantive runner-facing trust facts but is missing the trust-signal band.`);
-  if (!shouldRenderTrustSignals && html.includes('data-trust-signals-band')) errors.push(`Private ${template} mockup renders the trust-signal band without enough substantive runner-facing trust facts.`);
+  if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)) errors.push(`Private ${template} mockup is missing the registration decision card.`);
+  if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel)) errors.push(`Private ${template} mockup is missing the measurement-ready panel.`);
+  if (shouldRenderTrustSignals && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup has enough substantive runner-facing trust facts but is missing the trust-signal band.`);
+  if (!shouldRenderTrustSignals && html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup renders the trust-signal band without enough substantive runner-facing trust facts.`);
+  for (const marker of PRIVATE_VALUE_REQUIRED_MARKERS) {
+    if (!html.includes(marker)) errors.push(`Private ${template} mockup is missing required private value contract marker ${marker}.`);
+  }
   if (/happen on (?:runsignup|race_roster|raceroster|haku|letsdothis|lets_do_this|other)\b/.test(text)) {
     errors.push('Registration decision copy exposes a raw registration platform key instead of a prospect-facing label.');
   }
@@ -94,6 +100,19 @@ for (const file of files) {
   }
 }
 
+for (const file of publicFiles) {
+  const html = await readFile(file, 'utf8');
+  const leaks = privateValuePublicMarkerLeaks(html);
+  const relative = path.relative(root, file);
+  if (leaks.length) {
+    failed = true;
+    console.error(`✗ ${relative}`);
+    leaks.forEach((marker) => console.error(`  - Public preview leaks private value marker ${marker}.`));
+  } else {
+    console.log(`✓ ${relative} (no private value markers)`);
+  }
+}
+
 if (failed) process.exit(1);
 
 async function renderedPrivateMockupFiles() {
@@ -102,6 +121,19 @@ async function renderedPrivateMockupFiles() {
     return tokens
       .filter((entry) => entry.isDirectory())
       .map((entry) => path.join(privateDir, entry.name, 'index.html'))
+      .sort();
+  } catch (error) {
+    if (error.code === 'ENOENT') return [];
+    throw error;
+  }
+}
+
+async function renderedPublicPreviewFiles() {
+  try {
+    const entries = await readdir(publicPreviewDir, { withFileTypes: true });
+    return entries
+      .filter((entry) => entry.isDirectory() && ['community', 'destination-major', 'performance'].includes(entry.name))
+      .map((entry) => path.join(publicPreviewDir, entry.name, 'index.html'))
       .sort();
   } catch (error) {
     if (error.code === 'ENOENT') return [];

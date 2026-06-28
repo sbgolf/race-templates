@@ -1,24 +1,30 @@
 ---
-import { registrationPlatformLabel } from '../../../shared/registration-platform-label.mjs';
+import { measurementReadyCopyForRace } from '../../../shared/private-mockup-value.mjs';
 const { race } = Astro.props;
-const platform = registrationPlatformLabel(race.registration?.platform);
+const measurementCopy = measurementReadyCopyForRace(race, {
+  headline: 'Know which registration path runners choose.',
+  intro: 'Each official-registration CTA is prepared for a `register_click` event with placement, platform, and destination metadata.',
+  reportLabel: 'What the race site can report',
+  separateLabel: 'What stays with registration',
+  separateBody: 'Race entry, payment, and confirmation remain inside the official registration platform unless later reporting or an approved integration is connected.'
+});
 ---
 <section class="perf-measurement-panel" data-measurement-ready-panel>
   <div class="wrap perf-measurement-wrap">
     <div class="perf-measurement-card reveal">
       <div>
-        <div class="kicker">Measurement-ready handoff</div>
-        <h2 class="sec-title">Know which registration path runners choose.</h2>
-        <p class="lead">Each official-registration CTA is prepared for a `register_click` event with placement, platform, and destination metadata.</p>
+        <div class="kicker">{measurementCopy.kicker}</div>
+        <h2 class="sec-title">{measurementCopy.headline}</h2>
+        <p class="lead">{measurementCopy.intro}</p>
       </div>
       <div class="perf-measurement-points" aria-label="Measurement details">
         <article>
-          <strong>What the race site can report</strong>
-          <p>Outbound registration handoff intent: which CTA sent a visitor toward {platform} and where that CTA appeared on the page.</p>
+          <strong>{measurementCopy.reportLabel}</strong>
+          <p>{measurementCopy.reportBody}</p>
         </article>
         <article>
-          <strong>What stays with registration</strong>
-          <p>Race entry, payment, and confirmation remain inside the official registration platform unless later reporting or an approved integration is connected.</p>
+          <strong>{measurementCopy.separateLabel}</strong>
+          <p>{measurementCopy.separateBody}</p>
         </article>
       </div>
     </div>

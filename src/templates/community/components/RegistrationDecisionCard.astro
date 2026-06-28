@@ -1,10 +1,10 @@
 ---
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
-import { registrationPlatformLabel } from "../../../shared/registration-platform-label.mjs";
+import { registrationDecisionCopyForRace } from "../../../shared/private-mockup-value.mjs";
 const { race } = Astro.props;
 const registerUrl = race.registration?.url || '#';
-const registerLabel = race.registration?.cta_label || 'Continue to official registration';
-const platform = registrationPlatformLabel(race.registration?.platform);
+const decisionCopy = registrationDecisionCopyForRace(race);
+const registerLabel = decisionCopy.ctaLabel;
 const registerAttrs = registerClickAttributes(race, 'registration-decision-card');
 ---
 
@@ -12,10 +12,10 @@ const registerAttrs = registerClickAttributes(race, 'registration-decision-card'
   <div class="wrap decision-wrap">
     <div class="decision-card">
       <div>
-        <div class="kicker">Registration handoff</div>
-        <h2 class="sec-title">Ready to register?</h2>
+        <div class="kicker">{decisionCopy.kicker}</div>
+        <h2 class="sec-title">{decisionCopy.headline}</h2>
         <p class="lead">
-          StartLine sends runners to official registration. Availability, payment, and confirmation happen on {platform}; this page measures the click-through to help the race team understand registration interest.
+          {decisionCopy.body}
         </p>
       </div>
       <a class="btn btn-accent decision-cta" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel}</a>

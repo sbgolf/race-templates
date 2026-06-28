@@ -1,26 +1,26 @@
 ---
-import { registrationPlatformLabel } from "../../../shared/registration-platform-label.mjs";
+import { measurementReadyCopyForRace } from "../../../shared/private-mockup-value.mjs";
 const { race } = Astro.props;
-const platform = registrationPlatformLabel(race.registration?.platform);
+const measurementCopy = measurementReadyCopyForRace(race);
 ---
 <section class="measurement-ready-panel reveal" data-measurement-ready-panel>
   <div class="wrap measurement-ready-wrap">
     <div class="measurement-ready-card">
       <div>
-        <div class="kicker">Measurement-ready handoff</div>
-        <h2 class="sec-title">Registration intent can be separated from platform results.</h2>
+        <div class="kicker">{measurementCopy.kicker}</div>
+        <h2 class="sec-title">{measurementCopy.headline}</h2>
         <p class="lead">
-          StartLine prepares a `register_click` event for each outbound official-registration CTA, including its placement, platform, and link destination.
+          {measurementCopy.intro}
         </p>
       </div>
       <div class="measurement-ready-points" aria-label="Measurement details">
         <article>
-          <strong>What this page can report</strong>
-          <p>Outbound handoff intent: which registration CTA a visitor used, where it appeared, and that it sent them toward {platform}.</p>
+          <strong>{measurementCopy.reportLabel}</strong>
+          <p>{measurementCopy.reportBody}</p>
         </article>
         <article>
-          <strong>What remains separate</strong>
-          <p>Completed registrations, payment, and confirmation happen inside the official registration platform unless that platform later provides reporting or an approved integration.</p>
+          <strong>{measurementCopy.separateLabel}</strong>
+          <p>{measurementCopy.separateBody}</p>
         </article>
       </div>
     </div>

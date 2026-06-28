@@ -2,6 +2,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { validateRaceConfig } from '../src/shared/schema/race-config-schema.mjs';
+import { PRIVATE_VALUE_SUPPORTED_TEMPLATES, supportsPrivateValueContract } from '../src/shared/private-mockup-value.mjs';
 
 const root = process.cwd();
 const mockupDir = path.resolve(root, 'src/data/private-mockups');
@@ -125,6 +126,7 @@ for (const file of files) {
       validateDistances(config, confirmedDistanceIds, errors);
       validateSingleDistanceCopy(config, confirmedDistanceIds, errors);
       validateRunnerDecisionChecklist(config, confirmedSections, confirmedDistanceIds, errors);
+      validatePrivateValueContractMetadata(config, errors);
     }
 
     validateBannedText(config, errors);
@@ -146,6 +148,16 @@ for (const file of files) {
 if (failed) {
   console.error('Private mockup validation failed. Remove sample leakage, add provenance/uncertainty, and only render source-supported sections.');
   process.exit(1);
+}
+
+function validatePrivateValueContractMetadata(config, errors) {
+  const template = config.private_mockup?.template || config.identity?.template || 'community';
+  if (!supportsPrivateValueContract(template)) {
+    errors.push(`private_mockup.template: "${template}" is not listed in the shared private value contract template set (${PRIVATE_VALUE_SUPPORTED_TEMPLATES.join(', ')}). Add the template contract implementation before merging a new archetype.`);
+  }
+  if (config.private_mockup?.template && config.identity?.template && config.private_mockup.template !== config.identity.template) {
+    errors.push('private_mockup.template: Must match identity.template so tokenized private rendering uses the intended archetype.');
+  }
 }
 
 function validateBannedText(config, errors) {
