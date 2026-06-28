@@ -4,6 +4,10 @@ const { race } = Astro.props;
 const registerAttrs = registerClickAttributes(race, 'nav');
 const registerUrl = race.registration?.url || '#entry';
 const registerLabel = race.registration?.cta_label || 'Register';
+const hasSchedule = (race.schedule || []).length > 0;
+const hasStory = Boolean(race.story || race.private_mockup?.generated);
+const hasGallery = Boolean((race.private_mockup?.assets || []).length || (race.gallery || race.gallery_images || []).length);
+const hasVolunteer = Boolean(race.volunteer?.description || race.volunteer?.signup_url || (race.volunteer?.items || race.volunteer?.benefits || []).length || race.volunteer?.photo?.src);
 ---
 
 <nav id="nav">
@@ -16,10 +20,10 @@ const registerLabel = race.registration?.cta_label || 'Register';
   </a>
   <div class="nav-links" id="navLinks">
     <a href="#course">Course</a>
-    <a href="#schedule">Weekend</a>
-    <a href="#story">Our Race</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#volunteer">Volunteer</a>
+    {hasSchedule ? <a href="#schedule">Schedule</a> : null}
+    {hasStory ? <a href="#story">Details</a> : null}
+    {hasGallery ? <a href="#gallery">Gallery</a> : null}
+    {hasVolunteer ? <a href="#volunteer">Volunteer</a> : null}
     <a href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>Register</a>
     <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel} →</a>
   </div>

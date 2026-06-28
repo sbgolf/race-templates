@@ -1,7 +1,9 @@
 ---
 const { race } = Astro.props;
+const faqs = (race.faqs || race.faq || []).filter((item) => item?.question && item?.answer);
 ---
 
+{faqs.length > 0 ? (
 <section class="faq" id="faq">
   <div class="wrap faq-wrap">
     <div class="reveal">
@@ -9,13 +11,10 @@ const { race } = Astro.props;
       <h2 class="sec-title">Common <em>questions</em>.</h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item"><button class="faq-q">Is the course stroller-friendly?<span class="pm"></span></button><div class="faq-a"><p>Yes for the 5K and Kids' Mile — both are entirely on paved town roads. The Half and 10K cross a short stretch of crushed-stone path that's manageable but bumpy. Most families with strollers stick to the 5K.</p></div></div>
-<div class="faq-item"><button class="faq-q">Can I switch distances after I register?<span class="pm"></span></button><div class="faq-a"><p>Yes — switch up or down anytime through May 5. Price differences are credited or charged automatically. After May 5 it's race-day only at the registration tent.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Where do I park on race day?<span class="pm"></span></button><div class="faq-a"><p>Free parking at Hartwell High School (¾ mile from the start) with a continuous shuttle from 5:30–9 AM. Limited street parking around the Town Common — get there before 6:30 AM if you want a close spot.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Is there a half marathon time limit?<span class="pm"></span></button><div class="faq-a"><p>Course is open until 11:30 AM (4-hour limit for the half). Walkers welcome. We have sweep bikes that ride with the back of the pack to make sure no one finishes alone.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Can I run with my dog?<span class="pm"></span></button><div class="faq-a"><p>Dogs on a 6-foot leash are welcome in the 5K starting from the back. Not allowed in the Half or 10K (insurance reasons). Bring a water bowl — we'll have one at every aid station.</p></div></div>
-      <div class="faq-item"><button class="faq-q">What happens if it rains?<span class="pm"></span></button><div class="faq-a"><p>Race runs rain or shine. Only thunderstorms or extreme heat will cause a delay or modification — we'll email all registrants by 6 AM if anything changes.</p></div></div>
-      <div class="faq-item"><button class="faq-q">How do I get my photos after the race?<span class="pm"></span></button><div class="faq-a"><p>Free downloads. Search your bib number at the gallery link emailed Sunday evening. All photos are available for personal use.</p></div></div>
+      {faqs.map((item) => (
+        <div class="faq-item"><button class="faq-q">{item.question}<span class="pm"></span></button><div class="faq-a"><p>{item.answer}</p></div></div>
+      ))}
     </div>
   </div>
 </section>
+) : null}

@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "validate:config": "node scripts/validate-config.mjs",
+    "validate:private-mockups": "node scripts/validate-private-mockups.mjs",
     "launch:check": "node scripts/launch-check.mjs",
     "scaffold:customer": "node scripts/scaffold-customer.mjs",
     "mockup:private": "node scripts/generate-private-mockup.mjs"

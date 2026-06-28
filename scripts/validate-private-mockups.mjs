@@ -1,0 +1,278 @@
+#!/usr/bin/env node
+import { readdir, readFile } from 'node:fs/promises';
+import path from 'node:path';
+import { validateRaceConfig } from '../src/shared/schema/race-config-schema.mjs';
+
+const root = process.cwd();
+const mockupDir = path.resolve(root, 'src/data/private-mockups');
+
+const bannedTerms = [
+  /\bHartwell\b/i,
+  /\bTown Common\b/i,
+  /\bKids['’]? Mile\b/i,
+  /\bSame town four ways\b/i,
+  /\bSample Distances\b/i
+];
+
+const samplePlaceholderPatterns = [
+  /\bTBD\b/i,
+  /\bLorem ipsum\b/i,
+  /\bexample\.com\b/i,
+  /replace placeholder/i,
+  /placeholder race details/i,
+  /sample-only/i,
+  /demo only/i
+];
+
+const sampleImagePatterns = [
+  /inline-svg/i,
+  /\/samples?\//i,
+  /hartwell/i,
+  /placeholder/i,
+  /illustrated/i
+];
+
+const renderedSectionFields = [
+  'stats',
+  'schedule',
+  'volunteer',
+  'sponsors',
+  'travel',
+  'faq',
+  'faqs',
+  'charity',
+  'partners',
+  'testimonials',
+  'course',
+  'pricing'
+];
+
+const files = await privateMockupFiles();
+let failed = false;
+
+if (files.length === 0) {
+  console.log('✓ No private mockup configs found.');
+  process.exit(0);
+}
+
+for (const file of files) {
+  const relative = path.relative(root, file);
+  const errors = [];
+  let config;
+  let raw = '';
+
+  try {
+    raw = await readFile(file, 'utf8');
+    config = JSON.parse(raw);
+  } catch (error) {
+    errors.push(`$: ${error.message}`);
+  }
+
+  if (config) {
+    const schema = validateRaceConfig(config);
+    for (const error of schema.errors) errors.push(`${error.path}: ${error.message}`);
+
+    const privateMockup = config.private_mockup;
+    if (!isObject(privateMockup)) {
+      errors.push('private_mockup: Private mockup metadata is required.');
+    } else {
+      requireText(privateMockup.source_url, 'private_mockup.source_url', errors);
+      requireIsoDate(privateMockup.captured_at, 'private_mockup.captured_at', errors);
+      requireAccessToken(privateMockup.access_token, 'private_mockup.access_token', errors);
+      if (privateMockup.noindex !== true) errors.push('private_mockup.noindex: Private mockups must set noindex: true.');
+
+      if (!isObject(privateMockup.provenance)) {
+        errors.push('private_mockup.provenance: Source-derived private mockups must include provenance metadata.');
+      } else {
+        requireText(privateMockup.provenance.source_url, 'private_mockup.provenance.source_url', errors);
+        if (privateMockup.provenance.source_url && privateMockup.source_url && privateMockup.provenance.source_url !== privateMockup.source_url) {
+          errors.push('private_mockup.provenance.source_url: Must match private_mockup.source_url.');
+        }
+        if (!Array.isArray(privateMockup.provenance.source_confirmed_sections)) {
+          errors.push('private_mockup.provenance.source_confirmed_sections: Must list source-supported rendered sections.');
+        }
+      }
+
+      if (!isObject(privateMockup.uncertainty)) {
+        errors.push('private_mockup.uncertainty: Source-derived private mockups must include uncertainty metadata.');
+      } else {
+        requireText(privateMockup.uncertainty.summary, 'private_mockup.uncertainty.summary', errors);
+        if (!Array.isArray(privateMockup.uncertainty.items)) errors.push('private_mockup.uncertainty.items: Must be an array, even when empty.');
+      }
+
+      const confirmedDistanceIds = new Set(asArray(privateMockup.provenance?.source_confirmed_distance_ids));
+      const confirmedSections = new Set(asArray(privateMockup.provenance?.source_confirmed_sections));
+
+      validateRenderedSections(config, confirmedSections, errors);
+      validateDistances(config, confirmedDistanceIds, errors);
+      validateSingleDistanceCopy(config, confirmedDistanceIds, errors);
+    }
+
+    validateBannedText(config, errors);
+    validateSampleImages(config, errors);
+    validateSourceDerivedPlaceholders(config, errors);
+  }
+
+  if (errors.length > 0) {
+    failed = true;
+    console.error(`✗ ${relative}`);
+    for (const error of errors) console.error(`  - ${error}`);
+  } else {
+    console.log(`✓ ${relative}`);
+  }
+}
+
+if (failed) {
+  console.error('Private mockup validation failed. Remove sample leakage, add provenance/uncertainty, and only render source-supported sections.');
+  process.exit(1);
+}
+
+function validateBannedText(config, errors) {
+  for (const { path: jsonPath, value } of walkStrings(config)) {
+    for (const pattern of bannedTerms) {
+      if (pattern.test(value)) errors.push(`${jsonPath}: Contains banned sample term "${pattern.source}".`);
+    }
+  }
+}
+
+function validateSourceDerivedPlaceholders(config, errors) {
+  if (!config.private_mockup?.source_url) return;
+  for (const { path: jsonPath, value } of walkStrings(config)) {
+    for (const pattern of samplePlaceholderPatterns) {
+      if (pattern.test(value)) errors.push(`${jsonPath}: Source-derived private mockup still contains sample/placeholder copy.`);
+    }
+  }
+}
+
+function validateSampleImages(config, errors) {
+  for (const { path: jsonPath, value } of walkObjects(config)) {
+    if (!looksLikeImage(value)) continue;
+    const combined = [value.src, value.alt, value.placeholder, value.caption, value.source].filter(Boolean).join(' ');
+    if (sampleImagePatterns.some((pattern) => pattern.test(combined))) {
+      errors.push(`${jsonPath}: Private mockups may not use sample-only or illustrated placeholder images.`);
+    }
+    if (!value.src || !/^\/mockups\/[a-f0-9]{32,}\//i.test(value.src)) {
+      errors.push(`${jsonPath}.src: Private mockup images must be captured assets under /mockups/<access-token>/; omit the image if no public asset was captured.`);
+    }
+    if (!value.source || !/^https?:\/\//i.test(value.source)) {
+      errors.push(`${jsonPath}.source: Captured private mockup images must include their public source URL.`);
+    }
+  }
+}
+
+function validateDistances(config, confirmedDistanceIds, errors) {
+  const distances = asArray(config.distances);
+  distances.forEach((distance, index) => {
+    const base = `distances[${index}]`;
+    if (!distance?.provenance || distance.provenance.verified !== true) {
+      errors.push(`${base}.provenance.verified: Distances in source-derived private mockups must be explicitly source verified.`);
+    }
+    if (!distance?.provenance?.source_url || !/^https?:\/\//i.test(distance.provenance.source_url)) {
+      errors.push(`${base}.provenance.source_url: Verified distances must include a public source URL.`);
+    }
+    if (distance?.id && confirmedDistanceIds.size > 0 && !confirmedDistanceIds.has(distance.id)) {
+      errors.push(`${base}.id: Distance is not listed in private_mockup.provenance.source_confirmed_distance_ids.`);
+    }
+  });
+}
+
+function validateSingleDistanceCopy(config, confirmedDistanceIds, errors) {
+  if (confirmedDistanceIds.size !== 1) return;
+  const distanceNames = asArray(config.distances).map((distance) => distance?.name).filter(Boolean);
+  const joinedNames = distanceNames.map(escapeRegExp).join('|');
+  const multiDistancePattern = joinedNames
+    ? new RegExp(`\\b(${joinedNames})\\b[\\s\\S]{0,80}\\b(${joinedNames})\\b`, 'i')
+    : /\b(5K|10K|half marathon|marathon|kids['’]? mile|distances?)\b[\s\S]{0,80}\b(5K|10K|half marathon|marathon|kids['’]? mile|distances?)\b/i;
+
+  for (const { path: jsonPath, value } of walkStrings(config)) {
+    if (jsonPath.startsWith('private_mockup.')) continue;
+    if (/distances?\b/i.test(value) && /\b(2|3|4|multiple|all)\b/i.test(value)) {
+      errors.push(`${jsonPath}: References multiple distances but only one source-confirmed distance exists.`);
+    }
+    if (multiDistancePattern.test(value)) {
+      errors.push(`${jsonPath}: Mentions multiple rendered distances but only one source-confirmed distance exists.`);
+    }
+  }
+}
+
+function validateRenderedSections(config, confirmedSections, errors) {
+  for (const field of renderedSectionFields) {
+    if (!hasRenderableValue(config[field])) continue;
+    if (!confirmedSections.has(field)) {
+      errors.push(`${field}: Rendered section is present but not listed in private_mockup.provenance.source_confirmed_sections.`);
+    }
+  }
+}
+
+async function privateMockupFiles() {
+  try {
+    const entries = await readdir(mockupDir, { withFileTypes: true });
+    return entries
+      .filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+      .map((entry) => path.join(mockupDir, entry.name))
+      .sort();
+  } catch (error) {
+    if (error.code === 'ENOENT') return [];
+    throw error;
+  }
+}
+
+function requireText(value, jsonPath, errors) {
+  if (typeof value !== 'string' || value.trim() === '') errors.push(`${jsonPath}: Required non-empty string is missing.`);
+}
+
+function requireIsoDate(value, jsonPath, errors) {
+  requireText(value, jsonPath, errors);
+  if (typeof value === 'string' && Number.isNaN(Date.parse(value))) errors.push(`${jsonPath}: Must be an ISO timestamp.`);
+}
+
+function requireAccessToken(value, jsonPath, errors) {
+  if (!/^[a-f0-9]{32,}$/i.test(String(value || ''))) errors.push(`${jsonPath}: Must be 32+ hex characters from at least 128 bits of entropy.`);
+}
+
+function looksLikeImage(value) {
+  return isObject(value) && ('src' in value || 'placeholder' in value) && ('alt' in value || 'source' in value || 'caption' in value);
+}
+
+function hasRenderableValue(value) {
+  if (Array.isArray(value)) return value.length > 0;
+  if (isObject(value)) return Object.keys(value).length > 0;
+  return value !== undefined && value !== null && value !== '';
+}
+
+function asArray(value) {
+  return Array.isArray(value) ? value : [];
+}
+
+function isObject(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function* walkStrings(value, currentPath = '$') {
+  if (typeof value === 'string') {
+    yield { path: currentPath, value };
+    return;
+  }
+  if (Array.isArray(value)) {
+    for (let i = 0; i < value.length; i += 1) yield* walkStrings(value[i], `${currentPath}[${i}]`);
+    return;
+  }
+  if (isObject(value)) {
+    for (const [key, child] of Object.entries(value)) yield* walkStrings(child, currentPath === '$' ? key : `${currentPath}.${key}`);
+  }
+}
+
+function* walkObjects(value, currentPath = '$') {
+  if (Array.isArray(value)) {
+    for (let i = 0; i < value.length; i += 1) yield* walkObjects(value[i], `${currentPath}[${i}]`);
+    return;
+  }
+  if (isObject(value)) {
+    yield { path: currentPath, value };
+    for (const [key, child] of Object.entries(value)) yield* walkObjects(child, currentPath === '$' ? key : `${currentPath}.${key}`);
+  }
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}

@@ -24,160 +24,43 @@
   },
   "stats": [
     {
-      "value": "Concept",
-      "label": "Private Preview"
+      "value": "Private",
+      "label": "Noindex concept"
     },
     {
-      "value": "4",
-      "label": "Sample Distances"
-    },
-    {
-      "value": "Noindex",
-      "label": "Search Robots"
+      "value": "1",
+      "label": "Confirmed distance"
     },
     {
       "value": "2",
-      "label": "Public Images"
+      "label": "Public images"
     }
   ],
   "distances": [
     {
-      "id": "half",
-      "name": "Half Marathon",
-      "distance": "13.1 mi",
-      "elevation_gain": "+247 ft",
-      "start_time": "7:30 AM",
-      "aid_stations": 6,
-      "profile": "Rolling",
-      "map_label": "Half Marathon Loop",
+      "id": "marathon",
+      "name": "Marathon",
+      "distance": "26.2 mi",
       "featured": true,
-      "price": "$75",
-      "price_amount": "75",
+      "map_label": "Marathon course",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://www.baa.org/races/boston-marathon",
+        "method": "Detected from source page title/name in private mockup fixture."
+      },
       "highlights": [
-        "Tech shirt + finisher medal",
-        "Chip timing + certified course",
-        "Post-race pancake breakfast"
+        "Official race details should be verified on the current race site"
       ]
-    },
-    {
-      "id": "10k",
-      "name": "10K",
-      "distance": "6.2 mi",
-      "elevation_gain": "+118 ft",
-      "start_time": "7:30 AM",
-      "aid_stations": 3,
-      "profile": "Rolling",
-      "map_label": "10K Loop",
-      "price": "$45",
-      "price_amount": "45",
-      "highlights": [
-        "Tech shirt + finisher medal",
-        "Chip timing",
-        "Pancake breakfast included"
-      ],
-      "featured": false
-    },
-    {
-      "id": "5k",
-      "name": "5K",
-      "distance": "3.1 mi",
-      "elevation_gain": "+42 ft",
-      "start_time": "8:00 AM",
-      "aid_stations": 1,
-      "profile": "Flat",
-      "map_label": "5K Loop",
-      "price": "$30",
-      "price_amount": "30",
-      "highlights": [
-        "Race shirt + medal",
-        "Family-friendly · strollers welcome",
-        "Pancake breakfast included"
-      ],
-      "featured": false
-    },
-    {
-      "id": "kids",
-      "name": "Kids' Mile",
-      "distance": "1 mi",
-      "elevation_gain": "Flat",
-      "start_time": "9:30 AM",
-      "aid_stations": 1,
-      "profile": "Flat",
-      "map_label": "Kids' Loop",
-      "price": "Free",
-      "price_amount": "0",
-      "highlights": [
-        "Race shirt + medal",
-        "Parent escort welcome",
-        "Pre-race warm-up"
-      ],
-      "featured": false
     }
   ],
   "registration": {
     "url": "https://www.baa.org/races/boston-marathon",
     "platform": "other",
-    "cta_label": "Visit current race site",
-    "opens": "2026-01-15"
+    "cta_label": "Visit official race site"
   },
-  "volunteer": {
-    "signup_url": "https://example.com/volunteer",
-    "description": "3–4 hour race-weekend shifts supporting aid stations, cheer corners, packet pickup, and finish-line hospitality.",
-    "photo": {
-      "alt": "Illustrated Hartwell volunteers on race morning",
-      "placeholder": "inline-svg"
-    }
-  },
-  "schedule": [
-    {
-      "day": "Friday · May 17",
-      "name": "Bib + Race Kit Pickup",
-      "time": "3 – 7 PM",
-      "location": "Hartwell Town Hall",
-      "applies_to_distances": [
-        "all"
-      ]
-    },
-    {
-      "day": "Saturday · May 18",
-      "name": "Half Marathon & 10K Start",
-      "time": "7:30 AM",
-      "location": "Town Common",
-      "applies_to_distances": [
-        "half",
-        "10k"
-      ]
-    },
-    {
-      "day": "Saturday · May 18",
-      "name": "5K Start",
-      "time": "8:00 AM",
-      "location": "Town Common",
-      "applies_to_distances": [
-        "5k"
-      ]
-    },
-    {
-      "day": "Saturday · May 18",
-      "name": "Kids' Mile",
-      "time": "9:30 AM",
-      "location": "Town Common",
-      "applies_to_distances": [
-        "kids"
-      ]
-    }
-  ],
-  "sponsors": [
-    "Hartwell Bank",
-    "Tory's Diner",
-    "SUMMIT ORTHO",
-    "The Lighthouse Café",
-    "Bridgepoint Realty",
-    "Mountain & Co."
-  ],
   "seo": {
     "meta_title": "Boston Marathon — Private StartLine Concept",
-    "meta_description": "A private StartLine concept preview generated from public race information."
+    "meta_description": "A private StartLine concept preview generated from public Boston Marathon race information."
   },
   "private_mockup": {
     "generated": true,
@@ -202,6 +85,30 @@
         "source": "https://www.baa.org/wp-content/uploads/2025/11/BAALogo-1.png"
       }
     ],
-    "notes": "Generated from public page metadata and public image URLs. Replace placeholder race details during customer-specific production."
+    "provenance": {
+      "source_url": "https://www.baa.org/races/boston-marathon",
+      "captured_at": "2026-06-27T19:58:43.344Z",
+      "source_confirmed_sections": ["stats"],
+      "source_confirmed_distance_ids": ["marathon"],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "page metadata/title",
+          "confidence": "medium"
+        },
+        {
+          "path": "distances[0]",
+          "source": "event name/title",
+          "confidence": "high"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Only source-confirmed fields are rendered in this private fixture; unverified optional details are omitted.",
+      "items": [
+        "Start time, course profile, certification, pricing, aid-station count, schedule, sponsors, volunteer details, and FAQ were not source-confirmed in this fixture and are intentionally omitted."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups."
   }
 }
