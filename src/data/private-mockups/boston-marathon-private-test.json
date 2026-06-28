@@ -74,7 +74,9 @@
     "provenance": {
       "source_url": "https://www.baa.org/races/boston-marathon",
       "captured_at": "2026-06-27T19:58:43.344Z",
-      "source_confirmed_sections": [],
+      "source_confirmed_sections": [
+        "runner_decision_checklist"
+      ],
       "source_confirmed_distance_ids": [
         "marathon"
       ],
@@ -88,6 +90,31 @@
           "path": "distances[0]",
           "source": "event name/title",
           "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "private mockup fixture source page date",
+          "confidence": "medium"
+        },
+        {
+          "path": "event.location",
+          "source": "private mockup fixture source page location",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "private mockup fixture source page date",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "event name/title",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "private mockup fixture source page location",
+          "confidence": "medium"
         }
       ]
     },
@@ -98,5 +125,35 @@
       ]
     },
     "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups."
+  },
+  "runner_decision_checklist": {
+    "headline": "Before you register",
+    "intro": "A quick, source-backed checklist of race details to review before you continue to official registration.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Tuesday, May 18, 2027",
+        "source_path": "event.date",
+        "source_url": "https://www.baa.org/races/boston-marathon"
+      },
+      {
+        "id": "distance",
+        "label": "Distance",
+        "value": "Marathon (26.2 mi)",
+        "source_path": "distances",
+        "source_url": "https://www.baa.org/races/boston-marathon",
+        "applies_to_distance_ids": [
+          "marathon"
+        ]
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Boston, MA",
+        "source_path": "event.location",
+        "source_url": "https://www.baa.org/races/boston-marathon"
+      }
+    ]
   }
 }

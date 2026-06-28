@@ -460,6 +460,7 @@ function buildConfig(facts, assets, metaInfo) {
     details.highlights = [facts.certification?.value, facts.courseProfile?.value].filter(Boolean).slice(0, 2);
     return details;
   });
+  const runnerDecisionChecklist = buildRunnerDecisionChecklist(facts, metaInfo);
 
   return removeUndefined({
     identity: {
@@ -502,6 +503,7 @@ function buildConfig(facts, assets, metaInfo) {
     } : undefined,
     schedule: facts.scheduleItems.length ? facts.scheduleItems.map(({ provenance, ...item }) => item) : (facts.startTime?.value ? [{ day: formatDateForCopy(facts.eventDate.value), name: `${distances[0].name} start`, time: facts.startTime.value, location: facts.location.value, applies_to_distances: [distances[0].id] }] : []),
     faqs: facts.faqs.map(({ provenance, ...item }) => item),
+    runner_decision_checklist: runnerDecisionChecklist,
     seo: {
       meta_title: `${facts.name.value} — Race Website Preview`,
       meta_description: description
@@ -517,7 +519,7 @@ function buildConfig(facts, assets, metaInfo) {
       route: `/private/mockups/${metaInfo.token}/`,
       template: metaInfo.template,
       assets,
-      provenance: buildPrivateMockupProvenance(facts, metaInfo, { hasSchedule: Boolean(facts.startTime?.value) }),
+      provenance: buildPrivateMockupProvenance(facts, metaInfo, { hasSchedule: Boolean(facts.startTime?.value), hasRunnerDecisionChecklist: Boolean(runnerDecisionChecklist?.items?.length) }),
       confidence: summarizeConfidence(facts),
       uncertainty: {
         summary: facts.uncertainties.length ? 'Some source facts were not available with high confidence and were omitted from rendered sections.' : 'Required private mockup fields were source-confirmed during capture.',
@@ -528,13 +530,72 @@ function buildConfig(facts, assets, metaInfo) {
   });
 }
 
+function buildRunnerDecisionChecklist(facts, metaInfo) {
+  const items = [];
+  const sourceUrl = metaInfo.sourceUrl;
+  const distanceIds = facts.distances.map((distance) => distance.id);
+  const add = (id, label, value, options = {}) => {
+    const cleanedValue = normalizeDisplayCopy(value);
+    if (!cleanedValue || items.some((item) => item.id === id)) return;
+    items.push(removeUndefined({
+      id,
+      label,
+      value: cleanedValue,
+      detail: options.detail ? normalizeDisplayCopy(options.detail) : undefined,
+      source_path: options.sourcePath,
+      source_url: sourceUrl,
+      applies_to_distance_ids: options.appliesToDistanceIds
+    }));
+  };
+
+  if (facts.eventDate?.value) add('date', 'Race date', formatDateForCopy(facts.eventDate.value), { sourcePath: 'event.date' });
+  if (facts.distances.length) {
+    add('distance', facts.distances.length === 1 ? 'Distance' : 'Distances', facts.distances.map((distance) => `${distance.name} (${distance.distance})`).join(', '), { sourcePath: 'distances', appliesToDistanceIds: distanceIds });
+  }
+  if (facts.startTime?.value) add('start-time', 'Start time', facts.startTime.value, { sourcePath: 'distances[].start_time', appliesToDistanceIds: distanceIds });
+  if (facts.location?.value) {
+    const detail = facts.sourceSections?.about?.value?.match(/starts and finishes[^.]+\./i)?.[0];
+    add('location', 'Location', facts.location.value, { detail, sourcePath: 'event.location' });
+  }
+  if (facts.price?.value) add('price', 'Current listed price', facts.price.value, { sourcePath: 'distances[].price', appliesToDistanceIds: distanceIds });
+
+  const packetSchedule = facts.scheduleItems.find((item) => /packet/i.test(item.name));
+  const packetFaq = facts.faqs.find((faq) => /packet/i.test(faq.question));
+  if (packetSchedule) {
+    add('packet-pickup', 'Packet pick-up', [packetSchedule.day, packetSchedule.time, packetSchedule.location].filter(Boolean).join(' · '), { sourcePath: 'schedule', appliesToDistanceIds: distanceIds });
+  } else if (packetFaq) {
+    add('packet-pickup', 'Packet pick-up', packetFaq.answer, { sourcePath: 'faqs', appliesToDistanceIds: distanceIds });
+  }
+
+  if (facts.courseProfile?.value || facts.certification?.value) {
+    add('course', 'Course notes', [facts.courseProfile?.value, facts.certification?.value].filter(Boolean).join(' · '), { sourcePath: 'distances[].profile', appliesToDistanceIds: distanceIds });
+  }
+  if (facts.aidStations?.value) add('aid-stations', 'Aid stations', `${facts.aidStations.value} crewed aid stations listed`, { sourcePath: 'distances[].aid_stations', appliesToDistanceIds: distanceIds });
+
+  facts.faqs.forEach((faq) => {
+    const combined = `${faq.question} ${faq.answer}`;
+    if (/refund|transfer/i.test(combined)) add('refunds-transfers', 'Refunds/transfers', faq.answer, { sourcePath: 'faqs' });
+    else if (/participants receive|shirt|swag|medal/i.test(combined)) add('swag', 'Shirt / medal', faq.answer, { sourcePath: 'faqs' });
+    else if (/time limit|course is open/i.test(combined)) add('time-limit', 'Time limit', faq.answer, { sourcePath: 'faqs', appliesToDistanceIds: distanceIds });
+    else if (/awards|prize/i.test(combined)) add('awards', 'Awards', faq.answer, { sourcePath: 'faqs' });
+  });
+
+  if (!items.length) return undefined;
+  return {
+    headline: 'Before you register',
+    intro: 'A quick, source-backed checklist of race details to review before you continue to official registration.',
+    items
+  };
+}
+
 function buildPrivateMockupProvenance(facts, metaInfo, rendered) {
   return {
     source_url: metaInfo.sourceUrl,
     captured_at: metaInfo.capturedAt,
     source_confirmed_sections: [
       ...(rendered.hasSchedule ? ['schedule'] : []),
-      ...(facts.faqs.length ? ['faqs'] : [])
+      ...(facts.faqs.length ? ['faqs'] : []),
+      ...(rendered.hasRunnerDecisionChecklist ? ['runner_decision_checklist'] : [])
     ],
     source_confirmed_distance_ids: facts.distances.map((distance) => distance.id),
     items: collectProvenance(facts)
@@ -560,6 +621,20 @@ function collectProvenance(facts) {
   add('distances[].certification', facts.certification);
   add('distances[].aid_stations', facts.aidStations);
   add('distances[].profile', facts.courseProfile);
+  add('runner_decision_checklist.items.date', facts.eventDate);
+  add('runner_decision_checklist.items.distance', facts.distances[0]?.provenance);
+  add('runner_decision_checklist.items.start-time', facts.startTime);
+  add('runner_decision_checklist.items.location', facts.location);
+  add('runner_decision_checklist.items.price', facts.price);
+  add('runner_decision_checklist.items.course', facts.courseProfile || facts.certification);
+  add('runner_decision_checklist.items.aid-stations', facts.aidStations);
+  add('runner_decision_checklist.items.packet-pickup', facts.sourceSections?.packet_pick_up);
+  facts.faqs.forEach((faq) => {
+    if (/refund|transfer/i.test(`${faq.question} ${faq.answer}`)) add('runner_decision_checklist.items.refunds-transfers', faq.provenance);
+    if (/participants receive|shirt|swag|medal/i.test(`${faq.question} ${faq.answer}`)) add('runner_decision_checklist.items.swag', faq.provenance);
+    if (/time limit|course is open/i.test(`${faq.question} ${faq.answer}`)) add('runner_decision_checklist.items.time-limit', faq.provenance);
+    if (/awards|prize/i.test(`${faq.question} ${faq.answer}`)) add('runner_decision_checklist.items.awards', faq.provenance);
+  });
   facts.distances.forEach((distance, index) => add(`distances[${index}]`, distance.provenance));
   facts.scheduleItems.forEach((item, index) => add(`schedule[${index}]`, item.provenance));
   facts.faqs.forEach((item, index) => add(`faqs[${index}]`, item.provenance));
@@ -787,4 +862,4 @@ function formatTimeLabel(value) {
   return String(value || '').replace(/\b(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b/gi, (_, hour, minute = '00', period) => `${Number(hour)}:${minute} ${period.toUpperCase()}`);
 }
 
-export { extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy };
+export { buildRunnerDecisionChecklist, extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy };

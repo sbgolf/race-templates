@@ -28,6 +28,7 @@ The validation flow has two private-mockup gates: `npm run validate:private-mock
 - Never spreads a sample race config into a private mockup. Sample distances, schedules, sponsors, FAQs, charity copy, images, and local boilerplate must not appear unless the source page backs them.
 - Stores source/capture metadata, provenance, confidence counts, and `private_mockup.uncertainty` in the JSON config.
 - Adds a conservative `startline_value` narrative for Community private mockups. The rendered private page explains how StartLine reduces runner friction, surfaces trust signals, makes registration CTAs easier to find, supports mobile/SEO readiness, and prepares registration-click tracking without promising registration growth.
+- Adds a source-backed `runner_decision_checklist` for Community private mockups when enough facts are confirmed. The rendered “Before you register” section appears before the registration cards and uses a `runner-checklist` tracked CTA to the official registration URL.
 - Normalizes generated display copy so source paragraphs do not expose raw URLs/domains or common scrape artifacts; course/map resources are moved into labeled links and RunSignup registration links are labeled with the RunSignup platform/CTA.
 - Generates `private_mockup.access_token` with Node crypto randomness (`randomBytes(16).toString('hex')`), producing an unguessable 128-bit token that is not derived from the race name, race slug, hostname, or source URL.
 - Fails without writing a config when source-backed required fields (race name, event date, location, at least one event distance) cannot be confirmed. Optional logistics are omitted and recorded as uncertainties instead of filled with placeholders.
@@ -43,7 +44,7 @@ The generated route is intentionally under `/private/mockups/<access-token>/` an
 
 The page also shows a visible private-concept banner: internal/Steve review only, not prospect-ready until approved.
 
-Community private mockups also render a private StartLine value narrative marked with `data-private-value-narrative`. Public sample previews must not render this block. Frame outcomes around a clearer registration path, registration click-throughs, registration intent, and measurement-ready tracking. Do not use guaranteed growth claims such as guaranteed registrations, double signups, increased registrations, boosted registrations, or conversion lift.
+Community private mockups also render a private StartLine value narrative marked with `data-private-value-narrative` and, when configured, a private runner decision checklist marked with `data-runner-decision-checklist`. Public sample previews must not render either block. Frame outcomes around a clearer registration path, registration click-throughs, registration intent, and measurement-ready tracking. Do not use guaranteed growth claims such as guaranteed registrations, double signups, increased registrations, boosted registrations, or conversion lift.
 
 Token rules:
 

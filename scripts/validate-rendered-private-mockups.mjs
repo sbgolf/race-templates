@@ -29,6 +29,10 @@ for (const file of files) {
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);
   }
+  const checklistItemCount = (html.match(/data-checklist-item-id=/g) || []).length;
+  if (!html.includes('data-runner-decision-checklist')) errors.push('Private Community mockup is missing the runner decision checklist.');
+  if (checklistItemCount < 3) errors.push(`Runner decision checklist renders ${checklistItemCount} items; expected at least 3.`);
+  if (!html.includes('data-analytics-placement="runner-checklist"')) errors.push('Runner decision checklist CTA is missing register-click tracking placement "runner-checklist".');
 
   const relative = path.relative(root, file);
   if (errors.length) {

@@ -169,7 +169,8 @@
       "captured_at": "2026-06-28T01:31:14.363Z",
       "source_confirmed_sections": [
         "schedule",
-        "faqs"
+        "faqs",
+        "runner_decision_checklist"
       ],
       "source_confirmed_distance_ids": [
         "half-marathon"
@@ -304,6 +305,66 @@
           "path": "private_mockup.assets[1]",
           "source": "public image URL on source page",
           "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "source text: \"Saturday, March 7, 2026\"",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "event name/title: \"6th ANNUAL ASHLAND CITY HALF-MARATHON\"",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "source text: \"Start time: 7:30am\"",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "source text near date/location and ABOUT section text",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "source text: \"Entry fee is $60\"",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "PACKET PICK-UP section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "COURSE section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.aid-stations",
+          "source": "AID STATIONS / FLUIDS section text",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.refunds-transfers",
+          "source": "REGISTRATION section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "REGISTRATION section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.time-limit",
+          "source": "COURSE section text",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.awards",
+          "source": "AWARDS & PRIZE MONEY section text",
+          "confidence": "medium"
         }
       ]
     },
@@ -319,5 +380,117 @@
       ]
     },
     "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups."
+  },
+  "runner_decision_checklist": {
+    "headline": "Before you register",
+    "intro": "A quick, source-backed checklist of race details to review before you continue to official registration.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, March 7, 2026",
+        "source_path": "event.date",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/"
+      },
+      {
+        "id": "distance",
+        "label": "Distance",
+        "value": "Half Marathon (13.1 mi)",
+        "source_path": "distances",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
+        "applies_to_distance_ids": [
+          "half-marathon"
+        ]
+      },
+      {
+        "id": "start-time",
+        "label": "Start time",
+        "value": "7:30 AM",
+        "source_path": "distances[].start_time",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
+        "applies_to_distance_ids": [
+          "half-marathon"
+        ]
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Ashland City, TN",
+        "detail": "Starts and finishes next to the Cumberland River at Riverbluff Park in Ashland City, TN.",
+        "source_path": "event.location",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/"
+      },
+      {
+        "id": "price",
+        "label": "Current listed price",
+        "value": "$60",
+        "source_path": "distances[].price",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
+        "applies_to_distance_ids": [
+          "half-marathon"
+        ]
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pick-up",
+        "value": "Friday, March 6th · 11:00 AM – 6:00 PM · Nashville Running Company at 820 Woodland St, Nashville, TN 37206",
+        "source_path": "schedule",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
+        "applies_to_distance_ids": [
+          "half-marathon"
+        ]
+      },
+      {
+        "id": "course",
+        "label": "Course notes",
+        "value": "Fast, flat · USATF-certified · Riverside · USATF certified #TN22002MS",
+        "source_path": "distances[].profile",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
+        "applies_to_distance_ids": [
+          "half-marathon"
+        ]
+      },
+      {
+        "id": "aid-stations",
+        "label": "Aid stations",
+        "value": "5 crewed aid stations listed",
+        "source_path": "distances[].aid_stations",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
+        "applies_to_distance_ids": [
+          "half-marathon"
+        ]
+      },
+      {
+        "id": "refunds-transfers",
+        "label": "Refunds/transfers",
+        "value": "Refunds will not be issued; bibs may be transferred up to 5pm Wednesday March 4th.",
+        "source_path": "faqs",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/"
+      },
+      {
+        "id": "swag",
+        "label": "Shirt / medal",
+        "value": "Participants receive a Next Level race T-shirt, with all finishers receiving a medal.",
+        "source_path": "faqs",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/"
+      },
+      {
+        "id": "time-limit",
+        "label": "Time limit",
+        "value": "The course is open for 3 hours.",
+        "source_path": "faqs",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
+        "applies_to_distance_ids": [
+          "half-marathon"
+        ]
+      },
+      {
+        "id": "awards",
+        "label": "Awards",
+        "value": "Overall, masters, and age-group awards are listed by the source page.",
+        "source_path": "faqs",
+        "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/"
+      }
+    ]
   }
 }

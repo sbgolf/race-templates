@@ -16,6 +16,9 @@ const bannedTerms = [
 
 const samplePlaceholderPatterns = [
   /\bTBD\b/i,
+  /\bTBA\b/i,
+  /\bunknown\b/i,
+  /\bcoming soon\b/i,
   /\bLorem ipsum\b/i,
   /\bexample\.com\b/i,
   /replace placeholder/i,
@@ -54,8 +57,13 @@ const renderedSectionFields = [
   'partners',
   'testimonials',
   'course',
-  'pricing'
+  'pricing',
+  'runner_decision_checklist'
 ];
+
+const runnerChecklistItemIds = new Set([
+  'date', 'distance', 'start-time', 'location', 'price', 'packet-pickup', 'course', 'aid-stations', 'refunds-transfers', 'swag', 'awards', 'time-limit'
+]);
 
 const files = await privateMockupFiles();
 let failed = false;
@@ -116,6 +124,7 @@ for (const file of files) {
       validateRenderedSections(config, confirmedSections, errors);
       validateDistances(config, confirmedDistanceIds, errors);
       validateSingleDistanceCopy(config, confirmedDistanceIds, errors);
+      validateRunnerDecisionChecklist(config, confirmedSections, confirmedDistanceIds, errors);
     }
 
     validateBannedText(config, errors);
@@ -184,7 +193,37 @@ function isDisplayCopyPath(jsonPath) {
   if (/\.url$/.test(jsonPath)) return false;
   if (jsonPath.startsWith('private_mockup.assets')) return false;
   if (jsonPath.startsWith('private_mockup.provenance')) return false;
-  return /^(identity|event|organization|distances|registration\.cta_label|story|schedule|faqs?|seo|startline_value)\b/.test(jsonPath);
+  return /^(identity|event|organization|distances|registration\.cta_label|story|schedule|faqs?|seo|startline_value|runner_decision_checklist)\b/.test(jsonPath);
+}
+
+function validateRunnerDecisionChecklist(config, confirmedSections, confirmedDistanceIds, errors) {
+  const checklist = config.runner_decision_checklist;
+  if (!hasRenderableValue(checklist)) return;
+  if (!confirmedSections.has('runner_decision_checklist')) {
+    errors.push('runner_decision_checklist: Rendered checklist is present but not listed in private_mockup.provenance.source_confirmed_sections.');
+  }
+  const provenancePaths = new Set(asArray(config.private_mockup?.provenance?.items).map((item) => item?.path).filter(Boolean));
+  const seen = new Set();
+  asArray(checklist.items).forEach((item, index) => {
+    const base = `runner_decision_checklist.items[${index}]`;
+    if (!isObject(item)) {
+      errors.push(`${base}: Checklist item must be an object.`);
+      return;
+    }
+    if (!item.id || !runnerChecklistItemIds.has(item.id)) errors.push(`${base}.id: Unknown checklist item id.`);
+    if (item.id && seen.has(item.id)) errors.push(`${base}.id: Duplicate checklist item id.`);
+    if (item.id) seen.add(item.id);
+    if (!item.value || typeof item.value !== 'string' || !item.value.trim()) errors.push(`${base}.value: Checklist item value must be non-empty.`);
+    if (!item.source_path || typeof item.source_path !== 'string') errors.push(`${base}.source_path: Private checklist items must include source_path.`);
+    if (!item.source_url || !/^https?:\/\//i.test(item.source_url)) errors.push(`${base}.source_url: Private checklist items must include an absolute source_url.`);
+    const itemProvenancePath = item.id ? `runner_decision_checklist.items.${item.id}` : '';
+    if (itemProvenancePath && !provenancePaths.has(itemProvenancePath)) {
+      errors.push(`${base}.source_path: Missing provenance item at ${itemProvenancePath}.`);
+    }
+    asArray(item.applies_to_distance_ids).forEach((id, idIndex) => {
+      if (confirmedDistanceIds.size > 0 && !confirmedDistanceIds.has(id)) errors.push(`${base}.applies_to_distance_ids[${idIndex}]: Distance id is not source-confirmed.`);
+    });
+  });
 }
 
 function validateSampleImages(config, errors) {
