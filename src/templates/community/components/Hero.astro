@@ -18,9 +18,11 @@ const heroImageAlt = race.identity?.hero_image?.alt || `Race day image for ${rac
       <h1>{race.identity?.tagline || race.identity?.name}</h1>
       <div class="hero-date">{displayDate}</div>
       <p class="lead">{race.seo?.meta_description}</p>
+      {(race.distances || []).length > 1 ? (
       <div class="hero-distances">
         {race.distances?.map((distance) => <span class:list={["dist-chip", { flagship: distance.id === featuredDistance?.id }]}>{distance.name}</span>)}
       </div>
+      ) : null}
       <div class="hero-cta">
         <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel}</a>
         <button class="btn btn-ghost" onclick="scrollToId('course')">See the Course</button>

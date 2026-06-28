@@ -1,34 +1,39 @@
 ---
 const { race } = Astro.props;
-const scheduleByDay = (race.schedule || []).reduce((groups, item) => {
+const schedule = race.schedule || [];
+const scheduleByDay = schedule.reduce((groups, item) => {
   const key = item.day || 'Race Day';
   groups[key] ||= [];
   groups[key].push(item);
   return groups;
 }, {});
 const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];
+const isSingleDistance = (race.distances || []).length === 1;
 ---
 
+{schedule.length > 0 ? (
 <section class="sched" id="schedule">
   <div class="wrap">
     <div class="sched-head reveal">
-      <div class="kicker">Race Weekend</div>
-      <h2 class="sec-title">A whole weekend, <em>not just a race</em>.</h2>
-      <p class="lead">Pickup Friday, race Saturday morning, awards and pancakes after. Schedule below filters based on your selected distance.</p>
+      <div class="kicker">Race Schedule</div>
+      <h2 class="sec-title">{isSingleDistance ? <>Key <em>times</em>.</> : <>Race weekend, <em>organized</em>.</>}</h2>
+      <p class="lead">{isSingleDistance ? 'Confirmed schedule items from the race configuration.' : 'Schedule below filters based on your selected distance.'}</p>
+      {!isSingleDistance ? (
       <div class="sched-filter">
         <span class="dot"></span>
         Showing schedule for: <b id="filterLabel">{featuredDistance?.name}</b>
       </div>
+      ) : null}
     </div>
 
     <div class="timeline">
       {Object.entries(scheduleByDay).map(([day, items]) => <div class="tl-day">
         <div class="date">{day}</div>
-        <h3>{day.includes('Friday') ? 'Packet Pickup' : 'Race Day'}</h3>
+        <h3>{items[0]?.group_title || (day.includes('Friday') ? 'Packet Pickup' : 'Race Day')}</h3>
         {items.map((item) => <div class="tl-event" data-distance={(item.applies_to_distances || ['all']).join(',')}>
           <div>
             <div class="tl-event-name">{item.name}</div>
-            <small>{item.location}</small>
+            {item.location ? <small>{item.location}</small> : null}
           </div>
           <div class="tl-event-time">{item.time}</div>
         </div>)}
@@ -36,6 +41,7 @@ const featuredDistance = race.distances?.find((distance) => distance.featured) |
     </div>
   </div>
 </section>
+) : null}
 
 <script is:inline>
   document.addEventListener('community-distance-change',(event)=>{

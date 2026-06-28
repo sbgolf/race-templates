@@ -19,11 +19,12 @@ Output:
 ## What the generator does
 
 - Fetches the public race website HTML using credential-free `fetch`.
-- Extracts public metadata (`title`, `description`, JSON-LD event fields when present) and up to two public JPG/PNG/WebP images from `og:image`, `twitter:image`, and page `<img>` tags.
-- Builds a small Community-template config by default, because Community is the safest generic fit unless the audit workflow identifies an obvious Destination Major or Performance fit.
-- Stores source/capture metadata under `private_mockup` in the JSON config.
+- Extracts public metadata, event date/location, event distances confirmed from the event name/heading/title, registration links, selected logistics, and up to two public JPG/PNG/WebP images from `og:image`, `twitter:image`, and page `<img>` tags.
+- Builds a minimal Community-template config by default, because Community is the safest generic fit unless the audit workflow identifies an obvious Destination Major or Performance fit.
+- Never spreads a sample race config into a private mockup. Sample distances, schedules, sponsors, FAQs, charity copy, images, and local boilerplate must not appear unless the source page backs them.
+- Stores source/capture metadata, provenance, confidence counts, and `private_mockup.uncertainties` in the JSON config.
 - Generates `private_mockup.access_token` with Node crypto randomness (`randomBytes(16).toString('hex')`), producing an unguessable 128-bit token that is not derived from the race name, race slug, hostname, or source URL.
-- Leaves generated race logistics as placeholders where the public source did not expose structured details; customer-specific production should replace those before launch.
+- Fails without writing a config when source-backed required fields (race name, event date, location, at least one event distance) cannot be confirmed. Optional logistics are omitted and recorded as uncertainties instead of filled with placeholders.
 
 ## Privacy/indexing guardrails
 

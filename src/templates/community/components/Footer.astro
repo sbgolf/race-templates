@@ -1,6 +1,27 @@
 ---
 const { race } = Astro.props;
 const year = race.event?.date ? new Date(`${race.event.date}T12:00:00`).getFullYear() : new Date().getFullYear();
+const registerUrl = race.registration?.url || '#entry';
+const registerLabel = race.registration?.cta_label || 'Register';
+const hasCourse = (race.distances || []).length > 0;
+const hasSchedule = (race.schedule || []).length > 0;
+const hasStory = Boolean(race.story || race.private_mockup?.generated);
+const hasGallery = Boolean((race.private_mockup?.assets || []).length || (race.gallery || race.gallery_images || []).length);
+const hasVolunteer = Boolean(race.volunteer?.description || race.volunteer?.signup_url || (race.volunteer?.items || race.volunteer?.benefits || []).length || race.volunteer?.photo?.src);
+const hasSponsors = (race.sponsors || []).length > 0;
+const hasFaq = (race.faq || race.faqs || []).length > 0;
+const raceLinks = [
+  hasCourse ? { href: '#course', label: 'Course' } : null,
+  hasSchedule ? { href: '#schedule', label: 'Schedule' } : null,
+  { href: '#entry', label: 'Register' },
+  hasVolunteer ? { href: '#volunteer', label: 'Volunteer' } : null
+].filter(Boolean);
+const aboutLinks = [
+  hasStory ? { href: '#story', label: race.private_mockup?.generated ? 'Source-backed details' : 'Our Race' } : null,
+  hasGallery ? { href: '#gallery', label: 'Gallery' } : null,
+  hasSponsors ? { href: '#sponsors', label: 'Sponsors' } : null,
+  hasFaq ? { href: '#faq', label: 'FAQ' } : null
+].filter(Boolean);
 ---
 
 <footer>
@@ -15,12 +36,12 @@ const year = race.event?.date ? new Date(`${race.event.date}T12:00:00`).getFullY
       </div>
       <p>{race.seo?.meta_description || race.identity?.tagline}</p>
     </div>
-    <div><div class="foot-heading">Race</div><ul><li><a href="#course">Course</a></li><li><a href="#schedule">Weekend</a></li><li><a href="#entry">Register</a></li><li><a href="#volunteer">Volunteer</a></li></ul></div>
-    <div><div class="foot-heading">About</div><ul><li><a href="#story">Our Race</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
-    <div><div class="foot-heading">Connect</div><ul><li><a href="#">Newsletter</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">Race Photos</a></li></ul></div>
+    <div><div class="foot-heading">Race</div><ul>{raceLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div>
+    {aboutLinks.length ? <div><div class="foot-heading">About</div><ul>{aboutLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div> : null}
+    <div><div class="foot-heading">Official site</div><ul><li><a href={registerUrl} target="_blank" rel="noopener">{registerLabel}</a></li>{race.private_mockup?.source_url ? <li><a href={race.private_mockup.source_url} target="_blank" rel="noopener">Source page</a></li> : null}</ul></div>
   </div>
   <div class="foot-bottom">
     <span>© {year} {race.identity?.name}{race.organization?.name ? ` · A program of ${race.organization.name}` : ''}</span>
-    <span>Powered by [BRAND]</span>
+    <span>{race.private_mockup?.generated ? 'Private StartLine concept preview' : 'Powered by StartLine Sites'}</span>
   </div>
 </footer>

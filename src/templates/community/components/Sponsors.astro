@@ -1,17 +1,15 @@
 ---
 const { race } = Astro.props;
+const sponsors = (race.sponsors || []).filter(Boolean);
 ---
 
+{sponsors.length > 0 ? (
 <div class="sponsors">
   <div class="wrap">
     <p class="sp-lab">Proudly Supported By</p>
     <div class="sp-row">
-      <span>Hartwell Bank</span>
-      <span>Tory's Diner</span>
-      <span>SUMMIT ORTHO</span>
-      <span>The Lighthouse Café</span>
-      <span>Bridgepoint Realty</span>
-      <span>Mountain &amp; Co.</span>
+      {sponsors.map((sponsor) => <span>{sponsor}</span>)}
     </div>
   </div>
 </div>
+) : null}

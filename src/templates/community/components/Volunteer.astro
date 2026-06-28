@@ -1,49 +1,30 @@
 ---
 const { race } = Astro.props;
-const volunteerUrl = race.volunteer?.signup_url;
+const volunteer = race.volunteer;
+const volunteerUrl = volunteer?.signup_url;
+const volunteerItems = volunteer?.items || volunteer?.benefits || [];
+const shouldRender = Boolean(volunteer?.description || volunteerUrl || volunteerItems.length || volunteer?.photo?.src);
 ---
 
+{shouldRender ? (
 <section class="vol" id="volunteer">
   <div class="wrap">
     <div class="vol-grid">
       <div class="reveal">
         <div class="kicker">Volunteers</div>
-        <h2>The race only works because <em>340 people</em> show up to help.</h2>
-        <p>{race.volunteer?.description || 'Every aid station, cheer corner, and finish-line moment depends on volunteers.'}</p>
-        <ul class="vol-list">
-          <li>3–4 hour shifts, Friday or Saturday</li>
-          <li>Free race entry credit for next year's event</li>
-          <li>Volunteer brunch Sunday morning at Tory's</li>
-          <li>Kids 12+ welcome alongside a parent</li>
-        </ul>
-        {volunteerUrl ? <a class="btn btn-accent" href={volunteerUrl} target="_blank" rel="noopener">Volunteer with us →</a> : null}
+        <h2 set:html={volunteer?.headline || 'Volunteer information'}></h2>
+        {volunteer?.description ? <p>{volunteer.description}</p> : null}
+        {volunteerItems.length ? <ul class="vol-list">{volunteerItems.map((item) => <li>{item}</li>)}</ul> : null}
+        {volunteerUrl ? <a class="btn btn-accent" href={volunteerUrl} target="_blank" rel="noopener">{volunteer?.cta_label || 'Volunteer with us →'}</a> : null}
       </div>
+      {volunteer?.photo?.src ? (
       <div class="reveal">
         <div class="vol-photo">
-          <div class="ph-img ph-vol">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <ellipse cx="200" cy="100" rx="220" ry="80" fill="#A8C8A8" opacity=".4"/>
-              <path d="M0 200 L400 200 L400 300 L0 300Z" fill="#4F6F58" opacity=".7"/>
-              <g fill="#2D4435" opacity=".88">
-                <ellipse cx="120" cy="170" rx="14" ry="18"/>
-                <rect x="113" y="185" width="14" height="40"/>
-                <ellipse cx="170" cy="172" rx="14" ry="18"/>
-                <rect x="163" y="187" width="14" height="38"/>
-                <ellipse cx="220" cy="168" rx="14" ry="18"/>
-                <rect x="213" y="183" width="14" height="42"/>
-                <ellipse cx="270" cy="172" rx="14" ry="18"/>
-                <rect x="263" y="187" width="14" height="38"/>
-              </g>
-              <g fill="#D89B2A" opacity=".82">
-                <circle cx="120" cy="172" r="5"/>
-<circle cx="170" cy="174" r="5"/>
-                <circle cx="220" cy="170" r="5"/>
-                <circle cx="270" cy="174" r="5"/>
-              </g>
-            </svg>
-          </div>
+          <div class="ph-img mockup-photo-fill"><img src={volunteer.photo.src} alt={volunteer.photo.alt || `Volunteer image for ${race.identity?.name}`} loading="lazy" decoding="async" /></div>
         </div>
       </div>
+      ) : null}
     </div>
   </div>
 </section>
+) : null}
