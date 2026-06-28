@@ -346,21 +346,79 @@ function buildUncertainties(facts) {
   return uncertainties;
 }
 
-function buildStoryParagraphs(facts) {
+function buildStory(facts) {
   const sections = facts.sourceSections || {};
-  return unique([
+  const links = [];
+  const paragraphs = unique([
     facts.description?.value,
     sections.registration?.value ? cleanSentence(sections.registration.value, 520) : '',
     sections.course?.value ? cleanSentence(sections.course.value, 520) : '',
     sections.aid_stations_fluids?.value ? cleanSentence(sections.aid_stations_fluids.value, 420) : '',
     sections.post_race_awards_celebration?.value ? cleanSentence(sections.post_race_awards_celebration.value, 360) : ''
-  ].filter(Boolean).map((item) => item.replace(/\s+/g, ' ').trim())).slice(0, 5);
+  ].filter(Boolean).map((item) => {
+    const extracted = extractStructuredLinks(item);
+    links.push(...extracted.links);
+    return normalizeDisplayCopy(extracted.text);
+  }).filter(Boolean)).slice(0, 5);
+
+  return { paragraphs, links: uniqueLinks(links).slice(0, 4) };
+}
+
+function extractStructuredLinks(value) {
+  const links = [];
+  let text = String(value || '').replace(/\bhttps?:\/\/[^\s)\]}<>"']+/gi, (url) => {
+    const cleanUrl = url.replace(/[.,;:!?]+$/g, '');
+    const trailing = url.slice(cleanUrl.length);
+    links.push({ label: labelForResourceUrl(cleanUrl), url: cleanUrl });
+    return trailing;
+  });
+
+  text = text.replace(/\b(?:www\.)?runsignup\.com\b\s*\.?/gi, 'the official registration page');
+  text = text.replace(/\(\s*see\s+links?\s+below\s*\)/gi, '');
+  text = text.replace(/\bsee\s+links?\s+below\b\.?/gi, '');
+  return { text, links };
+}
+
+function labelForResourceUrl(url) {
+  let host = '';
+  try { host = new URL(url).hostname.replace(/^www\./, '').toLowerCase(); } catch { return 'View course resource'; }
+  if (host.includes('strava.com')) return 'View Strava route';
+  if (host.includes('runningahead.com')) return 'View RunningAHEAD map';
+  if (host.includes('runsignup.com')) return 'View official registration';
+  if (/map|route|course/i.test(url)) return 'View course resource';
+  return 'View source resource';
+}
+
+function uniqueLinks(links) {
+  const seen = new Set();
+  return links.filter((link) => {
+    if (!link?.url || seen.has(link.url)) return false;
+    seen.add(link.url);
+    return true;
+  });
+}
+
+function registrationDetails(url) {
+  const details = { url, platform: 'other', cta_label: 'View official registration' };
+  if (/runsignup\.com/i.test(url || '')) {
+    details.platform = 'runsignup';
+    details.cta_label = 'Register on RunSignup';
+  }
+  return details;
+}
+
+function organizationName(facts, sourceUrl) {
+  const sourceText = [facts.description?.value, facts.sourceSections?.about?.value].filter(Boolean).join(' ');
+  const club = sourceText.match(/\b([A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+){0,4}\s+(?:Track Club|Running Club|Road Runners|Marathon|Athletics))\b/);
+  if (club) return normalizeDisplayCopy(club[1]);
+  const host = sourceHost(sourceUrl).split('.')[0].replace(/[-_]+/g, ' ');
+  return titleCase(host);
 }
 
 function buildConfig(facts, assets, metaInfo) {
   const overview = facts.description?.value || `${facts.name.value} is listed for ${formatDateForCopy(facts.eventDate.value)} in ${facts.location.value}.`;
-  const description = cleanSentence(overview, 165);
-  const storyParagraphs = buildStoryParagraphs(facts);
+  const description = cleanSentence(extractStructuredLinks(overview).text, 165);
+  const story = buildStory(facts);
   const distances = facts.distances.map((distance) => {
     const details = {
       id: distance.id,
@@ -400,9 +458,9 @@ function buildConfig(facts, assets, metaInfo) {
       location: facts.location.value,
       venue: facts.location.value
     },
-    organization: { name: sourceHost(metaInfo.sourceUrl) },
+    organization: { name: organizationName(facts, metaInfo.sourceUrl) },
     distances,
-    registration: { url: facts.registrationUrl.value, platform: 'other', cta_label: 'Visit official race site' },
+    registration: registrationDetails(facts.registrationUrl.value),
     startline_value: {
       headline: 'A race website concept built around registration intent — not just a prettier homepage.',
       intro: 'StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.',
@@ -418,10 +476,11 @@ function buildConfig(facts, assets, metaInfo) {
         'No registration-growth guarantees — just a clearer, faster, more measurable path from runner interest to registration click-through.'
       ]
     },
-    story: storyParagraphs.length ? {
+    story: story.paragraphs.length ? {
       kicker: 'Race overview',
       title: `About ${facts.name.value}`,
-      paragraphs: storyParagraphs,
+      paragraphs: story.paragraphs,
+      ...(story.links.length ? { links: story.links } : {}),
       ...(assets[1] ? { image: { src: assets[1].src, alt: `Course or race image for ${facts.name.value}`, source: assets[1].source } } : {})
     } : undefined,
     schedule: facts.scheduleItems.length ? facts.scheduleItems.map(({ provenance, ...item }) => item) : (facts.startTime?.value ? [{ day: formatDateForCopy(facts.eventDate.value), name: `${distances[0].name} start`, time: facts.startTime.value, location: facts.location.value, applies_to_distances: [distances[0].id] }] : []),
@@ -672,15 +731,40 @@ function looksTruncated(value) {
 }
 
 function cleanSentence(value, max) {
-  const text = String(value || '').replace(/\s+/g, ' ').trim();
+  const text = normalizeDisplayCopy(value);
   if (text.length <= max) return text;
   const clipped = text.slice(0, max + 1);
   const sentenceEnd = Math.max(clipped.lastIndexOf('.'), clipped.lastIndexOf('!'), clipped.lastIndexOf('?'));
-  if (sentenceEnd >= Math.floor(max * 0.55)) return clipped.slice(0, sentenceEnd + 1).trim();
+  if (sentenceEnd >= Math.floor(max * 0.55)) return normalizeDisplayCopy(clipped.slice(0, sentenceEnd + 1));
   const comma = clipped.lastIndexOf(',');
   const space = clipped.lastIndexOf(' ');
   const cut = Math.max(comma, space);
-  return clipped.slice(0, cut > 0 ? cut : max).trim();
+  return normalizeDisplayCopy(clipped.slice(0, cut > 0 ? cut : max));
+}
+
+function normalizeDisplayCopy(value) {
+  let text = String(value || '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s+([,.;:!?])/g, '$1')
+    .replace(/([([{])\s+/g, '$1')
+    .replace(/\s+([)\]}])/g, '$1')
+    .replace(/\b(\d+)(?:st|nd|rd|th),\s+(20\d{2})\b/gi, '$1, $2')
+    .replace(/\b(\d+)(?:st|nd|rd|th)\b/gi, '$1')
+    .replace(/(\b\d+(?:st|nd|rd|th)?\s*)[-–—]\s*\$/gi, '$1 – $')
+    .replace(/\s*[-–—]\s*\$/g, ' – $')
+    .replace(/\s+([,.;:!?])/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  text = text.replace(/(^|[.!?]\s+)([a-z])/g, (_, prefix, letter) => `${prefix}${letter.toUpperCase()}`);
+  return text.replace(/\s+/g, ' ').trim();
+}
+
+function titleCase(value) {
+  return String(value || '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b[a-z]/g, (letter) => letter.toUpperCase());
 }
 
 function formatTimeLabel(value) {

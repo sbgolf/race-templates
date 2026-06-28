@@ -90,6 +90,8 @@ Deliverables:
 - Remove raw URLs from paragraphs.
 - Convert URLs into labeled links/buttons.
 - Clean punctuation artifacts and spacing.
+- Detect RunSignup registration links and label the CTA/platform accordingly.
+- Enforce source-polish validation for private mockup display copy so visible raw URLs/domains and scraped punctuation artifacts fail the private mockup gate.
 - Break long source paragraphs into cards, bullets, FAQs, and checklist items.
 - Preserve factual accuracy and omit unsupported details.
 - Add regression fixtures for rich and sparse source pages.

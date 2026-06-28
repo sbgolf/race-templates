@@ -32,6 +32,16 @@ const sampleImagePatterns = [
   /illustrated/i
 ];
 
+const rawVisibleUrlPattern = /\b(?:https?:\/\/|www\.|[a-z0-9-]+\.(?:com|org|net|io|gov|edu)\b)/i;
+const punctuationArtifactPatterns = [
+  /\b20\d{2}\s+\./,
+  /\b\d+\s+hours?\s+\./i,
+  /\b[A-Z]{2}\d{5}[A-Z]{2}\s+\./,
+  /\)\s+\./,
+  /\b\d+(?:st|nd|rd|th)?\s*-\$/i,
+  /\s+[,.!?;:]/
+];
+
 const renderedSectionFields = [
   'stats',
   'schedule',
@@ -111,6 +121,7 @@ for (const file of files) {
     validateBannedText(config, errors);
     validateSampleImages(config, errors);
     validateSourceDerivedPlaceholders(config, errors);
+    validateDisplayCopyPolish(config, errors);
   }
 
   if (errors.length > 0) {
@@ -142,6 +153,24 @@ function validateSourceDerivedPlaceholders(config, errors) {
       if (pattern.test(value)) errors.push(`${jsonPath}: Source-derived private mockup still contains sample/placeholder copy.`);
     }
   }
+}
+
+function validateDisplayCopyPolish(config, errors) {
+  for (const { path: jsonPath, value } of walkStrings(config)) {
+    if (!isDisplayCopyPath(jsonPath)) continue;
+    if (rawVisibleUrlPattern.test(value)) errors.push(`${jsonPath}: Display copy must not expose raw URLs or bare domains; use a labeled link field instead.`);
+    for (const pattern of punctuationArtifactPatterns) {
+      if (pattern.test(value)) errors.push(`${jsonPath}: Display copy contains punctuation/spacing artifact "${pattern.source}".`);
+    }
+  }
+}
+
+function isDisplayCopyPath(jsonPath) {
+  if (/(^|\.)(url|source_url|route|src|href|source|access_token|captured_at)$/.test(jsonPath)) return false;
+  if (/\.url$/.test(jsonPath)) return false;
+  if (jsonPath.startsWith('private_mockup.assets')) return false;
+  if (jsonPath.startsWith('private_mockup.provenance')) return false;
+  return /^(identity|event|organization|distances|registration\.cta_label|story|schedule|faqs?|seo|startline_value)\b/.test(jsonPath);
 }
 
 function validateSampleImages(config, errors) {

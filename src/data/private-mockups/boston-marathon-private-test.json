@@ -3,7 +3,7 @@
     "template": "community",
     "name": "Boston Marathon",
     "tagline": "Boston Marathon",
-    "edition": "baa.org",
+    "edition": "Boston, MA",
     "hero_image": {
       "src": "/mockups/35a001229594dde99d184e2ab18b50e9/1-a40629fb41.png",
       "alt": "Race image for Boston Marathon",
@@ -16,8 +16,8 @@
   },
   "event": {
     "date": "2027-05-18",
-    "location": "baa.org",
-    "venue": "baa.org"
+    "location": "Boston, MA",
+    "venue": "Boston, MA"
   },
   "organization": {
     "name": "Boston Marathon"
@@ -42,7 +42,7 @@
   "registration": {
     "url": "https://www.baa.org/races/boston-marathon",
     "platform": "other",
-    "cta_label": "Visit official race site"
+    "cta_label": "View official registration"
   },
   "seo": {
     "meta_title": "Boston Marathon — Race Website Preview",

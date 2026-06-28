@@ -7,6 +7,7 @@ const title = story?.title || (isPrivateMockup ? `About ${race.identity?.name}` 
 const paragraphs = story?.paragraphs || [
   race.seo?.meta_description,
 ].filter(Boolean);
+const links = (story?.links || story?.course_links || []).filter((link) => link?.url && link?.label);
 ---
 
 {shouldRender ? (
@@ -17,6 +18,11 @@ const paragraphs = story?.paragraphs || [
         <div class="kicker">{story?.kicker || (isPrivateMockup ? 'Race overview' : 'Our Race')}</div>
         <h2 set:html={title}></h2>
         {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        {links.length ? (
+          <div class="story-links" aria-label="Race resources">
+            {links.map((link) => <a href={link.url} target="_blank" rel="noopener">{link.label}</a>)}
+          </div>
+        ) : null}
         {story?.quote ? <div class="story-quote">{story.quote}</div> : null}
         {story?.quote_byline ? <div class="story-quote-byline">{story.quote_byline}</div> : null}
       </div>
