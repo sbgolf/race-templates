@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { buildRunnerDecisionChecklist, extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy } from './generate-private-mockup.mjs';
+import { buildCapturedImageAsset, buildRunnerDecisionChecklist, extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy } from './generate-private-mockup.mjs';
 import { shouldRenderTrustSignalsBand, substantiveTrustSignalsForRace, trustSignalsForRace } from '../src/shared/private-mockup-trust.mjs';
 
 assert.equal(
@@ -22,6 +22,30 @@ assert.deepEqual(faqLinkResult.links, [
 ]);
 
 assert.equal(labelForResourceUrl('https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon'), 'View RunSignup registration');
+
+assert.deepEqual(
+  buildCapturedImageAsset({
+    assetNamespace: '35a001229594dde99d184e2ab18b50e9',
+    name: '1-a40629fb41.png',
+    sourceUrl: 'https://www.baa.org/wp-content/uploads/2025/10/BAALogo-1.png',
+    index: 0
+  }),
+  {
+    src: '/mockups/35a001229594dde99d184e2ab18b50e9/1-a40629fb41.png',
+    alt: 'Public race-site image captured for concept direction',
+    caption: 'Public race-site image used for concept direction.',
+    source: 'https://www.baa.org/wp-content/uploads/2025/10/BAALogo-1.png'
+  }
+);
+assert.equal(
+  buildCapturedImageAsset({
+    assetNamespace: '35a001229594dde99d184e2ab18b50e9',
+    name: '2-ca09e38448.png',
+    sourceUrl: 'https://www.baa.org/wp-content/uploads/2025/11/BAALogo-1.png',
+    index: 1
+  }).caption,
+  'Additional public race-site visual reference.'
+);
 
 const strongChecklist = buildRunnerDecisionChecklist({
   eventDate: { value: '2026-03-07', source: 'date source', confidence: 'high' },
