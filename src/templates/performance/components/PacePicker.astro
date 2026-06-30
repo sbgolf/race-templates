@@ -1,50 +1,91 @@
 ---
 const { race } = Astro.props;
+const primaryDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0] || {};
+const distanceMiles = Number(primaryDistance.distance_miles || String(primaryDistance.distance || '').match(/[\d.]+/)?.[0] || 13.1);
+const defaultGoals = distanceMiles <= 13.2 ? [
+  { time: '1:30:00', label: '1:30' },
+  { time: '1:40:00', label: '1:40' },
+  { time: '1:45:00', label: '1:45', featured: true },
+  { time: '1:50:00', label: '1:50' },
+  { time: '2:00:00', label: '2:00' },
+  { time: '2:15:00', label: '2:15' }
+] : [
+  { time: '3:00:00', label: '3:00' },
+  { time: '3:15:00', label: '3:15' },
+  { time: '3:30:00', label: '3:30', featured: true },
+  { time: '3:45:00', label: '3:45' },
+  { time: '4:00:00', label: '4:00' }
+];
+const goals = Array.isArray(race.pace_goals) && race.pace_goals.length ? race.pace_goals : defaultGoals;
+const checkpoints = race.pace_checkpoints || (distanceMiles <= 13.2 ? [1, 3, 5, 6.55, 10, 13.1] : [1, 5, 10, 13.1, 20, 26.2]);
+function parseTimeToSeconds(time) {
+  const parts = String(time).split(':').map(Number);
+  if (parts.length === 2) return parts[0] * 60 + parts[1];
+  return parts[0] * 3600 + parts[1] * 60 + parts[2];
+}
+function formatSeconds(seconds) {
+  const rounded = Math.round(seconds);
+  const h = Math.floor(rounded / 3600);
+  const m = Math.floor((rounded % 3600) / 60);
+  const s = rounded % 60;
+  return h > 0 ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}` : `${m}:${String(s).padStart(2, '0')}`;
+}
+const paceData = Object.fromEntries(goals.map((goal, index) => {
+  const seconds = parseTimeToSeconds(goal.time);
+  const milePace = seconds / distanceMiles;
+  const kmPace = milePace / 1.609344;
+  const splits = Object.fromEntries(checkpoints.map((mile) => [String(mile), formatSeconds(milePace * Number(mile))]));
+  return [goal.id || `goal-${index}`, {
+    finish: goal.time,
+    mile: formatSeconds(milePace),
+    km: formatSeconds(kmPace),
+    half: splits['13.1'] || goal.time,
+    splitTimes: splits,
+    splits
+  }];
+}));
+const activeIndex = Math.max(0, goals.findIndex((goal) => goal.featured));
+const activeGoal = goals[activeIndex];
+const activeKey = activeGoal?.id || `goal-${activeIndex}`;
+const active = paceData[activeKey];
+const paceDataJson = JSON.stringify(paceData);
 ---
 <section class="pace" id="pace">
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Pace Your Race</div>
-      <h2 class="sec-title">Pick your goal.<br>We'll show you <em>the math</em>.</h2>
-      <p class="lead">Every finish time is a series of splits you have to hit. Pick yours below — pace, mile splits, and elapsed time for every checkpoint, including the half. Print it, write it on your forearm, run by it.</p>
+      <h2 class="sec-title">Pick your goal.<br />We'll show you <em>the math</em>.</h2>
+      <p class="lead">Every finish time is a series of splits you have to hit. Pick yours below — pace, checkpoints, and elapsed time for the race distance.</p>
     </div>
 
     <div class="pace-card reveal">
       <div class="pace-tabs" aria-label="Goal time picker">
-        <button class="pace-tab" data-goal="245" onclick="pickPace(this)">2:45</button>
-        <button class="pace-tab" data-goal="300" onclick="pickPace(this)">3:00</button>
-        <button class="pace-tab" data-goal="315" onclick="pickPace(this)">3:15</button>
-        <button class="pace-tab active bq" data-goal="330" onclick="pickPace(this)">3:30 <small>· BQ M 18-34</small></button>
-        <button class="pace-tab" data-goal="345" onclick="pickPace(this)">3:45</button>
-        <button class="pace-tab" data-goal="400" onclick="pickPace(this)">4:00 <small>· BQ M 50-54</small></button>
-        <button class="pace-tab" data-goal="415" onclick="pickPace(this)">4:15</button>
+        {goals.map((goal, index) => {
+          const key = goal.id || `goal-${index}`;
+          return <button class={`pace-tab ${key === activeKey ? 'active' : ''}`} data-goal={key} onclick="pickPace(this)">{goal.label || goal.time}{goal.note && <small> · {goal.note}</small>}</button>;
+        })}
       </div>
 
       <div class="pace-body">
         <div class="pace-summary">
-          <div class="pace-sum hl"><div class="l">Goal Finish</div><div class="v" id="paceGoal">3:30:00</div></div>
-          <div class="pace-sum"><div class="l">Pace / Mile</div><div class="v" id="paceMile">8:01</div></div>
-          <div class="pace-sum"><div class="l">Pace / Km</div><div class="v" id="paceKm">4:58</div></div>
-          <div class="pace-sum"><div class="l">Half Target</div><div class="v" id="paceHalf">1:45:00</div></div>
+          <div class="pace-sum hl"><div class="l">Goal Finish</div><div class="v" id="paceGoal">{active.finish}</div></div>
+          <div class="pace-sum"><div class="l">Pace / Mile</div><div class="v" id="paceMile">{active.mile}</div></div>
+          <div class="pace-sum"><div class="l">Pace / Km</div><div class="v" id="paceKm">{active.km}</div></div>
+          <div class="pace-sum"><div class="l">13.1 Target</div><div class="v" id="paceHalf">{active.half}</div></div>
         </div>
 
         <div class="pace-table">
-          <div class="pace-row head">
-            <div>Marker</div>
-            <div>Split</div>
-            <div>Pace</div>
-            <div>Elapsed</div>
-          </div>
-          <div class="pace-row body" data-mile="1"><div>Mile 1</div><div class="split">8:01</div><div>8:01</div><div class="elapsed">0:08:01</div></div>
-          <div class="pace-row body" data-mile="5"><div>Mile 5</div><div class="split">40:05</div><div>8:01</div><div class="elapsed">0:40:05</div></div>
-          <div class="pace-row body" data-mile="10"><div>Mile 10</div><div class="split">1:20:10</div><div>8:01</div><div class="elapsed">1:20:10</div></div>
-          <div class="pace-row body highlight" data-mile="13.1"><div>Half · 13.1</div><div class="split">1:45:00</div><div>8:01</div><div class="elapsed">1:45:00</div></div>
-          <div class="pace-row body" data-mile="15"><div>Mile 15</div><div class="split">2:00:15</div><div>8:01</div><div class="elapsed">2:00:15</div></div>
-          <div class="pace-row body" data-mile="20"><div>Mile 20</div><div class="split">2:40:20</div><div>8:01</div><div class="elapsed">2:40:20</div></div>
-          <div class="pace-row body" data-mile="25"><div>Mile 25</div><div class="split">3:20:25</div><div>8:01</div><div class="elapsed">3:20:25</div></div>
-          <div class="pace-row body highlight" data-mile="26.2"><div>Finish · 26.2</div><div class="split">3:30:00</div><div>8:01</div><div class="elapsed">3:30:00</div></div>
+          <div class="pace-row head"><div>Marker</div><div>Split</div><div>Pace</div><div>Elapsed</div></div>
+          {checkpoints.map((mile) => {
+            const key = String(mile);
+            const label = Number(mile) === distanceMiles ? `Finish · ${mile}` : Number(mile) === 13.1 ? 'Half · 13.1' : `Mile ${mile}`;
+            return <div class={`pace-row body ${Number(mile) === distanceMiles || Number(mile) === 13.1 ? 'highlight' : ''}`} data-mile={key}><div>{label}</div><div class="split">{active.splits[key]}</div><div>{active.mile}</div><div class="elapsed">{active.splits[key]}</div></div>;
+          })}
         </div>
       </div>
     </div>
-</div>
+  </div>
 </section>
+<script is:inline define:vars={{ paceDataJson }}>
+  window.STARTLINE_PACE_DATA = JSON.parse(paceDataJson);
+</script>

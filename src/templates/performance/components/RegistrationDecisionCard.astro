@@ -3,21 +3,48 @@ import { registerClickAttributes } from '../../../shared/analytics/register-clic
 import { registrationDecisionCopyForRace } from '../../../shared/private-mockup-value.mjs';
 const { race } = Astro.props;
 const registerUrl = race.registration?.url || '#entry';
+const items = Array.isArray(race.runner_decision_checklist?.items) ? race.runner_decision_checklist.items : [];
+const itemById = (id) => items.find((item) => item.id === id);
+const price = itemById('price')?.value || race.distances?.[0]?.price || race.registration?.price_note;
+const course = itemById('course')?.value || race.course?.certification || race.performance?.hero_stat?.value;
+const start = itemById('start-time')?.value || race.distances?.[0]?.start_time;
+const policy = itemById('refunds-transfers')?.value;
 const decisionCopy = registrationDecisionCopyForRace(race, {
-  headline: 'Keep the next split clean: decide here, register on the official platform.',
-  body: 'StartLine keeps pace, proof, and decision details together until a runner is ready to move to the official registration platform. Availability, payment, and confirmation stay with the official registration provider; this site prepares the outbound click-through for measurement.'
+  kicker: 'Registration decision',
+  headline: 'Confirm the facts here. Finish on the official platform.',
+  body: 'This section keeps the high-intent registration details together: price, course credibility, race timing, policy context, and the official RunSignup handoff. Runners can decide with confidence before leaving the race site.'
 });
+const platform = decisionCopy.platform || 'Official registration';
+const decisionFacts = [
+  price ? { label: 'Current listed price', value: price } : null,
+  course ? { label: 'Course proof', value: course } : null,
+  start ? { label: 'Race start', value: start } : null,
+  platform ? { label: 'Official handoff', value: platform } : null,
+  policy ? { label: 'Policy note', value: policy } : null
+].filter(Boolean);
 const registerLabel = decisionCopy.ctaLabel;
 ---
 <section class="perf-registration-decision" data-registration-decision-card>
   <div class="wrap perf-decision-wrap">
     <div class="perf-decision-card reveal">
-      <div>
+      <div class="perf-decision-copy">
         <div class="kicker">{decisionCopy.kicker}</div>
         <h2 class="sec-title">{decisionCopy.headline}</h2>
         <p class="lead">{decisionCopy.body}</p>
       </div>
-      <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerClickAttributes(race, 'registration-decision-card')}>{registerLabel}</a>
+      <div class="perf-decision-actions">
+        {decisionFacts.length ? (
+          <div class="perf-decision-facts" aria-label="Registration decision details">
+            {decisionFacts.map((fact) => (
+              <div>
+                <span>{fact.label}</span>
+                <strong>{fact.value}</strong>
+              </div>
+            ))}
+          </div>
+        ) : null}
+        <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerClickAttributes(race, 'registration-decision-card')}>{registerLabel}</a>
+      </div>
     </div>
   </div>
 </section>

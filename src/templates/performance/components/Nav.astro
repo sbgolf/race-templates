@@ -2,6 +2,10 @@
 import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
 const { race } = Astro.props;
 const registrationUrl = race.registration?.url || '#entry';
+const raceName = race.identity?.name || 'Performance Race';
+const shortName = raceName.replace(/^\d+(?:st|nd|rd|th)?\s+annual\s+/i, '').replace(/half-marathon/i, 'Half');
+const dateYear = race.event?.date ? new Date(`${race.event.date}T12:00:00Z`).getUTCFullYear() : '';
+const hasTravel = Boolean(race.travel?.items?.length || race.travel?.airport || race.travel?.hotels || race.travel?.race_morning);
 ---
 <nav id="nav">
   <a href="#top" class="brand">
@@ -9,7 +13,7 @@ const registrationUrl = race.registration?.url || '#entry';
       <rect x="3" y="3" width="34" height="34" rx="6" fill="#2D5BFF"/>
       <path d="M11 24 L15 17 L21 24 L26 14 L31 24" stroke="#FAFAFC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </svg>
-    <div class="name">THE CAPITAL<small>Marathon · 2026</small></div>
+    <div class="name">{shortName}<small>{dateYear ? `Race · ${dateYear}` : 'Race preview'}</small></div>
   </a>
   <div class="nav-links" id="navLinks">
     <a href="#course">Course</a>
@@ -17,7 +21,7 @@ const registrationUrl = race.registration?.url || '#entry';
     <a href="#records">Records</a>
     <a href="#gallery">Race Day</a>
     <a href="#entry">Register</a>
-    <a href="#travel">Travel</a>
+    {hasTravel && <a href="#travel">Travel</a>}
     <a class="btn btn-accent" href={registrationUrl} {...registerClickAttributes(race, 'nav-button')}>Enter →</a>
   </div>
   <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>

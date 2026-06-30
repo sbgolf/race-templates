@@ -1,53 +1,75 @@
 ---
 const { race } = Astro.props;
+const primaryDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0] || {};
+const course = race.course || {};
+const certification = course.certification || primaryDistance.certification;
+const totalDistance = primaryDistance.distance || (course.distance_miles ? `${course.distance_miles} mi` : '');
+const title = course.title || 'Built for the clock.';
+const lead = course.description || primaryDistance.profile || race.story?.paragraphs?.find((paragraph) => /course|certified|flat|fast/i.test(paragraph)) || 'Course details are organized around the facts runners check before they register.';
+const rows = [
+  totalDistance && { label: 'Total Distance', value: totalDistance },
+  course.net_elevation !== undefined && { label: 'Net Elevation', value: `${course.net_elevation} FT`, className: Number(course.net_elevation) <= 0 ? 'green' : '' },
+  course.max_climb?.feet && { label: 'Max Climb', value: `${course.max_climb.feet} FT${course.max_climb.mile ? ` · MILE ${course.max_climb.mile}` : ''}` },
+  certification && { label: 'USATF Cert', value: certification.replace(/^USATF certified\s*/i, ''), className: 'acc' },
+  course.type && { label: 'Course Type', value: course.type },
+  primaryDistance.cutoff && { label: 'Cutoff Time', value: primaryDistance.cutoff },
+  primaryDistance.aid_stations && { label: 'Aid Stations', value: `${primaryDistance.aid_stations} listed`, className: 'acc' },
+  course.eligible_records && { label: 'Record Eligible', value: course.eligible_records }
+].filter(Boolean);
+const profile = Array.isArray(course.elevation_profile) ? course.elevation_profile : [];
+const hasProfile = profile.length >= 2;
+const minFeet = hasProfile ? Math.min(...profile.map((point) => Number(point.feet))) : 0;
+const maxFeet = hasProfile ? Math.max(...profile.map((point) => Number(point.feet))) : 0;
+const maxMile = hasProfile ? Math.max(...profile.map((point) => Number(point.mile))) : Number(primaryDistance.distance_miles || course.distance_miles || 13.1);
+const spread = Math.max(1, maxFeet - minFeet);
+const points = hasProfile ? profile.map((point) => {
+  const x = (Number(point.mile) / maxMile) * 500;
+  const y = 170 - ((Number(point.feet) - minFeet) / spread) * 120;
+  return `${x.toFixed(1)},${y.toFixed(1)}`;
+}).join(' ') : '';
+const fillPoints = hasProfile ? `0,200 ${points} 500,200` : '';
+const vizRows = hasProfile ? [] : rows.slice(0, 4);
+const detailRows = hasProfile ? rows : rows.slice(4);
 ---
 <section class="course" id="course">
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">The Course</div>
-      <h2 class="sec-title">Engineered <em>flat</em>.</h2>
-      <p class="lead">26.2 miles of paved urban running with no climb longer than 200 ft. Net downhill, USATF-certified, single-loop with no doubling back. Designed by a course architect to give you the fastest legal time the Capital region can produce.</p>
+      <h2 class="sec-title">{title}</h2>
+      <p class="lead">{lead}</p>
     </div>
 
     <div class="course-grid">
       <div class="course-viz reveal">
         <div class="course-viz-head">
-          <span>ELEVATION PROFILE</span>
-          <span class="net">NET −12 FT</span>
+          <span>{hasProfile ? 'ELEVATION PROFILE' : 'COURSE FACTS'}</span>
+          {certification && <span class="net">{certification.replace(/^USATF certified\s*/i, '')}</span>}
         </div>
-        <div class="profile-chart">
-          <svg viewBox="0 0 500 200" preserveAspectRatio="none" aria-hidden="true">
-            <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(10,10,18,.08)" stroke-dasharray="4 4"/>
-            <path d="M 0 100 L 30 95 L 60 88 L 90 92 L 120 85 L 150 90 L 180 82 L 210 90 L 240 85 L 270 88 L 300 96 L 330 92 L 360 100 L 390 96 L 420 102 L 450 98 L 480 104 L 500 108" 
-                  fill="none" stroke="#2D5BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M 0 100 L 30 95 L 60 88 L 90 92 L 120 85 L 150 90 L 180 82 L 210 90 L 240 85 L 270 88 L 300 96 L 330 92 L 360 100 L 390 96 L 420 102 L 450 98 L 480 104 L 500 108 L 500 200 L 0 200 Z" 
-                  fill="rgba(45,91,255,.12)"/>
-            <g fill="#2D5BFF">
-              <circle cx="0" cy="100" r="4"/>
-              <circle cx="500" cy="108" r="4"/>
-              <circle cx="250" cy="86" r="3"/>
-            </g>
-            <g font-family="IBM Plex Mono" font-size="9" fill="rgba(10,10,18,.55)" letter-spacing="0.05em">
-              <text x="0" y="124" text-anchor="start">START · 142 FT</text>
-              <text x="250" y="78" text-anchor="middle">HALF · 158 FT</text>
-              <text x="500" y="124" text-anchor="end">FINISH · 130 FT</text>
-            </g>
-          </svg>
+        <div class={`profile-chart ${hasProfile ? '' : 'facts-chart'}`}>
+          {hasProfile ? (
+            <svg viewBox="0 0 500 200" preserveAspectRatio="none" aria-hidden="true">
+              <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(10,10,18,.08)" stroke-dasharray="4 4"/>
+              <polyline points={points} fill="none" stroke="#2D5BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points={fillPoints} fill="rgba(45,91,255,.12)"/>
+            </svg>
+          ) : (
+            <div class="course-info course-info--embedded">
+              {vizRows.map((row) => <div class="ci-row"><span class="l">{row.label}</span><span class={`v ${row.className || ''}`}>{row.value}</span></div>)}
+            </div>
+          )}
         </div>
-        <div class="profile-mile">
-          <span>0 mi</span><span>6.5</span><span>13.1</span><span>19.7</span><span>26.2 mi</span>
-        </div>
+        {hasProfile && (
+          <div class="profile-mile">
+            <span>0 mi</span><span>{maxMile / 2}</span><span>{maxMile} mi</span>
+          </div>
+        )}
       </div>
 
-      <div class="course-info reveal">
-        <div class="ci-row"><span class="l">Total Distance</span><span class="v">26.2 <small>MI</small></span></div>
-<div class="ci-row"><span class="l">Net Elevation</span><span class="v green">−12 FT</span></div>
-        <div class="ci-row"><span class="l">Max Climb</span><span class="v">86 <small>FT · MILE 11</small></span></div>
-        <div class="ci-row"><span class="l">USATF Cert</span><span class="v acc" style="font-size:1.05rem">MA-25-CFM</span></div>
-        <div class="ci-row"><span class="l">Course Type</span><span class="v">Point-to-Point</span></div>
-        <div class="ci-row"><span class="l">Cutoff Time</span><span class="v">6:00:00</span></div>
-        <div class="ci-row"><span class="l">Pace Groups</span><span class="v acc">3:00 → 5:00 <small>EVERY :15</small></span></div>
-      </div>
+      {detailRows.length > 0 && (
+        <div class="course-info reveal">
+          {detailRows.map((row) => <div class="ci-row"><span class="l">{row.label}</span><span class={`v ${row.className || ''}`}>{row.value}</span></div>)}
+        </div>
+      )}
     </div>
   </div>
 </section>

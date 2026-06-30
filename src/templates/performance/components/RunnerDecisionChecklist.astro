@@ -5,29 +5,68 @@ const checklist = race.runner_decision_checklist;
 const items = Array.isArray(checklist?.items) ? checklist.items.filter((item) => item?.label && item?.value) : [];
 const registerUrl = race.registration?.url || '#entry';
 const registerLabel = race.registration?.cta_label || 'Register now';
+const groups = [
+  {
+    label: 'Race basics',
+    intro: 'The essentials runners want before they commit.',
+    itemIds: ['date', 'distance', 'start-time', 'location']
+  },
+  {
+    label: 'Course & performance',
+    intro: 'Proof points for runners comparing speed, certification, and support.',
+    itemIds: ['course', 'aid-stations', 'time-limit']
+  },
+  {
+    label: 'Logistics & policies',
+    intro: 'The practical details that reduce support questions before registration.',
+    itemIds: ['price', 'packet-pickup', 'refunds-transfers', 'swag', 'awards']
+  }
+].map((group) => ({
+  ...group,
+  items: group.itemIds.map((id) => items.find((item) => item.id === id)).filter(Boolean)
+})).filter((group) => group.items.length);
+const groupedIds = new Set(groups.flatMap((group) => group.items.map((item) => item.id)));
+const remainingItems = items.filter((item) => !groupedIds.has(item.id));
+if (remainingItems.length) {
+  groups.push({
+    label: 'Additional race details',
+    intro: 'Other useful details available before the official registration handoff.',
+    items: remainingItems
+  });
+}
 ---
 {items.length ? (
   <section class="perf-runner-checklist" id="runner-checklist" data-runner-decision-checklist>
     <div class="wrap perf-private-wrap">
       <div class="perf-private-head reveal">
         <div>
-          <div class="kicker">Runner decision checklist</div>
-          <h2 class="sec-title">{checklist?.headline || 'Check the race facts before the clock starts.'}</h2>
-          <p class="lead">{checklist?.intro || 'Review the key race details that performance runners scan before they continue to official registration.'}</p>
+          <div class="kicker">Runner info hub</div>
+          <h2 class="sec-title">{checklist?.headline || 'Everything runners check before they register.'}</h2>
+          <p class="lead">{checklist?.intro || 'A clear, B.A.A.-style information hub puts race basics, course proof, logistics, policies, and the official registration path in one predictable place.'}</p>
         </div>
         <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerClickAttributes(race, 'runner-checklist-top')}>{registerLabel}</a>
       </div>
-      <div class="perf-check-grid stagger">
-        {items.map((item) => (
-          <article class="perf-check-card" data-checklist-item-id={item.id}>
-            <span>{item.label}</span>
-            <strong>{item.value}</strong>
-            {item.detail ? <p>{item.detail}</p> : null}
+      <div class="perf-info-hub-grid stagger" aria-label="Runner information hub">
+        {groups.map((group) => (
+          <article class="perf-info-hub-group">
+            <div class="perf-info-hub-group-head">
+              <span>{group.label}</span>
+              <p>{group.intro}</p>
+            </div>
+            <div class="perf-info-hub-list">
+              {group.items.map((item) => (
+                <div class="perf-info-hub-row" data-checklist-item-id={item.id}>
+                  <span>{item.label}</span>
+                  <strong>{item.value}</strong>
+                  {item.detail ? <p>{item.detail}</p> : null}
+                </div>
+              ))}
+            </div>
           </article>
         ))}
       </div>
       <div class="perf-check-footer reveal">
-        <p>Ready to verify availability and finish the handoff?</p>
+        <p>Checked the basics? Continue to the official registration platform.</p>
         <a class="btn btn-yellow" href={registerUrl} target="_blank" rel="noopener" {...registerClickAttributes(race, 'runner-checklist-footer')}>Continue to official registration</a>
       </div>
     </div>

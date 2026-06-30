@@ -1,8 +1,8 @@
 {
   "identity": {
-    "template": "community",
-    "name": "6th ANNUAL ASHLAND CITY HALF-MARATHON",
-    "tagline": "6th ANNUAL ASHLAND CITY HALF-MARATHON",
+    "template": "performance",
+    "name": "Ashland City Half-Marathon",
+    "tagline": "Fast, flat, USATF-certified half marathon along the Cumberland River.",
     "edition": "Ashland City, TN",
     "hero_image": {
       "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/1-d63e0778e1.png",
@@ -10,14 +10,17 @@
       "source": "https://nashvilletrackclub.org/wp-content/uploads/2021/02/Ashland-City_Half-Marathon_Graphic.png"
     },
     "colors": {
-      "primary": "#C6643D",
-      "secondary": "#6B8E6F"
+      "primary": "#2D5BFF",
+      "secondary": "#FFD600",
+      "success": "#00C853",
+      "ink": "#0A0A12"
     }
   },
   "event": {
     "date": "2026-03-07",
     "location": "Ashland City, TN",
-    "venue": "Ashland City, TN"
+    "venue": "Riverbluff Park",
+    "timezone": "America/Chicago"
   },
   "organization": {
     "name": "Nashville Track Club"
@@ -37,19 +40,24 @@
       "price": "$60",
       "price_amount": "60",
       "aid_stations": 5,
-      "profile": "Fast, flat · USATF-certified · Riverside",
+      "profile": "Fast, flat \u00b7 USATF-certified \u00b7 Riverside",
       "certification": "USATF certified #TN22002MS",
       "map_label": "Half Marathon",
       "highlights": [
         "USATF certified #TN22002MS",
-        "Fast, flat · USATF-certified · Riverside"
-      ]
+        "Fast, flat course",
+        "Starts and finishes next to the Cumberland River at Riverbluff Park",
+        "Five crewed aid stations listed"
+      ],
+      "distance_miles": 13.1,
+      "cutoff": "3:00:00"
     }
   ],
   "registration": {
     "url": "https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon",
     "platform": "runsignup",
-    "cta_label": "Register on RunSignup"
+    "cta_label": "Register on RunSignup",
+    "intro": "Official RunSignup registration remains the primary conversion path while the page surfaces the fast-course facts runners need before clicking through."
   },
   "story": {
     "kicker": "Race overview",
@@ -57,9 +65,9 @@
     "paragraphs": [
       "Nashville Track Club is excited to bring you the 6th annual Ashland City Half-Marathon on Saturday, March 7, 2026. This race is a USA Track & Field-sanctioned event. It will take place on a fast, flat, USATF-certified course that starts and finishes next to the Cumberland River at Riverbluff Park in Ashland City, TN.",
       "Online registration is available on the official registration page. Entry fee is $60 until 11:59pm Wednesday December 31, 2025. $70 until 11:59pm Saturday, January 31. After that, it will increase to $80. Online registration is open until 07:00am on Saturday, March 7 (race day). You may also enter in person on race day between 5:45am and 7:15am. Each participant will receive a Next Level race T-shirt and more swag to be announced as sponsorships firm up. All finishers will receive a medal.",
-      "In 2022, the course had to be redesigned, re-measured, and re-certified due to construction on Tennessee Waltz Parkway east of Riverbluff Park. The 2025 course is identical to the one used the last three years — beautiful, flat, and very fast. The course’s USATF certification number is TN22002MS. This course is eligible for Tennessee single-age state records.",
-      "We will have crewed aid stations — offering both water and Gatorade — at the following points on the course: 3.3 miles, 4.4 miles, 7.3 miles, 9.3 miles, and 11.5 miles. We will not be handing out gels, so if you plan to use gels, please bring your own. In the unlikely occurrence of a medical emergency during the event, each aid station will have a direct line to EMS.",
-      "We will conduct awards and the post-race celebration at Sidelines Bar & Grill at 11:00am (they will open early at 10:30am). All registered participants will receive one drink ticket for a complimentary beverage upon arrival — you must show your bib number to receive your drink ticket."
+      "In 2022, the course had to be redesigned, re-measured, and re-certified due to construction on Tennessee Waltz Parkway east of Riverbluff Park. The 2025 course is identical to the one used the last three years \u2014 beautiful, flat, and very fast. The course\u2019s USATF certification number is TN22002MS. This course is eligible for Tennessee single-age state records.",
+      "We will have crewed aid stations \u2014 offering both water and Gatorade \u2014 at the following points on the course: 3.3 miles, 4.4 miles, 7.3 miles, 9.3 miles, and 11.5 miles. We will not be handing out gels, so if you plan to use gels, please bring your own. In the unlikely occurrence of a medical emergency during the event, each aid station will have a direct line to EMS.",
+      "We will conduct awards and the post-race celebration at Sidelines Bar & Grill at 11:00am (they will open early at 10:30am). All registered participants will receive one drink ticket for a complimentary beverage upon arrival \u2014 you must show your bib number to receive your drink ticket."
     ],
     "image": {
       "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/2-9799347d35.png",
@@ -81,7 +89,7 @@
     {
       "day": "Friday, March 6th",
       "name": "Packet pick-up",
-      "time": "11:00 AM – 6:00 PM",
+      "time": "11:00 AM \u2013 6:00 PM",
       "location": "Nashville Running Company at 820 Woodland St, Nashville, TN 37206",
       "applies_to_distances": [
         "half-marathon"
@@ -126,7 +134,7 @@
     },
     {
       "question": "Where is packet pick-up?",
-      "answer": "Packet pick-up is available at Nashville Running Company at 820 Woodland St, Nashville, TN 37206 from 11am – 6pm on Friday, March 6. You can also pick up your packet at Athlete Registration between 5:45am – 7:15am on race morning (Saturday, March 7) at Riverbluff Park in Ashland City."
+      "answer": "Packet pick-up is available at Nashville Running Company at 820 Woodland St, Nashville, TN 37206 from 11am \u2013 6pm on Friday, March 6. You can also pick up your packet at Athlete Registration between 5:45am \u2013 7:15am on race morning (Saturday, March 7) at Riverbluff Park in Ashland City."
     },
     {
       "question": "Is there a course time limit?",
@@ -134,12 +142,12 @@
     },
     {
       "question": "Are awards or prize money listed?",
-      "answer": "Prizing is listed as follows: male and female overall awards are 1st — $300, 2nd — $200, and 3rd — $100. A $250 course-record bonus is listed, with masters and age-group awards also noted."
+      "answer": "Prizing is listed as follows: male and female overall awards are 1st \u2014 $300, 2nd \u2014 $200, and 3rd \u2014 $100. A $250 course-record bonus is listed, with masters and age-group awards also noted."
     }
   ],
   "seo": {
-    "meta_title": "6th ANNUAL ASHLAND CITY HALF-MARATHON — Race Website Preview",
-    "meta_description": "Nashville Track Club is excited to bring you the 6th annual Ashland City Half-Marathon on Saturday, March 7, 2026."
+    "meta_title": "Ashland City Half-Marathon \u2014 StartLine Performance Preview",
+    "meta_description": "Ashland City Half-Marathon concept for a fast, flat, USATF-certified half marathon in Ashland City, TN."
   },
   "private_mockup": {
     "generated": true,
@@ -149,7 +157,7 @@
     "access_token": "e6e18fe20474d344e2b82718edbfb2c7",
     "race_slug": "ashland-city-half",
     "route": "/private/mockups/e6e18fe20474d344e2b82718edbfb2c7/",
-    "template": "community",
+    "template": "performance",
     "assets": [
       {
         "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/1-d63e0778e1.png",
@@ -168,6 +176,7 @@
       "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
       "captured_at": "2026-06-28T01:31:14.363Z",
       "source_confirmed_sections": [
+        "course",
         "schedule",
         "faqs",
         "runner_decision_checklist"
@@ -379,11 +388,11 @@
         "Only one event distance was confirmed from the event title/page heading; other distance mentions were treated as contextual unless presented as event distances."
       ]
     },
-    "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups."
+    "notes": "Generated only from verified facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups."
   },
   "runner_decision_checklist": {
-    "headline": "Before you register",
-    "intro": "A quick checklist of race details to review before you continue to official registration.",
+    "headline": "Everything runners check before they register",
+    "intro": "A clear race information hub for date, start time, course proof, logistics, policies, and the official registration path.",
     "items": [
       {
         "id": "date",
@@ -433,7 +442,7 @@
       {
         "id": "packet-pickup",
         "label": "Packet pick-up",
-        "value": "Friday, March 6th · 11:00 AM – 6:00 PM · Nashville Running Company at 820 Woodland St, Nashville, TN 37206",
+        "value": "Friday, March 6th \u00b7 11:00 AM \u2013 6:00 PM \u00b7 Nashville Running Company at 820 Woodland St, Nashville, TN 37206",
         "source_path": "schedule",
         "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
         "applies_to_distance_ids": [
@@ -443,7 +452,7 @@
       {
         "id": "course",
         "label": "Course notes",
-        "value": "Fast, flat · USATF-certified · Riverside · USATF certified #TN22002MS",
+        "value": "Fast, flat \u00b7 USATF-certified \u00b7 Riverside \u00b7 USATF certified #TN22002MS",
         "source_path": "distances[].profile",
         "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
         "applies_to_distance_ids": [
@@ -491,6 +500,165 @@
         "source_path": "faqs",
         "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/"
       }
+    ]
+  },
+  "course": {
+    "title": "Fast, flat, and certified.",
+    "description": "A fast, flat, USATF-certified course that starts and finishes next to the Cumberland River at Riverbluff Park in Ashland City, TN.",
+    "certification": "USATF certified #TN22002MS",
+    "distance_miles": 13.1,
+    "type": "Certified half marathon course",
+    "eligible_records": "Tennessee single-age state records",
+    "aid_station_miles": [
+      3.3,
+      4.4,
+      7.3,
+      9.3,
+      11.5
+    ]
+  },
+  "performance": {
+    "hero_lead": "A fast, flat, USATF-certified half marathon in Ashland City, TN, starting and finishing next to the Cumberland River at Riverbluff Park.",
+    "hero_stat": {
+      "label": "USATF Certification",
+      "value": "TN22002MS",
+      "detail": "Eligible for Tennessee single-age state records"
+    },
+    "clock": {
+      "label": "Race Clock \u00b7 Half Marathon Goal",
+      "time": "1:45:00",
+      "splits": [
+        {
+          "label": "Mile 3",
+          "value": "24:03"
+        },
+        {
+          "label": "Mile 6.55",
+          "value": "52:30"
+        },
+        {
+          "label": "Finish",
+          "value": "1:45:00"
+        }
+      ],
+      "footer": "Fast, flat certified course \u00b7 Ashland City Half"
+    },
+    "records_lead": "The page leads with race-day speed signals: USATF certification, a fast and flat course profile, five listed aid stations, and a three-hour course window."
+  },
+  "performance_stats": [
+    {
+      "value": "13.1 mi",
+      "label": "Half Marathon",
+      "sub": "Confirmed event distance"
+    },
+    {
+      "value": "TN22002MS",
+      "label": "USATF Certified",
+      "sub": "Certification listed by source"
+    },
+    {
+      "value": "5",
+      "label": "Aid Stations",
+      "sub": "Water and Gatorade listed"
+    },
+    {
+      "value": "3:00:00",
+      "label": "Time Limit",
+      "sub": "Course open for 3 hours"
+    }
+  ],
+  "pace_goals": [
+    {
+      "id": "goal-130",
+      "label": "1:30",
+      "time": "1:30:00"
+    },
+    {
+      "id": "goal-140",
+      "label": "1:40",
+      "time": "1:40:00"
+    },
+    {
+      "id": "goal-145",
+      "label": "1:45",
+      "time": "1:45:00",
+      "featured": true
+    },
+    {
+      "id": "goal-150",
+      "label": "1:50",
+      "time": "1:50:00"
+    },
+    {
+      "id": "goal-200",
+      "label": "2:00",
+      "time": "2:00:00"
+    },
+    {
+      "id": "goal-215",
+      "label": "2:15",
+      "time": "2:15:00"
+    }
+  ],
+  "pace_checkpoints": [
+    1,
+    3,
+    5,
+    6.55,
+    10,
+    13.1
+  ],
+  "entry_tiers": [
+    {
+      "name": "Early registration",
+      "price": "$60",
+      "subtitle": "Listed until 11:59pm Wednesday, December 31, 2025",
+      "featured": true,
+      "features": [
+        "Half Marathon entry",
+        "Next Level race T-shirt",
+        "Finisher medal",
+        "Five crewed aid stations with water and Gatorade",
+        "Post-race celebration at Sidelines Bar & Grill"
+      ],
+      "cta_label": "Register on RunSignup"
+    },
+    {
+      "name": "January registration",
+      "price": "$70",
+      "subtitle": "Listed until 11:59pm Saturday, January 31",
+      "features": [
+        "Half Marathon entry",
+        "USATF-certified course #TN22002MS",
+        "Race-day packet pickup available 5:45am \u2013 7:15am",
+        "Course open for 3 hours"
+      ],
+      "cta_label": "Register on RunSignup"
+    },
+    {
+      "name": "Late / race-day registration",
+      "price": "$80",
+      "subtitle": "Listed after January 31; online until 7:00am on race day",
+      "features": [
+        "Online registration through race morning",
+        "In-person race-day registration listed from 5:45am to 7:15am",
+        "Awards and post-race celebration listed"
+      ],
+      "cta_label": "Register on RunSignup"
+    }
+  ],
+  "startline_value": {
+    "headline": "Make the fast, certified half-marathon case immediately.",
+    "intro": "This Performance concept reframes the Ashland City Half around verified speed signals: fast and flat course language, USATF certification, race-day timing, aid-station clarity, and one obvious RunSignup handoff.",
+    "improved": [
+      "Lead with the runner outcome: a fast, flat certified half marathon rather than a general community-race frame.",
+      "Surface the details performance runners scan first: certification number, start time, cutoff, aid-station count, course profile, and price windows.",
+      "Keep the private preview noindex and tokenized while removing internal/chrome from the rendered page."
+    ],
+    "paid_includes": [
+      "Performance/BQ-coded StartLine page structure adapted to a certified half-marathon prospect",
+      "Official registration CTAs pointed to RunSignup with outbound click attributes",
+      "Mobile-first runner decision checklist using only verified facts"
     ]
   }
 }
