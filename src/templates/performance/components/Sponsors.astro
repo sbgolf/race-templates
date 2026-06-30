@@ -1,16 +1,14 @@
 ---
 const { race } = Astro.props;
+const sponsors = Array.isArray(race.sponsors) ? race.sponsors.filter((sponsor) => sponsor?.name || typeof sponsor === 'string') : [];
 ---
-<div class="sponsors">
-  <div class="wrap">
-    <p class="sp-lab">Partners &amp; Sponsors</p>
-    <div class="sp-row">
-      <span>NORTHRIDGE ATHLETIC</span>
-      <span>STRIDE LAB</span>
-      <span>METRIC</span>
-      <span>NIMBUS RUN CO.</span>
-      <span>RECOVERY HOUSE</span>
-      <span>CAPITAL ORTHO</span>
-</div>
+{sponsors.length > 0 && (
+  <div class="sponsors">
+    <div class="wrap">
+      <p class="sp-lab">Partners &amp; Sponsors</p>
+      <div class="sp-row">
+        {sponsors.map((sponsor) => <span>{typeof sponsor === 'string' ? sponsor : sponsor.name}</span>)}
+      </div>
+    </div>
   </div>
-</div>
+)}

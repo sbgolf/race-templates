@@ -1,5 +1,16 @@
 ---
+import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
 const { race } = Astro.props;
+const raceName = race.identity?.name || 'Performance Race';
+const shortName = raceName.replace(/^\d+(?:st|nd|rd|th)?\s+annual\s+/i, '').replace(/half-marathon/i, 'Half');
+const dateYear = race.event?.date ? new Date(`${race.event.date}T12:00:00Z`).getUTCFullYear() : new Date().getUTCFullYear();
+const location = race.event?.location;
+const orgName = race.organization?.name;
+const registrationUrl = race.registration?.url || '#entry';
+const certification = race.performance?.certification || race.distances?.find((distance) => distance.certification)?.certification;
+const profile = race.performance?.course_profile || race.distances?.find((distance) => distance.profile)?.profile;
+const hasTravel = Boolean(race.travel?.items?.length || race.travel?.airport || race.travel?.hotels || race.travel?.race_morning);
+const hasFaq = Array.isArray(race.faqs) && race.faqs.length > 0;
 ---
 <footer>
   <div class="foot">
@@ -9,16 +20,16 @@ const { race } = Astro.props;
           <rect x="3" y="3" width="34" height="34" rx="6" fill="#2D5BFF"/>
           <path d="M11 24 L15 17 L21 24 L26 14 L31 24" stroke="#FAFAFC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
-        <div class="name">THE CAPITAL<small>Marathon · 2026</small></div>
+        <div class="name">{shortName}<small>{dateYear ? `Race · ${dateYear}` : 'Race preview'}</small></div>
       </a>
-      <p>The fastest legal marathon the Capital region produces. November 8, 2026. USATF certified · Boston accepted.</p>
-</div>
+      <p>{[profile, certification, location].filter(Boolean).join(' · ') || 'A performance-focused race preview with clear course, pacing, and registration details.'}</p>
+    </div>
     <div><h2>Race</h2><ul><li><a href="#course">Course</a></li><li><a href="#pace">Pace</a></li><li><a href="#records">Records</a></li><li><a href="#entry">Register</a></li></ul></div>
-    <div><h2>Logistics</h2><ul><li><a href="#travel">Travel</a></li><li><a href="#gallery">Race Day</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
-    <div><h2>Connect</h2><ul><li><a href="#">Newsletter</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Instagram</a></li><li><a href="#">Results Archive</a></li></ul></div>
+    <div><h2>Logistics</h2><ul>{hasTravel && <li><a href="#travel">Travel</a></li>}<li><a href="#gallery">Race Day</a></li>{hasFaq && <li><a href="#faq">FAQ</a></li>}<li><a href={registrationUrl} {...registerClickAttributes(race, 'footer-registration')}>Registration</a></li></ul></div>
+    <div><h2>Details</h2><ul><li><a href="#course">Certification</a></li><li><a href="#pace">Pace goals</a></li><li><a href="#entry">Pricing</a></li>{race.story?.links?.[0]?.url && <li><a href={race.story.links[0].url}>Course map</a></li>}</ul></div>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 THE CAPITAL MARATHON · A PROGRAM OF CAPITAL RUNNING CLUB</span>
-    <span>POWERED BY [BRAND]</span>
+    <span>© {dateYear} {raceName}{orgName ? ` · ${orgName}` : ''}</span>
+    <span>StartLine Sites concept preview</span>
   </div>
 </footer>

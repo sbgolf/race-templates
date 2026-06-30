@@ -2,11 +2,17 @@
 import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
 const { race } = Astro.props;
 const registrationUrl = race.registration?.url || '#entry';
+const raceDate = race.event?.date
+  ? new Date(`${race.event.date}T12:00:00Z`).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
+  : 'Race day';
+const startTime = race.performance?.start_time || race.distances?.find((distance) => distance.start_time)?.start_time;
+const distance = race.distances?.[0]?.distance || race.performance?.distance_label || 'race';
+const price = race.distances?.find((distance) => distance.price)?.price || race.entry_tiers?.[0]?.price || '';
 ---
 <section class="finale">
   <div class="wrap">
     <h2 class="reveal">Train for it. Run it. <em>Time it.</em></h2>
-    <p class="reveal">Sunday, November 8, 2026. 7:00 AM. The gun goes off and the only thing that matters is the clock you bring with you.</p>
-    <a class="btn btn-light reveal" href={registrationUrl} {...registerClickAttributes(race, 'finale-primary')}>Register · $145 →</a>
+    <p class="reveal">{raceDate}{startTime ? `. ${startTime}.` : '.'} A focused {distance} course preview built around the details runners check before they register.</p>
+    <a class="btn btn-light reveal" href={registrationUrl} {...registerClickAttributes(race, 'finale-primary')}>{race.registration?.cta_label || 'Register'}{price ? ` · ${price}` : ''} →</a>
   </div>
 </section>

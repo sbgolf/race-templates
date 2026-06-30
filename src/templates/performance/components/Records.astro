@@ -1,45 +1,52 @@
 ---
 const { race } = Astro.props;
+const proof = race.proof || {};
+const records = Array.isArray(race.records) ? race.records : [];
+const certification = race.course?.certification || race.distances?.[0]?.certification;
+const hasBqProof = proof.bq_rate || proof.bq_finishers;
+const hasRecords = records.length > 0;
+const showSection = hasBqProof || hasRecords || certification;
 ---
-<section class="records" id="records">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="kicker">Boston Qualifier &amp; Records</div>
-      <h2 class="sec-title">A race for <em>the chase</em>.</h2>
-      <p class="lead">Capital sits on the Boston-qualifier short list for a reason — the course is built to deliver the time you trained for, and a fifth of our field walks away with the ticket.</p>
-    </div>
-
-    <div class="records-grid">
-      <div class="rec-card dark reveal">
-        <div class="rh">2025 Boston Qualifier Rate</div>
-        <h3>22% qualified.</h3>
-        <p class="desc">Of 4,200 finishers, 924 ran a time below their Boston qualifying standard. We're top-5 nationally for fastest legal-finish ratio.</p>
-        <div class="bq-hero">
-          <div class="v">924<small>/4,200</small></div>
-          <div class="l">2025 BQ Finishers</div>
-        </div>
-        <div class="ri-row head"><div>Age Group</div><div>Men's Standard</div><div>Women's Standard</div></div>
-        <div class="ri-row"><div class="ri-l">18–34</div><div class="ri-v">3:00:00</div><div class="ri-v">3:30:00</div></div>
-        <div class="ri-row"><div class="ri-l">35–39</div><div class="ri-v">3:05:00</div><div class="ri-v">3:35:00</div></div>
-        <div class="ri-row"><div class="ri-l">40–44</div><div class="ri-v">3:10:00</div><div class="ri-v">3:40:00</div></div>
-        <div class="ri-row"><div class="ri-l">45–49</div><div class="ri-v">3:20:00</div><div class="ri-v">3:50:00</div></div>
-        <div class="ri-row"><div class="ri-l">50–54</div><div class="ri-v">3:25:00</div><div class="ri-v">3:55:00</div></div>
-        <div class="ri-row"><div class="ri-l">55–59</div><div class="ri-v">3:35:00</div><div class="ri-v">4:05:00</div></div>
-        <div class="rec-foot">Standards per Boston Athletic Association · Subject to BAA updates</div>
+{showSection && (
+  <section class="records" id="records">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="kicker">{hasBqProof ? 'Boston Qualifier & Records' : 'Certification & Speed Proof'}</div>
+        <h2 class="sec-title">A race for <em>the chase</em>.</h2>
+        <p class="lead">{race.performance?.records_lead || race.course?.records_note || 'Course facts are surfaced for runners comparing fast, certified race options.'}</p>
       </div>
 
-      <div class="rec-card reveal">
-        <div class="rh">Course Record Book</div>
-        <h3>Hall of fast.</h3>
-        <p class="desc">Five years of Capital winners. The course has gotten faster every year as the pacing depth has grown.</p>
-        <div class="ri-row head"><div>Year</div><div>Men's CR</div><div>Women's CR</div></div>
-        <div class="ri-row"><div class="ri-l">2025</div><div class="ri-v gold">2:11:24</div><div class="ri-v gold">2:28:50</div></div>
-        <div class="ri-row"><div class="ri-l">2024</div><div class="ri-v">2:12:08</div><div class="ri-v">2:30:14</div></div>
-        <div class="ri-row"><div class="ri-l">2023</div><div class="ri-v">2:13:42</div><div class="ri-v">2:31:22</div></div>
-        <div class="ri-row"><div class="ri-l">2022</div><div class="ri-v">2:15:09</div><div class="ri-v">2:33:01</div></div>
-        <div class="ri-row"><div class="ri-l">2021</div><div class="ri-v">2:16:30</div><div class="ri-v">2:34:48</div></div>
-        <div class="rec-foot">All marks USATF certified · Subject to ratification</div>
+      <div class="records-grid">
+        {hasBqProof && (
+          <div class="rec-card dark reveal">
+            <div class="rh">Boston Qualifier Rate</div>
+            <h3>{proof.bq_rate}% qualified.</h3>
+            <p class="desc">{proof.bq_finishers && proof.field_cap ? `Of ${proof.field_cap} finishers, ${proof.bq_finishers} ran a time below their Boston qualifying standard.` : 'Boston qualifier proof is ready when race results support it.'}</p>
+            {proof.bq_finishers && <div class="bq-hero"><div class="v">{proof.bq_finishers}{proof.field_cap && <small>/{proof.field_cap}</small>}</div><div class="l">BQ Finishers</div></div>}
+            <div class="rec-foot">Standards per Boston Athletic Association · Subject to BAA updates</div>
+          </div>
+        )}
+
+        {hasRecords && (
+          <div class="rec-card reveal">
+            <div class="rh">Course Record Book</div>
+            <h3>Hall of fast.</h3>
+            <p class="desc">{race.performance?.record_book_intro || 'Configured course-record history for this race.'}</p>
+            <div class="ri-row head"><div>Year</div><div>Men's</div><div>Women's</div></div>
+            {records.map((record) => <div class="ri-row"><div class="ri-l">{record.year}</div><div class="ri-v gold">{record.mens_time}</div><div class="ri-v gold">{record.womens_time}</div></div>)}
+            <div class="rec-foot">All marks subject to official race verification</div>
+          </div>
+        )}
+
+        {!hasBqProof && !hasRecords && certification && (
+          <div class="rec-card dark reveal">
+            <div class="rh">Certified Course</div>
+            <h3>{certification.replace(/^USATF certified\s*/i, '')}</h3>
+            <p class="desc">{race.course?.description || race.distances?.[0]?.profile || 'The race distance includes certification details runners can verify before registering.'}</p>
+            <div class="rec-foot">Certification details are presented clearly for runner trust.</div>
+          </div>
+        )}
       </div>
     </div>
-  </div>
-</section>
+  </section>
+)}

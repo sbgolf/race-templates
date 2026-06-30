@@ -1,11 +1,25 @@
 ---
 const { race } = Astro.props;
+const primaryDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0] || {};
+const proof = race.proof || {};
+const records = Array.isArray(race.records) ? race.records : [];
+const certification = primaryDistance.certification || race.course?.certification;
+const stats = race.performance_stats || [
+  primaryDistance.distance && { value: primaryDistance.distance, label: primaryDistance.name || 'Distance', sub: primaryDistance.profile || '' },
+  certification && { value: certification.replace(/^USATF certified\s*/i, ''), label: 'USATF Certified', sub: primaryDistance.profile || '' },
+  primaryDistance.aid_stations && { value: String(primaryDistance.aid_stations), label: 'Aid Stations', sub: 'Water and Gatorade listed on course' },
+  primaryDistance.cutoff && { value: primaryDistance.cutoff, label: 'Course Time Limit', sub: 'Source-listed cutoff' },
+  proof.field_cap && { value: String(proof.field_cap), label: 'Field Cap', sub: proof.sold_out_years ? `Sold out ${proof.sold_out_years} years running` : '' },
+  proof.bq_rate && { value: `${proof.bq_rate}%`, label: 'BQ Rate', sub: proof.bq_finishers ? `${proof.bq_finishers} finishers` : '' },
+  records[0]?.mens_time && { value: records[0].mens_time, label: 'Course Record', sub: records[0].year ? `Set ${records[0].year}` : '' }
+].filter(Boolean).slice(0, 4);
 ---
-<div class="statbar">
-  <div class="statbar-grid stagger">
-    <div class="stat"><div class="n">22<span class="acc">%</span></div><div class="l">2025 BQ Rate</div><div class="sub">Of 4,200 finishers</div></div>
-    <div class="stat"><div class="n">4,200</div><div class="l">Field Cap</div><div class="sub">Sold out 4 years running</div></div>
-    <div class="stat"><div class="n">2:11:24</div><div class="l">Course Record</div><div class="sub">Set 2025 · Tadesse Yemane</div></div>
-    <div class="stat"><div class="n">−12 <span style="font-size:.6em;letter-spacing:.04em">FT</span></div><div class="l">Net Elevation</div><div class="sub">Point-to-point downhill</div></div>
+{stats.length > 0 && (
+  <div class="statbar">
+    <div class="statbar-grid stagger">
+      {stats.map((stat) => (
+        <div class="stat"><div class="n">{stat.value}</div><div class="l">{stat.label}</div>{stat.sub && <div class="sub">{stat.sub}</div>}</div>
+      ))}
+    </div>
   </div>
-</div>
+)}
