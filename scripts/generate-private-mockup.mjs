@@ -393,8 +393,13 @@ function extractStructuredLinks(value) {
     return trailing;
   });
 
-  text = text.replace(/\b(?:www\.)?runsignup\.com(?:\/Race\/[^\s)\]}<>"']*)?\b\.?/gi, 'the official RunSignup registration page');
-  text = text.replace(/\b(?:www\.)?(?:active\.com|raceentry\.com|raceroster\.com|hakusports\.com)\b\.?/gi, 'the official registration page');
+  text = text.replace(/\b(?:runsignup\.com|active\.com|raceentry\.com|raceroster\.com|hakusports\.com)(?=\/|[\s)\]}<>"'.,;:!?]|$)(?:\/[^\s)\]}<>"']*)?/gi, (url) => {
+    const cleanUrl = url.replace(/[.,;:!?]+$/g, '');
+    const trailing = url.slice(cleanUrl.length);
+    const resolvedUrl = `https://${cleanUrl}`;
+    links.push({ label: labelForResourceUrl(resolvedUrl), url: resolvedUrl });
+    return trailing;
+  });
   text = text.replace(/\(\s*see\s+links?\s+below\s*\)/gi, '');
   text = text.replace(/\bsee\s+links?\s+below\b\.?/gi, '');
   return { text: normalizeDisplayCopy(text), links: uniqueLinks(links) };
@@ -403,16 +408,20 @@ function extractStructuredLinks(value) {
 function labelForResourceUrl(url) {
   let host = '';
   try { host = new URL(/^www\./i.test(url) ? `https://${url}` : url).hostname.replace(/^www\./, '').toLowerCase(); } catch { return 'View course resource'; }
-  if (host.includes('strava.com')) return 'View Strava route';
-  if (host.includes('runningahead.com')) return 'View RunningAHEAD map';
-  if (host.includes('runsignup.com')) return 'Register on RunSignup';
-  if (host.includes('active.com')) return 'Register on ACTIVE';
-  if (host.includes('raceentry.com')) return 'Register on Race Entry';
-  if (host.includes('raceroster.com')) return 'Register on Race Roster';
-  if (host.includes('hakusports.com')) return 'Register on Haku';
+  if (hostMatchesDomain(host, 'strava.com')) return 'View Strava route';
+  if (hostMatchesDomain(host, 'runningahead.com')) return 'View RunningAHEAD map';
+  if (hostMatchesDomain(host, 'runsignup.com')) return 'Register on RunSignup';
+  if (hostMatchesDomain(host, 'active.com')) return 'Register on ACTIVE';
+  if (hostMatchesDomain(host, 'raceentry.com')) return 'Register on Race Entry';
+  if (hostMatchesDomain(host, 'raceroster.com')) return 'Register on Race Roster';
+  if (hostMatchesDomain(host, 'hakusports.com')) return 'Register on Haku';
   if (/map|route|course/i.test(url)) return 'View course resource';
   const label = host.split('.')[0]?.replace(/[-_]+/g, ' ');
   return label ? `View ${titleCase(label)} resource` : 'View source resource';
+}
+
+function hostMatchesDomain(host, domain) {
+  return host === domain || host.endsWith(`.${domain}`);
 }
 
 function uniqueLinks(links) {
@@ -426,7 +435,9 @@ function uniqueLinks(links) {
 
 function registrationDetails(url) {
   const details = { url, platform: 'other', cta_label: 'View official registration' };
-  if (/runsignup\.com/i.test(url || '')) {
+  let host = '';
+  try { host = new URL(url || '').hostname.replace(/^www\./, '').toLowerCase(); } catch {}
+  if (hostMatchesDomain(host, 'runsignup.com')) {
     details.platform = 'runsignup';
     details.cta_label = 'Register on RunSignup';
   }
@@ -878,8 +889,8 @@ function splitDisplayParagraphs(value, max = 280) {
 function normalizeDisplayCopy(value) {
   let text = String(value || '')
     .replace(/\b(?:https?:\/\/|www\.)[^\s)\]}<>"']+/gi, '')
-    .replace(/\b(?:www\.)?runsignup\.com(?:\/Race\/[^\s)\]}<>"']*)?\b\.?/gi, 'the official RunSignup registration page')
-    .replace(/\b(?:www\.)?(?:active\.com|raceentry\.com|raceroster\.com|hakusports\.com)\b\.?/gi, 'the official registration page')
+    .replace(/\brunsignup\.com(?=\/|[\s)\]}<>"'.,;:!?]|$)(?:\/[^\s)\]}<>"']*)?\b\.?/gi, 'the official RunSignup registration page')
+    .replace(/\b(?:active\.com|raceentry\.com|raceroster\.com|hakusports\.com)(?=\/|[\s)\]}<>"'.,;:!?]|$)(?:\/[^\s)\]}<>"']*)?\b\.?/gi, 'the official registration page')
     .replace(/(?:…|\.\.\.)\s*$/g, '')
     .replace(/\s+/g, ' ')
     .replace(/\blisted\s+by\s+the\s+source\s+page\b/gi, 'listed')

@@ -22,6 +22,9 @@ assert.deepEqual(faqLinkResult.links, [
 ]);
 
 assert.equal(labelForResourceUrl('https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon'), 'Register on RunSignup');
+assert.equal(labelForResourceUrl('https://register.runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon'), 'Register on RunSignup');
+assert.notEqual(labelForResourceUrl('https://runsignup.com.evil.example/race'), 'Register on RunSignup');
+assert.notEqual(labelForResourceUrl('https://notrunsignup.com/race'), 'Register on RunSignup');
 
 const richSourceCopy = extractStructuredLinks('Register now at https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon. Course map: www.strava.com/routes/123... Packet pick-up details are listed by the source page | .');
 assert.equal(richSourceCopy.text, 'Register now. Course map. Packet pick-up details are listed.');
@@ -41,8 +44,18 @@ assert(splitRichParagraphs.length > 1);
 assert(splitRichParagraphs.every((paragraph) => paragraph.length <= 160 && !/https?:\/\/|www\.|\.\.\.|\s+[,.!?;:]/.test(paragraph)));
 
 const sparseSourceCopy = extractStructuredLinks('More info: runsignup.com .');
-assert.equal(sparseSourceCopy.text, 'More info: the official RunSignup registration page.');
-assert.deepEqual(sparseSourceCopy.links, []);
+assert.equal(sparseSourceCopy.text, 'More info.');
+assert.deepEqual(sparseSourceCopy.links, [
+  { label: 'Register on RunSignup', url: 'https://runsignup.com' }
+]);
+
+const barePlatformPathCopy = extractStructuredLinks('More info at runsignup.com/register. Details at active.com/events.');
+assert.equal(barePlatformPathCopy.text, 'More info. Details.');
+assert.deepEqual(barePlatformPathCopy.links, [
+  { label: 'Register on RunSignup', url: 'https://runsignup.com/register' },
+  { label: 'Register on ACTIVE', url: 'https://active.com/events' }
+]);
+assert(!/runsignup\.com|active\.com|\/register|\/events/i.test(barePlatformPathCopy.text));
 
 assert.deepEqual(
   buildCapturedImageAsset({

@@ -70,7 +70,6 @@ for (const file of files) {
   const html = await readFile(file, 'utf8');
   const text = visibleText(html);
   const customerFacingCopy = customerFacingCopySurface(html);
-  const paragraphLikeText = paragraphLikeVisibleText(html);
   const errors = [];
   const registrationUrl = registrationUrlForRenderedFile(file);
   const config = configForRenderedFile(file);
@@ -78,7 +77,7 @@ for (const file of files) {
   const shouldRenderTrustSignals = shouldRenderTrustSignalsBand(config);
   validatePrivateRobotsMetadata(html, errors);
   validateMobileOverflowReadiness(html, errors);
-  if (rawVisibleUrlPattern.test(paragraphLikeText)) errors.push('Rendered paragraph-like visible copy exposes a raw URL or bare domain; use labeled links/buttons instead.');
+  if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible customer-facing copy exposes a raw URL or bare domain; use labeled links/buttons instead.');
   for (const pattern of visiblePlaceholderPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains placeholder copy "${pattern.source}".`);
   }
@@ -242,14 +241,6 @@ function visibleText(html) {
     .replace(/&#x([a-f0-9]+);/gi, (_, code) => String.fromCharCode(parseInt(code, 16)))
     .replace(/\s+/g, ' ')
     .trim();
-}
-
-function paragraphLikeVisibleText(html) {
-  const blocks = [];
-  for (const match of String(html || '').matchAll(/<(p|li|figcaption|blockquote|summary|dt|dd|h[1-6])\b[^>]*>([\s\S]*?)<\/\1>/gi)) {
-    blocks.push(visibleText(match[2] || ''));
-  }
-  return blocks.join(' ');
 }
 
 function customerFacingCopySurface(html) {
