@@ -28,6 +28,8 @@ const points = hasProfile ? profile.map((point) => {
   return `${x.toFixed(1)},${y.toFixed(1)}`;
 }).join(' ') : '';
 const fillPoints = hasProfile ? `0,200 ${points} 500,200` : '';
+const vizRows = hasProfile ? [] : rows.slice(0, 4);
+const detailRows = hasProfile ? rows : rows.slice(4);
 ---
 <section class="course" id="course">
   <div class="wrap">
@@ -43,7 +45,7 @@ const fillPoints = hasProfile ? `0,200 ${points} 500,200` : '';
           <span>{hasProfile ? 'ELEVATION PROFILE' : 'COURSE FACTS'}</span>
           {certification && <span class="net">{certification.replace(/^USATF certified\s*/i, '')}</span>}
         </div>
-        <div class="profile-chart">
+        <div class={`profile-chart ${hasProfile ? '' : 'facts-chart'}`}>
           {hasProfile ? (
             <svg viewBox="0 0 500 200" preserveAspectRatio="none" aria-hidden="true">
               <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(10,10,18,.08)" stroke-dasharray="4 4"/>
@@ -51,19 +53,23 @@ const fillPoints = hasProfile ? `0,200 ${points} 500,200` : '';
               <polygon points={fillPoints} fill="rgba(45,91,255,.12)"/>
             </svg>
           ) : (
-            <div class="course-info" style="padding:22px">
-              {rows.slice(0, 4).map((row) => <div class="ci-row"><span class="l">{row.label}</span><span class={`v ${row.className || ''}`}>{row.value}</span></div>)}
+            <div class="course-info course-info--embedded">
+              {vizRows.map((row) => <div class="ci-row"><span class="l">{row.label}</span><span class={`v ${row.className || ''}`}>{row.value}</span></div>)}
             </div>
           )}
         </div>
-        <div class="profile-mile">
-          <span>0 mi</span><span>{maxMile / 2}</span><span>{maxMile} mi</span>
-        </div>
+        {hasProfile && (
+          <div class="profile-mile">
+            <span>0 mi</span><span>{maxMile / 2}</span><span>{maxMile} mi</span>
+          </div>
+        )}
       </div>
 
-      <div class="course-info reveal">
-        {rows.map((row) => <div class="ci-row"><span class="l">{row.label}</span><span class={`v ${row.className || ''}`}>{row.value}</span></div>)}
-      </div>
+      {detailRows.length > 0 && (
+        <div class="course-info reveal">
+          {detailRows.map((row) => <div class="ci-row"><span class="l">{row.label}</span><span class={`v ${row.className || ''}`}>{row.value}</span></div>)}
+        </div>
+      )}
     </div>
   </div>
 </section>

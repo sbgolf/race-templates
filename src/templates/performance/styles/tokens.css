@@ -233,14 +233,18 @@ font-family:"IBM Plex Mono";font-size:.72rem;color:rgba(250,250,252,.5);letter-s
 .course-viz{
   background:var(--paper);border-radius:var(--r);
   border:1px solid var(--line);overflow:hidden;
+  min-width:0;
 }
 .course-viz-head{
   display:flex;justify-content:space-between;align-items:center;
+  gap:14px;min-width:0;
   padding:18px 22px;border-bottom:1px solid var(--line);
   font-family:"IBM Plex Mono";font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(10,10,18,.6);
 }
-.course-viz-head .net{color:var(--green);font-weight:600}
+.course-viz-head span{min-width:0;overflow-wrap:anywhere}
+.course-viz-head .net{color:var(--green);font-weight:600;text-align:right}
 .profile-chart{padding:30px 24px 22px;position:relative;height:240px}
+.profile-chart.facts-chart{height:auto;padding:22px}
 .profile-chart svg{width:100%;height:100%;overflow:visible}
 .profile-mile{
   display:flex;justify-content:space-between;
@@ -248,14 +252,16 @@ font-family:"IBM Plex Mono";font-size:.72rem;color:rgba(250,250,252,.5);letter-s
   font-family:"IBM Plex Mono";font-size:.72rem;color:rgba(10,10,18,.6);letter-spacing:.04em;
 }
 
-.course-info{display:flex;flex-direction:column;gap:14px}
+.course-info{display:flex;flex-direction:column;gap:14px;min-width:0}
+.course-info--embedded{width:100%}
 .ci-row{
   background:var(--paper);border:1px solid var(--line);
   border-radius:var(--r);padding:18px 22px;
   display:flex;justify-content:space-between;align-items:center;
+  gap:18px;min-width:0;
 }
-.ci-row .l{font-family:"IBM Plex Mono";font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(10,10,18,.55);font-weight:500}
-.ci-row .v{font-family:"Big Shoulders Display";font-size:1.6rem;color:var(--ink);font-weight:800;letter-spacing:-.005em;text-transform:uppercase}
+.ci-row .l{font-family:"IBM Plex Mono";font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(10,10,18,.55);font-weight:500;min-width:0;overflow-wrap:anywhere}
+.ci-row .v{font-family:"Big Shoulders Display";font-size:1.6rem;color:var(--ink);font-weight:800;letter-spacing:-.005em;text-transform:uppercase;text-align:right;min-width:0;overflow-wrap:anywhere;line-height:1}
 .ci-row .v.acc{color:var(--accent)}
 .ci-row .v.green{color:var(--green)}
 .ci-row .v small{font-family:"IBM Plex Mono";font-size:.7rem;font-weight:500;color:rgba(10,10,18,.55);letter-spacing:.04em;margin-left:6px;text-transform:none}
