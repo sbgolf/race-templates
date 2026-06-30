@@ -26,11 +26,11 @@ const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 <StatBar race={race} />
 {isPrivateMockup && <RunnerDecisionChecklist race={race} />}
 {isPrivateMockup && <TrustSignalsBand race={race} />}
+{isPrivateMockup && <RegistrationDecisionCard race={race} />}
 <Course race={race} />
 <PacePicker race={race} />
 <Records race={race} />
 <Gallery race={race} galleryAssets={galleryAssets} />
-{isPrivateMockup && <RegistrationDecisionCard race={race} />}
 <Entry race={race} />
 <Travel race={race} />
 <Sponsors race={race} />

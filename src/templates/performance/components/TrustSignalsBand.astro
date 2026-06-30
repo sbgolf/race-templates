@@ -9,14 +9,14 @@ const signals = trustSignalsForRace(race);
     <div class="wrap perf-private-wrap">
       <div class="perf-private-head reveal">
         <div>
-          <div class="kicker">Runner trust signals</div>
-          <h2 class="sec-title">Proof runners can scan before they chase a bib.</h2>
+          <div class="kicker">Race confidence</div>
+          <h2 class="sec-title">Why runners trust this race faster.</h2>
         </div>
-        <p class="lead">Performance runners look for certified-course confidence, schedule clarity, price, policies, and race-day support. This section keeps the race facts easy to scan.</p>
+        <p class="lead">After the decision checklist, this proof band avoids repeating the same basics and highlights the credibility signals performance runners use to compare races quickly.</p>
       </div>
       <div class="perf-trust-grid stagger">
         {signals.map((signal) => (
-          <article class="perf-trust-card" data-trust-signal-id={signal.id}>
+          <article class="perf-trust-card" data-trust-signal-id={signal.id === 'source-backed' ? 'fact-reviewed' : signal.id}>
             <span>{signal.label}</span>
             <strong>{signal.value}</strong>
             {signal.detail ? <p>{signal.detail}</p> : null}

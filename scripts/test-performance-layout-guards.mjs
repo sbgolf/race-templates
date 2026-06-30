@@ -6,6 +6,9 @@ const repoRoot = dirname(dirname(fileURLToPath(import.meta.url)));
 const css = readFileSync(join(repoRoot, 'src/templates/performance/styles/tokens.css'), 'utf8');
 const nav = readFileSync(join(repoRoot, 'src/templates/performance/components/Nav.astro'), 'utf8');
 const template = readFileSync(join(repoRoot, 'src/templates/performance/components/PerformanceTemplate.astro'), 'utf8');
+const checklist = readFileSync(join(repoRoot, 'src/templates/performance/components/RunnerDecisionChecklist.astro'), 'utf8');
+const trustBand = readFileSync(join(repoRoot, 'src/templates/performance/components/TrustSignalsBand.astro'), 'utf8');
+const registrationDecision = readFileSync(join(repoRoot, 'src/templates/performance/components/RegistrationDecisionCard.astro'), 'utf8');
 
 const checks = [
   ['html/body horizontal overflow guard', /html\{[^}]*overflow-x:hidden/.test(css) && /body\{[^}]*overflow-x:hidden/.test(css)],
@@ -16,6 +19,9 @@ const checks = [
   ['mobile hero CTA stacks full width', /@media\(max-width:560px\)[\s\S]*\.hero-cta\{[^}]*flex-direction:column/.test(css) && /\.hero-cta \.btn\{width:100%\}/.test(css)],
   ['pace table scrolls instead of overflowing viewport', /\.pace-table\{[^}]*overflow-x:auto/.test(css) && /\.pace-row\{[^}]*min-width:360px/.test(css)],
   ['hamburger exposes expanded state', /aria-expanded="false"/.test(nav) && /setAttribute\('aria-expanded',String\(isOpen\)\)/.test(template)],
+  ['performance private modules use runner-facing labels', !/Runner trust signals|Registration decision/.test(`${trustBand}\n${registrationDecision}`) && /Why runners trust this race faster/.test(trustBand) && /Clear path to registration/.test(registrationDecision)],
+  ['performance checklist keeps one natural CTA handoff', !/runner-checklist-top/.test(checklist) && /runner-checklist-footer/.test(checklist)],
+  ['performance registration decision follows trust proof before course content', template.indexOf('<TrustSignalsBand race={race} />') < template.indexOf('<RegistrationDecisionCard race={race} />') && template.indexOf('<RegistrationDecisionCard race={race} />') < template.indexOf('<Course race={race} />')],
 ];
 
 const failures = checks.filter(([, pass]) => !pass).map(([name]) => name);
