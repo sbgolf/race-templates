@@ -83,7 +83,18 @@ Acceptance criteria:
 
 ### Sprint 2 — Source content transformation polish
 
+Status: implemented in this PR.
+
 Goal: make generated mockups feel professionally transformed, not scraped.
+
+Implemented behavior:
+
+- Generator extracts `http(s)` and `www.` URLs from source prose into labeled resource links instead of leaving them in paragraph copy.
+- RunSignup and common registration-platform links receive prospect-facing CTA labels, with RunSignup registration URLs labeled as `Register on RunSignup`.
+- Display-copy normalization removes visible raw URLs/domains, dangling separators, duplicate spacing, trailing truncation ellipses, and scraped punctuation artifacts.
+- Long source prose is split into shorter display-ready story paragraphs without inventing unsupported facts.
+- Private mockup config and rendered validators fail visible raw URLs/domains and punctuation artifacts in customer-facing display copy while still allowing URL metadata fields.
+- Generator regressions cover rich and sparse source prose with raw URLs, RunSignup domains, broken punctuation, truncated ellipses, labeled links, and paragraph splitting.
 
 Deliverables:
 

@@ -38,12 +38,15 @@ const sampleImagePatterns = [
 
 const rawVisibleUrlPattern = /\b(?:https?:\/\/|www\.|[a-z0-9-]+\.(?:com|org|net|io|gov|edu)\b)/i;
 const punctuationArtifactPatterns = [
+  /(?:…|\.\.\.)\s*$/,
   /\b20\d{2}\s+\./,
   /\b\d+\s+hours?\s+\./i,
   /\b[A-Z]{2}\d{5}[A-Z]{2}\s+\./,
   /\)\s+\./,
   /\b\d+(?:st|nd|rd|th)?\s*-\$/i,
-  /\s+[,.!?;:]/
+  /\s+[,.!?;:]/,
+  /[-–—|/]\s*[.!?]/,
+  /[-–—|/]\s*$/
 ];
 
 const renderedSectionFields = [

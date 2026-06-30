@@ -377,36 +377,51 @@ function buildStory(facts) {
   ].filter(Boolean).map((item) => {
     const extracted = extractStructuredLinks(item);
     links.push(...extracted.links);
-    return normalizeDisplayCopy(extracted.text);
-  }).filter(Boolean)).slice(0, 5);
+    return splitDisplayParagraphs(extracted.text, 260);
+  }).flat().filter(Boolean)).slice(0, 6);
 
   return { paragraphs, links: uniqueLinks(links).slice(0, 4) };
 }
 
 function extractStructuredLinks(value) {
   const links = [];
-  let text = String(value || '').replace(/\bhttps?:\/\/[^\s)\]}<>"']+/gi, (url) => {
+  let text = String(value || '').replace(/\b(?:https?:\/\/|www\.)[^\s)\]}<>"']+/gi, (url) => {
     const cleanUrl = url.replace(/[.,;:!?]+$/g, '');
     const trailing = url.slice(cleanUrl.length);
-    links.push({ label: labelForResourceUrl(cleanUrl), url: cleanUrl });
+    const resolvedUrl = /^www\./i.test(cleanUrl) ? `https://${cleanUrl}` : cleanUrl;
+    links.push({ label: labelForResourceUrl(resolvedUrl), url: resolvedUrl });
     return trailing;
   });
 
-  text = text.replace(/\b(?:www\.)?runsignup\.com\b\s*\.?/gi, 'the official registration page');
+  text = text.replace(/\b(?:runsignup\.com|active\.com|raceentry\.com|raceroster\.com|hakusports\.com)(?=\/|[\s)\]}<>"'.,;:!?]|$)(?:\/[^\s)\]}<>"']*)?/gi, (url) => {
+    const cleanUrl = url.replace(/[.,;:!?]+$/g, '');
+    const trailing = url.slice(cleanUrl.length);
+    const resolvedUrl = `https://${cleanUrl}`;
+    links.push({ label: labelForResourceUrl(resolvedUrl), url: resolvedUrl });
+    return trailing;
+  });
   text = text.replace(/\(\s*see\s+links?\s+below\s*\)/gi, '');
   text = text.replace(/\bsee\s+links?\s+below\b\.?/gi, '');
-  return { text, links };
+  return { text: normalizeDisplayCopy(text), links: uniqueLinks(links) };
 }
 
 function labelForResourceUrl(url) {
   let host = '';
-  try { host = new URL(url).hostname.replace(/^www\./, '').toLowerCase(); } catch { return 'View course resource'; }
-  if (host.includes('strava.com')) return 'View Strava route';
-  if (host.includes('runningahead.com')) return 'View RunningAHEAD map';
-  if (host.includes('runsignup.com')) return 'View RunSignup registration';
+  try { host = new URL(/^www\./i.test(url) ? `https://${url}` : url).hostname.replace(/^www\./, '').toLowerCase(); } catch { return 'View course resource'; }
+  if (hostMatchesDomain(host, 'strava.com')) return 'View Strava route';
+  if (hostMatchesDomain(host, 'runningahead.com')) return 'View RunningAHEAD map';
+  if (hostMatchesDomain(host, 'runsignup.com')) return 'Register on RunSignup';
+  if (hostMatchesDomain(host, 'active.com')) return 'Register on ACTIVE';
+  if (hostMatchesDomain(host, 'raceentry.com')) return 'Register on Race Entry';
+  if (hostMatchesDomain(host, 'raceroster.com')) return 'Register on Race Roster';
+  if (hostMatchesDomain(host, 'hakusports.com')) return 'Register on Haku';
   if (/map|route|course/i.test(url)) return 'View course resource';
   const label = host.split('.')[0]?.replace(/[-_]+/g, ' ');
   return label ? `View ${titleCase(label)} resource` : 'View source resource';
+}
+
+function hostMatchesDomain(host, domain) {
+  return host === domain || host.endsWith(`.${domain}`);
 }
 
 function uniqueLinks(links) {
@@ -420,7 +435,9 @@ function uniqueLinks(links) {
 
 function registrationDetails(url) {
   const details = { url, platform: 'other', cta_label: 'View official registration' };
-  if (/runsignup\.com/i.test(url || '')) {
+  let host = '';
+  try { host = new URL(url || '').hostname.replace(/^www\./, '').toLowerCase(); } catch {}
+  if (hostMatchesDomain(host, 'runsignup.com')) {
     details.platform = 'runsignup';
     details.cta_label = 'Register on RunSignup';
   }
@@ -849,19 +866,54 @@ function cleanSentence(value, max) {
   return normalizeDisplayCopy(clipped.slice(0, cut > 0 ? cut : max));
 }
 
+function splitDisplayParagraphs(value, max = 280) {
+  const text = normalizeDisplayCopy(value);
+  if (!text) return [];
+  const sentences = text.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g)?.map((sentence) => normalizeDisplayCopy(sentence)).filter(Boolean) || [text];
+  const paragraphs = [];
+  let current = '';
+  for (const sentence of sentences) {
+    if (!current) {
+      current = sentence;
+    } else if (`${current} ${sentence}`.length <= max) {
+      current = `${current} ${sentence}`;
+    } else {
+      paragraphs.push(current);
+      current = sentence;
+    }
+  }
+  if (current) paragraphs.push(current);
+  return paragraphs.flatMap((paragraph) => paragraph.length <= max + 40 ? [paragraph] : [cleanSentence(paragraph, max)]).filter(Boolean);
+}
+
 function normalizeDisplayCopy(value) {
   let text = String(value || '')
+    .replace(/\b(?:https?:\/\/|www\.)[^\s)\]}<>"']+/gi, '')
+    .replace(/\brunsignup\.com(?=\/|[\s)\]}<>"'.,;:!?]|$)(?:\/[^\s)\]}<>"']*)?\b\.?/gi, 'the official RunSignup registration page')
+    .replace(/\b(?:active\.com|raceentry\.com|raceroster\.com|hakusports\.com)(?=\/|[\s)\]}<>"'.,;:!?]|$)(?:\/[^\s)\]}<>"']*)?\b\.?/gi, 'the official registration page')
+    .replace(/(?:…|\.\.\.)\s*$/g, '')
     .replace(/\s+/g, ' ')
     .replace(/\blisted\s+by\s+the\s+source\s+page\b/gi, 'listed')
     .replace(/\bnoted\s+by\s+the\s+source\s+page\b/gi, 'noted')
     .replace(/\bfrom\s+the\s+race\s+source\b/gi, 'for this race')
     .replace(/\bfrom\s+the\s+source\s+config\b/gi, 'for race day')
+    .replace(/\s*\(\s*\)\s*/g, ' ')
+    .replace(/\s+(?:and|or)\s*([.?!])/gi, '$1')
+    .replace(/\s*[,;:]\s*([.?!])/g, '$1')
+    .replace(/\s*[-–—|/]\s*([.?!])/g, '$1')
+    .replace(/(?:^|\s)[-–—|/]+\s*$/g, '')
     .replace(/\s+([,.;:!?])/g, '$1')
     .replace(/([([{])\s+/g, '$1')
     .replace(/\s+([)\]}])/g, '$1')
     .replace(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d+)(?:st|nd|rd|th),\s+(20\d{2})\b/gi, '$1 $2, $3')
     .replace(/\b(\d+(?:st|nd|rd|th)?)(?:\s*)[-–—]\s*\$/gi, '$1 — $')
     .replace(/\s+[-–—]\s*\$/g, ' — $')
+    .replace(/\s*([|/])\s*$/g, '')
+    .replace(/\s*[-–—]\s*$/g, '')
+    .replace(/\s+\./g, '.')
+    .replace(/\.{2,}/g, '.')
+    .replace(/\b(?:at|via|from)\s*\./gi, '.')
+    .replace(/\b((?:details|more info))\s+at\s*$/gi, '$1')
     .replace(/\s+([,.;:!?])/g, '$1')
     .replace(/\s+/g, ' ')
     .trim();
@@ -881,4 +933,4 @@ function formatTimeLabel(value) {
   return String(value || '').replace(/\b(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b/gi, (_, hour, minute = '00', period) => `${Number(hour)}:${minute} ${period.toUpperCase()}`);
 }
 
-export { buildCapturedImageAsset, buildRunnerDecisionChecklist, extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy };
+export { buildCapturedImageAsset, buildRunnerDecisionChecklist, extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy, splitDisplayParagraphs };
