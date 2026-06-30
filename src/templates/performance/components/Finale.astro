@@ -12,7 +12,7 @@ const price = race.distances?.find((distance) => distance.price)?.price || race.
 <section class="finale">
   <div class="wrap">
     <h2 class="reveal">Train for it. Run it. <em>Time it.</em></h2>
-    <p class="reveal">{raceDate}{startTime ? `. ${startTime}.` : '.'} A focused {distance} course preview built around the details runners check before they register.</p>
+    <p class="reveal">{raceDate}{startTime ? `. ${startTime}.` : '.'} A focused {distance} course guide built around the details runners check before they register.</p>
     <a class="btn btn-light reveal" href={registrationUrl} {...registerClickAttributes(race, 'finale-primary')}>{race.registration?.cta_label || 'Register'}{price ? ` · ${price}` : ''} →</a>
   </div>
 </section>

@@ -72,6 +72,7 @@ const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
   function closeMenu(){
     navLinks?.classList.remove('open');
     nav?.classList.remove('menu-open');
+    burger?.setAttribute('aria-expanded','false');
     document.body.classList.remove('no-scroll');
   }
 
@@ -87,6 +88,7 @@ const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
     if(!navLinks) return;
     const isOpen=navLinks.classList.toggle('open');
     nav?.classList.toggle('menu-open',isOpen);
+    burger?.setAttribute('aria-expanded',String(isOpen));
     document.body.classList.toggle('no-scroll',isOpen);
   }
   burger?.addEventListener('click',toggleMenu);
