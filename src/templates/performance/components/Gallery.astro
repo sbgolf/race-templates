@@ -1,7 +1,8 @@
 ---
-const { race } = Astro.props;
+const { race, galleryAssets = [] } = Astro.props;
 const primaryDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0] || {};
-const assets = race.private_mockup?.assets || [];
+const publicAssets = race.gallery || race.gallery_images || [];
+const assets = Array.isArray(galleryAssets) && galleryAssets.length ? galleryAssets : publicAssets;
 const raceName = race.identity?.name || 'Race day';
 const distance = primaryDistance.distance || 'race distance';
 const certification = primaryDistance.certification || race.course?.certification || '';

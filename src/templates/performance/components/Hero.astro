@@ -1,8 +1,8 @@
 ---
 import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
-const { race } = Astro.props;
+const { race, isPrivateMockup = false } = Astro.props;
 const registrationUrl = race.registration?.url || '#entry';
-const hasPrivateChecklist = Boolean(race.private_mockup && Array.isArray(race.runner_decision_checklist?.items) && race.runner_decision_checklist.items.length);
+const hasPrivateChecklist = Boolean(isPrivateMockup && Array.isArray(race.runner_decision_checklist?.items) && race.runner_decision_checklist.items.length);
 const primaryDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0] || {};
 const raceName = race.identity?.name || 'Race day';
 const tagline = race.identity?.tagline || primaryDistance.profile || 'A fast, certified race-day experience.';
@@ -26,6 +26,7 @@ const clockSplits = race.performance?.clock?.splits || race.pace_goals?.find((go
   { label: 'Finish', value: clockTime }
 ];
 const clockFoot = race.performance?.clock?.footer || (certification ? `${certification} · certified course` : `${raceName} · race-day pace`);
+const clockStatusLabel = race.performance?.clock?.status_label || '';
 ---
 <section class="hero" id="top">
   <div class="hero-grid">
@@ -59,7 +60,7 @@ const clockFoot = race.performance?.clock?.footer || (certification ? `${certifi
         </div>
         <div class="rc-foot">
           <span>{clockFoot}</span>
-          <span class="live">LIVE</span>
+          {clockStatusLabel && <span class="live">{clockStatusLabel}</span>}
         </div>
       </div>
     </div>

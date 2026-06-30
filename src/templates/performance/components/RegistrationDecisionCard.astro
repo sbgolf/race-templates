@@ -1,8 +1,10 @@
 ---
 import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
 import { registrationDecisionCopyForRace } from '../../../shared/private-mockup-value.mjs';
+import { registrationPlatformLabel } from '../../../shared/registration-platform-label.mjs';
 const { race } = Astro.props;
 const registerUrl = race.registration?.url || '#entry';
+const platformLabel = registrationPlatformLabel(race.registration?.platform);
 const items = Array.isArray(race.runner_decision_checklist?.items) ? race.runner_decision_checklist.items : [];
 const itemById = (id) => items.find((item) => item.id === id);
 const price = itemById('price')?.value || race.distances?.[0]?.price || race.registration?.price_note;
@@ -12,7 +14,7 @@ const policy = itemById('refunds-transfers')?.value;
 const decisionCopy = registrationDecisionCopyForRace(race, {
   kicker: 'Registration decision',
   headline: 'Confirm the facts here. Finish on the official platform.',
-  body: 'This section keeps the high-intent registration details together: price, course credibility, race timing, policy context, and the official RunSignup handoff. Runners can decide with confidence before leaving the race site.'
+  body: `This section keeps the high-intent registration details together: price, course credibility, race timing, policy context, and a clear handoff to ${platformLabel}. Runners can decide with confidence before leaving the race site.`
 });
 const platform = decisionCopy.platform || 'Official registration';
 const decisionFacts = [

@@ -18,19 +18,18 @@ import Sponsors from './Sponsors.astro';
 import FAQ from './FAQ.astro';
 import Finale from './Finale.astro';
 import Footer from './Footer.astro';
-const { race } = Astro.props;
-const isPrivateMockup = Boolean(race.private_mockup);
+const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 ---
 <Nav race={race} />
 <main id="main-content">
-<Hero race={race} />
+<Hero race={race} isPrivateMockup={isPrivateMockup} />
 <StatBar race={race} />
 {isPrivateMockup && <RunnerDecisionChecklist race={race} />}
 {isPrivateMockup && <TrustSignalsBand race={race} />}
 <Course race={race} />
 <PacePicker race={race} />
 <Records race={race} />
-<Gallery race={race} />
+<Gallery race={race} galleryAssets={galleryAssets} />
 {isPrivateMockup && <RegistrationDecisionCard race={race} />}
 <Entry race={race} />
 <Travel race={race} />
