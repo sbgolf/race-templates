@@ -1,13 +1,13 @@
 import { registrationPlatformLabel } from './registration-platform-label.mjs';
 
 const TRUST_SIGNAL_LABELS = {
-  course: 'Course credibility',
-  'aid-stations': 'On-course support',
+  course: 'Certified-course proof',
+  'aid-stations': 'Race-day support',
   'packet-pickup': 'Packet pickup clarity',
   'refunds-transfers': 'Policy clarity',
   swag: 'Runner value',
   awards: 'Awards / recognition',
-  'time-limit': 'Time limit clarity',
+  'time-limit': 'Cutoff clarity',
   'start-time': 'Schedule clarity',
   price: 'Price clarity'
 };
@@ -41,11 +41,6 @@ export function trustSignalsForRace(race) {
     signals.push({ id, label, value: cleanValue, detail: cleanDetail });
   };
 
-  for (const item of asArray(race.runner_decision_checklist?.items)) {
-    if (!TRUST_CHECKLIST_IDS.has(item?.id)) continue;
-    add(item.id, TRUST_SIGNAL_LABELS[item.id], item.value, item.detail);
-  }
-
   for (const distance of asArray(race.distances)) {
     const suffix = distance?.name ? ` (${distance.name})` : '';
     add(`certification-${distance?.id || signals.length}`, 'Certification', distance?.certification, `Distance detail${suffix}`);
@@ -72,6 +67,11 @@ export function trustSignalsForRace(race) {
     if (highConfidenceCount) summaryParts.push(`${highConfidenceCount} high-confidence facts`);
     if (sourceSections) summaryParts.push(`${sourceSections} detailed sections`);
     add('source-backed', 'Fact-checked concept', summaryParts.join(' · ') || 'Race details reviewed', 'Unavailable details are omitted instead of filled with placeholders.');
+  }
+
+  for (const item of asArray(race.runner_decision_checklist?.items)) {
+    if (!TRUST_CHECKLIST_IDS.has(item?.id)) continue;
+    add(item.id, TRUST_SIGNAL_LABELS[item.id], item.value, item.detail);
   }
 
   return signals.slice(0, 8);

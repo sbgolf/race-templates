@@ -8,21 +8,18 @@ const platformLabel = registrationPlatformLabel(race.registration?.platform);
 const items = Array.isArray(race.runner_decision_checklist?.items) ? race.runner_decision_checklist.items : [];
 const itemById = (id) => items.find((item) => item.id === id);
 const price = itemById('price')?.value || race.distances?.[0]?.price || race.registration?.price_note;
-const course = itemById('course')?.value || race.course?.certification || race.performance?.hero_stat?.value;
-const start = itemById('start-time')?.value || race.distances?.[0]?.start_time;
-const policy = itemById('refunds-transfers')?.value;
+const priceDetail = itemById('price')?.detail || race.registration?.price_note;
+const registrationStatus = race.registration?.intro;
 const decisionCopy = registrationDecisionCopyForRace(race, {
-  kicker: 'Registration decision',
-  headline: 'Confirm the facts here. Finish on the official platform.',
-  body: `This section keeps the high-intent registration details together: price, course credibility, race timing, policy context, and a clear handoff to ${platformLabel}. Runners can decide with confidence before leaving the race site.`
+  kicker: 'Clear path to registration',
+  headline: 'Ready to register? Finish on the official platform.',
+  body: `The runner facts stay on this page; the entry form, payment, and confirmation continue on ${platformLabel}. This keeps the decision path clear without asking runners to sort through repeated CTAs.`
 });
 const platform = decisionCopy.platform || 'Official registration';
 const decisionFacts = [
-  price ? { label: 'Current listed price', value: price } : null,
-  course ? { label: 'Course proof', value: course } : null,
-  start ? { label: 'Race start', value: start } : null,
-  platform ? { label: 'Official handoff', value: platform } : null,
-  policy ? { label: 'Policy note', value: policy } : null
+  price ? { label: 'Current price', value: price, detail: priceDetail } : null,
+  registrationStatus ? { label: 'Registration status', value: 'Official registration is connected', detail: registrationStatus } : null,
+  platform ? { label: 'Official handoff', value: platform } : null
 ].filter(Boolean);
 const registerLabel = decisionCopy.ctaLabel;
 ---
@@ -36,11 +33,12 @@ const registerLabel = decisionCopy.ctaLabel;
       </div>
       <div class="perf-decision-actions">
         {decisionFacts.length ? (
-          <div class="perf-decision-facts" aria-label="Registration decision details">
+          <div class="perf-decision-facts" aria-label="Registration handoff details">
             {decisionFacts.map((fact) => (
               <div>
                 <span>{fact.label}</span>
                 <strong>{fact.value}</strong>
+                {fact.detail ? <p>{fact.detail}</p> : null}
               </div>
             ))}
           </div>

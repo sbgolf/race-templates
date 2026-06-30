@@ -4,7 +4,6 @@ const { race } = Astro.props;
 const checklist = race.runner_decision_checklist;
 const items = Array.isArray(checklist?.items) ? checklist.items.filter((item) => item?.label && item?.value) : [];
 const registerUrl = race.registration?.url || '#entry';
-const registerLabel = race.registration?.cta_label || 'Register now';
 const groups = [
   {
     label: 'Race basics',
@@ -44,7 +43,6 @@ if (remainingItems.length) {
           <h2 class="sec-title">{checklist?.headline || 'Everything runners check before they register.'}</h2>
           <p class="lead">{checklist?.intro || 'A clear runner information hub puts race basics, course proof, logistics, policies, and the official registration path in one predictable place.'}</p>
         </div>
-        <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerClickAttributes(race, 'runner-checklist-top')}>{registerLabel}</a>
       </div>
       <div class="perf-info-hub-grid stagger" aria-label="Runner information hub">
         {groups.map((group) => (
@@ -66,7 +64,7 @@ if (remainingItems.length) {
         ))}
       </div>
       <div class="perf-check-footer reveal">
-        <p>Checked the basics? Continue to the official registration platform.</p>
+        <p>Checked the basics? Continue when the price, course, and race-day details fit your goal.</p>
         <a class="btn btn-yellow" href={registerUrl} target="_blank" rel="noopener" {...registerClickAttributes(race, 'runner-checklist-footer')}>Continue to official registration</a>
       </div>
     </div>
