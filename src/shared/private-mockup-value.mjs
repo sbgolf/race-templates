@@ -61,7 +61,7 @@ export function registrationDecisionCopyForRace(race = {}, defaults = {}) {
     ctaLabel,
     headline: defaults.headline || 'Ready to register?',
     kicker: defaults.kicker || 'Registration handoff',
-    body: defaults.body || `StartLine sends runners to official registration. Availability, payment, and confirmation happen on ${platform}; this page measures the click-through to help the race team understand registration interest.`
+    body: defaults.body || `StartLine sends runners to the configured registration platform. Availability, payment, and confirmation happen on ${platform}; this page measures the click-through to help the race team understand registration interest.`
   };
 }
 

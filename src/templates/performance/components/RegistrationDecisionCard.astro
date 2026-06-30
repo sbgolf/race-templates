@@ -14,7 +14,7 @@ const policy = itemById('refunds-transfers')?.value;
 const decisionCopy = registrationDecisionCopyForRace(race, {
   kicker: 'Registration decision',
   headline: 'Confirm the facts here. Finish on the official platform.',
-  body: `This section keeps the high-intent registration details together: price, course credibility, race timing, policy context, and the official ${platformLabel} handoff. Runners can decide with confidence before leaving the race site.`
+  body: `This section keeps the high-intent registration details together: price, course credibility, race timing, policy context, and a clear handoff to ${platformLabel}. Runners can decide with confidence before leaving the race site.`
 });
 const platform = decisionCopy.platform || 'Official registration';
 const decisionFacts = [
