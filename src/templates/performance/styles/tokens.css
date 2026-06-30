@@ -110,11 +110,11 @@ section{position:relative}
 .hero{
   background:var(--ink);color:var(--paper);
   padding:120px clamp(18px,5vw,52px) clamp(60px,9vh,100px);
-  position:relative;overflow:hidden;
+  position:relative;overflow:hidden;contain:paint;
 }
 .hero::before{
   content:"";position:absolute;
-  top:-200px;right:-200px;width:600px;height:600px;
+  top:-200px;right:0;width:600px;height:600px;
   background:radial-gradient(circle,rgba(45,91,255,.32) 0%,transparent 60%);
   pointer-events:none;
 }

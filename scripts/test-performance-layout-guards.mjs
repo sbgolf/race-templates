@@ -9,6 +9,7 @@ const template = readFileSync(join(repoRoot, 'src/templates/performance/componen
 
 const checks = [
   ['html/body horizontal overflow guard', /html\{[^}]*overflow-x:hidden/.test(css) && /body\{[^}]*overflow-x:hidden/.test(css)],
+  ['hero decorative overflow is clipped from layout QA', /\.hero\{[\s\S]*overflow:hidden;contain:paint/.test(css) && /\.hero::before\{[\s\S]*right:0/.test(css)],
   ['desktop nav collision breakpoint', /@media\(max-width:1120px\) and \(min-width:901px\)/.test(css) && /\.nav-links a\.nav-optional\{display:none\}/.test(css)],
   ['nav CTA clamps long labels', /\.nav-cta\{[^}]*max-width:clamp/.test(css) && /text-overflow:ellipsis/.test(css)],
   ['mobile nav CTA resets to full width', /@media\(max-width:900px\)[\s\S]*\.nav-links \.btn\{[^}]*max-width:100%/.test(css)],
