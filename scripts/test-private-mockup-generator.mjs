@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { buildCapturedImageAsset, buildRunnerDecisionChecklist, extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy } from './generate-private-mockup.mjs';
+import { buildCapturedImageAsset, buildRunnerDecisionChecklist, extractStructuredLinks, labelForResourceUrl, normalizeDisplayCopy, splitDisplayParagraphs } from './generate-private-mockup.mjs';
 import { shouldRenderTrustSignalsBand, substantiveTrustSignalsForRace, trustSignalsForRace } from '../src/shared/private-mockup-trust.mjs';
 
 assert.equal(
@@ -21,7 +21,28 @@ assert.deepEqual(faqLinkResult.links, [
   { label: 'View RunningAHEAD map', url: 'https://runningahead.com/maps/foo' }
 ]);
 
-assert.equal(labelForResourceUrl('https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon'), 'View RunSignup registration');
+assert.equal(labelForResourceUrl('https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon'), 'Register on RunSignup');
+
+const richSourceCopy = extractStructuredLinks('Register now at https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon. Course map: www.strava.com/routes/123... Packet pick-up details are listed by the source page | .');
+assert.equal(richSourceCopy.text, 'Register now. Course map. Packet pick-up details are listed.');
+assert.deepEqual(richSourceCopy.links, [
+  { label: 'Register on RunSignup', url: 'https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon' },
+  { label: 'View Strava route', url: 'https://www.strava.com/routes/123' }
+]);
+assert(!/https?:\/\/|www\.|runsignup\.com|\.\.\.|\|\s*\./i.test(richSourceCopy.text));
+
+assert.equal(
+  normalizeDisplayCopy('Visit runsignup.com for registration | . Details at https://example.org/race...'),
+  'Visit the official RunSignup registration page for registration. Details'
+);
+
+const splitRichParagraphs = splitDisplayParagraphs('Registration opens February 1. Bib transfers are allowed until race week. Packet pick-up is Friday evening at the listed running store. Race morning parking is available near the start area. Awards follow the finish after results are finalized.', 120);
+assert(splitRichParagraphs.length > 1);
+assert(splitRichParagraphs.every((paragraph) => paragraph.length <= 160 && !/https?:\/\/|www\.|\.\.\.|\s+[,.!?;:]/.test(paragraph)));
+
+const sparseSourceCopy = extractStructuredLinks('More info: runsignup.com .');
+assert.equal(sparseSourceCopy.text, 'More info: the official RunSignup registration page.');
+assert.deepEqual(sparseSourceCopy.links, []);
 
 assert.deepEqual(
   buildCapturedImageAsset({
