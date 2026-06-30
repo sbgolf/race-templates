@@ -1,5 +1,5 @@
 ---
 import PerformanceTemplate from "../components/PerformanceTemplate.astro";
-const { race } = Astro.props;
+const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 ---
-<PerformanceTemplate race={race} />
+<PerformanceTemplate race={race} isPrivateMockup={isPrivateMockup} galleryAssets={galleryAssets} />

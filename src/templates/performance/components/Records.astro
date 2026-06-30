@@ -21,7 +21,7 @@ const showSection = hasBqProof || hasRecords || certification;
           <div class="rec-card dark reveal">
             <div class="rh">Boston Qualifier Rate</div>
             <h3>{proof.bq_rate}% qualified.</h3>
-            <p class="desc">{proof.bq_finishers && proof.field_cap ? `Of ${proof.field_cap} finishers, ${proof.bq_finishers} ran a time below their Boston qualifying standard.` : 'Boston qualifier proof is ready when race results support it.'}</p>
+            <p class="desc">{proof.bq_finishers && proof.field_cap ? `With a field cap of ${Number(proof.field_cap).toLocaleString('en-US')}, ${proof.bq_finishers} runners ran a time below their Boston qualifying standard.` : 'Boston qualifier proof is ready when race results support it.'}</p>
             {proof.bq_finishers && <div class="bq-hero"><div class="v">{proof.bq_finishers}{proof.field_cap && <small>/{proof.field_cap}</small>}</div><div class="l">BQ Finishers</div></div>}
             <div class="rec-foot">Standards per Boston Athletic Association · Subject to BAA updates</div>
           </div>

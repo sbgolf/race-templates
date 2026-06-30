@@ -3,6 +3,7 @@ import { registerClickAttributes } from '../../../shared/analytics/register-clic
 const { race } = Astro.props;
 const registrationUrl = race.registration?.url || '#entry';
 const primaryDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0] || {};
+const proof = race.proof || {};
 const tiers = Array.isArray(race.entry_tiers) && race.entry_tiers.length ? race.entry_tiers : [
   {
     name: primaryDistance.name || 'Race Entry',
@@ -24,8 +25,10 @@ const tiers = Array.isArray(race.entry_tiers) && race.entry_tiers.length ? race.
       {tiers.map((tier, index) => {
         const price = typeof tier.price === 'number' ? `$${tier.price}` : tier.price;
         const features = Array.isArray(tier.features) ? tier.features.filter(Boolean) : [];
+        const badge = tier.badge || (proof.field_cap ? `Field cap · ${Number(proof.field_cap).toLocaleString('en-US')}` : '');
         return (
           <div class={`etier ${tier.featured || index === 0 ? 'featured' : ''}`}>
+            {badge && <div class="etier-badge">{badge}</div>}
             <h3>{tier.name}</h3>
             {tier.subtitle && <div class="sub">{tier.subtitle}</div>}
             {price && <div class="pp">{price}<small>/ bib</small></div>}

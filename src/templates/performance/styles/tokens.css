@@ -423,15 +423,15 @@ font-family:"IBM Plex Mono";font-size:.72rem;color:rgba(250,250,252,.5);letter-s
 .etier{
   background:var(--paper-2);border:1px solid var(--line);
   border-radius:var(--r);padding:36px 32px;
-  display:flex;flex-direction:column;
+  display:flex;flex-direction:column;position:relative;
   transition:transform .3s ease,box-shadow .3s ease;
 }
 .etier:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(10,10,18,.2)}
 .etier.featured{background:var(--ink);color:var(--paper);border-color:var(--ink);position:relative}
-.etier.featured::before{
-  content:"FULL FIELD CAP · 4,200";position:absolute;top:-12px;left:32px;
+.etier-badge{
+  position:absolute;top:-12px;left:32px;
   font-family:"IBM Plex Mono";font-size:.62rem;letter-spacing:.18em;font-weight:500;
-  background:var(--yellow);color:var(--ink);padding:5px 12px;border-radius:4px;
+  background:var(--yellow);color:var(--ink);padding:5px 12px;border-radius:4px;text-transform:uppercase;
 }
 .etier h3{font-family:"Big Shoulders Display";font-size:1.8rem;color:var(--ink);font-weight:800;text-transform:uppercase;letter-spacing:-.005em}
 .etier.featured h3{color:var(--paper)}
