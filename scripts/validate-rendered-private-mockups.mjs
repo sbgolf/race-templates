@@ -97,7 +97,7 @@ for (const file of files) {
   }
   if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)) errors.push(`Private ${template} mockup is missing the registration decision card.`);
   if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel)) errors.push(`Private ${template} mockup is missing the measurement-ready panel.`);
-  validatePrivateValueSectionOrder(html, errors);
+  validatePrivateValueSectionOrder(html, template, errors);
   if (shouldRenderTrustSignals && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup has enough substantive runner-facing trust facts but is missing the trust-signal band.`);
   if (!shouldRenderTrustSignals && html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup renders the trust-signal band without enough substantive runner-facing trust facts.`);
   for (const marker of PRIVATE_VALUE_REQUIRED_MARKERS) {
@@ -274,18 +274,28 @@ function validatePrivateRobotsMetadata(html, errors) {
   }
 }
 
-function validatePrivateValueSectionOrder(html, errors) {
-  const orderedMarkers = [
-    PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative,
-    PRIVATE_VALUE_CONTRACT_MARKERS.runnerDecisionChecklist,
-    PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard,
-    PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel
-  ];
+function validatePrivateValueSectionOrder(html, template, errors) {
+  const orderedMarkers = template === 'performance'
+    ? [
+      PRIVATE_VALUE_CONTRACT_MARKERS.runnerDecisionChecklist,
+      PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard,
+      PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative,
+      PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel
+    ]
+    : [
+      PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative,
+      PRIVATE_VALUE_CONTRACT_MARKERS.runnerDecisionChecklist,
+      PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard,
+      PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel
+    ];
+  const expectedFlow = template === 'performance'
+    ? 'runner info hub → registration decision card → StartLine improvement notes → measurement-ready panel'
+    : 'value narrative → runner checklist → registration decision card → measurement-ready panel';
   const positions = orderedMarkers.map((marker) => html.indexOf(marker));
   if (positions.some((position) => position < 0)) return;
   for (let index = 1; index < positions.length; index += 1) {
     if (positions[index] <= positions[index - 1]) {
-      errors.push('Private value sections must preserve the decision flow: value narrative → runner checklist → registration decision card → measurement-ready panel.');
+      errors.push(`Private value sections must preserve the ${template === 'performance' ? 'runner-first ' : ''}decision flow: ${expectedFlow}.`);
       return;
     }
   }

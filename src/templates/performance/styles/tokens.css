@@ -509,23 +509,32 @@ font-family:"IBM Plex Mono";font-size:.72rem;color:rgba(250,250,252,.5);letter-s
 .perf-private-head .lead{margin:0;max-width:62ch}
 .perf-private-head .btn{justify-self:end;white-space:normal;text-align:center}
 .perf-check-grid,.perf-trust-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:34px}
-.perf-check-card,.perf-trust-card{
+.perf-info-hub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px}
+.perf-check-card,.perf-trust-card,.perf-info-hub-group{
   background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px;
   box-shadow:0 18px 42px rgba(10,10,18,.07);min-width:0;position:relative;overflow:hidden
 }
-.perf-check-card::before,.perf-trust-card::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--accent),var(--yellow));opacity:.9}
-.perf-check-card span,.perf-trust-card span,.perf-measurement-points strong{
+.perf-check-card::before,.perf-trust-card::before,.perf-info-hub-group::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--accent),var(--yellow));opacity:.9}
+.perf-info-hub-group{padding:0}
+.perf-info-hub-group-head{padding:22px 22px 18px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(45,91,255,.07),rgba(255,214,0,.08))}
+.perf-info-hub-group-head span,.perf-check-card span,.perf-trust-card span,.perf-info-hub-row span,.perf-measurement-points strong,.perf-decision-facts span{
   display:block;font-family:"IBM Plex Mono";font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);line-height:1.25
 }
-.perf-check-card strong,.perf-trust-card strong{
+.perf-info-hub-group-head span{font-family:"Big Shoulders Display";font-size:1.45rem;letter-spacing:.01em;color:var(--ink);font-weight:800}
+.perf-info-hub-group-head p{color:rgba(10,10,18,.66);font-size:.9rem;line-height:1.45;margin-top:8px}
+.perf-info-hub-list{display:flex;flex-direction:column}
+.perf-info-hub-row{padding:18px 22px;border-bottom:1px solid var(--line);min-width:0}
+.perf-info-hub-row:last-child{border-bottom:none}
+.perf-check-card strong,.perf-trust-card strong,.perf-info-hub-row strong,.perf-decision-facts strong{
   display:block;font-family:"Big Shoulders Display";font-size:1.55rem;font-weight:800;line-height:1;color:var(--ink);text-transform:uppercase;margin-top:12px;overflow-wrap:anywhere
 }
-.perf-check-card p,.perf-trust-card p{color:rgba(10,10,18,.67);font-size:.9rem;line-height:1.5;margin-top:10px;overflow-wrap:anywhere}
+.perf-info-hub-row strong{font-size:1.28rem;line-height:1.05}
+.perf-check-card p,.perf-trust-card p,.perf-info-hub-row p{color:rgba(10,10,18,.67);font-size:.9rem;line-height:1.5;margin-top:10px;overflow-wrap:anywhere}
 .perf-check-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:16px;padding:18px 20px;border-radius:var(--r);background:var(--ink);color:var(--paper)}
 .perf-check-footer p{font-weight:700;color:rgba(250,250,252,.88)}
 .perf-decision-wrap,.perf-measurement-wrap{padding-top:clamp(44px,7vw,72px);padding-bottom:clamp(44px,7vw,72px)}
 .perf-decision-card,.perf-measurement-card{
-  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(280px,.55fr);gap:28px;align-items:center;
   border-radius:var(--r);padding:clamp(26px,4vw,40px);border:1px solid var(--line-dark);
   background:linear-gradient(135deg,var(--ink) 0%,var(--ink-2) 62%,#132158 100%);color:var(--paper);
   box-shadow:0 22px 70px rgba(10,10,18,.22)
@@ -534,6 +543,12 @@ font-family:"IBM Plex Mono";font-size:.72rem;color:rgba(250,250,252,.5);letter-s
 .perf-decision-card .kicker::before,.perf-measurement-card .kicker::before{background:var(--yellow)}
 .perf-decision-card .sec-title,.perf-measurement-card .sec-title{color:var(--paper);font-size:clamp(2rem,4.5vw,3.7rem);max-width:16ch}
 .perf-decision-card .lead,.perf-measurement-card .lead{color:rgba(250,250,252,.76);margin-top:16px;max-width:72ch}
+.perf-decision-actions{display:grid;gap:18px;align-self:stretch;align-content:center}
+.perf-decision-actions .btn{justify-content:center;width:100%}
+.perf-decision-facts{display:grid;grid-template-columns:1fr;gap:10px}
+.perf-decision-facts div{background:rgba(250,250,252,.08);border:1px solid var(--line-dark);border-radius:var(--r-sm);padding:14px 16px;min-width:0}
+.perf-decision-facts span{color:var(--yellow)}
+.perf-decision-facts strong{color:var(--paper);font-size:1.18rem;line-height:1.05;margin-top:8px}
 .perf-measurement-card{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)}
 .perf-measurement-points{display:grid;grid-template-columns:1fr;gap:12px}
 .perf-measurement-points article{background:rgba(250,250,252,.08);border:1px solid var(--line-dark);border-radius:var(--r-sm);padding:18px;min-width:0}
@@ -550,10 +565,12 @@ footer{background:var(--ink);color:rgba(250,250,252,.6);font-size:.9rem}
 .foot a:hover{color:var(--accent-light)}
 .foot-bottom{border-top:1px solid var(--line-dark);max-width:var(--maxw);margin:0 auto;padding:20px clamp(18px,5vw,52px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:"IBM Plex Mono";font-size:.74rem;color:rgba(250,250,252,.58);letter-spacing:.04em}
 
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
-.reveal.in{opacity:1;transform:none}
-.stagger > *{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
-.stagger.in > *{opacity:1;transform:none}
+.reveal{opacity:1;transform:none;transition:opacity .65s ease,transform .65s ease}
+.stagger > *{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
+.js-reveal .reveal{opacity:0;transform:translateY(20px)}
+.js-reveal .reveal.in{opacity:1;transform:none}
+.js-reveal .stagger > *{opacity:0;transform:translateY(18px)}
+.js-reveal .stagger.in > *{opacity:1;transform:none}
 
 @media(max-width:1000px){
   .hero-grid,.course-grid,.records-grid,.performance-private-value-wrap{grid-template-columns:1fr;gap:42px}
@@ -568,6 +585,7 @@ footer{background:var(--ink);color:rgba(250,250,252,.6);font-size:.9rem}
   .entry-grid{grid-template-columns:1fr;gap:14px}
   .performance-value-grid,.perf-private-head,.perf-decision-card,.perf-measurement-card{grid-template-columns:1fr}
   .perf-private-head .btn{justify-self:start}
+  .perf-info-hub-grid{grid-template-columns:1fr}
   .perf-check-grid,.perf-trust-grid{grid-template-columns:1fr 1fr}
   .travel-grid{grid-template-columns:1fr}
   .statbar-grid{grid-template-columns:1fr 1fr}

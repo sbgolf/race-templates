@@ -25,44 +25,86 @@ const isPrivateMockup = Boolean(race.private_mockup);
 <main id="main-content">
 <Hero race={race} />
 <StatBar race={race} />
-{isPrivateMockup && <PrivateValueNarrative race={race} />}
+{isPrivateMockup && <RunnerDecisionChecklist race={race} />}
 {isPrivateMockup && <TrustSignalsBand race={race} />}
 <Course race={race} />
 <PacePicker race={race} />
 <Records race={race} />
 <Gallery race={race} />
-{isPrivateMockup && <RunnerDecisionChecklist race={race} />}
 {isPrivateMockup && <RegistrationDecisionCard race={race} />}
 <Entry race={race} />
 <Travel race={race} />
 <Sponsors race={race} />
 <FAQ race={race} />
+{isPrivateMockup && <PrivateValueNarrative race={race} />}
 {isPrivateMockup && <MeasurementReadyPanel race={race} />}
 <Finale race={race} />
 </main>
 <Footer race={race} />
 <script is:inline>
 
-  function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});closeMenu();}
-
   const nav=document.getElementById('nav');
-  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const burger=document.getElementById('burger');
+  const navLinks=document.getElementById('navLinks');
+  const revealEls=document.querySelectorAll('.reveal,.stagger');
+  document.documentElement.classList.add('js-reveal');
 
-  const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
-  function closeMenu(){navLinks.classList.remove('open');nav.classList.remove('menu-open');document.body.classList.remove('no-scroll')}
+  function showAllReveals(){
+    revealEls.forEach((el)=>el.classList.add('in'));
+  }
+
+  function initReveals(){
+    if(!('IntersectionObserver' in window)){showAllReveals();return;}
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting){
+          const el=en.target;
+          if(el.classList.contains('stagger')){[...el.children].forEach((c,i)=>{c.style.transitionDelay=(i*80)+'ms';});}
+          el.classList.add('in');io.unobserve(el);
+        }
+      });
+    },{threshold:.08,rootMargin:'0px 0px -8% 0px'});
+    revealEls.forEach((el)=>io.observe(el));
+    setTimeout(showAllReveals,1400);
+  }
+
+  initReveals();
+
+  function closeMenu(){
+    navLinks?.classList.remove('open');
+    nav?.classList.remove('menu-open');
+    document.body.classList.remove('no-scroll');
+  }
+
+  function scrollToId(id){
+    const target=document.getElementById(id);
+    if(target) target.scrollIntoView({behavior:'smooth'});
+    closeMenu();
+  }
+
+  if(nav){addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));}
+
   function toggleMenu(){
+    if(!navLinks) return;
     const isOpen=navLinks.classList.toggle('open');
-    nav.classList.toggle('menu-open',isOpen);
+    nav?.classList.toggle('menu-open',isOpen);
     document.body.classList.toggle('no-scroll',isOpen);
   }
-  burger.addEventListener('click',toggleMenu);
-  navLinks.querySelectorAll('a,button').forEach(el=>el.addEventListener('click',closeMenu));
+  burger?.addEventListener('click',toggleMenu);
+  navLinks?.querySelectorAll('a,button').forEach(el=>el.addEventListener('click',closeMenu));
   document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeMenu()});
 
   document.querySelectorAll('.faq-q').forEach(q=>{
     q.addEventListener('click',()=>{
-      const item=q.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+      const item=q.parentElement;
+      const a=item?.querySelector('.faq-a');
+      if(!item||!a) return;
+      const open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{
+        i.classList.remove('open');
+        const answer=i.querySelector('.faq-a');
+        if(answer) answer.style.maxHeight=null;
+      });
       if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
     });
   });
@@ -74,35 +116,31 @@ const isPrivateMockup = Boolean(race.private_mockup);
     btn.classList.add('active');
     const g=btn.dataset.goal,data=paceData[g];
     if(!data) return;
-    document.getElementById('paceGoal').textContent=data.finish;
-    document.getElementById('paceMile').textContent=data.mile;
-    document.getElementById('paceKm').textContent=data.km;
-    document.getElementById('paceHalf').textContent=data.half;
+    const paceGoal=document.getElementById('paceGoal');
+    const paceMile=document.getElementById('paceMile');
+    const paceKm=document.getElementById('paceKm');
+    const paceHalf=document.getElementById('paceHalf');
+    if(paceGoal) paceGoal.textContent=data.finish;
+    if(paceMile) paceMile.textContent=data.mile;
+    if(paceKm) paceKm.textContent=data.km;
+    if(paceHalf) paceHalf.textContent=data.half;
     document.querySelectorAll('.pace-row.body').forEach(row=>{
       const m=row.dataset.mile;
-      row.querySelector('.split').textContent=data.splitTimes[m]||data.splits[m]||'';
-      row.querySelector('.elapsed').textContent=data.splits[m]||'';
-      row.querySelector('div:nth-child(3)').textContent=data.mile;
+      const split=row.querySelector('.split');
+      const elapsed=row.querySelector('.elapsed');
+      const paceCell=row.querySelector('div:nth-child(3)');
+      if(split) split.textContent=data.splitTimes[m]||data.splits[m]||'';
+      if(elapsed) elapsed.textContent=data.splits[m]||'';
+      if(paceCell) paceCell.textContent=data.mile;
     });
   }
 
   function notify(btn,msg){const orig=btn.textContent;btn.textContent=msg;btn.disabled=true;setTimeout(()=>{btn.textContent=orig;btn.disabled=false},2400);}
 
-  const io=new IntersectionObserver((entries)=>{
-    entries.forEach(en=>{
-      if(en.isIntersecting){
-        const el=en.target;
-        if(el.classList.contains('stagger')){[...el.children].forEach((c,i)=>{c.style.transitionDelay=(i*80)+'ms';});}
-        el.classList.add('in');io.unobserve(el);
-      }
-    });
-  },{threshold:.14});
-  document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
-
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',(e)=>{
       const href=a.getAttribute('href');e.preventDefault();
-      if(href.length>1)scrollToId(href.substring(1));
+      if(href&&href.length>1)scrollToId(href.substring(1));
     });
   });
 

@@ -391,8 +391,8 @@
     "notes": "Generated only from verified facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups."
   },
   "runner_decision_checklist": {
-    "headline": "Before you register",
-    "intro": "A quick checklist of race details to review before you continue to official registration.",
+    "headline": "Everything runners check before they register",
+    "intro": "A clear race information hub for date, start time, course proof, logistics, policies, and the official registration path.",
     "items": [
       {
         "id": "date",
