@@ -20,9 +20,9 @@ const hasFaq = Array.isArray(race.faqs) && race.faqs.length > 0;
           <rect x="3" y="3" width="34" height="34" rx="6" fill="#2D5BFF"/>
           <path d="M11 24 L15 17 L21 24 L26 14 L31 24" stroke="#FAFAFC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
-        <div class="name">{shortName}<small>{dateYear ? `Race · ${dateYear}` : 'Race preview'}</small></div>
+        <div class="name">{shortName}<small>{dateYear ? `Race · ${dateYear}` : 'Race guide'}</small></div>
       </a>
-      <p>{[profile, certification, location].filter(Boolean).join(' · ') || 'A performance-focused race preview with clear course, pacing, and registration details.'}</p>
+      <p>{[profile, certification, location].filter(Boolean).join(' · ') || 'A performance-focused race guide with clear course, pacing, and registration details.'}</p>
     </div>
     <div><h2>Race</h2><ul><li><a href="#course">Course</a></li><li><a href="#pace">Pace</a></li><li><a href="#records">Records</a></li><li><a href="#entry">Register</a></li></ul></div>
     <div><h2>Logistics</h2><ul>{hasTravel && <li><a href="#travel">Travel</a></li>}<li><a href="#gallery">Race Day</a></li>{hasFaq && <li><a href="#faq">FAQ</a></li>}<li><a href={registrationUrl} {...registerClickAttributes(race, 'footer-registration')}>Registration</a></li></ul></div>
@@ -30,6 +30,6 @@ const hasFaq = Array.isArray(race.faqs) && race.faqs.length > 0;
   </div>
   <div class="foot-bottom">
     <span>© {dateYear} {raceName}{orgName ? ` · ${orgName}` : ''}</span>
-    <span>StartLine Sites concept preview</span>
+    <span>Race information powered by StartLine Sites</span>
   </div>
 </footer>

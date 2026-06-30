@@ -11,7 +11,7 @@ const locationLabel = race.event?.location || '';
 const startLabel = primaryDistance.start_time || race.event?.time || '';
 const certification = primaryDistance.certification || race.course?.certification || '';
 const heroEyebrowParts = [certification, primaryDistance.profile, primaryDistance.distance].filter(Boolean);
-const heroEyebrow = heroEyebrowParts.length ? heroEyebrowParts.join(' · ') : 'Performance race preview';
+const heroEyebrow = heroEyebrowParts.length ? heroEyebrowParts.join(' · ') : 'Performance race guide';
 const lead = race.performance?.hero_lead || race.story?.paragraphs?.[0] || tagline;
 const priceLabel = primaryDistance.price || (race.entry_tiers?.[0]?.price ? `$${race.entry_tiers[0].price}` : '');
 const ctaLabel = race.registration?.cta_label || 'Register now';
@@ -32,7 +32,7 @@ const clockStatusLabel = race.performance?.clock?.status_label || '';
   <div class="hero-grid">
     <div class="reveal">
       <div class="hero-eyebrow">{heroEyebrow}</div>
-      <h1>{raceName}<br><span class="accent">fast-course preview.</span></h1>
+      <h1>{raceName}<br><span class="accent">fast-course guide.</span></h1>
       <div class="hero-date">
         {dateLabel && <strong>{dateLabel}</strong>}
         {dateLabel && locationLabel && <span>·</span>}
