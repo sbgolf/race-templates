@@ -4,35 +4,39 @@ const { race } = Astro.props;
 const checklist = race.runner_decision_checklist;
 const items = Array.isArray(checklist?.items) ? checklist.items.filter((item) => item?.label && item?.value) : [];
 const registerUrl = race.registration?.url || '#entry';
-const groups = [
+const configuredGroups = Array.isArray(checklist?.groups) ? checklist.groups : [];
+const defaultGroups = [
   {
-    label: 'Race basics',
-    intro: 'The essentials runners want before they commit.',
+    label: 'Race Basics',
+    intro: 'Date, distance, start time, and location in one scan-friendly block.',
     itemIds: ['date', 'distance', 'start-time', 'location']
   },
   {
-    label: 'Course & performance',
-    intro: 'Proof points for runners comparing speed, certification, and support.',
-    itemIds: ['course', 'aid-stations', 'time-limit']
+    label: 'Course & Credentials',
+    intro: 'Certification, course profile, support, and time-limit proof without repeating the same facts later.',
+    itemIds: ['course', 'aid-stations', 'time-limit', 'awards']
   },
   {
-    label: 'Logistics & policies',
-    intro: 'The practical details that reduce support questions before registration.',
-    itemIds: ['price', 'packet-pickup', 'refunds-transfers', 'swag', 'awards']
+    label: 'Before You Register',
+    intro: 'Price, packet pick-up, policies, and participant items before the official registration handoff.',
+    itemIds: ['price', 'packet-pickup', 'refunds-transfers', 'swag']
   }
-].map((group) => ({
+];
+const sourceGroups = configuredGroups.length ? configuredGroups : defaultGroups;
+const groups = sourceGroups.map((group) => ({
   ...group,
   items: group.itemIds.map((id) => items.find((item) => item.id === id)).filter(Boolean)
 })).filter((group) => group.items.length);
 const groupedIds = new Set(groups.flatMap((group) => group.items.map((item) => item.id)));
 const remainingItems = items.filter((item) => !groupedIds.has(item.id));
-if (remainingItems.length) {
+if (remainingItems.length && !configuredGroups.length) {
   groups.push({
     label: 'Additional race details',
     intro: 'Other useful details available before the official registration handoff.',
     items: remainingItems
   });
 }
+const showFooterCta = checklist?.footer_cta !== false;
 ---
 {items.length ? (
   <section class="perf-runner-checklist" id="runner-checklist" data-runner-decision-checklist>
@@ -63,10 +67,12 @@ if (remainingItems.length) {
           </article>
         ))}
       </div>
-      <div class="perf-check-footer reveal">
-        <p>Checked the basics? Continue when the price, course, and race-day details fit your goal.</p>
-        <a class="btn btn-yellow" href={registerUrl} target="_blank" rel="noopener" {...registerClickAttributes(race, 'runner-checklist-footer')}>Continue to official registration</a>
-      </div>
+      {showFooterCta ? (
+        <div class="perf-check-footer reveal">
+          <p>Checked the basics? Continue when the price, course, and race-day details fit your goal.</p>
+          <a class="btn btn-yellow" href={registerUrl} target="_blank" rel="noopener" {...registerClickAttributes(race, 'runner-checklist-footer')}>Continue to official registration</a>
+        </div>
+      ) : null}
     </div>
   </section>
 ) : null}

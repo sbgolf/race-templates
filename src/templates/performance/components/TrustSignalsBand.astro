@@ -1,7 +1,7 @@
 ---
 import { shouldRenderTrustSignalsBand, trustSignalsForRace } from '../../../shared/private-mockup-trust.mjs';
 const { race } = Astro.props;
-const shouldRender = shouldRenderTrustSignalsBand(race);
+const shouldRender = race.private_mockup?.suppress_trust_signals !== true && shouldRenderTrustSignalsBand(race);
 const signals = trustSignalsForRace(race);
 ---
 {shouldRender ? (

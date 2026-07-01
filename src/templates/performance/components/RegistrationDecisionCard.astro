@@ -22,7 +22,9 @@ const decisionFacts = [
   platform ? { label: 'Official handoff', value: platform } : null
 ].filter(Boolean);
 const registerLabel = decisionCopy.ctaLabel;
+const shouldRender = race.private_mockup?.suppress_registration_decision !== true;
 ---
+{shouldRender ? (
 <section class="perf-registration-decision" data-registration-decision-card>
   <div class="wrap perf-decision-wrap">
     <div class="perf-decision-card reveal">
@@ -48,3 +50,4 @@ const registerLabel = decisionCopy.ctaLabel;
     </div>
   </div>
 </section>
+) : null}
