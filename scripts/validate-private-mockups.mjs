@@ -249,10 +249,10 @@ function validateSampleImages(config, errors) {
       errors.push(`${jsonPath}: Private mockups may not use sample-only or illustrated placeholder images.`);
     }
     if (!value.src || !/^\/mockups\/[a-f0-9]{32,}\//i.test(value.src)) {
-      errors.push(`${jsonPath}.src: Private mockup images must be captured assets under /mockups/<access-token>/; omit the image if no public asset was captured.`);
+      errors.push(`${jsonPath}.src: Private mockup images must be captured or generated assets under /mockups/<access-token>/; omit the image if no suitable asset is available.`);
     }
-    if (!value.source || !/^https?:\/\//i.test(value.source)) {
-      errors.push(`${jsonPath}.source: Captured private mockup images must include their public source URL.`);
+    if (!value.generated && (!value.source || !/^https?:\/\//i.test(value.source))) {
+      errors.push(`${jsonPath}.source: Captured private mockup images must include their public source URL, or generated private hero images must set generated: true.`);
     }
   }
 }

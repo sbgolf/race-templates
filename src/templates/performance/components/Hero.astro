@@ -31,6 +31,7 @@ const heroImage = race.identity?.hero_image || race.story?.image || null;
 const heroImageSrc = heroImage?.src || '';
 const heroImageAlt = heroImage?.alt || `${raceName} race imagery`;
 const heroImageSource = heroImage?.source || '';
+const heroImageSourceLabel = heroImage?.source_label || '';
 const heroImageLooksLikeGraphic = /graphic|logo|map/i.test(`${heroImageSrc} ${heroImageAlt} ${heroImageSource}`);
 const shouldUseHeroImage = Boolean(heroImageSrc && !heroImageLooksLikeGraphic);
 const heroVisualKicker = race.performance?.hero_visual?.kicker || (shouldUseHeroImage ? 'Race-day preview' : 'Race-day concept');
@@ -102,7 +103,7 @@ const heroVisualDetail = race.performance?.hero_visual?.detail || [dateLabel, lo
             <strong>{heroVisualHeadline}</strong>
             {heroVisualDetail && <p>{heroVisualDetail}</p>}
           </div>
-          {shouldUseHeroImage && heroImageSource && <div class="hero-visual-source">Image source: official public race asset</div>}
+          {shouldUseHeroImage && heroImageSourceLabel && <div class="hero-visual-source">{heroImageSourceLabel}</div>}
         </div>
       ) : (
         <div class="race-clock">
