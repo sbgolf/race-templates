@@ -1,11 +1,12 @@
 ---
-const { race } = Astro.props;
+const { race, isPrivateMockup = false } = Astro.props;
 const proof = race.proof || {};
 const records = Array.isArray(race.records) ? race.records : [];
 const certification = race.course?.certification || race.distances?.[0]?.certification;
 const hasBqProof = proof.bq_rate || proof.bq_finishers;
 const hasRecords = records.length > 0;
-const showSection = hasBqProof || hasRecords || certification;
+const hasCertificationOnly = Boolean(certification && !hasBqProof && !hasRecords);
+const showSection = hasBqProof || hasRecords || (certification && !isPrivateMockup);
 ---
 {showSection && (
   <section class="records" id="records">
@@ -38,7 +39,7 @@ const showSection = hasBqProof || hasRecords || certification;
           </div>
         )}
 
-        {!hasBqProof && !hasRecords && certification && (
+        {hasCertificationOnly && !isPrivateMockup && (
           <div class="rec-card dark reveal">
             <div class="rh">Certified Course</div>
             <h3>{certification.replace(/^USATF certified\s*/i, '')}</h3>

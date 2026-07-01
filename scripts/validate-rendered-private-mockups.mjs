@@ -112,6 +112,7 @@ for (const file of files) {
     for (const pattern of performancePrivateInternalChromePatterns) {
       if (pattern.test(performanceCopySurface)) errors.push(`Rendered performance private mockup contains internal/sales/debug copy "${pattern.source}".`);
     }
+    validatePerformanceCertificationNumberRepetition(text, config, errors);
   }
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);
@@ -323,6 +324,37 @@ function validatePrivateValueSectionOrder(html, template, errors) {
       return;
     }
   }
+}
+
+function validatePerformanceCertificationNumberRepetition(text, config, errors) {
+  const certificationNumbers = certificationNumbersForConfig(config);
+  for (const certificationNumber of certificationNumbers) {
+    const count = countOccurrences(text, certificationNumber);
+    if (count > 2) {
+      errors.push(`Rendered performance private mockup repeats certification number ${certificationNumber} ${count} times; expected no more than 2 visible mentions.`);
+    }
+  }
+}
+
+function certificationNumbersForConfig(config) {
+  const candidates = [
+    config?.course?.certification,
+    config?.performance?.hero_stat?.value,
+    ...asArray(config?.performance_stats).map((stat) => stat?.value),
+    ...asArray(config?.distances).flatMap((distance) => [distance?.certification, ...(Array.isArray(distance?.highlights) ? distance.highlights : [])]),
+    ...asArray(config?.runner_decision_checklist?.items).map((item) => item?.value)
+  ];
+  return [...new Set(candidates.flatMap((value) => String(value || '').match(/\b[A-Z]{2}\d{5}[A-Z]{2}\b/g) || []))];
+}
+
+function countOccurrences(text, needle) {
+  if (!needle) return 0;
+  const pattern = new RegExp(`\\b${escapeRegExp(needle)}\\b`, 'g');
+  return String(text || '').match(pattern)?.length || 0;
+}
+
+function asArray(value) {
+  return Array.isArray(value) ? value : [];
 }
 
 function requiredPrivateMarkersForTemplate(template, suppressRegistrationDecision) {

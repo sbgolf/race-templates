@@ -28,7 +28,7 @@ const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 {isPrivateMockup && <RegistrationDecisionCard race={race} />}
 <Course race={race} />
 <PacePicker race={race} />
-<Records race={race} />
+<Records race={race} isPrivateMockup={isPrivateMockup} />
 <Gallery race={race} galleryAssets={galleryAssets} />
 <Entry race={race} />
 <Travel race={race} />
