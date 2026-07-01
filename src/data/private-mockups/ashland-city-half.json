@@ -389,11 +389,13 @@
         "Only one event distance was confirmed from the event title/page heading; other distance mentions were treated as contextual unless presented as event distances."
       ]
     },
-    "notes": "Generated only from verified facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups."
+    "notes": "Generated only from verified facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups.",
+    "suppress_trust_signals": true,
+    "suppress_registration_decision": true
   },
   "runner_decision_checklist": {
-    "headline": "Everything runners check before they register",
-    "intro": "A clear race information hub for date, start time, course proof, logistics, policies, and the official registration path.",
+    "headline": "Runner facts before you register",
+    "intro": "Everything runners need to confirm the date, course, logistics, and official registration path in one quick scan.",
     "items": [
       {
         "id": "date",
@@ -500,6 +502,39 @@
         "value": "Overall, masters, and age-group awards are listed.",
         "source_path": "faqs",
         "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/"
+      }
+    ],
+    "footer_cta": false,
+    "groups": [
+      {
+        "label": "Race Basics",
+        "intro": "The when, where, and what for race-day planning.",
+        "itemIds": [
+          "date",
+          "distance",
+          "start-time",
+          "location"
+        ]
+      },
+      {
+        "label": "Course & Credentials",
+        "intro": "Certified-course details, support, and race-day proof points for performance runners.",
+        "itemIds": [
+          "course",
+          "aid-stations",
+          "time-limit",
+          "awards"
+        ]
+      },
+      {
+        "label": "Before You Register",
+        "intro": "Price, packet pickup, policies, and participant items before the RunSignup handoff.",
+        "itemIds": [
+          "price",
+          "packet-pickup",
+          "refunds-transfers",
+          "swag"
+        ]
       }
     ]
   },

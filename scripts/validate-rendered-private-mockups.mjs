@@ -74,7 +74,9 @@ for (const file of files) {
   const registrationUrl = registrationUrlForRenderedFile(file);
   const config = configForRenderedFile(file);
   const template = templateForPrivateMockup(config);
-  const shouldRenderTrustSignals = shouldRenderTrustSignalsBand(config);
+  const suppressRegistrationDecision = config?.private_mockup?.suppress_registration_decision === true;
+  const suppressChecklistFooterCta = config?.runner_decision_checklist?.footer_cta === false;
+  const shouldRenderTrustSignals = config?.private_mockup?.suppress_trust_signals === true ? false : shouldRenderTrustSignalsBand(config);
   validatePrivateRobotsMetadata(html, errors);
   validateMobileOverflowReadiness(html, errors);
   if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible customer-facing copy exposes a raw URL or bare domain; use labeled links/buttons instead.');
@@ -97,12 +99,15 @@ for (const file of files) {
   if (!html.includes("scrollToId('runner-checklist')") || !html.includes('Review key race details')) {
     errors.push('Private hero secondary CTA must point to the runner checklist when private_mockup metadata and a checklist are present.');
   }
-  if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)) errors.push(`Private ${template} mockup is missing the registration decision card.`);
+  if (!suppressRegistrationDecision && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)) errors.push(`Private ${template} mockup is missing the registration decision card.`);
   if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel)) errors.push(`Private ${template} mockup is missing the measurement-ready panel.`);
   validatePrivateValueSectionOrder(html, template, errors);
   if (shouldRenderTrustSignals && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup has enough substantive runner-facing trust facts but is missing the trust-signal band.`);
   if (!shouldRenderTrustSignals && html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup renders the trust-signal band without enough substantive runner-facing trust facts.`);
-  for (const marker of PRIVATE_VALUE_REQUIRED_MARKERS) {
+  const requiredPrivateMarkers = suppressRegistrationDecision
+    ? PRIVATE_VALUE_REQUIRED_MARKERS.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)
+    : PRIVATE_VALUE_REQUIRED_MARKERS;
+  for (const marker of requiredPrivateMarkers) {
     if (!html.includes(marker)) errors.push(`Private ${template} mockup is missing required private value contract marker ${marker}.`);
   }
   if (/happen on (?:runsignup|race_roster|raceroster|haku|letsdothis|lets_do_this|other)\b/.test(text)) {
@@ -123,7 +128,9 @@ for (const file of files) {
   });
 
   const placements = registrationAnchors.map((anchor) => anchor.attrs['data-analytics-placement']).filter(Boolean);
-  const requiredPlacements = ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary'];
+  const requiredPlacements = ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary']
+    .filter((placement) => !(suppressChecklistFooterCta && placement === 'runner-checklist-footer'))
+    .filter((placement) => !(suppressRegistrationDecision && placement === 'registration-decision-card'));
   const minimumRegistrationCtaCount = requiredPlacements.length + 1;
   if (registrationAnchors.length < minimumRegistrationCtaCount) errors.push(`Only ${registrationAnchors.length} registration CTAs point to the official registration URL; expected at least ${minimumRegistrationCtaCount}.`);
   for (const required of requiredPlacements) {
