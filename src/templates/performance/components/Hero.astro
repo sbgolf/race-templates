@@ -27,6 +27,16 @@ const clockSplits = race.performance?.clock?.splits || race.pace_goals?.find((go
 ];
 const clockFoot = race.performance?.clock?.footer || (certification ? `${certification} · certified course` : `${raceName} · race-day pace`);
 const clockStatusLabel = race.performance?.clock?.status_label || '';
+const heroImage = race.identity?.hero_image || race.story?.image || null;
+const heroImageSrc = heroImage?.src || '';
+const heroImageAlt = heroImage?.alt || `${raceName} race imagery`;
+const heroImageSource = heroImage?.source || '';
+const heroImageSourceLabel = heroImage?.source_label || '';
+const heroImageLooksLikeGraphic = /graphic|logo|map/i.test(`${heroImageSrc} ${heroImageAlt} ${heroImageSource}`);
+const shouldUseHeroImage = Boolean(heroImageSrc && !heroImageLooksLikeGraphic);
+const heroVisualKicker = race.performance?.hero_visual?.kicker || (shouldUseHeroImage ? 'Race-day preview' : 'Race-day concept');
+const heroVisualHeadline = race.performance?.hero_visual?.headline || (primaryDistance.profile || 'Fast-course race day');
+const heroVisualDetail = race.performance?.hero_visual?.detail || [dateLabel, locationLabel].filter(Boolean).join(' · ');
 ---
 <section class="hero" id="top">
   <div class="hero-grid">
@@ -52,17 +62,62 @@ const clockStatusLabel = race.performance?.clock?.status_label || '';
     </div>
 
     <div class="reveal">
-      <div class="race-clock">
-        <div class="rc-label">{clockLabel}</div>
-        <div class="rc-time">{clockTime}</div>
-        <div class="rc-splits">
-          {clockSplits.map((split) => <div class="rc-split fast"><div class="l">{split.label}</div><div class="v">{split.value}</div></div>)}
+      {isPrivateMockup ? (
+        <div class="hero-visual-card">
+          {shouldUseHeroImage ? (
+            <img class="hero-visual-image" src={heroImageSrc} alt={heroImageAlt} loading="eager" decoding="async" />
+          ) : (
+            <div class="hero-visual-fallback" role="img" aria-label={`${raceName} runners on race morning`}>
+              <svg viewBox="0 0 720 520" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="heroSky" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#254fdd" />
+                    <stop offset="1" stop-color="#0a0a12" />
+                  </linearGradient>
+                  <linearGradient id="heroRoad" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0" stop-color="#2a2b38" />
+                    <stop offset="1" stop-color="#11131c" />
+                  </linearGradient>
+                </defs>
+                <rect width="720" height="520" fill="url(#heroSky)" />
+                <circle cx="580" cy="90" r="82" fill="#ffd600" opacity=".82" />
+                <path d="M0 250 C150 210 235 270 365 232 C490 196 590 218 720 182 L720 520 L0 520 Z" fill="#10245f" opacity=".9" />
+                <path d="M0 360 C175 310 318 340 475 302 C575 278 655 286 720 268 L720 520 L0 520 Z" fill="url(#heroRoad)" />
+                <path d="M250 520 L365 318 L450 520" fill="none" stroke="#fafafc" stroke-width="7" opacity=".45" />
+                <path d="M92 352 H628" stroke="#fafafc" stroke-width="8" stroke-dasharray="28 18" opacity=".7" />
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M220 270 l-28 52 l50 35 l-38 70" stroke="#fafafc" stroke-width="18" />
+                  <path d="M226 306 l62 8 l32-36" stroke="#fafafc" stroke-width="16" />
+                  <path d="M236 359 l66 66" stroke="#fafafc" stroke-width="16" />
+                  <circle cx="234" cy="226" r="24" fill="#fafafc" stroke="none" />
+                  <path d="M430 258 l-40 55 l48 31 l-24 76" stroke="#6b8eff" stroke-width="17" />
+                  <path d="M424 302 l58 2 l38-32" stroke="#6b8eff" stroke-width="15" />
+                  <path d="M438 344 l78 56" stroke="#6b8eff" stroke-width="15" />
+                  <circle cx="442" cy="217" r="23" fill="#6b8eff" stroke="none" />
+                </g>
+              </svg>
+            </div>
+          )}
+          <div class="hero-visual-overlay">
+            <span>{heroVisualKicker}</span>
+            <strong>{heroVisualHeadline}</strong>
+            {heroVisualDetail && <p>{heroVisualDetail}</p>}
+          </div>
+          {shouldUseHeroImage && heroImageSourceLabel && <div class="hero-visual-source">{heroImageSourceLabel}</div>}
         </div>
-        <div class="rc-foot">
-          <span>{clockFoot}</span>
-          {clockStatusLabel && <span class="live">{clockStatusLabel}</span>}
+      ) : (
+        <div class="race-clock">
+          <div class="rc-label">{clockLabel}</div>
+          <div class="rc-time">{clockTime}</div>
+          <div class="rc-splits">
+            {clockSplits.map((split) => <div class="rc-split fast"><div class="l">{split.label}</div><div class="v">{split.value}</div></div>)}
+          </div>
+          <div class="rc-foot">
+            <span>{clockFoot}</span>
+            {clockStatusLabel && <span class="live">{clockStatusLabel}</span>}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   </div>
 </section>

@@ -5,9 +5,10 @@
     "tagline": "Fast, flat, USATF-certified half marathon along the Cumberland River.",
     "edition": "Ashland City, TN",
     "hero_image": {
-      "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/1-d63e0778e1.png",
-      "alt": "Race image",
-      "source": "https://nashvilletrackclub.org/wp-content/uploads/2021/02/Ashland-City_Half-Marathon_Graphic.png"
+      "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/hero-runners-race-morning.jpg",
+      "alt": "Runners racing near a riverside park at morning light",
+      "source": "AI-generated neutral race imagery approved for private hero use",
+      "generated": true
     },
     "colors": {
       "primary": "#2D5BFF",
