@@ -155,6 +155,33 @@ section{position:relative}
 .hero-keystat .label{font-family:"IBM Plex Mono";font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,250,252,.55);margin-bottom:6px}
 .hero-keystat .v{font-family:"Big Shoulders Display";font-size:2.2rem;font-weight:800;line-height:1;color:var(--accent-light)}
 .hero-keystat .v small{font-family:"IBM Plex Mono";font-size:.78rem;letter-spacing:.04em;color:rgba(250,250,252,.6);margin-left:8px;font-weight:500}
+.hero-visual-card{
+  position:relative;overflow:hidden;min-height:clamp(360px,48vw,520px);
+  border:1px solid var(--line-dark);border-radius:18px;
+  background:linear-gradient(135deg,var(--ink-2),#14245d 72%,var(--ink));
+  box-shadow:0 26px 90px rgba(0,0,0,.34);
+  isolation:isolate;
+}
+.hero-visual-card::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(10,10,18,.04) 0%,rgba(10,10,18,.18) 44%,rgba(10,10,18,.82) 100%),radial-gradient(circle at 82% 12%,rgba(255,214,0,.24),transparent 28%);
+}
+.hero-visual-image,.hero-visual-fallback{width:100%;height:100%;min-height:inherit;display:block}
+.hero-visual-image{object-fit:cover;filter:saturate(1.06) contrast(1.04)}
+.hero-visual-fallback svg{display:block;width:100%;height:100%;min-height:inherit}
+.hero-visual-overlay{
+  position:absolute;left:clamp(18px,4vw,34px);right:clamp(18px,4vw,34px);bottom:clamp(18px,4vw,34px);z-index:2;
+  display:grid;gap:8px;padding:18px 20px;border:1px solid rgba(250,250,252,.18);border-radius:14px;
+  background:rgba(10,10,18,.62);backdrop-filter:blur(12px) saturate(130%);
+}
+.hero-visual-overlay span{font-family:"IBM Plex Mono";font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow)}
+.hero-visual-overlay strong{font-family:"Big Shoulders Display";font-size:clamp(1.9rem,4vw,3rem);font-weight:900;line-height:.95;text-transform:uppercase;color:var(--paper)}
+.hero-visual-overlay p{font-family:"IBM Plex Mono";font-size:.78rem;letter-spacing:.04em;color:rgba(250,250,252,.72);margin:0;max-width:none}
+.hero-visual-source{
+  position:absolute;top:14px;right:14px;z-index:2;max-width:min(260px,calc(100% - 28px));
+  padding:7px 9px;border-radius:999px;background:rgba(10,10,18,.58);color:rgba(250,250,252,.66);
+  font-family:"IBM Plex Mono";font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;
+}
 
 /* race clock visual */
 .race-clock{
@@ -649,6 +676,9 @@ footer{background:var(--ink);color:rgba(250,250,252,.6);font-size:.9rem}
   .hero h1{font-size:clamp(2.7rem,16vw,4.2rem)}
   .hero-cta{align-items:stretch;flex-direction:column}
   .hero-cta .btn{width:100%}
+  .hero-visual-card{min-height:360px;border-radius:14px}
+  .hero-visual-overlay{padding:15px 16px}
+  .hero-visual-source{left:14px;right:14px;max-width:none;text-align:center}
   .race-clock{padding:30px 22px}
   .rc-time{font-size:clamp(2rem,14vw,3rem);overflow-wrap:anywhere}
   .rc-splits{grid-template-columns:1fr}
