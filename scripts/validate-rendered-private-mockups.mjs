@@ -45,6 +45,24 @@ const customerFacingInternalChromePatterns = [
   /\bpublic image URL on source page\b/i,
   /\bshould be reviewed before prospect sharing\b/i
 ];
+const performancePrivateInternalChromePatterns = [
+  /\bFact-checked concept\b/i,
+  /\bconfigured for this concept\b/i,
+  /\bconfigured official registration destination\b/i,
+  /\bDistance detail\b/i,
+  /\bApplies to Half Marathon\b/i,
+  /\bStartLine\b/i,
+  /\bsource[-\s]?(?:backed|confirmed)\b/i,
+  /\bprivate concept\b/i,
+  /\bprovenance\b/i,
+  /\bsource config\b/i,
+  /\bregistration-platform handoff\b/i,
+  /\bRunSignup handoff\b/i,
+  /\bofficial RunSignup handoff\b/i,
+  /\bWhat (?:StartLine|this concept) (?:improved|clarifies)\b/i,
+  /\bWhat a paid (?:StartLine|race-site) build includes\b/i,
+  /\bPerformance\/BQ-coded StartLine\b/i
+];
 const punctuationArtifactPatterns = [
   /(?:…|\.\.\.)\s*$/,
   /\b20\d{2}\s+\./,
@@ -89,10 +107,18 @@ for (const file of files) {
   for (const pattern of customerFacingInternalChromePatterns) {
     if (pattern.test(customerFacingCopy)) errors.push(`Rendered customer-facing HTML contains internal/source chrome "${pattern.source}".`);
   }
+  if (template === 'performance') {
+    const performanceCopySurface = `${text} ${customerFacingCopy}`;
+    for (const pattern of performancePrivateInternalChromePatterns) {
+      if (pattern.test(performanceCopySurface)) errors.push(`Rendered performance private mockup contains internal/sales/debug copy "${pattern.source}".`);
+    }
+  }
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);
   }
-  if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)) errors.push(`Private ${template} mockup is missing the StartLine value narrative.`);
+  const requiresPrivateValueNarrative = template !== 'performance';
+  if (requiresPrivateValueNarrative && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)) errors.push(`Private ${template} mockup is missing the StartLine value narrative.`);
+  if (!requiresPrivateValueNarrative && html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)) errors.push('Private performance mockup must not render the internal value narrative.');
   const checklistItemCount = (html.match(/data-checklist-item-id=/g) || []).length;
   if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.runnerDecisionChecklist)) errors.push(`Private ${template} mockup is missing the runner decision checklist.`);
   if (checklistItemCount < 3) errors.push(`Runner decision checklist renders ${checklistItemCount} items; expected at least 3.`);
@@ -104,9 +130,7 @@ for (const file of files) {
   validatePrivateValueSectionOrder(html, template, errors);
   if (shouldRenderTrustSignals && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup has enough substantive runner-facing trust facts but is missing the trust-signal band.`);
   if (!shouldRenderTrustSignals && html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup renders the trust-signal band without enough substantive runner-facing trust facts.`);
-  const requiredPrivateMarkers = suppressRegistrationDecision
-    ? PRIVATE_VALUE_REQUIRED_MARKERS.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)
-    : PRIVATE_VALUE_REQUIRED_MARKERS;
+  const requiredPrivateMarkers = requiredPrivateMarkersForTemplate(template, suppressRegistrationDecision);
   for (const marker of requiredPrivateMarkers) {
     if (!html.includes(marker)) errors.push(`Private ${template} mockup is missing required private value contract marker ${marker}.`);
   }
@@ -280,7 +304,6 @@ function validatePrivateValueSectionOrder(html, template, errors) {
     ? [
       PRIVATE_VALUE_CONTRACT_MARKERS.runnerDecisionChecklist,
       PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard,
-      PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative,
       PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel
     ]
     : [
@@ -290,7 +313,7 @@ function validatePrivateValueSectionOrder(html, template, errors) {
       PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel
     ];
   const expectedFlow = template === 'performance'
-    ? 'runner info hub → registration decision card → StartLine improvement notes → measurement-ready panel'
+    ? 'runner info hub → registration decision card → measurement-ready panel'
     : 'value narrative → runner checklist → registration decision card → measurement-ready panel';
   const positions = orderedMarkers.map((marker) => html.indexOf(marker));
   if (positions.some((position) => position < 0)) return;
@@ -300,6 +323,15 @@ function validatePrivateValueSectionOrder(html, template, errors) {
       return;
     }
   }
+}
+
+function requiredPrivateMarkersForTemplate(template, suppressRegistrationDecision) {
+  const markers = template === 'performance'
+    ? PRIVATE_VALUE_REQUIRED_MARKERS.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)
+    : [...PRIVATE_VALUE_REQUIRED_MARKERS];
+  return suppressRegistrationDecision
+    ? markers.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)
+    : markers;
 }
 
 function validateMobileOverflowReadiness(html, errors) {

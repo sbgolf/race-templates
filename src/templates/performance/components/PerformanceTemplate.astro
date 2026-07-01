@@ -3,7 +3,6 @@ import '../styles/tokens.css';
 import Nav from './Nav.astro';
 import Hero from './Hero.astro';
 import StatBar from './StatBar.astro';
-import PrivateValueNarrative from './PrivateValueNarrative.astro';
 import RunnerDecisionChecklist from './RunnerDecisionChecklist.astro';
 import RegistrationDecisionCard from './RegistrationDecisionCard.astro';
 import TrustSignalsBand from './TrustSignalsBand.astro';
@@ -35,7 +34,6 @@ const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 <Travel race={race} />
 <Sponsors race={race} />
 <FAQ race={race} />
-{isPrivateMockup && <PrivateValueNarrative race={race} />}
 {isPrivateMockup && <MeasurementReadyPanel race={race} />}
 <Finale race={race} />
 </main>

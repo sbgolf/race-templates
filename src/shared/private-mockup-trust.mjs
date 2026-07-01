@@ -15,8 +15,7 @@ const TRUST_SIGNAL_LABELS = {
 const TRUST_CHECKLIST_IDS = new Set(Object.keys(TRUST_SIGNAL_LABELS));
 const GENERIC_SUPPLEMENTAL_TRUST_SIGNAL_IDS = new Set([
   'official-registration-platform',
-  'organizer',
-  'source-backed'
+  'organizer'
 ]);
 const SUBSTANTIVE_TRUST_SIGNAL_ID_PATTERNS = [
   /^certification-/,
@@ -43,30 +42,20 @@ export function trustSignalsForRace(race) {
 
   for (const distance of asArray(race.distances)) {
     const suffix = distance?.name ? ` (${distance.name})` : '';
-    add(`certification-${distance?.id || signals.length}`, 'Certification', distance?.certification, `Distance detail${suffix}`);
-    add(`profile-${distance?.id || signals.length}`, 'Course profile', distance?.profile, distance?.certification ? distance.certification : 'Configured course detail');
+    add(`certification-${distance?.id || signals.length}`, 'Certification', distance?.certification, suffix ? `Listed for ${distance.name}` : 'Listed race certification');
+    add(`profile-${distance?.id || signals.length}`, 'Course profile', distance?.profile, distance?.certification ? distance.certification : 'Listed course detail');
     if (distance?.aid_stations !== undefined && distance?.aid_stations !== null) {
-      add(`aid-count-${distance?.id || signals.length}`, 'On-course support', `${distance.aid_stations} aid stations listed`, suffix ? `Applies to ${distance.name}` : '');
+      add(`aid-count-${distance?.id || signals.length}`, 'On-course support', `${distance.aid_stations} aid stations listed`, distance?.name || '');
     }
   }
 
   const platformLabel = registrationPlatformLabel(race.registration?.platform);
   if (race.registration?.url) {
-    add('official-registration-platform', 'Official registration handoff', platformLabel, 'StartLine links runners to the configured official registration destination.');
+    add('official-registration-platform', 'Official registration', platformLabel, 'Registration continues on the official provider.');
   }
 
   if (race.organization?.name) {
-    add('organizer', 'Organizer identified', race.organization.name, 'Organizer detail is configured for this concept.');
-  }
-
-  const provenanceItems = asArray(race.private_mockup?.provenance?.items);
-  const highConfidenceCount = provenanceItems.filter((item) => String(item?.confidence || '').toLowerCase() === 'high').length;
-  const sourceSections = asArray(race.private_mockup?.provenance?.source_confirmed_sections).length;
-  if (race.private_mockup?.source_url || race.private_mockup?.provenance?.source_url) {
-    const summaryParts = [];
-    if (highConfidenceCount) summaryParts.push(`${highConfidenceCount} high-confidence facts`);
-    if (sourceSections) summaryParts.push(`${sourceSections} detailed sections`);
-    add('source-backed', 'Fact-checked concept', summaryParts.join(' · ') || 'Race details reviewed', 'Unavailable details are omitted instead of filled with placeholders.');
+    add('organizer', 'Organizer', race.organization.name, 'Race organization');
   }
 
   for (const item of asArray(race.runner_decision_checklist?.items)) {

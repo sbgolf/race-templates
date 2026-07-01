@@ -124,7 +124,7 @@ assert.equal(shouldRenderTrustSignalsBand(bostonSparseFixture), false);
 assert.deepEqual(substantiveTrustSignalsForRace(bostonSparseFixture).map((signal) => signal.id), []);
 assert(trustSignalsForRace(bostonSparseFixture).some((signal) => signal.id === 'official-registration-platform'));
 assert(trustSignalsForRace(bostonSparseFixture).some((signal) => signal.id === 'organizer'));
-assert(trustSignalsForRace(bostonSparseFixture).some((signal) => signal.id === 'source-backed'));
+assert(!trustSignalsForRace(bostonSparseFixture).some((signal) => signal.id === 'source-backed'));
 
 const ashlandRichFixture = JSON.parse(await readFile(new URL('../src/data/private-mockups/ashland-city-half.json', import.meta.url), 'utf8'));
 assert.equal(shouldRenderTrustSignalsBand(ashlandRichFixture), true);
@@ -145,7 +145,7 @@ const genericOnlyFixture = {
   organization: { name: 'Example Organizer' },
   registration: { url: 'https://example.org/register', platform: 'runsignup' }
 };
-assert.equal(trustSignalsForRace(genericOnlyFixture).length, 3);
+assert.equal(trustSignalsForRace(genericOnlyFixture).length, 2);
 assert.deepEqual(substantiveTrustSignalsForRace(genericOnlyFixture), []);
 assert.equal(shouldRenderTrustSignalsBand(genericOnlyFixture), false);
 

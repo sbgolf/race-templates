@@ -147,8 +147,8 @@
     }
   ],
   "seo": {
-    "meta_title": "Ashland City Half-Marathon \u2014 StartLine Performance Preview",
-    "meta_description": "Ashland City Half-Marathon concept for a fast, flat, USATF-certified half marathon in Ashland City, TN."
+    "meta_title": "Ashland City Half-Marathon \u2014 Race Guide",
+    "meta_description": "Ashland City Half-Marathon guide for a fast, flat, USATF-certified half marathon in Ashland City, TN."
   },
   "private_mockup": {
     "generated": true,
@@ -528,7 +528,7 @@
       },
       {
         "label": "Before You Register",
-        "intro": "Price, packet pickup, policies, and participant items before the RunSignup handoff.",
+        "intro": "Price, packet pickup, policies, and participant items before official registration.",
         "itemIds": [
           "price",
           "packet-pickup",
@@ -682,19 +682,5 @@
       ],
       "cta_label": "Register on RunSignup"
     }
-  ],
-  "startline_value": {
-    "headline": "Make the fast, certified half-marathon case immediately.",
-    "intro": "This Performance concept reframes the Ashland City Half around verified speed signals: fast and flat course language, USATF certification, race-day timing, aid-station clarity, and one obvious registration-platform handoff.",
-    "improved": [
-      "Lead with the runner outcome: a fast, flat certified half marathon rather than a general community-race frame.",
-      "Surface the details performance runners scan first: certification number, start time, cutoff, aid-station count, course profile, and price windows.",
-      "Keep the private preview noindex and tokenized while removing internal/chrome from the rendered page."
-    ],
-    "paid_includes": [
-      "Performance/BQ-coded StartLine page structure adapted to a certified half-marathon prospect",
-      "Official registration CTAs pointed to RunSignup with outbound click attributes",
-      "Mobile-first runner decision checklist using only verified facts"
-    ]
-  }
+  ]
 }

@@ -30,7 +30,7 @@ const captions = [
       ))}
       {captions.slice(2).map((caption, index) => (
         <figure class={`g-photo g${index + 3}`}>
-          <div class="ph-img ph-pace"><svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect x="78" y="118" width="244" height="48" rx="8" fill="#2D5BFF"/><text x="200" y="149" font-family="Big Shoulders Display" font-size="24" font-weight="800" fill="#FAFAFC" text-anchor="middle">STARTLINE</text></svg></div>
+          <div class="ph-img ph-pace"><svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect x="78" y="118" width="244" height="48" rx="8" fill="#2D5BFF"/><path d="M112 152h176" stroke="#FAFAFC" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 14" opacity=".9"/><circle cx="132" cy="140" r="10" fill="#FFD600"/><circle cx="268" cy="140" r="10" fill="#FFD600"/></svg></div>
           <figcaption>{caption}</figcaption>
         </figure>
       ))}

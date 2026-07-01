@@ -67,7 +67,11 @@ async function renderedOutputChecks() {
   const anchors = extractAnchors(html);
   const registrationAnchors = anchors.filter((anchor) => anchor.attrs.href === registrationUrl);
   const placements = registrationAnchors.map((anchor) => anchor.attrs['data-analytics-placement']).filter(Boolean);
-  const requiredPrivatePlacements = ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary'];
+  const suppressRegistrationDecision = config.private_mockup?.suppress_registration_decision === true;
+  const suppressChecklistFooterCta = config.runner_decision_checklist?.footer_cta === false;
+  const requiredPrivatePlacements = ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary']
+    .filter((placement) => !(suppressChecklistFooterCta && placement === 'runner-checklist-footer'))
+    .filter((placement) => !(suppressRegistrationDecision && placement === 'registration-decision-card'));
   const missingPrivatePlacements = requiredPrivatePlacements.filter((placement) => !placements.includes(placement));
   const duplicatePlacements = [...new Set(placements.filter((placement, index) => placements.indexOf(placement) !== index))];
   const registrationAnchorErrors = registrationAnchors.flatMap((anchor, index) => [
@@ -81,10 +85,17 @@ async function renderedOutputChecks() {
   const hasHeroChecklistSecondary = html.includes("scrollToId('runner-checklist')") && html.includes('Review key race details');
   const hasRegistrationDecisionCard = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard);
   const hasTrustSignalsBand = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand);
-  const shouldRenderTrustSignals = shouldRenderTrustSignalsBand(config);
+  const shouldRenderTrustSignals = config.private_mockup?.suppress_trust_signals === true ? false : shouldRenderTrustSignalsBand(config);
   const hasMeasurementReadyPanel = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel);
   const publicPrivateMarkerLeaks = config.private_mockup?.route ? [] : privateValuePublicMarkerLeaks(html);
   const hasRegisterClickListener = html.includes("document.addEventListener('click', function (event)");
+  const isPerformancePrivateMockup = Boolean(config.private_mockup?.route && config.identity?.template === 'performance');
+  const requiredPrivateMarkers = isPerformancePrivateMockup
+    ? PRIVATE_VALUE_REQUIRED_MARKERS.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)
+    : PRIVATE_VALUE_REQUIRED_MARKERS;
+  const effectiveRequiredPrivateMarkers = suppressRegistrationDecision
+    ? requiredPrivateMarkers.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)
+    : requiredPrivateMarkers;
   const visibleText = html
     .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
@@ -135,11 +146,13 @@ async function renderedOutputChecks() {
     {
       id: config.private_mockup?.route ? 'private-value-narrative-present' : 'public-value-narrative-absent',
       label: config.private_mockup?.route
-        ? 'Private mockup page renders the StartLine value narrative'
+        ? (isPerformancePrivateMockup ? 'Private performance mockup does not render the internal value narrative' : 'Private mockup page renders the StartLine value narrative')
         : 'Public preview page does not render the private value narrative',
-      pass: config.private_mockup?.route ? hasPrivateValueNarrative : !hasPrivateValueNarrative,
-      details: config.private_mockup?.route && !hasPrivateValueNarrative
-        ? ['Missing data-private-value-narrative in private rendered HTML.']
+      pass: config.private_mockup?.route ? (isPerformancePrivateMockup ? !hasPrivateValueNarrative : hasPrivateValueNarrative) : !hasPrivateValueNarrative,
+      details: config.private_mockup?.route
+        ? (isPerformancePrivateMockup && hasPrivateValueNarrative
+            ? ['Performance private rendered HTML must not contain data-private-value-narrative.']
+            : (!isPerformancePrivateMockup && !hasPrivateValueNarrative ? ['Missing data-private-value-narrative in private rendered HTML.'] : []))
         : (!config.private_mockup?.route && hasPrivateValueNarrative ? ['Public rendered HTML contains data-private-value-narrative.'] : [])
     },
     {
@@ -148,10 +161,10 @@ async function renderedOutputChecks() {
         ? 'Private mockup page renders required private value contract markers'
         : 'Public preview page does not render any private value contract markers',
       pass: config.private_mockup?.route
-        ? PRIVATE_VALUE_REQUIRED_MARKERS.every((marker) => html.includes(marker))
+        ? effectiveRequiredPrivateMarkers.every((marker) => html.includes(marker))
         : publicPrivateMarkerLeaks.length === 0,
       details: config.private_mockup?.route
-        ? PRIVATE_VALUE_REQUIRED_MARKERS.filter((marker) => !html.includes(marker)).map((marker) => `Missing required private value marker ${marker}.`)
+        ? effectiveRequiredPrivateMarkers.filter((marker) => !html.includes(marker)).map((marker) => `Missing required private value marker ${marker}.`)
         : publicPrivateMarkerLeaks.map((marker) => `Public rendered HTML contains private value marker ${marker}.`)
     },
     {
@@ -160,13 +173,13 @@ async function renderedOutputChecks() {
         ? 'Private mockup page renders runner decision checklist with tracked CTA'
         : 'Public preview page does not render the private runner checklist',
       pass: config.private_mockup?.route
-        ? hasRunnerChecklist && (html.match(/data-checklist-item-id=/g) || []).length >= 3 && html.includes('data-analytics-placement="runner-checklist-footer"')
+        ? hasRunnerChecklist && (html.match(/data-checklist-item-id=/g) || []).length >= 3 && (suppressChecklistFooterCta || html.includes('data-analytics-placement="runner-checklist-footer"'))
         : !hasRunnerChecklist,
       details: config.private_mockup?.route
         ? [
             ...(hasRunnerChecklist ? [] : ['Missing data-runner-decision-checklist in private rendered HTML.']),
             ...((html.match(/data-checklist-item-id=/g) || []).length >= 3 ? [] : ['Runner checklist has fewer than 3 rendered items.']),
-            ...(html.includes('data-analytics-placement="runner-checklist-footer"') ? [] : ['Missing runner-checklist-footer register-click placement.'])
+            ...(suppressChecklistFooterCta || html.includes('data-analytics-placement="runner-checklist-footer"') ? [] : ['Missing runner-checklist-footer register-click placement.'])
           ]
         : (hasRunnerChecklist ? ['Public rendered HTML contains private runner checklist.'] : [])
     },
@@ -186,13 +199,18 @@ async function renderedOutputChecks() {
         ? 'Private mockup page renders the registration decision card with tracked CTA'
         : 'Public preview page does not render the private registration decision card',
       pass: config.private_mockup?.route
-        ? hasRegistrationDecisionCard && placements.includes('registration-decision-card')
+        ? (suppressRegistrationDecision ? !hasRegistrationDecisionCard && !placements.includes('registration-decision-card') : hasRegistrationDecisionCard && placements.includes('registration-decision-card'))
         : !hasRegistrationDecisionCard,
       details: config.private_mockup?.route
-        ? [
-            ...(hasRegistrationDecisionCard ? [] : ['Missing data-registration-decision-card in private rendered HTML.']),
-            ...(placements.includes('registration-decision-card') ? [] : ['Missing registration-decision-card register-click placement.'])
-          ]
+        ? (suppressRegistrationDecision
+            ? [
+                ...(hasRegistrationDecisionCard ? ['Suppressed mockup unexpectedly renders data-registration-decision-card.'] : []),
+                ...(placements.includes('registration-decision-card') ? ['Suppressed mockup unexpectedly renders registration-decision-card register-click placement.'] : [])
+              ]
+            : [
+                ...(hasRegistrationDecisionCard ? [] : ['Missing data-registration-decision-card in private rendered HTML.']),
+                ...(placements.includes('registration-decision-card') ? [] : ['Missing registration-decision-card register-click placement.'])
+              ])
         : (hasRegistrationDecisionCard ? ['Public rendered HTML contains private registration decision card.'] : [])
     },
     {
