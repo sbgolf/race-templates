@@ -1,19 +1,16 @@
 ---
 import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
-const { race } = Astro.props;
+const { race, isPrivateMockup = false } = Astro.props;
 const registrationUrl = race.registration?.url || '#entry';
 const navCtaLabel = race.registration?.cta_label || 'Register';
 const raceName = race.identity?.name || 'Performance Race';
 const shortName = raceName.replace(/^\d+(?:st|nd|rd|th)?\s+annual\s+/i, '').replace(/half-marathon/i, 'Half');
 const dateYear = race.event?.date ? new Date(`${race.event.date}T12:00:00Z`).getUTCFullYear() : '';
 const hasTravel = Boolean(race.travel?.items?.length || race.travel?.airport || race.travel?.hotels || race.travel?.race_morning);
-const hasRecords = Boolean(
-  race.proof?.bq_rate ||
-  race.proof?.bq_finishers ||
-  race.course?.certification ||
-  race.distances?.some((distance) => distance.certification) ||
-  race.records?.length
-);
+const hasBqProof = Boolean(race.proof?.bq_rate || race.proof?.bq_finishers);
+const hasRecords = Array.isArray(race.records) && race.records.length > 0;
+const hasCertification = Boolean(race.course?.certification || race.distances?.some((distance) => distance.certification));
+const hasRecordsSection = hasBqProof || hasRecords || (hasCertification && !isPrivateMockup);
 ---
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <nav id="nav">
@@ -27,7 +24,7 @@ const hasRecords = Boolean(
   <div class="nav-links" id="navLinks">
     <a href="#course">Course</a>
     <a href="#pace">Pace</a>
-    {hasRecords && <a href="#records">Records</a>}
+    {hasRecordsSection && <a href="#records">Records</a>}
     <a class="nav-optional" href="#gallery">Race Day</a>
     {hasTravel && <a class="nav-optional" href="#travel">Travel</a>}
     <a class="btn btn-accent nav-cta" href={registrationUrl} {...registerClickAttributes(race, 'nav-button')}><span>{navCtaLabel}</span><span aria-hidden="true">→</span></a>

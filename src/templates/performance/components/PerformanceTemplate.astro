@@ -19,7 +19,7 @@ import Finale from './Finale.astro';
 import Footer from './Footer.astro';
 const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 ---
-<Nav race={race} />
+<Nav race={race} isPrivateMockup={isPrivateMockup} />
 <main id="main-content">
 <Hero race={race} isPrivateMockup={isPrivateMockup} />
 <StatBar race={race} />
@@ -28,7 +28,7 @@ const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 {isPrivateMockup && <RegistrationDecisionCard race={race} />}
 <Course race={race} />
 <PacePicker race={race} />
-<Records race={race} />
+<Records race={race} isPrivateMockup={isPrivateMockup} />
 <Gallery race={race} galleryAssets={galleryAssets} />
 <Entry race={race} />
 <Travel race={race} />
@@ -37,7 +37,7 @@ const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 {isPrivateMockup && <MeasurementReadyPanel race={race} />}
 <Finale race={race} />
 </main>
-<Footer race={race} />
+<Footer race={race} isPrivateMockup={isPrivateMockup} />
 <script is:inline>
 
   const nav=document.getElementById('nav');

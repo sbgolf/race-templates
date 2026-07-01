@@ -42,10 +42,10 @@
       "price_amount": "60",
       "aid_stations": 5,
       "profile": "Fast, flat \u00b7 USATF-certified \u00b7 Riverside",
-      "certification": "USATF certified #TN22002MS",
+      "certification": "USATF certified",
       "map_label": "Half Marathon",
       "highlights": [
-        "USATF certified #TN22002MS",
+        "USATF-certified course",
         "Fast, flat course",
         "Starts and finishes next to the Cumberland River at Riverbluff Park",
         "Five crewed aid stations listed"
@@ -455,7 +455,7 @@
       {
         "id": "course",
         "label": "Course notes",
-        "value": "Fast, flat \u00b7 USATF-certified \u00b7 Riverside \u00b7 USATF certified #TN22002MS",
+        "value": "Fast, flat \u00b7 USATF-certified \u00b7 Riverside",
         "source_path": "distances[].profile",
         "source_url": "https://nashvilletrackclub.org/ashlandcityhalf/",
         "applies_to_distance_ids": [
@@ -557,7 +557,7 @@
     "hero_lead": "A fast, flat, USATF-certified half marathon in Ashland City, TN, starting and finishing next to the Cumberland River at Riverbluff Park.",
     "hero_stat": {
       "label": "USATF Certification",
-      "value": "TN22002MS",
+      "value": "USATF certified",
       "detail": "Eligible for Tennessee single-age state records"
     },
     "clock": {
@@ -588,7 +588,7 @@
       "sub": "Confirmed event distance"
     },
     {
-      "value": "TN22002MS",
+      "value": "Certified",
       "label": "USATF Certified",
       "sub": "Certification listed by source"
     },
@@ -665,7 +665,7 @@
       "subtitle": "Listed until 11:59pm Saturday, January 31",
       "features": [
         "Half Marathon entry",
-        "USATF-certified course #TN22002MS",
+        "USATF-certified course",
         "Race-day packet pickup available 5:45am \u2013 7:15am",
         "Course open for 3 hours"
       ],

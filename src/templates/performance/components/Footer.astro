@@ -1,6 +1,6 @@
 ---
 import { registerClickAttributes } from '../../../shared/analytics/register-click.mjs';
-const { race } = Astro.props;
+const { race, isPrivateMockup = false } = Astro.props;
 const raceName = race.identity?.name || 'Performance Race';
 const shortName = raceName.replace(/^\d+(?:st|nd|rd|th)?\s+annual\s+/i, '').replace(/half-marathon/i, 'Half');
 const dateYear = race.event?.date ? new Date(`${race.event.date}T12:00:00Z`).getUTCFullYear() : new Date().getUTCFullYear();
@@ -11,6 +11,9 @@ const certification = race.performance?.certification || race.distances?.find((d
 const profile = race.performance?.course_profile || race.distances?.find((distance) => distance.profile)?.profile;
 const hasTravel = Boolean(race.travel?.items?.length || race.travel?.airport || race.travel?.hotels || race.travel?.race_morning);
 const hasFaq = Array.isArray(race.faqs) && race.faqs.length > 0;
+const hasBqProof = Boolean(race.proof?.bq_rate || race.proof?.bq_finishers);
+const hasRecords = Array.isArray(race.records) && race.records.length > 0;
+const hasRecordsSection = hasBqProof || hasRecords || (certification && !isPrivateMockup);
 ---
 <footer>
   <div class="foot">
@@ -24,7 +27,7 @@ const hasFaq = Array.isArray(race.faqs) && race.faqs.length > 0;
       </a>
       <p>{[profile, certification, location].filter(Boolean).join(' · ') || 'A performance-focused race guide with clear course, pacing, and registration details.'}</p>
     </div>
-    <div><h2>Race</h2><ul><li><a href="#course">Course</a></li><li><a href="#pace">Pace</a></li><li><a href="#records">Records</a></li><li><a href="#entry">Register</a></li></ul></div>
+    <div><h2>Race</h2><ul><li><a href="#course">Course</a></li><li><a href="#pace">Pace</a></li>{hasRecordsSection && <li><a href="#records">Records</a></li>}<li><a href="#entry">Register</a></li></ul></div>
     <div><h2>Logistics</h2><ul>{hasTravel && <li><a href="#travel">Travel</a></li>}<li><a href="#gallery">Race Day</a></li>{hasFaq && <li><a href="#faq">FAQ</a></li>}<li><a href={registrationUrl} {...registerClickAttributes(race, 'footer-registration')}>Registration</a></li></ul></div>
     <div><h2>Details</h2><ul><li><a href="#course">Certification</a></li><li><a href="#pace">Pace goals</a></li><li><a href="#entry">Pricing</a></li>{race.story?.links?.[0]?.url && <li><a href={race.story.links[0].url}>Course map</a></li>}</ul></div>
   </div>
