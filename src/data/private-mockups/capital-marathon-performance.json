@@ -170,7 +170,7 @@
         "id": "aid-stations",
         "label": "On-course support",
         "value": "14 aid stations listed",
-        "detail": "Aid-station count is configured for the marathon course.",
+        "detail": "Listed for the marathon course.",
         "source_path": "distances[0].aid_stations",
         "source_url": "https://capitalmarathonrace.org/race-info",
         "applies_to_distance_ids": ["marathon"]
@@ -179,25 +179,11 @@
         "id": "time-limit",
         "label": "Time limit",
         "value": "6:00:00 cutoff",
-        "detail": "Cutoff is configured with the marathon distance.",
+        "detail": "Marathon cutoff.",
         "source_path": "distances[0].cutoff",
         "source_url": "https://capitalmarathonrace.org/race-info",
         "applies_to_distance_ids": ["marathon"]
       }
-    ]
-  },
-  "startline_value": {
-    "headline": "Make the fast-course case before runners compare another marathon.",
-    "intro": "This Performance concept turns certification, BQ potential, field-cap urgency, and pace planning into a focused path toward registration.",
-    "improved": [
-      "Lead with the runner outcome: a clear BQ and PR proposition supported by course profile, start time, and field proof.",
-      "Give competitive runners the facts they scan first: certified course, net elevation, pace groups, record times, and corral expectations.",
-      "Keep registration momentum visible while preserving the clean public Performance preview."
-    ],
-    "paid_includes": [
-      "A Performance-template page structure tuned for BQ, PR, and field-cap decision making",
-      "Official registration CTAs pointed at the configured provider instead of competing side paths",
-      "Registration-click tracking attributes that prepare the site to measure outbound handoff intent"
     ]
   },
   "registration": {
@@ -206,8 +192,8 @@
     "cta_label": "Register now"
   },
   "seo": {
-    "meta_title": "The Capital Marathon StartLine Concept",
-    "meta_description": "StartLine concept for a fictional fast, certified fall marathon focused on BQ and PR-minded runners."
+    "meta_title": "The Capital Marathon Race Guide",
+    "meta_description": "Race guide for a fictional fast, certified fall event focused on BQ and PR-minded runners."
   },
   "analytics": {
     "ga4_measurement_id": "G-XXXXXXXXXX"

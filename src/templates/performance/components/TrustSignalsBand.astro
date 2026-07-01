@@ -16,7 +16,7 @@ const signals = trustSignalsForRace(race);
       </div>
       <div class="perf-trust-grid stagger">
         {signals.map((signal) => (
-          <article class="perf-trust-card" data-trust-signal-id={signal.id === 'source-backed' ? 'fact-reviewed' : signal.id}>
+          <article class="perf-trust-card" data-trust-signal-id={signal.id}>
             <span>{signal.label}</span>
             <strong>{signal.value}</strong>
             {signal.detail ? <p>{signal.detail}</p> : null}

@@ -18,7 +18,7 @@ const decisionCopy = registrationDecisionCopyForRace(race, {
 const platform = decisionCopy.platform || 'Official registration';
 const decisionFacts = [
   price ? { label: 'Current price', value: price, detail: priceDetail } : null,
-  registrationStatus ? { label: 'Registration status', value: 'Official registration is connected', detail: registrationStatus } : null,
+  registrationStatus ? { label: 'Registration status', value: 'Registration is open', detail: registrationStatus } : null,
   platform ? { label: 'Official handoff', value: platform } : null
 ].filter(Boolean);
 const registerLabel = decisionCopy.ctaLabel;
