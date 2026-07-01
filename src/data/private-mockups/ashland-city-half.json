@@ -395,7 +395,7 @@
   },
   "runner_decision_checklist": {
     "headline": "Runner facts before you register",
-    "intro": "The repeated basics are consolidated into three runner-facing blocks so date, course proof, logistics, and the official registration path are easy to scan.",
+    "intro": "Everything runners need to confirm the date, course, logistics, and official registration path in one quick scan.",
     "items": [
       {
         "id": "date",
@@ -518,7 +518,7 @@
       },
       {
         "label": "Course & Credentials",
-        "intro": "The verified speed and support facts performance runners use to assess the course.",
+        "intro": "Certified-course details, support, and race-day proof points for performance runners.",
         "itemIds": [
           "course",
           "aid-stations",
@@ -528,7 +528,7 @@
       },
       {
         "label": "Before You Register",
-        "intro": "Price, pickup, policies, and participant items before the RunSignup handoff.",
+        "intro": "Price, packet pickup, policies, and participant items before the RunSignup handoff.",
         "itemIds": [
           "price",
           "packet-pickup",
