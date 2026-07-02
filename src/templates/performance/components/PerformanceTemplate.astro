@@ -110,7 +110,7 @@ const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 
   // Pace picker — updates summary + configured checkpoint splits.
   function pickPace(btn){
-    const paceData=window.STARTLINE_PACE_DATA||{};
+    const paceData=window.RACE_PACE_DATA||{};
     document.querySelectorAll('.pace-tab').forEach(t=>t.classList.remove('active'));
     btn.classList.add('active');
     const g=btn.dataset.goal,data=paceData[g];

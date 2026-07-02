@@ -35,15 +35,39 @@ const customerFacingInternalChromePatterns = [
   /\bPrivate StartLine concept\b/i,
   /\bStartLine private concept\b/i,
   /\bPrivate StartLine race website concept preview\b/i,
+  /\bprivate preview\b/i,
+  /\binternal metadata\b/i,
   /\bsource[-\s]?confirmed\b/i,
   /\bsource[-\s]?backed\b/i,
+  /\bsource[-\s]?listed\b/i,
   /\bprovenance\b/i,
-  /\buncertainty\b/i,
+  /\buncertaint(?:y|ies)\b/i,
   /\bsource_url\b/i,
   /\bcaptured_at\b/i,
   /\baccess_token\b/i,
+  /\bpublic images?\b/i,
   /\bpublic image URL on source page\b/i,
+  /\binternal review\b/i,
+  /\bnoindex\s+labels?\b/i,
   /\bshould be reviewed before prospect sharing\b/i
+];
+const renderedPrivateHtmlForbiddenPatterns = [
+  /\bprivate preview\b/i,
+  /\binternal metadata\b/i,
+  /\buncertaint(?:y|ies)\b/i,
+  /\bsource[-\s]?listed\b/i,
+  /\bconcept\b/i,
+  /\bsource page\b/i,
+  /\bsource config\b/i,
+  /\brace source\b/i,
+  /\bprovenance\b/i,
+  /\binternal review\b/i,
+  /\bpublic images?\b/i,
+  /\bsource[-\s]?backed\b/i,
+  /\bsource[-\s]?confirmed\b/i,
+  /\bnoindex\s+labels?\b/i,
+  /\bPrivate StartLine\b/i,
+  /\bStartLine private\b/i
 ];
 const performancePrivateInternalChromePatterns = [
   /\bFact-checked concept\b/i,
@@ -106,6 +130,10 @@ for (const file of files) {
   }
   for (const pattern of customerFacingInternalChromePatterns) {
     if (pattern.test(customerFacingCopy)) errors.push(`Rendered customer-facing HTML contains internal/source chrome "${pattern.source}".`);
+  }
+  const fullHtmlCopy = renderedPrivateHtmlScanSurface(html);
+  for (const pattern of renderedPrivateHtmlForbiddenPatterns) {
+    if (pattern.test(fullHtmlCopy)) errors.push(`Rendered private HTML contains internal/provenance/customer-facing blocker "${pattern.source}".`);
   }
   if (template === 'performance') {
     const performanceCopySurface = `${text} ${customerFacingCopy}`;
@@ -282,6 +310,13 @@ function customerFacingCopySurface(html) {
     .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
     .replace(/<svg\b[\s\S]*?<\/svg>/gi, ' ')
     .replace(/\bdata-private-(?:mockup|value-narrative)\b/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function renderedPrivateHtmlScanSurface(html) {
+  return String(html || '')
+    .replace(/<meta\b(?=[^>]*\bname=["'](?:robots|googlebot)["'])[^>]*>/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
