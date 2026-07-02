@@ -128,9 +128,15 @@ for (const file of files) {
   const registrationUrl = registrationUrlForRenderedFile(file);
   const config = configForRenderedFile(file);
   const template = templateForPrivateMockup(config);
-  const suppressRegistrationDecision = config?.private_mockup?.suppress_registration_decision === true;
-  const suppressChecklistFooterCta = config?.runner_decision_checklist?.footer_cta === false;
-  const shouldRenderTrustSignals = config?.private_mockup?.suppress_trust_signals === true ? false : shouldRenderTrustSignalsBand(config);
+  const suppressRegistrationDecision = template === 'community'
+    ? config?.private_mockup?.show_registration_decision !== true
+    : config?.private_mockup?.suppress_registration_decision === true;
+  const suppressChecklistFooterCta = template === 'community'
+    ? config?.runner_decision_checklist?.footer_cta !== true
+    : config?.runner_decision_checklist?.footer_cta === false;
+  const shouldRenderTrustSignals = template === 'community'
+    ? false
+    : (config?.private_mockup?.suppress_trust_signals === true ? false : shouldRenderTrustSignalsBand(config));
   validatePrivateRobotsMetadata(html, errors);
   validateMobileOverflowReadiness(html, errors);
   if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible customer-facing copy exposes a raw URL or bare domain; use labeled links/buttons instead.');
@@ -157,6 +163,9 @@ for (const file of files) {
   if (template === 'community') {
     for (const pattern of communityPrivateVisibleHygienePatterns) {
       if (pattern.test(text)) errors.push(`Rendered community private mockup exposes internal/value/tooling label "${pattern.source}".`);
+    }
+    if (html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand) || /Runner trust signals/i.test(text)) {
+      errors.push('Rendered community private mockup must consolidate trust facts into Course / Before You Register instead of a standalone Runner Trust Signals band.');
     }
   }
   for (const pattern of punctuationArtifactPatterns) {
@@ -203,6 +212,7 @@ for (const file of files) {
     .filter((placement) => !(suppressRegistrationDecision && placement === 'registration-decision-card'));
   const minimumRegistrationCtaCount = requiredPlacements.length + 1;
   if (registrationAnchors.length < minimumRegistrationCtaCount) errors.push(`Only ${registrationAnchors.length} registration CTAs point to the official registration URL; expected at least ${minimumRegistrationCtaCount}.`);
+  if (template === 'community' && registrationAnchors.length > 8) errors.push(`Community private mockup renders ${registrationAnchors.length} official registration CTAs; expected 8 or fewer after structural CTA reduction.`);
   for (const required of requiredPlacements) {
     if (!placements.includes(required)) errors.push(`Missing required register-click placement "${required}".`);
   }

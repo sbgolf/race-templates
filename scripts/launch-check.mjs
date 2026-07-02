@@ -67,8 +67,13 @@ async function renderedOutputChecks() {
   const anchors = extractAnchors(html);
   const registrationAnchors = anchors.filter((anchor) => anchor.attrs.href === registrationUrl);
   const placements = registrationAnchors.map((anchor) => anchor.attrs['data-analytics-placement']).filter(Boolean);
-  const suppressRegistrationDecision = config.private_mockup?.suppress_registration_decision === true;
-  const suppressChecklistFooterCta = config.runner_decision_checklist?.footer_cta === false;
+  const template = config.identity?.template;
+  const suppressRegistrationDecision = template === 'community'
+    ? config.private_mockup?.show_registration_decision !== true
+    : config.private_mockup?.suppress_registration_decision === true;
+  const suppressChecklistFooterCta = template === 'community'
+    ? config.runner_decision_checklist?.footer_cta !== true
+    : config.runner_decision_checklist?.footer_cta === false;
   const requiredPrivatePlacements = ['nav-button', 'hero-primary', 'runner-checklist-footer', 'registration-decision-card', 'finale-primary']
     .filter((placement) => !(suppressChecklistFooterCta && placement === 'runner-checklist-footer'))
     .filter((placement) => !(suppressRegistrationDecision && placement === 'registration-decision-card'));
@@ -85,7 +90,9 @@ async function renderedOutputChecks() {
   const hasHeroChecklistSecondary = html.includes("scrollToId('runner-checklist')") && html.includes('Review key race details');
   const hasRegistrationDecisionCard = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard);
   const hasTrustSignalsBand = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand);
-  const shouldRenderTrustSignals = config.private_mockup?.suppress_trust_signals === true ? false : shouldRenderTrustSignalsBand(config);
+  const shouldRenderTrustSignals = template === 'community'
+    ? false
+    : (config.private_mockup?.suppress_trust_signals === true ? false : shouldRenderTrustSignalsBand(config));
   const hasMeasurementReadyPanel = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel);
   const publicPrivateMarkerLeaks = config.private_mockup?.route ? [] : privateValuePublicMarkerLeaks(html);
   const hasRegisterClickListener = html.includes("document.addEventListener('click', function (event)");
@@ -196,7 +203,7 @@ async function renderedOutputChecks() {
     {
       id: config.private_mockup?.route ? 'private-registration-decision-card-present' : 'public-registration-decision-card-absent',
       label: config.private_mockup?.route
-        ? 'Private mockup page renders the registration decision card with tracked CTA'
+        ? (suppressRegistrationDecision ? 'Private mockup suppresses duplicate registration decision card' : 'Private mockup page renders the registration decision card with tracked CTA')
         : 'Public preview page does not render the private registration decision card',
       pass: config.private_mockup?.route
         ? (suppressRegistrationDecision ? !hasRegistrationDecisionCard && !placements.includes('registration-decision-card') : hasRegistrationDecisionCard && placements.includes('registration-decision-card'))
@@ -216,13 +223,13 @@ async function renderedOutputChecks() {
     {
       id: config.private_mockup?.route ? 'private-trust-signals-band-appropriate' : 'public-trust-signals-band-absent',
       label: config.private_mockup?.route
-        ? 'Private mockup page renders source-backed trust signals when enough substantive runner-facing facts exist'
+        ? (template === 'community' ? 'Community private mockup consolidates trust facts without a standalone trust-signal band' : 'Private mockup page renders source-backed trust signals when enough substantive runner-facing facts exist')
         : 'Public preview page does not render the private trust-signal band',
       pass: config.private_mockup?.route ? (shouldRenderTrustSignals ? hasTrustSignalsBand : !hasTrustSignalsBand) : !hasTrustSignalsBand,
       details: config.private_mockup?.route
         ? [
             ...(shouldRenderTrustSignals && !hasTrustSignalsBand ? ['Missing data-trust-signals-band despite enough substantive runner-facing trust facts.'] : []),
-            ...(!shouldRenderTrustSignals && hasTrustSignalsBand ? ['Rendered data-trust-signals-band without enough substantive runner-facing trust facts.'] : [])
+            ...(!shouldRenderTrustSignals && hasTrustSignalsBand ? [template === 'community' ? 'Community private mockup should use Course / Before You Register for trust facts, not a standalone trust-signal band.' : 'Rendered data-trust-signals-band without enough substantive runner-facing trust facts.'] : [])
           ]
         : (hasTrustSignalsBand ? ['Public rendered HTML contains private trust-signal band.'] : [])
     },
@@ -252,11 +259,12 @@ async function renderedOutputChecks() {
       id: 'community-registration-placement-hierarchy',
       label: 'Registration CTAs use distinct measurement placements',
       pass: config.private_mockup?.route
-        ? missingPrivatePlacements.length === 0 && placements.some((placement) => placement.startsWith('entry-distance-')) && duplicatePlacements.length === 0
+        ? missingPrivatePlacements.length === 0 && placements.some((placement) => placement.startsWith('entry-distance-')) && duplicatePlacements.length === 0 && (template !== 'community' || registrationAnchors.length <= 8)
         : duplicatePlacements.length === 0,
       details: config.private_mockup?.route ? [
         ...missingPrivatePlacements.map((placement) => `Missing required placement: ${placement}`),
         ...(placements.some((placement) => placement.startsWith('entry-distance-')) ? [] : ['Missing required entry-distance-* placement.']),
+        ...(template === 'community' && registrationAnchors.length > 8 ? [`Community private mockup renders ${registrationAnchors.length} official registration CTAs; expected 8 or fewer after structural CTA reduction.`] : []),
         ...duplicatePlacements.map((placement) => `Duplicate registration CTA placement: ${placement}`)
       ] : duplicatePlacements.map((placement) => `Duplicate registration CTA placement: ${placement}`)
     },
