@@ -23,7 +23,7 @@ const distanceMeta = (distance) => [distance?.distance, distance?.start_time].fi
           {distance.highlights?.length ? <ul>
             {distance.highlights.map((item) => <li>{item}</li>)}
           </ul> : null}
-          <a class:list={["btn", distance.featured ? "btn-accent" : "btn-dark"]} href={registerUrl} target="_blank" rel="noopener" {...attrs}>{race.registration?.cta_label || 'Register'}</a>
+          <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...attrs}>{race.registration?.cta_label || 'Register'}</a>
         </div>;
       })}
     </div>
