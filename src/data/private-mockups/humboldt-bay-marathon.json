@@ -134,7 +134,9 @@
         "label": "Course map",
         "url": "https://humboldtbaymarathon.com/images/BigMAp2025.jpg"
       }
-    ]
+    ],
+    "quote": "\u201cThe art symbolizes several things I love about Humboldt Bay. I have run or biked many parts of this marathon route, including the windy road from Sunnybrae to Freshwater, the redwood forest paths and hills of Arcata Community Forest, the Samoa Bridge, and the streets of Old Town Eureka...\u201d",
+    "quote_byline": "Sara Starr, artist statement"
   },
   "schedule": [
     {
@@ -204,18 +206,55 @@
     }
   },
   "sponsors": [
-    "Ghirardelli Associates",
-    "Fin-N-Feather",
-    "Ramone's Bakery & Cafe",
-    "Eureka Main Street",
-    "Suzie",
-    "Ciotti Yard Maintenance",
-    "Pivotal Connections Physical Therapy",
-    "Maya Conrad Realtor",
-    "Humboldt Creamery",
-    "Maverick & Haywood",
-    "Adventure's Edge",
-    "Redwood Coast Mountain Bike Association"
+    {
+      "name": "Ghirardelli Associates",
+      "tier": "Title Sponsor",
+      "url": "https://www.ghirardelliassoc.com/"
+    },
+    {
+      "name": "Fin-N-Feather",
+      "tier": "Sponsors"
+    },
+    {
+      "name": "Ramone's Bakery & Cafe",
+      "tier": "Sponsors"
+    },
+    {
+      "name": "Eureka Main Street",
+      "tier": "Sponsors"
+    },
+    {
+      "name": "Suzie",
+      "tier": "Sponsors"
+    },
+    {
+      "name": "Ciotti Yard Maintenance",
+      "tier": "Sponsors"
+    },
+    {
+      "name": "Pivotal Connections Physical Therapy",
+      "tier": "Sponsors"
+    },
+    {
+      "name": "Maya Conrad Realtor",
+      "tier": "Sponsors"
+    },
+    {
+      "name": "Humboldt Creamery",
+      "tier": "Sponsors"
+    },
+    {
+      "name": "Maverick & Haywood",
+      "tier": "Sponsors"
+    },
+    {
+      "name": "Adventure's Edge",
+      "tier": "Sponsors"
+    },
+    {
+      "name": "Redwood Coast Mountain Bike Association",
+      "tier": "Timing Support"
+    }
   ],
   "faqs": [
     {
@@ -478,6 +517,21 @@
           "path": "runner_decision_checklist.items.awards",
           "source": "runner checklist item derived from public race pages",
           "confidence": "medium"
+        },
+        {
+          "path": "story.quote",
+          "source": "homepage and race_information.html artwork block quotes Sara Starr artist statement",
+          "confidence": "high"
+        },
+        {
+          "path": "sponsors[0].tier",
+          "source": "homepage and sponsors.html navigation area labels Ghirardelli Associates logo under 'Our Title Sponsor'",
+          "confidence": "high"
+        },
+        {
+          "path": "sponsors[11].tier",
+          "source": "sponsors.html says Redwood Coast Mountain Bike Association provides timing needs, gun start, chip finish, and at least one split for each distance",
+          "confidence": "high"
         }
       ]
     },
@@ -486,7 +540,8 @@
       "items": [
         "The event schedule page says official timing ends at 1:00 PM and the marathon page lists a 6 hour time limit; the race information page also references a maximum of 7 hours for marathon finishers. The visible FAQ uses the distance-page/current schedule phrasing and this conflict is retained here for review.",
         "The marathon shirt cutoff text appears to reference 7/22/2025 on a 2026 page, so the mockup avoids rendering that exact date and uses only the source-backed custom-shirt/artwork language.",
-        "Detailed 5K time limit, shirt cutoff, and age-group specifics were not found on a dedicated current 5K page and are intentionally omitted."
+        "Detailed 5K time limit, shirt cutoff, and age-group specifics were not found on a dedicated current 5K page and are intentionally omitted.",
+        "The homepage references BeerMile races and links historical results for the first Eureka Beer Mile, but the current 2026 registration copy and event schedule list only Marathon, Half Marathon, and 5K starts; Beer Mile is intentionally not rendered as a current 2026 distance or tradition claim."
       ]
     },
     "notes": "Hand-authored from public Humboldt Bay Marathon pages after generator could not infer location from the homepage alone. Sample race data was not used as a base."
