@@ -8,7 +8,7 @@ const stats = race.performance_stats || [
   primaryDistance.distance && { value: primaryDistance.distance, label: primaryDistance.name || 'Distance', sub: primaryDistance.profile || '' },
   certification && { value: certification.replace(/^USATF certified\s*/i, ''), label: 'USATF Certified', sub: primaryDistance.profile || '' },
   primaryDistance.aid_stations && { value: String(primaryDistance.aid_stations), label: 'Aid Stations', sub: 'Water and Gatorade listed on course' },
-  primaryDistance.cutoff && { value: primaryDistance.cutoff, label: 'Course Time Limit', sub: 'Source-listed cutoff' },
+  primaryDistance.cutoff && { value: primaryDistance.cutoff, label: 'Course Time Limit', sub: 'Official race-day cutoff' },
   proof.field_cap && { value: String(proof.field_cap), label: 'Field Cap', sub: proof.sold_out_years ? `Sold out ${proof.sold_out_years} years running` : '' },
   proof.bq_rate && { value: `${proof.bq_rate}%`, label: 'BQ Rate', sub: proof.bq_finishers ? `${proof.bq_finishers} finishers` : '' },
   records[0]?.mens_time && { value: records[0].mens_time, label: 'Course Record', sub: records[0].year ? `Set ${records[0].year}` : '' }

@@ -97,16 +97,16 @@
     "intro": "Registration is open for the 2026 Marathon, Half Marathon, and 5K on the official Runzy page."
   },
   "startline_value": {
-    "headline": "A community race weekend concept built around the runner's decision path.",
-    "intro": "This private preview keeps Humboldt Bay's nonprofit, trails, artwork, sponsor, volunteer, and waterfront-course story together while making the most important runner facts easier to scan before the Runzy handoff.",
+    "headline": "A community race weekend page built around the runner's decision path.",
+    "intro": "This page keeps Humboldt Bay's nonprofit, trails, artwork, sponsor, volunteer, and waterfront-course story together while making the most important runner facts easier to scan before the Runzy handoff.",
     "improved": [
       "Grouped the Marathon, Half Marathon, and 5K into one distance picker with start times, course profiles, certifications, and cutoffs close to registration CTAs.",
       "Turned scattered schedule, packet pickup, parking, gear-drop, aid-station, medal, shirt, sponsor, and volunteer details into scan-friendly sections.",
       "Preserved the official Runzy registration destination for every primary CTA and added measurement-ready placements for outbound registration intent.",
-      "Used only public race-site facts and assets, with uncertainties retained in internal metadata instead of visible placeholder copy."
+      "Kept runner-facing details clear and complete without visible placeholder copy."
     ],
     "paid_includes": [
-      "A polished Community/Hometown race site using StartLine's reusable template system.",
+      "A polished Community/Hometown race site tailored to the Humboldt Bay Marathon weekend.",
       "SEO-ready event metadata and mobile-first sections for courses, schedule, logistics, sponsors, volunteers, and FAQs.",
       "Registration-click tracking for the official Runzy handoff without changing the registration provider.",
       "No guaranteed growth claims \u2014 just clearer runner information, stronger local proof, and measurable calls to action."
