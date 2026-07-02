@@ -88,6 +88,11 @@ const performancePrivateInternalChromePatterns = [
   /\bPerformance\/BQ-coded StartLine\b/i
 ];
 const communityPrivateVisibleHygienePatterns = [
+  /\bRunner-friendly race hub\b/i,
+  /\bEasier runner decisions\b/i,
+  /\bReady for race-day questions\b/i,
+  /\bHelpful race details\b/i,
+  /\bImportant note\b/i,
   /\bWhat this page improves\b/i,
   /\bWhat this page includes\b/i,
   /\bRace details highlighted on this page\b/i,
@@ -157,9 +162,9 @@ for (const file of files) {
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);
   }
-  const requiresPrivateValueNarrative = template !== 'performance';
-  if (requiresPrivateValueNarrative && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)) errors.push(`Private ${template} mockup is missing the StartLine value narrative.`);
-  if (!requiresPrivateValueNarrative && html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)) errors.push('Private performance mockup must not render the internal value narrative.');
+  const suppressesPrivateValueNarrative = ['community', 'performance'].includes(template);
+  if (!suppressesPrivateValueNarrative && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)) errors.push(`Private ${template} mockup is missing the StartLine value narrative.`);
+  if (suppressesPrivateValueNarrative && html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)) errors.push(`Private ${template} mockup must not render the internal value narrative.`);
   const checklistItemCount = (html.match(/data-checklist-item-id=/g) || []).length;
   if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.runnerDecisionChecklist)) errors.push(`Private ${template} mockup is missing the runner decision checklist.`);
   if (checklistItemCount < 3) errors.push(`Runner decision checklist renders ${checklistItemCount} items; expected at least 3.`);
@@ -348,7 +353,7 @@ function validatePrivateRobotsMetadata(html, errors) {
 }
 
 function validatePrivateValueSectionOrder(html, template, errors) {
-  const orderedMarkers = template === 'performance'
+  const orderedMarkers = ['community', 'performance'].includes(template)
     ? [
       PRIVATE_VALUE_CONTRACT_MARKERS.runnerDecisionChecklist,
       PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard,
@@ -360,14 +365,14 @@ function validatePrivateValueSectionOrder(html, template, errors) {
       PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard,
       PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel
     ];
-  const expectedFlow = template === 'performance'
+  const expectedFlow = ['community', 'performance'].includes(template)
     ? 'runner info hub → registration decision card → measurement-ready panel'
     : 'value narrative → runner checklist → registration decision card → measurement-ready panel';
   const positions = orderedMarkers.map((marker) => html.indexOf(marker));
   if (positions.some((position) => position < 0)) return;
   for (let index = 1; index < positions.length; index += 1) {
     if (positions[index] <= positions[index - 1]) {
-      errors.push(`Private value sections must preserve the ${template === 'performance' ? 'runner-first ' : ''}decision flow: ${expectedFlow}.`);
+      errors.push(`Private value sections must preserve the ${['community', 'performance'].includes(template) ? 'runner-first ' : ''}decision flow: ${expectedFlow}.`);
       return;
     }
   }
@@ -405,7 +410,7 @@ function asArray(value) {
 }
 
 function requiredPrivateMarkersForTemplate(template, suppressRegistrationDecision) {
-  const markers = template === 'performance'
+  const markers = ['community', 'performance'].includes(template)
     ? PRIVATE_VALUE_REQUIRED_MARKERS.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)
     : [...PRIVATE_VALUE_REQUIRED_MARKERS];
   return suppressRegistrationDecision

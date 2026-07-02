@@ -89,8 +89,8 @@ async function renderedOutputChecks() {
   const hasMeasurementReadyPanel = html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel);
   const publicPrivateMarkerLeaks = config.private_mockup?.route ? [] : privateValuePublicMarkerLeaks(html);
   const hasRegisterClickListener = html.includes("document.addEventListener('click', function (event)");
-  const isPerformancePrivateMockup = Boolean(config.private_mockup?.route && config.identity?.template === 'performance');
-  const requiredPrivateMarkers = isPerformancePrivateMockup
+  const suppressesPrivateValueNarrative = Boolean(config.private_mockup?.route && ['community', 'performance'].includes(config.identity?.template));
+  const requiredPrivateMarkers = suppressesPrivateValueNarrative
     ? PRIVATE_VALUE_REQUIRED_MARKERS.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)
     : PRIVATE_VALUE_REQUIRED_MARKERS;
   const effectiveRequiredPrivateMarkers = suppressRegistrationDecision
@@ -146,13 +146,13 @@ async function renderedOutputChecks() {
     {
       id: config.private_mockup?.route ? 'private-value-narrative-present' : 'public-value-narrative-absent',
       label: config.private_mockup?.route
-        ? (isPerformancePrivateMockup ? 'Private performance mockup does not render the internal value narrative' : 'Private mockup page renders the StartLine value narrative')
+        ? (suppressesPrivateValueNarrative ? `Private ${config.identity?.template} mockup does not render the internal value narrative` : 'Private mockup page renders the StartLine value narrative')
         : 'Public preview page does not render the private value narrative',
-      pass: config.private_mockup?.route ? (isPerformancePrivateMockup ? !hasPrivateValueNarrative : hasPrivateValueNarrative) : !hasPrivateValueNarrative,
+      pass: config.private_mockup?.route ? (suppressesPrivateValueNarrative ? !hasPrivateValueNarrative : hasPrivateValueNarrative) : !hasPrivateValueNarrative,
       details: config.private_mockup?.route
-        ? (isPerformancePrivateMockup && hasPrivateValueNarrative
-            ? ['Performance private rendered HTML must not contain data-private-value-narrative.']
-            : (!isPerformancePrivateMockup && !hasPrivateValueNarrative ? ['Missing data-private-value-narrative in private rendered HTML.'] : []))
+        ? (suppressesPrivateValueNarrative && hasPrivateValueNarrative
+            ? [`${config.identity?.template} private rendered HTML must not contain data-private-value-narrative.`]
+            : (!suppressesPrivateValueNarrative && !hasPrivateValueNarrative ? ['Missing data-private-value-narrative in private rendered HTML.'] : []))
         : (!config.private_mockup?.route && hasPrivateValueNarrative ? ['Public rendered HTML contains data-private-value-narrative.'] : [])
     },
     {
