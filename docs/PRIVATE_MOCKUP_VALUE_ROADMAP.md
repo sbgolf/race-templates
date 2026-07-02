@@ -239,11 +239,14 @@ Registration-click value:
 
 ### Sprint 8 — Audit → mockup → offer workflow
 
+Status: process gate documented in `docs/PRIVATE_MOCKUP_LOOP.md`; email/handoff copy may still be expanded later.
+
 Goal: connect private mockups to the sales motion.
 
 Deliverables:
 
 - Respectful current-site audit framing.
+- A generation gate covering minimum fit, opportunity scoring, thresholds, template readiness, source material, lead-source defaults, and weekly Tier A warm outbound capacity.
 - Private mockup handoff page or email copy.
 - “What we improved” summary.
 - Recommended package language.

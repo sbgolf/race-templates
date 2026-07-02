@@ -5,4 +5,5 @@
 3. Prefer reusable template/schema capabilities over customer-specific forks.
 4. Keep customer repos thin: config, assets, deployment wiring only.
 5. Treat the private mockup value contract as foundational for every current and future template: explain what StartLine improved, why it reduces runner friction, how official registration CTAs are easier to find, which trust signals are surfaced, what paid builds include, and how registration-click tracking makes the outcome measurable.
-6. Escalate before removing or materially changing PRD/template-specified features.
+6. Apply the private-mockup generation gate before outreach: proactively build concepts for qualified leads, but send a lightweight audit first for low-score cold prospects, weak source material, or unready template fits.
+7. Escalate before removing or materially changing PRD/template-specified features.

@@ -1,6 +1,107 @@
 # Private Race Mockup Loop
 
-Use this loop when an audit record needs a Steve-only StartLine concept URL generated from a public race director website.
+Use this loop when an audit record needs a Steve-only StartLine concept URL generated from a public race director website. Private mockups are proactive sales assets for qualified leads; they are not the default first touch for every cold contact. Apply the gate below before generating, emailing, or asking Steve to review a private mockup.
+
+## StartLine private-mockup generation gate
+
+Generate and include a private mockup when the lead is qualified enough that a visual concept will improve the conversation. If the gate fails, send a lightweight audit first: 2-4 respectful screenshots/observations, one clear registration-path recommendation, and an invitation to review a private concept if useful.
+
+### 1. Minimum fit gate
+
+All items must be true before scoring:
+
+- The race fits the StartLine model: an organized running event or race series with a public-facing runner information/registration need.
+- There is an existing registration path StartLine can preserve and deep-link to, such as RunSignup, Race Roster, Active, Haku, a race-owned registration page, or another official platform.
+- Public sources provide enough facts to create a credible concept without inventing details.
+- No disqualifier is present:
+  - inactive/cancelled race or no credible future date/season
+  - past event with no next edition signal
+  - current site is already excellent and StartLine has no obvious registration-path, mobile, speed, SEO, or trust-signal improvement angle
+  - outside the StartLine model, such as a non-race directory-only property, ticketed non-running event, or unrelated local business
+  - requires unsupported custom functionality as the sales hook, such as complex account systems, merchandise checkout, team fundraising, custom timing integrations, live results, or membership portals
+
+If any minimum-fit item fails, do not generate a private mockup. Send an audit/note only, or ask Steve whether the lead should be handled as a custom opportunity.
+
+### 2. Opportunity score (0-20)
+
+Score only after the minimum fit gate passes.
+
+- ICP fit (0-5):
+  - 0-1: weak/non-core race, tiny or unclear event, poor model fit
+  - 2-3: plausible local/community race or small series
+  - 4-5: strong StartLine ICP, repeat event, race director likely values registration flow and credibility
+- Website improvement opportunity (0-5):
+  - 0-1: already strong, modern, mobile-friendly, obvious registration path
+  - 2-3: some friction, dated content, weak trust signals, or registration path takes effort to find
+  - 4-5: high-friction site, poor mobile experience, scattered race details, weak CTA hierarchy, or missing SEO/trust basics
+- Commercial potential (0-4):
+  - 0-1: very small budget signal or one-off low-value event
+  - 2-3: standard race/site opportunity, sponsor/community value, repeat annual event
+  - 4: high-value race, series, multiple events, destination/BQ/commercial signals, or likely upsell path
+- Timing urgency (0-3):
+  - 0: too far out/unclear timing or event already passed
+  - 1: registration/site update timing is relevant but not urgent
+  - 2: registration is open or season planning is active
+  - 3: launch/registration/race date timing makes a clearer site immediately useful
+- Relationship/warmth (0-3):
+  - 0: pure cold contact with no connection or engagement
+  - 1: light engagement, known name, prior touch, or strong public signal
+  - 2: warm reply, inbound audit request, BMQR context, referral path, or known director
+  - 3: Steve relationship, referral, active conversation, or explicit interest
+
+### 3. Decision thresholds
+
+- 16-20: proactively generate the private mockup if template and source checks pass.
+- 12-15: generate if the template fit is strong and source material is sufficient; otherwise send a lightweight audit first and ask for details/assets.
+- 10-11: generate only for warm leads, BMQR Tier A targets, Steve-requested targets, or clear referrals; otherwise send audit only.
+- Under 10: do not generate by default. Send a lightweight audit or keep the lead in research/nurture.
+- Any score with insufficient source material: do not force a weak mockup. Send an audit plus a short request for missing details/assets.
+
+This means qualified leads do not need to ask for a mockup before we create one, but low-fit cold leads should not consume mockup production time.
+
+### 4. Template readiness check
+
+Before generation, confirm the matching template is ready enough for the lead. A bad mockup hurts more than no mockup.
+
+- Choose the closest archetype: Community/Hometown for most local multi-distance races, Destination Major for scenic/premium destination races, Performance/BQ-coded for BQ/PR/competitive races, or another Steve-approved archetype when available.
+- The selected template must support the private value contract for that archetype: noindex route, source-backed facts, registration CTAs, runner decision content, trust signals when available, measurement-ready language, no guaranteed-growth claims, and no public-preview leakage.
+- If the obvious archetype is not implemented or would make the race look generic/incorrect, do not generate yet. Send an audit and note the template gap internally.
+
+### 5. Source material check
+
+A private mockup needs enough source-backed content to feel credible. Minimum material:
+
+- race name
+- event date or credible season/year signal
+- city/state or location
+- distances or event formats
+- official registration URL/platform
+- current site and/or official registration page
+- enough runner decision information to structure the page, such as start area, course/highlights, pricing, schedule, packet pickup, aid, awards, charity, organizer, or policies
+- image/logo source, or an acceptable realistic stock/AI direction when public images are unavailable and Steve is comfortable with that framing
+
+If these are missing, send a lightweight audit and ask for the missing details/assets instead of publishing a thin concept.
+
+### 6. Lead-source defaults
+
+- Inbound audit request: default to generating a private mockup when the minimum fit, source, and template checks pass. If source material is thin, reply with the audit plus a concise request for missing details/assets.
+- BMQR Tier A target: generate for the best targets when the score is 10+ and the template/source checks pass, especially if Performance/BQ or Destination Major fit is strong. Keep throughput disciplined.
+- Cold outbound: do not generate on the first touch by default. Send 2-4 strong screenshots/observations first. Generate after engagement, or immediately only for high-value Tier A targets that clear the threshold and have excellent source material.
+- Referral or known director: generate when source material is sufficient and the score is 10+; if details are missing, ask the referrer/director for assets before creating a weak mockup.
+
+For Tier A warm outbound, cap proactive mockup production at 3-5 mockups per week unless Steve explicitly changes capacity. Prioritize the highest opportunity scores, strongest template fits, and best-timed registration windows.
+
+### 7. Email/handoff framing
+
+When sending a generated private mockup, include:
+
+- a short respectful audit summary, not a takedown of the current site
+- 2-4 screenshots or callouts that show the registration-path/content improvements
+- the private `noindex` URL, never a localhost URL
+- concept framing: “a private StartLine concept based on public race info,” with final details confirmed before launch
+- clear next step for Steve/prospect, such as “want me to turn this into a production-ready StartLine build?”
+
+Avoid guarantees and disparaging language. Do not promise registration growth, conversion lift, SEO rankings, revenue, or completed-registration measurement. Frame value around clearer runner information, easier official-registration click-through, source-backed trust, mobile/SEO readiness, and measurement-ready outbound registration intent.
 
 ## Generate a private mockup
 
