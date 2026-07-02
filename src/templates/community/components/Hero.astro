@@ -12,6 +12,8 @@ const heroEyebrow = [editionLabel, race.event?.location].filter(Boolean).join(' 
 const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];
 const heroImage = race.identity?.hero_image?.src || race.private_mockup?.assets?.[0]?.src;
 const heroImageAlt = race.identity?.hero_image?.alt || `Race day image for ${race.identity?.name}`;
+const heroTitle = race.identity?.name || race.identity?.tagline || 'Community race weekend';
+const heroSubtitle = race.identity?.tagline && race.identity.tagline !== heroTitle ? race.identity.tagline : null;
 const hasRunnerChecklist = Boolean(isPrivateMockup && (race.runner_decision_checklist?.items || []).length);
 const secondaryCtaLabel = hasRunnerChecklist ? 'Review key race details' : 'See the Course';
 const secondaryCtaTarget = hasRunnerChecklist ? 'runner-checklist' : 'course';
@@ -19,9 +21,10 @@ const secondaryCtaTarget = hasRunnerChecklist ? 'runner-checklist' : 'course';
 
 <section class="hero" id="top">
   <div class="hero-inner">
-    <div class="reveal">
+    <div class="hero-copy reveal">
       <div class="hero-eyebrow">{heroEyebrow}</div>
-      <h1>{race.identity?.tagline || race.identity?.name}</h1>
+      <h1>{heroTitle}</h1>
+      {heroSubtitle ? <p class="hero-tagline">{heroSubtitle}</p> : null}
       <div class="hero-date">{displayDate}</div>
       <p class="lead">{race.seo?.meta_description}</p>
       {(race.distances || []).length > 1 ? (

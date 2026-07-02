@@ -18,24 +18,26 @@ import Footer from "./Footer.astro";
 const { race } = Astro.props;
 const isPrivateMockup = Boolean(race.private_mockup);
 ---
-<Nav race={race} />
-<main id="main-content">
-  <Hero race={race} />
-  {!isPrivateMockup && <StatBar race={race} />}
-  <CoursePicker race={race} />
-  <Schedule race={race} />
-  <Story race={race} />
-  <Gallery race={race} />
-  <Volunteer race={race} />
-  {isPrivateMockup && <RunnerDecisionChecklist race={race} />}
-  {isPrivateMockup && <RegistrationDecisionCard race={race} />}
-  {isPrivateMockup && <MeasurementReadyPanel race={race} />}
-  <Entry race={race} />
-  <Sponsors race={race} />
-  <FAQ race={race} />
-  <Finale race={race} />
-</main>
-<Footer race={race} />
+<div class="community-template">
+  <Nav race={race} />
+  <main id="main-content">
+    <Hero race={race} />
+    {!isPrivateMockup && <StatBar race={race} />}
+    <CoursePicker race={race} />
+    <Schedule race={race} />
+    <Story race={race} />
+    <Gallery race={race} />
+    <Volunteer race={race} />
+    {isPrivateMockup && <RunnerDecisionChecklist race={race} />}
+    {isPrivateMockup && <RegistrationDecisionCard race={race} />}
+    {isPrivateMockup && <MeasurementReadyPanel race={race} />}
+    <Entry race={race} />
+    <Sponsors race={race} />
+    <FAQ race={race} />
+    <Finale race={race} />
+  </main>
+  <Footer race={race} />
+</div>
 
 <script is:inline>
   function scrollToId(id){const target=document.getElementById(id);if(target)target.scrollIntoView({behavior:'smooth'});closeMenu();}
