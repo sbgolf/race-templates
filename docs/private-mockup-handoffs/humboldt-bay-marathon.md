@@ -12,11 +12,11 @@ Internal-only handoff package for Steve review. Do not add this copy to the runn
 
 ## Mockup URL handoff
 
-Steve review URL: https://startline-mockups.netlify.app/private/mockups/44c6e4f218aa7860b1f453bc03aa452f/
+Steve review URL: https://mockups.startlinesites.com/private/mockups/44c6e4f218aa7860b1f453bc03aa452f/
 
 Notes:
 
-- This is the verified production Netlify private URL, not a local preview URL.
+- This is the verified branded production private URL, not a local preview URL.
 - The route is tokenized and emits `noindex,nofollow,noarchive,nosnippet` robots directives.
 - Keep this link internal unless Steve explicitly approves including it in an owner/race-director message.
 
@@ -46,9 +46,10 @@ Steve
 
 ## Evidence and verification pointers
 
-- Production private URL smoke from prior verification: HTTP 200 at `https://startline-mockups.netlify.app/private/mockups/44c6e4f218aa7860b1f453bc03aa452f/`.
-- Private route has `noindex,nofollow` robots directives.
-- Prior rendered smoke confirmed source-backed facts present: Humboldt Bay Marathon, Sara Starr, Ghirardelli Associates / Title Sponsor, Timing Support / Redwood Coast Mountain Bike Association.
-- Prior rendered smoke confirmed blocked internal/provenance terms absent from the production private page.
+- Branded production private URL smoke: HTTP 200 at `https://mockups.startlinesites.com/private/mockups/44c6e4f218aa7860b1f453bc03aa452f/`.
+- Private route has `noindex,nofollow,noarchive,nosnippet` robots directives.
+- Current rendered smoke confirmed source-backed facts present: Humboldt Bay Marathon, Sara Starr, Ghirardelli Associates / Title Sponsor, Timing Support / Redwood Coast Mountain Bike Association.
+- Current rendered smoke confirmed blocked internal/provenance terms absent from the production private page.
+- Browser image QA confirmed all 7 rendered images decode after scrolling the production private page.
 - Public Community preview was verified separately as HTTP 200 with no private markers.
 - This handoff package lives under `docs/private-mockup-handoffs/` and is not imported by the Astro private mockup route.
