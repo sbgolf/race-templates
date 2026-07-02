@@ -3,7 +3,12 @@ const { race } = Astro.props;
 const volunteer = race.volunteer;
 const volunteerUrl = volunteer?.signup_url;
 const volunteerItems = volunteer?.items || volunteer?.benefits || [];
-const shouldRender = Boolean(volunteer?.description || volunteerUrl || volunteerItems.length || volunteer?.photo?.src);
+const visibleGallerySources = new Set([
+  ...(race.private_mockup?.assets || []),
+  ...(race.gallery || race.gallery_images || [])
+].filter((asset) => asset?.src).slice(0, 9).map((asset) => asset.src));
+const volunteerPhoto = volunteer?.photo?.src && !visibleGallerySources.has(volunteer.photo.src) ? volunteer.photo : null;
+const shouldRender = Boolean(volunteer?.description || volunteerUrl || volunteerItems.length || volunteerPhoto?.src);
 ---
 
 {shouldRender ? (
@@ -17,10 +22,10 @@ const shouldRender = Boolean(volunteer?.description || volunteerUrl || volunteer
         {volunteerItems.length ? <ul class="vol-list">{volunteerItems.map((item) => <li>{item}</li>)}</ul> : null}
         {volunteerUrl ? <a class="btn btn-accent" href={volunteerUrl} target="_blank" rel="noopener">{volunteer?.cta_label || 'Volunteer with us →'}</a> : null}
       </div>
-      {volunteer?.photo?.src ? (
+      {volunteerPhoto?.src ? (
       <div class="reveal">
         <div class="vol-photo">
-          <div class="ph-img mockup-photo-fill"><img src={volunteer.photo.src} alt={volunteer.photo.alt || `Volunteer image for ${race.identity?.name}`} loading="lazy" decoding="async" /></div>
+          <div class="ph-img mockup-photo-fill"><img src={volunteerPhoto.src} alt={volunteerPhoto.alt || `Volunteer image for ${race.identity?.name}`} loading="lazy" decoding="async" /></div>
         </div>
       </div>
       ) : null}

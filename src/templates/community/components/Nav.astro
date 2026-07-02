@@ -26,5 +26,5 @@ const hasVolunteer = Boolean(race.volunteer?.description || race.volunteer?.sign
     {hasVolunteer ? <a href="#volunteer">Volunteer</a> : null}
     <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...registerButtonAttrs}>{registerLabel} →</a>
   </div>
-  <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="burger" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
