@@ -34,21 +34,21 @@ const factGroups = [
 <section class="race-value" id="race-value" data-private-value-narrative>
   <div class="wrap race-value-wrap">
     <div class="race-value-hero reveal">
-      <div class="kicker">Race website preview</div>
+      <div class="kicker">Runner-friendly race hub</div>
       <h2>{headline}</h2>
       <p>{intro}</p>
     </div>
 
     <div class="race-value-grid stagger">
       <article class="race-value-card race-value-card-primary">
-        <span class="race-value-label">What this page improves</span>
+        <span class="race-value-label">Easier runner decisions</span>
         <ul>
           {improved.map((item) => <li>{item}</li>)}
         </ul>
       </article>
 
       <article class="race-value-card">
-        <span class="race-value-label">What this page includes</span>
+        <span class="race-value-label">Ready for race-day questions</span>
         <ul>
           {paidIncludes.map((item) => <li>{item}</li>)}
         </ul>
@@ -57,7 +57,7 @@ const factGroups = [
 
     {factGroups.length ? (
       <div class="race-value-facts reveal">
-        <span class="race-value-label">Race details highlighted on this page</span>
+        <span class="race-value-label">Helpful race details</span>
         <div class="race-fact-grid">
           {factGroups.map((group) => (
             <article class="race-fact-card">
@@ -70,9 +70,9 @@ const factGroups = [
     ) : null}
 
     <aside class="race-value-note reveal">
-      <strong>Page scope</strong>
+      <strong>Important note</strong>
       <p>
-        This preview focuses on a clearer registration path, easier runner decision-making, and measurement-ready calls to action without promising registration outcomes.
+        This page focuses on a clearer registration path, easier runner decision-making, and measurement-ready calls to action without promising registration outcomes.
       </p>
     </aside>
   </div>

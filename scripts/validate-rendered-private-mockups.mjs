@@ -87,6 +87,13 @@ const performancePrivateInternalChromePatterns = [
   /\bWhat a paid (?:StartLine|race-site) build includes\b/i,
   /\bPerformance\/BQ-coded StartLine\b/i
 ];
+const communityPrivateVisibleHygienePatterns = [
+  /\bWhat this page improves\b/i,
+  /\bWhat this page includes\b/i,
+  /\bRace details highlighted on this page\b/i,
+  /\bPage scope\b/i,
+  /\bRace website preview\b/i
+];
 const punctuationArtifactPatterns = [
   /(?:…|\.\.\.)\s*$/,
   /\b20\d{2}\s+\./,
@@ -141,6 +148,11 @@ for (const file of files) {
       if (pattern.test(performanceCopySurface)) errors.push(`Rendered performance private mockup contains internal/sales/debug copy "${pattern.source}".`);
     }
     validatePerformanceCertificationNumberRepetition(text, config, errors);
+  }
+  if (template === 'community') {
+    for (const pattern of communityPrivateVisibleHygienePatterns) {
+      if (pattern.test(text)) errors.push(`Rendered community private mockup exposes internal/value/tooling label "${pattern.source}".`);
+    }
   }
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);

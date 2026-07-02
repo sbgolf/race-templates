@@ -36,7 +36,7 @@ function privateDisplayRace(race) {
 
   if (!copy.seo) copy.seo = {};
   copy.seo.meta_description = cleanPrivateDisplayCopy(
-    copy.seo.meta_description || `${copy.identity?.name || 'Race'} website preview for runners.`
+    copy.seo.meta_description || `${copy.identity?.name || 'Race'} race website for runners.`
   );
   return cleanPrivateDisplayStrings(copy);
 }
@@ -54,8 +54,8 @@ function cleanPrivateDisplayStrings(value) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{race.seo?.meta_title || `${race.identity?.name} — Race Website Preview`}</title>
-  <meta name="description" content={race.seo?.meta_description || 'A race website preview for runners.'}>
+  <title>{race.seo?.meta_title || `${race.identity?.name} — Race Website`}</title>
+  <meta name="description" content={race.seo?.meta_description || 'A race website for runners.'}>
   <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
   <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
   <Fragment set:html={ga4Snippet(race)} />
