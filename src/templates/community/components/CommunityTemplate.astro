@@ -8,7 +8,6 @@ import Story from "./Story.astro";
 import Gallery from "./Gallery.astro";
 import Volunteer from "./Volunteer.astro";
 import RunnerDecisionChecklist from "./RunnerDecisionChecklist.astro";
-import TrustSignalsBand from "./TrustSignalsBand.astro";
 import MeasurementReadyPanel from "./MeasurementReadyPanel.astro";
 import RegistrationDecisionCard from "./RegistrationDecisionCard.astro";
 import Entry from "./Entry.astro";
@@ -29,7 +28,6 @@ const isPrivateMockup = Boolean(race.private_mockup);
   <Gallery race={race} />
   <Volunteer race={race} />
   {isPrivateMockup && <RunnerDecisionChecklist race={race} />}
-  {isPrivateMockup && <TrustSignalsBand race={race} />}
   {isPrivateMockup && <RegistrationDecisionCard race={race} />}
   {isPrivateMockup && <MeasurementReadyPanel race={race} />}
   <Entry race={race} />
