@@ -1,0 +1,494 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Humboldt Bay Marathon",
+    "tagline": "Marathon, Half Marathon, and 5K along the Humboldt Bay waterfront.",
+    "edition": "11th running",
+    "hero_image": {
+      "src": "/mockups/44c6e4f218aa7860b1f453bc03aa452f/logo-0fca6c520e.jpg",
+      "alt": "Humboldt Bay Marathon 2026 race artwork",
+      "source": "https://humboldtbaymarathon.com/images/HBM2026logo.jpg"
+    },
+    "colors": {
+      "primary": "#1E6B73",
+      "secondary": "#D98A36",
+      "success": "#2F8A4D",
+      "ink": "#1E2A2F"
+    }
+  },
+  "event": {
+    "date": "2026-08-09",
+    "location": "Eureka, California",
+    "venue": "Madaket Plaza, 1st and C Streets in Eureka",
+    "timezone": "America/Los_Angeles"
+  },
+  "organization": {
+    "name": "Humboldt Bay Marathon"
+  },
+  "distances": [
+    {
+      "id": "marathon",
+      "name": "Marathon",
+      "distance": "26.2 mi",
+      "featured": true,
+      "start_time": "7:00 AM",
+      "aid_stations": "Approximately every 2 miles",
+      "profile": "Almost entirely flat waterfront course \u00b7 Eureka Waterfront Trail \u00b7 Humboldt Bay Trail \u00b7 Klopp Lake loop",
+      "certification": "USATF Certified Distance, CA25026TEB",
+      "map_label": "Marathon course",
+      "highlights": [
+        "Starts and finishes at Madaket Plaza in Eureka",
+        "USATF Certified Distance, Certification Number CA25026TEB",
+        "Rare scenic tour along Eureka's Waterfront Trails, the Bay Trail, and a loop around Klopp Lake in Arcata Marsh",
+        "6 hour time limit listed on the marathon page, with official timing ending at 1:00 PM"
+      ],
+      "cutoff": "6 hours",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://humboldtbaymarathon.com/marathon.html",
+        "method": "Marathon page summary lists distance, certification, date, start time, location, time limit, aid stations, parking, gear drop, finisher medals, shirt, and packet pickup."
+      }
+    },
+    {
+      "id": "half-marathon",
+      "name": "Half Marathon",
+      "distance": "13.1 mi",
+      "start_time": "8:00 AM",
+      "aid_stations": "Approximately every 2 miles",
+      "profile": "Almost entirely flat waterfront out-and-back \u00b7 Eureka Waterfront Trail \u00b7 Humboldt Bay Trail",
+      "certification": "USATF Certified Distance, CA25023TEB",
+      "map_label": "Half Marathon course",
+      "highlights": [
+        "Uses the Eureka Waterfront Trail and the Humboldt Bay Trail",
+        "USATF Certified Distance, Certificate number CA25023TEB",
+        "Maximum elevation approximately 20 feet above sea level",
+        "5 hour time limit listed on the half marathon page; race information also welcomes walkers"
+      ],
+      "cutoff": "5 hours",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://humboldtbaymarathon.com/half_marathon.html",
+        "method": "Half Marathon page summary lists distance, certification, date, start time, location, time limit, aid stations, parking, gear drop, finisher medals, shirt, and packet pickup."
+      }
+    },
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5 km",
+      "start_time": "8:20 AM",
+      "profile": "Eureka Waterfront Trail out-and-back with Boardwalk finish",
+      "map_label": "5K course",
+      "highlights": [
+        "Starts just east of Madaket Plaza on the same start line as the half marathon",
+        "Heads east on 1st Street and the Eureka Waterfront Trail to a turnaround near Target",
+        "Returns to F Street and continues on the Eureka Boardwalk to the Madaket Plaza finish"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://humboldtbaymarathon.com/race_information.html",
+        "method": "Race Information page lists the 5K course and Event Schedule lists the 8:20 AM start."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runzy.com/event-registration/race/the-11th-humboldt-bay-marathon-half-marathon-and-5k/",
+    "platform": "runzy",
+    "cta_label": "Register on Runzy",
+    "intro": "Registration is open for the 2026 Marathon, Half Marathon, and 5K on the official Runzy page."
+  },
+  "startline_value": {
+    "headline": "A community race weekend concept built around the runner's decision path.",
+    "intro": "This private preview keeps Humboldt Bay's nonprofit, trails, artwork, sponsor, volunteer, and waterfront-course story together while making the most important runner facts easier to scan before the Runzy handoff.",
+    "improved": [
+      "Grouped the Marathon, Half Marathon, and 5K into one distance picker with start times, course profiles, certifications, and cutoffs close to registration CTAs.",
+      "Turned scattered schedule, packet pickup, parking, gear-drop, aid-station, medal, shirt, sponsor, and volunteer details into scan-friendly sections.",
+      "Preserved the official Runzy registration destination for every primary CTA and added measurement-ready placements for outbound registration intent.",
+      "Used only public race-site facts and assets, with uncertainties retained in internal metadata instead of visible placeholder copy."
+    ],
+    "paid_includes": [
+      "A polished Community/Hometown race site using StartLine's reusable template system.",
+      "SEO-ready event metadata and mobile-first sections for courses, schedule, logistics, sponsors, volunteers, and FAQs.",
+      "Registration-click tracking for the official Runzy handoff without changing the registration provider.",
+      "No guaranteed growth claims \u2014 just clearer runner information, stronger local proof, and measurable calls to action."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "Run the Humboldt Bay waterfront",
+    "paragraphs": [
+      "Humboldt Bay Marathon is a nonprofit affiliate of the Road Runners Club of America with goals to promote fitness, outdoor recreation, and trails in Humboldt County. The 2026 race is listed for August 9, 2026 as the event's 11th running.",
+      "The race weekend includes a Marathon, Half Marathon, and 5K. All races start and end at Madaket Plaza at 1st and C Streets in Eureka, with routes built around the Eureka Waterfront Trail, Humboldt Bay Trail, Eureka Boardwalk, Arcata Marsh, and a Klopp Lake loop for the marathon.",
+      "The current site emphasizes a community feel: active registration, public results and photos, volunteer opportunities for adults and students, local sponsors, custom medal and shirt artwork by local artist and runner Sara Starr, and local nonprofit Redwood Coast Mountain Bike Association timing support."
+    ],
+    "image": {
+      "src": "/mockups/44c6e4f218aa7860b1f453bc03aa452f/course-map-4653f30fab.jpg",
+      "alt": "Humboldt Bay Marathon course map",
+      "source": "https://humboldtbaymarathon.com/images/BigMAp2025.jpg"
+    },
+    "links": [
+      {
+        "label": "Official race website",
+        "url": "https://humboldtbaymarathon.com/"
+      },
+      {
+        "label": "Course map",
+        "url": "https://humboldtbaymarathon.com/images/BigMAp2025.jpg"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Saturday, August 8, 2026",
+      "name": "Packet pickup",
+      "time": "4:00 PM \u2013 7:00 PM",
+      "location": "Madaket Plaza, 1st and C Streets in Eureka",
+      "applies_to_distances": [
+        "marathon",
+        "half-marathon",
+        "5k"
+      ]
+    },
+    {
+      "day": "Sunday, August 9, 2026",
+      "name": "Full Marathon start",
+      "time": "7:00 AM",
+      "location": "Madaket Plaza, 1st and C Streets in Eureka",
+      "applies_to_distances": [
+        "marathon"
+      ]
+    },
+    {
+      "day": "Sunday, August 9, 2026",
+      "name": "Half Marathon start",
+      "time": "8:00 AM",
+      "location": "Madaket Plaza, 1st and C Streets in Eureka",
+      "applies_to_distances": [
+        "half-marathon"
+      ]
+    },
+    {
+      "day": "Sunday, August 9, 2026",
+      "name": "5K start",
+      "time": "8:20 AM",
+      "location": "Madaket Plaza, 1st and C Streets in Eureka",
+      "applies_to_distances": [
+        "5k"
+      ]
+    },
+    {
+      "day": "Sunday, August 9, 2026",
+      "name": "Official timing ends",
+      "time": "1:00 PM",
+      "location": "Madaket Plaza finish area",
+      "applies_to_distances": [
+        "marathon",
+        "half-marathon",
+        "5k"
+      ]
+    }
+  ],
+  "volunteer": {
+    "headline": "Help keep Humboldt Bay moving on race weekend",
+    "description": "The race lists volunteer roles for course monitoring and traffic control, start and finish areas, and pre- and post-race setup and tear down. Adult volunteers and student volunteers are both highlighted on the current site.",
+    "items": [
+      "Course monitors help runners and drivers know where to go and assist with traffic signs and barricades.",
+      "Start and finish volunteers support food tables, parking information, and runner flow around Madaket Plaza.",
+      "Students can receive a certificate acknowledging volunteer hours for this nonprofit event."
+    ],
+    "signup_url": "https://humboldtbaymarathon.com/volunteer_information.html",
+    "cta_label": "See volunteer information",
+    "photo": {
+      "src": "/mockups/44c6e4f218aa7860b1f453bc03aa452f/runners-db5bee0e4f.jpg",
+      "alt": "Humboldt Bay Marathon runners near the waterfront",
+      "source": "https://humboldtbaymarathon.com/images/content_1.png"
+    }
+  },
+  "sponsors": [
+    "Ghirardelli Associates",
+    "Fin-N-Feather",
+    "Ramone's Bakery & Cafe",
+    "Eureka Main Street",
+    "Suzie",
+    "Ciotti Yard Maintenance",
+    "Pivotal Connections Physical Therapy",
+    "Maya Conrad Realtor",
+    "Humboldt Creamery",
+    "Maverick & Haywood",
+    "Adventure's Edge",
+    "Redwood Coast Mountain Bike Association"
+  ],
+  "faqs": [
+    {
+      "question": "Where do the races start and finish?",
+      "answer": "All races start and end at Madaket Plaza, 1st and C Streets in Eureka."
+    },
+    {
+      "question": "What are the listed start times?",
+      "answer": "The current event schedule lists the Full Marathon at 7:00 AM, Half Marathon at 8:00 AM, and 5K at 8:20 AM on Sunday, August 9, 2026."
+    },
+    {
+      "question": "Is packet pickup available before race morning?",
+      "answer": "Yes. The current schedule lists Saturday packet pickup from 4:00 PM to 7:00 PM at Madaket Plaza. The distance pages also say packet pickup is available Saturday afternoon and Sunday morning, with details on the Event Schedule page."
+    },
+    {
+      "question": "What parking information is listed?",
+      "answer": "The marathon and half marathon pages list a gravel lot at 1st and D, plus free and unrestricted street parking and city lots on Sundays."
+    },
+    {
+      "question": "Is gear drop listed?",
+      "answer": "Yes. The marathon and half marathon pages say bags will be checked for runners at the start/finish area and waiting when runners finish."
+    },
+    {
+      "question": "What aid-station support is listed?",
+      "answer": "The race information and distance pages list aid stations approximately every 2 miles, with ample bathrooms noted for the marathon route."
+    },
+    {
+      "question": "Do finishers receive medals and shirts?",
+      "answer": "The distance pages say finisher medals are given to participants finishing within the allotted time. The site also highlights custom artwork on medals and shirts, and the half marathon page says registrations received at least two weeks before race date include a race shirt with this year's custom artwork."
+    },
+    {
+      "question": "Who provides timing support?",
+      "answer": "The sponsors section says Redwood Coast Mountain Bike Association provides timing with gun start, chip finish, and at least one split for each distance."
+    }
+  ],
+  "runner_decision_checklist": {
+    "headline": "Before you register",
+    "intro": "Key public race-site details to review before continuing to official Runzy registration.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Sunday, August 9, 2026",
+        "source_path": "event.date",
+        "source_url": "https://humboldtbaymarathon.com/"
+      },
+      {
+        "id": "location",
+        "label": "Start / finish",
+        "value": "Madaket Plaza, 1st and C Streets in Eureka",
+        "source_path": "event.venue",
+        "source_url": "https://humboldtbaymarathon.com/event_schedule.html"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "Marathon, Half Marathon, and 5K",
+        "source_path": "distances",
+        "source_url": "https://humboldtbaymarathon.com/"
+      },
+      {
+        "id": "start-time",
+        "label": "Start times",
+        "value": "7:00 AM Marathon \u00b7 8:00 AM Half Marathon \u00b7 8:20 AM 5K",
+        "source_path": "schedule",
+        "source_url": "https://humboldtbaymarathon.com/event_schedule.html"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Saturday 4:00 PM \u2013 7:00 PM at Madaket Plaza",
+        "source_path": "schedule[0]",
+        "source_url": "https://humboldtbaymarathon.com/event_schedule.html"
+      },
+      {
+        "id": "course",
+        "label": "Course and logistics",
+        "value": "Flat waterfront routes with parking at 1st and D and bag check at the start/finish area",
+        "source_path": "distances[].profile",
+        "source_url": "https://humboldtbaymarathon.com/marathon.html"
+      },
+      {
+        "id": "aid-stations",
+        "label": "Aid stations",
+        "value": "Approximately every 2 miles",
+        "source_path": "distances[].aid_stations",
+        "source_url": "https://humboldtbaymarathon.com/race_information.html"
+      },
+      {
+        "id": "time-limit",
+        "label": "Official timing",
+        "value": "Official timing ends at 1:00 PM; marathon and half marathon pages list 6 hour and 5 hour limits",
+        "source_path": "schedule[4]",
+        "source_url": "https://humboldtbaymarathon.com/event_schedule.html"
+      },
+      {
+        "id": "swag",
+        "label": "Medals and shirts",
+        "value": "Finisher medals for participants finishing within the allotted time; custom artwork on medals and shirts",
+        "source_path": "faqs.swag",
+        "source_url": "https://humboldtbaymarathon.com/half_marathon.html"
+      },
+      {
+        "id": "awards",
+        "label": "Timing support",
+        "value": "Gun start, chip finish, with at least one split for each distance",
+        "source_path": "sponsors",
+        "source_url": "https://humboldtbaymarathon.com/sponsors.html"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Humboldt Bay Marathon \u2014 Race Website Preview",
+    "meta_description": "Run the 2026 Humboldt Bay Marathon, Half Marathon, or 5K from Madaket Plaza in Eureka on flat waterfront routes along Humboldt Bay."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://humboldtbaymarathon.com/",
+    "captured_at": "2026-07-01T00:00:00.000Z",
+    "access_token": "44c6e4f218aa7860b1f453bc03aa452f",
+    "race_slug": "humboldt-bay-marathon",
+    "route": "/private/mockups/44c6e4f218aa7860b1f453bc03aa452f/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/44c6e4f218aa7860b1f453bc03aa452f/logo-0fca6c520e.jpg",
+        "alt": "Humboldt Bay Marathon 2026 race artwork",
+        "caption": "2026 race artwork",
+        "source": "https://humboldtbaymarathon.com/images/HBM2026logo.jpg"
+      },
+      {
+        "src": "/mockups/44c6e4f218aa7860b1f453bc03aa452f/course-map-4653f30fab.jpg",
+        "alt": "Humboldt Bay Marathon course map",
+        "caption": "Course map",
+        "source": "https://humboldtbaymarathon.com/images/BigMAp2025.jpg"
+      },
+      {
+        "src": "/mockups/44c6e4f218aa7860b1f453bc03aa452f/artwork-1-1926448063.png",
+        "alt": "Custom Humboldt Bay Marathon medal and shirt artwork",
+        "caption": "Custom medal and shirt artwork",
+        "source": "https://humboldtbaymarathon.com/images/artwork_1.png"
+      },
+      {
+        "src": "/mockups/44c6e4f218aa7860b1f453bc03aa452f/runners-db5bee0e4f.jpg",
+        "alt": "Runners at Humboldt Bay Marathon",
+        "caption": "Race-day community",
+        "source": "https://humboldtbaymarathon.com/images/content_1.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://humboldtbaymarathon.com/",
+      "captured_at": "2026-07-01T00:00:00.000Z",
+      "source_confirmed_sections": [
+        "course",
+        "schedule",
+        "story",
+        "volunteer",
+        "sponsors",
+        "faqs",
+        "runner_decision_checklist"
+      ],
+      "source_confirmed_distance_ids": [
+        "marathon",
+        "half-marathon",
+        "5k"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "homepage title and hero text",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "homepage text: August 9, 2026",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "event schedule and distance pages list Madaket Plaza, Eureka",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "homepage Register links and observed Runzy registration page",
+          "confidence": "high"
+        },
+        {
+          "path": "distances",
+          "source": "homepage, race information page, marathon page, half marathon page, event schedule",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "event_schedule.html",
+          "confidence": "high"
+        },
+        {
+          "path": "volunteer",
+          "source": "volunteer_information.html",
+          "confidence": "high"
+        },
+        {
+          "path": "sponsors",
+          "source": "sponsors.html",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs",
+          "source": "race_information.html, marathon.html, half_marathon.html, sponsors.html",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "runner checklist item derived from public race pages",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "runner checklist item derived from public race pages",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "runner checklist item derived from public race pages",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "runner checklist item derived from public race pages",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "runner checklist item derived from public race pages",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "runner checklist item derived from public race pages",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.aid-stations",
+          "source": "runner checklist item derived from public race pages",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.time-limit",
+          "source": "runner checklist item derived from public race pages",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "runner checklist item derived from public race pages",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.awards",
+          "source": "runner checklist item derived from public race pages",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Only current public-site details are rendered. Conflicting or outdated public-page details are kept out of visible UI where possible.",
+      "items": [
+        "The event schedule page says official timing ends at 1:00 PM and the marathon page lists a 6 hour time limit; the race information page also references a maximum of 7 hours for marathon finishers. The visible FAQ uses the distance-page/current schedule phrasing and this conflict is retained here for review.",
+        "The marathon shirt cutoff text appears to reference 7/22/2025 on a 2026 page, so the mockup avoids rendering that exact date and uses only the source-backed custom-shirt/artwork language.",
+        "Detailed 5K time limit, shirt cutoff, and age-group specifics were not found on a dedicated current 5K page and are intentionally omitted."
+      ]
+    },
+    "notes": "Hand-authored from public Humboldt Bay Marathon pages after generator could not infer location from the homepage alone. Sample race data was not used as a base."
+  }
+}
