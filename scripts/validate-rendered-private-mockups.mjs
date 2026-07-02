@@ -7,6 +7,7 @@ import { PRIVATE_VALUE_CONTRACT_MARKERS, PRIVATE_VALUE_REQUIRED_MARKERS, PRIVATE
 const root = process.cwd();
 const privateDir = path.resolve(root, 'dist/private/mockups');
 const publicPreviewDir = path.resolve(root, 'dist/preview');
+const communityCssPath = path.resolve(root, 'src/templates/community/styles/community.css');
 const rawVisibleUrlPattern = /\b(?:https?:\/\/|www\.|[a-z0-9-]+\.(?:com|org|net|io|gov|edu)\b)/i;
 const requiredPrivateRobotsDirectives = ['noindex', 'nofollow', 'noarchive', 'nosnippet'];
 const visiblePlaceholderPatterns = [
@@ -223,6 +224,7 @@ for (const file of files) {
 
   const incorrectlyTracked = anchors.filter((anchor) => anchor.attrs['data-analytics-event'] === 'register_click' && anchor.attrs.href !== registrationUrl);
   incorrectlyTracked.forEach((anchor) => errors.push(`Non-registration anchor is tracked as register_click: ${anchor.attrs.href || '(missing href)'}.`));
+  if (template === 'community') await validateCommunityAuditGuards(html, anchors, errors);
 
   const relative = redactPrivateTokens(path.relative(root, file));
   if (errors.length) {
@@ -407,6 +409,37 @@ function certificationNumbersForConfig(config) {
     ...asArray(config?.runner_decision_checklist?.items).map((item) => item?.value)
   ];
   return [...new Set(candidates.flatMap((value) => String(value || '').match(/\b[A-Z]{2}\d{5}[A-Z]{2}\b/g) || []))];
+}
+
+async function validateCommunityAuditGuards(html, anchors, errors) {
+  const communityCss = await readFile(communityCssPath, 'utf8');
+  const detailLabelRule = cssRuleForSelector(communityCss, '.detail-row .l');
+  if (!detailLabelRule) {
+    errors.push('Community CSS is missing the .detail-row .l distance-detail label rule.');
+  } else {
+    if (!/flex\s*:\s*0\s+0\s+clamp\(/i.test(detailLabelRule) && !/(?:width|flex-basis)\s*:\s*(?:clamp\(|min\()/i.test(detailLabelRule)) {
+      errors.push('Community distance-detail labels need a responsive reserved label column so uppercase labels do not wrap mid-word.');
+    }
+    if (!/overflow-wrap\s*:\s*normal/i.test(detailLabelRule) || !/word-break\s*:\s*normal/i.test(detailLabelRule)) {
+      errors.push('Community distance-detail label rule must prevent mid-word wrapping with overflow-wrap: normal and word-break: normal.');
+    }
+  }
+
+  const entryRegistrationAnchors = anchors.filter((anchor) => anchor.attrs['data-analytics-placement']?.startsWith('entry-distance-'));
+  entryRegistrationAnchors.forEach((anchor) => {
+    const className = anchor.attrs.class || '';
+    if (!/\bbtn-accent\b/.test(className) || /\bbtn-dark\b/.test(className)) {
+      errors.push(`Community entry CTA "${anchor.attrs['data-analytics-placement']}" must use the terracotta primary CTA treatment (btn-accent only).`);
+    }
+  });
+  if (html.includes('entry-distance-') && !entryRegistrationAnchors.length) {
+    errors.push('Community rendered entry section has entry-distance placements but no parseable entry registration anchors.');
+  }
+}
+
+function cssRuleForSelector(css, selector) {
+  const pattern = new RegExp(`${escapeRegExp(selector)}\\s*\\{([^}]*)\\}`, 'i');
+  return String(css || '').match(pattern)?.[1] || '';
 }
 
 function countOccurrences(text, needle) {
