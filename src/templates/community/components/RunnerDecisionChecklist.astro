@@ -40,8 +40,8 @@ const registerFooterAttrs = showFooterCta ? registerClickAttributes(race, 'runne
 
 <style>
   .runner-checklist {
-    background: linear-gradient(135deg, rgba(255, 248, 239, 0.95), rgba(247, 239, 226, 0.8));
-    border-block: 1px solid rgba(65, 45, 32, 0.12);
+    background: linear-gradient(135deg, var(--community-parchment, #f6ead4), var(--community-cream, #fff8ec));
+    border-block: 1px solid var(--line, rgba(65, 45, 32, 0.12));
     overflow-x: clip;
   }
 
@@ -68,7 +68,7 @@ const registerFooterAttrs = showFooterCta ? registerClickAttributes(race, 'runne
   }
 
   .check-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--community-surface, rgba(255, 255, 255, 0.9));
     border: 1px solid rgba(65, 45, 32, 0.12);
     border-radius: 1rem;
     box-shadow: 0 14px 34px rgba(39, 29, 19, 0.08);

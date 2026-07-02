@@ -28,7 +28,7 @@ const shouldRender = race.private_mockup?.show_registration_decision === true;
 
 <style>
   .registration-decision {
-    background: #fffaf1;
+    background: var(--community-cream, #fff8ec);
     overflow-x: clip;
   }
 
@@ -38,10 +38,11 @@ const shouldRender = race.private_mockup?.show_registration_decision === true;
 
   .decision-card {
     align-items: center;
-    background: linear-gradient(135deg, rgba(36, 27, 21, 0.96), rgba(78, 50, 32, 0.94));
+    background: linear-gradient(135deg, var(--community-parchment, #f6ead4), var(--community-harvest, #ead9ba));
+    border: 1px solid var(--line, rgba(47, 39, 29, 0.14));
     border-radius: clamp(1.1rem, 3vw, 1.7rem);
     box-shadow: 0 24px 60px rgba(39, 29, 19, 0.18);
-    color: #fff8ee;
+    color: var(--ink, #2f271d);
     display: grid;
     gap: 1.25rem;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -51,11 +52,11 @@ const shouldRender = race.private_mockup?.show_registration_decision === true;
 
   .decision-card .kicker,
   .decision-card .lead {
-    color: rgba(255, 248, 238, 0.78);
+    color: rgba(47, 39, 29, 0.72);
   }
 
   .decision-card .sec-title {
-    color: #fff8ee;
+    color: var(--forest, #294735);
     margin-bottom: 0.55rem;
   }
 
