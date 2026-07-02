@@ -12,6 +12,7 @@ const hasGallery = Boolean((race.private_mockup?.assets || []).length || (race.g
 const hasVolunteer = Boolean(race.volunteer?.description || race.volunteer?.signup_url || (race.volunteer?.items || race.volunteer?.benefits || []).length || race.volunteer?.photo?.src);
 const hasSponsors = (race.sponsors || []).length > 0;
 const hasFaq = (race.faq || race.faqs || []).length > 0;
+const isPrivateMockup = Boolean(race.private_mockup);
 const raceLinks = [
   hasCourse ? { href: '#course', label: 'Course' } : null,
   hasSchedule ? { href: '#schedule', label: 'Schedule' } : null,
@@ -44,6 +45,6 @@ const aboutLinks = [
   </div>
   <div class="foot-bottom">
     <span>© {year} {race.identity?.name}{race.organization?.name ? ` · A program of ${race.organization.name}` : ''}</span>
-    <span>Powered by StartLine Sites</span>
+    {!isPrivateMockup ? <span>Powered by StartLine Sites</span> : null}
   </div>
 </footer>

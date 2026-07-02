@@ -31,24 +31,24 @@ const factGroups = [
 ---
 
 {isPrivateMockup ? (
-<section class="startline-value" id="startline-value" data-private-value-narrative>
-  <div class="wrap startline-value-wrap">
-    <div class="startline-value-hero reveal">
-      <div class="kicker">StartLine website concept</div>
+<section class="race-value" id="race-value" data-private-value-narrative>
+  <div class="wrap race-value-wrap">
+    <div class="race-value-hero reveal">
+      <div class="kicker">Race website preview</div>
       <h2>{headline}</h2>
       <p>{intro}</p>
     </div>
 
-    <div class="startline-value-grid stagger">
-      <article class="startline-value-card startline-value-card-primary">
-        <span class="startline-value-label">What StartLine improved</span>
+    <div class="race-value-grid stagger">
+      <article class="race-value-card race-value-card-primary">
+        <span class="race-value-label">What this page improves</span>
         <ul>
           {improved.map((item) => <li>{item}</li>)}
         </ul>
       </article>
 
-      <article class="startline-value-card">
-        <span class="startline-value-label">What a paid StartLine build includes</span>
+      <article class="race-value-card">
+        <span class="race-value-label">What this page includes</span>
         <ul>
           {paidIncludes.map((item) => <li>{item}</li>)}
         </ul>
@@ -56,11 +56,11 @@ const factGroups = [
     </div>
 
     {factGroups.length ? (
-      <div class="startline-value-facts reveal">
-        <span class="startline-value-label">Race details highlighted in this concept</span>
-        <div class="startline-fact-grid">
+      <div class="race-value-facts reveal">
+        <span class="race-value-label">Race details highlighted on this page</span>
+        <div class="race-fact-grid">
           {factGroups.map((group) => (
-            <article class="startline-fact-card">
+            <article class="race-fact-card">
               <h3>{group.title}</h3>
               <ul>{group.items.map((item) => <li>{item}</li>)}</ul>
             </article>
@@ -69,8 +69,8 @@ const factGroups = [
       </div>
     ) : null}
 
-    <aside class="startline-source-note reveal">
-      <strong>Concept scope</strong>
+    <aside class="race-value-note reveal">
+      <strong>Page scope</strong>
       <p>
         This preview focuses on a clearer registration path, easier runner decision-making, and measurement-ready calls to action without promising registration outcomes.
       </p>

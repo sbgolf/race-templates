@@ -3,7 +3,7 @@ import CommunityPreview from "../../../templates/community/pages/CommunityPrevie
 import DestinationMajorPreview from "../../../templates/destination-major/pages/DestinationMajorPreview.astro";
 import PerformancePreview from "../../../templates/performance/pages/PerformancePreview.astro";
 import { ga4Snippet, registerClickListenerScript } from "../../../shared/analytics/register-click.mjs";
-import { templateForPrivateMockup } from "../../../shared/private-mockup-value.mjs";
+import { cleanPrivateDisplayCopy, templateForPrivateMockup } from "../../../shared/private-mockup-value.mjs";
 import { sportsEventJsonLdScript } from "../../../shared/schema/sports-event-jsonld.mjs";
 
 export function getStaticPaths() {
@@ -23,10 +23,31 @@ export function getStaticPaths() {
   });
 }
 
-const { race } = Astro.props;
+const { race: rawRace } = Astro.props;
+const race = privateDisplayRace(rawRace);
 const template = templateForPrivateMockup(race);
 const isDestinationMajor = template === 'destination-major';
 const isPerformance = template === 'performance';
+
+function privateDisplayRace(race) {
+  const copy = typeof structuredClone === 'function'
+    ? structuredClone(race)
+    : JSON.parse(JSON.stringify(race));
+
+  if (!copy.seo) copy.seo = {};
+  copy.seo.meta_description = cleanPrivateDisplayCopy(
+    copy.seo.meta_description || `${copy.identity?.name || 'Race'} website preview for runners.`
+  );
+  return cleanPrivateDisplayStrings(copy);
+}
+
+function cleanPrivateDisplayStrings(value) {
+  if (Array.isArray(value)) return value.map(cleanPrivateDisplayStrings);
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([key, entry]) => [key, cleanPrivateDisplayStrings(entry)]));
+  }
+  return typeof value === 'string' ? cleanPrivateDisplayCopy(value) : value;
+}
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +55,7 @@ const isPerformance = template === 'performance';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{race.seo?.meta_title || `${race.identity?.name} — Race Website Preview`}</title>
-  <meta name="description" content={race.seo?.meta_description || 'A StartLine race website preview for runners.'}>
+  <meta name="description" content={race.seo?.meta_description || 'A race website preview for runners.'}>
   <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
   <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
   <Fragment set:html={ga4Snippet(race)} />

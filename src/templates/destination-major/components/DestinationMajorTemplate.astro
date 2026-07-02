@@ -11,11 +11,11 @@ const registrationLabel = race.registration?.cta_label || 'Register now';
 const platformLabel = registrationPlatformLabel(race.registration?.platform);
 const privateValue = privateValueNarrativeForRace(race, {
   headline: 'A premium race story with the registration path pulled into focus.',
-  intro: 'This concept keeps the cinematic destination race language while making runner decisions, trust signals, and registration clicks easier to see.',
+  intro: 'This preview keeps the cinematic destination race language while making runner decisions, trust signals, and registration clicks easier to see.',
   improved: [
     'Clear race details sit before registration decisions.',
     'Registration calls-to-action use distinct measurement-ready placements.',
-    'Private-only proof modules stay out of the public destination preview.'
+    'Preview proof modules stay out of the public destination preview.'
   ]
 });
 const registrationDecisionCopy = registrationDecisionCopyForRace(race, {
@@ -25,7 +25,7 @@ const registrationDecisionCopy = registrationDecisionCopyForRace(race, {
 });
 const measurementCopy = measurementReadyCopyForRace(race, {
   headline: 'Every registration click has a clean placement.',
-  intro: 'StartLine prepares registration click intent and platform metadata without claiming completed registration outcomes.'
+  intro: 'This page prepares registration click intent and platform metadata without claiming completed registration outcomes.'
 });
 const registerAttrs = (placement) => registerClickAttributes(race, placement);
 const checklistItems = Array.isArray(race.runner_decision_checklist?.items) ? race.runner_decision_checklist.items : [];
@@ -121,7 +121,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
   <div class="haze"></div>
 
   <div class="hero-inner">
-    <span class="eyebrow">{isPrivateMockup ? 'Private race preview · destination major' : 'Abbott-track candidate · Pacific Northwest'}</span>
+    <span class="eyebrow">{isPrivateMockup ? 'Race website preview · destination major' : 'Abbott-track candidate · Pacific Northwest'}</span>
     <h1>{raceName}<span class="thin">{raceTagline}</span></h1>
     <div class="hero-meta">
       <span><span class="dot">●</span> {raceDateLabel}</span>
@@ -539,7 +539,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
 <section class="finale">
   <div class="wrap">
     <h2>{isPrivateMockup ? 'Ready to review the official entry path?' : 'Your fastest'}{!isPrivateMockup && <><br/>marathon awaits.</>}</h2>
-    <p>{isPrivateMockup ? 'Continue from this private concept to the official registration provider.' : 'Join the list for ballot reminders, training plans, and first access to the 2026 start line.'}</p>
+    <p>{isPrivateMockup ? 'Continue to the official registration provider.' : 'Join the list for ballot reminders, training plans, and first access to the 2026 start line.'}</p>
     <div class="signup">
       <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('finale-primary')}>Register for {raceName}</a>
       <button class="btn btn-ghost" onclick="scrollToId('entry')">Compare entry options</button>
@@ -560,8 +560,8 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
     {!isPrivateMockup && <div><h2 class="foot-title">Connect</h2><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>}
   </div>
   <div class="foot-bottom">
-    <span>© 2026 {raceName}. {isPrivateMockup ? 'Private race preview.' : 'A demo concept site.'}</span>
-    <span>{isPrivateMockup ? 'Built for private review.' : 'Built as a proof of concept.'}</span>
+    <span>© 2026 {raceName}. {isPrivateMockup ? 'Race website preview.' : 'A demo concept site.'}</span>
+    <span>{isPrivateMockup ? 'Race information for review.' : 'Built as a proof of concept.'}</span>
   </div>
 </footer>
 
