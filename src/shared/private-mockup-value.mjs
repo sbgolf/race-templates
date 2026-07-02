@@ -80,9 +80,9 @@ export function measurementReadyCopyForRace(race = {}, defaults = {}) {
     platform,
     kicker: defaults.kicker || 'Measurement-ready handoff',
     headline: defaults.headline || 'Registration intent can be separated from platform results.',
-    intro: defaults.intro || 'Each outbound official-registration CTA includes a `register_click` event with its placement, platform, and link destination.',
+    intro: defaults.intro || 'Each registration button can show which call-to-action a runner used and which official registration page they were sent to.',
     reportLabel: defaults.reportLabel || 'What this page can report',
-    reportBody: defaults.reportBody || `Outbound handoff intent: which registration CTA a visitor used, where it appeared, and that it sent them toward ${platform}.`,
+    reportBody: defaults.reportBody || `Which registration button a visitor used, where it appeared on the page, and that it sent them toward ${platform}.`,
     separateLabel: defaults.separateLabel || 'What remains separate',
     separateBody: defaults.separateBody || 'Completed registrations, payment, and confirmation happen inside the official registration platform unless that platform later provides reporting or an approved integration.'
   };

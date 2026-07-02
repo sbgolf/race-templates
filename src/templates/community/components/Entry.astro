@@ -16,7 +16,7 @@ const distanceMeta = (distance) => [distance?.distance, distance?.start_time].fi
     <div class="entry-grid stagger">
       {race.distances?.map((distance) => {
         const attrs = registerClickAttributes(race, `entry-distance-${distance.id}`);
-        return <div class:list={["etier", { flagship: distance.featured }]}>
+        return <div class="etier" data-entry-distance-card>
           <h3>{distance.name}</h3>
           {distanceMeta(distance) ? <div class="sub">{distanceMeta(distance)}</div> : null}
           {distance.price ? <div class="pp">{distance.price}<small>/ entry</small></div> : null}

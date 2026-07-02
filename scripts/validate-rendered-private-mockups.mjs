@@ -165,6 +165,9 @@ for (const file of files) {
     for (const pattern of communityPrivateVisibleHygienePatterns) {
       if (pattern.test(text)) errors.push(`Rendered community private mockup exposes internal/value/tooling label "${pattern.source}".`);
     }
+    if (/\bregister_click\b/i.test(text)) {
+      errors.push('Rendered community private mockup exposes technical register_click event language in visible copy.');
+    }
     if (html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand) || /Runner trust signals/i.test(text)) {
       errors.push('Rendered community private mockup must consolidate trust facts into Course / Before You Register instead of a standalone Runner Trust Signals band.');
     }
@@ -426,6 +429,16 @@ async function validateCommunityAuditGuards(html, anchors, errors) {
   }
 
   const entryRegistrationAnchors = anchors.filter((anchor) => anchor.attrs['data-analytics-placement']?.startsWith('entry-distance-'));
+  const entryDistanceCards = [...String(html || '').matchAll(/<div\b([^>]*)data-entry-distance-card\b[^>]*>/gi)].map((match) => parseAttrs(match[1] || ''));
+  entryDistanceCards.forEach((attrs) => {
+    const className = attrs.class || '';
+    if (/\b(?:flagship|featured)\b/.test(className)) {
+      errors.push('Community final entry distance cards must use equal visual weight; do not render featured/flagship card classes.');
+    }
+  });
+  if (/\.etier\.flagship\s*\{[^}]*background\s*:\s*var\(--forest\)/i.test(communityCss)) {
+    errors.push('Community final entry cards must not keep the dark-green flagship treatment in CSS.');
+  }
   entryRegistrationAnchors.forEach((anchor) => {
     const className = anchor.attrs.class || '';
     if (!/\bbtn-accent\b/.test(className) || /\bbtn-dark\b/.test(className)) {
@@ -435,6 +448,17 @@ async function validateCommunityAuditGuards(html, anchors, errors) {
   if (html.includes('entry-distance-') && !entryRegistrationAnchors.length) {
     errors.push('Community rendered entry section has entry-distance placements but no parseable entry registration anchors.');
   }
+  const galleryAndVolunteerImages = extractImages(html)
+    .filter((image) => /\bg-photo\b|\bvol-photo\b/i.test(image.contextClass || ''))
+    .map((image) => image.attrs.src)
+    .filter(Boolean);
+  const repeatedImages = [...new Set(galleryAndVolunteerImages.filter((src, index) => galleryAndVolunteerImages.indexOf(src) !== index))];
+  repeatedImages.forEach((src) => errors.push(`Community private mockup repeats gallery/volunteer image asset ${src}; swap or suppress duplicate section images.`));
+}
+
+function extractImages(html) {
+  return [...String(html || '').matchAll(/<div\b([^>]*)>\s*<img\b([^>]*)>/gi)]
+    .map((match) => ({ contextClass: parseAttrs(match[1] || '').class || '', attrs: parseAttrs(match[2] || '') }));
 }
 
 function cssRuleForSelector(css, selector) {
