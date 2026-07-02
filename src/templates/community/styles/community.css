@@ -455,6 +455,9 @@ display:grid;
 .sponsors{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .sponsors .wrap{padding-top:54px;padding-bottom:54px}
 .sp-lab{text-align:center;font-family:"Nunito";font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(42,31,24,.72);margin-bottom:34px;font-weight:700}
+.sp-tier-group{margin-top:30px;text-align:center}
+.sp-tier-group:first-of-type{margin-top:0}
+.sp-tier-label{display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px;padding:6px 12px;border:1px solid rgba(42,31,24,.16);border-radius:999px;background:rgba(255,255,255,.55);font-family:"Nunito";font-size:.68rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(42,31,24,.66)}
 .sp-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(28px,5vw,64px)}
 .sp-row span{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.1rem,2.2vw,1.55rem);color:rgba(42,31,24,.72);letter-spacing:-.01em;transition:color .25s}
 .sp-row span:hover{color:var(--ink)}

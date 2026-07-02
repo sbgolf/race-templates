@@ -4,6 +4,29 @@ The schema is the shared data contract for all customer race sites.
 
 Current top-level groups expected by templates include: `identity`, `event`, `distances`, `registration`, `qualifying`, `schedule`, `travel`, `proof`, `course`, `records`, `entry_tiers`, `sponsors`, `faqs`, `charity`, `seo`, `analytics`, `email_capture`, `volunteer`, and `contact`.
 
+## Sponsors
+
+`sponsors` may remain a simple array of sponsor names for flat displays:
+
+```json
+["Hartwell Bank", "Tory's Diner"]
+```
+
+When a public source or approved intake clearly supports hierarchy, entries may also be objects with reusable tier metadata:
+
+```json
+[
+  { "name": "Example Engineering", "tier": "Title Sponsor" },
+  { "name": "Local Timing Club", "tier": "Timing Support" }
+]
+```
+
+- `name` (required): visible sponsor name.
+- `tier` (optional): visible grouping label, such as `Title Sponsor`, `Sponsors`, or `Timing Support`. Only use tier labels backed by source material or approved customer intake.
+- `url` (optional): absolute sponsor URL for future renderers; current community sponsor display does not require links.
+
+Templates must continue supporting flat string arrays so existing sample configs do not need migration.
+
 ## Shared optional fields
 
 - `identity.hero_image` (optional): image object for hero art/photography. Template implementations may use a real image URL or a local placeholder object while awaiting customer assets.

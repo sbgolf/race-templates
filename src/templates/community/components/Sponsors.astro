@@ -1,15 +1,44 @@
 ---
 const { race } = Astro.props;
-const sponsors = (race.sponsors || []).filter(Boolean);
+function normalizeSponsor(sponsor) {
+  if (typeof sponsor === 'string') {
+    const name = sponsor.trim();
+    return name ? { name, tier: null } : null;
+  }
+  if (!sponsor || typeof sponsor !== 'object') return null;
+  const name = typeof sponsor.name === 'string' ? sponsor.name.trim() : '';
+  if (!name) return null;
+  const tier = typeof sponsor.tier === 'string' && sponsor.tier.trim() ? sponsor.tier.trim() : null;
+  return { name, tier };
+}
+
+const sponsors = (race.sponsors || []).map(normalizeSponsor).filter(Boolean);
+const hasExplicitTiers = sponsors.some((sponsor) => sponsor.tier);
+const tieredSponsors = sponsors.reduce((groups, sponsor) => {
+  const tier = sponsor.tier || 'Sponsors';
+  const existing = groups.find((group) => group.tier === tier);
+  if (existing) existing.sponsors.push(sponsor);
+  else groups.push({ tier, sponsors: [sponsor] });
+  return groups;
+}, []);
 ---
 
 {sponsors.length > 0 ? (
 <div id="sponsors" class="sponsors">
   <div class="wrap">
     <p class="sp-lab">Proudly Supported By</p>
-    <div class="sp-row">
-      {sponsors.map((sponsor) => <span>{sponsor}</span>)}
-    </div>
+    {hasExplicitTiers ? tieredSponsors.map((group) => (
+      <div class="sp-tier-group">
+        <div class="sp-tier-label">{group.tier}</div>
+        <div class="sp-row">
+          {group.sponsors.map((sponsor) => <span>{sponsor.name}</span>)}
+        </div>
+      </div>
+    )) : (
+      <div class="sp-row">
+        {sponsors.map((sponsor) => <span>{sponsor.name}</span>)}
+      </div>
+    )}
   </div>
 </div>
 ) : null}

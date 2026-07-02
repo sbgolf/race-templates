@@ -195,6 +195,27 @@ export function validateRaceConfig(config) {
     }
   }
 
+  if (config.sponsors !== undefined) {
+    if (!Array.isArray(config.sponsors)) {
+      add(errors, 'sponsors', 'Sponsors must be an array when provided.');
+    } else {
+      config.sponsors.forEach((sponsor, index) => {
+        const base = `sponsors[${index}]`;
+        if (typeof sponsor === 'string') {
+          if (!hasText(sponsor)) add(errors, base, 'Sponsor name must be non-empty.');
+          return;
+        }
+        if (!isPlainObject(sponsor)) {
+          add(errors, base, 'Sponsor must be a string or an object.');
+          return;
+        }
+        if (!hasText(sponsor.name)) add(errors, `${base}.name`, 'Sponsor object requires a non-empty name.');
+        if (sponsor.tier !== undefined && !hasText(sponsor.tier)) add(errors, `${base}.tier`, 'Sponsor tier must be non-empty when provided.');
+        if (sponsor.url !== undefined && (!hasText(sponsor.url) || !URL_PATTERN.test(sponsor.url))) add(errors, `${base}.url`, 'Sponsor URL must be absolute when provided.');
+      });
+    }
+  }
+
   return { ok: errors.length === 0, errors, warnings };
 }
 
