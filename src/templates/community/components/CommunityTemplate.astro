@@ -1,7 +1,6 @@
 ---
 import Nav from "./Nav.astro";
 import Hero from "./Hero.astro";
-import StartLineValue from "./StartLineValue.astro";
 import StatBar from "./StatBar.astro";
 import CoursePicker from "./CoursePicker.astro";
 import Schedule from "./Schedule.astro";
@@ -23,7 +22,6 @@ const isPrivateMockup = Boolean(race.private_mockup);
 <Nav race={race} />
 <main id="main-content">
   <Hero race={race} />
-  {isPrivateMockup && <StartLineValue race={race} />}
   {!isPrivateMockup && <StatBar race={race} />}
   <CoursePicker race={race} />
   <Schedule race={race} />

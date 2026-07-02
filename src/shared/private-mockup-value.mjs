@@ -38,6 +38,8 @@ const BASE_VALUE_COPY = Object.freeze({
 const PRIVATE_COPY_REPLACEMENTS = Object.freeze([
   [/StartLine Sites/gi, 'This race website'],
   [/StartLine/gi, 'this page'],
+  [/\brace website preview\b/gi, 'race website'],
+  [/\bwebsite preview\b/gi, 'website'],
   [/\bprivate\s+concept\b/gi, 'preview'],
   [/\bconcept\b/gi, 'preview']
 ]);
