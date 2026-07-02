@@ -6,8 +6,8 @@ const courseLabel = featuredDistance?.map_label || featuredDistance?.name || 'Co
 const courseLocation = race.event?.venue || race.event?.location || 'Start / finish';
 const isMultiDistance = distances.length > 1;
 const lead = isMultiDistance
-  ? 'Select an event distance to review the course details available for this concept.'
-  : 'Review the course details available for this concept.';
+  ? 'Select an event distance to review the available course details.'
+  : 'Review the available course details.';
 const detailRows = [
   ['Distance', featuredDistance?.distance, 'dDistance'],
   ['Elevation Gain', featuredDistance?.elevation_gain, 'dGain'],
