@@ -136,7 +136,9 @@
   .elev-dot{fill:var(--accent);stroke:#fff;stroke-width:2;opacity:0}
   .course-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
   .feat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px}
-  .feat .ic{font-size:1.4rem}
+  .destination-icon{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,rgba(255,91,46,.16),rgba(240,169,75,.22));color:var(--accent);box-shadow:inset 0 0 0 1px rgba(255,91,46,.22)}
+  .destination-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+  .feat .ic{margin-bottom:12px}
   .feat h3{font-size:1.05rem;margin:12px 0 8px;letter-spacing:0}
   .feat p{font-size:.94rem;color:rgba(11,14,19,.65);line-height:1.5}
 
@@ -207,7 +209,8 @@
   .travel-card-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:10px}
   .tcard h3{font-size:1.3rem;letter-spacing:0;margin-bottom:9px}
   .tcard p{font-size:.92rem;opacity:.82;line-height:1.5}
-  .tcard .ic{position:absolute;top:24px;right:24px;font-size:1.7rem;opacity:.85}
+  .tcard .ic{position:absolute;top:24px;right:24px;width:48px;height:48px;border-radius:16px;background:rgba(246,242,234,.1);color:var(--gold);box-shadow:inset 0 0 0 1px rgba(246,242,234,.18),0 16px 34px -24px rgba(0,0,0,.8);opacity:.92}
+  .tcard .ic svg{width:26px;height:26px}
   .tc1{background:linear-gradient(145deg,#1d4f42,#0c2a23)}
   .tc2{background:linear-gradient(145deg,#7a2d1f,#3a1610)}
   .tc3{background:linear-gradient(145deg,#243044,#11161f)}
