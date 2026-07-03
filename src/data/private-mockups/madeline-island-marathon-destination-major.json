@@ -70,7 +70,7 @@
       "Places the date, La Pointe location, Joni’s Beach start/finish, prices, field caps, and Race Roster path before the click-through decision.",
       "Surfaces ferry timing, packet pickup, course surface, aid frequency, and transfer/refund rules in a runner checklist.",
       "Frames Madeline Island as a travel weekend while preserving public race facts and avoiding performance claims beyond the published course certification.",
-      "Connects each major registration CTA to a distinct analytics placement for cleaner launch measurement."
+      "Connects each major registration link to a distinct page placement so outbound entry interest can be reviewed after launch."
     ],
     "paid_includes": [
       "Premium one-page Destination Major implementation for private review.",
