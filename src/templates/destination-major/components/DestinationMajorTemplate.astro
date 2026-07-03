@@ -58,18 +58,50 @@ const travelLinks = Array.isArray(travelLogistics.links)
   ? travelLogistics.links.filter((link) => link && hasText(link.label) && hasText(link.url))
   : [];
 const hasTravelLogistics = hasText(travelLogistics.intro) || travelItems.length > 0 || travelLinks.length > 0;
-const travelIconForItem = (item) => item.icon || ({
-  ferry: '⛴️',
-  shuttle: '🚌',
-  parking: '🅿️',
-  airport: '✈️',
-  lodging: '🏨',
-  camping: '🏕️',
-  arrival: '🗓️',
-  packet: '🎽',
-  start_finish: '📍',
-  links: '🔗'
-}[item.id] || '•');
+const destinationIconAliases = {
+  aid: 'water',
+  aid_support: 'water',
+  airport: 'air',
+  altitude: 'mountain',
+  arrival: 'calendar',
+  camping: 'tent',
+  coast: 'wave',
+  course: 'map',
+  course_profile: 'map',
+  descent: 'descent',
+  ferry: 'ferry',
+  finish: 'pin',
+  lodging: 'lodging',
+  map: 'map',
+  packet: 'bib',
+  parking: 'parking',
+  shuttle: 'shuttle',
+  start: 'pin',
+  start_finish: 'pin',
+  travel_links: 'link',
+  links: 'link'
+};
+const destinationIconSvg = {
+  air: '<svg viewBox="0 0 32 32" focusable="false"><path d="M5 18.5 27 7l-7.5 21-4.5-8.5-10-1Z"/><path d="M15 19.5 27 7"/></svg>',
+  bib: '<svg viewBox="0 0 32 32" focusable="false"><path d="M9 6h14l2 5v15H7V11l2-5Z"/><path d="M12 14h8M12 19h3M18 19h2"/><path d="M11 6v5M21 6v5"/></svg>',
+  calendar: '<svg viewBox="0 0 32 32" focusable="false"><path d="M8 8h16v17H8z"/><path d="M8 13h16M12 5v6M20 5v6"/><path d="M12 17h3M17 17h3M12 21h3"/></svg>',
+  descent: '<svg viewBox="0 0 32 32" focusable="false"><path d="M6 10h8l4 6 8 6"/><path d="M22 15v7h-7"/><path d="M5 24h22"/></svg>',
+  ferry: '<svg viewBox="0 0 32 32" focusable="false"><path d="M6 15h20l-3 7H9l-3-7Z"/><path d="M11 10h10v5H11z"/><path d="M6 25c3-2 5 2 8 0s5 2 8 0 4 1 5 0"/></svg>',
+  link: '<svg viewBox="0 0 32 32" focusable="false"><path d="M13.5 10.5 16 8a5 5 0 0 1 7 7l-3 3a5 5 0 0 1-7 0"/><path d="M18.5 21.5 16 24a5 5 0 0 1-7-7l3-3a5 5 0 0 1 7 0"/></svg>',
+  lodging: '<svg viewBox="0 0 32 32" focusable="false"><path d="M6 26V14l10-8 10 8v12"/><path d="M11 26v-8h10v8M13 14h6"/></svg>',
+  map: '<svg viewBox="0 0 32 32" focusable="false"><path d="M6 9v17l7-3 6 3 7-3V6l-7 3-6-3-7 3Z"/><path d="M13 6v17M19 9v17"/></svg>',
+  mountain: '<svg viewBox="0 0 32 32" focusable="false"><path d="M4 25 14 7l5 8 3-4 6 14H4Z"/><path d="M14 7 12 19l4-3 3 5"/></svg>',
+  neutral: '<svg viewBox="0 0 32 32" focusable="false"><path d="M6 22 14 8l4 7 3-4 5 11H6Z"/><path d="M7 25h18"/></svg>',
+  parking: '<svg viewBox="0 0 32 32" focusable="false"><path d="M10 26V6h8a6 6 0 0 1 0 12h-8"/><path d="M10 18h8"/></svg>',
+  pin: '<svg viewBox="0 0 32 32" focusable="false"><path d="M16 28s8-7.5 8-14a8 8 0 1 0-16 0c0 6.5 8 14 8 14Z"/><circle cx="16" cy="14" r="2.5"/></svg>',
+  shuttle: '<svg viewBox="0 0 32 32" focusable="false"><path d="M7 10h18v11H7z"/><path d="M10 21v3M22 21v3M10 14h12M11 10l2-4h6l2 4"/><circle cx="11" cy="18" r="1"/><circle cx="21" cy="18" r="1"/></svg>',
+  tent: '<svg viewBox="0 0 32 32" focusable="false"><path d="M4 25 16 7l12 18H4Z"/><path d="M16 7v18M16 25l5-8"/></svg>',
+  water: '<svg viewBox="0 0 32 32" focusable="false"><path d="M16 5s7 8 7 14a7 7 0 0 1-14 0c0-6 7-14 7-14Z"/><path d="M13 22c2 2 5 2 7-1"/></svg>',
+  wave: '<svg viewBox="0 0 32 32" focusable="false"><path d="M5 21c3-3 6 3 10 0s6-3 12-1"/><path d="M5 25c3-3 6 3 10 0s6-3 12-1"/><path d="M20 9c2 4 1 7-3 10"/></svg>'
+};
+const destinationIconKey = (value) => destinationIconAliases[value] || destinationIconAliases[String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, '_')] || 'neutral';
+const iconSvgForKey = (key) => destinationIconSvg[destinationIconKey(key)] || destinationIconSvg.neutral;
+const travelIconKeyForItem = (item) => destinationIconKey(item.icon || item.id);
 const formatDate = (value) => {
   if (!value) return 'Race day';
   const date = new Date(`${value}T12:00:00Z`);
@@ -91,14 +123,14 @@ const courseTitle = isPrivateMockup ? (race.story?.title || `${raceName} course`
 const courseLead = isPrivateMockup ? (race.story?.paragraphs?.join(' ') || sourceCourseFacts || raceTagline) : 'Point-to-point, paved end to end, and net downhill the whole way — a true PR-and-qualifier course with the scenery of a destination race. Hover the profile to read any point on the route.';
 const courseFeatureItems = isPrivateMockup
   ? [
-      primaryDistance.profile ? { icon: '🗺️', title: 'Course profile', text: primaryDistance.profile } : null,
-      primaryDistance.aid_stations ? { icon: '💧', title: 'Aid support', text: `${primaryDistance.aid_stations} aid stations listed` } : null,
-      race.event?.venue ? { icon: '📍', title: 'Start venue', text: race.event.venue } : null
+      primaryDistance.profile ? { iconKey: 'course_profile', title: 'Course profile', text: primaryDistance.profile } : null,
+      primaryDistance.aid_stations ? { iconKey: 'aid_support', title: 'Aid support', text: `${primaryDistance.aid_stations} aid stations listed` } : null,
+      race.event?.venue ? { iconKey: 'start_finish', title: 'Start venue', text: race.event.venue } : null
     ].filter(Boolean)
   : [
-      { icon: '⛰️', title: 'Start at altitude', text: 'Gun goes off at 1,180 ft in the Cascade foothills — crisp September air, sunrise over the ridgeline.' },
-      { icon: '📉', title: 'Gravity on your side', text: 'A steady, runnable descent through miles 4–18. No quad-shredding drops — graded for fast legal times.' },
-      { icon: '🌊', title: 'Finish at the Pacific', text: 'The final straight runs onto the boardwalk at Pacific City, the ocean in full view as you cross.' }
+      { iconKey: 'altitude', title: 'Start at altitude', text: 'Gun goes off at 1,180 ft in the Cascade foothills — crisp September air, sunrise over the ridgeline.' },
+      { iconKey: 'descent', title: 'Gravity on your side', text: 'A steady, runnable descent through miles 4–18. No quad-shredding drops — graded for fast legal times.' },
+      { iconKey: 'coast', title: 'Finish at the Pacific', text: 'The final straight runs onto the boardwalk at Pacific City, the ocean in full view as you cross.' }
     ];
 const assetLooksRenderable = (asset) => hasText(asset?.src) && !/\.(pdf|docx?|xlsx?|zip)(\?|#|$)/i.test(asset.src);
 const privateImageAssets = Array.isArray(race.private_mockup?.assets)
@@ -375,7 +407,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
     </div>}
 
     <div class="course-feats stagger" id="courseFeats">
-      {courseFeatureItems.map((feature) => <div class="feat"><div class="ic">{feature.icon}</div><h3>{feature.title}</h3><p>{feature.text}</p></div>)}
+      {courseFeatureItems.map((feature) => <div class="feat"><span class={`ic destination-icon destination-icon-${destinationIconKey(feature.iconKey)}`} aria-hidden="true" set:html={iconSvgForKey(feature.iconKey)} /><h3>{feature.title}</h3><p>{feature.text}</p></div>)}
     </div>
   </div>
 </section>
@@ -564,7 +596,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
     </div>
     {travelItems.length > 0 && <div class="travel-grid stagger" id="travelGrid">
       {travelItems.map((item, index) => <article class={`tcard tc${(index % 4) + 1}`} data-travel-item-id={item.id}>
-        <span class="ic">{travelIconForItem(item)}</span>
+        <span class={`ic destination-icon destination-icon-${travelIconKeyForItem(item)}`} aria-hidden="true" set:html={iconSvgForKey(travelIconKeyForItem(item))} />
         {item.label && <span class="travel-card-label">{item.label}</span>}
         <h3>{item.title || item.label}</h3>
         <p>{item.text}</p>
