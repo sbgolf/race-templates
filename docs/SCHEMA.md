@@ -2,7 +2,7 @@
 
 The schema is the shared data contract for all customer race sites.
 
-Current top-level groups expected by templates include: `identity`, `event`, `distances`, `registration`, `qualifying`, `schedule`, `travel`, `proof`, `course`, `records`, `entry_tiers`, `sponsors`, `faqs`, `charity`, `seo`, `analytics`, `email_capture`, `volunteer`, and `contact`.
+Current top-level groups expected by templates include: `identity`, `event`, `distances`, `registration`, `qualifying`, `schedule`, `travel`, `travel_logistics`, `proof`, `course`, `records`, `entry_tiers`, `sponsors`, `faqs`, `charity`, `seo`, `analytics`, `email_capture`, `volunteer`, and `contact`.
 
 ## Sponsors
 
@@ -30,6 +30,39 @@ Templates must continue supporting flat string arrays so existing sample configs
 ## Shared optional fields
 
 - `identity.hero_image` (optional): image object for hero art/photography. Template implementations may use a real image URL or a local placeholder object while awaiting customer assets.
+
+## Destination travel logistics
+
+`travel_logistics` is an optional top-level group for Destination Major travel-planning sections. It is designed for runner-facing logistics such as getting there, lodging, arrival timing, packet pickup, start/finish proximity, and official planning links.
+
+If `travel_logistics` is omitted or all usable fields are blank, Destination templates hide the section and any `#travel` navigation/footer links.
+
+```json
+{
+  "headline": "Getting There / Where to Stay",
+  "intro": "Plan the race weekend around ferry timing, lodging, and packet pickup.",
+  "items": [
+    {
+      "id": "ferry",
+      "label": "Getting there",
+      "title": "Take the Bayfield–La Pointe ferry",
+      "text": "Madeline Island is reached by ferry from Bayfield.",
+      "source_url": "https://www.example-race.com/race-info"
+    }
+  ],
+  "links_label": "Official planning links",
+  "links": [
+    { "label": "Ferry schedule", "url": "https://www.example.com/ferry" }
+  ]
+}
+```
+
+- `headline` (optional): visible section heading. Defaults to `Getting There / Where to Stay` when other travel content exists.
+- `intro` (optional): short runner-facing overview of the travel-planning decision.
+- `items[]` (optional): reusable travel cards. Each item requires `id`, `title`, and `text`; `label`, `icon`, `source_path`, and `source_url` are optional metadata. Source fields are for validation/provenance only and must not render in page body.
+- `links_label` (optional): visible label for the official links row.
+- `links[]` (optional): labeled absolute URLs for official travel resources. Each link requires `label` and `url`; source metadata may be included when useful for private mockups.
+- Use only source-backed or approved customer-intake facts for visible copy and official links.
 
 ## Volunteer group
 

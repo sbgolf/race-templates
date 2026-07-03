@@ -32,6 +32,27 @@ const primaryDistance = race.distances?.find((distance) => distance.featured) ||
 const entryTiers = (race.distances?.length ? race.distances : [primaryDistance]).filter(Boolean);
 const scheduleItems = Array.isArray(race.schedule) ? race.schedule : [];
 const faqItems = Array.isArray(race.faqs) ? race.faqs : [];
+const hasText = (value) => typeof value === 'string' && value.trim().length > 0;
+const travelLogistics = race.travel_logistics || {};
+const travelItems = Array.isArray(travelLogistics.items)
+  ? travelLogistics.items.filter((item) => item && (hasText(item.title) || hasText(item.label)) && hasText(item.text))
+  : [];
+const travelLinks = Array.isArray(travelLogistics.links)
+  ? travelLogistics.links.filter((link) => link && hasText(link.label) && hasText(link.url))
+  : [];
+const hasTravelLogistics = hasText(travelLogistics.intro) || travelItems.length > 0 || travelLinks.length > 0;
+const travelIconForItem = (item) => item.icon || ({
+  ferry: '⛴️',
+  shuttle: '🚌',
+  parking: '🅿️',
+  airport: '✈️',
+  lodging: '🏨',
+  camping: '🏕️',
+  arrival: '🗓️',
+  packet: '🎽',
+  start_finish: '📍',
+  links: '🔗'
+}[item.id] || '•');
 const formatDate = (value) => {
   if (!value) return 'Race day';
   const date = new Date(`${value}T12:00:00Z`);
@@ -77,7 +98,7 @@ const galleryLead = isPrivateMockup ? (race.story?.paragraphs?.[0] || raceTaglin
     {(!isPrivateMockup || hasCertification) && <a href="#qualify">{isPrivateMockup ? 'Course facts' : 'Qualify'}</a>}
     <a href="#entry">Entry</a>
     <a href="#weekend">Weekend</a>
-    {!isPrivateMockup && <a href="#travel">Travel</a>}
+    {hasTravelLogistics && <a href="#travel">Travel</a>}
     <a href="#faq">FAQ</a>
     <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('nav-button')}>{registrationLabel}</a>
   </div>
@@ -441,18 +462,29 @@ const galleryLead = isPrivateMockup ? (race.story?.paragraphs?.[0] || raceTaglin
 </section>
 
 <!-- TRAVEL -->
-{!isPrivateMockup && <section id="travel">
+{hasTravelLogistics && <section class="travel-logistics" id="travel">
   <div class="wrap">
-    <div class="reveal">
-      <div class="kicker">Plan Your Trip</div>
-      <h2 class="sec-title">Everything sorted before you toe the line.</h2>
+    <div class="travel-head reveal">
+      <div>
+        <div class="kicker">Plan Your Trip</div>
+        <h2 class="sec-title">{travelLogistics.headline || 'Getting There / Where to Stay'}</h2>
+      </div>
+      {hasText(travelLogistics.intro) && <p class="lead">{travelLogistics.intro}</p>}
     </div>
-    <div class="travel-grid stagger" id="travelGrid">
-      <div class="tcard tc1"><span class="ic">✈️</span><h3>Getting here</h3><p>Fly into PDX, 35 min from the start village. Free race shuttle from 12 host hotels.</p></div>
-      <div class="tcard tc2"><span class="ic">🏨</span><h3>Where to stay</h3><p>Discounted host-hotel blocks downtown and on the coast. Book early — they fill fast.</p></div>
-      <div class="tcard tc3"><span class="ic">📣</span><h3>Spectator guide</h3><p>Five cheer zones with live tracking, plus the can't-miss oceanfront finish straight.</p></div>
-      <div class="tcard tc4"><span class="ic">🌤️</span><h3>Race-day weather</h3><p>Average start 48°F, finish 61°F. Crisp, dry September mornings — ideal for fast times.</p></div>
-    </div>
+    {travelItems.length > 0 && <div class="travel-grid stagger" id="travelGrid">
+      {travelItems.map((item, index) => <article class={`tcard tc${(index % 4) + 1}`} data-travel-item-id={item.id}>
+        <span class="ic">{travelIconForItem(item)}</span>
+        {item.label && <span class="travel-card-label">{item.label}</span>}
+        <h3>{item.title || item.label}</h3>
+        <p>{item.text}</p>
+      </article>)}
+    </div>}
+    {travelLinks.length > 0 && <div class="travel-links reveal" aria-label="Useful travel links">
+      {hasText(travelLogistics.links_label) && <span>{travelLogistics.links_label}</span>}
+      <div>
+        {travelLinks.map((link) => <a href={link.url}>{link.label} →</a>)}
+      </div>
+    </div>}
   </div>
 </section>}
 
@@ -506,7 +538,7 @@ const galleryLead = isPrivateMockup ? (race.story?.paragraphs?.[0] || raceTaglin
       <p>{isPrivateMockup ? `${raceDateLabel}. ${raceLocation}.` : 'A point-to-point Boston qualifier from the Cascade foothills to the Pacific coast. September 20, 2026.'}</p>
     </div>
     <div><h2 class="foot-title">Race</h2><ul><li><a href="#course">Course</a></li>{(!isPrivateMockup || hasCertification) && <li><a href="#qualify">{isPrivateMockup ? 'Course facts' : 'Qualifying'}</a></li>}<li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
-    <div><h2 class="foot-title">Runners</h2><ul>{!isPrivateMockup && <li><a href="#travel">Travel</a></li>}<li><a href="#faq">FAQ</a></li>{!isPrivateMockup && <><li><a href="#">Results</a></li><li><a href="#">Volunteer</a></li></>}</ul></div>
+    <div><h2 class="foot-title">Runners</h2><ul>{hasTravelLogistics && <li><a href="#travel">Travel</a></li>}<li><a href="#faq">FAQ</a></li>{!isPrivateMockup && <><li><a href="#">Results</a></li><li><a href="#">Volunteer</a></li></>}</ul></div>
     {!isPrivateMockup && <div><h2 class="foot-title">Connect</h2><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>}
   </div>
   <div class="foot-bottom">

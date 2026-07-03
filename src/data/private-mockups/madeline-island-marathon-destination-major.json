@@ -352,7 +352,8 @@
       "source_confirmed_sections": [
         "schedule",
         "faqs",
-        "runner_decision_checklist"
+        "runner_decision_checklist",
+        "travel_logistics"
       ],
       "source_confirmed_distance_ids": [
         "marathon",
@@ -488,6 +489,11 @@
           "path": "private_mockup.assets",
           "source": "public image and PDF URLs on race pages",
           "confidence": "medium"
+        },
+        {
+          "path": "travel_logistics",
+          "source": "public run page FAQ, schedule, and destination lodging/ferry links",
+          "confidence": "high"
         }
       ]
     },
@@ -511,5 +517,72 @@
         }
       ]
     }
+  },
+  "travel_logistics": {
+    "headline": "Getting There / Where to Stay",
+    "intro": "Plan the island weekend before you register: the race starts and finishes at Joni’s Beach in La Pointe, and most runners build the trip around the Bayfield–La Pointe ferry, lodging availability, and packet pickup windows.",
+    "items": [
+      {
+        "id": "ferry",
+        "label": "Getting there",
+        "title": "Take the Bayfield–La Pointe ferry",
+        "text": "Madeline Island is reached by ferry from Bayfield. The race information describes a roughly 25-minute crossing for passengers, bikes, and vehicles, with service first-come, first-served and weather permitting.",
+        "source_path": "faqs[0..1]",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "arrival",
+        "label": "Arrival timing",
+        "title": "Build in ferry and weather buffer",
+        "text": "Arriving Friday keeps packet pick-up, lodging check-in, and ferry timing from competing with the 8:30 AM race start. The published race-day ferry option leaves Bayfield early, but regular ferry service and weather still matter.",
+        "source_path": "schedule;faqs[1]",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "lodging",
+        "label": "Where to stay",
+        "title": "Stay on or near the island",
+        "text": "The race’s destination-weekend guidance encourages runners to plan lodging early on Madeline Island or nearby Bayfield. Camping can be part of the weekend plan where official lodging resources point runners.",
+        "source_path": "story.paragraphs;faqs",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "packet",
+        "label": "Packet pickup",
+        "title": "Pick up at Joni’s Beach",
+        "text": "Packet pick-up is listed Friday from 4:00–8:00 PM and race day from 6:30–8:00 AM at the event tent at Joni’s Beach on Madeline Island.",
+        "source_path": "schedule",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "start_finish",
+        "label": "Start and finish",
+        "title": "Joni’s Beach keeps logistics close",
+        "text": "Both races start and finish in front of Joni’s Beach in La Pointe, a few blocks from the ferry landing, so the race-day plan can stay compact once you are on the island.",
+        "source_path": "event.venue;story.paragraphs;runner_decision_checklist.items.location",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      }
+    ],
+    "links_label": "Official planning links",
+    "links": [
+      {
+        "label": "Madeline Island Ferry",
+        "url": "http://www.madferry.com/",
+        "source_path": "faqs[].links",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "label": "Race information",
+        "url": "https://www.madelineislandmarathon.com/run.html",
+        "source_path": "private_mockup.source_url",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "label": "Madeline Island lodging",
+        "url": "https://www.madelineisland.com/stay/",
+        "source_path": "faqs;private_mockup.provenance",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      }
+    ]
   }
 }
