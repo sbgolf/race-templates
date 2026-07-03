@@ -43,9 +43,9 @@
   }
   nav.scrolled{
     padding:12px clamp(18px,5vw,54px);
-    background:rgba(11,14,19,.72);
+    background:rgba(11,14,19,.96);
     backdrop-filter:blur(14px) saturate(140%);
-    box-shadow:0 1px 0 var(--line-dark);
+    box-shadow:0 1px 0 var(--line-dark),0 18px 44px rgba(11,14,19,.2);
   }
   .brand{display:flex;align-items:center;gap:11px;color:var(--paper);font-family:"Arial Black","Bricolage Grotesque";font-weight:800;font-size:1.18rem;letter-spacing:-.01em}
   .brand .mark{width:30px;height:30px;flex:0 0 auto}
