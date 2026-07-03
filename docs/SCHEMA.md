@@ -31,6 +31,29 @@ Templates must continue supporting flat string arrays so existing sample configs
 
 - `identity.hero_image` (optional): image object for hero art/photography. Template implementations may use a real image URL or a local placeholder object while awaiting customer assets.
 
+## Registration status
+
+`registration.status` is an optional shared status contract currently rendered by the Destination Major template. When omitted, templates keep existing CTA language and do not show a status badge/card.
+
+```json
+{
+  "registration": {
+    "url": "https://example.com/register",
+    "platform": "other",
+    "cta_label": "Register now",
+    "status": "limited",
+    "status_label": "Limited spots remaining",
+    "status_detail": "Field size is capped; review the official registration provider for current availability.",
+    "status_cta_label": "Register while spots remain"
+  }
+}
+```
+
+- `registration.status` (optional): one of `open`, `limited`, `waitlist`, `sold_out`, `transfer_only`, or `closed`.
+- `registration.status_label` (optional): runner-facing display label. If omitted, Destination Major uses the default label for the configured status.
+- `registration.status_detail` (optional): short runner-facing detail. Use source-backed or approved intake copy only; avoid fake urgency.
+- `registration.status_cta_label` (optional): status-specific CTA copy. If omitted, Destination Major uses safe defaults such as `Join the waitlist`, `View transfer options`, or `View race details` for constrained statuses.
+
 ## Destination travel logistics
 
 `travel_logistics` is an optional top-level group for Destination Major travel-planning sections. It is designed for runner-facing logistics such as getting there, lodging, arrival timing, packet pickup, start/finish proximity, and official planning links.

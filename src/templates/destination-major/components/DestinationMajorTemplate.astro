@@ -7,7 +7,24 @@ import { privateValueNarrativeForRace, registrationDecisionCopyForRace } from ".
 const { race } = Astro.props;
 const isPrivateMockup = Boolean(race.private_mockup);
 const registrationUrl = race.registration?.url || '#entry';
-const registrationLabel = race.registration?.cta_label || 'Register now';
+const registrationStatusDefaults = {
+  open: { label: 'Registration open', cta: 'Register now' },
+  limited: { label: 'Limited spots remaining', cta: 'Register while spots remain' },
+  waitlist: { label: 'Waitlist open', cta: 'Join the waitlist' },
+  sold_out: { label: 'Sold out', cta: 'View registration details' },
+  transfer_only: { label: 'Transfers only', cta: 'View transfer options' },
+  closed: { label: 'Registration closed', cta: 'View race details' }
+};
+const registrationStatus = race.registration?.status && registrationStatusDefaults[race.registration.status]
+  ? race.registration.status
+  : null;
+const registrationStatusCopy = registrationStatus ? {
+  status: registrationStatus,
+  label: race.registration?.status_label || registrationStatusDefaults[registrationStatus].label,
+  detail: race.registration?.status_detail,
+  cta: race.registration?.status_cta_label || registrationStatusDefaults[registrationStatus].cta
+} : null;
+const registrationLabel = registrationStatusCopy?.cta || race.registration?.cta_label || 'Register now';
 const platformLabel = registrationPlatformLabel(race.registration?.platform);
 const privateValue = privateValueNarrativeForRace(race, {
   headline: 'A premium race story with the registration path pulled into focus.',
@@ -190,6 +207,13 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
       <span><span class="dot">●</span> {primaryDistance.distance || '26.2 miles'}{primaryDistance.profile ? ` · ${primaryDistance.profile}` : ' · net downhill'}</span>
     </div>
 
+    {registrationStatusCopy && (
+      <div class={`registration-status-pill status-${registrationStatusCopy.status}`} data-registration-status>
+        <strong>{registrationStatusCopy.label}</strong>
+        {registrationStatusCopy.detail && <span>{registrationStatusCopy.detail}</span>}
+      </div>
+    )}
+
     <div class="hero-cta">
       <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('hero-primary')}>{registrationLabel} →</a>
       {hasRunnerChecklist ? <button class="btn btn-ghost" onclick="scrollToId('runner-checklist')">Review key race details</button> : <button class="btn btn-ghost" onclick="scrollToId('course')">Explore the Course</button>}
@@ -269,6 +293,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
       <div class="decision-card">
         <p>{registrationDecisionCopy.body}</p>
         <dl>
+          {registrationStatusCopy && <div><dt>Registration status</dt><dd>{registrationStatusCopy.label}</dd></div>}
           <div><dt>Official registration</dt><dd>{platformLabel}</dd></div>
           <div><dt>Next step</dt><dd>{registrationLabel}</dd></div>
         </dl>
@@ -439,6 +464,17 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
       <div class="kicker">Secure Your Place</div>
       <h2 class="sec-title">{isPrivateMockup ? 'Registration options for race day.' : 'Three ways through the start line.'}</h2>
     </div>
+
+    {registrationStatusCopy && (
+      <aside class={`entry-status-card status-${registrationStatusCopy.status}`} data-registration-status-card>
+        <div>
+          <span>Registration status</span>
+          <strong>{registrationStatusCopy.label}</strong>
+        </div>
+        {registrationStatusCopy.detail && <p>{registrationStatusCopy.detail}</p>}
+        <a class="btn btn-dark" href={registrationUrl} {...registerAttrs('entry-status-card')}>{registrationLabel}</a>
+      </aside>
+    )}
 
     <div class="entry-grid">
       {isPrivateMockup ? entryTiers.map((tier) => <div class="tier reveal">
