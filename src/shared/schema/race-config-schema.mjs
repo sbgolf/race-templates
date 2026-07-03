@@ -195,6 +195,57 @@ export function validateRaceConfig(config) {
     }
   }
 
+  if (config.travel_logistics !== undefined) {
+    if (!isPlainObject(config.travel_logistics)) {
+      add(errors, 'travel_logistics', 'Travel logistics must be an object when provided.');
+    } else {
+      const travel = config.travel_logistics;
+      if (travel.headline !== undefined && !hasText(travel.headline)) add(errors, 'travel_logistics.headline', 'Headline must be non-empty when provided.');
+      if (travel.intro !== undefined && !hasText(travel.intro)) add(errors, 'travel_logistics.intro', 'Intro must be non-empty when provided.');
+      if (travel.links_label !== undefined && !hasText(travel.links_label)) add(errors, 'travel_logistics.links_label', 'Links label must be non-empty when provided.');
+      if (travel.items !== undefined) {
+        if (!Array.isArray(travel.items)) {
+          add(errors, 'travel_logistics.items', 'Travel logistics items must be an array when provided.');
+        } else {
+          const itemIds = new Set();
+          travel.items.forEach((item, index) => {
+            const base = `travel_logistics.items[${index}]`;
+            if (!isPlainObject(item)) {
+              add(errors, base, 'Travel logistics item must be an object.');
+              return;
+            }
+            if (!hasText(item.id)) add(errors, `${base}.id`, 'Travel logistics item id is required.');
+            else if (itemIds.has(item.id)) add(errors, `${base}.id`, 'Travel logistics item id must be unique.');
+            else itemIds.add(item.id);
+            if (item.label !== undefined && !hasText(item.label)) add(errors, `${base}.label`, 'Item label must be non-empty when provided.');
+            if (!hasText(item.title)) add(errors, `${base}.title`, 'Item title is required.');
+            if (!hasText(item.text)) add(errors, `${base}.text`, 'Item text is required.');
+            if (item.icon !== undefined && !hasText(item.icon)) add(errors, `${base}.icon`, 'Item icon must be non-empty when provided.');
+            if (item.source_path !== undefined && !hasText(item.source_path)) add(errors, `${base}.source_path`, 'Item source path must be non-empty when provided.');
+            if (item.source_url !== undefined && (!hasText(item.source_url) || !URL_PATTERN.test(item.source_url))) add(errors, `${base}.source_url`, 'Item source URL must be absolute when provided.');
+          });
+        }
+      }
+      if (travel.links !== undefined) {
+        if (!Array.isArray(travel.links)) {
+          add(errors, 'travel_logistics.links', 'Travel logistics links must be an array when provided.');
+        } else {
+          travel.links.forEach((link, index) => {
+            const base = `travel_logistics.links[${index}]`;
+            if (!isPlainObject(link)) {
+              add(errors, base, 'Travel logistics link must be an object.');
+              return;
+            }
+            if (!hasText(link.label)) add(errors, `${base}.label`, 'Link label is required.');
+            if (!hasText(link.url) || !URL_PATTERN.test(link.url)) add(errors, `${base}.url`, 'Link URL must be absolute.');
+            if (link.source_path !== undefined && !hasText(link.source_path)) add(errors, `${base}.source_path`, 'Link source path must be non-empty when provided.');
+            if (link.source_url !== undefined && (!hasText(link.source_url) || !URL_PATTERN.test(link.source_url))) add(errors, `${base}.source_url`, 'Link source URL must be absolute when provided.');
+          });
+        }
+      }
+    }
+  }
+
   if (config.sponsors !== undefined) {
     if (!Array.isArray(config.sponsors)) {
       add(errors, 'sponsors', 'Sponsors must be an array when provided.');

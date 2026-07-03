@@ -190,8 +190,11 @@
 
   /* ---------- TRAVEL ---------- */
   #travel{background:var(--paper)}
-  .travel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:48px}
+  .travel-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:48px}
+  .travel-head .lead{margin-top:0}
+  .travel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:0}
   .tcard{border-radius:var(--r);padding:30px 26px;color:var(--paper);min-height:215px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+  .travel-card-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:10px}
   .tcard h3{font-size:1.3rem;letter-spacing:0;margin-bottom:9px}
   .tcard p{font-size:.92rem;opacity:.82;line-height:1.5}
   .tcard .ic{position:absolute;top:24px;right:24px;font-size:1.7rem;opacity:.85}
@@ -199,6 +202,11 @@
   .tc2{background:linear-gradient(145deg,#7a2d1f,#3a1610)}
   .tc3{background:linear-gradient(145deg,#243044,#11161f)}
   .tc4{background:linear-gradient(145deg,#5a4322,#2a1f10)}
+  .travel-links{margin-top:24px;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;background:var(--paper-2);display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+  .travel-links>span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(11,14,19,.58);font-weight:800}
+  .travel-links>div{display:flex;flex-wrap:wrap;gap:10px}
+  .travel-links a{display:inline-flex;border:1px solid var(--line);border-radius:100px;padding:9px 14px;background:var(--paper);color:var(--ink);font-weight:800;font-size:.88rem;transition:transform .2s ease,border-color .2s ease}
+  .travel-links a:hover{transform:translateY(-2px);border-color:rgba(255,91,46,.55)}
 
   /* ---------- SPONSORS ---------- */
   .sponsors{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -337,6 +345,8 @@
     .measurement-wrap p{grid-column:auto}
     .checklist-footer{border-radius:22px;align-items:flex-start;flex-direction:column}
     .entry-grid{grid-template-columns:1fr}
+    .travel-head{align-items:flex-start}
+    .travel-head .lead{margin-top:22px}
     .course-feats{grid-template-columns:1fr}
     .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,260px)}
     .g-1{grid-column:1/3;grid-row:1}

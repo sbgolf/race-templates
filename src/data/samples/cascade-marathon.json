@@ -37,5 +37,42 @@
   },
   "contacts": {
     "race_director_email": "director@example.com"
+  },
+  "travel_logistics": {
+    "headline": "Getting There / Where to Stay",
+    "intro": "Make the mountain-to-coast weekend easy to plan with arrival, lodging, shuttle, and packet-pickup details in one place.",
+    "items": [
+      {
+        "id": "airport",
+        "label": "Getting here",
+        "title": "Fly into Portland",
+        "text": "Use Portland as the arrival hub, then follow race-weekend guidance to the start village and coastal finish."
+      },
+      {
+        "id": "shuttle",
+        "label": "Race-day movement",
+        "title": "Use race shuttles and host hotels",
+        "text": "Host-hotel and shuttle guidance can keep runners from solving point-to-point logistics on race morning."
+      },
+      {
+        "id": "lodging",
+        "label": "Where to stay",
+        "title": "Book by start or finish preference",
+        "text": "Choose lodging near the start for a calmer morning or near the coast for an easier finish-line recovery."
+      },
+      {
+        "id": "packet",
+        "label": "Packet pickup",
+        "title": "Collect bibs before race morning",
+        "text": "Packet pick-up and expo details should sit alongside travel planning so runners know when to arrive."
+      }
+    ],
+    "links_label": "Planning links",
+    "links": [
+      {
+        "label": "Registration details",
+        "url": "https://example.com/register"
+      }
+    ]
   }
 }
