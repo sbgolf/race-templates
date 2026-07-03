@@ -7,6 +7,7 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PRIVATE_MOCKUP_TOKEN_PATTERN = /^[a-f0-9]{32,}$/i;
 const STARTLINE_VALUE_STRING_FIELDS = ['headline', 'intro'];
 const STARTLINE_VALUE_ARRAY_FIELDS = ['improved', 'paid_includes'];
+const REGISTRATION_STATUSES = new Set(['open', 'limited', 'waitlist', 'sold_out', 'transfer_only', 'closed']);
 const RUNNER_CHECKLIST_ITEM_IDS = new Set([
   'date',
   'distance',
@@ -89,6 +90,14 @@ export function validateRaceConfig(config) {
     if (!hasText(config.registration.url)) add(errors, 'registration.url', 'Registration URL is required.');
     else if (!URL_PATTERN.test(config.registration.url)) add(errors, 'registration.url', 'Registration URL must be absolute and start with http:// or https://.');
     if (!hasText(config.registration.cta_label)) warn(warnings, 'registration.cta_label', 'CTA label is recommended; default copy may be used otherwise.');
+    if (config.registration.status !== undefined && !REGISTRATION_STATUSES.has(config.registration.status)) {
+      add(errors, 'registration.status', `Registration status must be one of: ${Array.from(REGISTRATION_STATUSES).join(', ')}.`);
+    }
+    ['status_label', 'status_detail', 'status_cta_label'].forEach((field) => {
+      if (config.registration[field] !== undefined && !hasText(config.registration[field])) {
+        add(errors, `registration.${field}`, 'Registration status copy must be a non-empty string when provided.');
+      }
+    });
   }
 
   if (!isPlainObject(config.seo)) {

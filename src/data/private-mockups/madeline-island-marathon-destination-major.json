@@ -61,7 +61,11 @@
   "registration": {
     "url": "https://raceroster.com/events/2026/109615/madeline-island-marathon-and-half-marathon",
     "platform": "race_roster",
-    "cta_label": "View Race Roster entry"
+    "cta_label": "View Race Roster entry",
+    "status": "limited",
+    "status_label": "Limited field size",
+    "status_detail": "The About page says 2026 registration is limited to 150 full marathoners and 350 half marathoners.",
+    "status_cta_label": "Check Race Roster availability"
   },
   "startline_value": {
     "headline": "A destination-race concept built around the island decision journey.",

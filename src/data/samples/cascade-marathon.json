@@ -25,7 +25,11 @@
   "registration": {
     "url": "https://example.com/register",
     "platform": "other",
-    "cta_label": "Register now"
+    "cta_label": "Register now",
+    "status": "limited",
+    "status_label": "Limited spots remaining",
+    "status_detail": "Fictional sample copy: runner capacity is capped, so the official registration provider should show current availability.",
+    "status_cta_label": "Register while spots remain"
   },
   "seo": {
     "meta_title": "Cascade Marathon — September 20, 2026",
