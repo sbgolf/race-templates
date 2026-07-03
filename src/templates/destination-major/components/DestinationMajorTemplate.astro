@@ -27,7 +27,7 @@ const registerAttrs = (placement) => registerClickAttributes(race, placement);
 const checklistItems = Array.isArray(race.runner_decision_checklist?.items) ? race.runner_decision_checklist.items : [];
 const hasRunnerChecklist = isPrivateMockup && checklistItems.length > 0;
 const trustSignals = trustSignalsForRace(race);
-const showTrustSignalsBand = isPrivateMockup && !hasRunnerChecklist && shouldRenderTrustSignalsBand(race);
+const showTrustSignalsBand = isPrivateMockup && shouldRenderTrustSignalsBand(race);
 const primaryDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0] || {};
 const entryTiers = (race.distances?.length ? race.distances : [primaryDistance]).filter(Boolean);
 const scheduleItems = Array.isArray(race.schedule) ? race.schedule : [];
@@ -274,6 +274,27 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
         </dl>
         <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('registration-decision-card')}>Continue to official registration</a>
       </div>
+    </div>
+  </section>
+)}
+
+{isPrivateMockup && (
+  <section class="measurement-panel major-private" data-measurement-ready-panel>
+    <div class="wrap measurement-wrap">
+      <div>
+        <div class="kicker">Registration handoff</div>
+        <h2 class="sec-title">Official entry clicks are ready to evaluate.</h2>
+      </div>
+      <div class="measurement-list" aria-label="Official entry link locations">
+        <span>Top navigation</span>
+        <span>Opening section</span>
+        <span>Runner checklist</span>
+        <span>Entry options</span>
+        <span>Final reminder</span>
+      </div>
+      <p>
+        Each official registration link can distinguish where the outbound click started, which device context runners used, and which official provider received the handoff. Completed entries, payment, and confirmation still happen on {platformLabel}.
+      </p>
     </div>
   </section>
 )}
