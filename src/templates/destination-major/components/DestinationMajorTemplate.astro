@@ -135,7 +135,7 @@ const galleryLead = isPrivateMockup
   : 'From the gun in the Cascade foothills to the boardwalk at Pacific City — three hours of running through some of the most photographed terrain on the West Coast.';
 const galleryHeadline = isPrivateMockup ? (race.destination_gallery?.headline || 'What the island weekend looks like.') : 'What the day looks like.';
 const galleryNote = isPrivateMockup
-  ? (race.destination_gallery?.asset_policy?.display_note || 'Race visuals combine permitted public race assets with Madeline Island-specific editorial fallback art for private review.')
+  ? (race.destination_gallery?.asset_policy?.display_note || 'Race visuals combine documented race imagery with Madeline Island-specific editorial fallback art for review.')
   : 'Race visuals highlight the destination experience.';
 const gallerySourceCount = destinationGalleryItems.filter((item) => hasText(item.source)).length;
 const gallerySvgForVisual = (visual = 'sunrise') => ({
@@ -360,7 +360,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
             )}
             <figcaption>
               <span>{item.caption}</span>
-              {item.source && <small>Documented race visual · private mockup use</small>}
+              {item.source && <small>Documented race visual</small>}
               {!item.source && isPrivateMockup && <small>Madeline Island editorial fallback</small>}
             </figcaption>
           </figure>

@@ -191,7 +191,7 @@
   ],
   "runner_decision_checklist": {
     "headline": "Before runners plan the island weekend",
-    "intro": "The private review page surfaces the public facts runners are likely to check before continuing to Race Roster.",
+    "intro": "This page surfaces the public facts runners are likely to check before continuing to Race Roster.",
     "items": [
       {
         "id": "date",
@@ -605,7 +605,7 @@
     "intro": "Race day is inseparable from the place: a Bayfield ferry crossing, packet pickup at Joni’s Beach, a La Pointe start/finish, shoreline roads, lodging decisions, and weather-aware island logistics.",
     "asset_policy": {
       "permission_note": "Public race-site asset captured for private mockup review only; publishing requires customer approval or confirmed image rights.",
-      "display_note": "Private gallery strategy: use documented public race assets only for noindex review, then pair them with Madeline Island-specific editorial fallback art until approved customer photography is available.",
+      "display_note": "Gallery strategy: use documented public race assets for review, then pair them with Madeline Island-specific editorial fallback art until approved customer photography is available.",
       "fallback_note": "Fallback visuals must reference the ferry, Joni’s Beach, island course, lodging/camping, or race-weekend logistics — never generic abstract tiles."
     },
     "items": [
