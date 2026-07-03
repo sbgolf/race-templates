@@ -137,7 +137,7 @@ const galleryHeadline = isPrivateMockup ? (race.destination_gallery?.headline ||
 const galleryNote = isPrivateMockup
   ? (race.destination_gallery?.asset_policy?.display_note || 'Race visuals combine documented race imagery with Madeline Island-specific editorial fallback art for review.')
   : 'Race visuals highlight the destination experience.';
-const gallerySourceCount = destinationGalleryItems.filter((item) => hasText(item.source)).length;
+const hasDocumentedGalleryScenes = destinationGalleryItems.some((item) => hasText(item.source));
 const gallerySvgForVisual = (visual = 'sunrise') => ({
   sunrise: `<svg viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="200" cy="240" r="130" fill="#FFE7B8" opacity=".18"/><circle cx="200" cy="240" r="80" fill="#FFE7B8" opacity=".45"/><circle cx="200" cy="240" r="55" fill="#FFEFC8" opacity=".85"/><path d="M0 380 L80 330 L160 360 L240 310 L320 350 L400 320 L400 600 L0 600Z" fill="#5A2A40" opacity=".55"/><path d="M0 450 L70 405 L150 430 L230 380 L310 415 L400 395 L400 600 L0 600Z" fill="#3A1A2D" opacity=".75"/><path d="M0 520 L90 475 L180 500 L270 450 L360 480 L400 470 L400 600 L0 600Z" fill="#1A0E18"/></svg>`,
   descent: `<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><ellipse cx="200" cy="100" rx="150" ry="40" fill="#5CB89D" opacity=".18"/><path d="M0 170 L70 145 L140 160 L210 138 L280 152 L350 142 L400 155 L400 300 L0 300Z" fill="#0F2B23" opacity=".7"/><path d="M0 215 L80 188 L160 205 L240 182 L320 200 L400 192 L400 300 L0 300Z" fill="#06140F"/></svg>`,
@@ -370,7 +370,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 
     <p class="gallery-note reveal">
       {galleryNote}
-      {isPrivateMockup && gallerySourceCount > 0 ? ` ${gallerySourceCount} gallery visual${gallerySourceCount === 1 ? '' : 's'} trace to documented public race sources.` : ''}
+      {isPrivateMockup && hasDocumentedGalleryScenes ? ' Each gallery scene is tied to documented race or island details.' : ''}
     </p>
   </div>
 </section>
