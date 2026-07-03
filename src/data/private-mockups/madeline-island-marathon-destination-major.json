@@ -1,0 +1,515 @@
+{
+  "identity": {
+    "template": "destination-major",
+    "name": "Madeline Island Marathon & Half Marathon",
+    "tagline": "Run through forests, shoreline roads, and island views from Joni’s Beach.",
+    "edition": "Private Concept",
+    "colors": {
+      "primary": "#F08A24",
+      "secondary": "#123C55"
+    },
+    "hero_image": {
+      "src": "/mockups/1df440859d5fc4a775302c32796ae129/logo-8ad148d5bb.png",
+      "alt": "Madeline Island Marathon logo artwork",
+      "source": "https://www.madelineislandmarathon.com/uploads/2/1/8/6/21862050/2520455.png"
+    }
+  },
+  "event": {
+    "date": "2026-05-16",
+    "location": "La Pointe, Wisconsin",
+    "venue": "Joni’s Beach"
+  },
+  "organization": {
+    "name": "Madeline Island Marathon, Inc."
+  },
+  "distances": [
+    {
+      "id": "marathon",
+      "name": "Marathon",
+      "distance": "26.2 mi",
+      "start_time": "8:30 AM",
+      "featured": true,
+      "price": "$120",
+      "price_amount": "120",
+      "aid_stations": "Every 2–3 miles",
+      "profile": "USATF-certified loop course with short out-and-back sections, mainly paved roadway and approximately 3 to 4 miles of gravel road",
+      "certification": "USATF certified #WI17014DM",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://www.madelineislandmarathon.com/run.html",
+        "method": "public race information page"
+      }
+    },
+    {
+      "id": "half-marathon",
+      "name": "Half Marathon",
+      "distance": "13.1 mi",
+      "start_time": "8:30 AM",
+      "featured": false,
+      "price": "$95",
+      "price_amount": "95",
+      "aid_stations": "Every 2–3 miles",
+      "profile": "USATF-certified loop course with a short out-and-back section, mainly paved roadway and a packed-gravel section",
+      "certification": "USATF certified #WI17013DM",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://www.madelineislandmarathon.com/run.html",
+        "method": "public race information page"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://raceroster.com/events/2026/109615/madeline-island-marathon-and-half-marathon",
+    "platform": "race_roster",
+    "cta_label": "View Race Roster entry"
+  },
+  "startline_value": {
+    "headline": "A destination-race concept built around the island decision journey.",
+    "intro": "StartLine Sites keeps the ferry, lodging, island course, and post-race celebration story close to the official Race Roster handoff while keeping this preview private and noindex.",
+    "improved": [
+      "Places the date, La Pointe location, Joni’s Beach start/finish, prices, field caps, and Race Roster path before the click-through decision.",
+      "Surfaces ferry timing, packet pickup, course surface, aid frequency, and transfer/refund rules in a runner checklist.",
+      "Frames Madeline Island as a travel weekend while preserving public race facts and avoiding performance claims beyond the published course certification.",
+      "Connects each major registration CTA to a distinct analytics placement for cleaner launch measurement."
+    ],
+    "paid_includes": [
+      "Premium one-page Destination Major implementation for private review.",
+      "SEO-ready SportsEvent metadata with noindex private route controls.",
+      "Registration-click tracking setup by CTA placement.",
+      "No customer send, no public launch, and no guaranteed growth claims."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "About the Madeline Island course",
+    "paragraphs": [
+      "Madeline Island Marathon & Half Marathon takes place in La Pointe, Wisconsin, with both races starting and finishing in front of Joni’s Beach a few blocks from the ferry landing.",
+      "The public race information emphasizes a destination weekend: runners are encouraged to arrive Friday, use the Bayfield ferry, stay on or near the island, and celebrate after the race with food, beverage, live music, awards, and a local artisan finisher medal."
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Friday, May 15, 2026",
+      "name": "Packet pick-up",
+      "time": "4:00 PM – 8:00 PM",
+      "location": "Event tent at Joni’s Beach on Madeline Island",
+      "applies_to_distances": [
+        "marathon",
+        "half-marathon"
+      ]
+    },
+    {
+      "day": "Friday, May 15, 2026",
+      "name": "Pasta dinner",
+      "time": "4:00 PM – 7:30 PM",
+      "location": "St. John’s Church",
+      "applies_to_distances": [
+        "marathon",
+        "half-marathon"
+      ]
+    },
+    {
+      "day": "Saturday, May 16, 2026",
+      "name": "Race-day packet pick-up",
+      "time": "6:30 AM – 8:00 AM",
+      "location": "Event tent at Joni’s Beach on Madeline Island",
+      "applies_to_distances": [
+        "marathon",
+        "half-marathon"
+      ]
+    },
+    {
+      "day": "Saturday, May 16, 2026",
+      "name": "Marathon and half marathon start",
+      "time": "8:30 AM",
+      "location": "In front of Joni’s Beach, La Pointe",
+      "applies_to_distances": [
+        "marathon",
+        "half-marathon"
+      ]
+    },
+    {
+      "day": "Saturday, May 16, 2026",
+      "name": "Post-race party and awards ceremony",
+      "time": "12:00 PM – 4:00 PM",
+      "location": "Joni’s Beach race area",
+      "applies_to_distances": [
+        "marathon",
+        "half-marathon"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do runners get to Madeline Island?",
+      "answer": "Madeline Island is accessible by ferry from Bayfield, Wisconsin. The race page describes a 25-minute ferry ride for passenger, bike, and vehicle transportation, with service dependent on weather.",
+      "links": [
+        {
+          "label": "Madeline Island Ferry information",
+          "url": "http://www.madferry.com/"
+        }
+      ]
+    },
+    {
+      "question": "Will there be an early ferry on race day?",
+      "answer": "The public FAQ says the early race-day ferry to the island leaves Bayfield at 6:30 AM, regular service continues after that, and the race starts at 8:30 AM sharp. The ferry is first-come, first-served and weather permitting.",
+      "links": [
+        {
+          "label": "Madeline Island Ferry schedule and rates",
+          "url": "http://www.madferry.com/"
+        }
+      ]
+    },
+    {
+      "question": "What is included with registration?",
+      "answer": "The race page lists a long-sleeve tech shirt, a custom finisher medal created by local artisan Grace Hogan Jewelry, and a free beverage and meal at the post-race party.",
+      "links": [
+        {
+          "label": "Grace Hogan Jewelry",
+          "url": "http://gracehogan.com/"
+        }
+      ]
+    },
+    {
+      "question": "Can runners transfer or switch their entry?",
+      "answer": "The public FAQ says transfers and distance switches are available through April 16, 2026, with transfer handling through Race Roster and no transfers or switches accepted after that date.",
+      "links": [
+        {
+          "label": "Race Roster transfer request",
+          "url": "https://raceroster.com/events/2026/109615/madeline-island-marathon-and-half-marathon/new-transfer-request"
+        }
+      ]
+    },
+    {
+      "question": "Is there a course time limit?",
+      "answer": "Yes. The race page and FAQ state a 7-hour course time limit."
+    },
+    {
+      "question": "How large is the field?",
+      "answer": "The About page says registration for 2026 is limited to 150 in the full marathon and 350 in the half marathon."
+    }
+  ],
+  "runner_decision_checklist": {
+    "headline": "Before runners plan the island weekend",
+    "intro": "The private review page surfaces the public facts runners are likely to check before continuing to Race Roster.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, May 16, 2026",
+        "source_path": "event.date",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "Marathon and Half Marathon",
+        "source_path": "distances",
+        "applies_to_distance_ids": [
+          "marathon",
+          "half-marathon"
+        ],
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "start-time",
+        "label": "Start time",
+        "value": "8:30 AM",
+        "source_path": "distances[].start_time",
+        "applies_to_distance_ids": [
+          "marathon",
+          "half-marathon"
+        ],
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "La Pointe, Wisconsin",
+        "detail": "Start and finish are in front of Joni’s Beach, a few blocks from the La Pointe Ferry Landing.",
+        "source_path": "event.location",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "price",
+        "label": "Entry prices",
+        "value": "$120 marathon / $95 half marathon, plus registration processing fee",
+        "source_path": "distances[].price",
+        "applies_to_distance_ids": [
+          "marathon",
+          "half-marathon"
+        ],
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pick-up",
+        "value": "Friday 4:00–8:00 PM and race day 6:30–8:00 AM at the event tent at Joni’s Beach",
+        "source_path": "schedule",
+        "applies_to_distance_ids": [
+          "marathon",
+          "half-marathon"
+        ],
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "course",
+        "label": "Course notes",
+        "value": "Loop courses with short out-and-back portions; mainly paved roadway with approximately 3 to 4 miles of gravel road; marathon #WI17014DM and half #WI17013DM",
+        "source_path": "distances[].profile",
+        "applies_to_distance_ids": [
+          "marathon",
+          "half-marathon"
+        ],
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "aid-stations",
+        "label": "Aid stations",
+        "value": "Approximately every 2 to 3 miles with water and Gatorade",
+        "source_path": "distances[].aid_stations",
+        "applies_to_distance_ids": [
+          "marathon",
+          "half-marathon"
+        ],
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "refunds-transfers",
+        "label": "Transfers and refunds",
+        "value": "Transfers and distance switches available through April 16, 2026; entry fees are non-refundable through Madeline Island Marathon, Inc.",
+        "source_path": "faqs",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "swag",
+        "label": "Runner items",
+        "value": "Long-sleeve tech shirt, local artisan finisher medal, beverage and meal at the post-race party",
+        "source_path": "faqs",
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      },
+      {
+        "id": "time-limit",
+        "label": "Course time limit",
+        "value": "7 hours",
+        "source_path": "faqs",
+        "applies_to_distance_ids": [
+          "marathon",
+          "half-marathon"
+        ],
+        "source_url": "https://www.madelineislandmarathon.com/run.html"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Madeline Island Marathon — Private Destination Major Concept",
+    "meta_description": "Private Destination Major mockup for Madeline Island Marathon & Half Marathon with ferry, lodging, race-weekend logistics, and Race Roster click measurement."
+  },
+  "private_mockup": {
+    "generated": false,
+    "noindex": true,
+    "source_url": "https://www.madelineislandmarathon.com/run.html",
+    "captured_at": "2026-07-03T02:08:26Z",
+    "access_token": "1df440859d5fc4a775302c32796ae129",
+    "race_slug": "madeline-island-marathon-destination-major",
+    "route": "/private/mockups/1df440859d5fc4a775302c32796ae129/",
+    "template": "destination-major",
+    "assets": [
+      {
+        "src": "/mockups/1df440859d5fc4a775302c32796ae129/logo-8ad148d5bb.png",
+        "alt": "Madeline Island Marathon logo artwork",
+        "caption": "Logo artwork captured from the public home page.",
+        "source": "https://www.madelineislandmarathon.com/uploads/2/1/8/6/21862050/2520455.png"
+      },
+      {
+        "src": "/mockups/1df440859d5fc4a775302c32796ae129/run-page-screenshot-1d120ac4b8.png",
+        "alt": "Madeline Island Marathon public run page image",
+        "caption": "Public image from the run page.",
+        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screenshot-2026-02-24-at-2-28-13-pm.png?1771964919"
+      },
+      {
+        "src": "/mockups/1df440859d5fc4a775302c32796ae129/photos-page-screenshot-69787285cc.png",
+        "alt": "Madeline Island Marathon public photos page image",
+        "caption": "Public image from the photos page.",
+        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screen-shot-2024-09-16-at-12-05-57-pm.png?1726506399"
+      },
+      {
+        "src": "/mockups/1df440859d5fc4a775302c32796ae129/marathon-course-2026-9a9d20df6c.pdf",
+        "alt": "Madeline Island Marathon 2026 marathon course map PDF",
+        "caption": "Marathon course map with water stop locations.",
+        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/marathon_course_2026.pdf"
+      },
+      {
+        "src": "/mockups/1df440859d5fc4a775302c32796ae129/half-marathon-course-2026-85e3dff826.pdf",
+        "alt": "Madeline Island Marathon 2026 half marathon course map PDF",
+        "caption": "Half marathon course map with water stop locations.",
+        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/half_marathon_course_2026.pdf"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://www.madelineislandmarathon.com/run.html",
+      "captured_at": "2026-07-03T02:08:26Z",
+      "source_confirmed_sections": [
+        "schedule",
+        "faqs",
+        "runner_decision_checklist"
+      ],
+      "source_confirmed_distance_ids": [
+        "marathon",
+        "half-marathon"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "public run page",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "public about page headline and course description",
+          "confidence": "medium"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "public home page image URL",
+          "confidence": "medium"
+        },
+        {
+          "path": "event.date",
+          "source": "public run and about pages",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "public run and about pages",
+          "confidence": "high"
+        },
+        {
+          "path": "event.venue",
+          "source": "public run page start/finish and packet pickup sections",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "public run page Race Roster link",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[].start_time",
+          "source": "public run page",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[].price",
+          "source": "public run and about pages",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[].certification",
+          "source": "public run page course info section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[].aid_stations",
+          "source": "public run page course info section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[].profile",
+          "source": "public run and about page course descriptions",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "public run page packet pickup, pasta dinner, start, and post-race sections",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs",
+          "source": "public run page FAQ and logistics sections",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "public run and about pages",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "public run and about pages",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "public run page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "public run page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "public run and about pages",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "public run page packet pickup section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "public run page course info section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.aid-stations",
+          "source": "public run page course info section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.refunds-transfers",
+          "source": "public run page FAQ",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "public run page registration section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.time-limit",
+          "source": "public run page course info and FAQ",
+          "confidence": "high"
+        },
+        {
+          "path": "private_mockup.assets",
+          "source": "public image and PDF URLs on race pages",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "confidence": {
+      "high": 21,
+      "medium": 4,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "Fixture uses public source facts from the race home, about, run, and photos pages plus public image/PDF assets. Registration is shown as the public Race Roster handoff even though the source page says 2026 registration is sold out and transfers were available through April 16.",
+      "items": [
+        {
+          "path": "registration.cta_label",
+          "note": "The source page currently says registration is sold out; CTA wording intentionally sends reviewers to the official Race Roster entry page rather than promising availability.",
+          "confidence": "medium"
+        },
+        {
+          "path": "schedule[4].time",
+          "note": "Live music is listed from 12:00 to 4:00 and awards at 3:00 PM; the post-race party card summarizes that public window.",
+          "confidence": "medium"
+        }
+      ]
+    }
+  }
+}
