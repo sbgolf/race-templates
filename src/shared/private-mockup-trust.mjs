@@ -43,7 +43,7 @@ export function trustSignalsForRace(race) {
   for (const distance of asArray(race.distances)) {
     const suffix = distance?.name ? ` (${distance.name})` : '';
     add(`certification-${distance?.id || signals.length}`, 'Certification', distance?.certification, suffix ? `Listed for ${distance.name}` : 'Listed race certification');
-    add(`profile-${distance?.id || signals.length}`, 'Course profile', distance?.profile, distance?.certification ? distance.certification : 'Listed course detail');
+    add(`profile-${distance?.id || signals.length}`, 'Course profile', distance?.profile, distance?.name ? `Listed for ${distance.name}` : 'Listed course detail');
     if (distance?.aid_stations !== undefined && distance?.aid_stations !== null) {
       add(`aid-count-${distance?.id || signals.length}`, 'On-course support', `${distance.aid_stations} aid stations listed`, distance?.name || '');
     }
