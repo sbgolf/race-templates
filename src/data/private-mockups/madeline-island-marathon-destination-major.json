@@ -319,31 +319,36 @@
         "src": "/mockups/1df440859d5fc4a775302c32796ae129/logo-8ad148d5bb.png",
         "alt": "Madeline Island Marathon logo artwork",
         "caption": "Logo artwork captured from the public home page.",
-        "source": "https://www.madelineislandmarathon.com/uploads/2/1/8/6/21862050/2520455.png"
+        "source": "https://www.madelineislandmarathon.com/uploads/2/1/8/6/21862050/2520455.png",
+        "permission": "Public race-site asset captured for private mockup review only; do not publish without customer approval or confirmed image rights."
       },
       {
         "src": "/mockups/1df440859d5fc4a775302c32796ae129/run-page-screenshot-1d120ac4b8.png",
         "alt": "Madeline Island Marathon public run page image",
         "caption": "Public image from the run page.",
-        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screenshot-2026-02-24-at-2-28-13-pm.png?1771964919"
+        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screenshot-2026-02-24-at-2-28-13-pm.png?1771964919",
+        "permission": "Public race-site asset captured for private mockup review only; do not publish without customer approval or confirmed image rights."
       },
       {
         "src": "/mockups/1df440859d5fc4a775302c32796ae129/photos-page-screenshot-69787285cc.png",
         "alt": "Madeline Island Marathon public photos page image",
         "caption": "Public image from the photos page.",
-        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screen-shot-2024-09-16-at-12-05-57-pm.png?1726506399"
+        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screen-shot-2024-09-16-at-12-05-57-pm.png?1726506399",
+        "permission": "Public race-site asset captured for private mockup review only; do not publish without customer approval or confirmed image rights."
       },
       {
         "src": "/mockups/1df440859d5fc4a775302c32796ae129/marathon-course-2026-9a9d20df6c.pdf",
         "alt": "Madeline Island Marathon 2026 marathon course map PDF",
         "caption": "Marathon course map with water stop locations.",
-        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/marathon_course_2026.pdf"
+        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/marathon_course_2026.pdf",
+        "permission": "Public race-site PDF captured for private mockup/source verification; not displayed as gallery imagery."
       },
       {
         "src": "/mockups/1df440859d5fc4a775302c32796ae129/half-marathon-course-2026-85e3dff826.pdf",
         "alt": "Madeline Island Marathon 2026 half marathon course map PDF",
         "caption": "Half marathon course map with water stop locations.",
-        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/half_marathon_course_2026.pdf"
+        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/half_marathon_course_2026.pdf",
+        "permission": "Public race-site PDF captured for private mockup/source verification; not displayed as gallery imagery."
       }
     ],
     "provenance": {
@@ -494,12 +499,22 @@
           "path": "travel_logistics",
           "source": "public run page FAQ, schedule, and destination lodging/ferry links",
           "confidence": "high"
+        },
+        {
+          "path": "destination_gallery",
+          "source": "public race pages, captured private mockup assets, and documented Madeline Island logistics",
+          "confidence": "medium"
         }
-      ]
+      ],
+      "asset_permissions": {
+        "mockup_use": "Private, noindex concept review using public race-site assets and documented captions.",
+        "publish_requirement": "Before any customer launch, replace with customer-approved media or obtain explicit permission for race-site photos/logo use.",
+        "fallback_policy": "When real imagery cannot be used, Destination Major renders place-specific editorial fallback art tied to the actual location, course, and logistics rather than abstract stock-like tiles."
+      }
     },
     "confidence": {
       "high": 21,
-      "medium": 4,
+      "medium": 5,
       "low": 0
     },
     "uncertainty": {
@@ -582,6 +597,54 @@
         "url": "https://www.madelineisland.com/stay/",
         "source_path": "faqs;private_mockup.provenance",
         "source_url": "https://www.madelineislandmarathon.com/run.html"
+      }
+    ]
+  },
+  "destination_gallery": {
+    "headline": "What the island weekend looks like.",
+    "intro": "Race day is inseparable from the place: a Bayfield ferry crossing, packet pickup at Joni’s Beach, a La Pointe start/finish, shoreline roads, lodging decisions, and weather-aware island logistics.",
+    "asset_policy": {
+      "permission_note": "Public race-site asset captured for private mockup review only; publishing requires customer approval or confirmed image rights.",
+      "display_note": "Private gallery strategy: use documented public race assets only for noindex review, then pair them with Madeline Island-specific editorial fallback art until approved customer photography is available.",
+      "fallback_note": "Fallback visuals must reference the ferry, Joni’s Beach, island course, lodging/camping, or race-weekend logistics — never generic abstract tiles."
+    },
+    "items": [
+      {
+        "type": "image",
+        "src": "/mockups/1df440859d5fc4a775302c32796ae129/run-page-screenshot-1d120ac4b8.png",
+        "alt": "Public Madeline Island Marathon run page race image",
+        "caption": "Documented race image from the public run page anchors the real Madeline Island event experience.",
+        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screenshot-2026-02-24-at-2-28-13-pm.png?1771964919",
+        "permission": "Public race-site asset captured for private mockup review only; publish only with confirmed race/customer image rights."
+      },
+      {
+        "type": "image",
+        "src": "/mockups/1df440859d5fc4a775302c32796ae129/photos-page-screenshot-69787285cc.png",
+        "alt": "Public Madeline Island Marathon photos page race image",
+        "caption": "Public photos-page visual reinforces that the gallery can switch to approved event photography when rights are confirmed.",
+        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screen-shot-2024-09-16-at-12-05-57-pm.png?1726506399",
+        "permission": "Public race-site asset captured for private mockup review only; publish only with confirmed race/customer image rights."
+      },
+      {
+        "type": "editorial-fallback",
+        "visual": "ferry",
+        "caption": "Bayfield–La Pointe ferry timing is part of race-weekend planning, especially for packet pickup and race-morning arrival.",
+        "source": "https://www.madelineislandmarathon.com/run.html",
+        "permission": "Custom editorial fallback art created for this private Destination Major mockup from documented logistics."
+      },
+      {
+        "type": "editorial-fallback",
+        "visual": "beach",
+        "caption": "Joni’s Beach is the logistics hub: packet pickup, event tent, start, finish, and post-race gathering all stay close together.",
+        "source": "https://www.madelineislandmarathon.com/run.html",
+        "permission": "Custom editorial fallback art created for this private Destination Major mockup from documented logistics."
+      },
+      {
+        "type": "editorial-fallback",
+        "visual": "lodging",
+        "caption": "On-island and Bayfield lodging choices become part of the destination story before registration decisions happen.",
+        "source": "https://www.madelineislandmarathon.com/run.html",
+        "permission": "Custom editorial fallback art created for this private Destination Major mockup from documented logistics."
       }
     ]
   }
