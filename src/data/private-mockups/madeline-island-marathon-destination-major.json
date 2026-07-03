@@ -69,17 +69,17 @@
   },
   "startline_value": {
     "headline": "A destination-race concept built around the island decision journey.",
-    "intro": "StartLine Sites keeps the ferry, lodging, island course, and post-race celebration story close to the official Race Roster handoff while keeping this preview private and noindex.",
+    "intro": "StartLine Sites keeps the ferry, lodging, island course, and post-race celebration story close to the official Race Roster registration path while keeping review access controlled.",
     "improved": [
-      "Places the date, La Pointe location, Joni’s Beach start/finish, prices, field caps, and Race Roster path before the click-through decision.",
+      "Places the date, La Pointe location, Joni’s Beach start/finish, prices, field caps, and Race Roster path before the registration decision.",
       "Surfaces ferry timing, packet pickup, course surface, aid frequency, and transfer/refund rules in a runner checklist.",
       "Frames Madeline Island as a travel weekend while preserving public race facts and avoiding performance claims beyond the published course certification.",
-      "Connects each major registration link to a distinct page placement so outbound entry interest can be reviewed after launch."
+      "Keeps official registration links easy to find after runners review the race-day, travel, and policy details."
     ],
     "paid_includes": [
       "Premium one-page Destination Major implementation for private review.",
       "SEO-ready SportsEvent metadata with noindex private route controls.",
-      "Registration-click tracking setup by CTA placement.",
+      "Clear official-registration links throughout the private preview.",
       "No customer send, no public launch, and no guaranteed growth claims."
     ]
   },
@@ -259,7 +259,7 @@
       {
         "id": "course",
         "label": "Course notes",
-        "value": "Loop courses with short out-and-back portions; mainly paved roadway with approximately 3 to 4 miles of gravel road; marathon #WI17014DM and half #WI17013DM",
+        "value": "Loop courses with short out-and-back portions; mainly paved roadway with approximately 3 to 4 miles of gravel road",
         "source_path": "distances[].profile",
         "applies_to_distance_ids": [
           "marathon",
@@ -307,7 +307,7 @@
   },
   "seo": {
     "meta_title": "Madeline Island Marathon — Private Destination Major Concept",
-    "meta_description": "Private Destination Major mockup for Madeline Island Marathon & Half Marathon with ferry, lodging, race-weekend logistics, and Race Roster click measurement."
+    "meta_description": "Private Destination Major mockup for Madeline Island Marathon & Half Marathon with ferry, lodging, race-weekend logistics, and Race Roster registration details."
   },
   "private_mockup": {
     "generated": false,
@@ -522,7 +522,7 @@
       "low": 0
     },
     "uncertainty": {
-      "summary": "Fixture uses public source facts from the race home, about, run, and photos pages plus public image/PDF assets. Registration is shown as the public Race Roster handoff even though the source page says 2026 registration is sold out and transfers were available through April 16.",
+      "summary": "Fixture uses public source facts from the race home, about, run, and photos pages plus public image/PDF assets. Registration is shown as the public Race Roster destination even though the source page says 2026 registration is sold out and transfers were available through April 16.",
       "items": [
         {
           "path": "registration.cta_label",

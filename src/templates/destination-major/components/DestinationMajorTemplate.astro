@@ -28,10 +28,10 @@ const registrationLabel = registrationStatusCopy?.cta || race.registration?.cta_
 const platformLabel = registrationPlatformLabel(race.registration?.platform);
 const privateValue = privateValueNarrativeForRace(race, {
   headline: 'A premium race story with the registration path pulled into focus.',
-  intro: 'This preview keeps the cinematic destination race language while making runner decisions, trust signals, and registration clicks easier to see.',
+  intro: 'This preview keeps the cinematic destination race language while making runner decisions, trust signals, and the official registration path easier to see.',
   improved: [
     'Clear race details sit before registration decisions.',
-    'Registration calls-to-action use distinct measurement-ready placements.',
+    'Official registration links stay visible at the moments runners are ready to act.',
     'Preview proof modules stay out of the public destination preview.'
   ]
 });
@@ -209,7 +209,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
   <div class="nav-links" id="navLinks">
     <a href="#course">Course</a>
     <a href="#raceday">Race Day</a>
-    {(!isPrivateMockup || hasCertification) && <a href="#qualify">{isPrivateMockup ? 'Course facts' : 'Qualify'}</a>}
+    {!isPrivateMockup && hasCertification && <a href="#qualify">Qualify</a>}
     <a href="#entry">Entry</a>
     <a href="#weekend">Weekend</a>
     {hasTravelLogistics && <a href="#travel">Travel</a>}
@@ -297,7 +297,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
         </div>
         <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('runner-checklist-top')}>{registrationLabel}</a>
       </div>
-      <p class="lead">{race.runner_decision_checklist?.intro || 'Key facts a runner needs before continuing to the official registration handoff.'}</p>
+      <p class="lead">{race.runner_decision_checklist?.intro || 'Key facts a runner needs before continuing to the official registration page.'}</p>
       <div class="checklist-grid">
         {checklistItems.map((item) => (
           <article class="check-card reveal" data-checklist-item-id={item.id}>
@@ -339,18 +339,18 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
   <section class="measurement-panel major-private" aria-labelledby="measurement-panel-title" data-measurement-ready-panel>
     <div class="wrap measurement-wrap">
       <div>
-        <div class="kicker">Registration handoff</div>
-        <h2 class="sec-title" id="measurement-panel-title">Official entry clicks are ready to evaluate.</h2>
+        <div class="kicker">Official registration</div>
+        <h2 class="sec-title" id="measurement-panel-title">The official registration path stays clear wherever runners decide.</h2>
       </div>
-      <div class="measurement-list" aria-label="Official entry link locations">
-        <span>Top navigation</span>
-        <span>Opening section</span>
-        <span>Runner checklist</span>
-        <span>Entry options</span>
-        <span>Final reminder</span>
+      <div class="measurement-list" aria-label="Official registration reminders">
+        <span>Start with basics</span>
+        <span>Review island plans</span>
+        <span>Compare distances</span>
+        <span>Check availability</span>
+        <span>Finish on Race Roster</span>
       </div>
       <p>
-        Each official registration link can distinguish where the outbound click started, which device context runners used, and which official provider received the handoff. Completed entries, payment, and confirmation still happen on {platformLabel}.
+        Runners can review the island-weekend details on this page, then continue to {platformLabel} when they are ready. Completed entries, payment, transfers, and confirmation still happen on the official registration provider.
       </p>
     </div>
   </section>
@@ -359,8 +359,8 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 {showTrustSignalsBand && (
   <section class="trust-band major-private" aria-labelledby="trust-signals-title" data-trust-signals-band>
     <div class="wrap">
-      <h2 class="visually-hidden" id="trust-signals-title">Runner trust signals</h2>
-      <div class="kicker">Runner trust signals</div>
+      <h2 class="visually-hidden" id="trust-signals-title">Verified course and runner details</h2>
+      <div class="kicker">Course and registration facts</div>
       <div class="trust-grid">
         {trustSignals.map((signal) => (
           <article>
@@ -455,22 +455,22 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 </section>
 
 <!-- QUALIFYING -->
-{(!isPrivateMockup || hasCertification) && <section class="bq" id="qualify" aria-labelledby="qualify-title">
+{!isPrivateMockup && hasCertification && <section class="bq" id="qualify" aria-labelledby="qualify-title">
   <div class="wrap">
     <div class="reveal">
-      <div class="kicker">{isPrivateMockup ? 'Course certification' : 'Boston Qualifying'}</div>
-      <h2 class="sec-title" id="qualify-title">{isPrivateMockup ? 'Course certification on the page.' : 'Built so your time actually counts.'}</h2>
+      <div class="kicker">Boston Qualifying</div>
+      <h2 class="sec-title" id="qualify-title">Built so your time actually counts.</h2>
     </div>
-    <p class="lead reveal">{isPrivateMockup ? primaryDistance.certification : "Cascade is USATF-certified (course #OR-26-CASCADE) and a Boston Marathon qualifying race. Run your number here and you'll have a verified result that the B.A.A. accepts."}</p>
+    <p class="lead reveal">Cascade is USATF-certified (course #OR-26-CASCADE) and a Boston Marathon qualifying race. Run your number here and you'll have a verified result that the B.A.A. accepts.</p>
 
     <div class="bq-grid">
       <div class="bq-note reveal">
-        <h3>{isPrivateMockup ? 'Course facts' : 'Why runners chase a BQ here'}</h3>
-        {isPrivateMockup ? <p>{sourceCourseFacts}</p> : <><p>The net-downhill profile plays to even-paced running, the September date sits in the sweet spot of fall fitness, and the small, fast field means clean lines from gun to tape.</p><p>Live, chip-verified splits post to your B.A.A.-ready certificate within 24 hours of finishing — no waiting, no manual submission.</p></>}
-        <span class="bq-badge">✓ {isPrivateMockup ? 'Course certification listed' : 'B.A.A. Qualifier · Certified Course'}</span>
+        <h3>Why runners chase a BQ here</h3>
+        <p>The net-downhill profile plays to even-paced running, the September date sits in the sweet spot of fall fitness, and the small, fast field means clean lines from gun to tape.</p><p>Live, chip-verified splits post to your B.A.A.-ready certificate within 24 hours of finishing — no waiting, no manual submission.</p>
+        <span class="bq-badge">✓ B.A.A. Qualifier · Certified Course</span>
       </div>
 
-      {!isPrivateMockup && <div class="reveal">
+      <div class="reveal">
         <table class="bq-table">
           <thead><tr><th>Age Group</th><th>Men</th><th>Women</th></tr></thead>
           <tbody>
@@ -485,7 +485,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
             <tr><td>70+</td><td class="t">4:20:00</td><td class="t">4:50:00</td></tr>
           </tbody>
         </table>
-      </div>}
+      </div>
     </div>
   </div>
 </section>}
@@ -505,7 +505,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
           <strong>{registrationStatusCopy.label}</strong>
         </div>
         {registrationStatusCopy.detail && <p>{registrationStatusCopy.detail}</p>}
-        <a class="btn btn-dark" href={registrationUrl} {...registerAttrs('entry-status-card')}>{registrationLabel}</a>
+        <a class={`btn ${isPrivateMockup ? 'btn-accent' : 'btn-dark'}`} href={registrationUrl} {...registerAttrs('entry-status-card')}>{registrationLabel}</a>
       </aside>
     )}
 
@@ -517,7 +517,6 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
         <ul>
           {tier.distance && <li>{tier.distance}</li>}
           {tier.profile && <li>{tier.profile}</li>}
-          {tier.certification && <li>{tier.certification}</li>}
           {tier.aid_stations && <li>{tier.aid_stations} aid stations listed</li>}
         </ul>
         <a class="btn btn-accent" href={registrationUrl} {...registerAttrs(`entry-distance-${tier.id || 'primary'}`)}>{registrationLabel}</a>
@@ -661,7 +660,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
       <div class="brand"><svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M2 32 14 10l7 12 5-8 12 18z" fill="#FF5B2E"/><path d="M2 32 14 10l4.5 7.7L9 32z" fill="#F0A94B"/></svg><span>{raceName}<small>{race.identity?.edition || 'Marathon'}</small></span></div>
       <p>{isPrivateMockup ? `${raceDateLabel}. ${raceLocation}.` : 'A point-to-point Boston qualifier from the Cascade foothills to the Pacific coast. September 20, 2026.'}</p>
     </div>
-    <div><div class="foot-title">Race</div><ul><li><a href="#course">Course</a></li>{(!isPrivateMockup || hasCertification) && <li><a href="#qualify">{isPrivateMockup ? 'Course facts' : 'Qualifying'}</a></li>}<li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
+    <div><div class="foot-title">Race</div><ul><li><a href="#course">Course</a></li>{!isPrivateMockup && hasCertification && <li><a href="#qualify">Qualifying</a></li>}<li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
     <div><div class="foot-title">Runners</div><ul>{hasTravelLogistics && <li><a href="#travel">Travel</a></li>}<li><a href="#faq">FAQ</a></li>{!isPrivateMockup && <><li><a href="#">Results</a></li><li><a href="#">Volunteer</a></li></>}</ul></div>
     {!isPrivateMockup && <div><div class="foot-title">Connect</div><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>}
   </div>
