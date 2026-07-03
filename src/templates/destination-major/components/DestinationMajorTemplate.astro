@@ -271,11 +271,11 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 </div>
 
 {isPrivateMockup && (
-  <section class="private-value major-private" data-private-value-narrative>
+  <section class="private-value major-private" aria-labelledby="private-value-title" data-private-value-narrative>
     <div class="wrap private-grid">
       <div>
         <div class="kicker">Race website preview</div>
-        <h2 class="sec-title">{privateValue.headline}</h2>
+        <h2 class="sec-title" id="private-value-title">{privateValue.headline}</h2>
       </div>
       <div class="private-panel">
         <p>{privateValue.intro}</p>
@@ -288,12 +288,12 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 )}
 
 {hasRunnerChecklist && (
-  <section id="runner-checklist" class="runner-checklist major-private" data-runner-decision-checklist>
+  <section id="runner-checklist" class="runner-checklist major-private" aria-labelledby="runner-checklist-title" data-runner-decision-checklist>
     <div class="wrap">
       <div class="private-section-head">
         <div>
           <div class="kicker">Before runners commit</div>
-          <h2 class="sec-title">{race.runner_decision_checklist?.headline || 'Runner decision checklist'}</h2>
+          <h2 class="sec-title" id="runner-checklist-title">{race.runner_decision_checklist?.headline || 'Runner decision checklist'}</h2>
         </div>
         <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('runner-checklist-top')}>{registrationLabel}</a>
       </div>
@@ -316,11 +316,11 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 )}
 
 {isPrivateMockup && (
-  <section class="registration-decision major-private" data-registration-decision-card>
+  <section class="registration-decision major-private" aria-labelledby="registration-decision-title" data-registration-decision-card>
     <div class="wrap decision-wrap">
       <div>
         <div class="kicker">{registrationDecisionCopy.kicker}</div>
-        <h2 class="sec-title">{registrationDecisionCopy.headline}</h2>
+        <h2 class="sec-title" id="registration-decision-title">{registrationDecisionCopy.headline}</h2>
       </div>
       <div class="decision-card">
         <p>{registrationDecisionCopy.body}</p>
@@ -336,11 +336,11 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 )}
 
 {isPrivateMockup && (
-  <section class="measurement-panel major-private" data-measurement-ready-panel>
+  <section class="measurement-panel major-private" aria-labelledby="measurement-panel-title" data-measurement-ready-panel>
     <div class="wrap measurement-wrap">
       <div>
         <div class="kicker">Registration handoff</div>
-        <h2 class="sec-title">Official entry clicks are ready to evaluate.</h2>
+        <h2 class="sec-title" id="measurement-panel-title">Official entry clicks are ready to evaluate.</h2>
       </div>
       <div class="measurement-list" aria-label="Official entry link locations">
         <span>Top navigation</span>
@@ -357,8 +357,9 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 )}
 
 {showTrustSignalsBand && (
-  <section class="trust-band major-private" data-trust-signals-band>
+  <section class="trust-band major-private" aria-labelledby="trust-signals-title" data-trust-signals-band>
     <div class="wrap">
+      <h2 class="visually-hidden" id="trust-signals-title">Runner trust signals</h2>
       <div class="kicker">Runner trust signals</div>
       <div class="trust-grid">
         {trustSignals.map((signal) => (
@@ -374,12 +375,12 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 )}
 
 <!-- COURSE -->
-<section class="course" id="course">
+<section class="course" id="course" aria-labelledby="course-title">
   <div class="wrap">
     <div class="course-head">
       <div class="reveal">
         <div class="kicker">The Course</div>
-        <h2 class="sec-title">{courseTitle}</h2>
+        <h2 class="sec-title" id="course-title">{courseTitle}</h2>
       </div>
       <p class="lead reveal">{courseLead}</p>
     </div>
@@ -413,12 +414,12 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 </section>
 
 <!-- RACE DAY GALLERY -->
-<section class="gallery" id="raceday">
+<section class="gallery" id="raceday" aria-labelledby="raceday-title">
   <div class="wrap">
     <div class="gal-head">
       <div class="reveal">
         <div class="kicker">Race Day</div>
-        <h2 class="sec-title">{galleryHeadline}</h2>
+        <h2 class="sec-title" id="raceday-title">{galleryHeadline}</h2>
       </div>
       <p class="lead reveal">{galleryLead}</p>
     </div>
@@ -454,11 +455,11 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 </section>
 
 <!-- QUALIFYING -->
-{(!isPrivateMockup || hasCertification) && <section class="bq" id="qualify">
+{(!isPrivateMockup || hasCertification) && <section class="bq" id="qualify" aria-labelledby="qualify-title">
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">{isPrivateMockup ? 'Course certification' : 'Boston Qualifying'}</div>
-      <h2 class="sec-title">{isPrivateMockup ? 'Course certification on the page.' : 'Built so your time actually counts.'}</h2>
+      <h2 class="sec-title" id="qualify-title">{isPrivateMockup ? 'Course certification on the page.' : 'Built so your time actually counts.'}</h2>
     </div>
     <p class="lead reveal">{isPrivateMockup ? primaryDistance.certification : "Cascade is USATF-certified (course #OR-26-CASCADE) and a Boston Marathon qualifying race. Run your number here and you'll have a verified result that the B.A.A. accepts."}</p>
 
@@ -490,11 +491,11 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 </section>}
 
 <!-- ENTRY -->
-<section id="entry">
+<section id="entry" aria-labelledby="entry-title">
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Secure Your Place</div>
-      <h2 class="sec-title">{isPrivateMockup ? 'Registration options for race day.' : 'Three ways through the start line.'}</h2>
+      <h2 class="sec-title" id="entry-title">{isPrivateMockup ? 'Registration options for race day.' : 'Three ways through the start line.'}</h2>
     </div>
 
     {registrationStatusCopy && (
@@ -567,11 +568,11 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 </section>
 
 <!-- WEEKEND -->
-<section class="sched" id="weekend">
+<section class="sched" id="weekend" aria-labelledby="weekend-title">
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Race Weekend</div>
-      <h2 class="sec-title">{isPrivateMockup ? 'Race-weekend schedule.' : 'Three days of festival, one perfect morning.'}</h2>
+      <h2 class="sec-title" id="weekend-title">{isPrivateMockup ? 'Race-weekend schedule.' : 'Three days of festival, one perfect morning.'}</h2>
     </div>
     <div class="timeline">
       {isPrivateMockup ? scheduleItems.map((item) => <div class="tl-item reveal"><div class="tl-day">{item.day}</div><h3>{item.name}</h3>{item.location && <p>{item.location}</p>}<span class="tl-time">{item.time}</span></div>) : <>
@@ -585,12 +586,12 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 </section>
 
 <!-- TRAVEL -->
-{hasTravelLogistics && <section class="travel-logistics" id="travel">
+{hasTravelLogistics && <section class="travel-logistics" id="travel" aria-labelledby="travel-title">
   <div class="wrap">
     <div class="travel-head reveal">
       <div>
         <div class="kicker">Plan Your Trip</div>
-        <h2 class="sec-title">{travelLogistics.headline || 'Getting There / Where to Stay'}</h2>
+        <h2 class="sec-title" id="travel-title">{travelLogistics.headline || 'Getting There / Where to Stay'}</h2>
       </div>
       {hasText(travelLogistics.intro) && <p class="lead">{travelLogistics.intro}</p>}
     </div>
@@ -622,11 +623,11 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 </div>}
 
 <!-- FAQ -->
-<section id="faq">
+<section id="faq" aria-labelledby="faq-title">
   <div class="wrap">
     <div class="reveal">
       <div class="kicker">Good to Know</div>
-      <h2 class="sec-title">Questions, answered.</h2>
+      <h2 class="sec-title" id="faq-title">Questions, answered.</h2>
     </div>
     <div class="faq-list" id="faqList">
       {isPrivateMockup ? faqItems.map((faq) => <div class="faq-item"><button class="faq-q">{faq.question}<span class="pm"></span></button><div class="faq-a"><p>{faq.answer}</p></div></div>) : <>
@@ -641,9 +642,9 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 </section>
 
 <!-- FINAL CTA -->
-<section class="finale">
+<section class="finale" aria-labelledby="finale-title">
   <div class="wrap">
-    <h2>{isPrivateMockup ? 'Ready to review the official entry path?' : 'Your fastest'}{!isPrivateMockup && <><br/>marathon awaits.</>}</h2>
+    <h2 id="finale-title">{isPrivateMockup ? 'Ready to review the official entry path?' : 'Your fastest'}{!isPrivateMockup && <><br/>marathon awaits.</>}</h2>
     <p>{isPrivateMockup ? 'Continue to the official registration provider.' : 'Join the list for ballot reminders, training plans, and first access to the 2026 start line.'}</p>
     <div class="signup">
       <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('finale-primary')}>Register for {raceName}</a>
@@ -660,9 +661,9 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
       <div class="brand"><svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M2 32 14 10l7 12 5-8 12 18z" fill="#FF5B2E"/><path d="M2 32 14 10l4.5 7.7L9 32z" fill="#F0A94B"/></svg><span>{raceName}<small>{race.identity?.edition || 'Marathon'}</small></span></div>
       <p>{isPrivateMockup ? `${raceDateLabel}. ${raceLocation}.` : 'A point-to-point Boston qualifier from the Cascade foothills to the Pacific coast. September 20, 2026.'}</p>
     </div>
-    <div><h2 class="foot-title">Race</h2><ul><li><a href="#course">Course</a></li>{(!isPrivateMockup || hasCertification) && <li><a href="#qualify">{isPrivateMockup ? 'Course facts' : 'Qualifying'}</a></li>}<li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
-    <div><h2 class="foot-title">Runners</h2><ul>{hasTravelLogistics && <li><a href="#travel">Travel</a></li>}<li><a href="#faq">FAQ</a></li>{!isPrivateMockup && <><li><a href="#">Results</a></li><li><a href="#">Volunteer</a></li></>}</ul></div>
-    {!isPrivateMockup && <div><h2 class="foot-title">Connect</h2><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>}
+    <div><div class="foot-title">Race</div><ul><li><a href="#course">Course</a></li>{(!isPrivateMockup || hasCertification) && <li><a href="#qualify">{isPrivateMockup ? 'Course facts' : 'Qualifying'}</a></li>}<li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
+    <div><div class="foot-title">Runners</div><ul>{hasTravelLogistics && <li><a href="#travel">Travel</a></li>}<li><a href="#faq">FAQ</a></li>{!isPrivateMockup && <><li><a href="#">Results</a></li><li><a href="#">Volunteer</a></li></>}</ul></div>
+    {!isPrivateMockup && <div><div class="foot-title">Connect</div><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>}
   </div>
   <div class="foot-bottom">
     <span>© 2026 {raceName}. {isPrivateMockup ? 'Race website preview.' : 'A demo concept site.'}</span>
