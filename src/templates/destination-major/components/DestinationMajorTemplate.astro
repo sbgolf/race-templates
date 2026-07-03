@@ -2,7 +2,7 @@
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 import { registrationPlatformLabel } from "../../../shared/registration-platform-label.mjs";
 import { shouldRenderTrustSignalsBand, trustSignalsForRace } from "../../../shared/private-mockup-trust.mjs";
-import { measurementReadyCopyForRace, privateValueNarrativeForRace, registrationDecisionCopyForRace } from "../../../shared/private-mockup-value.mjs";
+import { privateValueNarrativeForRace, registrationDecisionCopyForRace } from "../../../shared/private-mockup-value.mjs";
 
 const { race } = Astro.props;
 const isPrivateMockup = Boolean(race.private_mockup);
@@ -23,15 +23,11 @@ const registrationDecisionCopy = registrationDecisionCopyForRace(race, {
   headline: 'Make the next step unmistakable.',
   body: 'Runners stay in the destination experience until they are ready to move to the official registration provider.'
 });
-const measurementCopy = measurementReadyCopyForRace(race, {
-  headline: 'Every registration click has a clean placement.',
-  intro: 'This page prepares registration click intent and platform metadata without claiming completed registration outcomes.'
-});
 const registerAttrs = (placement) => registerClickAttributes(race, placement);
 const checklistItems = Array.isArray(race.runner_decision_checklist?.items) ? race.runner_decision_checklist.items : [];
 const hasRunnerChecklist = isPrivateMockup && checklistItems.length > 0;
 const trustSignals = trustSignalsForRace(race);
-const showTrustSignalsBand = isPrivateMockup && shouldRenderTrustSignalsBand(race);
+const showTrustSignalsBand = isPrivateMockup && !hasRunnerChecklist && shouldRenderTrustSignalsBand(race);
 const primaryDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0] || {};
 const entryTiers = (race.distances?.length ? race.distances : [primaryDistance]).filter(Boolean);
 const scheduleItems = Array.isArray(race.schedule) ? race.schedule : [];
@@ -49,8 +45,7 @@ const privateStatItems = isPrivateMockup ? [
   primaryDistance.distance ? { value: primaryDistance.distance, label: primaryDistance.name || 'Distance' } : null,
   primaryDistance.start_time ? { value: primaryDistance.start_time, label: 'Start time' } : null,
   primaryDistance.price ? { value: primaryDistance.price, label: 'Entry price' } : null,
-  primaryDistance.aid_stations ? { value: String(primaryDistance.aid_stations), label: 'Aid stations' } : null,
-  primaryDistance.certification ? { value: primaryDistance.certification, label: 'Certification' } : null
+  primaryDistance.aid_stations ? { value: String(primaryDistance.aid_stations), label: 'Aid stations' } : null
 ].filter(Boolean) : [];
 const hasCertification = Boolean(primaryDistance.certification);
 const sourceCourseFacts = [primaryDistance.profile, primaryDistance.certification].filter(Boolean).join(' · ');
@@ -68,26 +63,6 @@ const courseFeatureItems = isPrivateMockup
       { icon: '🌊', title: 'Finish at the Pacific', text: 'The final straight runs onto the boardwalk at Pacific City, the ocean in full view as you cross.' }
     ];
 const galleryLead = isPrivateMockup ? (race.story?.paragraphs?.[0] || raceTagline) : 'From the gun in the Cascade foothills to the boardwalk at Pacific City — three hours of running through some of the most photographed terrain on the West Coast.';
-const privateEntryPlacements = entryTiers.map((tier) => `entry-distance-${tier.id || 'primary'}`);
-const measurementPlacements = [
-  'nav-button',
-  'hero-primary',
-  ...(hasRunnerChecklist ? ['runner-checklist-top', 'runner-checklist-footer'] : []),
-  'registration-decision-card',
-  ...(isPrivateMockup ? privateEntryPlacements : [`entry-distance-${primaryDistance.id || 'ballot'}`, 'entry-guaranteed', 'entry-charity']),
-  'finale-primary'
-];
-const parseStartTime = (value) => {
-  const match = String(value || '').trim().match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)?$/i);
-  if (!match) return '00:00:00';
-  let hour = Number(match[1]);
-  const minute = match[2] || '00';
-  const meridiem = match[3]?.toUpperCase();
-  if (meridiem === 'PM' && hour < 12) hour += 12;
-  if (meridiem === 'AM' && hour === 12) hour = 0;
-  return `${String(hour).padStart(2, '0')}:${minute}:00`;
-};
-const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(primaryDistance.start_time || '6:45 AM')}-07:00`;
 ---
 
 <!-- NAV -->
@@ -99,7 +74,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
   <div class="nav-links" id="navLinks">
     <a href="#course">Course</a>
     <a href="#raceday">Race Day</a>
-    {(!isPrivateMockup || hasCertification) && <a href="#qualify">Qualify</a>}
+    {(!isPrivateMockup || hasCertification) && <a href="#qualify">{isPrivateMockup ? 'Course facts' : 'Qualify'}</a>}
     <a href="#entry">Entry</a>
     <a href="#weekend">Weekend</a>
     {!isPrivateMockup && <a href="#travel">Travel</a>}
@@ -127,13 +102,6 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
       <span><span class="dot">●</span> {raceDateLabel}</span>
       <span><span class="dot">●</span> {raceLocation}</span>
       <span><span class="dot">●</span> {primaryDistance.distance || '26.2 miles'}{primaryDistance.profile ? ` · ${primaryDistance.profile}` : ' · net downhill'}</span>
-    </div>
-
-    <div class="countdown" id="countdown" aria-label="Countdown to race day">
-<div class="cd-unit"><div class="cd-num" id="cd-d">--</div><div class="cd-lab">Days</div></div>
-      <div class="cd-unit"><div class="cd-num" id="cd-h">--</div><div class="cd-lab">Hours</div></div>
-      <div class="cd-unit"><div class="cd-num" id="cd-m">--</div><div class="cd-lab">Minutes</div></div>
-      <div class="cd-unit"><div class="cd-num" id="cd-s">--</div><div class="cd-lab">Seconds</div></div>
     </div>
 
     <div class="hero-cta">
@@ -198,8 +166,8 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
         ))}
       </div>
       <div class="checklist-footer">
-        <span>Registration continues on {platformLabel}; this preview tracks the click-through path only.</span>
-        <a class="btn btn-dark" href={registrationUrl} {...registerAttrs('runner-checklist-footer')}>Continue to registration</a>
+        <span>Registration continues on {platformLabel}; runners leave this page for the official provider.</span>
+        <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('runner-checklist-footer')}>Continue to registration</a>
       </div>
     </div>
   </section>
@@ -215,9 +183,8 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
       <div class="decision-card">
         <p>{registrationDecisionCopy.body}</p>
         <dl>
-          <div><dt>Official handoff</dt><dd>{platformLabel}</dd></div>
-          <div><dt>Primary CTA</dt><dd>{registrationLabel}</dd></div>
-          <div><dt>Measurement</dt><dd>Registration click intent by placement</dd></div>
+          <div><dt>Official registration</dt><dd>{platformLabel}</dd></div>
+          <div><dt>Next step</dt><dd>{registrationLabel}</dd></div>
         </dl>
         <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('registration-decision-card')}>Continue to official registration</a>
       </div>
@@ -357,7 +324,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
 {(!isPrivateMockup || hasCertification) && <section class="bq" id="qualify">
   <div class="wrap">
     <div class="reveal">
-      <div class="kicker">Boston Qualifying</div>
+      <div class="kicker">{isPrivateMockup ? 'Course certification' : 'Boston Qualifying'}</div>
       <h2 class="sec-title">{isPrivateMockup ? 'Course certification on the page.' : 'Built so your time actually counts.'}</h2>
     </div>
     <p class="lead reveal">{isPrivateMockup ? primaryDistance.certification : "Cascade is USATF-certified (course #OR-26-CASCADE) and a Boston Marathon qualifying race. Run your number here and you'll have a verified result that the B.A.A. accepts."}</p>
@@ -408,7 +375,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
           {tier.certification && <li>{tier.certification}</li>}
           {tier.aid_stations && <li>{tier.aid_stations} aid stations listed</li>}
         </ul>
-        <a class="btn btn-dark" href={registrationUrl} {...registerAttrs(`entry-distance-${tier.id || 'primary'}`)}>{registrationLabel}</a>
+        <a class="btn btn-accent" href={registrationUrl} {...registerAttrs(`entry-distance-${tier.id || 'primary'}`)}>{registrationLabel}</a>
       </div>) : <>
         <div class="tier reveal">
           <h3>Ballot</h3>
@@ -518,23 +485,6 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
   </div>
 </section>
 
-{isPrivateMockup && (
-  <section class="measurement-panel major-private" data-measurement-ready-panel>
-    <div class="wrap measurement-wrap">
-      <div>
-        <div class="kicker">{measurementCopy.kicker}</div>
-        <h2 class="sec-title">{measurementCopy.headline}</h2>
-      </div>
-      <div class="measurement-list">
-        {measurementPlacements.map((placement) => (
-          <span>{placement}</span>
-        ))}
-      </div>
-      <p>{measurementCopy.intro}</p>
-    </div>
-  </section>
-)}
-
 <!-- FINAL CTA -->
 <section class="finale">
   <div class="wrap">
@@ -555,7 +505,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
       <div class="brand"><svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M2 32 14 10l7 12 5-8 12 18z" fill="#FF5B2E"/><path d="M2 32 14 10l4.5 7.7L9 32z" fill="#F0A94B"/></svg><span>{raceName}<small>{race.identity?.edition || 'Marathon'}</small></span></div>
       <p>{isPrivateMockup ? `${raceDateLabel}. ${raceLocation}.` : 'A point-to-point Boston qualifier from the Cascade foothills to the Pacific coast. September 20, 2026.'}</p>
     </div>
-    <div><h2 class="foot-title">Race</h2><ul><li><a href="#course">Course</a></li>{(!isPrivateMockup || hasCertification) && <li><a href="#qualify">Qualifying</a></li>}<li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
+    <div><h2 class="foot-title">Race</h2><ul><li><a href="#course">Course</a></li>{(!isPrivateMockup || hasCertification) && <li><a href="#qualify">{isPrivateMockup ? 'Course facts' : 'Qualifying'}</a></li>}<li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
     <div><h2 class="foot-title">Runners</h2><ul>{!isPrivateMockup && <li><a href="#travel">Travel</a></li>}<li><a href="#faq">FAQ</a></li>{!isPrivateMockup && <><li><a href="#">Results</a></li><li><a href="#">Volunteer</a></li></>}</ul></div>
     {!isPrivateMockup && <div><h2 class="foot-title">Connect</h2><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>}
   </div>
@@ -567,7 +517,7 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
 
 <script is:inline>
   // ---- smooth scroll helper ----
-  function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});closeMenu();}
+  function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});closeMenu();}
 
   // ---- nav scroll state ----
   const nav=document.getElementById('nav');
@@ -578,19 +528,6 @@ const countdownIso = `${race.event?.date || '2026-09-20'}T${parseStartTime(prima
   function closeMenu(){navLinks.classList.remove('open')}
   burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
   navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-
-  // ---- countdown ----
-  const RACE=new Date({JSON.stringify(countdownIso)}).getTime();
-  function tick(){
-    const now=Date.now(),d=RACE-now;
-    if(d<0)return;
-    const dd=Math.floor(d/86400000),hh=Math.floor(d%86400000/3600000),mm=Math.floor(d%3600000/60000),ss=Math.floor(d%60000/1000);
-    document.getElementById('cd-d').textContent=dd;
-    document.getElementById('cd-h').textContent=String(hh).padStart(2,'0');
-    document.getElementById('cd-m').textContent=String(mm).padStart(2,'0');
-    document.getElementById('cd-s').textContent=String(ss).padStart(2,'0');
-  }
-  tick();setInterval(tick,1000);
 
   // ---- elevation profile ----
   if(document.getElementById('elevSvg')){
