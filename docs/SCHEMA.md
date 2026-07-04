@@ -2,7 +2,7 @@
 
 The schema is the shared data contract for all customer race sites.
 
-Current top-level groups expected by templates include: `identity`, `event`, `distances`, `registration`, `qualifying`, `schedule`, `travel`, `travel_logistics`, `proof`, `course`, `records`, `entry_tiers`, `sponsors`, `faqs`, `charity`, `seo`, `analytics`, `email_capture`, `volunteer`, and `contact`.
+Current top-level groups expected by templates include: `identity`, `event`, `distances`, `registration`, `qualifying`, `schedule`, `travel`, `travel_logistics`, `proof`, `course`, `records`, `entry_tiers`, `sponsors`, `faqs`, `charity`, `seo`, `analytics`, `email_capture`, `volunteer`, `contacts`, and `social`.
 
 ## Sponsors
 
@@ -30,6 +30,29 @@ Templates must continue supporting flat string arrays so existing sample configs
 ## Shared optional fields
 
 - `identity.hero_image` (optional): image object for hero art/photography. Template implementations may use a real image URL or a local placeholder object while awaiting customer assets.
+
+## Social/contact links
+
+`social` is an optional top-level object for a compact, reusable row of circular social/contact icons. Community, Destination Major, and Performance currently render this row in their footer brand area when at least one configured link is present. If `social` is omitted or all fields are blank, templates render nothing and leave no placeholder gap.
+
+```json
+{
+  "social": {
+    "facebook": "https://www.facebook.com/example-race",
+    "x": "https://x.com/example_race",
+    "instagram": "https://www.instagram.com/example_race/",
+    "email": "hello@example.com"
+  }
+}
+```
+
+- `facebook` (optional): absolute Facebook URL.
+- `instagram` (optional): absolute Instagram URL.
+- `x` (optional): absolute X URL. Preferred for new intake.
+- `twitter` (optional): legacy alias for X/Twitter. Renderers use `x` when both are present.
+- `email` (optional): plain email address; renderers convert it to `mailto:`.
+
+Use approved customer links only. Public demos must use fictional/generic example links such as `example.com` pages or platform example handles; do not hardcode customer-specific social data in templates.
 
 ## Registration status
 

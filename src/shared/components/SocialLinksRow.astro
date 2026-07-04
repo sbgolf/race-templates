@@ -1,0 +1,116 @@
+---
+const { race, variant = 'default', label = 'Follow or contact the race' } = Astro.props;
+
+const hasText = (value) => typeof value === 'string' && value.trim().length > 0;
+const normalizeUrl = (value) => hasText(value) ? value.trim() : '';
+const normalizeEmail = (value) => {
+  if (!hasText(value)) return '';
+  const trimmed = value.trim();
+  return trimmed.startsWith('mailto:') ? trimmed.slice(7) : trimmed;
+};
+
+const social = race?.social || {};
+const email = normalizeEmail(social.email);
+const links = [
+  social.facebook ? {
+    key: 'facebook',
+    label: 'Facebook',
+    href: normalizeUrl(social.facebook),
+    external: true,
+    svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 8.2V6.7c0-.7.5-.9 1-.9h1.7V3.1L14.5 3c-2.7 0-4.2 1.6-4.2 4.5v.7H8v3h2.3V21h3.1v-9.8h2.6l.4-3h-3Z"/></svg>'
+  } : null,
+  (social.x || social.twitter) ? {
+    key: 'x',
+    label: 'X / Twitter',
+    href: normalizeUrl(social.x || social.twitter),
+    external: true,
+    svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.8 10.6 20.4 3h-2.1l-5.4 6.2L8.6 3H3.4l6.9 9.9L3.1 21h2.1l6-6.8 4.7 6.8h5.1l-7.2-10.4Zm-2 2.2-.9-1.2-4-6.7h1l4.1 5.9.9 1.2 4.3 7h-1l-4.4-6.2Z"/></svg>'
+  } : null,
+  social.instagram ? {
+    key: 'instagram',
+    label: 'Instagram',
+    href: normalizeUrl(social.instagram),
+    external: true,
+    svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.7 3h8.6A4.7 4.7 0 0 1 21 7.7v8.6a4.7 4.7 0 0 1-4.7 4.7H7.7A4.7 4.7 0 0 1 3 16.3V7.7A4.7 4.7 0 0 1 7.7 3Zm0 2A2.7 2.7 0 0 0 5 7.7v8.6A2.7 2.7 0 0 0 7.7 19h8.6a2.7 2.7 0 0 0 2.7-2.7V7.7A2.7 2.7 0 0 0 16.3 5H7.7Zm4.3 3.1a3.9 3.9 0 1 1 0 7.8 3.9 3.9 0 0 1 0-7.8Zm0 2a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8Zm4.3-2.7a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg>'
+  } : null,
+  email ? {
+    key: 'email',
+    label: 'Email',
+    href: `mailto:${email}`,
+    external: false,
+    svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 5h15A2.5 2.5 0 0 1 22 7.5v9A2.5 2.5 0 0 1 19.5 19h-15A2.5 2.5 0 0 1 2 16.5v-9A2.5 2.5 0 0 1 4.5 5Zm.3 2 7.2 5.1L19.2 7H4.8ZM4 8.9v7.6c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V8.9l-7.4 5.2a1 1 0 0 1-1.2 0L4 8.9Z"/></svg>'
+  } : null
+].filter((link) => link && hasText(link.href));
+---
+
+{links.length ? (
+  <nav class={`social-links-row social-links-row--${variant}`} aria-label={label}>
+    {links.map((link) => (
+      <a
+        class={`social-links-row__link social-links-row__link--${link.key}`}
+        href={link.href}
+        aria-label={`${link.label}${race?.identity?.name ? ` for ${race.identity.name}` : ''}`}
+        title={link.label}
+        target={link.external ? '_blank' : undefined}
+        rel={link.external ? 'noopener noreferrer' : undefined}
+        set:html={link.svg}
+      />
+    ))}
+  </nav>
+) : null}
+
+<style>
+  .social-links-row{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px;
+  }
+  .social-links-row__link{
+    width:44px;
+    min-width:44px;
+    height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:999px;
+    border:1px solid var(--social-link-border, rgba(255,255,255,.22));
+    background:var(--social-link-bg, rgba(255,255,255,.08));
+    color:var(--social-link-color, currentColor);
+    transition:background .2s ease,border-color .2s ease,color .2s ease,transform .2s ease;
+  }
+  .social-links-row__link :global(svg){
+    width:20px;
+    height:20px;
+    display:block;
+    fill:currentColor;
+  }
+  .social-links-row__link:hover{
+    background:var(--social-link-hover-bg, var(--social-link-accent, currentColor));
+    border-color:var(--social-link-hover-border, var(--social-link-accent, currentColor));
+    color:var(--social-link-hover-color, #fff);
+    transform:translateY(-1px);
+  }
+  .social-links-row__link:focus-visible{
+    outline:3px solid var(--social-link-focus, var(--social-link-accent, currentColor));
+    outline-offset:3px;
+  }
+  .social-links-row--community{
+    --social-link-accent:var(--accent, #C6643D);
+    --social-link-color:var(--paper, #FAF6EE);
+    --social-link-hover-color:var(--paper, #FAF6EE);
+  }
+  .social-links-row--destination-major{
+    --social-link-accent:var(--accent, #FF5B2E);
+    --social-link-color:var(--paper, #F6F2EA);
+    --social-link-hover-color:var(--paper, #F6F2EA);
+  }
+  .social-links-row--performance{
+    --social-link-accent:var(--accent-light, #FFD600);
+    --social-link-color:var(--paper, #FAFAFC);
+    --social-link-hover-color:var(--ink, #0A0A12);
+    --social-link-hover-bg:var(--accent-light, #FFD600);
+    --social-link-hover-border:var(--accent-light, #FFD600);
+  }
+</style>
