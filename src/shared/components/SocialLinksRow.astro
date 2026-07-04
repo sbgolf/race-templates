@@ -44,7 +44,7 @@ const links = [
 ---
 
 {links.length ? (
-  <nav class={`social-links-row social-links-row--${variant}`} aria-label={label}>
+  <div class={`social-links-row social-links-row--${variant}`} role="navigation" aria-label={label}>
     {links.map((link) => (
       <a
         class={`social-links-row__link social-links-row__link--${link.key}`}
@@ -56,7 +56,7 @@ const links = [
         set:html={link.svg}
       />
     ))}
-  </nav>
+  </div>
 ) : null}
 
 <style>
