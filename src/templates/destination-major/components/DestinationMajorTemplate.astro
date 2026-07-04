@@ -1,6 +1,7 @@
 ---
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 import { registrationPlatformLabel } from "../../../shared/registration-platform-label.mjs";
+import SocialLinksRow from "../../../shared/components/SocialLinksRow.astro";
 import { shouldRenderTrustSignalsBand, trustSignalsForRace } from "../../../shared/private-mockup-trust.mjs";
 import { privateValueNarrativeForRace, registrationDecisionCopyForRace } from "../../../shared/private-mockup-value.mjs";
 
@@ -659,6 +660,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
     <div>
       <div class="brand"><svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M2 32 14 10l7 12 5-8 12 18z" fill="#FF5B2E"/><path d="M2 32 14 10l4.5 7.7L9 32z" fill="#F0A94B"/></svg><span>{raceName}<small>{race.identity?.edition || 'Marathon'}</small></span></div>
       <p>{isPrivateMockup ? `${raceDateLabel}. ${raceLocation}.` : 'A point-to-point Boston qualifier from the Cascade foothills to the Pacific coast. September 20, 2026.'}</p>
+      <SocialLinksRow race={race} variant="destination-major" />
     </div>
     <div><div class="foot-title">Race</div><ul><li><a href="#course">Course</a></li>{!isPrivateMockup && hasCertification && <li><a href="#qualify">Qualifying</a></li>}<li><a href="#weekend">Weekend</a></li><li><a href="#entry">Entry</a></li></ul></div>
     <div><div class="foot-title">Runners</div><ul>{hasTravelLogistics && <li><a href="#travel">Travel</a></li>}<li><a href="#faq">FAQ</a></li>{!isPrivateMockup && <><li><a href="#">Results</a></li><li><a href="#">Volunteer</a></li></>}</ul></div>

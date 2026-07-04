@@ -47,6 +47,12 @@
       "placeholder": "inline-svg"
     }
   },
+  "social": {
+    "facebook": "https://www.facebook.com/example-race",
+    "x": "https://x.com/example_race",
+    "instagram": "https://www.instagram.com/example_race/",
+    "email": "hello@example.com"
+  },
   "schedule": [
     {"day": "Friday · May 17", "name": "Bib + Race Kit Pickup", "time": "3 – 7 PM", "location": "Hartwell Town Hall", "applies_to_distances": ["all"]},
     {"day": "Saturday · May 18", "name": "Half Marathon & 10K Start", "time": "7:30 AM", "location": "Town Common", "applies_to_distances": ["half", "10k"]},

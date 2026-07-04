@@ -119,6 +119,27 @@ export function validateRaceConfig(config) {
     add(errors, 'contacts.race_director_email', 'Race director email must be a valid email address.');
   }
 
+  if (config.social !== undefined) {
+    if (!isPlainObject(config.social)) {
+      add(errors, 'social', 'Social/contact links must be an object when provided.');
+    } else {
+      ['facebook', 'instagram', 'twitter', 'x'].forEach((field) => {
+        if (config.social[field] !== undefined) {
+          if (!hasText(config.social[field])) add(errors, `social.${field}`, 'Social URL must be a non-empty string when provided.');
+          else if (!URL_PATTERN.test(config.social[field])) add(errors, `social.${field}`, 'Social URL must be absolute and start with http:// or https://.');
+        }
+      });
+      if (config.social.email !== undefined) {
+        const email = hasText(config.social.email) ? config.social.email.replace(/^mailto:/i, '') : '';
+        if (!email) add(errors, 'social.email', 'Social email must be a non-empty string when provided.');
+        else if (!EMAIL_PATTERN.test(email)) add(errors, 'social.email', 'Social email must be a valid email address.');
+      }
+      if (config.social.twitter && config.social.x) {
+        warn(warnings, 'social.x', 'Both social.twitter and social.x are configured; templates prefer social.x.');
+      }
+    }
+  }
+
   if (config.private_mockup !== undefined) {
     if (!isPlainObject(config.private_mockup)) {
       add(errors, 'private_mockup', 'Private mockup metadata must be an object when provided.');

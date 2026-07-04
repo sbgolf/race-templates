@@ -169,5 +169,11 @@
   },
   "contacts": {
     "race_director_email": "director@example.com"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/example-race",
+    "twitter": "https://twitter.com/example_race",
+    "instagram": "https://www.instagram.com/example_race/",
+    "email": "performance@example.com"
   }
 }

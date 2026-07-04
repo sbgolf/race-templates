@@ -42,6 +42,12 @@
   "contacts": {
     "race_director_email": "director@example.com"
   },
+  "social": {
+    "facebook": "https://www.facebook.com/example-race",
+    "x": "https://x.com/example_race",
+    "instagram": "https://www.instagram.com/example_race/",
+    "email": "destination@example.com"
+  },
   "travel_logistics": {
     "headline": "Getting There / Where to Stay",
     "intro": "Make the mountain-to-coast weekend easy to plan with arrival, lodging, shuttle, and packet-pickup details in one place.",

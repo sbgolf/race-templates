@@ -1,5 +1,6 @@
 ---
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
+import SocialLinksRow from "../../../shared/components/SocialLinksRow.astro";
 const { race } = Astro.props;
 const year = race.event?.date ? new Date(`${race.event.date}T12:00:00`).getFullYear() : new Date().getFullYear();
 const registerUrl = race.registration?.url || '#entry';
@@ -38,6 +39,7 @@ const aboutLinks = [
         <span>{race.identity?.name}<small>{race.identity?.tagline}</small></span>
       </div>
       <p>{race.seo?.meta_description || race.identity?.tagline}</p>
+      <SocialLinksRow race={race} variant="community" />
     </div>
     <div><div class="foot-heading">Race</div><ul>{raceLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div>
     {aboutLinks.length ? <div><div class="foot-heading">About</div><ul>{aboutLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div> : null}
