@@ -39,6 +39,14 @@
     "cta_label": "Register now",
     "opens": "2026-01-15"
   },
+  "photo_galleries": [
+    {
+      "label": "View 2025 race photos",
+      "url": "https://example.com/hartwell-half/photos-2025",
+      "provider": "Example Gallery",
+      "year": "2025"
+    }
+  ],
   "volunteer": {
     "signup_url": "https://example.com/volunteer",
     "description": "3–4 hour race-weekend shifts supporting aid stations, cheer corners, packet pickup, and finish-line hospitality.",

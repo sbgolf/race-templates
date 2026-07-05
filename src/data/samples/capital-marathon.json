@@ -160,6 +160,14 @@
     "platform": "other",
     "cta_label": "Register now"
   },
+  "photo_galleries": [
+    {
+      "label": "Review 2025 course photos",
+      "url": "https://example.com/capital-marathon/photos-2025",
+      "provider": "RunSignup",
+      "year": "2025"
+    }
+  ],
   "seo": {
     "meta_title": "The Capital Marathon \u2014 November 8, 2026",
     "meta_description": "The Capital Marathon is a flat, fast, USATF-certified Boston qualifying marathon in Capital City on November 8, 2026."

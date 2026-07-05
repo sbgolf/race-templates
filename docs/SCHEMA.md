@@ -2,7 +2,7 @@
 
 The schema is the shared data contract for all customer race sites.
 
-Current top-level groups expected by templates include: `identity`, `event`, `distances`, `registration`, `qualifying`, `schedule`, `travel`, `travel_logistics`, `proof`, `course`, `records`, `entry_tiers`, `sponsors`, `faqs`, `charity`, `seo`, `analytics`, `email_capture`, `volunteer`, `contacts`, and `social`.
+Current top-level groups expected by templates include: `identity`, `event`, `distances`, `registration`, `photo_galleries`, `qualifying`, `schedule`, `travel`, `travel_logistics`, `proof`, `course`, `records`, `entry_tiers`, `sponsors`, `faqs`, `charity`, `seo`, `analytics`, `email_capture`, `volunteer`, `contacts`, and `social`.
 
 ## Sponsors
 
@@ -53,6 +53,30 @@ Templates must continue supporting flat string arrays so existing sample configs
 - `email` (optional): plain email address; renderers convert it to `mailto:`.
 
 Use approved customer links only. Public demos must use fictional/generic example links such as `example.com` pages or platform example handles; do not hardcode customer-specific social data in templates.
+
+## Past race photo galleries
+
+`photo_galleries` is an optional top-level array for outbound previous-race photo gallery links. Community, Destination Major, and Performance render a low-hierarchy “Past Race Photos” section only when at least one valid gallery is configured. If omitted or empty, templates render nothing and leave no placeholder gap.
+
+```json
+{
+  "photo_galleries": [
+    {
+      "label": "View 2025 race photos",
+      "url": "https://example.com/race/photos-2025",
+      "provider": "RunSignup",
+      "year": "2025"
+    }
+  ]
+}
+```
+
+- `label` (required): runner-facing CTA text for the outbound gallery link.
+- `url` (required): absolute `http://` or `https://` URL to the external gallery provider.
+- `provider` (optional): non-empty display label such as `RunSignup`, `Race Roster`, `Facebook`, `Google Photos`, `SmugMug`, or a photographer/studio name.
+- `year` (optional): non-empty display year or edition label.
+
+Use approved customer links only. Public demos must use fictional/generic URLs. Templates link out to the configured provider; StartLine does not host photos or create a dedicated gallery page from this field.
 
 ## Registration status
 
