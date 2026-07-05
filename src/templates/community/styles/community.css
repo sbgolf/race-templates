@@ -435,6 +435,14 @@ display:grid;
 .ph-finish{background:linear-gradient(180deg,#F0C879 0%,#D88E2C 40%,#A85220 80%,#6A2E15 100%)}
 .ph-medal{background:linear-gradient(180deg,#F5DA9B 0%,#D89B2A 50%,#9F6614 100%)}
 
+/* PAST RACE PHOTOS */
+.past-race-photos--community{background:var(--community-parchment)}
+.past-race-photos--community .past-race-photos__wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:34px;align-items:center;padding-top:clamp(44px,7vh,72px);padding-bottom:clamp(44px,7vh,72px)}
+.past-race-photos--community .past-race-photos__links{display:grid;gap:12px}
+.past-race-photos--community .past-race-photos__link{min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 18px;border-radius:18px;background:var(--paper-2);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:800;box-shadow:0 16px 36px -30px rgba(42,31,24,.34);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.past-race-photos--community .past-race-photos__link:hover,.past-race-photos--community .past-race-photos__link:focus-visible{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 20px 42px -28px rgba(42,31,24,.4)}
+.past-race-photos--community .past-race-photos__link small{color:rgba(42,31,24,.58);font-size:.82rem;font-weight:800;white-space:nowrap}
+
 /* VOLUNTEER */
 .vol{background:var(--forest);color:var(--paper)}
 .vol-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
@@ -614,6 +622,7 @@ footer{background:var(--ink);color:rgba(250,246,238,.6);font-size:.92rem}
   .timeline{grid-template-columns:1fr;gap:18px}
   .entry-grid{grid-template-columns:1fr 1fr;gap:14px}
   .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:var(--gallery-rows-tablet, repeat(3,240px))}
+  .past-race-photos--community .past-race-photos__wrap{grid-template-columns:1fr}
   .g1{grid-column:1/3;grid-row:1}
   .g2{grid-column:1;grid-row:2}
   .g3{grid-column:2;grid-row:2}
@@ -650,6 +659,7 @@ footer{background:var(--ink);color:rgba(250,246,238,.6);font-size:.92rem}
   .brand span{max-width:calc(100vw - 116px)}
   .entry-grid{grid-template-columns:1fr}
   .gallery-grid{grid-template-columns:1fr;grid-template-rows:var(--gallery-rows-mobile, repeat(6,200px))}
+  .past-race-photos--community .past-race-photos__link{align-items:flex-start;flex-direction:column;gap:4px}
   .g1,.g2,.g3,.g4,.g5,.g6{grid-column:1}
   .g1{grid-row:1}.g2{grid-row:2}.g3{grid-row:3}.g4{grid-row:4}.g5{grid-row:5}.g6{grid-row:6}
   .statbar-grid{grid-template-columns:1fr}

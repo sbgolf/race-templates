@@ -31,6 +31,20 @@
     "status_detail": "Fictional sample copy: runner capacity is capped, so the official registration provider should show current availability.",
     "status_cta_label": "Register while spots remain"
   },
+  "photo_galleries": [
+    {
+      "label": "Browse 2025 finish-line photos",
+      "url": "https://example.com/cascade-marathon/photos-2025",
+      "provider": "SmugMug",
+      "year": "2025"
+    },
+    {
+      "label": "See 2024 race weekend highlights",
+      "url": "https://example.com/cascade-marathon/photos-2024",
+      "provider": "Google Photos",
+      "year": "2024"
+    }
+  ],
   "seo": {
     "meta_title": "Cascade Marathon — September 20, 2026",
     "meta_description": "Cascade Marathon is a point-to-point Boston qualifying race from the Cascade foothills to Pacific City, Oregon on September 20, 2026."

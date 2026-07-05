@@ -1,0 +1,38 @@
+---
+const { race, variant = 'community' } = Astro.props;
+const hasText = (value) => typeof value === 'string' && value.trim().length > 0;
+const galleries = Array.isArray(race.photo_galleries)
+  ? race.photo_galleries.filter((gallery) => gallery && hasText(gallery.label) && hasText(gallery.url))
+  : [];
+const raceName = race.identity?.name || 'this race';
+const titleId = `${variant}-past-race-photos-title`;
+---
+
+{galleries.length > 0 ? (
+  <section class={`past-race-photos past-race-photos--${variant}`} aria-labelledby={titleId}>
+    <div class="wrap past-race-photos__wrap">
+      <div class="past-race-photos__copy reveal">
+        <div class="kicker">Past Race Photos</div>
+        <h2 class="sec-title" id={titleId}>See what race day looks like.</h2>
+        <p class="lead">Browse previous race photo galleries before you commit, cheer, or share the event with your running group.</p>
+      </div>
+      <div class="past-race-photos__links reveal" aria-label={`Past race photo galleries for ${raceName}`}>
+        {galleries.map((gallery) => {
+          const details = [gallery.provider, gallery.year].filter(hasText).join(' · ');
+          return (
+            <a
+              class="past-race-photos__link"
+              href={gallery.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${gallery.label} for ${raceName} (opens in a new tab)`}
+            >
+              <span>{gallery.label}</span>
+              {details ? <small>{details}</small> : null}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+) : null}

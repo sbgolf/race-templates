@@ -140,6 +140,24 @@ export function validateRaceConfig(config) {
     }
   }
 
+  if (config.photo_galleries !== undefined) {
+    if (!Array.isArray(config.photo_galleries)) {
+      add(errors, 'photo_galleries', 'Photo galleries must be an array when provided.');
+    } else {
+      config.photo_galleries.forEach((gallery, index) => {
+        const base = `photo_galleries[${index}]`;
+        if (!isPlainObject(gallery)) {
+          add(errors, base, 'Photo gallery must be an object.');
+          return;
+        }
+        if (!hasText(gallery.label)) add(errors, `${base}.label`, 'Photo gallery label is required.');
+        if (!hasText(gallery.url) || !URL_PATTERN.test(gallery.url)) add(errors, `${base}.url`, 'Photo gallery URL must be absolute and start with http:// or https://.');
+        if (gallery.provider !== undefined && !hasText(gallery.provider)) add(errors, `${base}.provider`, 'Photo gallery provider must be non-empty when provided.');
+        if (gallery.year !== undefined && !hasText(gallery.year)) add(errors, `${base}.year`, 'Photo gallery year must be non-empty when provided.');
+      });
+    }
+  }
+
   if (config.private_mockup !== undefined) {
     if (!isPlainObject(config.private_mockup)) {
       add(errors, 'private_mockup', 'Private mockup metadata must be an object when provided.');

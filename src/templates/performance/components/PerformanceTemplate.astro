@@ -11,6 +11,7 @@ import Course from './Course.astro';
 import PacePicker from './PacePicker.astro';
 import Records from './Records.astro';
 import Gallery from './Gallery.astro';
+import PastRacePhotos from '../../../shared/components/PastRacePhotos.astro';
 import Entry from './Entry.astro';
 import Travel from './Travel.astro';
 import Sponsors from './Sponsors.astro';
@@ -30,6 +31,7 @@ const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 <PacePicker race={race} />
 <Records race={race} isPrivateMockup={isPrivateMockup} />
 <Gallery race={race} galleryAssets={galleryAssets} />
+<PastRacePhotos race={race} variant="performance" />
 <Entry race={race} />
 <Travel race={race} />
 <Sponsors race={race} />

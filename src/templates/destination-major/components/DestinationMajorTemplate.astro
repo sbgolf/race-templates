@@ -2,6 +2,7 @@
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 import { registrationPlatformLabel } from "../../../shared/registration-platform-label.mjs";
 import SocialLinksRow from "../../../shared/components/SocialLinksRow.astro";
+import PastRacePhotos from "../../../shared/components/PastRacePhotos.astro";
 import { shouldRenderTrustSignalsBand, trustSignalsForRace } from "../../../shared/private-mockup-trust.mjs";
 import { privateValueNarrativeForRace, registrationDecisionCopyForRace } from "../../../shared/private-mockup-value.mjs";
 
@@ -454,6 +455,8 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
     </p>
   </div>
 </section>
+
+<PastRacePhotos race={race} variant="destination-major" />
 
 <!-- QUALIFYING -->
 {!isPrivateMockup && hasCertification && <section class="bq" id="qualify" aria-labelledby="qualify-title">

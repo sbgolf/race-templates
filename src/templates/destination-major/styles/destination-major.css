@@ -333,6 +333,18 @@
     text-transform:uppercase;font-weight:500;
   }
 
+  /* PAST RACE PHOTOS */
+  .past-race-photos--destination-major{background:#111923;color:var(--paper);border-top:1px solid rgba(246,242,234,.08)}
+  .past-race-photos--destination-major .past-race-photos__wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:36px;align-items:center;padding-top:clamp(48px,8vh,78px);padding-bottom:clamp(48px,8vh,78px)}
+  .past-race-photos--destination-major .kicker{color:var(--accent)}
+  .past-race-photos--destination-major .kicker::before{background:var(--accent)}
+  .past-race-photos--destination-major .sec-title{color:var(--paper)}
+  .past-race-photos--destination-major .lead{color:rgba(246,242,234,.68)}
+  .past-race-photos--destination-major .past-race-photos__links{display:grid;gap:12px}
+  .past-race-photos--destination-major .past-race-photos__link{min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 18px;border-radius:999px;background:rgba(246,242,234,.06);border:1px solid rgba(246,242,234,.18);color:var(--paper);text-decoration:none;font-weight:800;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+  .past-race-photos--destination-major .past-race-photos__link:hover,.past-race-photos--destination-major .past-race-photos__link:focus-visible{transform:translateY(-2px);background:rgba(246,242,234,.11);border-color:var(--accent)}
+  .past-race-photos--destination-major .past-race-photos__link small{color:rgba(246,242,234,.62);font-size:.82rem;white-space:nowrap}
+
   /* ---------- PRIVATE MOCKUP VALUE MODULES ---------- */
   .major-private{background:var(--ink);color:var(--paper);border-top:1px solid var(--line-dark)}
   .major-private .lead{color:rgba(246,242,234,.72)}
@@ -387,6 +399,7 @@
     .travel-head .lead{margin-top:22px}
     .course-feats{grid-template-columns:1fr}
     .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,260px)}
+    .past-race-photos--destination-major .past-race-photos__wrap{grid-template-columns:1fr}
     .g-1{grid-column:1/3;grid-row:1}
     .g-2{grid-column:1;grid-row:2}
     .g-3{grid-column:2;grid-row:2}
@@ -401,6 +414,7 @@
     .hero-meta{font-size:.95rem;gap:10px 22px}
     .registration-status-pill{align-items:flex-start;flex-direction:column;border-radius:18px;gap:6px}
     .gallery-grid{grid-template-columns:1fr;grid-template-rows:repeat(5,220px)}
+    .past-race-photos--destination-major .past-race-photos__link{align-items:flex-start;flex-direction:column;border-radius:22px;gap:4px}
     .g-1,.g-2,.g-3,.g-4,.g-5{grid-column:1}
     .g-1{grid-row:1}.g-2{grid-row:2}.g-3{grid-row:3}.g-4{grid-row:4}.g-5{grid-row:5}
   }
