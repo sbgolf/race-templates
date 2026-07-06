@@ -94,21 +94,22 @@
     "url": "https://runzy.com/event-registration/race/the-11th-humboldt-bay-marathon-half-marathon-and-5k/",
     "platform": "runzy",
     "cta_label": "Register on Runzy",
-    "intro": "Registration is open for the 2026 Marathon, Half Marathon, and 5K on the official Runzy page."
+    "intro": "Registration is open for the 2026 Marathon, Half Marathon, and 5K on the official Runzy page.",
+    "price_note": "Entry pricing is shown during checkout on Runzy."
   },
   "startline_value": {
     "headline": "A community race weekend page built around the runner's decision path.",
-    "intro": "This page keeps Humboldt Bay's nonprofit, trails, artwork, sponsor, volunteer, and waterfront-course story together while making the most important runner facts easier to scan before the Runzy handoff.",
+    "intro": "This page keeps Humboldt Bay's nonprofit, trails, artwork, sponsor, volunteer, and waterfront-course story together while making the most important runner facts easier to scan before registration.",
     "improved": [
       "Grouped the Marathon, Half Marathon, and 5K into one distance picker with start times, course profiles, certifications, and cutoffs close to registration CTAs.",
       "Turned scattered schedule, packet pickup, parking, gear-drop, aid-station, medal, shirt, sponsor, and volunteer details into scan-friendly sections.",
-      "Preserved the official Runzy registration destination for every primary CTA and added measurement-ready placements for outbound registration intent.",
+      "Kept official Runzy registration easy to find from the main race sections.",
       "Kept runner-facing details clear and complete without visible placeholder copy."
     ],
     "paid_includes": [
       "A polished Community/Hometown race site tailored to the Humboldt Bay Marathon weekend.",
       "SEO-ready event metadata and mobile-first sections for courses, schedule, logistics, sponsors, volunteers, and FAQs.",
-      "Registration-click tracking for the official Runzy handoff without changing the registration provider.",
+      "Clear registration links to the official Runzy page without changing the registration provider.",
       "No guaranteed growth claims \u2014 just clearer runner information, stronger local proof, and measurable calls to action."
     ]
   },
@@ -118,7 +119,7 @@
     "paragraphs": [
       "Humboldt Bay Marathon is a nonprofit affiliate of the Road Runners Club of America with goals to promote fitness, outdoor recreation, and trails in Humboldt County. The 2026 race is listed for August 9, 2026 as the event's 11th running.",
       "The race weekend includes a Marathon, Half Marathon, and 5K. All races start and end at Madaket Plaza at 1st and C Streets in Eureka, with routes built around the Eureka Waterfront Trail, Humboldt Bay Trail, Eureka Boardwalk, Arcata Marsh, and a Klopp Lake loop for the marathon.",
-      "The current site emphasizes a community feel: active registration, public results and photos, volunteer opportunities for adults and students, local sponsors, custom medal and shirt artwork by local artist and runner Sara Starr, and local nonprofit Redwood Coast Mountain Bike Association timing support."
+      "The event has a strong community feel: active registration, public results and photos, volunteer opportunities for adults and students, local sponsors, custom medal and shirt artwork by local artist and runner Sara Starr, and local nonprofit Redwood Coast Mountain Bike Association timing support."
     ],
     "image": {
       "src": "/mockups/44c6e4f218aa7860b1f453bc03aa452f/course-map-4653f30fab.jpg",
@@ -191,7 +192,7 @@
   ],
   "volunteer": {
     "headline": "Help keep Humboldt Bay moving on race weekend",
-    "description": "The race lists volunteer roles for course monitoring and traffic control, start and finish areas, and pre- and post-race setup and tear down. Adult volunteers and student volunteers are both highlighted on the current site.",
+    "description": "Volunteer roles include course monitoring and traffic control, start and finish areas, and pre- and post-race setup and tear down. Adult volunteers and student volunteers are both highlighted for race weekend.",
     "items": [
       "Course monitors help runners and drivers know where to go and assist with traffic signs and barricades.",
       "Start and finish volunteers support food tables, parking information, and runner flow around Madaket Plaza.",
@@ -263,11 +264,11 @@
     },
     {
       "question": "What are the listed start times?",
-      "answer": "The current event schedule lists the Full Marathon at 7:00 AM, Half Marathon at 8:00 AM, and 5K at 8:20 AM on Sunday, August 9, 2026."
+      "answer": "The event schedule lists the Full Marathon at 7:00 AM, Half Marathon at 8:00 AM, and 5K at 8:20 AM on Sunday, August 9, 2026."
     },
     {
       "question": "Is packet pickup available before race morning?",
-      "answer": "Yes. The current schedule lists Saturday packet pickup from 4:00 PM to 7:00 PM at Madaket Plaza. The distance pages also say packet pickup is available Saturday afternoon and Sunday morning, with details on the Event Schedule page."
+      "answer": "Yes. The schedule lists Saturday packet pickup from 4:00 PM to 7:00 PM at Madaket Plaza. The distance pages also say packet pickup is available Saturday afternoon and Sunday morning, with details on the Event Schedule page."
     },
     {
       "question": "What parking information is listed?",

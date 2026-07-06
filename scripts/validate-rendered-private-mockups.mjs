@@ -89,6 +89,11 @@ const performancePrivateInternalChromePatterns = [
   /\bPerformance\/BQ-coded StartLine\b/i
 ];
 const communityPrivateVisibleHygienePatterns = [
+  /\bcurrent site\b/i,
+  /\bold site\b/i,
+  /\bregistration intent\b/i,
+  /\bmeasurement-ready\b/i,
+  /\bStartLine\b/i,
   /\bRunner-friendly race hub\b/i,
   /\bEasier runner decisions\b/i,
   /\bReady for race-day questions\b/i,
@@ -98,7 +103,9 @@ const communityPrivateVisibleHygienePatterns = [
   /\bWhat this page includes\b/i,
   /\bRace details highlighted on this page\b/i,
   /\bPage scope\b/i,
-  /\bRace website preview\b/i
+  /\bRace website preview\b/i,
+  /\bWhat a paid (?:StartLine|race-site) build includes\b/i,
+  /\bregistration-click tracking\b/i
 ];
 const punctuationArtifactPatterns = [
   /(?:…|\.\.\.)\s*$/,
