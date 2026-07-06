@@ -1,12 +1,15 @@
 ---
 import { measurementReadyCopyForRace } from '../../../shared/private-mockup-value.mjs';
+import { registrationPlatformLabel } from '../../../shared/registration-platform-label.mjs';
 const { race } = Astro.props;
+const platformLabel = registrationPlatformLabel(race.registration?.platform);
 const measurementCopy = measurementReadyCopyForRace(race, {
-  headline: 'Give runners one clear registration path.',
-  intro: 'Registration buttons stay close to the race facts runners check before continuing to the official provider.',
-  reportLabel: 'What runners can review first',
-  separateLabel: 'What stays with registration',
-  separateBody: 'Race entry, payment, and confirmation remain inside the official registration platform.'
+  headline: `Register securely through ${platformLabel}.`,
+  intro: `Review the race details here, then continue to ${platformLabel} when you are ready to enter.`,
+  reportLabel: 'Review race details before checkout',
+  reportBody: 'Confirm the date, start time, course support, packet pickup, policies, and current price before you leave this page.',
+  separateLabel: `Entry confirmation comes from ${platformLabel}`,
+  separateBody: `${platformLabel} handles the entry form, payment, confirmation email, transfers, and refunds.`
 });
 ---
 <section class="perf-measurement-panel" data-measurement-ready-panel>

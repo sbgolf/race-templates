@@ -7,10 +7,10 @@ const PLATFORM_LABELS = {
   letsdothis: "Let's Do This",
   lets_do_this: "Let's Do This",
   'lets-do-this': "Let's Do This",
-  other: 'the official registration platform'
+  other: 'the registration page'
 };
 
-export function registrationPlatformLabel(platform, fallback = 'the official registration platform') {
+export function registrationPlatformLabel(platform, fallback = 'the registration page') {
   if (!platform) return fallback;
 
   const key = String(platform).trim().toLowerCase();
