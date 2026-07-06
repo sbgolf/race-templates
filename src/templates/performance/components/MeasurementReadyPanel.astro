@@ -2,11 +2,11 @@
 import { measurementReadyCopyForRace } from '../../../shared/private-mockup-value.mjs';
 const { race } = Astro.props;
 const measurementCopy = measurementReadyCopyForRace(race, {
-  headline: 'Know which registration path runners choose.',
-  intro: 'Registration buttons can report which page placement a runner used before continuing to the official provider.',
-  reportLabel: 'What the race site can report',
+  headline: 'Give runners one clear registration path.',
+  intro: 'Registration buttons stay close to the race facts runners check before continuing to the official provider.',
+  reportLabel: 'What runners can review first',
   separateLabel: 'What stays with registration',
-  separateBody: 'Race entry, payment, and confirmation remain inside the official registration platform unless later reporting or an approved integration is connected.'
+  separateBody: 'Race entry, payment, and confirmation remain inside the official registration platform.'
 });
 ---
 <section class="perf-measurement-panel" data-measurement-ready-panel>
@@ -17,7 +17,7 @@ const measurementCopy = measurementReadyCopyForRace(race, {
         <h2 class="sec-title">{measurementCopy.headline}</h2>
         <p class="lead">{measurementCopy.intro}</p>
       </div>
-      <div class="perf-measurement-points" aria-label="Measurement details">
+      <div class="perf-measurement-points" aria-label="Registration details">
         <article>
           <strong>{measurementCopy.reportLabel}</strong>
           <p>{measurementCopy.reportBody}</p>

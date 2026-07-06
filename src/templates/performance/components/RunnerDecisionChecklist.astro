@@ -18,7 +18,7 @@ const defaultGroups = [
   },
   {
     label: 'Before You Register',
-    intro: 'Price, packet pick-up, policies, and participant items before the official registration handoff.',
+    intro: 'Price, packet pick-up, policies, and participant items before runners continue to official registration.',
     itemIds: ['price', 'packet-pickup', 'refunds-transfers', 'swag']
   }
 ];
@@ -32,7 +32,7 @@ const remainingItems = items.filter((item) => !groupedIds.has(item.id));
 if (remainingItems.length && !configuredGroups.length) {
   groups.push({
     label: 'Additional race details',
-    intro: 'Other useful details available before the official registration handoff.',
+    intro: 'Other useful details available before runners continue to official registration.',
     items: remainingItems
   });
 }

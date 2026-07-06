@@ -68,8 +68,8 @@
     "status_cta_label": "Check Race Roster availability"
   },
   "startline_value": {
-    "headline": "A destination-race concept built around the island decision journey.",
-    "intro": "StartLine Sites keeps the ferry, lodging, island course, and post-race celebration story close to the official Race Roster registration path while keeping review access controlled.",
+    "headline": "A destination-race page built around the island decision journey.",
+    "intro": "The page keeps the ferry, lodging, island course, and post-race celebration story close to the official Race Roster registration path.",
     "improved": [
       "Places the date, La Pointe location, Joni’s Beach start/finish, prices, field caps, and Race Roster path before the registration decision.",
       "Surfaces ferry timing, packet pickup, course surface, aid frequency, and transfer/refund rules in a runner checklist.",
@@ -77,10 +77,10 @@
       "Keeps official registration links easy to find after runners review the race-day, travel, and policy details."
     ],
     "paid_includes": [
-      "Premium one-page Destination Major implementation for private review.",
-      "SEO-ready SportsEvent metadata with noindex private route controls.",
-      "Clear official-registration links throughout the private preview.",
-      "No customer send, no public launch, and no guaranteed growth claims."
+      "Premium one-page Destination Major race page.",
+      "SEO-ready SportsEvent metadata with private-route robots safeguards.",
+      "Clear official-registration links throughout the race page.",
+      "No guaranteed growth claims — just clearer runner decisions and official registration links."
     ]
   },
   "story": {
@@ -609,7 +609,7 @@
     "intro": "Race day is inseparable from the place: a Bayfield ferry crossing, packet pickup at Joni’s Beach, a La Pointe start/finish, shoreline roads, lodging decisions, and weather-aware island logistics.",
     "asset_policy": {
       "permission_note": "Public race-site asset captured for private mockup review only; publishing requires customer approval or confirmed image rights.",
-      "display_note": "Use the visuals below as a place-specific planning preview: documented race imagery first, plus Madeline Island-specific editorial scenes until approved event photography is available.",
+      "display_note": "Use the visuals below as place-specific race-page imagery: documented race imagery first, plus Madeline Island-specific editorial scenes until approved event photography is available.",
       "fallback_note": "Fallback visuals must reference the ferry, Joni’s Beach, island course, lodging/camping, or race-weekend logistics — never generic abstract tiles."
     },
     "items": [
