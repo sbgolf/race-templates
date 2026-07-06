@@ -40,7 +40,7 @@ const privateValue = privateValueNarrativeForRace(race, {
 const registrationDecisionCopy = registrationDecisionCopyForRace(race, {
   kicker: 'Official registration',
   headline: 'Make the next step unmistakable.',
-  body: 'Runners stay in the destination experience until they are ready to move to the official registration provider.'
+  body: `Review the destination-weekend details here, then continue to ${platformLabel} when you are ready to enter.`
 });
 const registerAttrs = (placement) => registerClickAttributes(race, placement);
 const checklistItems = Array.isArray(race.runner_decision_checklist?.items) ? race.runner_decision_checklist.items : [];
@@ -310,7 +310,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
         ))}
       </div>
       <div class="checklist-footer">
-        <span>Registration continues on {platformLabel}; runners leave this page for the official provider.</span>
+        <span>Review the race details here, then continue to {platformLabel} when you are ready.</span>
         <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('runner-checklist-footer')}>Continue to registration</a>
       </div>
     </div>
@@ -342,17 +342,17 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
     <div class="wrap measurement-wrap">
       <div>
         <div class="kicker">Official registration</div>
-        <h2 class="sec-title" id="measurement-panel-title">The official registration path stays clear wherever runners decide.</h2>
+        <h2 class="sec-title" id="measurement-panel-title">Register securely through {platformLabel}.</h2>
       </div>
       <div class="measurement-list" aria-label="Official registration reminders">
-        <span>Start with basics</span>
+        <span>Confirm race basics</span>
         <span>Review island plans</span>
         <span>Compare distances</span>
         <span>Check availability</span>
-        <span>Finish on Race Roster</span>
+        <span>Enter on {platformLabel}</span>
       </div>
       <p>
-        Runners can review the island-weekend details on this page, then continue to {platformLabel} when they are ready. Completed entries, payment, transfers, and confirmation still happen on the official registration provider.
+        Runners can review the island-weekend details on this page, then continue to {platformLabel} when they are ready. Entry forms, payment, transfers, and confirmation happen on {platformLabel}.
       </p>
     </div>
   </section>
@@ -648,7 +648,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 <section class="finale" aria-labelledby="finale-title">
   <div class="wrap">
     <h2 id="finale-title">{isPrivateMockup ? 'Ready to review the official entry path?' : 'Your fastest'}{!isPrivateMockup && <><br/>marathon awaits.</>}</h2>
-    <p>{isPrivateMockup ? 'Continue to the official registration provider.' : 'Join the list for ballot reminders, training plans, and first access to the 2026 start line.'}</p>
+    <p>{isPrivateMockup ? `Continue to ${platformLabel} when you are ready to enter.` : 'Join the list for ballot reminders, training plans, and first access to the 2026 start line.'}</p>
     <div class="signup">
       <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('finale-primary')}>Register for {raceName}</a>
       <button class="btn btn-ghost" onclick="scrollToId('entry')">Compare entry options</button>

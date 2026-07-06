@@ -51,7 +51,7 @@ export function trustSignalsForRace(race) {
 
   const platformLabel = registrationPlatformLabel(race.registration?.platform);
   if (race.registration?.url) {
-    add('official-registration-platform', 'Official registration', platformLabel, 'Registration continues on the official provider.');
+    add('official-registration-platform', 'Official registration', platformLabel, `Entry and confirmation happen on ${platformLabel}.`);
   }
 
   if (race.organization?.name) {

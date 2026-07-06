@@ -46,14 +46,14 @@
     "intro": "The page keeps the premium mountain-to-coast story while moving runner facts, pricing, and official registration into the main decision path.",
     "improved": [
       "Placed date, distance, start time, course profile, aid support, and pricing close to the registration path.",
-      "Added a runner checklist so important race facts can be reviewed before continuing to official registration.",
-      "Placed official registration buttons at the points where runners are ready to act.",
-      "Kept runner-facing decision sections focused on race facts and official registration."
+      "Runner-facing race details can be reviewed before continuing to official registration.",
+      "Placed registration links at the points where runners are ready to act.",
+      "Kept runner-facing decision sections focused on race facts and entry confidence."
     ],
     "paid_includes": [
       "Premium one-page implementation in the Destination Major visual language.",
       "SEO-ready SportsEvent metadata and private-route robots safeguards.",
-      "Clear official-registration buttons by page section.",
+      "Clear official-registration links by page section.",
       "No guaranteed growth claims — only clearer runner decisions and a cleaner path to official registration."
     ]
   },
@@ -88,7 +88,7 @@
   "faqs": [
     {
       "question": "What is the refund or transfer policy?",
-      "answer": "Ballot entries are refundable before the draw, and confirmed bib transfers are handled through the official registration provider until August 20."
+      "answer": "Ballot entries are refundable before the draw, and confirmed bib transfers are handled through Race Roster until August 20."
     },
     {
       "question": "What do participants receive?",
@@ -101,7 +101,7 @@
   ],
   "runner_decision_checklist": {
     "headline": "Before you enter the ballot",
-    "intro": "This race page surfaces the facts runners usually check before continuing to the official registration provider.",
+    "intro": "This race page helps runners check the facts they need before continuing to Race Roster.",
     "items": [
       {
         "id": "date",
@@ -181,7 +181,7 @@
       {
         "id": "refunds-transfers",
         "label": "Refunds/transfers",
-        "value": "Ballot entries are refundable before the draw; confirmed bib transfers are handled through the official provider until August 20.",
+        "value": "Ballot entries are refundable before the draw; confirmed bib transfers are handled through Race Roster until August 20.",
         "source_path": "faqs",
         "source_url": "https://www.cascademarathon.org/race-info"
       },

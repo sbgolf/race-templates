@@ -79,12 +79,12 @@ export function measurementReadyCopyForRace(race = {}, defaults = {}) {
   return {
     platform,
     kicker: defaults.kicker || 'Registration details',
-    headline: defaults.headline || 'The official registration path stays clear.',
-    intro: defaults.intro || 'Each registration button gives runners a clear next step to the official registration page.',
-    reportLabel: defaults.reportLabel || 'What runners see first',
-    reportBody: defaults.reportBody || `Race details, pricing, schedule, and the official ${platform} path are grouped before the final click.`,
-    separateLabel: defaults.separateLabel || 'What happens on the provider',
-    separateBody: defaults.separateBody || 'Entry forms, payment, confirmation, transfers, and refunds happen inside the official registration platform.'
+    headline: defaults.headline || `Register securely through ${platform}.`,
+    intro: defaults.intro || `Review the race details here, then continue to ${platform} when you are ready to enter.`,
+    reportLabel: defaults.reportLabel || 'Review race details before checkout',
+    reportBody: defaults.reportBody || 'Confirm the date, start time, course support, packet pickup, policies, and current price before you leave this page.',
+    separateLabel: defaults.separateLabel || `Entry confirmation comes from ${platform}`,
+    separateBody: defaults.separateBody || `${platform} handles the entry form, payment, confirmation email, transfers, and refunds.`
   };
 }
 

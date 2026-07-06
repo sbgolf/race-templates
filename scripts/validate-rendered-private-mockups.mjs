@@ -107,7 +107,16 @@ const templatePrivateVisibleHygienePatterns = [
   /\bPage scope\b/i,
   /\bRace website preview\b/i,
   /\bWhat a paid (?:StartLine|race-site) build includes\b/i,
-  /\bregistration-click tracking\b/i
+  /\bregistration-click tracking\b/i,
+  /\bregistration buttons?\b/i,
+  /\bbutton placement\b/i,
+  /\bpage placement\b/i,
+  /\bofficial provider\b/i,
+  /\bofficial registration provider\b/i,
+  /\bofficial registration platform\b/i,
+  /\bprovider-as-infrastructure\b/i,
+  /\bthis section surfaces\b/i,
+  /\bthis page (?:keeps|surfaces|groups)\b/i
 ];
 const punctuationArtifactPatterns = [
   /(?:…|\.\.\.)\s*$/,
