@@ -42,19 +42,19 @@
     "cta_label": "Enter the 2026 ballot"
   },
   "startline_value": {
-    "headline": "A cinematic destination-race concept shaped around registration intent.",
-    "intro": "StartLine Sites keeps the premium mountain-to-coast story while moving runner facts, official registration handoff, and click intent measurement into the main decision path.",
+    "headline": "A cinematic destination-race page shaped around runner decisions.",
+    "intro": "The page keeps the premium mountain-to-coast story while moving runner facts, pricing, and official registration into the main decision path.",
     "improved": [
       "Placed date, distance, start time, course profile, aid support, and pricing close to the registration path.",
-      "Added a private runner checklist so important race facts can be reviewed before the official handoff.",
-      "Connected each major registration CTA to a distinct analytics placement for cleaner launch measurement.",
-      "Kept private value modules gated from the public destination-major preview."
+      "Added a runner checklist so important race facts can be reviewed before continuing to official registration.",
+      "Placed official registration buttons at the points where runners are ready to act.",
+      "Kept runner-facing decision sections focused on race facts and official registration."
     ],
     "paid_includes": [
       "Premium one-page implementation in the Destination Major visual language.",
-      "SEO-ready SportsEvent metadata and noindex private review route.",
-      "Registration-click tracking setup by CTA placement.",
-      "No guaranteed growth claims — only clearer runner decisions and cleaner click-through measurement."
+      "SEO-ready SportsEvent metadata and private-route robots safeguards.",
+      "Clear official-registration buttons by page section.",
+      "No guaranteed growth claims — only clearer runner decisions and a cleaner path to official registration."
     ]
   },
   "story": {
@@ -101,7 +101,7 @@
   ],
   "runner_decision_checklist": {
     "headline": "Before you enter the ballot",
-    "intro": "The private review page surfaces the facts runners usually check before continuing to the official registration provider.",
+    "intro": "This race page surfaces the facts runners usually check before continuing to the official registration provider.",
     "items": [
       {
         "id": "date",
@@ -206,7 +206,7 @@
   },
   "seo": {
     "meta_title": "Cascade Marathon — Private Destination Major Concept",
-    "meta_description": "Private Destination Major mockup for Cascade Marathon with runner decision details and registration-click measurement."
+    "meta_description": "Destination Major mockup for Cascade Marathon with runner decision details and official registration links."
   },
   "private_mockup": {
     "generated": false,

@@ -30,15 +30,15 @@ const registrationLabel = registrationStatusCopy?.cta || race.registration?.cta_
 const platformLabel = registrationPlatformLabel(race.registration?.platform);
 const privateValue = privateValueNarrativeForRace(race, {
   headline: 'A premium race story with the registration path pulled into focus.',
-  intro: 'This preview keeps the cinematic destination race language while making runner decisions, trust signals, and the official registration path easier to see.',
+  intro: 'This page keeps the cinematic destination race language while making runner decisions, trust signals, and the official registration path easier to see.',
   improved: [
     'Clear race details sit before registration decisions.',
     'Official registration links stay visible at the moments runners are ready to act.',
-    'Preview proof modules stay out of the public destination preview.'
+    'Runner decision sections stay focused on race facts and official registration.'
   ]
 });
 const registrationDecisionCopy = registrationDecisionCopyForRace(race, {
-  kicker: 'Registration decision',
+  kicker: 'Official registration',
   headline: 'Make the next step unmistakable.',
   body: 'Runners stay in the destination experience until they are ready to move to the official registration provider.'
 });
@@ -233,7 +233,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
   <div class="haze"></div>
 
   <div class="hero-inner">
-    <span class="eyebrow">{isPrivateMockup ? 'Race website preview · destination major' : 'Abbott-track candidate · Pacific Northwest'}</span>
+    <span class="eyebrow">{isPrivateMockup ? 'Destination race guide' : 'Abbott-track candidate · Pacific Northwest'}</span>
     <h1>{raceName}<span class="thin">{raceTagline}</span></h1>
     <div class="hero-meta">
       <span><span class="dot">●</span> {raceDateLabel}</span>
@@ -276,7 +276,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
   <section class="private-value major-private" aria-labelledby="private-value-title" data-private-value-narrative>
     <div class="wrap private-grid">
       <div>
-        <div class="kicker">Race website preview</div>
+        <div class="kicker">Runner race guide</div>
         <h2 class="sec-title" id="private-value-title">{privateValue.headline}</h2>
       </div>
       <div class="private-panel">
@@ -670,8 +670,8 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
     {!isPrivateMockup && <div><div class="foot-title">Connect</div><ul><li><a href="#">Instagram</a></li><li><a href="#">Strava Club</a></li><li><a href="#">Contact</a></li><li><a href="#">Press</a></li></ul></div>}
   </div>
   <div class="foot-bottom">
-    <span>© 2026 {raceName}. {isPrivateMockup ? 'Race website preview.' : 'A demo concept site.'}</span>
-    <span>{isPrivateMockup ? 'Race information for review.' : 'Built as a proof of concept.'}</span>
+    <span>© 2026 {raceName}. {isPrivateMockup ? 'Race-day information.' : 'A demo concept site.'}</span>
+    <span>{isPrivateMockup ? 'Official race details and registration links.' : 'Built as a proof of concept.'}</span>
   </div>
 </footer>
 

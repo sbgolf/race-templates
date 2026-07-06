@@ -20,18 +20,18 @@ export const PRIVATE_VALUE_REQUIRED_MARKERS = Object.freeze([
 export const PRIVATE_VALUE_PUBLIC_FORBIDDEN_MARKERS = Object.freeze(Object.values(PRIVATE_VALUE_CONTRACT_MARKERS));
 
 const BASE_VALUE_COPY = Object.freeze({
-  headline: 'A race website preview built around runner decisions.',
+  headline: 'A race page built around runner decisions.',
   intro: 'This page organizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface useful race facts, and make the next click easier to find on mobile and desktop.',
   improved: [
     'Reduced runner friction by placing key race facts and the official registration path in predictable sections.',
     'Surfaced helpful details such as event logistics, distances, schedule items, and FAQs when available.',
-    'Made registration CTAs easier to find across mobile and desktop, with measurement-ready registration-click tracking attributes.'
+    'Made official registration buttons easier to find across mobile and desktop.'
   ],
   paid_includes: [
     'A mobile-first race page shaped around the registration path, not a generic brochure page.',
     'SEO-ready metadata and structured event content so runners can understand the race before leaving to register.',
-    'Registration-click tracking setup for measuring runner intent and next-click behavior after launch.',
-    'No registration-growth guarantees — just a clearer, faster, more measurable path from runner interest to registration click-through.'
+    'Clear official-registration buttons placed where runners are most likely to decide.',
+    'No registration-growth guarantees — just a clearer, faster path from runner interest to official registration.'
   ]
 });
 
@@ -40,8 +40,8 @@ const PRIVATE_COPY_REPLACEMENTS = Object.freeze([
   [/StartLine/gi, 'this page'],
   [/\brace website preview\b/gi, 'race website'],
   [/\bwebsite preview\b/gi, 'website'],
-  [/\bprivate\s+concept\b/gi, 'preview'],
-  [/\bconcept\b/gi, 'preview']
+  [/\bprivate\s+concept\b/gi, 'race page'],
+  [/\bconcept\b/gi, 'race page']
 ]);
 
 export function templateForPrivateMockup(race = {}) {
@@ -69,8 +69,8 @@ export function registrationDecisionCopyForRace(race = {}, defaults = {}) {
     platform,
     ctaLabel,
     headline: defaults.headline || 'Ready to register?',
-    kicker: defaults.kicker || 'Registration handoff',
-    body: defaults.body || `This page sends runners to the configured registration platform. Availability, payment, and confirmation happen on ${platform}; this page measures the click-through to help the race team understand registration interest.`
+    kicker: defaults.kicker || 'Official registration',
+    body: defaults.body || `This page helps runners review the key race details before continuing to ${platform}. Availability, payment, and confirmation happen on the official registration platform.`
   };
 }
 
@@ -78,13 +78,13 @@ export function measurementReadyCopyForRace(race = {}, defaults = {}) {
   const platform = registrationPlatformLabel(race.registration?.platform);
   return {
     platform,
-    kicker: defaults.kicker || 'Measurement-ready handoff',
-    headline: defaults.headline || 'Registration intent can be separated from platform results.',
-    intro: defaults.intro || 'Each registration button can show which call-to-action a runner used and which official registration page they were sent to.',
-    reportLabel: defaults.reportLabel || 'What this page can report',
-    reportBody: defaults.reportBody || `Which registration button a visitor used, where it appeared on the page, and that it sent them toward ${platform}.`,
-    separateLabel: defaults.separateLabel || 'What remains separate',
-    separateBody: defaults.separateBody || 'Completed registrations, payment, and confirmation happen inside the official registration platform unless that platform later provides reporting or an approved integration.'
+    kicker: defaults.kicker || 'Registration details',
+    headline: defaults.headline || 'The official registration path stays clear.',
+    intro: defaults.intro || 'Each registration button gives runners a clear next step to the official registration page.',
+    reportLabel: defaults.reportLabel || 'What runners see first',
+    reportBody: defaults.reportBody || `Race details, pricing, schedule, and the official ${platform} path are grouped before the final click.`,
+    separateLabel: defaults.separateLabel || 'What happens on the provider',
+    separateBody: defaults.separateBody || 'Entry forms, payment, confirmation, transfers, and refunds happen inside the official registration platform.'
   };
 }
 

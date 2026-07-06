@@ -19,7 +19,7 @@ const platform = decisionCopy.platform || 'Official registration';
 const decisionFacts = [
   price ? { label: 'Current price', value: price, detail: priceDetail } : null,
   registrationStatus ? { label: 'Registration status', value: 'Registration is open', detail: registrationStatus } : null,
-  platform ? { label: 'Official handoff', value: platform } : null
+  platform ? { label: 'Official registration', value: platform } : null
 ].filter(Boolean);
 const registerLabel = decisionCopy.ctaLabel;
 const shouldRender = race.private_mockup?.suppress_registration_decision !== true;
@@ -35,7 +35,7 @@ const shouldRender = race.private_mockup?.suppress_registration_decision !== tru
       </div>
       <div class="perf-decision-actions">
         {decisionFacts.length ? (
-          <div class="perf-decision-facts" aria-label="Registration handoff details">
+          <div class="perf-decision-facts" aria-label="Official registration details">
             {decisionFacts.map((fact) => (
               <div>
                 <span>{fact.label}</span>

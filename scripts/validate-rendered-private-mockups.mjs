@@ -88,12 +88,14 @@ const performancePrivateInternalChromePatterns = [
   /\bWhat a paid (?:StartLine|race-site) build includes\b/i,
   /\bPerformance\/BQ-coded StartLine\b/i
 ];
-const communityPrivateVisibleHygienePatterns = [
+const templatePrivateVisibleHygienePatterns = [
   /\bcurrent site\b/i,
   /\bold site\b/i,
   /\bregistration intent\b/i,
   /\bmeasurement-ready\b/i,
   /\bStartLine\b/i,
+  /\bhandoff\b/i,
+  /\bpreview\b/i,
   /\bRunner-friendly race hub\b/i,
   /\bEasier runner decisions\b/i,
   /\bReady for race-day questions\b/i,
@@ -168,10 +170,12 @@ for (const file of files) {
     }
     validatePerformanceCertificationNumberRepetition(text, config, errors);
   }
-  if (template === 'community') {
-    for (const pattern of communityPrivateVisibleHygienePatterns) {
-      if (pattern.test(text)) errors.push(`Rendered community private mockup exposes internal/value/tooling label "${pattern.source}".`);
+  if (['community', 'performance', 'destination-major'].includes(template)) {
+    for (const pattern of templatePrivateVisibleHygienePatterns) {
+      if (pattern.test(text)) errors.push(`Rendered ${template} private mockup exposes internal/value/tooling label "${pattern.source}".`);
     }
+  }
+  if (template === 'community') {
     if (/\bregister_click\b/i.test(text)) {
       errors.push('Rendered community private mockup exposes technical register_click event language in visible copy.');
     }
