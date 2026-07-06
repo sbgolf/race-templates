@@ -1,7 +1,15 @@
 ---
 import { measurementReadyCopyForRace } from "../../../shared/private-mockup-value.mjs";
 const { race } = Astro.props;
-const measurementCopy = measurementReadyCopyForRace(race);
+const measurementCopy = measurementReadyCopyForRace(race, {
+  kicker: 'Registration details',
+  headline: 'Know what happens before you leave for registration.',
+  intro: 'Review the key race details here, then continue to the official registration page when you are ready.',
+  reportLabel: 'Before you continue',
+  reportBody: 'This page keeps the date, start area, distances, course notes, schedule, packet pickup, and volunteer information close to the registration button.',
+  separateLabel: 'On the registration page',
+  separateBody: 'Availability, checkout, payment, confirmations, transfers, and future price changes are handled by the official registration provider.'
+});
 ---
 <section class="measurement-ready-panel reveal" data-measurement-ready-panel>
   <div class="wrap measurement-ready-wrap">
@@ -13,7 +21,7 @@ const measurementCopy = measurementReadyCopyForRace(race);
           {measurementCopy.intro}
         </p>
       </div>
-      <div class="measurement-ready-points" aria-label="Measurement details">
+      <div class="measurement-ready-points" aria-label="Registration details">
         <article>
           <strong>{measurementCopy.reportLabel}</strong>
           <p>{measurementCopy.reportBody}</p>

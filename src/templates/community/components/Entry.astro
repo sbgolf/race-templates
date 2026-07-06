@@ -3,6 +3,8 @@ import { registerClickAttributes } from "../../../shared/analytics/register-clic
 const { race } = Astro.props;
 const registerUrl = race.registration?.url || '#';
 const distanceMeta = (distance) => [distance?.distance, distance?.start_time].filter(Boolean).join(' · ');
+const hasDistancePricing = (race.distances || []).some((distance) => distance?.price);
+const priceNote = !hasDistancePricing && race.registration?.price_note ? race.registration.price_note : '';
 ---
 
 <section class="entry" id="entry">
@@ -11,6 +13,7 @@ const distanceMeta = (distance) => [distance?.distance, distance?.start_time].fi
       <div class="kicker">Register</div>
       <h2 class="sec-title">{(race.distances || []).length === 1 ? <>Review the <em>{race.distances?.[0]?.name || 'race'}</em>.</> : <>Pick a distance, <em>save your spot</em>.</>}</h2>
       <p class="lead">{race.registration?.opens ? `Registration opens ${race.registration.opens}. ` : ''}{(race.distances || []).length === 1 ? 'Use the official race link for registration details and current availability.' : 'Choose your distance and complete registration through the official race platform.'}</p>
+      {priceNote ? <p class="entry-price-note">{priceNote}</p> : null}
     </div>
 
     <div class="entry-grid stagger">
