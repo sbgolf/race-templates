@@ -116,7 +116,10 @@ const templatePrivateVisibleHygienePatterns = [
   /\bofficial registration platform\b/i,
   /\bprovider-as-infrastructure\b/i,
   /\bthis section surfaces\b/i,
-  /\bthis page (?:keeps|surfaces|groups)\b/i
+  /\bthis page (?:keeps|surfaces|groups|organizes)\b/i,
+  /\bthe page keeps\b/i,
+  /\bbefore the registration decision\b/i,
+  /\bregistration path pulled into focus\b/i
 ];
 const punctuationArtifactPatterns = [
   /(?:…|\.\.\.)\s*$/,

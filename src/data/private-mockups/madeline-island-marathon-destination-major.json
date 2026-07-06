@@ -69,17 +69,17 @@
   },
   "startline_value": {
     "headline": "A destination-race page built around the island decision journey.",
-    "intro": "The page keeps the ferry, lodging, island course, and post-race celebration story close to the official Race Roster registration path.",
+    "intro": "Runners can review the ferry, lodging, island course, and post-race celebration details before continuing to Race Roster.",
     "improved": [
-      "Places the date, La Pointe location, Joni’s Beach start/finish, prices, field caps, and Race Roster path before the registration decision.",
+      "Shows the date, La Pointe location, Joni’s Beach start/finish, prices, field caps, and Race Roster availability before checkout.",
       "Surfaces ferry timing, packet pickup, course surface, aid frequency, and transfer/refund rules in a runner checklist.",
       "Frames Madeline Island as a travel weekend while preserving public race facts and avoiding performance claims beyond the published course certification.",
-      "Keeps official registration links easy to find after runners review the race-day, travel, and policy details."
+      "Keeps Race Roster easy to reach after runners review the race-day, travel, and policy details."
     ],
     "paid_includes": [
       "Premium one-page Destination Major race page.",
       "SEO-ready SportsEvent metadata with private-route robots safeguards.",
-      "Clear official-registration links throughout the race page.",
+      "Clear Race Roster links after runner details.",
       "No guaranteed growth claims — just clearer runner decisions and official registration links."
     ]
   },
