@@ -441,8 +441,8 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
             )}
             <figcaption>
               <span>{item.caption}</span>
-              {item.source && <small>Documented race visual</small>}
-              {!item.source && isPrivateMockup && <small>Madeline Island editorial fallback</small>}
+              {item.source && <small>Race visual</small>}
+              {!item.source && isPrivateMockup && <small>Place study</small>}
             </figcaption>
           </figure>
         );
@@ -451,7 +451,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 
     <p class="gallery-note reveal">
       {galleryNote}
-      {isPrivateMockup && hasDocumentedGalleryScenes ? ' Each gallery scene is tied to documented race or island details.' : ''}
+      {isPrivateMockup && hasDocumentedGalleryScenes ? ' Each gallery scene reinforces race-day or island-planning details.' : ''}
     </p>
   </div>
 </section>

@@ -4,7 +4,7 @@ Internal-only handoff packages for Steve review live here. They are not imported
 
 Each handoff package should include:
 
-- a respectful “what improved” summary tied to runner clarity, official registration trust, mobile-first structure, measurable registration clicks, and community proof
+- a respectful “what improved” summary tied to runner clarity, official registration trust, mobile-first structure, measurable registration clicks, and local/place proof
 - the verified tokenized private mockup URL, with `noindex,nofollow` status noted
 - a short race-director email draft that positions the page as a private concept preview and preserves the official registration platform
 - Steve approval options before anything is sent externally
