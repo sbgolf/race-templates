@@ -419,8 +419,18 @@
     .signup{flex-direction:column}
     .signup .btn{width:100%;justify-content:center}
     .foot{grid-template-columns:1fr}
-    .hero-meta{font-size:.95rem;gap:10px 22px}
-    .registration-status-pill{align-items:flex-start;flex-direction:column;border-radius:18px;gap:6px}
+    .hero{min-height:100svh;align-items:flex-end}
+    .hero-inner{padding-inline:clamp(18px,6vw,24px);padding-bottom:clamp(46px,9vh,70px)}
+    .eyebrow{font-size:.62rem;letter-spacing:.22em;gap:8px;margin-bottom:18px;max-width:100%;overflow-wrap:anywhere}
+    .eyebrow::before{width:26px;flex:0 0 auto}
+    .hero h1{font-size:clamp(2.9rem,12.2vw,3.65rem);line-height:.92;max-width:100%;word-break:normal;overflow-wrap:normal}
+    .hero h1 .thin{font-size:.31em;line-height:1.05;letter-spacing:.015em;max-width:100%;overflow-wrap:anywhere;word-break:normal}
+    .hero-meta{font-size:.95rem;gap:10px;margin-top:24px;align-items:flex-start}
+    .hero-meta>span{flex:1 1 100%;min-width:0;max-width:100%;align-items:flex-start;white-space:normal;line-height:1.45;overflow-wrap:anywhere}
+    .hero-meta .dot{flex:0 0 auto;line-height:1.45}
+    .registration-status-pill{width:100%;align-items:flex-start;flex-direction:column;border-radius:18px;gap:6px;white-space:normal}
+    .registration-status-pill strong,.registration-status-pill span{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+    .hero-cta .btn{width:100%;max-width:100%;justify-content:center;text-align:center;white-space:normal;line-height:1.25}
     .gallery-grid{grid-template-columns:1fr;grid-template-rows:repeat(5,220px)}
     .bq-table,.bq-table thead,.bq-table tbody,.bq-table tr,.bq-table th,.bq-table td{display:block;width:100%}
     .bq-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
