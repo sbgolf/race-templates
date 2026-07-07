@@ -9,6 +9,7 @@ const template = readFileSync(join(repoRoot, 'src/templates/performance/componen
 const checklist = readFileSync(join(repoRoot, 'src/templates/performance/components/RunnerDecisionChecklist.astro'), 'utf8');
 const trustBand = readFileSync(join(repoRoot, 'src/templates/performance/components/TrustSignalsBand.astro'), 'utf8');
 const registrationDecision = readFileSync(join(repoRoot, 'src/templates/performance/components/RegistrationDecisionCard.astro'), 'utf8');
+const gallery = readFileSync(join(repoRoot, 'src/templates/performance/components/Gallery.astro'), 'utf8');
 
 const checks = [
   ['html/body horizontal overflow guard', /html\{[^}]*overflow-x:hidden/.test(css) && /body\{[^}]*overflow-x:hidden/.test(css)],
@@ -22,6 +23,8 @@ const checks = [
   ['performance private modules use runner-facing labels', !/Runner trust signals|Registration decision/.test(`${trustBand}\n${registrationDecision}`) && /Why runners trust this race faster/.test(trustBand) && /Clear path to registration/.test(registrationDecision)],
   ['performance checklist keeps one natural CTA handoff', !/runner-checklist-top/.test(checklist) && /runner-checklist-footer/.test(checklist)],
   ['performance registration decision follows trust proof before course content', template.indexOf('<TrustSignalsBand race={race} />') < template.indexOf('<RegistrationDecisionCard race={race} />') && template.indexOf('<RegistrationDecisionCard race={race} />') < template.indexOf('<Course race={race} />')],
+  ['performance race day section renders proof cards instead of abstract placeholders only', /data-performance-race-day-proof/.test(gallery) && /proofItems/.test(gallery) && /Course certification/.test(gallery) && /On-course support/.test(gallery) && /Race-morning flow/.test(gallery)],
+  ['performance race day proof grid has mobile-safe card layout', /\.race-day-proof\{[\s\S]*overflow:hidden/.test(css) && /@media\(max-width:560px\)[\s\S]*\.proof1,\.proof2,\.proof3,\.proof4\{grid-column:1\}/.test(css)],
 ];
 
 const failures = checks.filter(([, pass]) => !pass).map(([name]) => name);

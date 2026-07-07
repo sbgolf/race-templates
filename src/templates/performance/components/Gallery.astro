@@ -6,33 +6,78 @@ const assets = Array.isArray(galleryAssets) && galleryAssets.length ? galleryAss
 const raceName = race.identity?.name || 'Race day';
 const distance = primaryDistance.distance || 'race distance';
 const certification = primaryDistance.certification || race.course?.certification || '';
-const captions = [
-  certification ? `${certification.replace(/^USATF certified\s*/i, '')} · course certification.` : `${distance} · race distance.`,
-  primaryDistance.profile || 'Course profile surfaced for quick scanning.',
-  primaryDistance.aid_stations ? `${primaryDistance.aid_stations} aid stations listed on the course.` : 'Race-day details organized for quick runner scanning.',
-  primaryDistance.cutoff ? `${primaryDistance.cutoff} course time limit.` : `${raceName} race-day guide.`
-];
+const certificationLabel = race.course?.certification || certification || 'Certified course details';
+const certificationValue = certificationLabel.replace(/^USATF certified\s*#?/i, 'USATF #');
+const aidMiles = Array.isArray(race.course?.aid_station_miles) ? race.course.aid_station_miles : [];
+const aidStationValue = aidMiles.length
+  ? aidMiles.map((mile) => `Mile ${mile}`).join(' · ')
+  : primaryDistance.aid_stations
+    ? `${primaryDistance.aid_stations} aid stations`
+    : '';
+const raceStart = race.schedule?.find((item) => /race start|start/i.test(item.name || '')) || {};
+const packetPickup = race.schedule?.find((item) => /packet/i.test(item.name || '')) || {};
+const awardsFaq = race.faqs?.find((item) => /award|prize/i.test(item.question || ''));
+const proofItems = [
+  certificationLabel && {
+    label: 'Course certification',
+    value: /USATF/i.test(certificationLabel) ? 'USATF certified course' : certificationValue,
+    detail: race.course?.eligible_records ? `Eligible for ${race.course.eligible_records}.` : 'Certification is surfaced before runners leave for registration.'
+  },
+  aidStationValue && {
+    label: 'On-course support',
+    value: aidStationValue,
+    detail: primaryDistance.aid_stations ? `${primaryDistance.aid_stations} crewed aid stations with water/Gatorade listed.` : 'Aid-station locations are visible before registration.'
+  },
+  (raceStart.time || packetPickup.time) && {
+    label: 'Race-morning flow',
+    value: raceStart.time ? `${raceStart.time} start` : packetPickup.time,
+    detail: packetPickup.time
+      ? `Packet pickup: ${packetPickup.time}${packetPickup.location ? ` · ${packetPickup.location}` : ''}.`
+      : `${race.event?.venue || race.event?.location || raceName} race-day timing is listed.`
+  },
+  awardsFaq?.answer && {
+    label: 'Awards proof',
+    value: 'Prize money + records',
+    detail: awardsFaq.answer
+  }
+].filter(Boolean).slice(0, 4);
+const mediaCards = (assets.length ? assets.slice(0, 2) : [null, null]).map((asset, index) => ({
+  asset,
+  caption: asset?.caption || (index === 0
+    ? `${raceName} visual proof for the event identity.`
+    : race.course?.description || primaryDistance.profile || `${distance} course context.`)
+}));
 ---
-<section class="gallery" id="gallery">
+<section class="gallery" id="gallery" data-performance-race-day-proof>
   <div class="wrap">
     <div class="gallery-head reveal">
       <div class="kicker">Race Day</div>
-      <h2 class="sec-title">{distance}, <em>focused</em>.</h2>
-      <p class="lead">A performance-coded presentation for runners evaluating course speed, certification, timing, and the official registration path.</p>
+      <h2 class="sec-title">{distance}, <em>verified</em>.</h2>
+      <p class="lead">Race-day proof points turn the performance promise into concrete runner confidence: course credentials, support, packet pickup, awards, and start-line logistics.</p>
     </div>
 
-    <div class="gallery-grid reveal">
-      {(assets.length ? assets.slice(0, 2) : [null, null]).map((asset, index) => (
-        <figure class={`g-photo g${index + 1}`}>
-          {asset?.src ? <img class="ph-img" src={asset.src} alt={asset.alt || `${raceName} race image`} loading="lazy" /> : <div class="ph-img ph-clock"><svg viewBox="0 0 600 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect x="80" y="80" width="440" height="120" fill="#0A0A12" stroke="#2D5BFF" stroke-width="2" rx="6"/><text x="300" y="158" text-anchor="middle" font-family="IBM Plex Mono" font-size="52" font-weight="700" fill="#FFD600">{distance}</text></svg></div>}
-          <figcaption>{captions[index] || raceName}</figcaption>
-        </figure>
-      ))}
-      {captions.slice(2).map((caption, index) => (
-        <figure class={`g-photo g${index + 3}`}>
-          <div class="ph-img ph-pace"><svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect x="78" y="118" width="244" height="48" rx="8" fill="#2D5BFF"/><path d="M112 152h176" stroke="#FAFAFC" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 14" opacity=".9"/><circle cx="132" cy="140" r="10" fill="#FFD600"/><circle cx="268" cy="140" r="10" fill="#FFD600"/></svg></div>
+    <div class="gallery-grid gallery-proof-grid reveal">
+      {mediaCards.map(({ asset, caption }, index) => (
+        <figure class={`g-photo proof-media g${index + 1}`}>
+          {asset?.src ? (
+            <img class="ph-img" src={asset.src} alt={asset.alt || `${raceName} race image`} loading="lazy" />
+          ) : (
+            <div class="ph-img ph-clock">
+              <svg viewBox="0 0 600 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect x="80" y="80" width="440" height="120" fill="#0A0A12" stroke="#2D5BFF" stroke-width="2" rx="6"/>
+                <text x="300" y="158" text-anchor="middle" font-family="IBM Plex Mono" font-size="52" font-weight="700" fill="#FFD600">{distance}</text>
+              </svg>
+            </div>
+          )}
           <figcaption>{caption}</figcaption>
         </figure>
+      ))}
+      {proofItems.map((item, index) => (
+        <article class={`race-day-proof proof${index + 1}`}>
+          <span>{item.label}</span>
+          <strong>{item.value}</strong>
+          <p>{item.detail}</p>
+        </article>
       ))}
     </div>
   </div>
