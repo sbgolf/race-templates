@@ -88,7 +88,7 @@
     "title": "About the Madeline Island course",
     "paragraphs": [
       "Madeline Island Marathon & Half Marathon takes place in La Pointe, Wisconsin, with both races starting and finishing in front of Joni’s Beach a few blocks from the ferry landing.",
-      "The public race information emphasizes a destination weekend: runners are encouraged to arrive Friday, use the Bayfield ferry, stay on or near the island, and celebrate after the race with food, beverage, live music, awards, and a local artisan finisher medal."
+      "The race weekend is built around the island experience: runners are encouraged to arrive Friday, use the Bayfield ferry, stay on or near the island, and celebrate after the race with food, beverage, live music, awards, and a local artisan finisher medal."
     ]
   },
   "schedule": [
@@ -609,23 +609,23 @@
     "intro": "Race day is inseparable from the place: a Bayfield ferry crossing, packet pickup at Joni’s Beach, a La Pointe start/finish, shoreline roads, lodging decisions, and weather-aware island logistics.",
     "asset_policy": {
       "permission_note": "Public race-site asset captured for private mockup review only; publishing requires customer approval or confirmed image rights.",
-      "display_note": "Use the visuals below as place-specific race-page imagery: documented race imagery first, plus Madeline Island-specific editorial scenes until approved event photography is available.",
+      "display_note": "These scenes connect the race-day story to Madeline Island: the ferry crossing, Joni’s Beach, shoreline roads, lodging decisions, and post-race gathering.",
       "fallback_note": "Fallback visuals must reference the ferry, Joni’s Beach, island course, lodging/camping, or race-weekend logistics — never generic abstract tiles."
     },
     "items": [
       {
         "type": "image",
         "src": "/mockups/1df440859d5fc4a775302c32796ae129/run-page-screenshot-1d120ac4b8.png",
-        "alt": "Public Madeline Island Marathon run page race image",
-        "caption": "Documented race image from the public run page anchors the real Madeline Island event experience.",
+        "alt": "Madeline Island Marathon race-day runners near the island course",
+        "caption": "Race-day imagery anchors the real Madeline Island event experience before runners continue to registration.",
         "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screenshot-2026-02-24-at-2-28-13-pm.png?1771964919",
         "permission": "Public race-site asset captured for private mockup review only; publish only with confirmed race/customer image rights."
       },
       {
         "type": "image",
         "src": "/mockups/1df440859d5fc4a775302c32796ae129/photos-page-screenshot-69787285cc.png",
-        "alt": "Public Madeline Island Marathon photos page race image",
-        "caption": "Public photos-page visual reinforces that the gallery can switch to approved event photography when rights are confirmed.",
+        "alt": "Madeline Island Marathon finish-area race scene",
+        "caption": "Runner and finish-area visuals show how the island weekend feels once approved event photography is in place.",
         "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screen-shot-2024-09-16-at-12-05-57-pm.png?1726506399",
         "permission": "Public race-site asset captured for private mockup review only; publish only with confirmed race/customer image rights."
       },

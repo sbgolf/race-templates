@@ -22,6 +22,7 @@ const visibleInternalChromePatterns = [
   /\bsource config\b/i,
   /\brace source\b/i,
   /\bPrimary source\b/i,
+  /\bpublic race information\b/i,
   /\bSource-confirmed\b/i,
   /\bsource-backed\b/i,
   /\bprovenance\b/i,
