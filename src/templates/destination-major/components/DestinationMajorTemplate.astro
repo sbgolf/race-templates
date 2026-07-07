@@ -28,6 +28,11 @@ const registrationStatusCopy = registrationStatus ? {
 } : null;
 const registrationLabel = registrationStatusCopy?.cta || race.registration?.cta_label || 'Register now';
 const platformLabel = registrationPlatformLabel(race.registration?.platform);
+const isClosedRegistrationState = ['closed', 'sold_out', 'transfer_only'].includes(registrationStatus);
+const providerActionLabel = isClosedRegistrationState ? `Review current ${platformLabel} status` : `Continue to ${platformLabel}`;
+const providerActionBody = isClosedRegistrationState
+  ? `Review the current ${platformLabel} status and any access-code, transfer, or waitlist instructions before planning an entry.`
+  : `Review the destination-weekend details here, then continue to ${platformLabel} when you are ready to enter.`;
 const privateValue = privateValueNarrativeForRace(race, {
   headline: 'A premium race story that makes the next step clear.',
   intro: `Runners can review the destination story, key race facts, and trust details before continuing to ${platformLabel}.`,
@@ -40,7 +45,7 @@ const privateValue = privateValueNarrativeForRace(race, {
 const registrationDecisionCopy = registrationDecisionCopyForRace(race, {
   kicker: 'Official registration',
   headline: 'Make the next step unmistakable.',
-  body: `Review the destination-weekend details here, then continue to ${platformLabel} when you are ready to enter.`
+  body: providerActionBody
 });
 const registerAttrs = (placement) => registerClickAttributes(race, placement);
 const checklistItems = Array.isArray(race.runner_decision_checklist?.items) ? race.runner_decision_checklist.items : [];
@@ -310,8 +315,8 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
         ))}
       </div>
       <div class="checklist-footer">
-        <span>Review the race details here, then continue to {platformLabel} when you are ready.</span>
-        <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('runner-checklist-footer')}>Continue to registration</a>
+        <span>{isClosedRegistrationState ? `Review the race details here, then check the current ${platformLabel} status and access-code path.` : `Review the race details here, then continue to ${platformLabel} when you are ready.`}</span>
+        <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('runner-checklist-footer')}>{registrationLabel}</a>
       </div>
     </div>
   </section>
@@ -331,7 +336,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
           <div><dt>Official registration</dt><dd>{platformLabel}</dd></div>
           <div><dt>Next step</dt><dd>{registrationLabel}</dd></div>
         </dl>
-        <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('registration-decision-card')}>Continue to official registration</a>
+        <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('registration-decision-card')}>{registrationLabel}</a>
       </div>
     </div>
   </section>
@@ -348,11 +353,13 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
         <span>Confirm race basics</span>
         <span>Review island plans</span>
         <span>Compare distances</span>
-        <span>Check availability</span>
-        <span>Enter on {platformLabel}</span>
+        <span>{isClosedRegistrationState ? 'Check current status' : 'Check availability'}</span>
+        <span>{providerActionLabel}</span>
       </div>
       <p>
-        Runners can review the island-weekend details on this page, then continue to {platformLabel} when they are ready. Entry forms, payment, transfers, and confirmation happen on {platformLabel}.
+        {isClosedRegistrationState
+          ? `Runners can review the island-weekend details on this page, then check the current ${platformLabel} status, access-code path, and transfer instructions. Entry forms, payment, transfers, and confirmation happen on ${platformLabel}.`
+          : `Runners can review the island-weekend details on this page, then continue to ${platformLabel} when they are ready. Entry forms, payment, transfers, and confirmation happen on ${platformLabel}.`}
       </p>
     </div>
   </section>
