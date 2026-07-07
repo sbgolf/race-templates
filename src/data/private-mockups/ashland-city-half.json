@@ -58,7 +58,20 @@
     "url": "https://runsignup.com/Race/TN/AshlandCity/AshlandCityHalfMarathon",
     "platform": "runsignup",
     "cta_label": "Register on RunSignup",
-    "intro": "Official RunSignup registration remains the primary conversion path while the page surfaces the fast-course facts runners need before clicking through."
+    "intro": "Register securely through RunSignup for the Ashland City Half-Marathon. Review the race date, course, pricing, and race-day details before you sign up."
+  },
+  "photo_galleries": [
+    {
+      "label": "View 2023 race photos",
+      "url": "https://nickmorganphotography16.pixieset.com/ashlandcityhalfmarathon/",
+      "provider": "Nick Morgan Photography / Pixieset",
+      "year": "2023"
+    }
+  ],
+  "photo_galleries_intro": {
+    "kicker": "Past race photos",
+    "title": "See Ashland City race day.",
+    "lead": "Browse the 2023 race photo gallery to see the runners, finish-line energy, and community feel around the Ashland City Half-Marathon."
   },
   "story": {
     "kicker": "Race overview",
@@ -580,7 +593,7 @@
       ],
       "footer": "Fast, flat certified course \u00b7 Ashland City Half"
     },
-    "records_lead": "The page leads with race-day speed signals: USATF certification, a fast and flat course profile, five listed aid stations, and a three-hour course window."
+    "records_lead": "USATF certification, a fast and flat course profile, five listed aid stations, and a three-hour course window give runners the details they need before race day."
   },
   "performance_stats": [
     {

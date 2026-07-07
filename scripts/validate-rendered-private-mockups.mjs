@@ -240,6 +240,7 @@ for (const file of files) {
   validateRegistrationHandoffTruth(text, config, errors);
 
   const anchors = extractAnchors(html);
+  validatePhotoGalleryLinks(html, text, config, anchors, errors);
   const registrationAnchors = anchors.filter((anchor) => anchor.attrs.href === registrationUrl);
   if (!registrationAnchors.length) errors.push(`No rendered anchors point to registration URL ${registrationUrl}.`);
   registrationAnchors.forEach((anchor, index) => {
@@ -347,6 +348,35 @@ async function privateConfigsByTokenMap() {
 
 function extractAnchors(html) {
   return [...String(html || '').matchAll(/<a\b([^>]*)>/gi)].map((match) => ({ attrs: parseAttrs(match[1] || '') }));
+}
+
+function validatePhotoGalleryLinks(html, text, config, anchors, errors) {
+  const galleries = Array.isArray(config?.photo_galleries) ? config.photo_galleries : [];
+  if (!galleries.length) return;
+
+  if (!/\bPast Race Photos\b/i.test(text) || !html.includes('past-race-photos')) {
+    errors.push('Configured photo_galleries must render the Past Race Photos section.');
+  }
+
+  galleries.forEach((gallery, index) => {
+    const label = String(gallery?.label || '').trim();
+    const url = String(gallery?.url || '').trim();
+    if (!url) return;
+    const anchor = anchors.find((candidate) => candidate.attrs.href === url);
+    if (!anchor) {
+      errors.push(`Configured photo_galleries[${index}] URL is missing from rendered outbound anchors: ${url}.`);
+      return;
+    }
+    if (anchor.attrs.target !== '_blank') {
+      errors.push(`Photo gallery anchor for ${url} must open in a new tab.`);
+    }
+    if (!/noopener/.test(anchor.attrs.rel || '') || !/noreferrer/.test(anchor.attrs.rel || '')) {
+      errors.push(`Photo gallery anchor for ${url} must use rel="noopener noreferrer".`);
+    }
+    if (label && !text.includes(label)) {
+      errors.push(`Configured photo_galleries[${index}] label is missing from visible text: ${label}.`);
+    }
+  });
 }
 
 function validateRegistrationHandoffTruth(text, config, errors) {
