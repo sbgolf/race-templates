@@ -236,6 +236,7 @@ for (const file of files) {
     errors.push('Measurement copy must not say StartLine tracks/counts/measures completed registrations, signups, or conversions.');
   }
   if (!html.includes("document.addEventListener('click', function (event)")) errors.push('Private rendered HTML is missing register-click listener wiring.');
+  validateRegistrationHandoffTruth(text, config, errors);
 
   const anchors = extractAnchors(html);
   const registrationAnchors = anchors.filter((anchor) => anchor.attrs.href === registrationUrl);
@@ -345,6 +346,41 @@ async function privateConfigsByTokenMap() {
 
 function extractAnchors(html) {
   return [...String(html || '').matchAll(/<a\b([^>]*)>/gi)].map((match) => ({ attrs: parseAttrs(match[1] || '') }));
+}
+
+function validateRegistrationHandoffTruth(text, config, errors) {
+  const registrationUrl = String(config?.registration?.url || '');
+  const sourceSummary = [
+    config?.private_mockup?.source_verification?.summary,
+    config?.private_mockup?.uncertainty?.summary
+  ].map((value) => String(value || '')).join(' ');
+  const sourceNotes = [
+    ...(Array.isArray(config?.private_mockup?.source_verification?.notes) ? config.private_mockup.source_verification.notes : []),
+    ...(Array.isArray(config?.private_mockup?.uncertainty?.items) ? config.private_mockup.uncertainty.items : [])
+  ].map((note) => String(note?.note || '')).join(' ');
+  const sourceHandoff = `${sourceSummary} ${sourceNotes}`;
+  const sourceSaysClosed = /\b(?:sold out|online registration closed|registration is closed)\b/i.test(sourceHandoff);
+  const renderedSaysClosed = /\b(?:online registration closed|registration closed|sold out|access code)\b/i.test(text);
+  const renderedImpliesAvailability = /\b(?:Check Race Roster availability|Limited field size|Limited spots remaining|Register while spots remain)\b/i.test(text);
+
+  if (sourceSaysClosed) {
+    if (!['closed', 'sold_out', 'transfer_only'].includes(config?.registration?.status)) {
+      errors.push('Registration source notes say the entry path is closed/sold out, but registration.status is not closed, sold_out, or transfer_only.');
+    }
+    if (!renderedSaysClosed) {
+      errors.push('Rendered registration handoff must disclose the closed/access-code registration state before sending runners to the provider.');
+    }
+    if (renderedImpliesAvailability) {
+      errors.push('Rendered registration handoff implies availability even though the source/provider says registration is closed or sold out.');
+    }
+  }
+
+  if (/raceroster\.com\/events\/2026\/109615\//i.test(registrationUrl)) {
+    const hasProviderPrices = /\$130\.38\b/.test(text) && /\$103\.63\b/.test(text);
+    if (!hasProviderPrices) {
+      errors.push('Madeline Race Roster handoff must show fee-inclusive Race Roster prices: $130.38 marathon and $103.63 half marathon.');
+    }
+  }
 }
 
 function parseAttrs(source) {

@@ -29,8 +29,9 @@
       "distance": "26.2 mi",
       "start_time": "8:30 AM",
       "featured": true,
-      "price": "$120",
-      "price_amount": "120",
+      "price": "$130.38",
+      "price_amount": "130.38",
+      "price_note": "Race Roster fee-inclusive price; base entry was listed at $120 before provider fees.",
       "aid_stations": "Every 2–3 miles",
       "profile": "USATF-certified loop course with short out-and-back sections, mainly paved roadway and approximately 3 to 4 miles of gravel road",
       "certification": "USATF certified #WI17014DM",
@@ -46,8 +47,9 @@
       "distance": "13.1 mi",
       "start_time": "8:30 AM",
       "featured": false,
-      "price": "$95",
-      "price_amount": "95",
+      "price": "$103.63",
+      "price_amount": "103.63",
+      "price_note": "Race Roster fee-inclusive price; base entry was listed at $95 before provider fees.",
       "aid_stations": "Every 2–3 miles",
       "profile": "USATF-certified loop course with a short out-and-back section, mainly paved roadway and a packed-gravel section",
       "certification": "USATF certified #WI17013DM",
@@ -62,16 +64,16 @@
     "url": "https://raceroster.com/events/2026/109615/madeline-island-marathon-and-half-marathon",
     "platform": "race_roster",
     "cta_label": "View Race Roster entry",
-    "status": "limited",
-    "status_label": "Limited field size",
-    "status_detail": "The 2026 field is limited to 150 full marathoners and 350 half marathoners.",
-    "status_cta_label": "Check Race Roster availability"
+    "status": "closed",
+    "status_label": "Online registration closed",
+    "status_detail": "Race Roster currently shows online registration closed; access-code entry is the only visible option. Fee-inclusive Race Roster prices are $130.38 for the marathon and $103.63 for the half marathon.",
+    "status_cta_label": "View official Race Roster status"
   },
   "startline_value": {
     "headline": "A destination-race page built around the island decision journey.",
     "intro": "Runners can review the ferry, lodging, island course, and post-race celebration details before continuing to Race Roster.",
     "improved": [
-      "Shows the date, La Pointe location, Joni’s Beach start/finish, prices, field caps, and Race Roster availability before checkout.",
+      "Shows the date, La Pointe location, Joni’s Beach start/finish, field caps, current Race Roster closed state, and fee-inclusive Race Roster prices before checkout.",
       "Surfaces ferry timing, packet pickup, course surface, aid frequency, and transfer/refund rules in a runner checklist.",
       "Frames Madeline Island as a travel weekend while keeping race claims specific to the published course certification.",
       "Keeps Race Roster easy to reach after runners review the race-day, travel, and policy details."
@@ -237,7 +239,7 @@
       {
         "id": "price",
         "label": "Entry prices",
-        "value": "$120 marathon / $95 half marathon, plus registration processing fee",
+        "value": "Race Roster currently shows fee-inclusive prices of $130.38 marathon / $103.63 half marathon. Base entries were listed at $120 / $95 before provider fees.",
         "source_path": "distances[].price",
         "applies_to_distance_ids": [
           "marathon",
