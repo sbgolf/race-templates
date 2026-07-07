@@ -616,39 +616,37 @@
     },
     "items": [
       {
-        "type": "image",
-        "src": "/mockups/1df440859d5fc4a775302c32796ae129/run-page-screenshot-1d120ac4b8.png",
-        "alt": "Madeline Island Marathon race-day runners near the island course",
-        "caption": "Race-day imagery anchors the real Madeline Island event experience before runners continue to registration.",
-        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screenshot-2026-02-24-at-2-28-13-pm.png?1771964919",
-        "permission": "Public race-site asset captured for private mockup review only; publish only with confirmed race/customer image rights."
-      },
-      {
-        "type": "image",
-        "src": "/mockups/1df440859d5fc4a775302c32796ae129/photos-page-screenshot-69787285cc.png",
-        "alt": "Madeline Island Marathon finish-area race scene",
-        "caption": "Runner and finish-area visuals show how the island weekend feels once approved event photography is in place.",
-        "source": "https://www.madelineislandmarathon.com/uploads/1/0/8/4/108437539/published/screen-shot-2024-09-16-at-12-05-57-pm.png?1726506399",
-        "permission": "Public race-site asset captured for private mockup review only; publish only with confirmed race/customer image rights."
+        "type": "editorial-fallback",
+        "visual": "ferry",
+        "caption": "The Bayfield–La Pointe ferry makes the race feel like an island weekend before runners ever reach the start line.",
+        "source": "https://www.madelineislandmarathon.com/run.html",
+        "permission": "Custom editorial fallback art created for this private Destination Major mockup from documented logistics."
       },
       {
         "type": "editorial-fallback",
-        "visual": "ferry",
-        "caption": "Bayfield–La Pointe ferry timing is part of race-weekend planning, especially for packet pickup and race-morning arrival.",
+        "visual": "course-loop",
+        "caption": "Shoreline roads, certified loop courses, and aid every 2–3 miles give runners a concrete sense of the route.",
         "source": "https://www.madelineislandmarathon.com/run.html",
         "permission": "Custom editorial fallback art created for this private Destination Major mockup from documented logistics."
       },
       {
         "type": "editorial-fallback",
         "visual": "beach",
-        "caption": "Joni’s Beach is the logistics hub: packet pickup, event tent, start, finish, and post-race gathering all stay close together.",
+        "caption": "Joni’s Beach keeps packet pickup, the event tent, start, finish, and post-race gathering close together.",
+        "source": "https://www.madelineislandmarathon.com/run.html",
+        "permission": "Custom editorial fallback art created for this private Destination Major mockup from documented logistics."
+      },
+      {
+        "type": "editorial-fallback",
+        "visual": "finish",
+        "caption": "The finish-area celebration carries the island story through food, beverage, live music, awards, and local finisher medals.",
         "source": "https://www.madelineislandmarathon.com/run.html",
         "permission": "Custom editorial fallback art created for this private Destination Major mockup from documented logistics."
       },
       {
         "type": "editorial-fallback",
         "visual": "lodging",
-        "caption": "On-island and Bayfield lodging choices become part of the destination story before registration decisions happen.",
+        "caption": "On-island and Bayfield lodging choices become part of the destination decision before registration.",
         "source": "https://www.madelineislandmarathon.com/run.html",
         "permission": "Custom editorial fallback art created for this private Destination Major mockup from documented logistics."
       }
