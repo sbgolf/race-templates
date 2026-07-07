@@ -158,6 +158,18 @@ export function validateRaceConfig(config) {
     }
   }
 
+  if (config.photo_galleries_intro !== undefined) {
+    if (!isPlainObject(config.photo_galleries_intro)) {
+      add(errors, 'photo_galleries_intro', 'Photo galleries intro must be an object when provided.');
+    } else {
+      for (const field of ['kicker', 'title', 'lead']) {
+        if (config.photo_galleries_intro[field] !== undefined && !hasText(config.photo_galleries_intro[field])) {
+          add(errors, `photo_galleries_intro.${field}`, 'Photo galleries intro fields must be non-empty strings when provided.');
+        }
+      }
+    }
+  }
+
   if (config.private_mockup !== undefined) {
     if (!isPlainObject(config.private_mockup)) {
       add(errors, 'private_mockup', 'Private mockup metadata must be an object when provided.');

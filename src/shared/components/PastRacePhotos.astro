@@ -5,6 +5,10 @@ const galleries = Array.isArray(race.photo_galleries)
   ? race.photo_galleries.filter((gallery) => gallery && hasText(gallery.label) && hasText(gallery.url))
   : [];
 const raceName = race.identity?.name || 'this race';
+const intro = race.photo_galleries_intro || {};
+const kicker = hasText(intro.kicker) ? intro.kicker : 'Past Race Photos';
+const title = hasText(intro.title) ? intro.title : 'See what race day looks like.';
+const lead = hasText(intro.lead) ? intro.lead : 'Browse previous race photo galleries before you commit, cheer, or share the event with your running group.';
 const titleId = `${variant}-past-race-photos-title`;
 ---
 
@@ -12,9 +16,9 @@ const titleId = `${variant}-past-race-photos-title`;
   <section class={`past-race-photos past-race-photos--${variant}`} aria-labelledby={titleId}>
     <div class="wrap past-race-photos__wrap">
       <div class="past-race-photos__copy reveal">
-        <div class="kicker">Past Race Photos</div>
-        <h2 class="sec-title" id={titleId}>See what race day looks like.</h2>
-        <p class="lead">Browse previous race photo galleries before you commit, cheer, or share the event with your running group.</p>
+        <div class="kicker">{kicker}</div>
+        <h2 class="sec-title" id={titleId}>{title}</h2>
+        <p class="lead">{lead}</p>
       </div>
       <div class="past-race-photos__links reveal" aria-label={`Past race photo galleries for ${raceName}`}>
         {galleries.map((gallery) => {
