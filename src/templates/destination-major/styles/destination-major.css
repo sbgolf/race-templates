@@ -418,18 +418,19 @@
     .signup .btn{width:100%;justify-content:center}
     .foot{grid-template-columns:1fr}
     .hero{min-height:100svh;align-items:flex-end}
-    .hero-inner{padding:0 24px clamp(46px,9vh,70px) 24px}
+    .hero-inner{width:100%;max-width:100vw;padding:0 clamp(26px,7vw,32px) clamp(46px,9vh,70px)}
+    .hero-inner>*{min-width:0;max-width:100%}
     .eyebrow{display:block;font-size:.62rem;letter-spacing:.18em;line-height:1.55;gap:0;margin-bottom:18px;max-width:100%;overflow-wrap:anywhere}
     .eyebrow::before{display:inline-block;width:26px;vertical-align:middle;margin-right:8px}
-    .hero h1{font-size:clamp(2rem,8.6vw,2.55rem);line-height:.98;max-width:100%;word-break:normal;overflow-wrap:anywhere}
-    .hero h1 .thin{font-size:.34em;line-height:1.15;letter-spacing:.005em;max-width:100%;overflow-wrap:anywhere;word-break:normal}
-    .hero-meta{font-size:.95rem;gap:10px;margin-top:24px;align-items:flex-start;max-width:100%}
-    .hero-meta>span{display:block;position:relative;flex:1 1 100%;min-width:0;max-width:100%;padding-left:22px;white-space:normal;line-height:1.45;overflow-wrap:anywhere}
+    .hero h1{font-size:clamp(1.9rem,8vw,2.45rem);line-height:.98;max-width:100%;word-break:normal;overflow-wrap:anywhere;text-wrap:balance}
+    .hero h1 .thin{font-size:.34em;line-height:1.15;letter-spacing:.005em;max-width:100%;overflow-wrap:anywhere;word-break:normal;text-wrap:pretty}
+    .hero-meta{font-size:.95rem;gap:10px;margin-top:24px;align-items:flex-start;width:100%;max-width:100%}
+    .hero-meta>span{display:block;position:relative;flex:1 1 100%;min-width:0;max-width:100%;padding-left:22px;white-space:normal;line-height:1.45;overflow-wrap:anywhere;text-wrap:pretty}
     .hero-meta .dot{position:absolute;left:0;top:0;line-height:1.45}
     .registration-status-pill{width:100%;max-width:100%;align-items:flex-start;flex-direction:column;border-radius:18px;gap:6px;white-space:normal}
-    .registration-status-pill strong,.registration-status-pill span{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+    .registration-status-pill strong,.registration-status-pill span{display:block;min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;text-wrap:pretty}
     .hero-cta{display:grid;grid-template-columns:minmax(0,1fr);width:100%;max-width:100%}
-    .hero-cta .btn{width:100%;min-width:0;max-width:100%;justify-content:center;text-align:center;white-space:normal;line-height:1.25;padding-inline:14px;overflow-wrap:anywhere}
+    .hero-cta .btn{width:100%;min-width:0;max-width:100%;justify-content:center;text-align:center;white-space:normal;line-height:1.25;padding-inline:14px;overflow-wrap:anywhere;text-wrap:balance}
     .gallery-grid{grid-template-columns:1fr;grid-template-rows:repeat(5,220px)}
     .bq-table,.bq-table thead,.bq-table tbody,.bq-table tr,.bq-table th,.bq-table td{display:block;width:100%}
     .bq-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}

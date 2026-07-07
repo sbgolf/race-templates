@@ -574,9 +574,11 @@ async function validateDestinationMobileContainmentStyles(errors) {
     ['Destination mobile hero meta rows must stack and wrap instead of clipping long course/location facts.', /\.hero-meta>span\s*\{[^}]*flex\s*:\s*1 1 100%[^}]*overflow-wrap\s*:\s*anywhere/i],
     ['Destination mobile registration status pill must be full-width and wrap long availability copy.', /\.registration-status-pill\s*\{[^}]*width\s*:\s*100%[^}]*white-space\s*:\s*normal/i],
     ['Destination mobile hero CTA buttons must fit the viewport instead of clipping their right edge.', /\.hero-cta \.btn\s*\{[^}]*width\s*:\s*100%[^}]*white-space\s*:\s*normal/i],
-    ['Destination mobile hero content must use balanced side padding so long meta/status copy does not visually clip on the right edge.', /\.hero-inner\s*\{[^}]*padding\s*:\s*0\s+24px\s+clamp\([^;]+\)\s+24px/i],
+    ['Destination mobile hero content must use balanced responsive side padding so long meta/status copy does not visually clip on the right edge.', /\.hero-inner\s*\{[^}]*max-width\s*:\s*100vw[^}]*padding\s*:\s*0\s+clamp\(26px,\s*7vw,\s*32px\)\s+clamp\([^;]+\)/i],
+    ['Destination mobile direct hero children must be constrained inside the safe content column.', /\.hero-inner>\*\s*\{[^}]*min-width\s*:\s*0[^}]*max-width\s*:\s*100%/i],
     ['Destination mobile registration status pill should use the full content column width instead of subtracting extra right-edge gutter.', /\.registration-status-pill\s*\{[^}]*width\s*:\s*100%/i],
-    ['Destination mobile hero CTA stack should use the full content column width instead of subtracting extra right-edge gutter.', /\.hero-cta\s*\{[^}]*width\s*:\s*100%/i]
+    ['Destination mobile hero CTA stack should use the full content column width instead of subtracting extra right-edge gutter.', /\.hero-cta\s*\{[^}]*width\s*:\s*100%/i],
+    ['Destination mobile hero copy should balance wrapping so long race names and CTA labels do not hug the viewport edge.', /\.hero h1\s*\{[^}]*text-wrap\s*:\s*balance[\s\S]*?\.hero-cta \.btn\s*\{[^}]*text-wrap\s*:\s*balance/i]
   ];
   for (const [message, pattern] of requiredRules) {
     if (!pattern.test(mobileBlock)) errors.push(message);
