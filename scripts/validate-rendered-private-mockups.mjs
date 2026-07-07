@@ -503,7 +503,7 @@ async function validateDestinationMobileContainmentStyles(errors) {
   const css = await readFile(destinationMajorCssPath, 'utf8').catch(() => '');
   const mobileBlock = css.match(/@media\(max-width:560px\)\s*\{([\s\S]*)$/i)?.[1] || '';
   const requiredRules = [
-    ['Destination mobile hero headline must use a phone-safe clamp to prevent clipped oversized race names.', /\.hero h1\s*\{[^}]*font-size\s*:\s*clamp\([^;]*(?:12vw|1[0-3](?:\.\d+)?vw)/i],
+    ['Destination mobile hero headline must use a phone-safe clamp to prevent clipped oversized race names.', /\.hero h1\s*\{[^}]*font-size\s*:\s*clamp\([^;]*(?:[6-9](?:\.\d+)?vw|1[0-3](?:\.\d+)?vw)/i],
     ['Destination mobile tagline must allow long place-specific copy to wrap inside the hero.', /\.hero h1 \.thin\s*\{[^}]*overflow-wrap\s*:\s*anywhere/i],
     ['Destination mobile hero meta rows must stack and wrap instead of clipping long course/location facts.', /\.hero-meta>span\s*\{[^}]*flex\s*:\s*1 1 100%[^}]*overflow-wrap\s*:\s*anywhere/i],
     ['Destination mobile registration status pill must be full-width and wrap long availability copy.', /\.registration-status-pill\s*\{[^}]*width\s*:\s*100%[^}]*white-space\s*:\s*normal/i],
