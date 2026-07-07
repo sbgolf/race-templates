@@ -145,7 +145,7 @@ const assetGalleryItems = privateImageAssets.map((asset) => ({
   type: 'image',
   src: asset.src,
   alt: asset.alt || `${raceName} source image`,
-  caption: asset.caption || 'Documented race visual.',
+  caption: asset.caption || 'Race-day scene.',
   source: asset.source,
   permission: asset.permission || race.destination_gallery?.asset_policy?.permission_note
 }));
@@ -186,7 +186,7 @@ const galleryLead = isPrivateMockup
   : 'From the gun in the Cascade foothills to the boardwalk at Pacific City — three hours of running through some of the most photographed terrain on the West Coast.';
 const galleryHeadline = isPrivateMockup ? (race.destination_gallery?.headline || 'What the island weekend looks like.') : 'What the day looks like.';
 const galleryNote = isPrivateMockup
-  ? (race.destination_gallery?.asset_policy?.display_note || 'Race visuals combine documented race imagery with Madeline Island-specific editorial fallback art for review.')
+  ? (race.destination_gallery?.asset_policy?.display_note || 'Race visuals highlight the island weekend, from arrival planning to the finish-area celebration.')
   : 'Race visuals highlight the destination experience.';
 const hasDocumentedGalleryScenes = destinationGalleryItems.some((item) => hasText(item.source));
 const gallerySvgForVisual = (visual = 'sunrise') => ({
@@ -441,8 +441,6 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
             )}
             <figcaption>
               <span>{item.caption}</span>
-              {item.source && <small>Race visual</small>}
-              {!item.source && isPrivateMockup && <small>Place study</small>}
             </figcaption>
           </figure>
         );
