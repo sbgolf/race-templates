@@ -161,15 +161,16 @@
     "template": "performance",
     "assets": [
       {
-        "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/1-d63e0778e1.png",
-        "alt": "Race image",
-        "caption": "",
-        "source": "https://nashvilletrackclub.org/wp-content/uploads/2021/02/Ashland-City_Half-Marathon_Graphic.png"
+        "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/hero-runners-race-morning.jpg",
+        "alt": "Runners on a fast road course near morning light",
+        "caption": "Fast-road visual identity for a serious half marathon.",
+        "source": "AI-generated neutral race imagery approved for private mockup use",
+        "generated": true
       },
       {
         "src": "/mockups/e6e18fe20474d344e2b82718edbfb2c7/2-9799347d35.png",
-        "alt": "Race image",
-        "caption": "",
+        "alt": "Ashland City Half-Marathon course map at Riverbluff Park",
+        "caption": "Riverbluff Park course context before runners continue to registration.",
         "source": "https://nashvilletrackclub.org/wp-content/uploads/2024/02/Riverbluff-Park-Map-AC-24.png"
       }
     ],
