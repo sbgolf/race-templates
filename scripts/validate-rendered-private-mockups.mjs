@@ -207,6 +207,7 @@ for (const file of files) {
   }
   if (template === 'destination-major') {
     await validateDestinationMobileContainmentStyles(errors);
+    validateDestinationGalleryProof(html, text, config, errors);
   }
   for (const pattern of punctuationArtifactPatterns) {
     if (pattern.test(text)) errors.push(`Rendered visible text contains punctuation/spacing artifact "${pattern.source}".`);
@@ -542,6 +543,26 @@ function countOccurrences(text, needle) {
   if (!needle) return 0;
   const pattern = new RegExp(`\\b${escapeRegExp(needle)}\\b`, 'g');
   return String(text || '').match(pattern)?.length || 0;
+}
+
+function validateDestinationGalleryProof(html, text, config, errors) {
+  const gallery = config?.destination_gallery || {};
+  const items = Array.isArray(gallery.items) ? gallery.items : [];
+  const gallerySurface = `${text} ${html}`;
+  if (/once approved event photography is in place/i.test(text)) {
+    errors.push('Destination Race Day gallery should sell the approved/private mockup experience, not call out missing approved event photography.');
+  }
+  if (/run-page-screenshot|photos-page-screenshot/i.test(gallerySurface)) {
+    errors.push('Destination Race Day gallery renders low-signal source-page screenshot assets; use purposeful editorial fallback scenes or approved event photography instead.');
+  }
+  if (items.length && items.filter((item) => String(item?.caption || '').trim().length > 0).length < 5) {
+    errors.push('Destination Race Day gallery should provide five captioned place/race-day proof scenes.');
+  }
+  const proofTerms = ['ferry', 'Joni', 'Beach', 'shoreline', 'lodging', 'finish'];
+  const representedTerms = proofTerms.filter((term) => new RegExp(`\\b${escapeRegExp(term)}\\b`, 'i').test(text));
+  if (representedTerms.length < 4) {
+    errors.push('Destination Race Day gallery should visibly connect the scene set to ferry/Joni’s Beach/shoreline/lodging/finish proof.');
+  }
 }
 
 async function validateDestinationMobileContainmentStyles(errors) {
