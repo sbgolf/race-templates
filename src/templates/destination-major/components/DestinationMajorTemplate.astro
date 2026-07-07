@@ -516,6 +516,7 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
         <h3>{tier.name || 'Race entry'}</h3>
         {tier.start_time && <div class="sub">Start time: {tier.start_time}</div>}
         {tier.price && <div class="tprice">{tier.price}<span>/ entry</span></div>}
+        {tier.price_note && <p class="price-note">{tier.price_note}</p>}
         <ul>
           {tier.distance && <li>{tier.distance}</li>}
           {tier.profile && <li>{tier.profile}</li>}
@@ -646,9 +647,9 @@ const gallerySvgForVisual = (visual = 'sunrise') => ({
 <section class="finale" aria-labelledby="finale-title">
   <div class="wrap">
     <h2 id="finale-title">{isPrivateMockup ? 'Ready to review the official entry path?' : 'Your fastest'}{!isPrivateMockup && <><br/>marathon awaits.</>}</h2>
-    <p>{isPrivateMockup ? `Continue to ${platformLabel} when you are ready to enter.` : 'Join the list for ballot reminders, training plans, and first access to the 2026 start line.'}</p>
+    <p>{isPrivateMockup ? (registrationStatus === 'closed' ? `Review the current ${platformLabel} status before planning an entry or access-code path.` : `Continue to ${platformLabel} when you are ready to enter.`) : 'Join the list for ballot reminders, training plans, and first access to the 2026 start line.'}</p>
     <div class="signup">
-      <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('finale-primary')}>Register for {raceName}</a>
+      <a class="btn btn-accent" href={registrationUrl} {...registerAttrs('finale-primary')}>{isPrivateMockup ? registrationLabel : `Register for ${raceName}`}</a>
       <button class="btn btn-ghost" onclick="scrollToId('entry')">Compare entry options</button>
     </div>
     <div class="msg" id="signupMsg"></div>

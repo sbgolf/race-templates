@@ -191,6 +191,7 @@
   .tier.featured .sub{color:rgba(246,242,234,.6)}
   .tprice{font-family:"Arial Black","Bricolage Grotesque";font-weight:800;font-size:2.7rem;margin:22px 0 4px;color:var(--ink)}
   .tprice span{font-size:.9rem;font-weight:500;color:rgba(11,14,19,.5)}
+  .price-note{margin:8px 0 0;font-size:.82rem;line-height:1.45;color:rgba(11,14,19,.62)}
   .tier.featured .tprice span{color:rgba(246,242,234,.55)}
   .tier ul{list-style:none;margin:22px 0 28px;display:flex;flex-direction:column;gap:13px}
   .tier li{font-size:.94rem;display:flex;gap:11px;align-items:flex-start;line-height:1.4;color:rgba(11,14,19,.8)}
