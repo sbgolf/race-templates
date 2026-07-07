@@ -362,7 +362,7 @@ function validateRegistrationHandoffTruth(text, config, errors) {
   const sourceHandoff = `${sourceSummary} ${sourceNotes}`;
   const sourceSaysClosed = /\b(?:sold out|online registration closed|registration is closed)\b/i.test(sourceHandoff);
   const renderedSaysClosed = /\b(?:online registration closed|registration closed|sold out|access code)\b/i.test(text);
-  const renderedImpliesAvailability = /\b(?:Check Race Roster availability|Limited field size|Limited spots remaining|Register while spots remain)\b/i.test(text);
+  const renderedImpliesAvailability = /\b(?:Check Race Roster availability|Limited field size|Limited spots remaining|Register while spots remain|Continue to registration|Continue to official registration|Enter on Race Roster|ready to enter)\b/i.test(text);
 
   if (sourceSaysClosed) {
     if (!['closed', 'sold_out', 'transfer_only'].includes(config?.registration?.status)) {
