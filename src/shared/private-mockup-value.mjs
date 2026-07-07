@@ -21,16 +21,16 @@ export const PRIVATE_VALUE_PUBLIC_FORBIDDEN_MARKERS = Object.freeze(Object.value
 
 const BASE_VALUE_COPY = Object.freeze({
   headline: 'A race page built around runner decisions.',
-  intro: 'This page organizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface useful race facts, and make the next click easier to find on mobile and desktop.',
+  intro: 'Runners can review the date, location, distance, course details, schedule, policies, and official entry link before they register.',
   improved: [
-    'Reduced runner friction by placing key race facts and the official registration path in predictable sections.',
+    'Shows key race facts in predictable sections before runners continue to registration.',
     'Surfaced helpful details such as event logistics, distances, schedule items, and FAQs when available.',
-    'Made official registration buttons easier to find across mobile and desktop.'
+    'Keeps the official entry link easy to reach on mobile and desktop.'
   ],
   paid_includes: [
-    'A mobile-first race page shaped around the registration path, not a generic brochure page.',
+    'A mobile-first race page shaped around the details runners check before they enter.',
     'SEO-ready metadata and structured event content so runners can understand the race before leaving to register.',
-    'Clear official-registration buttons placed where runners are most likely to decide.',
+    'Clear official entry links after the race details runners need to decide.',
     'No registration-growth guarantees — just a clearer, faster path from runner interest to official registration.'
   ]
 });
@@ -70,7 +70,7 @@ export function registrationDecisionCopyForRace(race = {}, defaults = {}) {
     ctaLabel,
     headline: defaults.headline || 'Ready to register?',
     kicker: defaults.kicker || 'Official registration',
-    body: defaults.body || `This page helps runners review the key race details before continuing to ${platform}. Availability, payment, and confirmation happen on the official registration platform.`
+    body: defaults.body || `Review the key race details here, then continue to ${platform}. Availability, payment, and confirmation happen on the registration page.`
   };
 }
 

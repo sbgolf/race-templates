@@ -43,18 +43,18 @@
   },
   "startline_value": {
     "headline": "A cinematic destination-race page shaped around runner decisions.",
-    "intro": "The page keeps the premium mountain-to-coast story while moving runner facts, pricing, and official registration into the main decision path.",
+    "intro": "Runners can see the premium mountain-to-coast story, confirm the key race facts, and continue to the official ballot when they are ready to enter.",
     "improved": [
-      "Placed date, distance, start time, course profile, aid support, and pricing close to the registration path.",
+      "Shows the date, distance, start time, course profile, aid support, and pricing before runners continue to the ballot.",
       "Runner-facing race details can be reviewed before continuing to official registration.",
-      "Placed registration links at the points where runners are ready to act.",
-      "Kept runner-facing decision sections focused on race facts and entry confidence."
+      "Keeps the official ballot easy to reach after runners review the race-day facts.",
+      "Keeps runner-facing decision sections focused on race facts and entry confidence."
     ],
     "paid_includes": [
       "Premium one-page implementation in the Destination Major visual language.",
       "SEO-ready SportsEvent metadata and private-route robots safeguards.",
-      "Clear official-registration links by page section.",
-      "No guaranteed growth claims — only clearer runner decisions and a cleaner path to official registration."
+      "Clear official entry links after runner details.",
+      "No guaranteed growth claims — only clearer runner decisions before official registration."
     ]
   },
   "story": {

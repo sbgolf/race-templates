@@ -29,12 +29,12 @@ const registrationStatusCopy = registrationStatus ? {
 const registrationLabel = registrationStatusCopy?.cta || race.registration?.cta_label || 'Register now';
 const platformLabel = registrationPlatformLabel(race.registration?.platform);
 const privateValue = privateValueNarrativeForRace(race, {
-  headline: 'A premium race story with the registration path pulled into focus.',
-  intro: 'This page keeps the cinematic destination race language while making runner decisions, trust signals, and the official registration path easier to see.',
+  headline: 'A premium race story that makes the next step clear.',
+  intro: `Runners can review the destination story, key race facts, and trust details before continuing to ${platformLabel}.`,
   improved: [
     'Clear race details sit before registration decisions.',
-    'Official registration links stay visible at the moments runners are ready to act.',
-    'Runner decision sections stay focused on race facts and official registration.'
+    `The ${platformLabel} link stays easy to reach after runners review the race-day details.`,
+    'Runner decision sections stay focused on race facts, travel details, and entry confidence.'
   ]
 });
 const registrationDecisionCopy = registrationDecisionCopyForRace(race, {
