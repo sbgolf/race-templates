@@ -19,14 +19,19 @@ import FAQ from './FAQ.astro';
 import Finale from './Finale.astro';
 import Footer from './Footer.astro';
 const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
+const privateConfig = race.private_mockup || {};
+const showRunnerChecklist = isPrivateMockup && privateConfig.suppress_runner_checklist !== true;
+const showTrustSignals = isPrivateMockup && privateConfig.suppress_trust_signals !== true;
+const showRegistrationDecision = isPrivateMockup && privateConfig.suppress_registration_decision !== true;
+const showMeasurementPanel = isPrivateMockup && privateConfig.show_measurement_panel === true;
 ---
 <Nav race={race} isPrivateMockup={isPrivateMockup} />
 <main id="main-content">
 <Hero race={race} isPrivateMockup={isPrivateMockup} />
 <StatBar race={race} />
-{isPrivateMockup && <RunnerDecisionChecklist race={race} />}
-{isPrivateMockup && <TrustSignalsBand race={race} />}
-{isPrivateMockup && <RegistrationDecisionCard race={race} />}
+{showRunnerChecklist && <RunnerDecisionChecklist race={race} />}
+{showTrustSignals && <TrustSignalsBand race={race} />}
+{showRegistrationDecision && <RegistrationDecisionCard race={race} />}
 <Course race={race} />
 <PacePicker race={race} />
 <Records race={race} isPrivateMockup={isPrivateMockup} />
@@ -36,7 +41,7 @@ const { race, isPrivateMockup = false, galleryAssets } = Astro.props;
 <Travel race={race} />
 <Sponsors race={race} />
 <FAQ race={race} />
-{isPrivateMockup && <MeasurementReadyPanel race={race} />}
+{showMeasurementPanel && <MeasurementReadyPanel race={race} />}
 <Finale race={race} />
 </main>
 <Footer race={race} isPrivateMockup={isPrivateMockup} />

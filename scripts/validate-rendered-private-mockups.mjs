@@ -169,6 +169,9 @@ for (const file of files) {
   const shouldRenderTrustSignals = template === 'community'
     ? false
     : (config?.private_mockup?.suppress_trust_signals === true ? false : shouldRenderTrustSignalsBand(config));
+  const suppressMeasurementPanel = template === 'performance'
+    ? config?.private_mockup?.show_measurement_panel !== true
+    : config?.private_mockup?.suppress_measurement_panel === true;
   validatePrivateRobotsMetadata(html, errors);
   validateMobileOverflowReadiness(html, errors);
   if (rawVisibleUrlPattern.test(text)) errors.push('Rendered visible customer-facing copy exposes a raw URL or bare domain; use labeled links/buttons instead.');
@@ -222,11 +225,11 @@ for (const file of files) {
     errors.push('Private hero secondary CTA must point to the runner checklist when private_mockup metadata and a checklist are present.');
   }
   if (!suppressRegistrationDecision && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)) errors.push(`Private ${template} mockup is missing the registration decision card.`);
-  if (!html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel)) errors.push(`Private ${template} mockup is missing the measurement-ready panel.`);
+  if (!suppressMeasurementPanel && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel)) errors.push(`Private ${template} mockup is missing the measurement-ready panel.`);
   validatePrivateValueSectionOrder(html, template, errors);
   if (shouldRenderTrustSignals && !html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup has enough substantive runner-facing trust facts but is missing the trust-signal band.`);
   if (!shouldRenderTrustSignals && html.includes(PRIVATE_VALUE_CONTRACT_MARKERS.trustSignalsBand)) errors.push(`Private ${template} mockup renders the trust-signal band without enough substantive runner-facing trust facts.`);
-  const requiredPrivateMarkers = requiredPrivateMarkersForTemplate(template, suppressRegistrationDecision);
+  const requiredPrivateMarkers = requiredPrivateMarkersForTemplate(template, suppressRegistrationDecision, suppressMeasurementPanel);
   for (const marker of requiredPrivateMarkers) {
     if (!html.includes(marker)) errors.push(`Private ${template} mockup is missing required private value contract marker ${marker}.`);
   }
@@ -619,13 +622,17 @@ function asArray(value) {
   return Array.isArray(value) ? value : [];
 }
 
-function requiredPrivateMarkersForTemplate(template, suppressRegistrationDecision) {
-  const markers = ['community', 'performance'].includes(template)
+function requiredPrivateMarkersForTemplate(template, suppressRegistrationDecision, suppressMeasurementPanel) {
+  let markers = ['community', 'performance'].includes(template)
     ? PRIVATE_VALUE_REQUIRED_MARKERS.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.valueNarrative)
     : [...PRIVATE_VALUE_REQUIRED_MARKERS];
-  return suppressRegistrationDecision
-    ? markers.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard)
-    : markers;
+  if (suppressRegistrationDecision) {
+    markers = markers.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.registrationDecisionCard);
+  }
+  if (suppressMeasurementPanel) {
+    markers = markers.filter((marker) => marker !== PRIVATE_VALUE_CONTRACT_MARKERS.measurementReadyPanel);
+  }
+  return markers;
 }
 
 function validateMobileOverflowReadiness(html, errors) {
