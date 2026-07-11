@@ -21,7 +21,7 @@ const proofItems = [
   certificationLabel && {
     label: 'Course certification',
     value: /USATF/i.test(certificationLabel) ? 'USATF certified course' : certificationValue,
-    detail: race.course?.eligible_records ? `Eligible for ${race.course.eligible_records}.` : 'Certification is surfaced before runners leave for registration.'
+    detail: race.course?.eligible_records ? `Eligible for ${race.course.eligible_records}.` : 'Certification details are available before race day.'
   },
   aidStationValue && {
     label: 'On-course support',
@@ -53,7 +53,7 @@ const mediaCards = (assets.length ? assets.slice(0, 2) : [null, null]).map((asse
     <div class="gallery-head reveal">
       <div class="kicker">Race Day</div>
       <h2 class="sec-title">{distance}, <em>verified</em>.</h2>
-      <p class="lead">Race-day proof points turn the performance promise into concrete runner confidence: course credentials, support, packet pickup, awards, and start-line logistics.</p>
+      <p class="lead">Course credentials, support, packet pickup, awards, and start-line logistics are organized for a clear race morning.</p>
     </div>
 
     <div class="gallery-grid gallery-proof-grid reveal">

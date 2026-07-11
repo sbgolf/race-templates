@@ -10,15 +10,20 @@ const itemById = (id) => items.find((item) => item.id === id);
 const price = itemById('price')?.value || race.distances?.[0]?.price || race.registration?.price_note;
 const priceDetail = itemById('price')?.detail || race.registration?.price_note;
 const registrationStatus = race.registration?.intro;
+const closedStatuses = new Set(['closed', 'sold_out', 'transfer_only']);
+const isClosedStatus = closedStatuses.has(race.registration?.status);
 const decisionCopy = registrationDecisionCopyForRace(race, {
-  kicker: 'Clear path to registration',
-  headline: 'Ready to register? Finish on the official platform.',
-  body: `The runner facts stay on this page; the entry form, payment, and confirmation continue on ${platformLabel}. This keeps the decision path clear without asking runners to sort through repeated CTAs.`
+  kicker: isClosedStatus ? 'Official race status' : 'Clear path to registration',
+  headline: isClosedStatus ? 'Check the official race status.' : 'Ready to register? Finish on the official platform.',
+  body: isClosedStatus
+    ? `Review the race-day details here, then check ${platformLabel} for the official entry status, policies, and participant tools.`
+    : `The runner facts stay on this page; the entry form, payment, and confirmation continue on ${platformLabel}. This keeps the decision path clear without asking runners to sort through repeated CTAs.`
 });
 const platform = decisionCopy.platform || 'Official registration';
+const statusLabel = isClosedStatus ? (race.registration?.status_label || 'Online registration closed') : 'Registration is open';
 const decisionFacts = [
-  price ? { label: 'Current price', value: price, detail: priceDetail } : null,
-  registrationStatus ? { label: 'Registration status', value: 'Registration is open', detail: registrationStatus } : null,
+  price ? { label: isClosedStatus ? 'Current status' : 'Current price', value: price, detail: priceDetail } : null,
+  registrationStatus ? { label: 'Registration status', value: statusLabel, detail: registrationStatus } : null,
   platform ? { label: 'Official registration', value: platform } : null
 ].filter(Boolean);
 const registerLabel = decisionCopy.ctaLabel;

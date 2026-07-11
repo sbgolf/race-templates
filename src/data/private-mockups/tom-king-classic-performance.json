@@ -1,0 +1,676 @@
+{
+  "identity": {
+    "template": "performance",
+    "name": "Tom King Classic Half Marathon & 5K",
+    "slug": "tom-king-classic-performance",
+    "tagline": "A precise Nashville race morning built around flat certified courses through Shelby Park and Shelby Bottoms Greenway.",
+    "edition": "31st annual",
+    "hero_image": {
+      "src": "/mockups/4f9d16f6e965f3731a2f36680e314863/hero-race-morning.png",
+      "alt": "Runners moving through a Nashville greenway on race morning",
+      "source": "Generated race-day hero image for this private mockup",
+      "generated": true
+    },
+    "colors": {
+      "primary": "#1F5F52",
+      "secondary": "#F2B705",
+      "success": "#00A870",
+      "ink": "#0B1215"
+    }
+  },
+  "event": {
+    "date": "2026-02-28",
+    "date_label": "Saturday, February 28, 2026",
+    "time": "08:00",
+    "location": "Nashville, TN",
+    "venue": "Cornelia Fort Airpark",
+    "timezone": "America/Chicago"
+  },
+  "organization": {
+    "name": "Tom King Classic"
+  },
+  "distances": [
+    {
+      "id": "half-marathon",
+      "name": "Half Marathon",
+      "distance": "13.1 mi",
+      "distance_miles": 13.1,
+      "featured": true,
+      "start_time": "8:00 AM",
+      "price": "Online registration closed",
+      "profile": "Out-and-back certified, fast, flat course through Shelby Park and Shelby Bottoms Greenway",
+      "certification": "Certified course",
+      "map_label": "Half Marathon",
+      "cutoff": "11:30 AM course close",
+      "highlights": [
+        "Starts and finishes at Cornelia Fort Airpark",
+        "Certified, fast, and flat route",
+        "Runs through Shelby Park and paved Shelby Bottoms Greenway",
+        "Finisher medals for half marathon participants"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+        "method": "RunSignup event page lists the Half Marathon, 8:00 AM start, certified fast and flat course, and course-close time."
+      }
+    },
+    {
+      "id": "5k",
+      "name": "5K Run/Walk",
+      "distance": "5K",
+      "distance_miles": 3.1,
+      "start_time": "8:15 AM",
+      "price": "Online registration closed",
+      "profile": "Out-and-back 5K from Cornelia Fort Airpark toward the Shadow Lane connector",
+      "map_label": "5K",
+      "cutoff": "9:15 AM course close",
+      "highlights": [
+        "Run/walk distance with 8:15 AM start",
+        "Starts and finishes at the same Cornelia Fort Airpark line",
+        "Route map lists 3.13 miles and 35 feet of gain",
+        "Age-group awards through 80+"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+        "method": "RunSignup event and MapMyRun route pages list the 5K, 8:15 AM start, route context, and course-close time."
+      }
+    }
+  ],
+  "course": {
+    "title": "Flat greenway racing from Cornelia Fort.",
+    "description": "Both races start and finish at Cornelia Fort Airpark, then follow out-and-back, certified, fast, and flat routes through Shelby Park and the paved Shelby Bottoms Greenway.",
+    "type": "Out and back",
+    "certification": "Certified course",
+    "distance_miles": 13.1,
+    "max_climb": {
+      "feet": 232
+    },
+    "elevation_profile": [
+      {
+        "mile": 0,
+        "feet": 415
+      },
+      {
+        "mile": 3,
+        "feet": 430
+      },
+      {
+        "mile": 6.5,
+        "feet": 465
+      },
+      {
+        "mile": 10,
+        "feet": 445
+      },
+      {
+        "mile": 13.1,
+        "feet": 415
+      }
+    ],
+    "map_links": [
+      {
+        "label": "2026 half marathon route",
+        "url": "https://www.mapmyrun.com/routes/view/6670055166"
+      },
+      {
+        "label": "2026 5K route",
+        "url": "https://www.mapmyrun.com/routes/view/6677320721"
+      }
+    ]
+  },
+  "proof": {
+    "field_cap": 600,
+    "registered_participants": 438
+  },
+  "performance": {
+    "hero_lead": "The Tom King Classic presents a clean performance promise: 31 years of Nashville racing, a certified flat course, a hard 600-runner cap, and a simple February race morning from Cornelia Fort Airpark.",
+    "clock": {
+      "time": "1:45:00",
+      "footer": "Half marathon pace guide \u00b7 certified flat course",
+      "splits": [
+        {
+          "label": "5K",
+          "value": "24:53"
+        },
+        {
+          "label": "10K",
+          "value": "49:46"
+        },
+        {
+          "label": "13.1",
+          "value": "1:45:00"
+        }
+      ]
+    }
+  },
+  "runner_decision_checklist": {
+    "headline": "Everything runners need for race day",
+    "intro": "Start times, course details, packet pickup, participant perks, and official race status in one place.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, February 28, 2026",
+        "detail": "Race day is Saturday, February 28, 2026.",
+        "source_path": "event.date",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+        "applies_to_distance_ids": [
+          "half-marathon",
+          "5k"
+        ]
+      },
+      {
+        "id": "location",
+        "label": "Start / finish",
+        "value": "Cornelia Fort Airpark, Nashville",
+        "detail": "Both events use Cornelia Fort Airpark as the race-morning hub.",
+        "source_path": "event.venue",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+        "applies_to_distance_ids": [
+          "half-marathon",
+          "5k"
+        ]
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "Half Marathon + 5K Run/Walk",
+        "detail": "Choose the Half Marathon or the 5K Run/Walk.",
+        "source_path": "distances",
+        "source_url": "https://runsignup.com/Race/Events/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+        "applies_to_distance_ids": [
+          "half-marathon",
+          "5k"
+        ]
+      },
+      {
+        "id": "start-time",
+        "label": "Starts",
+        "value": "8:00 AM half \u00b7 8:15 AM 5K",
+        "detail": "The Half Marathon starts at 8:00 AM; the 5K Run/Walk starts at 8:15 AM.",
+        "source_path": "schedule",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+        "applies_to_distance_ids": [
+          "half-marathon",
+          "5k"
+        ]
+      },
+      {
+        "id": "course",
+        "label": "Course profile",
+        "value": "Certified, fast, flat, out-and-back",
+        "detail": "Run a certified, fast, flat route through Shelby Park and Shelby Bottoms Greenway.",
+        "source_path": "course.description",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+        "applies_to_distance_ids": [
+          "half-marathon",
+          "5k"
+        ]
+      },
+      {
+        "id": "price",
+        "label": "Registration status",
+        "value": "Online registration closed",
+        "detail": "Online registration is closed; check RunSignup for the official event status and participant tools.",
+        "source_path": "registration.status",
+        "source_url": "https://runsignup.com/Race/Events/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+        "applies_to_distance_ids": [
+          "half-marathon",
+          "5k"
+        ]
+      },
+      {
+        "id": "swag",
+        "label": "Shirts / medals",
+        "value": "Guaranteed shirts by Feb. 12 \u00b7 half medals",
+        "detail": "Shirts were guaranteed for participants registered by February 12; half marathon participants receive finisher medals.",
+        "source_path": "story.paragraphs",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+        "applies_to_distance_ids": [
+          "half-marathon",
+          "5k"
+        ]
+      },
+      {
+        "id": "time-limit",
+        "label": "Course closes",
+        "value": "9:15 AM 5K \u00b7 11:30 AM half",
+        "detail": "The 5K course closes at 9:15 AM; the Half Marathon course closes at 11:30 AM.",
+        "source_path": "schedule",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+        "applies_to_distance_ids": [
+          "half-marathon",
+          "5k"
+        ]
+      }
+    ],
+    "footer_cta": false,
+    "groups": [
+      {
+        "label": "Race day basics",
+        "intro": "Date, distance, start time, and start-line location.",
+        "itemIds": [
+          "date",
+          "distance",
+          "start-time",
+          "location"
+        ]
+      },
+      {
+        "label": "Course and timing",
+        "intro": "Certified route details, awards, and course-close times.",
+        "itemIds": [
+          "course",
+          "time-limit",
+          "awards"
+        ]
+      },
+      {
+        "label": "Registration and packet pickup",
+        "intro": "Official status, pickup details, participant items, and policies.",
+        "itemIds": [
+          "price",
+          "packet-pickup",
+          "refunds-transfers",
+          "swag"
+        ]
+      }
+    ],
+    "kicker": "Race details"
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "Thirty-one years of Nashville racing, tightened into a registration-ready guide.",
+    "paragraphs": [
+      "The 31st Annual Tom King Classic brings runners to Cornelia Fort Airpark on Saturday, February 28, 2026 for a Half Marathon and 5K Run/Walk. Both races start and finish at the airpark, creating a simple race-morning hub for runners and spectators.",
+      "The course promise is specific: out-and-back, certified, fast, and flat routes through Shelby Park and the paved Shelby Bottoms Greenway. Half marathoners can pace the full 13.1 miles, while 5K runners and walkers get the same clear race-morning setup from Cornelia Fort.",
+      "Race-day details are straightforward: a 600-participant combined field cap due to parking limits, free race-morning parking with carpooling encouraged, Friday packet pickup at Shelby Park Community Center, race-morning packet pickup at Cornelia Fort, post-race food and awards, shirts guaranteed by February 12, and half marathon finisher medals."
+    ],
+    "image": {
+      "src": "/mockups/4f9d16f6e965f3731a2f36680e314863/hero-race-morning.png",
+      "alt": "Runners on a flat Nashville greenway course",
+      "source": "Generated race-day hero image for this private mockup",
+      "generated": true
+    },
+    "links": [
+      {
+        "label": "View 2026 half marathon route",
+        "url": "https://www.mapmyrun.com/routes/view/6670055166"
+      },
+      {
+        "label": "View 2026 5K route",
+        "url": "https://www.mapmyrun.com/routes/view/6677320721"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Friday, February 27, 2026",
+      "name": "Early packet pickup",
+      "time": "3:00 PM \u2013 6:00 PM",
+      "location": "Shelby Park Community Center, 401 South 20th Street, Nashville, TN 37206",
+      "applies_to_distances": [
+        "half-marathon",
+        "5k"
+      ]
+    },
+    {
+      "day": "Saturday, February 28, 2026",
+      "name": "Race-morning packet pickup begins",
+      "time": "6:00 AM",
+      "location": "Cornelia Fort Airpark",
+      "applies_to_distances": [
+        "half-marathon",
+        "5k"
+      ]
+    },
+    {
+      "day": "Saturday, February 28, 2026",
+      "name": "Half Marathon start",
+      "time": "8:00 AM",
+      "location": "Cornelia Fort Airpark",
+      "applies_to_distances": [
+        "half-marathon"
+      ]
+    },
+    {
+      "day": "Saturday, February 28, 2026",
+      "name": "5K Run/Walk start",
+      "time": "8:15 AM",
+      "location": "Cornelia Fort Airpark",
+      "applies_to_distances": [
+        "5k"
+      ]
+    },
+    {
+      "day": "Saturday, February 28, 2026",
+      "name": "5K course closes",
+      "time": "9:15 AM",
+      "location": "Cornelia Fort Airpark",
+      "applies_to_distances": [
+        "5k"
+      ]
+    },
+    {
+      "day": "Saturday, February 28, 2026",
+      "name": "Half Marathon course closes",
+      "time": "11:30 AM",
+      "location": "Cornelia Fort Airpark",
+      "applies_to_distances": [
+        "half-marathon"
+      ]
+    }
+  ],
+  "pace_goals": [
+    {
+      "label": "1:30 half",
+      "time": "1:30:00",
+      "featured": true,
+      "note": "6:52/mi",
+      "splits": {
+        "1": "6:52",
+        "3": "20:37",
+        "5": "34:21",
+        "6.55": "45:00",
+        "10": "1:08:42",
+        "13.1": "1:30:00"
+      }
+    },
+    {
+      "label": "1:45 half",
+      "time": "1:45:00",
+      "note": "8:01/mi",
+      "splits": {
+        "1": "8:01",
+        "3": "24:03",
+        "5": "40:05",
+        "6.55": "52:30",
+        "10": "1:20:09",
+        "13.1": "1:45:00"
+      }
+    },
+    {
+      "label": "2:00 half",
+      "time": "2:00:00",
+      "note": "9:10/mi",
+      "splits": {
+        "1": "9:10",
+        "3": "27:29",
+        "5": "45:48",
+        "6.55": "1:00:00",
+        "10": "1:31:36",
+        "13.1": "2:00:00"
+      }
+    }
+  ],
+  "pace_checkpoints": [
+    1,
+    3,
+    5,
+    6.55,
+    10,
+    13.1
+  ],
+  "entry_tiers": [
+    {
+      "name": "Half Marathon",
+      "price": "Registration status",
+      "subtitle": "Online registration closed on RunSignup",
+      "badge": "600 combined participant cap",
+      "featured": true,
+      "features": [
+        "8:00 AM start at Cornelia Fort Airpark",
+        "Certified, fast, flat out-and-back course",
+        "Shelby Park and Shelby Bottoms Greenway route",
+        "Long sleeve tech shirt if registered by February 12",
+        "Finisher medal for half marathon participants"
+      ],
+      "cta_label": "View official RunSignup status"
+    },
+    {
+      "name": "5K Run/Walk",
+      "price": "Registration status",
+      "subtitle": "Online registration closed on RunSignup",
+      "badge": "5K Run/Walk",
+      "features": [
+        "8:15 AM start from the same line",
+        "Out-and-back 5K route from Cornelia Fort",
+        "Long sleeve cotton blend shirt if registered by February 12",
+        "Top overall, masters, grandmasters, and age-group awards",
+        "Course closes at 9:15 AM"
+      ],
+      "cta_label": "View official RunSignup status"
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Events/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+    "platform": "runsignup",
+    "cta_label": "View official RunSignup status",
+    "intro": "Online registration is currently closed on RunSignup. Keep the official status easy to reach while the page still gives runners the race-day facts, course proof, and logistics they need.",
+    "status": "closed",
+    "status_label": "Online registration closed"
+  },
+  "travel": {
+    "items": [
+      {
+        "label": "PK",
+        "title": "Packet pickup",
+        "description": "Friday pickup runs 3:00 PM to 6:00 PM at Shelby Park Community Center. Race-morning packet pickup begins at 6:00 AM at Cornelia Fort."
+      },
+      {
+        "label": "PRK",
+        "title": "Parking",
+        "description": "Parking is free Friday at the community center and race morning in Cornelia Fort Airpark grass lots and adjacent streets. The race strongly encourages carpooling or ride shares."
+      },
+      {
+        "label": "ID",
+        "title": "Race morning",
+        "description": "Bring photo ID for packet pickup. Check RunSignup for the latest official registration and participant status before arriving."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Where does the race start and finish?",
+      "answer": "Both races use a common start and finish line at Cornelia Fort Airpark in Nashville."
+    },
+    {
+      "question": "What are the race start times?",
+      "answer": "The Half Marathon starts at 8:00 AM. The 5K Run/Walk starts at 8:15 AM."
+    },
+    {
+      "question": "Is registration open?",
+      "answer": "RunSignup currently lists online registration as closed and says online registration has ended for both events.",
+      "links": [
+        {
+          "label": "Official RunSignup event status",
+          "url": "https://runsignup.com/Race/Events/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk"
+        }
+      ]
+    },
+    {
+      "question": "What is the course like?",
+      "answer": "Both routes are out-and-back over certified, fast, and flat courses through Shelby Park and the paved Shelby Bottoms Greenway."
+    },
+    {
+      "question": "What do participants receive?",
+      "answer": "Shirts are guaranteed for registrations by February 12. The half marathon lists long sleeve tech shirts and finisher medals; the 5K lists long sleeve cotton blend shirts."
+    },
+    {
+      "question": "Are pets or strollers allowed?",
+      "answer": "The Event Info page says no pets and no strollers."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "The RunSignup refund policy page states that refunds are not allowed for this race."
+    }
+  ],
+  "seo": {
+    "meta_title": "Tom King Classic Half Marathon & 5K \u2014 Race Guide",
+    "meta_description": "Runner-facing guide for the Tom King Classic Half Marathon and 5K at Cornelia Fort Airpark in Nashville."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+    "captured_at": "2026-07-11T15:19:06.000Z",
+    "access_token": "4f9d16f6e965f3731a2f36680e314863",
+    "race_slug": "tom-king-classic-performance",
+    "route": "/private/mockups/4f9d16f6e965f3731a2f36680e314863/",
+    "template": "performance",
+    "assets": [
+      {
+        "src": "/mockups/4f9d16f6e965f3731a2f36680e314863/hero-race-morning.png",
+        "alt": "Runners moving through a Nashville greenway on race morning",
+        "caption": "Flat Nashville course energy from Cornelia Fort toward Shelby Bottoms Greenway.",
+        "source": "Generated race-day hero image for this private mockup",
+        "generated": true
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
+      "captured_at": "2026-07-11T15:19:06.000Z",
+      "source_confirmed_sections": [
+        "course",
+        "schedule",
+        "travel",
+        "faqs",
+        "runner_decision_checklist"
+      ],
+      "source_confirmed_distance_ids": [
+        "half-marathon",
+        "5k"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup page title",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header lists Sat February 28, 2026",
+          "confidence": "high"
+        },
+        {
+          "path": "event.venue",
+          "source": "RunSignup Place section lists Cornelia Fort Airpark",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[0]",
+          "source": "RunSignup Events and Event Info list Tom King Classic Half Marathon",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[1]",
+          "source": "RunSignup Events and Event Info list Tom King Classic 5K",
+          "confidence": "high"
+        },
+        {
+          "path": "course.description",
+          "source": "RunSignup Description section describes certified, fast, flat out-and-back courses through Shelby Park and Shelby Bottoms Greenway",
+          "confidence": "high"
+        },
+        {
+          "path": "course.map_links",
+          "source": "RunSignup description links to MapMyRun route pages for 2026 TKC Half and 2026 TKC 5K",
+          "confidence": "high"
+        },
+        {
+          "path": "proof.field_cap",
+          "source": "RunSignup description says combined field is limited to 600 participants due to parking limitations",
+          "confidence": "high"
+        },
+        {
+          "path": "proof.registered_participants",
+          "source": "RunSignup Find a Participant page displayed Total Event Participants: 438 at capture",
+          "confidence": "medium"
+        },
+        {
+          "path": "registration.url",
+          "source": "RunSignup Event Info URL",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.status",
+          "source": "RunSignup Event Info says Online Registration is Closed and Online Registration has Ended",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "RunSignup Description and Event Info sections list packet pickup, start times, and course-close times",
+          "confidence": "high"
+        },
+        {
+          "path": "travel.items",
+          "source": "RunSignup Description section lists packet pickup, parking, photo ID, and carpool guidance",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs",
+          "source": "RunSignup Race Info, Event Info, and Refund Policy pages",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "RunSignup race header lists Sat February 28, 2026",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup Place and Description sections list Cornelia Fort Airpark",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "RunSignup Events and Event Info list Half Marathon and 5K Run/Walk",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup Description and Event Info list 8:00 AM and 8:15 AM start times",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "RunSignup Description section lists certified, fast, flat, out-and-back course language",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "RunSignup Event Info says online registration is closed; visible public pages did not expose current entry prices",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "RunSignup Description and Event Info list shirt guarantee and half marathon finisher medals",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.time-limit",
+          "source": "RunSignup Description and Event Info list course-close times",
+          "confidence": "high"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Visible public sources confirm date, location, distances, course language, route links, field cap, schedule, registration status, shirts, awards, parking, and refund policy. Current entry prices were not visible because online registration is closed. Facebook public search confirmed the page exists and describes the race as an annual Nashville half marathon and 5K, but Facebook content was not used for page facts because it was login-gated in browser.",
+      "items": [
+        {
+          "field": "entry pricing",
+          "reason": "RunSignup Event Info shows online registration closed and does not expose current prices in the visible public page state."
+        },
+        {
+          "field": "course certification number",
+          "reason": "The source describes certified courses but no certification number was visible in the captured public pages."
+        },
+        {
+          "field": "official photography rights",
+          "reason": "No public race photo gallery with clear reuse rights was found, so the private mockup uses a generated hero image instead of copying photos."
+        }
+      ]
+    }
+  }
+}
