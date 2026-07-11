@@ -96,7 +96,14 @@ const performancePrivateInternalChromePatterns = [
   /\bofficial RunSignup handoff\b/i,
   /\bWhat (?:StartLine|this concept) (?:improved|clarifies)\b/i,
   /\bWhat a paid (?:StartLine|race-site) build includes\b/i,
-  /\bPerformance\/BQ-coded StartLine\b/i
+  /\bPerformance\/BQ-coded StartLine\b/i,
+  /\bdetails runners usually hunt for\b/i,
+  /\bbefore runners click through\b/i,
+  /\bsurfaced before the official\b/i,
+  /\bRunSignup shows this date\b/i,
+  /\bin one scan-friendly block\b/i,
+  /\bAfter the decision checklist\b/i,
+  /\bthis proof band\b/i
 ];
 const templatePrivateVisibleHygienePatterns = [
   /\bcurrent site\b/i,
@@ -194,6 +201,7 @@ for (const file of files) {
       if (pattern.test(performanceCopySurface)) errors.push(`Rendered performance private mockup contains internal/sales/debug copy "${pattern.source}".`);
     }
     validatePerformanceCertificationNumberRepetition(text, config, errors);
+    validatePerformanceElevationAxis(html, config, errors);
   }
   if (['community', 'performance', 'destination-major'].includes(template)) {
     for (const pattern of templatePrivateVisibleHygienePatterns) {
@@ -495,6 +503,24 @@ function validatePrivateValueSectionOrder(html, template, errors) {
     if (positions[index] <= positions[index - 1]) {
       errors.push(`Private value sections must preserve the ${['community', 'performance'].includes(template) ? 'runner-first ' : ''}decision flow: ${expectedFlow}.`);
       return;
+    }
+  }
+}
+
+function validatePerformanceElevationAxis(html, config, errors) {
+  const profile = Array.isArray(config?.course?.elevation_profile) ? config.course.elevation_profile : [];
+  if (profile.length < 2) return;
+  const feet = profile.map((point) => Number(point?.feet)).filter((value) => Number.isFinite(value));
+  if (feet.length < 2) return;
+  const minFeet = Math.round(Math.min(...feet));
+  const maxFeet = Math.round(Math.max(...feet));
+  const midFeet = Math.round(minFeet + ((maxFeet - minFeet) / 2));
+  if (!html.includes('profile-y-axis')) {
+    errors.push('Performance elevation profile has source elevation data but is missing visible Y-axis elevation labels.');
+  }
+  for (const value of [minFeet, midFeet, maxFeet]) {
+    if (!new RegExp(`>${value}\\s*ft<`, 'i').test(html)) {
+      errors.push(`Performance elevation profile is missing Y-axis label ${value} ft.`);
     }
   }
 }

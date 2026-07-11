@@ -28,6 +28,13 @@ const points = hasProfile ? profile.map((point) => {
   return `${x.toFixed(1)},${y.toFixed(1)}`;
 }).join(' ') : '';
 const fillPoints = hasProfile ? `0,200 ${points} 500,200` : '';
+const formatFeet = (feet) => `${Math.round(Number(feet))} ft`;
+const midFeet = hasProfile ? minFeet + (spread / 2) : 0;
+const elevationTicks = hasProfile ? [
+  { label: formatFeet(maxFeet), position: 20 },
+  { label: formatFeet(midFeet), position: 50 },
+  { label: formatFeet(minFeet), position: 80 }
+] : [];
 const vizRows = hasProfile ? [] : rows.slice(0, 4);
 const detailRows = hasProfile ? rows : rows.slice(4);
 ---
@@ -45,13 +52,18 @@ const detailRows = hasProfile ? rows : rows.slice(4);
           <span>{hasProfile ? 'ELEVATION PROFILE' : 'COURSE FACTS'}</span>
           {certification && <span class="net">{certification.replace(/^USATF certified\s*/i, '')}</span>}
         </div>
-        <div class={`profile-chart ${hasProfile ? '' : 'facts-chart'}`}>
+        <div class={`profile-chart ${hasProfile ? 'profile-chart--with-axis' : 'facts-chart'}`}>
           {hasProfile ? (
-            <svg viewBox="0 0 500 200" preserveAspectRatio="none" aria-hidden="true">
+            <>
+              <div class="profile-y-axis" aria-hidden="true">
+                {elevationTicks.map((tick) => <span style={`top:${tick.position}%`}>{tick.label}</span>)}
+              </div>
+              <svg viewBox="0 0 500 200" preserveAspectRatio="none" aria-label={`Elevation profile from ${formatFeet(minFeet)} to ${formatFeet(maxFeet)}`} role="img">
               <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(10,10,18,.08)" stroke-dasharray="4 4"/>
               <polyline points={points} fill="none" stroke="#2D5BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
               <polygon points={fillPoints} fill="rgba(45,91,255,.12)"/>
-            </svg>
+              </svg>
+            </>
           ) : (
             <div class="course-info course-info--embedded">
               {vizRows.map((row) => <div class="ci-row"><span class="l">{row.label}</span><span class={`v ${row.className || ''}`}>{row.value}</span></div>)}

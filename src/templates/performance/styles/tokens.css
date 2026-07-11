@@ -286,11 +286,14 @@ font-family:"IBM Plex Mono";font-size:.72rem;color:rgba(250,250,252,.5);letter-s
 .course-viz-head span{min-width:0;overflow-wrap:anywhere}
 .course-viz-head .net{color:var(--green);font-weight:600;text-align:right}
 .profile-chart{padding:30px 24px 22px;position:relative;height:240px}
+.profile-chart.profile-chart--with-axis{padding-left:58px}
 .profile-chart.facts-chart{height:auto;padding:22px}
 .profile-chart svg{width:100%;height:100%;overflow:visible}
+.profile-y-axis{position:absolute;top:30px;bottom:22px;left:16px;width:36px;font-family:"IBM Plex Mono";font-size:.64rem;color:rgba(10,10,18,.55);letter-spacing:.02em;pointer-events:none}
+.profile-y-axis span{position:absolute;left:0;transform:translateY(-50%);white-space:nowrap}
 .profile-mile{
   display:flex;justify-content:space-between;
-  padding:14px 24px;border-top:1px solid var(--line);
+  padding:14px 24px 14px 58px;border-top:1px solid var(--line);
   font-family:"IBM Plex Mono";font-size:.72rem;color:rgba(10,10,18,.6);letter-spacing:.04em;
 }
 

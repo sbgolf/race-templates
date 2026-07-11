@@ -8,7 +8,7 @@ const configuredGroups = Array.isArray(checklist?.groups) ? checklist.groups : [
 const defaultGroups = [
   {
     label: 'Race Basics',
-    intro: 'Date, distance, start time, and location in one scan-friendly block.',
+    intro: 'Date, distance, start time, and location.',
     itemIds: ['date', 'distance', 'start-time', 'location']
   },
   {
@@ -37,15 +37,16 @@ if (remainingItems.length && !configuredGroups.length) {
   });
 }
 const showFooterCta = checklist?.footer_cta !== false;
+const kicker = checklist?.kicker || 'Race details';
 ---
 {items.length ? (
   <section class="perf-runner-checklist" id="runner-checklist" data-runner-decision-checklist>
     <div class="wrap perf-private-wrap">
       <div class="perf-private-head reveal">
         <div>
-          <div class="kicker">Runner info hub</div>
-          <h2 class="sec-title">{checklist?.headline || 'Everything runners check before they register.'}</h2>
-          <p class="lead">{checklist?.intro || 'A clear runner information hub puts race basics, course proof, logistics, policies, and the official registration path in one predictable place.'}</p>
+          <div class="kicker">{kicker}</div>
+          <h2 class="sec-title">{checklist?.headline || 'Everything runners need for race day.'}</h2>
+          <p class="lead">{checklist?.intro || 'Start times, course details, packet pickup, participant perks, and official race status in one place.'}</p>
         </div>
       </div>
       <div class="perf-info-hub-grid stagger" aria-label="Runner information hub">
