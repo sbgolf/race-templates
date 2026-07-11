@@ -1,0 +1,64 @@
+---
+const { race } = Astro.props;
+const paceGoals = Array.isArray(race.pace_goals) ? race.pace_goals : [];
+const checkpoints = Array.isArray(race.pace_checkpoints) ? race.pace_checkpoints : [];
+const hasPace = paceGoals.length > 0 && checkpoints.length > 0;
+const featuredGoal = paceGoals.find((goal) => goal.featured) || paceGoals[0];
+const maxMile = Number(race.distances?.find((distance) => distance.featured)?.distance_miles || race.course?.distance_miles || 13.1);
+const formatMile = (mile) => Number(mile).toFixed(Number.isInteger(Number(mile)) ? 0 : 2).replace(/\.00$/, '');
+const checkpointRows = checkpoints.map((checkpoint) => ({
+  label: Number(checkpoint) === maxMile ? `Finish · ${formatMile(checkpoint)}` : `Mile ${formatMile(checkpoint)}`,
+  key: String(checkpoint)
+}));
+---
+
+{hasPace ? (
+  <section class="community-tools" id="course-tools" data-community-course-tools>
+    <div class="wrap">
+      <div class="tools-head reveal">
+        <div class="kicker">Pace check</div>
+        <h2 class="sec-title">A simple split check, kept secondary.</h2>
+        <p class="lead">The course profile belongs with the selected distance above. This compact pace tool stays available for runners who want target half marathon splits.</p>
+      </div>
+      <div class="tools-grid tools-grid--single">
+        <article class="tool-card reveal" data-community-pace-tool>
+          <div class="tool-card__label">Pace check</div>
+          <h3>Half marathon splits</h3>
+          <div class="community-pace-tabs" role="tablist" aria-label="Half marathon goal pace">
+            {paceGoals.map((goal) => (
+              <button class:list={["community-pace-tab", { active: goal === featuredGoal }]} type="button" data-pace-goal={goal.label} aria-selected={goal === featuredGoal ? 'true' : 'false'}>
+                {goal.label}<small>{goal.note}</small>
+              </button>
+            ))}
+          </div>
+          <div class="community-pace-table" aria-live="polite">
+            <div class="community-pace-row community-pace-row--head"><span>Marker</span><span>Elapsed</span></div>
+            {checkpointRows.map((row) => (
+              <div class="community-pace-row"><span>{row.label}</span><span data-split-key={row.key}>{featuredGoal?.splits?.[row.key] || '—'}</span></div>
+            ))}
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+) : null}
+
+{hasPace ? (
+  <script define:vars={{ paceGoals }}>
+    const tabs = Array.from(document.querySelectorAll('.community-pace-tab'));
+    const splitCells = Array.from(document.querySelectorAll('[data-split-key]'));
+    function setGoal(label) {
+      const goal = paceGoals.find((item) => item.label === label) || paceGoals[0];
+      if (!goal) return;
+      tabs.forEach((tab) => {
+        const active = tab.dataset.paceGoal === goal.label;
+        tab.classList.toggle('active', active);
+        tab.setAttribute('aria-selected', String(active));
+      });
+      splitCells.forEach((cell) => {
+        cell.textContent = goal.splits?.[cell.dataset.splitKey] || '—';
+      });
+    }
+    tabs.forEach((tab) => tab.addEventListener('click', () => setGoal(tab.dataset.paceGoal)));
+  </script>
+) : null}

@@ -14,6 +14,7 @@ const heroImage = race.identity?.hero_image?.src || race.private_mockup?.assets?
 const heroImageAlt = race.identity?.hero_image?.alt || `Race day image for ${race.identity?.name}`;
 const heroTitle = race.identity?.name || race.identity?.tagline || 'Community race weekend';
 const heroSubtitle = race.identity?.tagline && race.identity.tagline !== heroTitle ? race.identity.tagline : null;
+const heroPhotoMeta = race.identity?.hero_meta || (isPrivateMockup ? (race.event?.date_label || race.event?.date) : [race.event?.date, featuredDistance?.start_time].filter(Boolean).join(' · '));
 const hasRunnerChecklist = Boolean(isPrivateMockup && (race.runner_decision_checklist?.items || []).length);
 const secondaryCtaLabel = hasRunnerChecklist ? 'Review key race details' : 'See the Course';
 const secondaryCtaTarget = hasRunnerChecklist ? 'runner-checklist' : 'course';
@@ -41,7 +42,7 @@ const secondaryCtaTarget = hasRunnerChecklist ? 'runner-checklist' : 'course';
       <div class="hero-photo">
         <div class="hero-meta-strip">
           <span class="hero-meta-pill">RACE DAY</span>
-          <span class="hero-meta-pill right">{race.event?.date} · {featuredDistance?.start_time}</span>
+          <span class="hero-meta-pill right">{heroPhotoMeta}</span>
         </div>
         {heroImage ? (
         <div class="ph-img ph-town mockup-photo-fill">

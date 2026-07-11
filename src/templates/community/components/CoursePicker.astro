@@ -2,12 +2,43 @@
 const { race } = Astro.props;
 const distances = race.distances || [];
 const featuredDistance = distances.find((distance) => distance.featured) || distances[0];
-const courseLabel = featuredDistance?.map_label || featuredDistance?.name || 'Course';
 const courseLocation = race.event?.venue || race.event?.location || 'Start / finish';
 const isMultiDistance = distances.length > 1;
 const lead = isMultiDistance
   ? 'Select an event distance to review the available course details.'
   : 'Review the available course details.';
+const getElevationProfile = (distance) => {
+  if (Array.isArray(distance?.elevation_profile) && distance.elevation_profile.length >= 2) return distance.elevation_profile;
+  if (distance?.featured && Array.isArray(race.course?.elevation_profile) && race.course.elevation_profile.length >= 2) return race.course.elevation_profile;
+  return [];
+};
+const formatFeet = (feet) => `${Math.round(Number(feet))} ft`;
+const formatMile = (mile) => Number(mile).toFixed(Number.isInteger(Number(mile)) ? 0 : 2).replace(/\.00$/, '');
+const buildProfile = (distance) => {
+  const profile = getElevationProfile(distance);
+  const feetValues = profile.map((point) => Number(point.feet)).filter(Number.isFinite);
+  const mileValues = profile.map((point) => Number(point.mile)).filter(Number.isFinite);
+  if (profile.length < 2 || feetValues.length < 2 || mileValues.length < 2) return null;
+  const minFeet = Math.min(...feetValues);
+  const maxFeet = Math.max(...feetValues);
+  const maxMile = Math.max(...mileValues, Number(distance?.distance_miles || 0));
+  const spread = Math.max(1, maxFeet - minFeet);
+  const points = profile.map((point) => {
+    const x = (Number(point.mile) / maxMile) * 500;
+    const y = 170 - ((Number(point.feet) - minFeet) / spread) * 120;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  return {
+    points,
+    fillPoints: `0,200 ${points} 500,200`,
+    minFeet,
+    maxFeet,
+    midFeet: minFeet + (spread / 2),
+    maxMile,
+    label: distance?.elevation_profile_label || `${distance?.name || 'Course'} elevation profile`
+  };
+};
+const featuredProfile = buildProfile(featuredDistance);
 const detailRows = [
   ['Distance', featuredDistance?.distance, 'dDistance'],
   ['Elevation Gain', featuredDistance?.elevation_gain, 'dGain'],
@@ -16,16 +47,29 @@ const detailRows = [
   ['Course Profile', featuredDistance?.profile, 'dProfile'],
   ['Certification', featuredDistance?.certification, 'dCert']
 ].filter(([, value]) => value);
-const distanceData = Object.fromEntries(distances.map((distance) => [distance.id, {
-  name: distance.name,
-  distance: distance.distance,
-  gain: distance.elevation_gain || '',
-  start: distance.start_time || '',
-  aid: distance.aid_stations === undefined ? '' : String(distance.aid_stations),
-  profile: distance.profile || '',
-  mapLabel: distance.map_label || distance.name,
-  certification: distance.certification || ''
-}]));
+const distanceData = Object.fromEntries(distances.map((distance) => {
+  const profile = buildProfile(distance);
+  return [distance.id, {
+    name: distance.name,
+    distance: distance.distance,
+    gain: distance.elevation_gain || '',
+    start: distance.start_time || '',
+    aid: distance.aid_stations === undefined ? '' : String(distance.aid_stations),
+    profile: distance.profile || '',
+    certification: distance.certification || '',
+    elevation: profile ? {
+      label: profile.label,
+      points: profile.points,
+      fillPoints: profile.fillPoints,
+      minFeet: formatFeet(profile.minFeet),
+      midFeet: formatFeet(profile.midFeet),
+      maxFeet: formatFeet(profile.maxFeet),
+      midMile: `${formatMile(profile.maxMile / 2)} mi`,
+      maxMile: `${formatMile(profile.maxMile)} mi`,
+      aria: `Elevation profile from ${formatFeet(profile.minFeet)} to ${formatFeet(profile.maxFeet)}`
+    } : null
+  }];
+}));
 ---
 
 {distances.length > 0 ? <section class="course" id="course">
@@ -45,34 +89,35 @@ const distanceData = Object.fromEntries(distances.map((distance) => [distance.id
     </div> : null}
 
     <div class="course-grid">
-      <div class="course-map reveal">
-        <div class="ph-img ph-route">
-          <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <path d="M0 280 Q 100 260 200 290 T 400 280 T 500 290 L500 320 Q 400 310 300 320 T 100 310 T 0 320 Z" fill="#A8C8D8" opacity=".55"/>
-            <g fill="#7BA483" opacity=".4">
-              <ellipse cx="80" cy="120" rx="35" ry="30"/>
-              <ellipse cx="120" cy="100" rx="32" ry="28"/>
-              <ellipse cx="380" cy="150" rx="40" ry="35"/>
-              <ellipse cx="420" cy="180" rx="32" ry="28"/>
-            </g>
-            <path id="routePath" d="M 250 360 Q 200 330 180 280 Q 160 230 200 200 Q 240 180 290 160 Q 340 140 310 110 Q 280 90 250 100 Q 220 110 200 130 Q 180 150 220 170 Q 260 190 280 230 Q 290 270 250 290 Q 220 300 230 340 Q 240 360 250 360"
-                  fill="none" stroke="#C6643D" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 4" opacity=".88"/>
-            <circle cx="250" cy="360" r="9" fill="#2A1F18"/>
-            <circle cx="250" cy="360" r="4" fill="#FAF6EE"/>
-            <g fill="#9F4A26">
-              <circle cx="180" cy="280" r="4"/>
-              <circle cx="200" cy="200" r="4"/>
-              <circle cx="290" cy="160" r="4"/>
-              <circle cx="310" cy="110" r="4"/>
-              <circle cx="220" cy="170" r="4"/>
-              <circle cx="280" cy="230" r="4"/>
-            </g>
-          </svg>
-        </div>
-        <div class="map-info">
-          <span>{courseLocation}</span>
-          <b id="mapDistance">{courseLabel}</b>
-        </div>
+      <div class="course-map course-map--profile reveal" data-distance-elevation-profile data-community-elevation-profile>
+        {featuredProfile ? (
+          <>
+            <div class="course-profile-chart profile-chart--with-axis">
+              <div class="course-profile-y-axis" aria-hidden="true">
+                <span data-elevation-axis="max">{formatFeet(featuredProfile.maxFeet)}</span>
+                <span data-elevation-axis="mid">{formatFeet(featuredProfile.midFeet)}</span>
+                <span data-elevation-axis="min">{formatFeet(featuredProfile.minFeet)}</span>
+              </div>
+              <svg viewBox="0 0 500 200" preserveAspectRatio="none" aria-label={`Elevation profile from ${formatFeet(featuredProfile.minFeet)} to ${formatFeet(featuredProfile.maxFeet)}`} role="img" data-profile-svg>
+                <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(54,74,51,.14)" stroke-dasharray="4 4"/>
+                <polyline points={featuredProfile.points} fill="none" stroke="var(--rust)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" data-profile-line/>
+                <polygon points={featuredProfile.fillPoints} fill="rgba(159,74,38,.12)" data-profile-fill/>
+              </svg>
+            </div>
+            <div class="course-profile-mile">
+              <span>0 mi</span><span data-profile-mile="mid">{formatMile(featuredProfile.maxMile / 2)} mi</span><span data-profile-mile="max">{formatMile(featuredProfile.maxMile)} mi</span>
+            </div>
+            <div class="map-info map-info--profile">
+              <span>{courseLocation}</span>
+              <b id="mapDistance">{featuredProfile.label}</b>
+            </div>
+          </>
+        ) : (
+          <div class="map-info map-info--profile">
+            <span>{courseLocation}</span>
+            <b id="mapDistance">Course details</b>
+          </div>
+        )}
       </div>
 
       <div class="course-details reveal">
@@ -101,7 +146,23 @@ const distanceData = Object.fromEntries(distances.map((distance) => [distance.id
     setText('dAid', data.aid);
     setText('dProfile', data.profile);
     setText('dCert', data.certification);
-    setText('mapDistance', data.mapLabel);
+
+    if (data.elevation) {
+      const profileCard = document.querySelector('[data-distance-elevation-profile]');
+      const profileLine = document.querySelector('[data-profile-line]');
+      const profileFill = document.querySelector('[data-profile-fill]');
+      const profileSvg = document.querySelector('[data-profile-svg]');
+      profileCard?.classList.remove('is-empty');
+      if (profileLine) profileLine.setAttribute('points', data.elevation.points);
+      if (profileFill) profileFill.setAttribute('points', data.elevation.fillPoints);
+      if (profileSvg) profileSvg.setAttribute('aria-label', data.elevation.aria);
+      document.querySelector('[data-elevation-axis="max"]')?.replaceChildren(document.createTextNode(data.elevation.maxFeet));
+      document.querySelector('[data-elevation-axis="mid"]')?.replaceChildren(document.createTextNode(data.elevation.midFeet));
+      document.querySelector('[data-elevation-axis="min"]')?.replaceChildren(document.createTextNode(data.elevation.minFeet));
+      document.querySelector('[data-profile-mile="mid"]')?.replaceChildren(document.createTextNode(data.elevation.midMile));
+      document.querySelector('[data-profile-mile="max"]')?.replaceChildren(document.createTextNode(data.elevation.maxMile));
+      setText('mapDistance', data.elevation.label);
+    }
 
     document.dispatchEvent(new CustomEvent('community-distance-change',{detail:{selected,data}}));
   }

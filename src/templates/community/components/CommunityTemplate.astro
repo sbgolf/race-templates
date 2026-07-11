@@ -5,6 +5,7 @@ import StatBar from "./StatBar.astro";
 import CoursePicker from "./CoursePicker.astro";
 import Schedule from "./Schedule.astro";
 import Story from "./Story.astro";
+import CourseTools from "./CourseTools.astro";
 import Gallery from "./Gallery.astro";
 import PastRacePhotos from "../../../shared/components/PastRacePhotos.astro";
 import Volunteer from "./Volunteer.astro";
@@ -27,6 +28,7 @@ const isPrivateMockup = Boolean(race.private_mockup);
     <CoursePicker race={race} />
     <Schedule race={race} />
     <Story race={race} />
+    <CourseTools race={race} />
     <Gallery race={race} />
     <PastRacePhotos race={race} variant="community" />
     <Volunteer race={race} />

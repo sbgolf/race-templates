@@ -201,7 +201,7 @@ for (const file of files) {
       if (pattern.test(performanceCopySurface)) errors.push(`Rendered performance private mockup contains internal/sales/debug copy "${pattern.source}".`);
     }
     validatePerformanceCertificationNumberRepetition(text, config, errors);
-    validatePerformanceElevationAxis(html, config, errors);
+    validateRenderedElevationAxis(html, config, errors, 'Performance');
   }
   if (['community', 'performance', 'destination-major'].includes(template)) {
     for (const pattern of templatePrivateVisibleHygienePatterns) {
@@ -209,6 +209,8 @@ for (const file of files) {
     }
   }
   if (template === 'community') {
+    validateRenderedElevationAxis(html, config, errors, 'Community');
+    validateCommunityCourseTools(html, config, errors);
     if (/\bregister_click\b/i.test(text)) {
       errors.push('Rendered community private mockup exposes technical register_click event language in visible copy.');
     }
@@ -507,7 +509,7 @@ function validatePrivateValueSectionOrder(html, template, errors) {
   }
 }
 
-function validatePerformanceElevationAxis(html, config, errors) {
+function validateRenderedElevationAxis(html, config, errors, label = 'Course') {
   const profile = Array.isArray(config?.course?.elevation_profile) ? config.course.elevation_profile : [];
   if (profile.length < 2) return;
   const feet = profile.map((point) => Number(point?.feet)).filter((value) => Number.isFinite(value));
@@ -516,12 +518,27 @@ function validatePerformanceElevationAxis(html, config, errors) {
   const maxFeet = Math.round(Math.max(...feet));
   const midFeet = Math.round(minFeet + ((maxFeet - minFeet) / 2));
   if (!html.includes('profile-y-axis')) {
-    errors.push('Performance elevation profile has source elevation data but is missing visible Y-axis elevation labels.');
+    errors.push(`${label} elevation profile has source elevation data but is missing visible Y-axis elevation labels.`);
   }
   for (const value of [minFeet, midFeet, maxFeet]) {
     if (!new RegExp(`>${value}\\s*ft<`, 'i').test(html)) {
-      errors.push(`Performance elevation profile is missing Y-axis label ${value} ft.`);
+      errors.push(`${label} elevation profile is missing Y-axis label ${value} ft.`);
     }
+  }
+}
+
+function validateCommunityCourseTools(html, config, errors) {
+  const hasPaceGoals = Array.isArray(config?.pace_goals) && config.pace_goals.length > 0;
+  const hasCheckpoints = Array.isArray(config?.pace_checkpoints) && config.pace_checkpoints.length > 0;
+  const hasElevationProfile = Array.isArray(config?.course?.elevation_profile) && config.course.elevation_profile.length >= 2;
+  if ((hasPaceGoals || hasElevationProfile) && !html.includes('data-community-course-tools')) {
+    errors.push('Community mockup has pace/elevation tool data but is missing the de-emphasized course tools section.');
+  }
+  if (hasPaceGoals && hasCheckpoints && !html.includes('data-community-pace-tool')) {
+    errors.push('Community mockup has pace goal data but is missing the compact pace-split tool.');
+  }
+  if (hasElevationProfile && !html.includes('data-community-elevation-profile')) {
+    errors.push('Community mockup has elevation profile data but is missing the compact elevation profile tool.');
   }
 }
 

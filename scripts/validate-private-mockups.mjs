@@ -66,7 +66,7 @@ const renderedSectionFields = [
 ];
 
 const runnerChecklistItemIds = new Set([
-  'date', 'distance', 'start-time', 'location', 'price', 'packet-pickup', 'course', 'aid-stations', 'refunds-transfers', 'swag', 'awards', 'time-limit'
+  'date', 'distance', 'start-time', 'location', 'price', 'packet-pickup', 'course', 'aid-stations', 'refunds-transfers', 'swag', 'awards', 'time-limit', 'parking', 'post-race', 'series', 'facebook', 'photo-id'
 ]);
 
 const files = await privateMockupFiles();
