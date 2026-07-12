@@ -1,0 +1,565 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Run for Research 5K",
+    "slug": "run-for-research-5k-atl",
+    "tagline": "RaceTrac's family-friendly Atlanta fundraiser benefiting The Michael J. Fox Foundation.",
+    "hero_image": {
+      "src": "/mockups/bebe8fe70018c23e34c16a25d0c3747b/hero-race-morning.jpg",
+      "alt": "Runners and walkers in colorful socks gathering near an Atlanta stadium plaza on race morning",
+      "source": "Generated race-day hero image for this private mockup",
+      "generated": true
+    },
+    "colors": {
+      "primary": "#214C3A",
+      "secondary": "#F0A43A",
+      "accent": "#D64C2E",
+      "ink": "#1F2A24"
+    }
+  },
+  "event": {
+    "date": "2026-09-26",
+    "date_label": "Saturday, September 26, 2026",
+    "time": "07:30",
+    "location": "Atlanta, GA",
+    "venue": "The Battery Atlanta",
+    "timezone": "America/New_York"
+  },
+  "organization": {
+    "name": "RaceTrac"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K Run/Walk",
+      "distance": "5K",
+      "distance_miles": 3.1,
+      "featured": true,
+      "start_time": "8:00 AM",
+      "profile": "USATF-certified 5K route finishing on the Braves field at Truist Park",
+      "certification": "USATF Certified Course #GA18016DJ",
+      "map_label": "5K course map",
+      "highlights": [
+        "All races finish on the Braves field at Truist Park",
+        "Race time can be used to qualify for the Peachtree Road Race",
+        "Dry fit race T-shirt for 5K participants",
+        "Price increases after August 2: $30 through Aug 2, then $35 (Aug 3–29), $40 (Aug 30–Sept 19), $45 (Sept 20–25), and $50 on race day."
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL",
+        "method": "RunSignup and the RaceTrac event page list the 5K start, certified course, finish location, Peachtree qualifier note, and runner perks."
+      },
+      "price": "$30",
+      "elevation_gain": "199 ft gain",
+      "elevation_profile_label": "MapMyRun elevation profile",
+      "elevation_profile": [
+        {
+          "mile": 0.0,
+          "feet": 1022
+        },
+        {
+          "mile": 0.5,
+          "feet": 978
+        },
+        {
+          "mile": 1.0,
+          "feet": 905
+        },
+        {
+          "mile": 1.55,
+          "feet": 850
+        },
+        {
+          "mile": 2.1,
+          "feet": 940
+        },
+        {
+          "mile": 2.65,
+          "feet": 1002
+        },
+        {
+          "mile": 3.1,
+          "feet": 1022
+        }
+      ]
+    },
+    {
+      "id": "1k",
+      "name": "1K Run/Walk",
+      "distance": "1K",
+      "start_time": "7:30 AM",
+      "profile": "Family-friendly 1K at The Battery Atlanta",
+      "age_range": "Open to ages 13+",
+      "highlights": [
+        "Fun for the whole family",
+        "Starts before the 5K at 7:30 AM"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/Events/GA/Atlanta/RunforResearch5KATL",
+        "method": "RunSignup Event Info lists 1K Run/Walk start time, age eligibility, and current fee."
+      },
+      "price": "$20"
+    },
+    {
+      "id": "1k-12-under",
+      "name": "1K Run/Walk (12 & Under)",
+      "distance": "1K",
+      "start_time": "7:30 AM",
+      "profile": "Youth 1K for runners and walkers age 12 and under",
+      "age_range": "Open to ages 12 and under",
+      "highlights": [
+        "Finish inside Truist Park",
+        "Registration listed through race morning"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/Events/GA/Atlanta/RunforResearch5KATL",
+        "method": "RunSignup Event Info lists 1K youth start time, age eligibility, and current fee."
+      },
+      "price": "$5"
+    },
+    {
+      "id": "virtual-5k",
+      "name": "Virtual 5K",
+      "distance": "5K",
+      "profile": "Virtual option supporting the same fundraising effort",
+      "highlights": [
+        "Remote participation option for supporters who cannot attend in Atlanta"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/Events/GA/Atlanta/RunforResearch5KATL",
+        "method": "RunSignup Event Info lists a Virtual 5K option and fee."
+      },
+      "price": "$20"
+    }
+  ],
+  "course": {
+    "title": "Certified 5K with a Truist Park finish.",
+    "description": "The official listing describes a USATF-certified 5K course, notes that the MapMyRun interactive map displays 3.22 miles while the certified race distance is 3.1 miles, and highlights that all races finish on the Braves field at Truist Park.",
+    "type": "Certified road 5K",
+    "certification": "USATF Certified Course #GA18016DJ",
+    "distance_miles": 3.1,
+    "map_links": [
+      {
+        "label": "Official interactive course map",
+        "url": "https://www.mapmyrun.com/routes/view/2850770974"
+      }
+    ]
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before you head to The Battery.",
+    "intro": "A quick checklist for parking, packet pickup, awards, and race-day rules before runners click through to RunSignup.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, September 26, 2026",
+        "detail": "RunSignup and the RaceTrac event page list the race date.",
+        "source_path": "runner_decision_checklist.items.date",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL"
+      },
+      {
+        "id": "location",
+        "label": "Start/finish area",
+        "value": "The Battery Atlanta",
+        "detail": "The official listings identify The Battery Atlanta as the race site, with a Truist Park finish.",
+        "source_path": "runner_decision_checklist.items.location",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL"
+      },
+      {
+        "id": "parking",
+        "label": "Parking",
+        "value": "Red, Yellow, Green, and Purple Decks",
+        "detail": "Parking is free for the first 2 hours in the Red, Yellow, Green, and Purple Decks, then $10 for hours 2–3 and $15 for hours 3–4.",
+        "source_path": "runner_decision_checklist.items.parking",
+        "source_url": "https://www.racetrac.com/About-Us/Run-For-Research"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Pickup location and runner reminders",
+        "detail": "Use this checklist to confirm the pickup location and what runners need to bring; check the Schedule section for the exact pickup windows.",
+        "source_path": "runner_decision_checklist.items.packet-pickup",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL"
+      },
+      {
+        "id": "course",
+        "label": "Course",
+        "value": "USATF-certified 5K",
+        "detail": "The course is listed as USATF Certified Course #GA18016DJ and eligible as a Peachtree Road Race qualifier.",
+        "source_path": "runner_decision_checklist.items.course",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL"
+      },
+      {
+        "id": "swag",
+        "label": "Runner perks",
+        "value": "5K shirt, vendor village, timing",
+        "detail": "The RaceTrac event page lists Chronotrack disposable tag timing, a dry fit race T-shirt for 5K participants, and a stocked vendor village.",
+        "source_path": "runner_decision_checklist.items.swag",
+        "source_url": "https://www.racetrac.com/About-Us/Run-For-Research"
+      },
+      {
+        "id": "awards",
+        "label": "Awards",
+        "value": "Cash + gift card awards",
+        "detail": "Overall male/female awards: 1st $100, 2nd $75, 3rd $50. Top three male/female finishers in each age group receive a $25 RaceTrac gift card.",
+        "source_path": "runner_decision_checklist.items.awards",
+        "source_url": "https://www.racetrac.com/About-Us/Run-For-Research"
+      }
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "Run, walk, fundraise, and finish on the field.",
+    "paragraphs": [
+      "RaceTrac's Run for Research 5K is a family-friendly Atlanta event supporting The Michael J. Fox Foundation for Parkinson's Research. The official listing says all proceeds, including 100% of registration fees, go directly toward the foundation's support of Parkinson's research.",
+      "The race morning centers on The Battery Atlanta with a 1K at 7:30 AM, 5K at 8:00 AM, free food, prizes, music, vendor village energy, and a finish inside Truist Park.",
+      "The theme is Race for Fox in Your Craziest Socks, and participants can create teams during registration to fundraise with friends and family."
+    ],
+    "image": {
+      "src": "/mockups/bebe8fe70018c23e34c16a25d0c3747b/hero-race-morning.jpg",
+      "alt": "Community 5K runners and walkers gathering near an Atlanta stadium plaza",
+      "source": "Generated race-day hero image for this private mockup",
+      "generated": true
+    },
+    "links": [
+      {
+        "label": "Official RaceTrac race page",
+        "url": "https://www.racetrac.com/About-Us/Run-For-Research"
+      },
+      {
+        "label": "Official RunSignup listing",
+        "url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL"
+      },
+      {
+        "label": "Race photos",
+        "url": "https://runsignup.com/Race/Photos/GA/Atlanta/RunforResearch5KATL"
+      },
+      {
+        "label": "Contact the Race",
+        "url": "https://runsignup.com/Race/Info/GA/Atlanta/RunforResearch5KATL#contactFormSection"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Saturday, September 19, 2026",
+      "name": "Early packet pickup",
+      "group_title": "Packet Pickup",
+      "time": "10:30 AM – 5:00 PM",
+      "location": "Big Peach Running Co., 1062 Johnson Ferry Rd. Unit 170, Marietta, GA 30068",
+      "applies_to_distances": [
+        "5k",
+        "1k",
+        "1k-12-under",
+        "virtual-5k"
+      ]
+    },
+    {
+      "day": "Saturday, September 26, 2026",
+      "name": "Registration and race-day packet pickup open",
+      "time": "7:00 AM",
+      "location": "Near the Truist Park Chop House gate",
+      "applies_to_distances": [
+        "5k",
+        "1k",
+        "1k-12-under"
+      ]
+    },
+    {
+      "day": "Saturday, September 26, 2026",
+      "name": "1K starts",
+      "time": "7:30 AM",
+      "location": "The Battery Atlanta",
+      "applies_to_distances": [
+        "1k",
+        "1k-12-under"
+      ]
+    },
+    {
+      "day": "Saturday, September 26, 2026",
+      "name": "5K starts",
+      "time": "8:00 AM",
+      "location": "The Battery Atlanta",
+      "applies_to_distances": [
+        "5k"
+      ]
+    },
+    {
+      "day": "Saturday, September 26, 2026",
+      "name": "Awards presentation",
+      "time": "8:50 AM",
+      "location": "Race site",
+      "applies_to_distances": [
+        "5k",
+        "1k",
+        "1k-12-under"
+      ]
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=84837",
+    "platform": "runsignup",
+    "cta_label": "Sign up on RunSignup",
+    "intro": "Registration is open on RunSignup for the 5K Run/Walk, both 1K options, and the Virtual 5K.",
+    "price_note": "5K price increases after August 2: $30 through Aug 2, $35 Aug 3–29, $40 Aug 30–Sept 19, $45 Sept 20–25, and $50 race day. Base fees shown before RunSignup processing fees.",
+    "status": "open",
+    "status_label": "Registration open"
+  },
+  "travel": {
+    "items": [
+      {
+        "label": "PKT",
+        "title": "Packet pickup",
+        "description": "Early pickup is listed at Big Peach Running Co. in Marietta, and race-day pickup is listed near the Truist Park Chop House gate. Check the Schedule section for exact pickup windows."
+      },
+      {
+        "label": "PRK",
+        "title": "Parking",
+        "description": "Parking is available in the Red, Yellow, Green, and Purple Decks: first 2 hours free, $10 for hours 2–3, and $15 for hours 3–4. Arrive early to leave time for the walk to the race area."
+      },
+      {
+        "label": "FOX",
+        "title": "Fundraising",
+        "description": "Participants can create fundraising teams during registration to support The Michael J. Fox Foundation for Parkinson's Research."
+      }
+    ]
+  },
+  "sponsors": [
+    {
+      "name": "RaceTrac",
+      "tier": "Host"
+    },
+    {
+      "name": "The Michael J. Fox Foundation",
+      "tier": "Beneficiary"
+    },
+    {
+      "name": "Coca-Cola",
+      "tier": "Premium Sponsor"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where does the race take place?",
+      "answer": "The race is listed for The Battery Atlanta, with all races finishing on the Braves field at Truist Park."
+    },
+    {
+      "question": "What distances are offered?",
+      "answer": "RunSignup lists a 5K Run/Walk, a 1K Run/Walk for ages 13 and up, a 1K Run/Walk for ages 12 and under, and a Virtual 5K."
+    },
+    {
+      "question": "Is the 5K course certified?",
+      "answer": "Yes. The source lists USATF Certified Course #GA18016DJ and says race times can be used to qualify for the Peachtree Road Race."
+    },
+    {
+      "question": "Are dogs or strollers allowed?",
+      "answer": "The RaceTrac event page says dogs are not allowed at the 5K for safety and liability reasons. Strollers are welcome, with stroller participants asked to start near the back."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "Refunds are not allowed for this race.",
+      "links": [
+        {
+          "label": "Official RunSignup refund policy",
+          "url": "https://runsignup.com/Race/84837/RefundPolicy"
+        }
+      ]
+    },
+    {
+      "question": "How do I contact the race?",
+      "answer": "Use the official RunSignup contact form for race questions.",
+      "links": [
+        {
+          "label": "Contact the Race",
+          "url": "https://runsignup.com/Race/Info/GA/Atlanta/RunforResearch5KATL#contactFormSection"
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "meta_title": "Run for Research 5K — Atlanta Race Guide",
+    "meta_description": "RaceTrac's Run for Research 5K is a family-friendly Atlanta run and walk at The Battery supporting The Michael J. Fox Foundation."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL",
+    "captured_at": "2026-07-12T03:01:40.000Z",
+    "access_token": "bebe8fe70018c23e34c16a25d0c3747b",
+    "race_slug": "run-for-research-5k-atl",
+    "route": "/private/mockups/bebe8fe70018c23e34c16a25d0c3747b/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/bebe8fe70018c23e34c16a25d0c3747b/hero-race-morning.jpg",
+        "alt": "Runners and walkers in colorful socks near an Atlanta stadium plaza",
+        "caption": "Family-friendly Atlanta race morning energy for the Run for Research 5K mockup.",
+        "source": "Generated race-day hero image for this private mockup",
+        "generated": true
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL",
+      "captured_at": "2026-07-12T03:01:40.000Z",
+      "source_confirmed_sections": [
+        "contacts",
+        "course",
+        "faqs",
+        "runner_decision_checklist",
+        "schedule",
+        "sponsors",
+        "story",
+        "travel"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "1k",
+        "1k-12-under",
+        "virtual-5k"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup page title",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header and RaceTrac event page list Saturday, September 26, 2026",
+          "confidence": "high"
+        },
+        {
+          "path": "event.venue",
+          "source": "RunSignup Place section and RaceTrac event page list The Battery Atlanta",
+          "confidence": "high"
+        },
+        {
+          "path": "distances",
+          "source": "RunSignup Events and Event Info pages list 5K Run/Walk, 1K Run/Walk, 1K Run/Walk (12 & Under), and Virtual 5K",
+          "confidence": "high"
+        },
+        {
+          "path": "course.certification",
+          "source": "RunSignup Course Map section lists USATF Certified Course #GA18016DJ",
+          "confidence": "high"
+        },
+        {
+          "path": "course.map_links",
+          "source": "RunSignup Course Map section links to MapMyRun route 2850770974",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "RaceTrac event page lists race day schedule; RunSignup lists packet pickup dates and locations",
+          "confidence": "high"
+        },
+        {
+          "path": "registration",
+          "source": "RunSignup Event Info and RaceTrac registration details list 5K price increases: $30 through Aug 2, $35 Aug 3–29, $40 Aug 30–Sept 19, $45 Sept 20–25, $50 race day.",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.parking",
+          "source": "RaceTrac event page lists Red, Yellow, Green, and Purple Deck parking: first 2 hours free, $10 for hours 2–3, and $15 for hours 3–4.",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup Packet Pick-Up Info section and RaceTrac Early Packet Pickup tab",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "RaceTrac Runner Perks tab lists timing, 5K shirt, vendor village, and gift cards",
+          "confidence": "high"
+        },
+        {
+          "path": "sponsors",
+          "source": "RaceTrac event page displays Premium Sponsors: Coca-Cola and Michael J. Fox Foundation; RunSignup describes RaceTrac as event host/fundraiser organizer",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs.refund-policy",
+          "source": "RunSignup Refund Policy page states refunds are not allowed for this race",
+          "confidence": "high"
+        },
+        {
+          "path": "contacts.race_contact_url",
+          "source": "RunSignup Race Contact Info section and footer Contact This Race link",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "RunSignup race header and RaceTrac page list Saturday, September 26, 2026",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup Place section and RaceTrac page list The Battery Atlanta and Truist Park finish",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "RunSignup Course Map section lists USATF Certified Course #GA18016DJ and Peachtree qualifier note",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.awards",
+          "source": "RaceTrac Runner Perks tab lists overall male/female prize amounts and $25 RaceTrac gift cards for top three male/female in each age group.",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.5k.elevation_profile",
+          "source": "MapMyRun route page displays RaceTrac Run for Research 5K distance, elevation gain, start/max elevation, and elevation axis labels; mockup normalizes the chart to the certified 3.1 mi race distance.",
+          "confidence": "medium"
+        },
+        {
+          "path": "distances.price",
+          "source": "RunSignup Event Info page lists current public base fees before SignUp fees for each distance.",
+          "confidence": "high"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Visible public sources confirm date, venue, distances, start times, current public fees and price increases, certified 5K course number, MapMyRun route link, Peachtree qualifier note, parking deck fees, awards, runner perks, sponsor/beneficiary context, photo albums, contact form, and refund policy. Packet-pickup date/time and exact street address should be confirmed with the race director before publishing; hydration, course-close time, direct race-director email, and image reuse rights were not visible in captured public source pages.",
+      "items": [
+        {
+          "field": "early packet pickup date/time",
+          "reason": "Steve flagged a source conflict: RunSignup lists Monday, August 18, 12–6 PM while RaceTrac lists Saturday, September 19, 10:30 AM–5 PM. Confirm with the race director before publishing."
+        },
+        {
+          "field": "runner-facing street address",
+          "reason": "Steve flagged a source conflict: RunSignup lists 755 Battery Avenue SE while RaceTrac lists 800 Battery Ave. Confirm whether these represent different entrances and which should be shown to runners."
+        },
+        {
+          "field": "course close time",
+          "reason": "No 5K or 1K course-close time was visible on RunSignup or the RaceTrac event page."
+        },
+        {
+          "field": "hydration details",
+          "reason": "No hydration or aid-station details were visible in the captured public source pages."
+        },
+        {
+          "field": "direct race contact email",
+          "reason": "RunSignup provides a contact form but does not expose a direct email address in the visible listing."
+        },
+        {
+          "field": "official photography rights",
+          "reason": "Public photo albums exist on RunSignup, but reuse rights are unclear; the mockup uses a generated hero image instead of copying race photos."
+        }
+      ]
+    },
+    "suppress_measurement_panel": true,
+    "show_registration_decision": false
+  },
+  "contacts": {
+    "race_contact_url": "https://runsignup.com/Race/Info/GA/Atlanta/RunforResearch5KATL#contactFormSection",
+    "race_contact_label": "Contact the Race"
+  }
+}

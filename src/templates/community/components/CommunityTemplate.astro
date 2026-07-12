@@ -5,6 +5,7 @@ import StatBar from "./StatBar.astro";
 import CoursePicker from "./CoursePicker.astro";
 import Schedule from "./Schedule.astro";
 import Story from "./Story.astro";
+import CourseTools from "./CourseTools.astro";
 import Gallery from "./Gallery.astro";
 import PastRacePhotos from "../../../shared/components/PastRacePhotos.astro";
 import Volunteer from "./Volunteer.astro";
@@ -18,6 +19,7 @@ import Finale from "./Finale.astro";
 import Footer from "./Footer.astro";
 const { race } = Astro.props;
 const isPrivateMockup = Boolean(race.private_mockup);
+const showMeasurementReadyPanel = isPrivateMockup && !race.private_mockup?.suppress_measurement_panel;
 ---
 <div class="community-template">
   <Nav race={race} />
@@ -27,12 +29,13 @@ const isPrivateMockup = Boolean(race.private_mockup);
     <CoursePicker race={race} />
     <Schedule race={race} />
     <Story race={race} />
+    <CourseTools race={race} />
     <Gallery race={race} />
     <PastRacePhotos race={race} variant="community" />
     <Volunteer race={race} />
     {isPrivateMockup && <RunnerDecisionChecklist race={race} />}
     {isPrivateMockup && <RegistrationDecisionCard race={race} />}
-    {isPrivateMockup && <MeasurementReadyPanel race={race} />}
+    {showMeasurementReadyPanel && <MeasurementReadyPanel race={race} />}
     <Entry race={race} />
     <Sponsors race={race} />
     <FAQ race={race} />
@@ -86,4 +89,17 @@ const isPrivateMockup = Boolean(race.private_mockup);
       if(href && href.length>1){e.preventDefault();scrollToId(href.substring(1));}
     });
   });
+
+  function selectedDistanceId(){return document.querySelector('.pk.active')?.getAttribute('data-distance') || document.querySelector('.seg.active')?.getAttribute('data-dist') || document.querySelector('[data-entry-distance-card]')?.getAttribute('data-distance') || '';}
+  function syncEntryCards(){
+    const selected=selectedDistanceId();
+    const entryDistanceCards=document.querySelectorAll('[data-entry-distance-card]');
+    entryDistanceCards.forEach(card=>{
+      const match=!selected || card.getAttribute('data-distance')===selected;
+      card.toggleAttribute('data-entry-hidden',!match);
+    });
+  }
+  syncEntryCards();
+  document.querySelectorAll('.seg').forEach(button=>button.addEventListener('click',()=>setTimeout(syncEntryCards,0)));
+  document.addEventListener('community-distance-change',syncEntryCards);
 </script>

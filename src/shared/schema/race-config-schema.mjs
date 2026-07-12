@@ -20,7 +20,13 @@ const RUNNER_CHECKLIST_ITEM_IDS = new Set([
   'refunds-transfers',
   'swag',
   'awards',
-  'time-limit'
+  'time-limit',
+  'parking',
+  'post-race',
+  'series',
+  'facebook',
+  'photo-id',
+  'age-eligibility'
 ]);
 
 function isPlainObject(value) {

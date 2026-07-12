@@ -66,7 +66,7 @@ const renderedSectionFields = [
 ];
 
 const runnerChecklistItemIds = new Set([
-  'date', 'distance', 'start-time', 'location', 'price', 'packet-pickup', 'course', 'aid-stations', 'refunds-transfers', 'swag', 'awards', 'time-limit'
+  'date', 'distance', 'start-time', 'location', 'price', 'packet-pickup', 'course', 'aid-stations', 'refunds-transfers', 'swag', 'awards', 'time-limit', 'parking', 'post-race', 'series', 'facebook', 'photo-id', 'age-eligibility'
 ]);
 
 const files = await privateMockupFiles();
@@ -137,6 +137,7 @@ for (const file of files) {
     validateSourceDerivedPlaceholders(config, errors);
     validateDisplayCopyPolish(config, errors);
     validateFaqLinks(config, errors);
+    validateTomKingClassicCommunityFixes(config, errors);
   }
 
   if (errors.length > 0) {
@@ -201,6 +202,58 @@ function validateFaqLinks(config, errors) {
       if (!link?.label || rawVisibleUrlPattern.test(String(link.label))) errors.push(`${base}.links[${linkIndex}].label: FAQ links must use a human-readable label, not a raw URL.`);
     });
   });
+}
+
+function validateTomKingClassicCommunityFixes(config, errors) {
+  if (config.identity?.slug !== 'tom-king-classic-community') return;
+
+  const half = asArray(config.distances).find((distance) => distance?.id === 'half-marathon');
+  const halfProfile = asArray(half?.elevation_profile);
+  const courseProfile = asArray(config.course?.elevation_profile);
+
+  if (Number(half?.distance_miles) !== 13.1 || half?.distance !== '13.1 mi') {
+    errors.push('Tom King half marathon distance must render as certified 13.1 mi.');
+  }
+  if (Number(config.course?.distance_miles) !== 13.1) {
+    errors.push('Tom King course.distance_miles must remain 13.1 for the certified half marathon.');
+  }
+  for (const [label, profile] of [['distances.half-marathon.elevation_profile', halfProfile], ['course.elevation_profile', courseProfile]]) {
+    const lastMile = Number(profile.at(-1)?.mile);
+    if (lastMile !== 13.1) errors.push(`${label}: final elevation point must be 13.1 mi, not the raw MapMyRun trace distance.`);
+    if (!profile.some((point) => Number(point?.mile) === 6.55)) errors.push(`${label}: half-way chart marker must be 6.55 mi for a 13.1 mi course.`);
+  }
+  if (half?.elevation_gain !== '232 ft gain' || Number(config.course?.max_climb?.feet) !== 232) {
+    errors.push('Tom King half marathon elevation gain must match MapMyRun total ascent: 232 ft gain.');
+  }
+
+  const scheduleText = asArray(config.schedule).map((item) => `${item?.name || ''} ${item?.time || ''} ${(item?.applies_to_distances || []).join(',')}`).join(' | ');
+  if (!/5K course closes\s+9:15 AM\s+5k/i.test(scheduleText)) {
+    errors.push('Tom King schedule must include the verified 5K course close at 9:15 AM for the 5K distance.');
+  }
+  if (/awards ceremony/i.test(scheduleText)) {
+    errors.push('Tom King schedule must not publish unconfirmed estimated awards ceremony times.');
+  }
+
+  const checklistItems = asArray(config.runner_decision_checklist?.items);
+  const checklistText = checklistItems.map((item) => `${item?.id || ''} ${item?.label || ''} ${item?.value || ''} ${item?.detail || ''}`).join(' | ');
+  if (!/hydration/i.test(checklistText) || !/start\/finish/i.test(checklistText) || !/half marathon course/i.test(checklistText)) {
+    errors.push('Tom King runner checklist must include source-stated hydration at start/finish and on the half marathon course.');
+  }
+  const packetPickup = checklistItems.find((item) => item?.id === 'packet-pickup');
+  if (/\b(?:3(?::00)?\s*PM|6(?::00)?\s*PM|6(?::00)?\s*AM)\b/i.test(`${packetPickup?.value || ''} ${packetPickup?.detail || ''}`)) {
+    errors.push('Tom King checklist packet-pickup card should focus on action/ID, not repeat full schedule times.');
+  }
+  const faqText = asArray(config.faqs).map((faq) => `${faq?.question || ''} ${faq?.answer || ''} ${asArray(faq?.links).map((link) => `${link?.label || ''} ${link?.url || ''}`).join(' ')}`).join(' | ');
+  if (!/ages?\s+4\s*[–-]\s*95/i.test(`${checklistText} ${faqText}`)) {
+    errors.push('Tom King mockup must mention the RunSignup half marathon age eligibility: ages 4–95.');
+  }
+  if (!/Refunds are not allowed for this race/i.test(faqText) || !/\/Race\/116977\/RefundPolicy/i.test(faqText)) {
+    errors.push('Tom King FAQ must include the no-refunds policy with the official RunSignup refund-policy link.');
+  }
+  const storyLinksText = asArray(config.story?.links).map((link) => `${link?.label || ''} ${link?.url || ''}`).join(' ');
+  if (!/Contact (?:the )?Race/i.test(`${faqText} ${storyLinksText}`) || !/#contactFormSection/i.test(`${faqText} ${storyLinksText}`)) {
+    errors.push('Tom King mockup must include a simple Contact the Race link to the RunSignup contact form.');
+  }
 }
 
 function isDisplayCopyPath(jsonPath) {

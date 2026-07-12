@@ -90,12 +90,15 @@ nav.scrolled{
   backdrop-filter:blur(16px) saturate(140%);
   box-shadow:0 1px 0 var(--line);
 }
-.brand{display:flex;align-items:center;gap:11px;color:var(--ink);font-family:"Fraunces",serif;font-weight:700;font-size:1.2rem;letter-spacing:-.01em;min-width:0}
+.brand{display:flex;align-items:center;gap:11px;color:var(--forest);font-family:"Fraunces",serif;font-weight:700;font-size:1.2rem;letter-spacing:-.01em;min-width:0}
+.community-template nav .brand{color:var(--forest);max-width:none}
 .brand .mark{width:34px;height:34px;flex:0 0 auto}
 .brand span{min-width:0;max-width:min(58vw,460px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .brand small{display:block;font-family:"Nunito";font-weight:600;font-size:.6rem;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;margin-top:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{color:var(--ink);font-weight:500;font-size:.92rem;position:relative;transition:color .2s}
+.community-template nav .nav-links a{color:var(--ink)}
+.community-template nav .nav-links a.btn-accent{color:#fff}
 .nav-links a:hover{color:var(--accent)}
 .btn{
   font-family:"Nunito";font-weight:700;font-size:.92rem;cursor:pointer;border:none;
@@ -328,13 +331,23 @@ section{position:relative;background:var(--community-cream)}
 .course-map .ph-img{width:100%;max-width:100%;height:100%;display:block;position:relative;min-width:0;overflow:hidden}
 .course-map .ph-img svg{display:block;width:100%;max-width:100%;height:100%}
 .ph-route{background:linear-gradient(135deg,#F5EFE2 0%,#E8DCC4 60%,#D4C49E 100%)}
+.course-map--profile{aspect-ratio:auto;min-height:360px;padding:28px;display:flex;flex-direction:column;justify-content:center;overflow:visible}
+.course-profile-chart{position:relative;height:230px;padding:26px 18px 18px 58px;background:rgba(250,246,238,.7);border:1px solid rgba(47,39,29,.08);border-radius:18px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+.course-profile-chart svg{width:100%;height:100%;overflow:visible;display:block}
+.course-profile-y-axis{position:absolute;top:26px;bottom:18px;left:14px;width:38px;font-family:"Nunito";font-size:.7rem;color:rgba(42,31,24,.62);font-weight:800;pointer-events:none}
+.course-profile-y-axis span{position:absolute;left:0;transform:translateY(-50%);white-space:nowrap}
+.course-profile-y-axis span:nth-child(1){top:0}
+.course-profile-y-axis span:nth-child(2){top:50%}
+.course-profile-y-axis span:nth-child(3){top:100%}
+.course-profile-mile{display:flex;justify-content:space-between;gap:12px;padding:10px 18px 0 58px;font-family:"Nunito";font-size:.72rem;color:rgba(42,31,24,.62);font-weight:800;letter-spacing:.04em}
 .course-map .map-info{
   position:absolute;left:18px;bottom:18px;right:18px;
   display:flex;justify-content:space-between;align-items:center;
-  font-family:"Nunito";font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  font-family:"Nunito";font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;
   color:rgba(42,31,24,.68);font-weight:600;
 }
-.course-map .map-info b{color:var(--accent);font-size:.88rem;letter-spacing:-.01em;font-weight:700;font-family:"Fraunces";font-style:italic;text-transform:none}
+.course-map .map-info--profile{position:static;margin-top:18px;gap:18px;align-items:flex-start}
+.course-map .map-info b{color:var(--accent);font-size:.88rem;letter-spacing:-.01em;font-weight:700;font-family:"Fraunces";font-style:italic;text-transform:none;text-align:right}
 
 .course-details{display:flex;flex-direction:column;gap:18px}
 .detail-row{
@@ -400,7 +413,33 @@ section{position:relative;background:var(--community-cream)}
 .story-photo .ph-img svg{width:100%;height:100%;display:block}
 .story-photo .mockup-photo-fill img{object-fit:contain;padding:12px;background:rgba(255,255,255,.7)}
 .story-photo .mockup-photo-fill::after,.g-photo .mockup-photo-fill::after{display:none}
+.story-photo figcaption{font-family:"Nunito";font-size:.78rem;color:rgba(42,31,24,.6);font-weight:600;letter-spacing:.04em;margin-top:12px}
 .ph-runners{background:linear-gradient(180deg,#F8DCB0 0%,#E8B575 35%,#C68856 65%,#7A4B33 100%)}
+
+/* COMMUNITY COURSE TOOLS */
+.community-tools{background:var(--community-cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tools-head{max-width:720px;margin-bottom:34px}
+.tools-head .lead{font-size:1rem;max-width:58ch}
+.tools-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+.tools-grid--single{grid-template-columns:minmax(0,680px)}
+.tool-card{background:rgba(255,255,255,.58);border:1px solid rgba(47,39,29,.12);border-radius:var(--r);padding:clamp(18px,3vw,24px);box-shadow:0 14px 34px rgba(61,43,28,.08);min-width:0}
+.tool-card__label{font-family:"Nunito";font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rust);font-weight:800;margin-bottom:8px}
+.tool-card h3{font-size:clamp(1.35rem,2.7vw,1.75rem);margin-bottom:18px;color:var(--forest)}
+.community-profile-chart{position:relative;height:180px;padding:22px 18px 16px 54px;background:rgba(250,246,238,.7);border:1px solid rgba(47,39,29,.08);border-radius:18px}
+.community-profile-chart svg{width:100%;height:100%;overflow:visible}
+.community-profile-y-axis{position:absolute;top:22px;bottom:16px;left:14px;width:34px;font-family:"Nunito";font-size:.68rem;color:rgba(42,31,24,.58);font-weight:800;pointer-events:none}
+.community-profile-y-axis span{position:absolute;left:0;transform:translateY(-50%);white-space:nowrap}
+.community-profile-mile{display:flex;justify-content:space-between;gap:12px;padding:10px 18px 0 54px;font-family:"Nunito";font-size:.72rem;color:rgba(42,31,24,.62);font-weight:800;letter-spacing:.04em}
+.community-pace-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.community-pace-tab{border:1px solid rgba(47,39,29,.12);background:var(--community-parchment);border-radius:999px;padding:8px 12px;font-family:"Nunito";font-weight:800;color:var(--ink);cursor:pointer;text-align:left;line-height:1.1}
+.community-pace-tab small{display:block;font-size:.68rem;color:rgba(42,31,24,.62);font-weight:700;margin-top:2px}
+.community-pace-tab.active{background:var(--forest);color:var(--paper);border-color:var(--forest)}
+.community-pace-tab.active small{color:var(--honey)}
+.community-pace-table{border:1px solid rgba(47,39,29,.1);border-radius:18px;overflow:hidden;background:rgba(250,246,238,.62)}
+.community-pace-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;padding:9px 12px;border-bottom:1px solid rgba(47,39,29,.08);font-family:"Nunito";font-size:.88rem;color:rgba(42,31,24,.78)}
+.community-pace-row:last-child{border-bottom:none}
+.community-pace-row span:last-child{font-weight:900;color:var(--forest)}
+.community-pace-row--head{background:rgba(159,74,38,.08);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:var(--rust)}
 
 /* GALLERY */
 .gallery{background:var(--community-cream)}
@@ -489,6 +528,7 @@ display:grid;
 .etier li{color:rgba(42,31,24,.74);line-height:1.4;display:flex;gap:9px;align-items:flex-start}
 .etier li::before{content:"·";color:var(--accent);font-weight:700;font-size:1.4rem;line-height:1;margin-top:-2px}
 .etier .btn{width:100%;justify-content:center;padding:11px;font-size:.88rem;margin-top:8px}
+.etier[data-entry-hidden]{display:none}
 
 .charity-note{
   margin-top:32px;
@@ -622,7 +662,7 @@ footer{background:var(--ink);color:rgba(250,246,238,.6);font-size:.92rem}
 
 /* RESPONSIVE */
 @media(max-width:1000px){
-  .hero-inner,.course-grid,.story-grid,.vol-grid{grid-template-columns:1fr;gap:48px}
+  .hero-inner,.course-grid,.story-grid,.tools-grid,.vol-grid{grid-template-columns:1fr;gap:48px}
   .community-template .hero-inner{grid-template-columns:1fr;gap:48px}
   .course-head{flex-direction:column;align-items:flex-start}
   .timeline{grid-template-columns:1fr;gap:18px}
