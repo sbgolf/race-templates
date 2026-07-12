@@ -91,11 +91,14 @@ nav.scrolled{
   box-shadow:0 1px 0 var(--line);
 }
 .brand{display:flex;align-items:center;gap:11px;color:var(--forest);font-family:"Fraunces",serif;font-weight:700;font-size:1.2rem;letter-spacing:-.01em;min-width:0}
+.community-template nav .brand{color:var(--forest);max-width:none}
 .brand .mark{width:34px;height:34px;flex:0 0 auto}
 .brand span{min-width:0;max-width:min(58vw,460px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .brand small{display:block;font-family:"Nunito";font-weight:600;font-size:.6rem;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;margin-top:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{color:var(--ink);font-weight:500;font-size:.92rem;position:relative;transition:color .2s}
+.community-template nav .nav-links a{color:var(--ink)}
+.community-template nav .nav-links a.btn-accent{color:#fff}
 .nav-links a:hover{color:var(--accent)}
 .btn{
   font-family:"Nunito";font-weight:700;font-size:.92rem;cursor:pointer;border:none;
