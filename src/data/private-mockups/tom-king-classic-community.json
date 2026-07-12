@@ -250,14 +250,6 @@
         "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk"
       },
       {
-        "id": "photo-id",
-        "label": "Packet pickup ID",
-        "value": "Please bring photo ID",
-        "detail": "The race listing asks runners to bring photo ID when picking up their race packet.",
-        "source_path": "runner_decision_checklist.items.photo-id",
-        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk"
-      },
-      {
         "id": "aid-stations",
         "label": "Hydration",
         "value": "Start/finish + half marathon course",
@@ -666,11 +658,6 @@
         {
           "path": "runner_decision_checklist.items.facebook",
           "source": "RunSignup source supports Facebook",
-          "confidence": "high"
-        },
-        {
-          "path": "runner_decision_checklist.items.photo-id",
-          "source": "RunSignup listing says to bring photo ID for packet pickup",
           "confidence": "high"
         },
         {

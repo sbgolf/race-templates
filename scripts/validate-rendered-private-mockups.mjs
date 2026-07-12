@@ -280,7 +280,7 @@ for (const file of files) {
 
   const incorrectlyTracked = anchors.filter((anchor) => anchor.attrs['data-analytics-event'] === 'register_click' && anchor.attrs.href !== registrationUrl);
   incorrectlyTracked.forEach((anchor) => errors.push(`Non-registration anchor is tracked as register_click: ${anchor.attrs.href || '(missing href)'}.`));
-  if (template === 'community') await validateCommunityAuditGuards(html, anchors, errors);
+  if (template === 'community') await validateCommunityAuditGuards(html, anchors, config, errors);
 
   const relative = redactPrivateTokens(path.relative(root, file));
   if (errors.length) {
@@ -580,7 +580,7 @@ function certificationNumbersForConfig(config) {
   return [...new Set(candidates.flatMap((value) => String(value || '').match(/\b[A-Z]{2}\d{5}[A-Z]{2}\b/g) || []))];
 }
 
-async function validateCommunityAuditGuards(html, anchors, errors) {
+async function validateCommunityAuditGuards(html, anchors, config, errors) {
   const communityCss = await readFile(communityCssPath, 'utf8');
   const detailLabelRule = cssRuleForSelector(communityCss, '.detail-row .l');
   if (!detailLabelRule) {
@@ -595,6 +595,16 @@ async function validateCommunityAuditGuards(html, anchors, errors) {
   }
 
   const entryRegistrationAnchors = anchors.filter((anchor) => anchor.attrs['data-analytics-placement']?.startsWith('entry-distance-'));
+  const communitySlug = String(config?.private_mockup?.slug || config?.identity?.slug || config?.identity?.name || '').toLowerCase();
+  if (communitySlug.includes('tom-king')) {
+    const checklistItems = asArray(config?.runner_decision_checklist?.items);
+    if (checklistItems.some((item) => item?.id === 'photo-id' || /packet pickup id/i.test(item?.label || ''))) {
+      errors.push('Tom King runner checklist must consolidate packet-pickup photo ID into one Packet pickup card; remove the redundant Packet pickup ID card.');
+    }
+    if (/Packet pickup ID/i.test(html)) {
+      errors.push('Tom King rendered checklist must not show a redundant Packet pickup ID card.');
+    }
+  }
   const navBrandRule = cssRuleForSelector(communityCss, 'nav .brand') || cssRuleForSelector(communityCss, '.community-template nav .brand') || cssRuleForSelector(communityCss, '.brand');
   if (!/color\s*:\s*var\(--forest/i.test(navBrandRule) && !/color\s*:\s*#294735/i.test(navBrandRule)) {
     errors.push('Community sticky nav brand/title text must use dark green for contrast against the light cream/tan nav background.');
