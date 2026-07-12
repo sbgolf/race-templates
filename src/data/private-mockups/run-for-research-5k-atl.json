@@ -42,7 +42,8 @@
       "highlights": [
         "All races finish on the Braves field at Truist Park",
         "Race time can be used to qualify for the Peachtree Road Race",
-        "Dry fit race T-shirt for 5K participants"
+        "Dry fit race T-shirt for 5K participants",
+        "Price increases after August 2: $30 through Aug 2, then $35 (Aug 3–29), $40 (Aug 30–Sept 19), $45 (Sept 20–25), and $50 on race day."
       ],
       "provenance": {
         "verified": true,
@@ -151,7 +152,7 @@
   "runner_decision_checklist": {
     "kicker": "Race day notes",
     "headline": "What to know before you head to The Battery.",
-    "intro": "A quick checklist for start times, parking, packet pickup, and race-day rules before runners click through to RunSignup.",
+    "intro": "A quick checklist for parking, packet pickup, awards, and race-day rules before runners click through to RunSignup.",
     "footer_cta": false,
     "items": [
       {
@@ -166,23 +167,23 @@
         "id": "location",
         "label": "Start/finish area",
         "value": "The Battery Atlanta",
-        "detail": "RunSignup lists The Battery Atlanta at 755 Battery Avenue Southeast; the RaceTrac page lists The Battery and notes the Truist Park finish.",
+        "detail": "The official listings identify The Battery Atlanta as the race site, with a Truist Park finish.",
         "source_path": "runner_decision_checklist.items.location",
         "source_url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL"
       },
       {
         "id": "parking",
         "label": "Parking",
-        "value": "First 2 hours free in listed decks",
-        "detail": "RunSignup lists free parking with no time limit at North 29 and two free hours in Yellow, Green, Purple, and Red Decks.",
+        "value": "Red, Yellow, Green, and Purple Decks",
+        "detail": "Parking is free for the first 2 hours in the Red, Yellow, Green, and Purple Decks, then $10 for hours 2–3 and $15 for hours 3–4.",
         "source_path": "runner_decision_checklist.items.parking",
-        "source_url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL"
+        "source_url": "https://www.racetrac.com/About-Us/Run-For-Research"
       },
       {
         "id": "packet-pickup",
         "label": "Packet pickup",
-        "value": "Early pickup + race-morning pickup",
-        "detail": "Early pickup is listed for Saturday, September 19 from 10:30 AM to 5:00 PM at Big Peach Running Co. in Marietta; race-day pickup begins at 7:00 AM near the Truist Park Chop House gate.",
+        "value": "Pickup location and runner reminders",
+        "detail": "Use this checklist to confirm the pickup location and what runners need to bring; check the Schedule section for the exact pickup windows.",
         "source_path": "runner_decision_checklist.items.packet-pickup",
         "source_url": "https://runsignup.com/Race/GA/Atlanta/RunforResearch5KATL"
       },
@@ -205,8 +206,8 @@
       {
         "id": "awards",
         "label": "Awards",
-        "value": "Overall + age-group awards",
-        "detail": "Sources list overall male/female awards and top three male/female age-group awards.",
+        "value": "Cash + gift card awards",
+        "detail": "Overall male/female awards: 1st $100, 2nd $75, 3rd $50. Top three male/female finishers in each age group receive a $25 RaceTrac gift card.",
         "source_path": "runner_decision_checklist.items.awards",
         "source_url": "https://www.racetrac.com/About-Us/Run-For-Research"
       }
@@ -220,8 +221,6 @@
       "The race morning centers on The Battery Atlanta with a 1K at 7:30 AM, 5K at 8:00 AM, free food, prizes, music, vendor village energy, and a finish inside Truist Park.",
       "The theme is Race for Fox in Your Craziest Socks, and participants can create teams during registration to fundraise with friends and family."
     ],
-    "quote": "Race for Fox in Your Craziest Socks!",
-    "quote_byline": "RunSignup race listing",
     "image": {
       "src": "/mockups/bebe8fe70018c23e34c16a25d0c3747b/hero-race-morning.jpg",
       "alt": "Community 5K runners and walkers gathering near an Atlanta stadium plaza",
@@ -251,7 +250,8 @@
     {
       "day": "Saturday, September 19, 2026",
       "name": "Early packet pickup",
-      "time": "10:30 AM \u2013 5:00 PM",
+      "group_title": "Packet Pickup",
+      "time": "10:30 AM – 5:00 PM",
       "location": "Big Peach Running Co., 1062 Johnson Ferry Rd. Unit 170, Marietta, GA 30068",
       "applies_to_distances": [
         "5k",
@@ -307,7 +307,7 @@
     "platform": "runsignup",
     "cta_label": "Sign up on RunSignup",
     "intro": "Registration is open on RunSignup for the 5K Run/Walk, both 1K options, and the Virtual 5K.",
-    "price_note": "Base fees shown before RunSignup processing fees; check RunSignup for current totals and price-change timing.",
+    "price_note": "5K price increases after August 2: $30 through Aug 2, $35 Aug 3–29, $40 Aug 30–Sept 19, $45 Sept 20–25, and $50 race day. Base fees shown before RunSignup processing fees.",
     "status": "open",
     "status_label": "Registration open"
   },
@@ -316,12 +316,12 @@
       {
         "label": "PKT",
         "title": "Packet pickup",
-        "description": "Early packet pickup is listed at Big Peach Running Co. in Marietta on Saturday, September 19 from 10:30 AM to 5:00 PM. Race-day pickup begins near the Truist Park Chop House gate at 7:00 AM."
+        "description": "Early pickup is listed at Big Peach Running Co. in Marietta, and race-day pickup is listed near the Truist Park Chop House gate. Check the Schedule section for exact pickup windows."
       },
       {
         "label": "PRK",
         "title": "Parking",
-        "description": "RunSignup lists free parking with no time limit at North 29 and two free hours in the Yellow, Green, Purple, and Red Decks. The source encourages runners to arrive early."
+        "description": "Parking is available in the Red, Yellow, Green, and Purple Decks: first 2 hours free, $10 for hours 2–3, and $15 for hours 3–4. Arrive early to leave time for the walk to the race area."
       },
       {
         "label": "FOX",
@@ -383,7 +383,7 @@
     }
   ],
   "seo": {
-    "meta_title": "Run for Research 5K \u2014 Atlanta Race Guide",
+    "meta_title": "Run for Research 5K — Atlanta Race Guide",
     "meta_description": "RaceTrac's Run for Research 5K is a family-friendly Atlanta run and walk at The Battery supporting The Michael J. Fox Foundation."
   },
   "private_mockup": {
@@ -461,12 +461,12 @@
         },
         {
           "path": "registration",
-          "source": "RunSignup Event Info page lists current public fees, fee increases, and signup links",
+          "source": "RunSignup Event Info and RaceTrac registration details list 5K price increases: $30 through Aug 2, $35 Aug 3–29, $40 Aug 30–Sept 19, $45 Sept 20–25, $50 race day.",
           "confidence": "high"
         },
         {
           "path": "runner_decision_checklist.items.parking",
-          "source": "RunSignup Race Day Parking section and RaceTrac event page list parking deck guidance",
+          "source": "RaceTrac event page lists Red, Yellow, Green, and Purple Deck parking: first 2 hours free, $10 for hours 2–3, and $15 for hours 3–4.",
           "confidence": "high"
         },
         {
@@ -511,7 +511,7 @@
         },
         {
           "path": "runner_decision_checklist.items.awards",
-          "source": "RunSignup Awards section and RaceTrac Runner Perks tab list overall and age-group awards",
+          "source": "RaceTrac Runner Perks tab lists overall male/female prize amounts and $25 RaceTrac gift cards for top three male/female in each age group.",
           "confidence": "high"
         },
         {
@@ -527,8 +527,16 @@
       ]
     },
     "uncertainty": {
-      "summary": "Visible public sources confirm date, venue, distances, start times, current public fees, certified 5K course number, MapMyRun route link, Peachtree qualifier note, packet pickup, parking, awards, runner perks, sponsor/beneficiary context, photo albums, contact form, and refund policy. Public sources did not expose a course-close time, direct race-director email, hydration details, or image reuse rights; those are intentionally omitted from visible page copy.",
+      "summary": "Visible public sources confirm date, venue, distances, start times, current public fees and price increases, certified 5K course number, MapMyRun route link, Peachtree qualifier note, parking deck fees, awards, runner perks, sponsor/beneficiary context, photo albums, contact form, and refund policy. Packet-pickup date/time and exact street address should be confirmed with the race director before publishing; hydration, course-close time, direct race-director email, and image reuse rights were not visible in captured public source pages.",
       "items": [
+        {
+          "field": "early packet pickup date/time",
+          "reason": "Steve flagged a source conflict: RunSignup lists Monday, August 18, 12–6 PM while RaceTrac lists Saturday, September 19, 10:30 AM–5 PM. Confirm with the race director before publishing."
+        },
+        {
+          "field": "runner-facing street address",
+          "reason": "Steve flagged a source conflict: RunSignup lists 755 Battery Avenue SE while RaceTrac lists 800 Battery Ave. Confirm whether these represent different entrances and which should be shown to runners."
+        },
         {
           "field": "course close time",
           "reason": "No 5K or 1K course-close time was visible on RunSignup or the RaceTrac event page."
