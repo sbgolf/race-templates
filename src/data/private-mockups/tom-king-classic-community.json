@@ -64,8 +64,8 @@
           "feet": 398
         },
         {
-          "mile": 2.81,
-          "feet": 409
+          "mile": 3.0,
+          "feet": 424
         },
         {
           "mile": 4.38,
@@ -76,20 +76,28 @@
           "feet": 399
         },
         {
-          "mile": 7.26,
-          "feet": 412
+          "mile": 6.55,
+          "feet": 419
         },
         {
-          "mile": 9.35,
-          "feet": 405
+          "mile": 8.0,
+          "feet": 418
         },
         {
-          "mile": 10.92,
-          "feet": 417
+          "mile": 9.5,
+          "feet": 410
         },
         {
-          "mile": 13.28,
-          "feet": 411
+          "mile": 11.0,
+          "feet": 402
+        },
+        {
+          "mile": 12.25,
+          "feet": 421
+        },
+        {
+          "mile": 13.1,
+          "feet": 410
         }
       ],
       "elevation_profile_label": "2026 TKC Half elevation profile"
@@ -169,8 +177,8 @@
         "feet": 398
       },
       {
-        "mile": 2.81,
-        "feet": 409
+        "mile": 3.0,
+        "feet": 424
       },
       {
         "mile": 4.38,
@@ -181,20 +189,28 @@
         "feet": 399
       },
       {
-        "mile": 7.26,
-        "feet": 412
+        "mile": 6.55,
+        "feet": 419
       },
       {
-        "mile": 9.35,
-        "feet": 405
+        "mile": 8.0,
+        "feet": 418
       },
       {
-        "mile": 10.92,
-        "feet": 417
+        "mile": 9.5,
+        "feet": 410
       },
       {
-        "mile": 13.28,
-        "feet": 411
+        "mile": 11.0,
+        "feet": 402
+      },
+      {
+        "mile": 12.25,
+        "feet": 421
+      },
+      {
+        "mile": 13.1,
+        "feet": 410
       }
     ],
     "map_links": [
@@ -220,8 +236,8 @@
       {
         "id": "packet-pickup",
         "label": "Packet pickup",
-        "value": "Friday 3\u20136 PM \u00b7 race morning from 6 AM",
-        "detail": "Early pickup is Friday at Shelby Park Community Center; race-morning pickup begins at Cornelia Fort.",
+        "value": "Bring photo ID for packet pickup",
+        "detail": "Schedule owns the pickup times; use this checklist to remember the photo ID requirement and pickup locations.",
         "source_path": "runner_decision_checklist.items.packet-pickup",
         "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk"
       },
@@ -239,6 +255,22 @@
         "value": "Please bring photo ID",
         "detail": "The race listing asks runners to bring photo ID when picking up their race packet.",
         "source_path": "runner_decision_checklist.items.photo-id",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk"
+      },
+      {
+        "id": "aid-stations",
+        "label": "Hydration",
+        "value": "Start/finish + half marathon course",
+        "detail": "RunSignup states hydration will be available in the start/finish area and on the half marathon course; course hydration is subject to change.",
+        "source_path": "runner_decision_checklist.items.aid-stations",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk"
+      },
+      {
+        "id": "age-eligibility",
+        "label": "Half Marathon ages",
+        "value": "Open to ages 4\u201395",
+        "detail": "RunSignup lists the Tom King Classic Half Marathon as open to ages 4\u201395.",
+        "source_path": "runner_decision_checklist.items.age-eligibility",
         "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk"
       }
     ]
@@ -275,6 +307,10 @@
       {
         "label": "Facebook event",
         "url": "http://www.facebook.com/events/889605883153356/"
+      },
+      {
+        "label": "Contact the Race",
+        "url": "https://runsignup.com/Race/Info/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk#contactFormSection"
       }
     ]
   },
@@ -319,20 +355,11 @@
     },
     {
       "day": "Saturday, February 28, 2026",
-      "name": "5K awards ceremony",
-      "time": "9:15 AM est.",
+      "name": "5K course closes",
+      "time": "9:15 AM",
       "location": "Cornelia Fort Airpark",
       "applies_to_distances": [
         "5k"
-      ]
-    },
-    {
-      "day": "Saturday, February 28, 2026",
-      "name": "Half Marathon awards ceremony",
-      "time": "10:30 AM est.",
-      "location": "Cornelia Fort Airpark",
-      "applies_to_distances": [
-        "half-marathon"
       ]
     },
     {
@@ -430,6 +457,30 @@
     {
       "question": "Are pets or strollers allowed?",
       "answer": "The Event Info page says no pets and no strollers."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "Refunds are not allowed for this race.",
+      "links": [
+        {
+          "label": "Official RunSignup refund policy",
+          "url": "https://runsignup.com/Race/116977/RefundPolicy"
+        }
+      ]
+    },
+    {
+      "question": "Who can enter the Half Marathon?",
+      "answer": "RunSignup lists the Tom King Classic Half Marathon as open to ages 4\u201395."
+    },
+    {
+      "question": "How do I contact the race?",
+      "answer": "Use the official RunSignup contact form for race-director questions.",
+      "links": [
+        {
+          "label": "Contact the Race",
+          "url": "https://runsignup.com/Race/Info/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk#contactFormSection"
+        }
+      ]
     }
   ],
   "seo": {
@@ -458,6 +509,7 @@
       "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk",
       "captured_at": "2026-07-11T15:19:06.000Z",
       "source_confirmed_sections": [
+        "contacts",
         "course",
         "faqs",
         "runner_decision_checklist",
@@ -623,7 +675,7 @@
         },
         {
           "path": "distances.half-marathon.elevation_profile",
-          "source": "MapMyRun 2026 TKC Half route exposes elevation points and labels.",
+          "source": "MapMyRun 2026 TKC Half route exposes detailed elevation points; displayed chart normalizes the route trace to the certified 13.1 mi distance and uses MapMyRun total ascent for gain.",
           "confidence": "high"
         },
         {
@@ -633,13 +685,43 @@
         },
         {
           "path": "course.elevation_profile",
-          "source": "MapMyRun route elevation data used for selected-distance course chart.",
+          "source": "MapMyRun 2026 TKC Half route exposes detailed elevation points; displayed chart normalizes the route trace to the certified 13.1 mi distance and uses MapMyRun total ascent for gain.",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.aid-stations",
+          "source": "RunSignup description states hydration will be available in the start/finish area and on the half marathon course, subject to change.",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.age-eligibility",
+          "source": "RunSignup Events section lists the Half Marathon as open to ages 4\u201395.",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs.refund-policy",
+          "source": "RunSignup Refund Policy page states refunds are not allowed for this race.",
+          "confidence": "high"
+        },
+        {
+          "path": "contacts.race_contact_url",
+          "source": "RunSignup Race Contact Info section and footer Contact This Race link.",
+          "confidence": "high"
+        },
+        {
+          "path": "private_mockup.suppress_measurement_panel",
+          "source": "Audit requested merging redundant Registration details and Register sections into one registration section.",
+          "confidence": "high"
+        },
+        {
+          "path": "private_mockup.show_registration_decision",
+          "source": "Audit requested merging redundant Registration details and Register sections into one registration section.",
           "confidence": "high"
         }
       ]
     },
     "uncertainty": {
-      "summary": "Visible public sources confirm date, location, distances, course language, route links, field cap, schedule, registration status, shirts, awards, parking, and refund policy. Current entry prices were not visible because online registration is closed. Facebook public search confirmed the page exists and describes the race as an annual Nashville half marathon and 5K, but Facebook content was not used for page facts because it was login-gated in browser.",
+      "summary": "Visible public sources confirm date, location, distances, course language, route links, field cap, schedule, registration status, shirts, general post-race food/awards, parking, hydration, age eligibility, contact form, and refund policy. Current entry prices were not visible because online registration is closed. Exact awards ceremony times were not confirmed in the source material and are intentionally not published in the schedule. Facebook public search confirmed the page exists and describes the race as an annual Nashville half marathon and 5K, but Facebook content was not used for page facts because it was login-gated in browser.",
       "items": [
         {
           "field": "entry pricing",
@@ -654,6 +736,12 @@
           "reason": "No public race photo gallery with clear reuse rights was found, so the private mockup uses a generated hero image instead of copying photos."
         }
       ]
-    }
+    },
+    "suppress_measurement_panel": true,
+    "show_registration_decision": false
+  },
+  "contacts": {
+    "race_contact_url": "https://runsignup.com/Race/Info/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk#contactFormSection",
+    "race_contact_label": "Contact the Race"
   }
 }

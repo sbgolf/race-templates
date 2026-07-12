@@ -6,6 +6,8 @@ const year = race.event?.date ? new Date(`${race.event.date}T12:00:00`).getFullY
 const registerUrl = race.registration?.url || '#entry';
 const registerLabel = race.registration?.cta_label || 'Register';
 const registerAttrs = registerClickAttributes(race, 'footer-official');
+const contactUrl = race.contacts?.race_contact_url;
+const contactLabel = race.contacts?.race_contact_label || 'Contact the Race';
 const hasCourse = (race.distances || []).length > 0;
 const hasSchedule = (race.schedule || []).length > 0;
 const hasStory = Boolean(race.story || race.private_mockup?.generated);
@@ -43,7 +45,7 @@ const aboutLinks = [
     </div>
     <div><div class="foot-heading">Race</div><ul>{raceLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div>
     {aboutLinks.length ? <div><div class="foot-heading">About</div><ul>{aboutLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div> : null}
-    <div><div class="foot-heading">Official site</div><ul><li><a href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel}</a></li></ul></div>
+    <div><div class="foot-heading">Official site</div><ul><li><a href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel}</a></li>{contactUrl ? <li><a href={contactUrl} target="_blank" rel="noopener">{contactLabel}</a></li> : null}</ul></div>
   </div>
   <div class="foot-bottom">
     <span>© {year} {race.identity?.name}{race.organization?.name ? ` · A program of ${race.organization.name}` : ''}</span>

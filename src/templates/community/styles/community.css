@@ -90,7 +90,7 @@ nav.scrolled{
   backdrop-filter:blur(16px) saturate(140%);
   box-shadow:0 1px 0 var(--line);
 }
-.brand{display:flex;align-items:center;gap:11px;color:var(--ink);font-family:"Fraunces",serif;font-weight:700;font-size:1.2rem;letter-spacing:-.01em;min-width:0}
+.brand{display:flex;align-items:center;gap:11px;color:var(--forest);font-family:"Fraunces",serif;font-weight:700;font-size:1.2rem;letter-spacing:-.01em;min-width:0}
 .brand .mark{width:34px;height:34px;flex:0 0 auto}
 .brand span{min-width:0;max-width:min(58vw,460px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .brand small{display:block;font-family:"Nunito";font-weight:600;font-size:.6rem;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;margin-top:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -525,6 +525,7 @@ display:grid;
 .etier li{color:rgba(42,31,24,.74);line-height:1.4;display:flex;gap:9px;align-items:flex-start}
 .etier li::before{content:"·";color:var(--accent);font-weight:700;font-size:1.4rem;line-height:1;margin-top:-2px}
 .etier .btn{width:100%;justify-content:center;padding:11px;font-size:.88rem;margin-top:8px}
+.etier[data-entry-hidden]{display:none}
 
 .charity-note{
   margin-top:32px;

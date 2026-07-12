@@ -19,7 +19,7 @@ const priceNote = !hasDistancePricing && race.registration?.price_note ? race.re
     <div class="entry-grid stagger">
       {race.distances?.map((distance) => {
         const attrs = registerClickAttributes(race, `entry-distance-${distance.id}`);
-        return <div class="etier" data-entry-distance-card>
+        return <div class="etier" data-entry-distance-card data-distance={distance.id}>
           <h3>{distance.name}</h3>
           {distanceMeta(distance) ? <div class="sub">{distanceMeta(distance)}</div> : null}
           {distance.price ? <div class="pp">{distance.price}<small>/ entry</small></div> : null}

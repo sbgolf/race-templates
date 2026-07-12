@@ -211,6 +211,7 @@ for (const file of files) {
   if (template === 'community') {
     validateRenderedElevationAxis(html, config, errors, 'Community');
     validateCommunityCourseTools(html, config, errors);
+    validateCommunityDistanceLinkedEntryCards(html, config, errors);
     if (/\bregister_click\b/i.test(text)) {
       errors.push('Rendered community private mockup exposes technical register_click event language in visible copy.');
     }
@@ -542,6 +543,22 @@ function validateCommunityCourseTools(html, config, errors) {
   }
 }
 
+function validateCommunityDistanceLinkedEntryCards(html, config, errors) {
+  const slug = String(config?.private_mockup?.slug || config?.identity?.slug || config?.identity?.name || '').toLowerCase();
+  if (!slug.includes('tom-king')) return;
+  const distances = asArray(config?.distances).filter((distance) => distance?.id);
+  if (distances.length < 2) return;
+  for (const distance of distances) {
+    const cardPattern = new RegExp(`data-entry-distance-card[^>]*data-distance=["']${escapeRegExp(distance.id)}["']|data-distance=["']${escapeRegExp(distance.id)}["'][^>]*data-entry-distance-card`, 'i');
+    if (!cardPattern.test(html)) {
+      errors.push(`Community entry card for ${distance.id} must carry data-distance so it can follow the selected distance toggle.`);
+    }
+  }
+  if (!/community-distance-change/.test(html) || !/data-entry-distance-card/.test(html) || !/entryDistanceCards/.test(html)) {
+    errors.push('Community entry section must listen for the distance picker and hide non-selected registration cards.');
+  }
+}
+
 function validatePerformanceCertificationNumberRepetition(text, config, errors) {
   const certificationNumbers = certificationNumbersForConfig(config);
   for (const certificationNumber of certificationNumbers) {
@@ -578,6 +595,10 @@ async function validateCommunityAuditGuards(html, anchors, errors) {
   }
 
   const entryRegistrationAnchors = anchors.filter((anchor) => anchor.attrs['data-analytics-placement']?.startsWith('entry-distance-'));
+  const navBrandRule = cssRuleForSelector(communityCss, 'nav .brand') || cssRuleForSelector(communityCss, '.community-template nav .brand') || cssRuleForSelector(communityCss, '.brand');
+  if (!/color\s*:\s*var\(--forest/i.test(navBrandRule) && !/color\s*:\s*#294735/i.test(navBrandRule)) {
+    errors.push('Community sticky nav brand/title text must use dark green for contrast against the light cream/tan nav background.');
+  }
   const entryDistanceCards = [...String(html || '').matchAll(/<div\b([^>]*)data-entry-distance-card\b[^>]*>/gi)].map((match) => parseAttrs(match[1] || ''));
   entryDistanceCards.forEach((attrs) => {
     const className = attrs.class || '';

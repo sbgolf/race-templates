@@ -25,7 +25,8 @@ const RUNNER_CHECKLIST_ITEM_IDS = new Set([
   'post-race',
   'series',
   'facebook',
-  'photo-id'
+  'photo-id',
+  'age-eligibility'
 ]);
 
 function isPlainObject(value) {
