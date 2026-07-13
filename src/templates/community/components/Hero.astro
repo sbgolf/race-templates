@@ -30,7 +30,7 @@ const secondaryCtaTarget = hasRunnerChecklist ? 'runner-checklist' : 'course';
       <p class="lead">{race.seo?.meta_description}</p>
       {(race.distances || []).length > 1 ? (
       <div class="hero-distances">
-        {race.distances?.map((distance) => <span class:list={["dist-chip", { flagship: distance.id === featuredDistance?.id }]}>{distance.name}</span>)}
+        {race.distances?.map((distance) => <span class="dist-chip">{distance.name}</span>)}
       </div>
       ) : null}
       <div class="hero-cta">
