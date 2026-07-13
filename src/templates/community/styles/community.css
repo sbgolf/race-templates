@@ -176,7 +176,6 @@ section{position:relative;background:var(--community-cream)}
   background:rgba(251,245,232,.72);border:1px solid rgba(63,95,67,.18);
   font-family:"Nunito";font-weight:600;font-size:.86rem;color:var(--ink);
 }
-.dist-chip.flagship{background:var(--sage-deep);color:var(--paper);border-color:var(--sage-deep)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
 .hero-cta .btn{padding:15px 28px;font-size:1rem}
 
