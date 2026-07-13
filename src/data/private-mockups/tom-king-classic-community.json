@@ -237,7 +237,7 @@
         "id": "packet-pickup",
         "label": "Packet pickup",
         "value": "Bring photo ID for packet pickup",
-        "detail": "Schedule owns the pickup times; use this checklist to remember the photo ID requirement and pickup locations.",
+        "detail": "Check the schedule for pickup windows, and bring photo ID when picking up your race packet.",
         "source_path": "runner_decision_checklist.items.packet-pickup",
         "source_url": "https://runsignup.com/Race/TN/Nashville/TomKingClassicHalfMarathonand5Krunwalk"
       },
@@ -427,7 +427,7 @@
       {
         "label": "PK",
         "title": "Packet pickup",
-        "description": "Friday pickup runs 3:00 PM to 6:00 PM at Shelby Park Community Center. Race-morning pickup begins at 6:00 AM at Cornelia Fort."
+        "description": "Use the schedule for pickup windows and locations; bring photo ID when picking up your packet."
       },
       {
         "label": "PRK",

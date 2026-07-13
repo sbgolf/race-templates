@@ -30,13 +30,17 @@ const isSingleDistance = (race.distances || []).length === 1;
       {Object.entries(scheduleByDay).map(([day, items]) => <div class="tl-day">
         <div class="date">{day}</div>
         <h3>{items[0]?.group_title || (day.includes('Friday') ? 'Packet Pickup' : 'Race Day')}</h3>
-        {items.map((item) => <div class="tl-event" data-distance={(item.applies_to_distances || ['all']).join(',')}>
-          <div>
-            <div class="tl-event-name">{item.name}</div>
-            {item.location ? <small>{item.location}</small> : null}
-          </div>
-          <div class="tl-event-time">{item.time}</div>
-        </div>)}
+        {items.map((item) => {
+          const appliesTo = item.applies_to_distances || ['all'];
+          const visible = isSingleDistance || appliesTo.includes('all') || appliesTo.includes(featuredDistance?.id);
+          return <div class="tl-event" data-distance={appliesTo.join(',')} data-hide={String(!visible)}>
+            <div>
+              <div class="tl-event-name">{item.name}</div>
+              {item.location ? <small>{item.location}</small> : null}
+            </div>
+            <div class="tl-event-time">{item.time}</div>
+          </div>;
+        })}
       </div>)}
     </div>
   </div>
