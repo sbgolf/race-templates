@@ -41,7 +41,7 @@ const buildProfile = (distance) => {
 const featuredProfile = buildProfile(featuredDistance);
 const detailRows = [
   ['Distance', featuredDistance?.distance, 'dDistance'],
-  ['Elevation Gain', featuredDistance?.elevation_gain, 'dGain'],
+  ['Total Ascent', featuredDistance?.elevation_gain, 'dGain'],
   ['Start Time', featuredDistance?.start_time, 'dStart'],
   ['Aid Stations', featuredDistance?.aid_stations === undefined ? undefined : String(featuredDistance.aid_stations), 'dAid'],
   ['Course Profile', featuredDistance?.profile, 'dProfile'],
@@ -64,9 +64,11 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
       minFeet: formatFeet(profile.minFeet),
       midFeet: formatFeet(profile.midFeet),
       maxFeet: formatFeet(profile.maxFeet),
+      gain: distance.elevation_gain || '',
+      distance: distance.distance || '',
       midMile: `${formatMile(profile.maxMile / 2)} mi`,
       maxMile: `${formatMile(profile.maxMile)} mi`,
-      aria: `Elevation profile from ${formatFeet(profile.minFeet)} to ${formatFeet(profile.maxFeet)}`
+      aria: `Elevation profile for ${distance.distance || distance.name || 'the course'} from ${formatFeet(profile.minFeet)} to ${formatFeet(profile.maxFeet)}${distance.elevation_gain ? ` with ${distance.elevation_gain} total ascent` : ''}`
     } : null
   }];
 }));
@@ -106,6 +108,10 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
             </div>
             <div class="course-profile-mile">
               <span>0 mi</span><span data-profile-mile="mid">{formatMile(featuredProfile.maxMile / 2)} mi</span><span data-profile-mile="max">{formatMile(featuredProfile.maxMile)} mi</span>
+            </div>
+            <div class="course-profile-summary" data-profile-summary>
+              <span>Distance: <b>{featuredDistance?.distance}</b></span>
+              {featuredDistance?.elevation_gain ? <span>Total ascent: <b>{featuredDistance.elevation_gain}</b></span> : null}
             </div>
             <div class="map-info map-info--profile">
               <span>{courseLocation}</span>
@@ -161,6 +167,18 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
       document.querySelector('[data-elevation-axis="min"]')?.replaceChildren(document.createTextNode(data.elevation.minFeet));
       document.querySelector('[data-profile-mile="mid"]')?.replaceChildren(document.createTextNode(data.elevation.midMile));
       document.querySelector('[data-profile-mile="max"]')?.replaceChildren(document.createTextNode(data.elevation.maxMile));
+      const summary = document.querySelector('[data-profile-summary]');
+      if (summary) {
+        summary.innerHTML = '';
+        const distanceItem = document.createElement('span');
+        distanceItem.innerHTML = `Distance: <b>${data.elevation.distance}</b>`;
+        summary.append(distanceItem);
+        if (data.elevation.gain) {
+          const gainItem = document.createElement('span');
+          gainItem.innerHTML = `Total ascent: <b>${data.elevation.gain}</b>`;
+          summary.append(gainItem);
+        }
+      }
       setText('mapDistance', data.elevation.label);
     }
 
