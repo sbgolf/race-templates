@@ -100,11 +100,7 @@
         "url": "https://runsignup.com/Race/RichlandCreekRun/Page/Course-Details"
       }
     ],
-    "image": {
-      "src": "/mockups/221df003f466f745f7bb7119890f97f9/course-map.png",
-      "alt": "Richland Creek Run course map artwork from the official RunSignup course details page",
-      "source": "https://runsignup.com/Race/RichlandCreekRun/Page/Course-Details"
-    }
+    "suppress_visual": true
   },
   "registration": {
     "url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun",
@@ -549,6 +545,6 @@
       ]
     },
     "suppress_measurement_panel": true,
-    "positioning": "Preview/concept ahead of the 2027 race date; visible source facts still reflect the currently posted RunSignup 2026 race page until next-year date/pricing posts."
+    "positioning": "Preview/concept ahead of the 2027 race date; the top Course picker intentionally uses compact course facts only because the same official course map is displayed in the Race Overview section below."
   }
 }
