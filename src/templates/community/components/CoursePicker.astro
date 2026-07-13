@@ -39,6 +39,7 @@ const buildProfile = (distance) => {
   };
 };
 const featuredProfile = buildProfile(featuredDistance);
+const hasFeaturedElevationProfile = Boolean(featuredProfile);
 const detailRows = [
   ['Distance', featuredDistance?.distance, 'dDistance'],
   ['Total Ascent', featuredDistance?.elevation_gain, 'dGain'],
@@ -90,41 +91,32 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
       </button>)}
     </div> : null}
 
-    <div class="course-grid">
-      <div class="course-map course-map--profile reveal" data-distance-elevation-profile data-community-elevation-profile>
-        {featuredProfile ? (
-          <>
-            <div class="course-profile-chart profile-chart--with-axis">
-              <div class="course-profile-y-axis" aria-hidden="true">
-                <span data-elevation-axis="max">{formatFeet(featuredProfile.maxFeet)}</span>
-                <span data-elevation-axis="mid">{formatFeet(featuredProfile.midFeet)}</span>
-                <span data-elevation-axis="min">{formatFeet(featuredProfile.minFeet)}</span>
-              </div>
-              <svg viewBox="0 0 500 200" preserveAspectRatio="none" aria-label={`Elevation profile from ${formatFeet(featuredProfile.minFeet)} to ${formatFeet(featuredProfile.maxFeet)}`} role="img" data-profile-svg>
-                <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(54,74,51,.14)" stroke-dasharray="4 4"/>
-                <polyline points={featuredProfile.points} fill="none" stroke="var(--rust)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" data-profile-line/>
-                <polygon points={featuredProfile.fillPoints} fill="rgba(159,74,38,.12)" data-profile-fill/>
-              </svg>
-            </div>
-            <div class="course-profile-mile">
-              <span>0 mi</span><span data-profile-mile="mid">{formatMile(featuredProfile.maxMile / 2)} mi</span><span data-profile-mile="max">{formatMile(featuredProfile.maxMile)} mi</span>
-            </div>
-            <div class="course-profile-summary" data-profile-summary>
-              <span>Distance: <b>{featuredDistance?.distance}</b></span>
-              {featuredDistance?.elevation_gain ? <span>Total ascent: <b>{featuredDistance.elevation_gain}</b></span> : null}
-            </div>
-            <div class="map-info map-info--profile">
-              <span>{courseLocation}</span>
-              <b id="mapDistance">{featuredProfile.label}</b>
-            </div>
-          </>
-        ) : (
-          <div class="map-info map-info--profile">
-            <span>{courseLocation}</span>
-            <b id="mapDistance">Course details</b>
+    <div class:list={["course-grid", { "course-grid--details-only": !hasFeaturedElevationProfile }]}>
+      {featuredProfile ? <div class="course-map course-map--profile reveal" data-distance-elevation-profile data-community-elevation-profile>
+        <div class="course-profile-chart profile-chart--with-axis">
+          <div class="course-profile-y-axis" aria-hidden="true">
+            <span data-elevation-axis="max">{formatFeet(featuredProfile.maxFeet)}</span>
+            <span data-elevation-axis="mid">{formatFeet(featuredProfile.midFeet)}</span>
+            <span data-elevation-axis="min">{formatFeet(featuredProfile.minFeet)}</span>
           </div>
-        )}
-      </div>
+          <svg viewBox="0 0 500 200" preserveAspectRatio="none" aria-label={`Elevation profile from ${formatFeet(featuredProfile.minFeet)} to ${formatFeet(featuredProfile.maxFeet)}`} role="img" data-profile-svg>
+            <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(54,74,51,.14)" stroke-dasharray="4 4"/>
+            <polyline points={featuredProfile.points} fill="none" stroke="var(--rust)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" data-profile-line/>
+            <polygon points={featuredProfile.fillPoints} fill="rgba(159,74,38,.12)" data-profile-fill/>
+          </svg>
+        </div>
+        <div class="course-profile-mile">
+          <span>0 mi</span><span data-profile-mile="mid">{formatMile(featuredProfile.maxMile / 2)} mi</span><span data-profile-mile="max">{formatMile(featuredProfile.maxMile)} mi</span>
+        </div>
+        <div class="course-profile-summary" data-profile-summary>
+          <span>Distance: <b>{featuredDistance?.distance}</b></span>
+          {featuredDistance?.elevation_gain ? <span>Total ascent: <b>{featuredDistance.elevation_gain}</b></span> : null}
+        </div>
+        <div class="map-info map-info--profile">
+          <span>{courseLocation}</span>
+          <b id="mapDistance">{featuredProfile.label}</b>
+        </div>
+      </div> : null}
 
       <div class="course-details reveal">
         {detailRows.map(([label, value, id]) => <div class="detail-row">
