@@ -40,6 +40,9 @@ const buildProfile = (distance) => {
 };
 const featuredProfile = buildProfile(featuredDistance);
 const hasFeaturedElevationProfile = Boolean(featuredProfile);
+const suppressCourseVisual = race.course?.suppress_visual === true;
+const courseVisualImage = suppressCourseVisual ? null : (race.course?.image || race.course?.map_image || (!hasFeaturedElevationProfile ? race.story?.image : null));
+const hasCourseVisualImage = Boolean(courseVisualImage?.src);
 const detailRows = [
   ['Distance', featuredDistance?.distance, 'dDistance'],
   ['Total Ascent', featuredDistance?.elevation_gain, 'dGain'],
@@ -58,6 +61,7 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
     aid: distance.aid_stations === undefined ? '' : String(distance.aid_stations),
     profile: distance.profile || '',
     certification: distance.certification || '',
+    mapLabel: distance.map_label || distance.profile || '',
     elevation: profile ? {
       label: profile.label,
       points: profile.points,
@@ -91,7 +95,7 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
       </button>)}
     </div> : null}
 
-    <div class:list={["course-grid", { "course-grid--details-only": !hasFeaturedElevationProfile }]}>
+    <div class:list={["course-grid", { "course-grid--details-only": !hasFeaturedElevationProfile && !hasCourseVisualImage }]}>
       {featuredProfile ? <div class="course-map course-map--profile reveal" data-distance-elevation-profile data-community-elevation-profile>
         <div class="course-profile-chart profile-chart--with-axis">
           <div class="course-profile-y-axis" aria-hidden="true">
@@ -115,6 +119,12 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
         <div class="map-info map-info--profile">
           <span>{courseLocation}</span>
           <b id="mapDistance">{featuredProfile.label}</b>
+        </div>
+      </div> : hasCourseVisualImage ? <div class="course-map course-map--image reveal" data-community-course-map-image>
+        <img src={courseVisualImage.src} alt={courseVisualImage.alt || `${race.identity?.name || 'Race'} course map`} loading="lazy" decoding="async" />
+        <div class="map-info">
+          <span>{courseLocation}</span>
+          <b id="mapDistance">{courseVisualImage.label || featuredDistance?.map_label || race.course?.type || 'Course map'}</b>
         </div>
       </div> : null}
 
@@ -172,6 +182,10 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
         }
       }
       setText('mapDistance', data.elevation.label);
+    }
+
+    if (!data.elevation && document.querySelector('[data-community-course-map-image]')) {
+      setText('mapDistance', data.mapLabel || data.name || 'Course map');
     }
 
     document.dispatchEvent(new CustomEvent('community-distance-change',{detail:{selected,data}}));

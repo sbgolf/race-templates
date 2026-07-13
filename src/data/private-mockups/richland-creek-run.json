@@ -99,7 +99,8 @@
         "label": "Official course details",
         "url": "https://runsignup.com/Race/RichlandCreekRun/Page/Course-Details"
       }
-    ]
+    ],
+    "suppress_visual": true
   },
   "registration": {
     "url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun",
@@ -133,7 +134,7 @@
   "runner_decision_checklist": {
     "kicker": "Race day notes",
     "headline": "What to know before race morning at Cohn.",
-    "intro": "A quick checklist for start times, packet pickup, location, and family-friendly details before runners click through to RunSignup.",
+    "intro": "A quick checklist for location, pickup prep, eligibility, and family-friendly details before runners click through to RunSignup.",
     "footer_cta": false,
     "items": [
       {
@@ -155,16 +156,16 @@
       {
         "id": "packet-pickup",
         "label": "Packet pickup",
-        "value": "Friday 2:00–7:00 PM; race morning 6:30–7:30 AM",
-        "detail": "Friday packet pickup is listed at Fleet Feet Green Hills; race-morning packet pickup is listed at the race site.",
+        "value": "Bring ID and use the posted pickup locations",
+        "detail": "Check the Schedule section for the official Friday and race-morning pickup windows; bring what you need for packet pickup and allow time before your selected start.",
         "source_path": "runner_decision_checklist.items.packet-pickup",
         "source_url": "https://runsignup.com/Race/RichlandCreekRun/Page/Schedule"
       },
       {
         "id": "age-eligibility",
-        "label": "Family-friendly options",
-        "value": "1-Miler Fun Run and Dinky Dash",
-        "detail": "The Dinky Dash is a half-mile out-and-back course for children ages 12 and under, with popsicles after the dash.",
+        "label": "Age eligibility",
+        "value": "5 Miler ages 12–98; Dinky Dash ages 12 and under",
+        "detail": "RunSignup Event Info lists the 5 Miler as open to ages 12–98 and the Dinky Dash as a half-mile kids run for ages 12 and under.",
         "source_path": "runner_decision_checklist.items.age-eligibility",
         "source_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun"
       },
@@ -253,17 +254,105 @@
   },
   "sponsors": [
     {
+      "name": "Oracle",
+      "tier": "Presenting",
+      "url": "https://www.oracle.com",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/oracle.png",
+      "logo_alt": "Oracle sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ_HXs.png"
+    },
+    {
+      "name": "The Wilson Group",
+      "tier": "Gold",
+      "url": "https://www.wilsongrouprealestate.com",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/the-wilson-group.png",
+      "logo_alt": "The Wilson Group sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJOXVL.png"
+    },
+    {
+      "name": "Pinnacle Financial Partners",
+      "tier": "Gold",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/pinnacle-financial-partners.png",
+      "logo_alt": "Pinnacle Financial Partners sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJOXZf.png"
+    },
+    {
+      "name": "Fleet Feet",
+      "tier": "Silver",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/fleet-feet.png",
+      "logo_alt": "Fleet Feet sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ7qOc.png"
+    },
+    {
+      "name": "Crescent Communities",
+      "tier": "Bronze",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/crescent-communities.png",
+      "logo_alt": "Crescent Communities sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bNIQF7.png"
+    },
+    {
+      "name": "Vanderbilt University",
+      "tier": "Bronze",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/vanderbilt-university.png",
+      "logo_alt": "Vanderbilt University sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bPJD25.png"
+    },
+    {
+      "name": "Deloitte",
+      "tier": "Bronze",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/deloitte.png",
+      "logo_alt": "Deloitte sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bPZPxh.png"
+    },
+    {
+      "name": "Richland West-End Neighborhood Association",
+      "tier": "Neighborhood Associations",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/richland-west-end-neighborhood-association.png",
+      "logo_alt": "Richland West-End Neighborhood Association sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ7Po8.png"
+    },
+    {
+      "name": "Sylvan Park Neighborhood Association",
+      "tier": "Neighborhood Associations",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/sylvan-park-neighborhood-association.png",
+      "logo_alt": "Sylvan Park Neighborhood Association sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bPJD7s.png"
+    },
+    {
+      "name": "White Bridge Neighborhood Association",
+      "tier": "Neighborhood Associations",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/white-bridge-neighborhood-association.png",
+      "logo_alt": "White Bridge Neighborhood Association sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ9oRL.png"
+    },
+    {
+      "name": "Bates Nursery and Garden Center",
+      "tier": "In-Kind",
+      "url": "https://www.batesnursery.com",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/bates-nursery-and-garden-center.png",
+      "logo_alt": "Bates Nursery and Garden Center sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ_oTv.png"
+    },
+    {
+      "name": "Metro Parks",
+      "tier": "In-Kind",
+      "url": "https://www.nashville.gov/departments/parks",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/metro-parks.png",
+      "logo_alt": "Metro Parks sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJWC7E.png"
+    },
+    {
+      "name": "Montgomery Bell Academy",
+      "tier": "In-Kind",
+      "url": "https://www.montgomerybell.edu",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/montgomery-bell-academy.png",
+      "logo_alt": "Montgomery Bell Academy sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ5QlY.png"
+    },
+    {
       "name": "Greenways for Nashville",
       "tier": "Beneficiary",
       "url": "https://greenwaysfornashville.org/"
-    },
-    {
-      "name": "Team Magic",
-      "tier": "Event contact"
-    },
-    {
-      "name": "Fleet Feet Green Hills",
-      "tier": "Packet pickup host"
     }
   ],
   "faqs": [
@@ -380,7 +469,7 @@
         },
         {
           "path": "distances",
-          "source": "RunSignup Info/Event Info pages list 5 Miler, 1-Miler Fun Run, and Dinky Dash with start times and age notes",
+          "source": "RunSignup Info/Event Info pages list 5 Miler, 1-Miler Fun Run, and Dinky Dash with start times and age notes, including 5 Miler ages 12–98",
           "confidence": "high"
         },
         {
@@ -400,12 +489,12 @@
         },
         {
           "path": "runner_decision_checklist.items.packet-pickup",
-          "source": "RunSignup Schedule page lists Friday and race-morning packet pickup windows",
+          "source": "RunSignup Schedule page lists pickup locations/times; checklist intentionally carries action guidance while Schedule owns exact times",
           "confidence": "high"
         },
         {
           "path": "runner_decision_checklist.items.age-eligibility",
-          "source": "RunSignup Info/Event Info pages list Dinky Dash age eligibility and family race options",
+          "source": "RunSignup Event Info lists 5 Miler ages 12–98 and Dinky Dash ages 12 and under",
           "confidence": "high"
         },
         {
@@ -422,11 +511,16 @@
           "path": "contacts.email",
           "source": "RunSignup Course Details/Schedule pages list hello@magicsportsusa.com for accommodation requests",
           "confidence": "medium"
+        },
+        {
+          "path": "sponsors",
+          "source": "RunSignup Sponsors page rendered tiered sponsor logos: Presenting Oracle; Gold The Wilson Group and Pinnacle Financial Partners; Silver Fleet Feet; Bronze Crescent Communities, Vanderbilt University, Deloitte; Neighborhood Associations Richland West-End, Sylvan Park, White Bridge; In-Kind Bates Nursery and Garden Center, Metro Parks, Montgomery Bell Academy. Pinnacle/Fleet Feet and the three Neighborhood Association names were verified by visual inspection of the rendered logo images where RunSignup omitted alt/name text.",
+          "confidence": "high"
         }
       ]
     },
     "uncertainty": {
-      "summary": "Visible public RunSignup pages confirm the date, location, distances, start times, age eligibility for 5 Miler and Dinky Dash, schedule, refund policy, dog/stroller policy, beneficiary, and accommodation/contact email. Current pricing is not visible because online registration is closed/ended, and the direct race-director email is not public beyond the RunSignup contact form and the accommodation email listed by Team Magic. 1-Miler source pages conflict between 8:10 AM structured Event/Schedule data and approximately 8:05am descriptive prose; this mockup uses 8:10 AM from Event/Schedule.",
+      "summary": "Visible public RunSignup pages confirm the date, location, distances, start times, age eligibility for 5 Miler and Dinky Dash, schedule, refund policy, dog/stroller policy, beneficiary, sponsor tiers, and accommodation/contact email. Current pricing is not visible because online registration is closed/ended, and the direct race-director email is not public beyond the RunSignup contact form and the accommodation email listed by Team Magic. 1-Miler source pages conflict between 8:10 AM structured Event/Schedule data and approximately 8:05am descriptive prose; this mockup uses 8:10 AM from Event/Schedule. Steve confirmed this should be pitched as a preview/concept ahead of the 2027 date; visible date/pricing facts remain sourced from the currently posted April 4, 2026 RunSignup page until next-year details post.",
       "items": [
         {
           "field": "1-Miler Fun Run start time source conflict",
@@ -449,6 +543,8 @@
           "reason": "Official logo/course artwork appears on RunSignup, but external reuse should be confirmed before publishing outside a private review mockup."
         }
       ]
-    }
+    },
+    "suppress_measurement_panel": true,
+    "positioning": "Preview/concept ahead of the 2027 race date; the top Course picker intentionally uses compact course facts only because the same official course map is displayed in the Race Overview section below."
   }
 }

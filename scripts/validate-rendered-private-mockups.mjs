@@ -176,7 +176,7 @@ for (const file of files) {
   const shouldRenderTrustSignals = template === 'community'
     ? false
     : (config?.private_mockup?.suppress_trust_signals === true ? false : shouldRenderTrustSignalsBand(config));
-  const suppressMeasurementPanel = template === 'performance'
+  const suppressMeasurementPanel = ['community', 'performance'].includes(template)
     ? config?.private_mockup?.show_measurement_panel !== true
     : config?.private_mockup?.suppress_measurement_panel === true;
   validatePrivateRobotsMetadata(html, errors);

@@ -19,7 +19,7 @@ import Finale from "./Finale.astro";
 import Footer from "./Footer.astro";
 const { race } = Astro.props;
 const isPrivateMockup = Boolean(race.private_mockup);
-const showMeasurementReadyPanel = isPrivateMockup && !race.private_mockup?.suppress_measurement_panel;
+const showMeasurementReadyPanel = isPrivateMockup && race.private_mockup?.show_measurement_panel === true && !race.private_mockup?.suppress_measurement_panel;
 ---
 <div class="community-template">
   <Nav race={race} />
