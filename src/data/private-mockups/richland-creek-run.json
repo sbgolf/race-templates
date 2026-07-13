@@ -158,7 +158,7 @@
         "value": "Friday 2:00–7:00 PM; race morning 6:30–7:30 AM",
         "detail": "Friday packet pickup is listed at Fleet Feet Green Hills; race-morning packet pickup is listed at the race site.",
         "source_path": "runner_decision_checklist.items.packet-pickup",
-        "source_url": "https://runsignup.com/Race/RichlandCreekRun/Page/Schedule-of-Events"
+        "source_url": "https://runsignup.com/Race/RichlandCreekRun/Page/Schedule"
       },
       {
         "id": "age-eligibility",
@@ -174,7 +174,7 @@
         "value": "Available by request",
         "detail": "The schedule page asks participants who need an accommodation to contact the event team and include the event of inquiry.",
         "source_path": "runner_decision_checklist.items.post-race",
-        "source_url": "https://runsignup.com/Race/RichlandCreekRun/Page/Schedule-of-Events"
+        "source_url": "https://runsignup.com/Race/RichlandCreekRun/Page/Schedule"
       }
     ]
   },
@@ -184,51 +184,69 @@
       "name": "Packet pickup",
       "time": "2:00 PM – 7:00 PM",
       "location": "Fleet Feet Green Hills, 3900 Hillsboro Pike #18, Nashville, TN 37215",
-      "applies_to_distances": ["5-miler", "one-mile", "dinky-dash"]
+      "applies_to_distances": [
+        "5-miler",
+        "one-mile",
+        "dinky-dash"
+      ]
     },
     {
       "day": "Saturday, April 4, 2026",
       "name": "Race-site packet pickup",
       "time": "6:30 AM – 7:30 AM",
       "location": "Cohn Learning Center / race site",
-      "applies_to_distances": ["5-miler", "one-mile", "dinky-dash"]
+      "applies_to_distances": [
+        "5-miler",
+        "one-mile",
+        "dinky-dash"
+      ]
     },
     {
       "day": "Saturday, April 4, 2026",
       "name": "Dinky Dash start",
       "time": "7:30 AM",
       "location": "Cohn Learning Center",
-      "applies_to_distances": ["dinky-dash"]
+      "applies_to_distances": [
+        "dinky-dash"
+      ]
     },
     {
       "day": "Saturday, April 4, 2026",
       "name": "5 Miler Run/Walk start",
       "time": "8:00 AM",
       "location": "Cohn Learning Center",
-      "applies_to_distances": ["5-miler"]
+      "applies_to_distances": [
+        "5-miler"
+      ]
     },
     {
       "day": "Saturday, April 4, 2026",
       "name": "1 Mile Fun Run start",
       "time": "8:10 AM",
       "location": "Cohn Learning Center",
-      "applies_to_distances": ["one-mile"]
+      "applies_to_distances": [
+        "one-mile"
+      ]
     },
     {
       "day": "Saturday, April 4, 2026",
       "name": "Individual and team awards celebration",
       "time": "9:45 AM approx.",
       "location": "Race site",
-      "applies_to_distances": ["5-miler", "one-mile", "dinky-dash"]
+      "applies_to_distances": [
+        "5-miler",
+        "one-mile",
+        "dinky-dash"
+      ]
     }
   ],
   "volunteer": {
     "headline": "Support Nashville greenways on race morning",
-    "description": "The event benefits Greenways for Nashville, and a clearer volunteer path can help turn community support into race-day help.",
+    "description": "The event benefits Greenways for Nashville. Anyone interested in helping should use the official race contact path to ask what support is needed for race morning.",
     "items": [
-      "Point prospective volunteers toward the race contact path for available needs.",
+      "Use the official contact form to ask about current race-day help needs.",
       "Keep the cause visible: proceeds support greenway creation, preservation, and promotion in Nashville and Davidson County.",
-      "Use the race morning schedule to show where volunteers are most useful: packet pickup, start-line flow, course support, and awards."
+      "Check the posted schedule before volunteering so availability lines up with packet pickup, race starts, and awards."
     ],
     "signup_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun#contactFormSection",
     "cta_label": "Contact the race"
@@ -241,7 +259,7 @@
     },
     {
       "name": "Team Magic",
-      "tier": "Race production"
+      "tier": "Event contact"
     },
     {
       "name": "Fleet Feet Green Hills",
@@ -268,7 +286,7 @@
       "links": [
         {
           "label": "Refund policy",
-          "url": "https://runsignup.com/Race/RichlandCreekRun/RefundPolicy"
+          "url": "https://runsignup.com/Race/124226/RefundPolicy"
         }
       ]
     },
@@ -323,18 +341,6 @@
         "caption": "Community race morning energy for the Richland Creek Run mockup.",
         "source": "Generated race-day hero image for this private mockup",
         "generated": true
-      },
-      {
-        "src": "/mockups/221df003f466f745f7bb7119890f97f9/course-map.png",
-        "alt": "Richland Creek Run course map artwork",
-        "caption": "Official RunSignup course details image used as a course reference.",
-        "source": "https://runsignup.com/Race/RichlandCreekRun/Page/Course-Details"
-      },
-      {
-        "src": "/mockups/221df003f466f745f7bb7119890f97f9/logo.png",
-        "alt": "Richland Creek Run XX race logo",
-        "caption": "Official RunSignup race logo.",
-        "source": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun"
       }
     ],
     "provenance": {
@@ -351,7 +357,11 @@
         "travel",
         "volunteer"
       ],
-      "source_confirmed_distance_ids": ["5-miler", "one-mile", "dinky-dash"],
+      "source_confirmed_distance_ids": [
+        "5-miler",
+        "one-mile",
+        "dinky-dash"
+      ],
       "items": [
         {
           "path": "identity.name",
@@ -375,7 +385,7 @@
         },
         {
           "path": "schedule",
-          "source": "RunSignup Schedule of Events page lists packet pickup, race starts, and awards celebration",
+          "source": "RunSignup Schedule page lists packet pickup, race starts, and awards celebration",
           "confidence": "high"
         },
         {
@@ -390,7 +400,7 @@
         },
         {
           "path": "runner_decision_checklist.items.packet-pickup",
-          "source": "RunSignup Schedule of Events page lists Friday and race-morning packet pickup windows",
+          "source": "RunSignup Schedule page lists Friday and race-morning packet pickup windows",
           "confidence": "high"
         },
         {
@@ -400,7 +410,7 @@
         },
         {
           "path": "runner_decision_checklist.items.post-race",
-          "source": "RunSignup Schedule of Events page lists accommodation-request instructions",
+          "source": "RunSignup Schedule page lists accommodation-request instructions",
           "confidence": "medium"
         },
         {
@@ -416,8 +426,12 @@
       ]
     },
     "uncertainty": {
-      "summary": "Visible public RunSignup pages confirm the date, location, distances, start times, age eligibility for 5 Miler and Dinky Dash, schedule, refund policy, dog/stroller policy, beneficiary, and accommodation/contact email. Current pricing is not visible because online registration is closed/ended, and the direct race-director email is not public beyond the RunSignup contact form and the accommodation email listed by Team Magic.",
+      "summary": "Visible public RunSignup pages confirm the date, location, distances, start times, age eligibility for 5 Miler and Dinky Dash, schedule, refund policy, dog/stroller policy, beneficiary, and accommodation/contact email. Current pricing is not visible because online registration is closed/ended, and the direct race-director email is not public beyond the RunSignup contact form and the accommodation email listed by Team Magic. 1-Miler source pages conflict between 8:10 AM structured Event/Schedule data and approximately 8:05am descriptive prose; this mockup uses 8:10 AM from Event/Schedule.",
       "items": [
+        {
+          "field": "1-Miler Fun Run start time source conflict",
+          "reason": "RunSignup Event Info and Schedule list the 1-Miler Fun Run start as 8:10 AM CDT, while some descriptive source copy still says approximately 8:05am. The mockup uses 8:10 AM from the structured event/schedule pages; confirm with the race director before customer launch if they want the older prose normalized."
+        },
         {
           "field": "current registration pricing",
           "reason": "RunSignup currently shows online registration closed/ended, so current fees were not visible."
