@@ -531,15 +531,20 @@ function validateRenderedElevationAxis(html, config, errors, label = 'Course') {
 function validateCommunityCourseTools(html, config, errors) {
   const hasPaceGoals = Array.isArray(config?.pace_goals) && config.pace_goals.length > 0;
   const hasCheckpoints = Array.isArray(config?.pace_checkpoints) && config.pace_checkpoints.length > 0;
-  const hasElevationProfile = Array.isArray(config?.course?.elevation_profile) && config.course.elevation_profile.length >= 2;
-  if ((hasPaceGoals || hasElevationProfile) && !html.includes('data-community-course-tools')) {
-    errors.push('Community mockup has pace/elevation tool data but is missing the de-emphasized course tools section.');
+  const distanceProfiles = asArray(config?.distances).map((distance) => distance?.elevation_profile);
+  const hasElevationProfile = [config?.course?.elevation_profile, ...distanceProfiles]
+    .some((profile) => Array.isArray(profile) && profile.length >= 2);
+  if (hasPaceGoals && !html.includes('data-community-course-tools')) {
+    errors.push('Community mockup has pace tool data but is missing the de-emphasized course tools section.');
   }
   if (hasPaceGoals && hasCheckpoints && !html.includes('data-community-pace-tool')) {
     errors.push('Community mockup has pace goal data but is missing the compact pace-split tool.');
   }
   if (hasElevationProfile && !html.includes('data-community-elevation-profile')) {
     errors.push('Community mockup has elevation profile data but is missing the compact elevation profile tool.');
+  }
+  if (!hasElevationProfile && html.includes('data-community-elevation-profile')) {
+    errors.push('Community mockup is rendering an elevation/profile tool without source-backed elevation data; optional course visuals must be hidden instead of leaving blank placeholders.');
   }
 }
 
