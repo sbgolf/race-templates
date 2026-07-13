@@ -1,0 +1,440 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Richland Creek Run XX",
+    "slug": "richland-creek-run",
+    "tagline": "A neighborhood 5 Miler, 1-Miler Fun Run, and kids Dinky Dash supporting Greenways for Nashville.",
+    "edition": "20th annual",
+    "hero_image": {
+      "src": "/mockups/221df003f466f745f7bb7119890f97f9/hero-race-morning.png",
+      "alt": "Runners and walkers gathering near a Nashville community center on a tree-lined spring race morning",
+      "source": "Generated race-day hero image for this private mockup",
+      "generated": true
+    },
+    "colors": {
+      "primary": "#24553F",
+      "secondary": "#D48A32",
+      "accent": "#B94A2F",
+      "ink": "#1F2A24"
+    }
+  },
+  "event": {
+    "date": "2026-04-04",
+    "date_label": "Saturday, April 4, 2026",
+    "time": "07:30",
+    "location": "Nashville, TN",
+    "venue": "Cohn Learning Center",
+    "timezone": "America/Chicago"
+  },
+  "organization": {
+    "name": "Team Magic"
+  },
+  "distances": [
+    {
+      "id": "5-miler",
+      "name": "5 Miler",
+      "distance": "5 mi",
+      "distance_miles": 5,
+      "featured": true,
+      "start_time": "8:00 AM",
+      "profile": "Certified five-mile course through Sylvan Park and along the Richland Creek Greenway",
+      "age_range": "Open to ages 12–98",
+      "map_label": "5 Miler course",
+      "highlights": [
+        "Starts outside The Cohn Learning Center at 4805 Park Avenue",
+        "Runs through sections of historic Sylvan Park before heading onto the Richland Creek Greenway",
+        "Dogs and strollers are permitted during the race",
+        "All 5 mile participants receive a T-shirt; late registrants are not guaranteed shirt size or availability"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun",
+        "method": "RunSignup Info and Event Info pages list the 5 Miler start time, age eligibility, certified course description, dog/stroller policy, and shirt note."
+      }
+    },
+    {
+      "id": "one-mile",
+      "name": "1-Miler Fun Run",
+      "distance": "1 mi",
+      "distance_miles": 1,
+      "start_time": "8:10 AM",
+      "profile": "Short fun run from the Cohn Learning Center race site",
+      "highlights": [
+        "Begins at the same location after the 5 Miler start",
+        "Good fit for runners and walkers who want the community race-day feel without the full five-mile course"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/Events/TN/Nashville/RichlandCreekRun",
+        "method": "RunSignup Event Info lists the 1-Miler Fun Run and 8:10 AM CDT start."
+      }
+    },
+    {
+      "id": "dinky-dash",
+      "name": "Dinky Dash",
+      "distance": "0.5 mi",
+      "distance_miles": 0.5,
+      "start_time": "7:30 AM",
+      "profile": "Half-mile out-and-back fun run for children ages 12 and under",
+      "age_range": "Open to ages 12 and under",
+      "highlights": [
+        "Starts before the 5 Miler and 1-Miler Fun Run",
+        "Begins at the Cohn School / Cohn Learning Center race site",
+        "Popsicles are provided after the dash for kids"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun",
+        "method": "RunSignup Info and Event Info pages list the Dinky Dash start, half-mile out-and-back course, age eligibility, and post-race popsicles."
+      }
+    }
+  ],
+  "course": {
+    "title": "A certified neighborhood route with greenway miles.",
+    "description": "The official RunSignup description says the 5 Miler follows a certified five-mile course through sections of historic Sylvan Park and along the Richland Creek Greenway, starting and finishing at Cohn Learning Center.",
+    "type": "Certified community road and greenway course",
+    "distance_miles": 5,
+    "map_links": [
+      {
+        "label": "Official course details",
+        "url": "https://runsignup.com/Race/RichlandCreekRun/Page/Course-Details"
+      }
+    ]
+  },
+  "registration": {
+    "url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun",
+    "platform": "runsignup",
+    "cta_label": "View RunSignup status",
+    "intro": "RunSignup currently shows online registration as closed/ended for the 5 Miler, 1-Miler Fun Run, and Dinky Dash.",
+    "price_note": "Current registration fees were not visible after online registration closed.",
+    "status": "closed",
+    "status_label": "Online registration closed"
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "Run Sylvan Park and Richland Creek Greenway",
+    "paragraphs": [
+      "The 20th Annual Richland Creek Run is listed for Saturday, April 4, 2026 in Nashville. The race leads participants from The Cohn Learning Center through sections of historic Sylvan Park and along the Richland Creek Greenway.",
+      "Net proceeds benefit Greenways for Nashville, a nonprofit dedicated to creating, preserving, and promoting greenways across Nashville and Davidson County.",
+      "The event includes a 5 Miler, a 1-Miler Fun Run, and the Dinky Dash for children ages 12 and under, giving families multiple ways to take part in the morning."
+    ],
+    "image": {
+      "src": "/mockups/221df003f466f745f7bb7119890f97f9/course-map.png",
+      "alt": "Richland Creek Run course map artwork from the official RunSignup course details page",
+      "source": "https://runsignup.com/Race/RichlandCreekRun/Page/Course-Details"
+    },
+    "links": [
+      {
+        "label": "Course details",
+        "url": "https://runsignup.com/Race/RichlandCreekRun/Page/Course-Details"
+      }
+    ]
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before race morning at Cohn.",
+    "intro": "A quick checklist for start times, packet pickup, location, and family-friendly details before runners click through to RunSignup.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, April 4, 2026",
+        "detail": "RunSignup lists the event date as April 4, 2026.",
+        "source_path": "runner_decision_checklist.items.date",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun"
+      },
+      {
+        "id": "location",
+        "label": "Race site",
+        "value": "Cohn Learning Center, 4805 Park Avenue",
+        "detail": "The official page lists 4805 Park Avenue, Nashville, TN 37209 as the event location and describes the 5 Miler starting outside The Cohn Learning Center.",
+        "source_path": "runner_decision_checklist.items.location",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Friday 2:00–7:00 PM; race morning 6:30–7:30 AM",
+        "detail": "Friday packet pickup is listed at Fleet Feet Green Hills; race-morning packet pickup is listed at the race site.",
+        "source_path": "runner_decision_checklist.items.packet-pickup",
+        "source_url": "https://runsignup.com/Race/RichlandCreekRun/Page/Schedule-of-Events"
+      },
+      {
+        "id": "age-eligibility",
+        "label": "Family-friendly options",
+        "value": "1-Miler Fun Run and Dinky Dash",
+        "detail": "The Dinky Dash is a half-mile out-and-back course for children ages 12 and under, with popsicles after the dash.",
+        "source_path": "runner_decision_checklist.items.age-eligibility",
+        "source_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun"
+      },
+      {
+        "id": "post-race",
+        "label": "Accommodation requests",
+        "value": "Available by request",
+        "detail": "The schedule page asks participants who need an accommodation to contact the event team and include the event of inquiry.",
+        "source_path": "runner_decision_checklist.items.post-race",
+        "source_url": "https://runsignup.com/Race/RichlandCreekRun/Page/Schedule-of-Events"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Friday, April 3, 2026",
+      "name": "Packet pickup",
+      "time": "2:00 PM – 7:00 PM",
+      "location": "Fleet Feet Green Hills, 3900 Hillsboro Pike #18, Nashville, TN 37215",
+      "applies_to_distances": ["5-miler", "one-mile", "dinky-dash"]
+    },
+    {
+      "day": "Saturday, April 4, 2026",
+      "name": "Race-site packet pickup",
+      "time": "6:30 AM – 7:30 AM",
+      "location": "Cohn Learning Center / race site",
+      "applies_to_distances": ["5-miler", "one-mile", "dinky-dash"]
+    },
+    {
+      "day": "Saturday, April 4, 2026",
+      "name": "Dinky Dash start",
+      "time": "7:30 AM",
+      "location": "Cohn Learning Center",
+      "applies_to_distances": ["dinky-dash"]
+    },
+    {
+      "day": "Saturday, April 4, 2026",
+      "name": "5 Miler Run/Walk start",
+      "time": "8:00 AM",
+      "location": "Cohn Learning Center",
+      "applies_to_distances": ["5-miler"]
+    },
+    {
+      "day": "Saturday, April 4, 2026",
+      "name": "1 Mile Fun Run start",
+      "time": "8:10 AM",
+      "location": "Cohn Learning Center",
+      "applies_to_distances": ["one-mile"]
+    },
+    {
+      "day": "Saturday, April 4, 2026",
+      "name": "Individual and team awards celebration",
+      "time": "9:45 AM approx.",
+      "location": "Race site",
+      "applies_to_distances": ["5-miler", "one-mile", "dinky-dash"]
+    }
+  ],
+  "volunteer": {
+    "headline": "Support Nashville greenways on race morning",
+    "description": "The event benefits Greenways for Nashville, and a clearer volunteer path can help turn community support into race-day help.",
+    "items": [
+      "Point prospective volunteers toward the race contact path for available needs.",
+      "Keep the cause visible: proceeds support greenway creation, preservation, and promotion in Nashville and Davidson County.",
+      "Use the race morning schedule to show where volunteers are most useful: packet pickup, start-line flow, course support, and awards."
+    ],
+    "signup_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun#contactFormSection",
+    "cta_label": "Contact the race"
+  },
+  "sponsors": [
+    {
+      "name": "Greenways for Nashville",
+      "tier": "Beneficiary",
+      "url": "https://greenwaysfornashville.org/"
+    },
+    {
+      "name": "Team Magic",
+      "tier": "Race production"
+    },
+    {
+      "name": "Fleet Feet Green Hills",
+      "tier": "Packet pickup host"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where does the race start?",
+      "answer": "The official listing says the 5 mile run begins outside The Cohn Learning Center at 4805 Park Avenue in Nashville and finishes back at Cohn."
+    },
+    {
+      "question": "Is online registration open?",
+      "answer": "RunSignup currently shows online registration as closed/ended for the 5 Miler, 1-Miler Fun Run, and Dinky Dash. Runners should check the official RunSignup page for the latest status.",
+      "links": []
+    },
+    {
+      "question": "Are dogs and strollers allowed?",
+      "answer": "The official event description says dogs and strollers are permitted during the race."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "The RunSignup refund policy page states that all fees are non-refundable and non-transferable.",
+      "links": [
+        {
+          "label": "Refund policy",
+          "url": "https://runsignup.com/Race/RichlandCreekRun/RefundPolicy"
+        }
+      ]
+    },
+    {
+      "question": "What do 5 mile participants receive?",
+      "answer": "The event description says all 5 mile participants receive a T-shirt, but T-shirts and/or sizing are not guaranteed for late registrants."
+    },
+    {
+      "question": "Who does the race benefit?",
+      "answer": "Net proceeds benefit Greenways for Nashville, a nonprofit dedicated to creating, preserving, and promoting greenways in Nashville and Davidson County."
+    }
+  ],
+  "travel": {
+    "headline": "Race-day basics",
+    "items": [
+      {
+        "label": "Race site",
+        "value": "Cohn Learning Center, 4805 Park Avenue, Nashville, TN 37209"
+      },
+      {
+        "label": "Friday packet pickup",
+        "value": "Fleet Feet Green Hills, 3900 Hillsboro Pike #18, Nashville, TN 37215"
+      },
+      {
+        "label": "Weather plan",
+        "value": "The official description says races are held rain or shine."
+      }
+    ]
+  },
+  "contacts": {
+    "race_contact_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun#contactFormSection",
+    "race_contact_label": "Contact the race",
+    "email": "hello@magicsportsusa.com"
+  },
+  "seo": {
+    "meta_title": "Richland Creek Run XX — Nashville Race Guide",
+    "meta_description": "Richland Creek Run XX includes a 5 Miler, 1-Miler Fun Run, and Dinky Dash from Cohn Learning Center in Nashville supporting Greenways for Nashville."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun",
+    "captured_at": "2026-07-12T20:10:00.000Z",
+    "access_token": "221df003f466f745f7bb7119890f97f9",
+    "race_slug": "richland-creek-run",
+    "route": "/private/mockups/221df003f466f745f7bb7119890f97f9/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/221df003f466f745f7bb7119890f97f9/hero-race-morning.png",
+        "alt": "Runners and walkers gathering near a Nashville community center on a tree-lined spring race morning",
+        "caption": "Community race morning energy for the Richland Creek Run mockup.",
+        "source": "Generated race-day hero image for this private mockup",
+        "generated": true
+      },
+      {
+        "src": "/mockups/221df003f466f745f7bb7119890f97f9/course-map.png",
+        "alt": "Richland Creek Run course map artwork",
+        "caption": "Official RunSignup course details image used as a course reference.",
+        "source": "https://runsignup.com/Race/RichlandCreekRun/Page/Course-Details"
+      },
+      {
+        "src": "/mockups/221df003f466f745f7bb7119890f97f9/logo.png",
+        "alt": "Richland Creek Run XX race logo",
+        "caption": "Official RunSignup race logo.",
+        "source": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/TN/Nashville/RichlandCreekRun",
+      "captured_at": "2026-07-12T20:10:00.000Z",
+      "source_confirmed_sections": [
+        "contacts",
+        "course",
+        "faqs",
+        "runner_decision_checklist",
+        "schedule",
+        "sponsors",
+        "story",
+        "travel",
+        "volunteer"
+      ],
+      "source_confirmed_distance_ids": ["5-miler", "one-mile", "dinky-dash"],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup page title/header lists Richland Creek Run XX",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header lists April 4, 2026",
+          "confidence": "high"
+        },
+        {
+          "path": "event.venue",
+          "source": "RunSignup Event Location lists 4805 Park Avenue and the description names The Cohn Learning Center",
+          "confidence": "high"
+        },
+        {
+          "path": "distances",
+          "source": "RunSignup Info/Event Info pages list 5 Miler, 1-Miler Fun Run, and Dinky Dash with start times and age notes",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "RunSignup Schedule of Events page lists packet pickup, race starts, and awards celebration",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "RunSignup race header lists Saturday, April 4, 2026",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup Event Location and event description list Cohn Learning Center / 4805 Park Avenue",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup Schedule of Events page lists Friday and race-morning packet pickup windows",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.age-eligibility",
+          "source": "RunSignup Info/Event Info pages list Dinky Dash age eligibility and family race options",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.post-race",
+          "source": "RunSignup Schedule of Events page lists accommodation-request instructions",
+          "confidence": "medium"
+        },
+        {
+          "path": "faqs.refund-policy",
+          "source": "RunSignup Refund Policy page states all fees are non-refundable and non-transferable",
+          "confidence": "high"
+        },
+        {
+          "path": "contacts.email",
+          "source": "RunSignup Course Details/Schedule pages list hello@magicsportsusa.com for accommodation requests",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Visible public RunSignup pages confirm the date, location, distances, start times, age eligibility for 5 Miler and Dinky Dash, schedule, refund policy, dog/stroller policy, beneficiary, and accommodation/contact email. Current pricing is not visible because online registration is closed/ended, and the direct race-director email is not public beyond the RunSignup contact form and the accommodation email listed by Team Magic.",
+      "items": [
+        {
+          "field": "current registration pricing",
+          "reason": "RunSignup currently shows online registration closed/ended, so current fees were not visible."
+        },
+        {
+          "field": "direct race director email",
+          "reason": "RunSignup exposes a contact form and lists hello@magicsportsusa.com for accommodation requests; no named race-director email was visible."
+        },
+        {
+          "field": "course certification number",
+          "reason": "The event description says the 5 Miler is certified, but no certification number was visible in captured public source pages."
+        },
+        {
+          "field": "image reuse rights",
+          "reason": "Official logo/course artwork appears on RunSignup, but external reuse should be confirmed before publishing outside a private review mockup."
+        }
+      ]
+    }
+  }
+}
