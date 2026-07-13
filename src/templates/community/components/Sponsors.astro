@@ -1,15 +1,19 @@
 ---
 const { race } = Astro.props;
+const tierClass = (tier = 'Sponsors') => `sp-tier--${tier.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'sponsors'}`;
 function normalizeSponsor(sponsor) {
   if (typeof sponsor === 'string') {
     const name = sponsor.trim();
-    return name ? { name, tier: null } : null;
+    return name ? { name, tier: null, url: '', logo: '', logo_alt: '' } : null;
   }
   if (!sponsor || typeof sponsor !== 'object') return null;
   const name = typeof sponsor.name === 'string' ? sponsor.name.trim() : '';
   if (!name) return null;
   const tier = typeof sponsor.tier === 'string' && sponsor.tier.trim() ? sponsor.tier.trim() : null;
-  return { name, tier };
+  const url = typeof sponsor.url === 'string' ? sponsor.url.trim() : '';
+  const logo = typeof sponsor.logo === 'string' ? sponsor.logo.trim() : '';
+  const logo_alt = typeof sponsor.logo_alt === 'string' && sponsor.logo_alt.trim() ? sponsor.logo_alt.trim() : `${name} sponsor logo`;
+  return { name, tier, url, logo, logo_alt };
 }
 
 const sponsors = (race.sponsors || []).map(normalizeSponsor).filter(Boolean);
@@ -28,15 +32,35 @@ const tieredSponsors = sponsors.reduce((groups, sponsor) => {
   <div class="wrap">
     <p class="sp-lab">Proudly Supported By</p>
     {hasExplicitTiers ? tieredSponsors.map((group) => (
-      <div class="sp-tier-group">
-        <div class="sp-tier-label">{group.tier}</div>
-        <div class="sp-row">
-          {group.sponsors.map((sponsor) => <span>{sponsor.name}</span>)}
+      <section class:list={["sp-tier-group", tierClass(group.tier)]} aria-label={`${group.tier} sponsors`}>
+        <div class="sp-tier-heading">
+          <span></span>
+          <h3>{group.tier}</h3>
+          <span></span>
         </div>
-      </div>
+        <div class="sp-row">
+          {group.sponsors.map((sponsor) => sponsor.url ? (
+            <a class:list={["sp-sponsor", { "sp-sponsor--logo": sponsor.logo, "sp-sponsor--text": !sponsor.logo }]} href={sponsor.url} target="_blank" rel="noopener" aria-label={sponsor.name}>
+              {sponsor.logo ? <img src={sponsor.logo} alt={sponsor.logo_alt} loading="lazy" decoding="async" /> : <span>{sponsor.name}</span>}
+            </a>
+          ) : (
+            <div class:list={["sp-sponsor", { "sp-sponsor--logo": sponsor.logo, "sp-sponsor--text": !sponsor.logo }]} aria-label={sponsor.name}>
+              {sponsor.logo ? <img src={sponsor.logo} alt={sponsor.logo_alt} loading="lazy" decoding="async" /> : <span>{sponsor.name}</span>}
+            </div>
+          ))}
+        </div>
+      </section>
     )) : (
       <div class="sp-row">
-        {sponsors.map((sponsor) => <span>{sponsor.name}</span>)}
+        {sponsors.map((sponsor) => sponsor.url ? (
+          <a class:list={["sp-sponsor", { "sp-sponsor--logo": sponsor.logo, "sp-sponsor--text": !sponsor.logo }]} href={sponsor.url} target="_blank" rel="noopener" aria-label={sponsor.name}>
+            {sponsor.logo ? <img src={sponsor.logo} alt={sponsor.logo_alt} loading="lazy" decoding="async" /> : <span>{sponsor.name}</span>}
+          </a>
+        ) : (
+          <div class:list={["sp-sponsor", { "sp-sponsor--logo": sponsor.logo, "sp-sponsor--text": !sponsor.logo }]} aria-label={sponsor.name}>
+            {sponsor.logo ? <img src={sponsor.logo} alt={sponsor.logo_alt} loading="lazy" decoding="async" /> : <span>{sponsor.name}</span>}
+          </div>
+        ))}
       </div>
     )}
   </div>

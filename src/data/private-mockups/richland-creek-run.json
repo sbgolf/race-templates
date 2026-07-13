@@ -260,59 +260,98 @@
     {
       "name": "Oracle",
       "tier": "Presenting",
-      "url": "https://www.oracle.com"
+      "url": "https://www.oracle.com",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/oracle.png",
+      "logo_alt": "Oracle sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ_HXs.png"
     },
     {
       "name": "The Wilson Group",
       "tier": "Gold",
-      "url": "https://www.wilsongrouprealestate.com"
+      "url": "https://www.wilsongrouprealestate.com",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/the-wilson-group.png",
+      "logo_alt": "The Wilson Group sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJOXVL.png"
     },
     {
       "name": "Pinnacle Financial Partners",
-      "tier": "Gold"
+      "tier": "Gold",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/pinnacle-financial-partners.png",
+      "logo_alt": "Pinnacle Financial Partners sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJOXZf.png"
     },
     {
       "name": "Fleet Feet",
-      "tier": "Silver"
+      "tier": "Silver",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/fleet-feet.png",
+      "logo_alt": "Fleet Feet sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ7qOc.png"
     },
     {
       "name": "Crescent Communities",
-      "tier": "Bronze"
+      "tier": "Bronze",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/crescent-communities.png",
+      "logo_alt": "Crescent Communities sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bNIQF7.png"
     },
     {
       "name": "Vanderbilt University",
-      "tier": "Bronze"
+      "tier": "Bronze",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/vanderbilt-university.png",
+      "logo_alt": "Vanderbilt University sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bPJD25.png"
     },
     {
       "name": "Deloitte",
-      "tier": "Bronze"
+      "tier": "Bronze",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/deloitte.png",
+      "logo_alt": "Deloitte sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bPZPxh.png"
     },
     {
       "name": "Richland West-End Neighborhood Association",
-      "tier": "Neighborhood Associations"
+      "tier": "Neighborhood Associations",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/richland-west-end-neighborhood-association.png",
+      "logo_alt": "Richland West-End Neighborhood Association sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ7Po8.png"
     },
     {
       "name": "Sylvan Park Neighborhood Association",
-      "tier": "Neighborhood Associations"
+      "tier": "Neighborhood Associations",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/sylvan-park-neighborhood-association.png",
+      "logo_alt": "Sylvan Park Neighborhood Association sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bPJD7s.png"
     },
     {
       "name": "White Bridge Neighborhood Association",
-      "tier": "Neighborhood Associations"
+      "tier": "Neighborhood Associations",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/white-bridge-neighborhood-association.png",
+      "logo_alt": "White Bridge Neighborhood Association sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ9oRL.png"
     },
     {
       "name": "Bates Nursery and Garden Center",
       "tier": "In-Kind",
-      "url": "https://www.batesnursery.com"
+      "url": "https://www.batesnursery.com",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/bates-nursery-and-garden-center.png",
+      "logo_alt": "Bates Nursery and Garden Center sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ_oTv.png"
     },
     {
       "name": "Metro Parks",
       "tier": "In-Kind",
-      "url": "https://www.nashville.gov/departments/parks"
+      "url": "https://www.nashville.gov/departments/parks",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/metro-parks.png",
+      "logo_alt": "Metro Parks sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJWC7E.png"
     },
     {
       "name": "Montgomery Bell Academy",
       "tier": "In-Kind",
-      "url": "https://www.montgomerybell.edu"
+      "url": "https://www.montgomerybell.edu",
+      "logo": "/mockups/221df003f466f745f7bb7119890f97f9/sponsors/montgomery-bell-academy.png",
+      "logo_alt": "Montgomery Bell Academy sponsor logo",
+      "source_logo_url": "https://d368g9lw5ileu7.cloudfront.net/races/race124226-racesponsor-0.bJ5QlY.png"
     },
     {
       "name": "Greenways for Nashville",
@@ -479,13 +518,13 @@
         },
         {
           "path": "sponsors",
-          "source": "RunSignup Sponsors page lists tiered sponsors: Presenting Oracle; Gold The Wilson Group and Pinnacle Financial Partners; Silver Fleet Feet; Bronze Crescent Communities, Vanderbilt University, Deloitte; Neighborhood Associations Richland West-End, Sylvan Park, White Bridge; In-Kind Bates Nursery and Garden Center, Metro Parks, Montgomery Bell Academy.",
+          "source": "RunSignup Sponsors page rendered tiered sponsor logos: Presenting Oracle; Gold The Wilson Group and Pinnacle Financial Partners; Silver Fleet Feet; Bronze Crescent Communities, Vanderbilt University, Deloitte; Neighborhood Associations Richland West-End, Sylvan Park, White Bridge; In-Kind Bates Nursery and Garden Center, Metro Parks, Montgomery Bell Academy. Pinnacle/Fleet Feet and the three Neighborhood Association names were verified by visual inspection of the rendered logo images where RunSignup omitted alt/name text.",
           "confidence": "high"
         }
       ]
     },
     "uncertainty": {
-      "summary": "Visible public RunSignup pages confirm the date, location, distances, start times, age eligibility for 5 Miler and Dinky Dash, schedule, refund policy, dog/stroller policy, beneficiary, sponsor tiers, and accommodation/contact email. Current pricing is not visible because online registration is closed/ended, and the direct race-director email is not public beyond the RunSignup contact form and the accommodation email listed by Team Magic. 1-Miler source pages conflict between 8:10 AM structured Event/Schedule data and approximately 8:05am descriptive prose; this mockup uses 8:10 AM from Event/Schedule. Date sanity remains open for Steve/RD decision because the listed April 4, 2026 race date has passed as of July 13, 2026.",
+      "summary": "Visible public RunSignup pages confirm the date, location, distances, start times, age eligibility for 5 Miler and Dinky Dash, schedule, refund policy, dog/stroller policy, beneficiary, sponsor tiers, and accommodation/contact email. Current pricing is not visible because online registration is closed/ended, and the direct race-director email is not public beyond the RunSignup contact form and the accommodation email listed by Team Magic. 1-Miler source pages conflict between 8:10 AM structured Event/Schedule data and approximately 8:05am descriptive prose; this mockup uses 8:10 AM from Event/Schedule. Steve confirmed this should be pitched as a preview/concept ahead of the 2027 date; visible date/pricing facts remain sourced from the currently posted April 4, 2026 RunSignup page until next-year details post.",
       "items": [
         {
           "field": "1-Miler Fun Run start time source conflict",
@@ -509,6 +548,7 @@
         }
       ]
     },
-    "suppress_measurement_panel": true
+    "suppress_measurement_panel": true,
+    "positioning": "Preview/concept ahead of the 2027 race date; visible source facts still reflect the currently posted RunSignup 2026 race page until next-year date/pricing posts."
   }
 }
