@@ -151,12 +151,14 @@ section{position:relative;background:var(--community-cream)}
 }
 .hero-eyebrow::before{content:"";width:30px;height:1.5px;background:var(--accent)}
 .hero h1{
-  font-size:clamp(3rem,7.8vw,6.4rem);
+  font-size:clamp(3rem,6.2vw,5.4rem);
   margin-bottom:16px;
   letter-spacing:-.035em;
   font-weight:600;
   color:var(--forest);
-  overflow-wrap:anywhere;
+  overflow-wrap:normal;
+  word-break:normal;
+  hyphens:auto;
 }
 .hero h1 em{font-style:italic;color:var(--accent);font-weight:500}
 .hero-tagline{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.2rem,2.6vw,1.8rem);line-height:1.22;color:var(--ink-2);max-width:32ch;margin:0 0 22px;font-weight:500;letter-spacing:-.015em}
@@ -650,7 +652,7 @@ footer{background:var(--ink);color:rgba(250,246,238,.6);font-size:.92rem}
 .community-template .hero-inner > *{min-width:0}
 .community-template .hero-copy{background:rgba(251,245,232,.54);border:1px solid rgba(47,39,29,.08);border-radius:28px;padding:clamp(24px,4vw,44px);box-shadow:0 26px 80px -56px rgba(47,39,29,.42);backdrop-filter:blur(8px);min-width:0}
 .community-template .hero-eyebrow{font-family:"Nunito",-apple-system,BlinkMacSystemFont,sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:32px}
-.community-template .hero h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(3rem,7.8vw,6.4rem);font-weight:600;line-height:1.02;letter-spacing:-.035em;text-transform:none;color:var(--forest);margin-bottom:16px;overflow-wrap:anywhere}
+.community-template .hero h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(3rem,6.2vw,5.4rem);font-weight:600;line-height:1.02;letter-spacing:-.035em;text-transform:none;color:var(--forest);margin-bottom:16px;overflow-wrap:normal;word-break:normal;hyphens:auto}
 .community-template .hero-tagline{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.2rem,2.6vw,1.8rem);line-height:1.22;color:var(--ink-2);max-width:32ch;margin:0 0 22px;font-weight:500;letter-spacing:-.015em;text-transform:none}
 .community-template .hero-date{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.05rem;color:var(--accent);margin-bottom:24px}
 .community-template .hero p.lead{margin-top:0;margin-bottom:32px;color:rgba(47,39,29,.74);font-size:1.1rem;max-width:46ch}

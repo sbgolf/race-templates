@@ -1,0 +1,168 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Arrowwood Adventure 5K",
+    "slug": "arrowwood-adventure-5k",
+    "tagline": "Arrowwood Adventure 5K is a community race in Wears Valley, TN.",
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-10-17",
+    "location": "Wears Valley, TN",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "RunSignup race listing",
+        "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
+        "confidence": "medium",
+        "verified": true
+      }
+    },
+    {
+      "id": "3-miles",
+      "name": "3 Miles",
+      "distance": "3 Miles",
+      "provenance": {
+        "source": "RunSignup race listing",
+        "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
+        "confidence": "medium",
+        "verified": true
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials before registering.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-10-17",
+        "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
+        "source_path": "event.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "5K, 3 Miles",
+        "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
+        "applies_to_distance_ids": [
+          "5k",
+          "3-miles"
+        ],
+        "source_path": "distances"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Wears Valley, TN",
+        "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
+        "source_path": "event.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Arrowwood Adventure 5K \u2014 2026-10-17",
+    "meta_description": "Arrowwood Adventure 5K race details for Wears Valley, TN, with a clear path to registration."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "d3db311ed41c52465160df19fc601590",
+    "route": "/private/mockups/d3db311ed41c52465160df19fc601590/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
+    "source_platform": "runsignup",
+    "source_race_id": "156145",
+    "registration_race_id": "156145",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 89,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Appears registration-platform-first, a strong StartLine opportunity. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Cause/sponsor/community proof can support the page. Contact form path found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K"
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "path": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium"
+        },
+        {
+          "path": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "prospect discovery output",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "3-miles"
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Only the race name, date, location, distances, and RunSignup registration path have been confirmed for this first-pass mockup."
+    },
+    "captured_at": "2026-07-14T23:17:00.000Z"
+  }
+}
