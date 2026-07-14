@@ -202,6 +202,7 @@ for (const file of files) {
     }
     validatePerformanceCertificationNumberRepetition(text, config, errors);
     validateRenderedElevationAxis(html, config, errors, 'Performance');
+    validatePerformanceOptionalElevationVisual(html, config, errors);
   }
   if (['community', 'performance', 'destination-major'].includes(template)) {
     for (const pattern of templatePrivateVisibleHygienePatterns) {
@@ -525,6 +526,22 @@ function validateRenderedElevationAxis(html, config, errors, label = 'Course') {
     if (!new RegExp(`>${value}\\s*ft<`, 'i').test(html)) {
       errors.push(`${label} elevation profile is missing Y-axis label ${value} ft.`);
     }
+  }
+}
+
+function validatePerformanceOptionalElevationVisual(html, config, errors) {
+  const hasCourseProfile = Array.isArray(config?.course?.elevation_profile) && config.course.elevation_profile.length >= 2;
+  if (hasCourseProfile) {
+    if (!html.includes('data-performance-elevation-profile')) {
+      errors.push('Performance mockup has source-backed elevation data but is missing the elevation profile component.');
+    }
+    return;
+  }
+  if (html.includes('data-performance-elevation-profile') || /ELEVATION\s+PROFILE/i.test(visibleText(html))) {
+    errors.push('Performance mockup is rendering an elevation/profile visual without source-backed elevation data; hide the optional visual instead of leaving a placeholder.');
+  }
+  if (html.includes('facts-chart')) {
+    errors.push('Performance mockup without elevation data must not reserve the elevation/profile visual card as a generic facts chart.');
   }
 }
 
