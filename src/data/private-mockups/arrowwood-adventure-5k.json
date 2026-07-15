@@ -95,25 +95,25 @@
         "source_path": "runner_decision_checklist.items.parking"
       },
       {
-        "id": "terrain",
+        "id": "course",
         "label": "Terrain",
         "value": "Hilly gravel campus roads",
         "detail": "The 5K stays on Camp Arrowwood property and uses rolling access roads with about 90% gravel and less than 10% grass.",
         "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
-        "source_path": "runner_decision_checklist.items.terrain"
+        "source_path": "runner_decision_checklist.items.course"
       },
       {
-        "id": "registration-deadline",
+        "id": "price",
         "label": "Registration",
         "value": "Open through race day on RunSignup",
         "detail": "RunSignup lists registration ending October 17, 2026 at 11:59 PM EDT. Check the official page before registering.",
         "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
-        "source_path": "runner_decision_checklist.items.registration-deadline"
+        "source_path": "runner_decision_checklist.items.price"
       }
     ]
   },
   "seo": {
-    "meta_title": "Arrowwood Adventure 5K — October 17, 2026",
+    "meta_title": "Arrowwood Adventure 5K \u2014 October 17, 2026",
     "meta_description": "Arrowwood Adventure 5K details for Camp Arrowwood in Wears Valley, including race times, packet pickup, parking, pricing, course terrain, awards, and registration."
   },
   "analytics": {
@@ -239,12 +239,12 @@
           "confidence": "high"
         },
         {
-          "path": "runner_decision_checklist.items.terrain",
+          "path": "runner_decision_checklist.items.course",
           "source": "RunSignup Description/Events sections",
           "confidence": "high"
         },
         {
-          "path": "runner_decision_checklist.items.registration-deadline",
+          "path": "runner_decision_checklist.items.price",
           "source": "RunSignup Description/Events sections",
           "confidence": "high"
         },
@@ -300,10 +300,10 @@
       }
     ],
     "image": {
-      "src": "https://d2mkojm4rk40ta.cloudfront.net/us-east-1-src/prod/clientUploads/2024-10/04/1/156145/dee06e4f-fbe8-4107-9736-5bb932f1cfa9-bNafjY.png",
+      "src": "/mockups/d3db311ed41c52465160df19fc601590/course-map.png",
       "alt": "Official Arrowwood Adventure 5K course map showing the loop route around Camp Arrowwood",
       "label": "5K course map from RunSignup",
-      "source_url": "https://runsignup.com/Race/Info/TN/WearsValley/WayoftheArrow5K"
+      "source": "https://d2mkojm4rk40ta.cloudfront.net/us-east-1-src/prod/clientUploads/2024-10/04/1/156145/dee06e4f-fbe8-4107-9736-5bb932f1cfa9-bNafjY.png"
     }
   },
   "story": {
@@ -312,7 +312,7 @@
     "paragraphs": [
       "Camp Arrowwood opens its Wears Valley campus for a fall race morning in Sevier County, with the 5K Run and Kids 1-mile Run centered on the camp property.",
       "The 5K course is listed as two loops on camp access roads, staying on property with rolling/hilly terrain, nearly all gravel roads, and a small amount of grass.",
-      "After the race, RunSignup describes post-race festivities with farm animals, music, outdoor camp games, s’mores around the campfire, the campus store, and raffle giveaways."
+      "After the race, RunSignup describes post-race festivities with farm animals, music, outdoor camp games, s\u2019mores around the campfire, the campus store, and raffle giveaways."
     ],
     "quote": "All proceeds for this event will directly benefit Camp Arrowwood missions.",
     "quote_byline": "RunSignup race listing",
@@ -339,7 +339,7 @@
     {
       "day": "Saturday, October 17, 2026",
       "name": "Kids 1-mile Run",
-      "time": "8:30 AM EDT – 9:00 AM EDT",
+      "time": "8:30 AM EDT \u2013 9:00 AM EDT",
       "location": "Camp Arrowwood, 100 One Fine Place, Wears Valley, TN 37862",
       "applies_to_distances": [
         "kids-1-mile"
@@ -348,7 +348,7 @@
     {
       "day": "Saturday, October 17, 2026",
       "name": "5K Run",
-      "time": "9:00 AM EDT – 11:30 AM EDT",
+      "time": "9:00 AM EDT \u2013 11:30 AM EDT",
       "location": "Camp Arrowwood, 100 One Fine Place, Wears Valley, TN 37862",
       "applies_to_distances": [
         "5k-run"
@@ -408,7 +408,7 @@
     "description": "RunSignup states that all proceeds directly benefit Camp Arrowwood missions. Donations are available through the official race page.",
     "url": "https://runsignup.com/Race/Donate/TN/WearsValley/WayoftheArrow5K",
     "cta_label": "Donate on RunSignup",
-    "icon": "♡"
+    "icon": "\u2661"
   },
   "faqs": [
     {
@@ -425,7 +425,7 @@
     },
     {
       "question": "Are there awards?",
-      "answer": "RunSignup lists awards for the top male and female 5K finishers plus the top two runners in each age category: 14 & Under, 15–25, 25–44, and 45+."
+      "answer": "RunSignup lists awards for the top male and female 5K finishers plus the top two runners in each age category: 14 & Under, 15\u201325, 25\u201344, and 45+."
     },
     {
       "question": "What is the refund policy?",
