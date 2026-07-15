@@ -137,6 +137,7 @@ The validation flow has two private-mockup gates: `npm run validate:private-mock
 - Normalizes generated display copy so source paragraphs do not expose raw URLs/domains or common scrape artifacts; course/map resources are moved into labeled links and RunSignup registration links are labeled with the RunSignup platform/CTA.
 - Generates `private_mockup.access_token` with Node crypto randomness (`randomBytes(16).toString('hex')`), producing an unguessable 128-bit token that is not derived from the race name, race slug, hostname, or source URL.
 - Fails without writing a config when source-backed required fields (race name, event date, location, at least one event distance) cannot be confirmed. Optional logistics are omitted and recorded as uncertainties instead of filled with placeholders.
+- Before accepting the Community template's illustrated hero placeholder, performs a visual asset pass against official source pages. Inspect browser-rendered RunSignup race pages, owner sites, carousel/banner elements, `websiteBanner-*` assets, and CSS `background-image` URLs, not only extracted text or obvious `<img>` tags. If a usable official race photo/banner exists, store it under `public/mockups/<token>/`, configure it as `identity.hero_image`, and add provenance for `identity.hero_image`.
 
 ## Privacy/indexing guardrails
 
@@ -161,7 +162,7 @@ Token rules:
 
 ## Fallback behavior
 
-If image capture fails, is blocked, or finds only unsupported/low-size files, the preview still builds with the Community template's illustrated placeholders. This keeps the audit workflow moving without adding private assets or secrets.
+Illustrated placeholders are a last resort for private mockups, not the default visual choice. If official source pages expose a usable race photo/banner, use it for `identity.hero_image` before showing fallback art. If image capture fails, is blocked, or finds only unsupported/low-size files, the preview may still build with the Community template's illustrated placeholders, but record the image-source blocker in `private_mockup.uncertainty` and re-check it during the auditor pass before RD send.
 
 ## Deployment handoff
 

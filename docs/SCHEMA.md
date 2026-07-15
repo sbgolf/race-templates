@@ -29,7 +29,7 @@ Templates must continue supporting flat string arrays so existing sample configs
 
 ## Shared optional fields
 
-- `identity.hero_image` (optional): image object for hero art/photography. Template implementations may use a real image URL or a local placeholder object while awaiting customer assets.
+- `identity.hero_image` (optional): image object for hero art/photography. For private mockups, prefer official source-backed race photography or race-page banner imagery before local placeholder art. Inspect browser-rendered source pages for RunSignup carousel/banner/background-image assets as well as normal `<img>` tags; when a usable source image exists, store a local copy under `public/mockups/<token>/`, set `src` to `/mockups/<token>/...`, include descriptive `alt`, and record provenance in `private_mockup.provenance.items[]`. Placeholder objects are acceptable only when source image capture is unavailable, blocked, unsupported, or explicitly deferred and that uncertainty is recorded.
 
 ## Social/contact links
 
