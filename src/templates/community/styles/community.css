@@ -744,6 +744,8 @@ footer{background:var(--ink);color:rgba(250,246,238,.6);font-size:.92rem}
   .course-grid--details-only .course-details{grid-template-columns:1fr}
   .course-grid--details-only .detail-row:nth-child(3){grid-column:auto}
   .entry-grid{grid-template-columns:1fr}
+  .tl-event{grid-template-columns:minmax(0,1fr);gap:6px}
+  .tl-event-time{text-align:left}
   .gallery-grid{grid-template-columns:1fr;grid-template-rows:var(--gallery-rows-mobile, repeat(6,200px))}
   .past-race-photos--community .past-race-photos__link{align-items:flex-start;flex-direction:column;gap:4px}
   .g1,.g2,.g3,.g4,.g5,.g6{grid-column:1}
