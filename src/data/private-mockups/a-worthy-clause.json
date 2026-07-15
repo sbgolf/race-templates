@@ -1,0 +1,403 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "A Worthy Clause",
+    "slug": "a-worthy-clause",
+    "tagline": "A holiday 5K and 1-mile fun run in Columbia supporting A Worthy Cause’s mobile wellness mission.",
+    "colors": {
+      "primary": "#31573D",
+      "secondary": "#C43B2F",
+      "accent": "#D89B2A",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-12-12",
+    "location": "Columbia, TN",
+    "venue": "Riverside in Columbia, TN",
+    "address": "102 Riverside Drive, Columbia, TN 38401",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "A Worthy Clause - 5K",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "9:00 AM CST",
+      "end_time": "12:00 PM CST",
+      "price": "$32.80",
+      "profile": "Timed holiday 5K supporting A Worthy Cause’s A Worthy Movement bus initiative.",
+      "highlights": [
+        "Timed 5K event",
+        "Holiday attire encouraged",
+        "Long sleeve race shirt if registered before November 28"
+      ],
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/TN/Columbia/AWorthyClause",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the 5K price, time window, registration deadline, and event name."
+      }
+    },
+    {
+      "id": "one-mile-fun-run",
+      "name": "A Worthy Clause - 1 mile fun run",
+      "distance": "1 Mile",
+      "start_time": "9:45 AM CST",
+      "end_time": "12:00 PM CST",
+      "price": "$22.20",
+      "profile": "Untimed 1-mile fun run/walk for a family-friendly holiday race morning.",
+      "highlights": [
+        "Untimed 1-mile fun run/walk",
+        "Family-friendly participation option",
+        "Completion medal listed for participants"
+      ],
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/TN/Columbia/AWorthyClause",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the 1 mile fun run price, time window, registration deadline, and event name."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=187527",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register through the official RunSignup sign-up page. Listed prices include RunSignup fees, and each event has its own race-morning registration cutoff.",
+    "deadline": "December 12, 2026 at 9:00 AM CST for the 5K; 9:45 AM CST for the 1-mile fun run",
+    "price_note": "5K entry is $32.80 including fee; 1-mile fun run entry is $22.20 including fee."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before you head to Riverside Park.",
+    "intro": "A quick runner checklist for pickup, race times, registration, and the community mission.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "packet-pickup",
+        "label": "Packet pick-up",
+        "value": "Race morning, 8:00–8:45 AM",
+        "detail": "Race-morning packet pick-up is available from 8 AM to 8:45 AM by the middle pavilion at the park.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Columbia/AWorthyClause",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
+      },
+      {
+        "id": "start-time",
+        "label": "Race starts",
+        "value": "5K 9:00 AM; 1-mile 9:45 AM",
+        "detail": "The 5K event window is 9:00 AM to noon CST. The 1-mile fun run starts at 9:45 AM CST and also lists a noon end time.",
+        "source_url": "https://runsignup.com/Race/Events/TN/Columbia/AWorthyClause",
+        "source_path": "runner_decision_checklist.items.start-time"
+      },
+      {
+        "id": "swag",
+        "label": "Included items",
+        "value": "Shirt deadline Nov. 28",
+        "detail": "A long sleeve race shirt is listed for participants who register before November 28, plus a completion medal.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Columbia/AWorthyClause",
+        "source_path": "runner_decision_checklist.items.swag"
+      },
+      {
+        "id": "post-race",
+        "label": "After the race",
+        "value": "Food trucks, vendors, DJ",
+        "detail": "Race day includes food trucks, health vendors, and a DJ after the race.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Columbia/AWorthyClause",
+        "source_path": "runner_decision_checklist.items.post-race"
+      },
+      {
+        "id": "refunds-transfers",
+        "label": "Refund policy",
+        "value": "Refunds are not allowed",
+        "detail": "The official RunSignup refund policy states that refunds are not allowed for this race.",
+        "source_url": "https://runsignup.com/Race/187527/RefundPolicy",
+        "source_path": "runner_decision_checklist.items.refunds-transfers"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "A Worthy Clause — December 12, 2026",
+    "meta_description": "A Worthy Clause race details for Columbia, TN: 5K and 1-mile fun run times, packet pick-up, registration, post-race activities, and mission."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "fff9408394adfb36a6fe079775a02acf",
+    "route": "/private/mockups/fff9408394adfb36a6fe079775a02acf/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/TN/Columbia/AWorthyClause",
+    "source_platform": "runsignup",
+    "source_race_id": "187527",
+    "registration_race_id": "187527",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 87,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance holiday participation format fits the Community template. Core date/location/distance/registration facts are available.",
+    "source_urls": [
+      "https://runsignup.com/Race/TN/Columbia/AWorthyClause",
+      "https://runsignup.com/Race/Info/TN/Columbia/AWorthyClause",
+      "https://runsignup.com/Race/Events/TN/Columbia/AWorthyClause",
+      "https://runsignup.com/Race/Register/?raceId=187527",
+      "https://runsignup.com/Race/Donate/TN/Columbia/AWorthyClause",
+      "https://runsignup.com/Race/187527/RefundPolicy",
+      "https://aworthycause.info/"
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/TN/Columbia/AWorthyClause",
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup race listing",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup race description",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header / JSON-LD",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup race header/place section",
+          "confidence": "high"
+        },
+        {
+          "path": "event.venue",
+          "source": "RunSignup Place section",
+          "confidence": "high"
+        },
+        {
+          "path": "event.address",
+          "source": "RunSignup Place section / JSON-LD",
+          "confidence": "high"
+        },
+        {
+          "path": "event.timezone",
+          "source": "RunSignup event times display CST / JSON-LD -06:00",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.5k",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.one-mile-fun-run",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "RunSignup Register link",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.deadline",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "story",
+          "source": "RunSignup Event Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "RunSignup Events and Event Description sections",
+          "confidence": "high"
+        },
+        {
+          "path": "travel.items.packet-pickup",
+          "source": "RunSignup Event Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "charity",
+          "source": "RunSignup race listing and linked A Worthy Cause site",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs",
+          "source": "RunSignup race listing",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup Event Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "RunSignup Event Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.post-race",
+          "source": "RunSignup Event Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.refunds-transfers",
+          "source": "RunSignup Refund Policy page states refunds are not allowed for this race.",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "one-mile-fun-run"
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "travel",
+        "charity",
+        "faqs",
+        "runner_decision_checklist.items.refunds-transfers"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "The official sources did not expose a course map, GPX/elevation profile, dedicated parking instructions, source-backed race-day photography, or a non-conflicting Friday packet-pickup date during this pass.",
+        "The official A Worthy Cause site is a broad organization site and contains navigation/social links, but the RunSignup listing has the race-specific details used for this mockup."
+      ],
+      "summary": "Race basics, events, times, pricing, packet pick-up, post-race activities, refund policy, and mission/community details are sourced from official RunSignup pages and the linked A Worthy Cause site."
+    },
+    "captured_at": "2026-07-15T16:42:00.000Z"
+  },
+  "course": {
+    "suppress_visual": true,
+    "type": "Road/community fun run",
+    "description": "The official race listing confirms a timed 5K and untimed 1-mile fun run/walk at Riverside in Columbia, TN. No source-backed route map or elevation profile was available in this pass.",
+    "map_links": []
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A holiday race morning that moves a mobile mission forward.",
+    "paragraphs": [
+      "A Worthy Clause brings runners and walkers to Riverside in Columbia for a holiday-themed 5K and 1-mile fun run/walk. Christmas attire is encouraged, with the day framed around community connection, movement, music, and mindfulness.",
+      "The race supports A Worthy Cause’s A Worthy Movement initiative — a bus designed to bring nutrition education, movement, and mindfulness directly to communities and youth.",
+      "Food trucks, health vendors, and a DJ are listed after the race, so participants are encouraged to stay after they finish and be with the community."
+    ],
+    "quote": "Your registration makes a real impact— All proceeds go directly toward bringing our mobile mission to life and help reach, teach and inspire.",
+    "quote_byline": "A Worthy Clause race listing",
+    "links": [
+      {
+        "label": "Race info",
+        "url": "https://runsignup.com/Race/Info/TN/Columbia/AWorthyClause"
+      },
+      {
+        "label": "Event info",
+        "url": "https://runsignup.com/Race/Events/TN/Columbia/AWorthyClause"
+      },
+      {
+        "label": "A Worthy Cause",
+        "url": "https://aworthycause.info/"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Saturday, December 12, 2026",
+      "name": "Packet pick-up",
+      "time": "8:00 AM – 8:45 AM CST",
+      "location": "Middle pavilion at Riverside Park",
+      "applies_to_distances": [
+        "5k",
+        "one-mile-fun-run"
+      ]
+    },
+    {
+      "day": "Saturday, December 12, 2026",
+      "name": "A Worthy Clause - 5K",
+      "time": "9:00 AM – 12:00 PM CST",
+      "location": "Riverside in Columbia, TN, 102 Riverside Drive",
+      "applies_to_distances": [
+        "5k"
+      ]
+    },
+    {
+      "day": "Saturday, December 12, 2026",
+      "name": "A Worthy Clause - 1 mile fun run",
+      "time": "9:45 AM – 12:00 PM CST",
+      "location": "Riverside in Columbia, TN, 102 Riverside Drive",
+      "applies_to_distances": [
+        "one-mile-fun-run"
+      ]
+    }
+  ],
+  "travel": {
+    "items": [
+      {
+        "label": "PK",
+        "title": "Packet pick-up",
+        "description": "Race-morning packet pick-up is available from 8 AM to 8:45 AM by the middle pavilion at the park."
+      },
+      {
+        "label": "VND",
+        "title": "Post-race community",
+        "description": "Food trucks, health vendors, and a DJ are listed after the race."
+      },
+      {
+        "label": "SHRT",
+        "title": "Shirt deadline",
+        "description": "Register before November 28 for the listed long sleeve race shirt."
+      }
+    ]
+  },
+  "charity": {
+    "headline": "Supporting A Worthy Movement",
+    "description": "All proceeds are listed as supporting A Worthy Cause’s mobile mission: a bus initiative bringing nutrition education, movement, and mindfulness to communities and youth.",
+    "url": "https://runsignup.com/Race/Donate/TN/Columbia/AWorthyClause",
+    "cta_label": "Donate on RunSignup",
+    "icon": "♡"
+  },
+  "faqs": [
+    {
+      "question": "Where is the race?",
+      "answer": "The race is listed at Riverside in Columbia, TN, 102 Riverside Drive, Columbia, TN 38401."
+    },
+    {
+      "question": "What events are offered?",
+      "answer": "RunSignup lists A Worthy Clause - 5K and A Worthy Clause - 1 mile fun run."
+    },
+    {
+      "question": "When does each event start?",
+      "answer": "The 5K starts at 9:00 AM CST and the 1-mile fun run starts at 9:45 AM CST."
+    },
+    {
+      "question": "Where is packet pick-up?",
+      "answer": "Race-morning packet pick-up is available from 8 AM to 8:45 AM by the middle pavilion."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "Refunds are not allowed for this race. Review the official RunSignup refund policy before registering.",
+      "links": [
+        {
+          "label": "Official refund policy",
+          "url": "https://runsignup.com/Race/187527/RefundPolicy"
+        }
+      ]
+    }
+  ]
+}
