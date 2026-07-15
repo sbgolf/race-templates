@@ -9,6 +9,13 @@
       "secondary": "#C43B2F",
       "accent": "#D89B2A",
       "ink": "#2A1F18"
+    },
+    "hero_image": {
+      "src": "/mockups/fff9408394adfb36a6fe079775a02acf/a-worthy-clause-race-morning.jpg",
+      "alt": "A Worthy Clause runners and walkers gathered in holiday outfits on race morning",
+      "caption": "A Worthy Clause runners and walkers gather for the holiday race morning.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-258/258200/websiteBanner-ebLS9v3L-bQkWS9-huge.jpg",
+      "source_label": "RunSignup race-page banner image"
     }
   },
   "event": {
@@ -87,9 +94,9 @@
       },
       {
         "id": "start-time",
-        "label": "Race starts",
-        "value": "5K 9:00 AM; 1-mile 9:45 AM",
-        "detail": "The 5K event window is 9:00 AM to noon CST. The 1-mile fun run starts at 9:45 AM CST and also lists a noon end time.",
+        "label": "Check your start time",
+        "value": "Review the schedule above",
+        "detail": "Choose your event in the course section, then use the schedule above to confirm your start window and arrive early for packet pick-up.",
         "source_url": "https://runsignup.com/Race/Events/TN/Columbia/AWorthyClause",
         "source_path": "runner_decision_checklist.items.start-time"
       },
@@ -146,7 +153,8 @@
       "https://runsignup.com/Race/Register/?raceId=187527",
       "https://runsignup.com/Race/Donate/TN/Columbia/AWorthyClause",
       "https://runsignup.com/Race/187527/RefundPolicy",
-      "https://aworthycause.info/"
+      "https://aworthycause.info/",
+      "https://aworthycause.info/2026-partners"
     ],
     "provenance": {
       "source_url": "https://runsignup.com/Race/TN/Columbia/AWorthyClause",
@@ -169,6 +177,11 @@
         {
           "path": "event.location",
           "source": "RunSignup race header/place section",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "RunSignup race-page banner image",
           "confidence": "high"
         },
         {
@@ -238,7 +251,7 @@
         },
         {
           "path": "runner_decision_checklist.items.start-time",
-          "source": "RunSignup Events section",
+          "source": "RunSignup Events section; checklist copy intentionally points runners back to the schedule instead of duplicating schedule-owned times.",
           "confidence": "high"
         },
         {
@@ -254,6 +267,11 @@
         {
           "path": "runner_decision_checklist.items.refunds-transfers",
           "source": "RunSignup Refund Policy page states refunds are not allowed for this race.",
+          "confidence": "high"
+        },
+        {
+          "path": "sponsors",
+          "source": "A Worthy Cause 2026 Partners page lists Bright Apple as a 2026 nonprofit partner for funds raised by A Worthy Clause 5K & Fun Run.",
           "confidence": "high"
         }
       ],
@@ -273,15 +291,17 @@
         "travel",
         "charity",
         "faqs",
-        "runner_decision_checklist.items.refunds-transfers"
+        "runner_decision_checklist.items.refunds-transfers",
+        "sponsors",
+        "identity.hero_image"
       ]
     },
     "uncertainty": {
       "items": [
-        "The official sources did not expose a course map, GPX/elevation profile, dedicated parking instructions, source-backed race-day photography, or a non-conflicting Friday packet-pickup date during this pass.",
+        "The official sources did not expose a course map, GPX/elevation profile, dedicated parking instructions, or a non-conflicting Friday packet-pickup date during this pass.",
         "The official A Worthy Cause site is a broad organization site and contains navigation/social links, but the RunSignup listing has the race-specific details used for this mockup."
       ],
-      "summary": "Race basics, events, times, pricing, packet pick-up, post-race activities, refund policy, and mission/community details are sourced from official RunSignup pages and the linked A Worthy Cause site."
+      "summary": "Race basics, events, times, pricing, packet pick-up, post-race activities, refund policy, mission/community details, and the listed 2026 nonprofit partner are sourced from official RunSignup pages and the linked A Worthy Cause site."
     },
     "captured_at": "2026-07-15T16:42:00.000Z"
   },
@@ -313,6 +333,10 @@
       {
         "label": "A Worthy Cause",
         "url": "https://aworthycause.info/"
+      },
+      {
+        "label": "2026 partners",
+        "url": "https://aworthycause.info/2026-partners"
       }
     ]
   },
@@ -398,6 +422,13 @@
           "url": "https://runsignup.com/Race/187527/RefundPolicy"
         }
       ]
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Bright Apple",
+      "tier": "2026 Nonprofit Partner",
+      "url": "https://aworthycause.info/2026-partners"
     }
   ]
 }

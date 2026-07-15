@@ -25,6 +25,7 @@ Build reusable, schema-driven template capability. Customer repos should stay th
 - No customer-specific forks or hardcoded customer logic.
 - Keep template archetypes parallel; do not force one archetype's visual system into another.
 - Optional fields must hide gracefully when blank. No stray `TBD`, placeholder boxes, or awkward gaps unless intentionally configured.
+- Private mockup hero visuals must prefer official race/source photos before placeholders. Inspect source pages in a browser (including RunSignup banner/carousel/background-image assets) and use a source-backed `identity.hero_image` whenever a usable race photo exists; only fall back to illustrated/generic placeholders after that visual-source check fails or is blocked and the blocker is recorded.
 - Every full-width section/wrapper must declare an explicit background.
 - Meet the accessibility floor: WCAG 2.1 AA, labels, focus states, contrast, keyboard behavior, and mobile tap targets.
 - Public demos/mockups use fictional/generic examples unless Steve approves real race/customer names or assets.
