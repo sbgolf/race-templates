@@ -4,6 +4,7 @@ const { race } = Astro.props;
 const registerButtonAttrs = registerClickAttributes(race, 'nav-button');
 const registerUrl = race.registration?.url || '#entry';
 const registerLabel = race.registration?.cta_label || 'Register';
+const brandName = race.identity?.short_name || race.identity?.name || 'Community Race';
 const hasSchedule = (race.schedule || []).length > 0;
 const hasStory = Boolean(race.story || race.private_mockup?.generated);
 const hasGallery = Boolean((race.private_mockup?.assets || []).length || (race.gallery || race.gallery_images || []).length);
@@ -16,7 +17,7 @@ const hasVolunteer = Boolean(race.volunteer?.description || race.volunteer?.sign
       <circle cx="20" cy="20" r="18" fill="#C6643D"/>
       <path d="M12 20 L17 25 L28 14" stroke="#FAF6EE" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </svg>
-    <span>{race.identity?.name || 'Community Race'}<small>{race.identity?.tagline || 'Race weekend'}</small></span>
+    <span>{brandName}<small>{race.identity?.tagline || 'Race weekend'}</small></span>
   </a>
   <div class="nav-links" id="navLinks">
     <a href="#course">Course</a>

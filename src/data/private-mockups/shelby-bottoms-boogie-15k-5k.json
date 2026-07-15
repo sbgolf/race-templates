@@ -16,7 +16,8 @@
       "secondary": "#F2D84B",
       "accent": "#38B449",
       "ink": "#172033"
-    }
+    },
+    "short_name": "Shelby Bottoms Boogie"
   },
   "event": {
     "date": "2026-10-17",
@@ -120,9 +121,9 @@
       },
       {
         "id": "price",
-        "label": "Race-day registration",
-        "value": "RunSignup only",
-        "detail": "Race-day registration is available using RunSignup only; no cash transactions are listed onsite on race day.",
+        "label": "Price increase",
+        "value": "After July 17 at 11:59 PM",
+        "detail": "Both events are currently listed at $27.50 including the $2.50 fee, with the next price increase after July 17, 2026 at 11:59 PM CDT.",
         "source_url": "https://runsignup.com/Race/TN/Nashville/ShelbyBottomsBoogie15KRunand5KRunWalk",
         "source_path": "runner_decision_checklist.items.price"
       },
@@ -271,6 +272,11 @@
           "path": "runner_decision_checklist.items.course",
           "source": "RunSignup Information section",
           "confidence": "high"
+        },
+        {
+          "path": "faqs.race-day-registration",
+          "source": "RunSignup Information section",
+          "confidence": "high"
         }
       ],
       "source_confirmed_distance_ids": [
@@ -319,8 +325,7 @@
     "title": "A Nashville Striders fall race morning in Shelby Park.",
     "paragraphs": [
       "Shelby Bottoms Boogie brings runners and walkers to Shelby Park for Nashville Striders\u2019 26th annual fall running event. The 15K and 5K share a start/finish and use certified routes through Shelby Park and the Shelby Bottoms Greenway.",
-      "The event is built for a straightforward race morning: ample free parking, race-morning packet pickup, RunSignup-based race-day registration, and post-race snacks at the finish.",
-      "Because Nashville Striders hosts many races in the area, this mockup is positioned as a polished example of how StartLine could present recurring club events with clean runner-first details."
+      "The event is built for a straightforward race morning: ample free parking, race-morning packet pickup, RunSignup-based race-day registration, and post-race snacks at the finish."
     ],
     "quote": "Both the 15K and 5K feature certified courses in Shelby Park and along the Shelby Bottoms Greenway with a common Start / Finish.",
     "quote_byline": "RunSignup race listing",
@@ -379,8 +384,8 @@
       },
       {
         "label": "SHRT",
-        "title": "Shirt deadline",
-        "description": "Register before October 2, 2026 for a guaranteed shirt."
+        "title": "Price and shirt deadlines",
+        "description": "The listed price increases after July 17, 2026 at 11:59 PM CDT; register before October 2, 2026 for a guaranteed shirt."
       }
     ]
   },
@@ -404,6 +409,10 @@
     {
       "question": "Are pets allowed?",
       "answer": "No. The public listing states no dogs and no pets allowed."
+    },
+    {
+      "question": "How does race-day registration work?",
+      "answer": "Race-day registration is listed as available through RunSignup only, with no cash transactions onsite on race day."
     }
   ]
 }

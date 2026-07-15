@@ -6,6 +6,7 @@ const year = race.event?.date ? new Date(`${race.event.date}T12:00:00`).getFullY
 const registerUrl = race.registration?.url || '#entry';
 const registerLabel = race.registration?.cta_label || 'Register';
 const registerAttrs = registerClickAttributes(race, 'footer-official');
+const brandName = race.identity?.short_name || race.identity?.name;
 const contactUrl = race.contacts?.race_contact_url;
 const contactLabel = race.contacts?.race_contact_label || 'Contact the Race';
 const hasCourse = (race.distances || []).length > 0;
@@ -38,7 +39,7 @@ const aboutLinks = [
           <circle cx="20" cy="20" r="18" fill="#C6643D"/>
           <path d="M12 20 L17 25 L28 14" stroke="#FAF6EE" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
-        <span>{race.identity?.name}<small>{race.identity?.tagline}</small></span>
+        <span>{brandName}<small>{race.identity?.tagline}</small></span>
       </div>
       <p>{race.seo?.meta_description || race.identity?.tagline}</p>
       <SocialLinksRow race={race} variant="community" />
