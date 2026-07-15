@@ -3,7 +3,7 @@
     "template": "community",
     "name": "Arrowwood Adventure 5K",
     "slug": "arrowwood-adventure-5k",
-    "tagline": "Arrowwood Adventure 5K is a community race in Wears Valley, TN.",
+    "tagline": "A hilly Camp Arrowwood race morning on gravel campus roads in Wears Valley.",
     "colors": {
       "primary": "#294735",
       "secondary": "#D89B2A",
@@ -14,72 +14,107 @@
   "event": {
     "date": "2026-10-17",
     "location": "Wears Valley, TN",
-    "timezone": "America/Chicago"
+    "venue": "Camp Arrowwood",
+    "address": "100 One Fine Place, Wears Valley, TN 37862",
+    "timezone": "America/New_York"
   },
   "distances": [
     {
-      "id": "5k",
-      "name": "5K",
+      "id": "5k-run",
+      "name": "5K Run",
       "distance": "5K",
       "featured": true,
+      "start_time": "9:00 AM EDT",
+      "end_time": "11:30 AM EDT",
+      "price": "$32.80",
+      "profile": "2 loops on camp access roads; rolling gravel with less than 10% grass",
+      "highlights": [
+        "Nearly all gravel campus roads with some grass",
+        "Hilly, rolling terrain that stays on Camp Arrowwood property",
+        "Awards for top male/female and age-group winners"
+      ],
       "provenance": {
         "source": "RunSignup race listing",
         "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
-        "confidence": "medium",
-        "verified": true
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup Events section lists 5K Run price, time window, and the race description lists the 2-loop gravel/grass campus course."
       }
     },
     {
-      "id": "3-miles",
-      "name": "3 Miles",
-      "distance": "3 Miles",
+      "id": "kids-1-mile",
+      "name": "Kids 1-mile Run",
+      "distance": "1 Mile",
+      "start_time": "8:30 AM EDT",
+      "end_time": "9:00 AM EDT",
+      "price": "$22.20",
+      "age_range": "10 and under",
+      "profile": "Shorter campus option for runners 10 and under",
+      "highlights": [
+        "Short less-than-1-mile option for runners 10 and under",
+        "Starts before the 5K Run",
+        "Same day-of packet pickup at the shelter"
+      ],
       "provenance": {
         "source": "RunSignup race listing",
         "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
-        "confidence": "medium",
-        "verified": true
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup Events section lists Kids 1-mile Run price and time window; description says it is a short less-than-1-mile option for runners 10 and under."
       }
     }
   ],
   "registration": {
-    "url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
+    "url": "https://runsignup.com/Race/Register/?raceId=156145",
     "platform": "runsignup",
-    "cta_label": "Register on RunSignup"
+    "cta_label": "Register on RunSignup",
+    "intro": "Register through the official RunSignup sign-up page. Listed prices include RunSignup fees; registration is shown as open through October 17, 2026 at 11:59 PM EDT.",
+    "deadline": "October 17, 2026 at 11:59 PM EDT",
+    "price_note": "RunSignup lists 5K Run at $32.80 including fee and Kids 1-mile Run at $22.20 including fee."
   },
   "runner_decision_checklist": {
-    "headline": "Key race details before you register",
-    "intro": "Review the essentials before registering.",
+    "kicker": "Race day notes",
+    "headline": "What to know before you head to Camp Arrowwood.",
+    "intro": "A runner checklist for pickup, parking, terrain, and registration.",
+    "footer_cta": false,
     "items": [
       {
-        "id": "date",
-        "label": "Race date",
-        "value": "2026-10-17",
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Day of event only",
+        "detail": "Packet pickup is listed as day-of only and ends 20 minutes before each race start; pickup is at the shelter near the start/finish and restrooms.",
         "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
-        "source_path": "event.date"
+        "source_path": "runner_decision_checklist.items.packet-pickup"
       },
       {
-        "id": "distance",
-        "label": "Distances",
-        "value": "5K, 3 Miles",
+        "id": "parking",
+        "label": "Parking",
+        "value": "First come, first served",
+        "detail": "Use available lots at the tennis courts, main office, and surrounding areas; attendants will direct traffic to available parking.",
         "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
-        "applies_to_distance_ids": [
-          "5k",
-          "3-miles"
-        ],
-        "source_path": "distances"
+        "source_path": "runner_decision_checklist.items.parking"
       },
       {
-        "id": "location",
-        "label": "Location",
-        "value": "Wears Valley, TN",
+        "id": "terrain",
+        "label": "Terrain",
+        "value": "Hilly gravel campus roads",
+        "detail": "The 5K stays on Camp Arrowwood property and uses rolling access roads with about 90% gravel and less than 10% grass.",
         "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
-        "source_path": "event.location"
+        "source_path": "runner_decision_checklist.items.terrain"
+      },
+      {
+        "id": "registration-deadline",
+        "label": "Registration",
+        "value": "Open through race day on RunSignup",
+        "detail": "RunSignup lists registration ending October 17, 2026 at 11:59 PM EDT. Check the official page before registering.",
+        "source_url": "https://runsignup.com/Race/TN/WearsValley/WayoftheArrow5K",
+        "source_path": "runner_decision_checklist.items.registration-deadline"
       }
     ]
   },
   "seo": {
-    "meta_title": "Arrowwood Adventure 5K \u2014 2026-10-17",
-    "meta_description": "Arrowwood Adventure 5K race details for Wears Valley, TN, with a clear path to registration."
+    "meta_title": "Arrowwood Adventure 5K — October 17, 2026",
+    "meta_description": "Arrowwood Adventure 5K details for Camp Arrowwood in Wears Valley, including race times, packet pickup, parking, pricing, course terrain, awards, and registration."
   },
   "analytics": {
     "register_click_event_name": "register_click"
@@ -105,64 +140,312 @@
       "items": [
         {
           "path": "identity.name",
-          "source": "prospect discovery output",
+          "source": "RunSignup race listing",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup race description",
           "confidence": "high"
         },
         {
           "path": "event.date",
-          "source": "prospect discovery output",
+          "source": "RunSignup race header",
           "confidence": "high"
         },
         {
           "path": "event.location",
-          "source": "prospect discovery output",
+          "source": "RunSignup race header/place section",
           "confidence": "high"
         },
         {
-          "path": "distances",
-          "source": "prospect discovery output",
-          "confidence": "medium"
+          "path": "event.venue",
+          "source": "RunSignup Place section",
+          "confidence": "high"
+        },
+        {
+          "path": "event.address",
+          "source": "RunSignup Place section",
+          "confidence": "high"
+        },
+        {
+          "path": "event.timezone",
+          "source": "RunSignup event times display EDT",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.5k-run",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.kids-1-mile",
+          "source": "RunSignup Events section",
+          "confidence": "high"
         },
         {
           "path": "registration.url",
-          "source": "prospect discovery output",
+          "source": "RunSignup Sign Up link",
           "confidence": "high"
         },
         {
-          "path": "runner_decision_checklist.items.date",
-          "source": "prospect discovery output",
+          "path": "registration.deadline",
+          "source": "RunSignup Events section",
           "confidence": "high"
         },
         {
-          "path": "runner_decision_checklist.items.distance",
-          "source": "prospect discovery output",
-          "confidence": "medium"
+          "path": "course.description",
+          "source": "RunSignup Description/Course Description sections",
+          "confidence": "high"
         },
         {
-          "path": "runner_decision_checklist.items.location",
-          "source": "prospect discovery output",
+          "path": "story",
+          "source": "RunSignup Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "RunSignup Events and Description sections",
+          "confidence": "high"
+        },
+        {
+          "path": "travel.items.packet-pickup",
+          "source": "RunSignup Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "travel.items.parking",
+          "source": "RunSignup Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "charity",
+          "source": "RunSignup Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs",
+          "source": "RunSignup Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup Description/Events sections",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.parking",
+          "source": "RunSignup Description/Events sections",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.terrain",
+          "source": "RunSignup Description/Events sections",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.registration-deadline",
+          "source": "RunSignup Description/Events sections",
+          "confidence": "high"
+        },
+        {
+          "path": "course.image",
+          "source": "RunSignup embedded 5K Course Map image",
+          "confidence": "high"
+        },
+        {
+          "path": "story.links.knoxville-endurance",
+          "source": "RunSignup Need help preparing section",
           "confidence": "high"
         }
       ],
       "source_confirmed_distance_ids": [
-        "5k",
-        "3-miles"
+        "5k-run",
+        "kids-1-mile"
       ],
       "source_confirmed_sections": [
         "identity",
         "event",
         "distances",
         "registration",
-        "runner_decision_checklist"
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "travel",
+        "charity",
+        "faqs",
+        "course.image",
+        "story.links.knoxville-endurance"
       ]
     },
     "uncertainty": {
       "items": [
-        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
-        "Source facts must be rechecked before a customer-sendable mockup is approved."
+        "The source provides an official course/campus map image and course description; no separate GPX/elevation data was available from the source page.",
+        "Refund policy is linked to the official RunSignup refund page rather than summarized as a legal policy."
       ],
-      "summary": "Only the race name, date, location, distances, and RunSignup registration path have been confirmed for this first-pass mockup."
+      "summary": "Race basics, events, times, pricing, packet pickup, parking, course terrain, awards, and mission/community details are sourced from the official RunSignup listing."
     },
     "captured_at": "2026-07-14T23:17:00.000Z"
-  }
+  },
+  "course": {
+    "suppress_visual": false,
+    "type": "Camp roads and grass",
+    "surface": "90% gravel / less than 10% grass",
+    "description": "The 5K uses two loops on Camp Arrowwood access roads and stays on the property, with rolling/hilly terrain and a small amount of grass.",
+    "map_links": [
+      {
+        "label": "Official RunSignup course and campus map",
+        "url": "https://runsignup.com/Race/Info/TN/WearsValley/WayoftheArrow5K"
+      }
+    ],
+    "image": {
+      "src": "https://d2mkojm4rk40ta.cloudfront.net/us-east-1-src/prod/clientUploads/2024-10/04/1/156145/dee06e4f-fbe8-4107-9736-5bb932f1cfa9-bNafjY.png",
+      "alt": "Official Arrowwood Adventure 5K course map showing the loop route around Camp Arrowwood",
+      "label": "5K course map from RunSignup",
+      "source_url": "https://runsignup.com/Race/Info/TN/WearsValley/WayoftheArrow5K"
+    }
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A fall race morning across Camp Arrowwood.",
+    "paragraphs": [
+      "Camp Arrowwood opens its Wears Valley campus for a fall race morning in Sevier County, with the 5K Run and Kids 1-mile Run centered on the camp property.",
+      "The 5K course is listed as two loops on camp access roads, staying on property with rolling/hilly terrain, nearly all gravel roads, and a small amount of grass.",
+      "After the race, RunSignup describes post-race festivities with farm animals, music, outdoor camp games, s’mores around the campfire, the campus store, and raffle giveaways."
+    ],
+    "quote": "All proceeds for this event will directly benefit Camp Arrowwood missions.",
+    "quote_byline": "RunSignup race listing",
+    "links": [
+      {
+        "label": "Race info",
+        "url": "https://runsignup.com/Race/Info/TN/WearsValley/WayoftheArrow5K"
+      },
+      {
+        "label": "Event info",
+        "url": "https://runsignup.com/Race/Events/TN/WearsValley/WayoftheArrow5K"
+      },
+      {
+        "label": "Knoxville Endurance training resource",
+        "url": "http://www.knoxvilleendurance.com/"
+      },
+      {
+        "label": "Contact the Race",
+        "url": "https://runsignup.com/Race/Info/TN/WearsValley/WayoftheArrow5K#contactFormSection"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Saturday, October 17, 2026",
+      "name": "Kids 1-mile Run",
+      "time": "8:30 AM EDT – 9:00 AM EDT",
+      "location": "Camp Arrowwood, 100 One Fine Place, Wears Valley, TN 37862",
+      "applies_to_distances": [
+        "kids-1-mile"
+      ]
+    },
+    {
+      "day": "Saturday, October 17, 2026",
+      "name": "5K Run",
+      "time": "9:00 AM EDT – 11:30 AM EDT",
+      "location": "Camp Arrowwood, 100 One Fine Place, Wears Valley, TN 37862",
+      "applies_to_distances": [
+        "5k-run"
+      ]
+    },
+    {
+      "day": "Saturday, October 17, 2026",
+      "name": "Packet pickup",
+      "time": "Day of event only; ends 20 minutes before race start",
+      "location": "Shelter near the start/finish and restrooms",
+      "applies_to_distances": [
+        "5k-run",
+        "kids-1-mile"
+      ]
+    },
+    {
+      "day": "Saturday, October 17, 2026",
+      "name": "Registration deadline listed on RunSignup",
+      "time": "11:59 PM EDT",
+      "location": "Official RunSignup registration page",
+      "applies_to_distances": [
+        "5k-run",
+        "kids-1-mile"
+      ]
+    },
+    {
+      "day": "Saturday, October 17, 2026",
+      "name": "Awards ceremony",
+      "time": "1 hour after the 5K start",
+      "location": "Camp Arrowwood",
+      "applies_to_distances": [
+        "5k-run"
+      ]
+    }
+  ],
+  "travel": {
+    "items": [
+      {
+        "label": "PK",
+        "title": "Packet pickup",
+        "description": "Day-of packet pickup is at the shelter near start/finish and restrooms and ends 20 minutes before each race start."
+      },
+      {
+        "label": "PRK",
+        "title": "Parking",
+        "description": "Parking is first come, first served in available lots at the tennis courts, main office, and surrounding areas; attendants direct traffic."
+      },
+      {
+        "label": "CRS",
+        "title": "Course surface",
+        "description": "Expect rolling/hilly campus terrain, mostly gravel access roads with a small amount of grass."
+      }
+    ]
+  },
+  "charity": {
+    "headline": "Supporting Camp Arrowwood missions",
+    "description": "RunSignup states that all proceeds directly benefit Camp Arrowwood missions. Donations are available through the official race page.",
+    "url": "https://runsignup.com/Race/Donate/TN/WearsValley/WayoftheArrow5K",
+    "cta_label": "Donate on RunSignup",
+    "icon": "♡"
+  },
+  "faqs": [
+    {
+      "question": "Where is the race?",
+      "answer": "The race is at Camp Arrowwood, 100 One Fine Place, Wears Valley, TN 37862."
+    },
+    {
+      "question": "What is packet pickup?",
+      "answer": "Packet pickup is day-of only at the shelter near the start/finish and restrooms, ending 20 minutes before the race is set to start."
+    },
+    {
+      "question": "What is the course like?",
+      "answer": "The 5K stays on Camp Arrowwood property and uses two loops on access roads with rolling/hilly terrain, about 90% gravel and less than 10% grass."
+    },
+    {
+      "question": "Are there awards?",
+      "answer": "RunSignup lists awards for the top male and female 5K finishers plus the top two runners in each age category: 14 & Under, 15–25, 25–44, and 45+."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "RunSignup has a dedicated refund policy page for this race; check the official page for current policy details.",
+      "links": [
+        {
+          "label": "Official refund policy",
+          "url": "https://runsignup.com/Race/156145/RefundPolicy"
+        }
+      ]
+    },
+    {
+      "question": "Is there a training resource?",
+      "answer": "The RunSignup page links to Knoxville Endurance as a training resource for runners preparing for this race.",
+      "links": [
+        {
+          "label": "Knoxville Endurance",
+          "url": "http://www.knoxvilleendurance.com/"
+        }
+      ]
+    }
+  ]
 }
