@@ -14,8 +14,8 @@
       "src": "/mockups/d3db311ed41c52465160df19fc601590/arrowwood-hero-2025-1.jpg",
       "alt": "Arrowwood Adventure 5K runners starting under the race arch on a gravel road at Camp Arrowwood",
       "caption": "Runners start the Arrowwood Adventure 5K at Camp Arrowwood.",
-      "source": "RunSignup race-page carousel image",
-      "source_url": "https://d2mkojm4rk40ta.cloudfront.net/us-east-1-src/prod/clientUploads/2025-06/17/1/156145/031329a1-7fd7-49e7-bddd-fd3b01f7e36f-bOuvG3.jpg"
+      "source": "https://d2mkojm4rk40ta.cloudfront.net/us-east-1-src/prod/clientUploads/2025-06/17/1/156145/031329a1-7fd7-49e7-bddd-fd3b01f7e36f-bOuvG3.jpg",
+      "source_label": "RunSignup race-page carousel image"
     }
   },
   "event": {
