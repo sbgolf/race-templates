@@ -1,0 +1,440 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "5th Annual 7th President 7K Run",
+    "slug": "5th-annual-7th-president-7k-run",
+    "tagline": "A historic cross-country 7K and 2-mile walk across the grounds of Andrew Jackson’s Hermitage.",
+    "short_name": "7th President 7K",
+    "hero_image": {
+      "src": "/mockups/75c1d54190478d8714c38076a43985c7/7th-president-7k-race-morning.jpg",
+      "alt": "Race morning course flags across the grounds at the 7th President 7K",
+      "caption": "Race morning at the 7th President 7K on the grounds of Andrew Jackson’s Hermitage.",
+      "source": "https://thehermitage.com/assets/2967/hermitage7k2024_.jpg",
+      "source_label": "Andrew Jackson’s Hermitage 7th President 7K highlights image"
+    },
+    "colors": {
+      "primary": "#234C36",
+      "secondary": "#7B2D1F",
+      "accent": "#D6A843",
+      "ink": "#251B14"
+    }
+  },
+  "event": {
+    "date": "2026-10-17",
+    "location": "Nashville, TN",
+    "timezone": "America/Chicago",
+    "venue": "Andrew Jackson’s Hermitage",
+    "address": "4580 Rachel’s Lane, Nashville, TN 37076"
+  },
+  "distances": [
+    {
+      "id": "7k-run",
+      "name": "5th Annual 7th President 7K Run",
+      "distance": "7K",
+      "featured": true,
+      "start_time": "8:00 AM CDT",
+      "end_time": "11:00 AM CDT",
+      "price": "$43.40 incl. $3.40 fee",
+      "profile": "Cross-country 7K across paved paths, open fields, grass, a small trail section, and paved road on the Hermitage grounds.",
+      "highlights": [
+        "Cross-country course through historic Hermitage grounds",
+        "Rolling finish clock; not chip-timed",
+        "Custom medal and Hermitage Grounds Pass for the first 300 registrants"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/Nashville/AndrewJackson7thPresident7KRun",
+      "provenance": {
+        "source": "RunSignup Events and Info sections; Hermitage official event page",
+        "source_url": "https://runsignup.com/Race/Events/TN/Nashville/AndrewJackson7thPresident7KRun",
+        "confidence": "high",
+        "verified": true,
+        "method": "Source pages list the 7K event, start/end time, current fee-inclusive price, course type, timing note, medal, and Grounds Pass details."
+      }
+    },
+    {
+      "id": "2-mile-walk",
+      "name": "5th Annual 7th President 2 Mile Walk",
+      "distance": "2 Mile",
+      "start_time": "8:00 AM CDT",
+      "end_time": "11:00 AM CDT",
+      "price": "$43.40 incl. $3.40 fee",
+      "profile": "A relaxed 2-mile walking option for participants who want to experience the grounds at an easier pace.",
+      "highlights": [
+        "2-mile walking course",
+        "Uses the same race-morning start window",
+        "Access to the historic Hermitage setting"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/Nashville/AndrewJackson7thPresident7KRun",
+      "provenance": {
+        "source": "RunSignup Events and Info sections; Hermitage official event page",
+        "source_url": "https://runsignup.com/Race/Events/TN/Nashville/AndrewJackson7thPresident7KRun",
+        "confidence": "high",
+        "verified": true,
+        "method": "Source pages list the 2 Mile Walk event, time window, current fee-inclusive price, and description of the walking option."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=193775",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register through the official RunSignup sign-up page for either the 7K run or the 2-mile walk.",
+    "deadline": "Registration ends October 17, 2026 at 8:00 AM CDT",
+    "price_note": "Both listed events currently show $43.40 including the $3.40 RunSignup fee. The Hermitage event page also lists base registration as $40."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before you head to The Hermitage.",
+    "intro": "A quick runner checklist for packet pickup, course rules, included items, and race-day logistics.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "packet-pickup",
+        "label": "Packet pick-up",
+        "value": "Friday or race morning",
+        "detail": "Packet pick-up is listed for Friday, October 16 from 10:30 AM–6:30 PM at Fleet Feet Mt. Juliet, or race morning from 6:45–7:45 AM at Andrew Jackson’s Hermitage.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Nashville/AndrewJackson7thPresident7KRun",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
+      },
+      {
+        "id": "course",
+        "label": "Course surface",
+        "value": "Fields, grass, trail, paved road",
+        "detail": "The course is described as cross-country with beautiful fields, grass, a small portion of trail, and paved road.",
+        "source_url": "https://thehermitage.com/event-calendar/event/4079893",
+        "source_path": "runner_decision_checklist.items.course"
+      },
+      {
+        "id": "time-limit",
+        "label": "Timing",
+        "value": "Rolling clock; not chip-timed",
+        "detail": "The official pages state the race is not chip-timed and will use a rolling time clock.",
+        "source_url": "https://thehermitage.com/event-calendar/event/4079893",
+        "source_path": "runner_decision_checklist.items.time-limit"
+      },
+      {
+        "id": "swag",
+        "label": "Included items",
+        "value": "Medal + Grounds Pass",
+        "detail": "The first 300 registrants receive a custom medal and a Grounds Pass to The Hermitage, valid through October 17, 2027.",
+        "source_url": "https://thehermitage.com/event-calendar/event/4079893",
+        "source_path": "runner_decision_checklist.items.swag"
+      },
+      {
+        "id": "price",
+        "label": "Shirt deadline",
+        "value": "Register by Sept. 14, 2026",
+        "detail": "Register by September 14, 2026 to receive the listed commemorative race T-shirt.",
+        "source_url": "https://thehermitage.com/event-calendar/event/4079893",
+        "source_path": "runner_decision_checklist.items.price"
+      },
+      {
+        "id": "parking",
+        "label": "Course rules",
+        "value": "No dogs on course",
+        "detail": "Strollers are not recommended and should start at the back if used. Dogs are not allowed on the course during the race, though leashed dogs are welcome on the included Grounds Pass visit after the event.",
+        "source_url": "https://thehermitage.com/event-calendar/event/4079893",
+        "source_path": "runner_decision_checklist.items.parking"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "5th Annual 7th President 7K Run — October 17, 2026",
+    "meta_description": "7th President 7K race details for Nashville, TN: 7K run, 2-mile walk, Hermitage location, 8:00 AM start, packet pickup, registration, included medal and Grounds Pass."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "75c1d54190478d8714c38076a43985c7",
+    "route": "/private/mockups/75c1d54190478d8714c38076a43985c7/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/TN/Nashville/AndrewJackson7thPresident7KRun",
+    "source_platform": "runsignup",
+    "source_race_id": "193775",
+    "registration_race_id": "193775",
+    "generated_from": "marketing-site mockup prospect pipeline after Steve approval",
+    "owner_approved_for_generation": true,
+    "prospect_score": 47,
+    "qualification_reason": "Steve approved creating the next queued mockup. The race is local to Nashville, has a clear official RunSignup listing plus Hermitage event page, direct organization contact email, public source images, and a community/historic venue story suitable for the Community template.",
+    "source_urls": [
+      "https://runsignup.com/Race/TN/Nashville/AndrewJackson7thPresident7KRun",
+      "https://runsignup.com/Race/Info/TN/Nashville/AndrewJackson7thPresident7KRun",
+      "https://runsignup.com/Race/Events/TN/Nashville/AndrewJackson7thPresident7KRun",
+      "https://runsignup.com/Race/Register/?raceId=193775",
+      "https://runsignup.com/Race/193775/RefundPolicy",
+      "https://thehermitage.com/event-calendar/event/4079893",
+      "https://thehermitage.com/blogs/posts/highlights-from-this-years-7th-president-7k"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "info@thehermitage.com",
+        "context": "official Hermitage event contact",
+        "source_url": "https://thehermitage.com/event-calendar/event/4079893",
+        "status": "public_org_contact"
+      },
+      {
+        "type": "form",
+        "url": "https://runsignup.com/Race/Info/TN/Nashville/AndrewJackson7thPresident7KRun#contactFormSection",
+        "context": "RunSignup Race Contact Info form",
+        "status": "contact_form_only"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/TN/Nashville/AndrewJackson7thPresident7KRun",
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup race listing",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup and Hermitage event description",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "Andrew Jackson’s Hermitage 2024 7th President 7K highlights image",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header / Hermitage event page",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup Place section / Hermitage event page",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.7k-run",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.2-mile-walk",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "registration",
+          "source": "RunSignup Events/Register pages",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "source": "RunSignup Info page and Hermitage event page",
+          "confidence": "high"
+        },
+        {
+          "path": "refund_policy",
+          "source": "RunSignup Refund Policy page",
+          "confidence": "high"
+        },
+        {
+          "path": "contact_sources",
+          "source": "Hermitage event page and RunSignup contact form section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup Info page and Hermitage event page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "RunSignup Info page and Hermitage event page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.time-limit",
+          "source": "RunSignup Info page and Hermitage event page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "RunSignup Info page and Hermitage event page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "RunSignup Info page and Hermitage event page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.parking",
+          "source": "RunSignup Info page and Hermitage event page",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_distance_ids": [
+        "7k-run",
+        "2-mile-walk"
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "travel",
+        "charity",
+        "faqs",
+        "sponsors",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "summary": "Core event facts, registration, packet pickup, course character, race rules, included items, sponsors, beneficiary, refund policy, and contact methods are source-backed. No GPX/elevation/course map was found in this pass, so map/elevation visuals are suppressed.",
+      "items": [
+        "No official GPX/elevation/course map was found during this pass.",
+        "Contact email is an official organization-level Hermitage email, not a named race-director email."
+      ]
+    },
+    "captured_at": "2026-07-15T00:00:00.000Z"
+  },
+  "course": {
+    "suppress_visual": true,
+    "type": "Cross-country historic grounds course",
+    "description": "The 7K route is described as crossing paved paths, open fields, scenic landscapes, grass, a small trail portion, and paved road across Andrew Jackson’s Hermitage. Official source pages did not expose a GPX file, map, or elevation profile during this pass.",
+    "highlights": [
+      "Tulip Grove Mansion",
+      "Hermitage Church",
+      "The Hermitage Mansion finish setting"
+    ],
+    "map_links": []
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "Run through a National Historic Landmark before the grounds open for the day.",
+    "paragraphs": [
+      "The 7th President 7K brings runners and walkers onto the grounds of Andrew Jackson’s Hermitage for a cross-country race morning across paved paths, open fields, and historic landmarks.",
+      "The route is promoted around signature Hermitage places — Tulip Grove Mansion, Hermitage Church, and the Hermitage Mansion finish setting — giving participants a race-day view of areas visitors do not always experience the same way.",
+      "All proceeds benefit the Andrew Jackson Foundation’s work to preserve The Hermitage, create educational opportunities, and inspire informed citizenship."
+    ],
+    "quote": "More than 300 runners (and walkers) registered for the race—spanning 19 states and two foreign countries!",
+    "quote_byline": "Andrew Jackson’s Hermitage 2024 race highlights",
+    "links": [
+      {
+        "label": "Official event details",
+        "url": "https://thehermitage.com/event-calendar/event/4079893"
+      },
+      {
+        "label": "RunSignup listing",
+        "url": "https://runsignup.com/Race/TN/Nashville/AndrewJackson7thPresident7KRun"
+      },
+      {
+        "label": "2024 race highlights",
+        "url": "https://thehermitage.com/blogs/posts/highlights-from-this-years-7th-president-7k"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Friday, October 16, 2026",
+      "name": "Packet pick-up",
+      "time": "10:30 AM – 6:30 PM CDT",
+      "location": "Fleet Feet Mt. Juliet, 630 S. Mt. Juliet Road, Suite 320",
+      "applies_to_distances": [
+        "7k-run",
+        "2-mile-walk"
+      ]
+    },
+    {
+      "day": "Saturday, October 17, 2026",
+      "name": "Race-morning packet pick-up",
+      "time": "6:45 AM – 7:45 AM CDT",
+      "location": "Andrew Jackson’s Hermitage, 4580 Rachel’s Lane",
+      "applies_to_distances": [
+        "7k-run",
+        "2-mile-walk"
+      ]
+    },
+    {
+      "day": "Saturday, October 17, 2026",
+      "name": "7K Run and 2 Mile Walk start",
+      "time": "8:00 AM CDT",
+      "location": "Andrew Jackson’s Hermitage",
+      "applies_to_distances": [
+        "7k-run",
+        "2-mile-walk"
+      ]
+    }
+  ],
+  "travel": {
+    "items": [
+      {
+        "label": "PK",
+        "title": "Packet pick-up options",
+        "description": "Pick up packets Friday at Fleet Feet Mt. Juliet or race morning at The Hermitage before 7:45 AM."
+      },
+      {
+        "label": "PARK",
+        "title": "Parking and access",
+        "description": "Enter through the Old Hickory Blvd entrance. Volunteers and signs are listed to direct participants to designated parking areas."
+      },
+      {
+        "label": "PASS",
+        "title": "Included Grounds Pass",
+        "description": "The first 300 registrants receive a Grounds Pass to The Hermitage, valid through October 17, 2027."
+      }
+    ]
+  },
+  "charity": {
+    "headline": "Supporting preservation and education at The Hermitage",
+    "description": "All proceeds benefit the Andrew Jackson Foundation and its mission to preserve The Hermitage, create educational opportunities, and inspire informed citizenship.",
+    "url": "https://thehermitage.com/",
+    "cta_label": "Visit The Hermitage",
+    "icon": "✦"
+  },
+  "faqs": [
+    {
+      "question": "What events are offered?",
+      "answer": "RunSignup lists the 5th Annual 7th President 7K Run and the 5th Annual 7th President 2 Mile Walk."
+    },
+    {
+      "question": "Where is the race?",
+      "answer": "The race is at Andrew Jackson’s Hermitage, 4580 Rachel’s Lane, Nashville, TN 37076."
+    },
+    {
+      "question": "When does the race start?",
+      "answer": "Both listed events start at 8:00 AM CDT on Saturday, October 17, 2026."
+    },
+    {
+      "question": "Is the race chip-timed?",
+      "answer": "No. The official pages say the event is not chip-timed and will use a rolling time clock."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "The RunSignup refund policy page states refunds are not allowed for this race.",
+      "links": [
+        {
+          "label": "Refund policy",
+          "url": "https://runsignup.com/Race/193775/RefundPolicy"
+        }
+      ]
+    },
+    {
+      "question": "Are dogs or strollers allowed?",
+      "answer": "Dogs are not allowed on the course during the race. Strollers are not recommended because the course includes unpaved areas; if used, the organizer asks participants to start at the back."
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Tennessee Heat",
+      "tier": "Sponsor",
+      "url": "https://runsignup.com/Race/TN/Nashville/AndrewJackson7thPresident7KRun"
+    },
+    {
+      "name": "Fleet Feet Nashville",
+      "tier": "Sponsor",
+      "url": "https://www.fleetfeet.com/s/nashville"
+    }
+  ]
+}
