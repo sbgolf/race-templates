@@ -54,6 +54,8 @@ Public preview routes must not render any of those private markers.
 
 Do not promise guaranteed traffic, rankings, registrations, revenue, signup growth, or conversion lift. Use accurate language such as registration path, registration click-through, registration intent, and measurement-ready.
 
+Runner-facing mockup copy must never expose provenance/scrape language. Do not render phrases such as “RunSignup lists…”, “the page says…”, “the source says…”, “listed as…”, or similar audit notes in checklist cards, FAQs, registration cards, story copy, trust signals, or CTAs. Keep source URLs and verification notes in config metadata/provenance fields only; visible text should read as polished race guidance, for example “Course maps and final race details are sent before race day.”
+
 See `PRIVATE_MOCKUP_VALUE_ROADMAP.md` for the working roadmap and future enhancements.
 
 ### New archetype acceptance gate

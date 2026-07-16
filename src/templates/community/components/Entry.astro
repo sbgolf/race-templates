@@ -26,7 +26,7 @@ const priceNote = !hasDistancePricing && race.registration?.price_note ? race.re
           {distance.highlights?.length ? <ul>
             {distance.highlights.map((item) => <li>{item}</li>)}
           </ul> : null}
-          <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...attrs}>{race.registration?.cta_label || 'Register'}</a>
+          {distance.omit_registration_cta ? null : <a class="btn btn-accent" href={registerUrl} target="_blank" rel="noopener" {...attrs}>{race.registration?.cta_label || 'Register'}</a>}
         </div>;
       })}
     </div>
