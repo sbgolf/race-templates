@@ -1,0 +1,526 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "A Merry Christmas Run 5K/10K/13.1 MEMPHIS",
+    "slug": "a-merry-christmas-run-memphis",
+    "tagline": "A festive Memphis race morning with 5K, 10K, family mile, virtual, and eco-registration options.",
+    "short_name": "Merry Christmas Run Memphis",
+    "hero_image": {
+      "src": "/mockups/6a6f4492dfaee4f42536686ea11c505d/merry-christmas-run-memphis-banner.png",
+      "alt": "Christmas Run Memphis banner with holiday runner photos, medals, and race shirt artwork",
+      "caption": "Holiday race-day energy for the Memphis Christmas Run.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-204xxx/204681/raceBanner-iW2a5j8c-bPY6hG-huge.png",
+      "source_label": "RunSignup race banner"
+    },
+    "colors": {
+      "primary": "#0F5132",
+      "secondary": "#B42318",
+      "accent": "#F7C948",
+      "ink": "#1F1A17"
+    }
+  },
+  "event": {
+    "date": "2026-12-26",
+    "location": "Memphis, TN",
+    "timezone": "America/Chicago",
+    "venue": "Riverwalk (course map will be emailed)",
+    "address": "Memphis, TN 38103"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K Registration",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "7:30 AM CST",
+      "end_time": "10:30 AM CST",
+      "price": "$40.22 incl. $3.22 fee",
+      "profile": "A holiday 5K option with wave starts and a stress-free, community-forward format.",
+      "highlights": [
+        "Starts at 7:30 AM CST",
+        "Course map emailed before race day",
+        "Running shirt, finisher medal, towel/giveaway, digital training pack, and online results/certificate included"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "confidence": "high",
+        "verified": true,
+        "method": "Events page lists 5K Registration, start/end time, current fee-inclusive price, and registration deadline."
+      }
+    },
+    {
+      "id": "10k",
+      "name": "10K Registration",
+      "distance": "10K",
+      "start_time": "7:30 AM CST",
+      "end_time": "10:30 AM CST",
+      "price": "$45.52 incl. $3.52 fee",
+      "profile": "A 10K option for runners who want a longer holiday-morning route before Christmas festivities.",
+      "highlights": [
+        "Starts at 7:30 AM CST",
+        "Same race-morning window as the 5K",
+        "Course map emailed in the final race update"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "confidence": "high",
+        "verified": true,
+        "method": "Events page lists 10K Registration, start/end time, current fee-inclusive price, and registration deadline."
+      }
+    },
+    {
+      "id": "virtual",
+      "name": "Virtual Run Registration",
+      "distance": "Virtual",
+      "start_time": "Flexible",
+      "price": "$40.22 incl. $3.22 fee",
+      "profile": "A virtual registration option for runners who want to participate on their own schedule.",
+      "highlights": [
+        "Virtual Run Registration is an official event option",
+        "Registration ends December 26, 2026 at 12:00 AM CST",
+        "Same current fee-inclusive price as the 5K registration",
+        "Open the main registration link to choose the virtual option on RunSignup"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "confidence": "high",
+        "verified": true,
+        "method": "Events page lists Virtual Run Registration, current fee-inclusive price, and registration deadline; no race-day start time is listed for this virtual option."
+      },
+      "omit_registration_cta": true
+    },
+    {
+      "id": "family-mile",
+      "name": "Family 1 Mile Fun Run",
+      "distance": "1 Mile",
+      "start_time": "7:30 AM CST",
+      "end_time": "10:30 AM CST",
+      "price": "$38.10 incl. $3.10 fee",
+      "profile": "A family-friendly one-mile option within the same race-morning window.",
+      "highlights": [
+        "Family-focused race option",
+        "Starts at 7:30 AM CST",
+        "Separate family-mile event option"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "confidence": "high",
+        "verified": true,
+        "method": "Events page lists Family 1 Mile Fun Run with start/end time, current fee-inclusive price, and registration deadline."
+      }
+    },
+    {
+      "id": "eco-registration",
+      "name": "5K/10K/13.1 Eco-Registration (No Shirt)",
+      "distance": "5K / 10K / 13.1",
+      "start_time": "7:30 AM CST",
+      "end_time": "10:30 AM CST",
+      "price": "$32.80 incl. $2.80 fee",
+      "profile": "A no-shirt eco-registration option for runners choosing the 5K, 10K, or 13.1 format.",
+      "highlights": [
+        "No-shirt registration option",
+        "Lowest current fee-inclusive price shown",
+        "Starts at 7:30 AM CST"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "confidence": "medium",
+        "verified": true,
+        "method": "Events page lists 5K/10K/13.1 Eco-Registration (No Shirt). Source does not expose a separate standard half-marathon event in the checked Events page."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=204956",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register through the official RunSignup page for the Memphis Christmas Run in-person distance, family mile, virtual, or eco-registration option that fits your race plan.",
+    "deadline": "Registration ends December 26, 2026 at 12:00 AM CST",
+    "price_note": "Current RunSignup listings show $40.22 for the 5K, $45.52 for the 10K, $38.10 for the Family 1 Mile Fun Run, $40.22 for Virtual Run Registration, and $32.80 for the no-shirt Eco-Registration option."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before your Christmas Run in Memphis.",
+    "intro": "A quick runner checklist for wave starts, race-day bibs, swag delivery, timing, and final course details.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "start-time",
+        "label": "Wave starts",
+        "value": "Email desired wave time",
+        "detail": "Open the official race page and use its wave-time email/contact guidance to request a wave. Waves are filled first come, first served and include Wave A at 7:30 AM, Wave B at 8:00 AM, and Wave C at 8:30 AM.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "source_path": "runner_decision_checklist.items.start-time"
+      },
+      {
+        "id": "course",
+        "label": "Course map",
+        "value": "Emailed before race day",
+        "detail": "Plan around the Riverwalk start area. Course maps and final race details are sent in the final update email the Wednesday before race day.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "source_path": "runner_decision_checklist.items.course"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "No packet pickup required",
+        "detail": "No packet pickup is required: swag ships to the address used at registration, and race bibs are provided on race day.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
+      },
+      {
+        "id": "time-limit",
+        "label": "Timing",
+        "value": "No timing chips",
+        "detail": "This is a stress-free run with no timing chips; runners keep track of their own time.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "source_path": "runner_decision_checklist.items.time-limit"
+      },
+      {
+        "id": "swag",
+        "label": "Included swag",
+        "value": "Shirt, medal, towel/giveaway",
+        "detail": "The swag bag includes a running T-shirt shipped to the registration address, finisher's towel or giveaway, finisher's medal, digital training pack, online results/certificate, and local running club invitation.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "source_path": "runner_decision_checklist.items.swag"
+      },
+      {
+        "id": "price",
+        "label": "Late registration",
+        "value": "Shirt may arrive after race day",
+        "detail": "For registrations within two weeks of the race, shirts may arrive after the run because shipping takes time.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "source_path": "runner_decision_checklist.items.price"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "A Merry Christmas Run 5K/10K/13.1 MEMPHIS — December 26, 2026",
+    "meta_description": "Memphis Christmas Run details: 5K, 10K, family mile, virtual and eco-registration options, Riverwalk location, wave starts, swag shipping, and RunSignup registration."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "6a6f4492dfaee4f42536686ea11c505d",
+    "route": "/private/mockups/6a6f4492dfaee4f42536686ea11c505d/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+    "source_platform": "runsignup",
+    "source_race_id": "204956",
+    "registration_race_id": "204956",
+    "generated_from": "marketing-site mockup prospect pipeline after Steve approval",
+    "owner_approved_for_generation": true,
+    "prospect_score": 42,
+    "qualification_reason": "Steve approved generating the next queued mockup. The race has a RunSignup listing, official organizer site, holiday/community story, multiple family-friendly distance options, usable source imagery, and clear runner logistics suitable for the Community template.",
+    "source_urls": [
+      "https://runsignup.com/Race/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+      "https://runsignup.com/Race/Info/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+      "https://runsignup.com/Race/Events/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+      "https://runsignup.com/Race/Register/?raceId=204956",
+      "https://www.thebestraces.com/"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "info@thebestraces.com",
+        "context": "wave-time email listed on RunSignup race page",
+        "source_url": "https://runsignup.com/Race/Info/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+        "status": "public_org_contact"
+      },
+      {
+        "type": "form",
+        "url": "https://runsignup.com/Race/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226#contactFormSection",
+        "context": "RunSignup Race Contact Info form",
+        "status": "contact_form_only"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226",
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup race listing",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup race description and events list",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "RunSignup race banner",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header / Events page",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup Place section",
+          "confidence": "high"
+        },
+        {
+          "path": "registration",
+          "source": "RunSignup registration and Events pages",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "source": "RunSignup Info page",
+          "confidence": "high"
+        },
+        {
+          "path": "course",
+          "source": "RunSignup Place section and Info page",
+          "confidence": "high"
+        },
+        {
+          "path": "story",
+          "source": "RunSignup Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "RunSignup Info page wave-time section",
+          "confidence": "high"
+        },
+        {
+          "path": "travel",
+          "source": "RunSignup Info page",
+          "confidence": "high"
+        },
+        {
+          "path": "contact_sources",
+          "source": "RunSignup Info page / Race Contact Info section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.5k",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.10k",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.family-mile",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.eco-registration",
+          "source": "RunSignup Events section",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup Info page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "RunSignup Info page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup Info page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.time-limit",
+          "source": "RunSignup Info page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "RunSignup Info page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "RunSignup Info page",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.virtual",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "10k",
+        "virtual",
+        "family-mile",
+        "eco-registration"
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "travel",
+        "faqs",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "summary": "Core event facts, registration options, wave timing, swag delivery, race-day bibs, no-chip-timing format, contact methods, and hero imagery are source-backed. The checked sources did not expose a street-level Riverwalk address, GPX file, public course map, elevation profile, dedicated sponsor list, or a standard separate 13.1 registration event beyond the no-shirt Eco-Registration option.",
+      "items": [
+        "No street-level Riverwalk address, GPX, elevation profile, or public course map was found during this pass.",
+        "The Events page lists 5K/10K/13.1 Eco-Registration (No Shirt), but no separate standard half-marathon registration event was visible in the checked Events page.",
+        "Direct email is an organizer/race-support email, not a named race-director email."
+      ]
+    },
+    "captured_at": "2026-07-16T00:00:00.000Z"
+  },
+  "course": {
+    "suppress_visual": true,
+    "type": "Memphis Riverwalk course",
+    "description": "The RunSignup page lists the place as Riverwalk in Memphis and says the course map will be emailed in the final race update. No public course map, GPX file, or elevation profile was visible during this pass.",
+    "highlights": [
+      "Riverwalk setting in Memphis",
+      "Final course details emailed before race day",
+      "Multiple distance choices share the race-morning window"
+    ],
+    "map_links": []
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "Jingle all the way through a Memphis holiday race morning.",
+    "paragraphs": [
+      "A Merry Christmas Run brings runners and families together the day after Christmas for a festive Memphis race morning with 5K, 10K, family mile, virtual, and eco-registration options.",
+      "The event is framed around holiday togetherness — spreading love, giving selflessly, and sharing the joy of Christmas with family, friends, and fellow runners before the rest of the day’s festivities.",
+      "The runner experience is intentionally low-friction: swag ships to the registration address, bibs are provided on race day, course maps and final details arrive by email, and the run is positioned as stress-free rather than chip-timed."
+    ],
+    "links": [
+      {
+        "label": "RunSignup listing",
+        "url": "https://runsignup.com/Race/TN/Memphis/AMerryChristmasRun5K10KMEMPHIS1226"
+      },
+      {
+        "label": "Official race organization",
+        "url": "https://www.thebestraces.com/"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Wednesday before race day",
+      "name": "Final race update email",
+      "time": "By email",
+      "location": "Course maps and final details sent to registrants",
+      "applies_to_distances": [
+        "5k",
+        "10k",
+        "family-mile",
+        "eco-registration",
+        "virtual"
+      ],
+      "group_title": "Pre-race update"
+    },
+    {
+      "day": "Saturday, December 26, 2026",
+      "name": "Wave A start",
+      "time": "7:30 AM CST",
+      "location": "Riverwalk, Memphis",
+      "applies_to_distances": [
+        "5k",
+        "10k",
+        "family-mile",
+        "eco-registration"
+      ]
+    },
+    {
+      "day": "Saturday, December 26, 2026",
+      "name": "Wave B start",
+      "time": "8:00 AM CST",
+      "location": "Riverwalk, Memphis",
+      "applies_to_distances": [
+        "5k",
+        "10k",
+        "family-mile",
+        "eco-registration"
+      ]
+    },
+    {
+      "day": "Saturday, December 26, 2026",
+      "name": "Wave C start",
+      "time": "8:30 AM CST",
+      "location": "Riverwalk, Memphis",
+      "applies_to_distances": [
+        "5k",
+        "10k",
+        "family-mile",
+        "eco-registration"
+      ]
+    }
+  ],
+  "travel": {
+    "items": [
+      {
+        "label": "MAP",
+        "title": "Course map by email",
+        "description": "The Riverwalk course map is emailed with final race details before race day."
+      },
+      {
+        "label": "BIB",
+        "title": "Race-day bibs",
+        "description": "Race bibs are provided on race day, while shirts and swag ship directly to the registration address."
+      },
+      {
+        "label": "WAVE",
+        "title": "Choose a wave",
+        "description": "Runners are asked to email their desired wave time, with waves filled first come, first served."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What events are offered?",
+      "answer": "Event options include 5K Registration, 10K Registration, Virtual Run Registration, Family 1 Mile Fun Run, and 5K/10K/13.1 Eco-Registration (No Shirt)."
+    },
+    {
+      "question": "Where is the race?",
+      "answer": "The race starts from the Riverwalk area in Memphis, TN 38103. Course maps are emailed before race day."
+    },
+    {
+      "question": "When do waves start?",
+      "answer": "Wave A starts at 7:30 AM, Wave B at 8:00 AM, and Wave C at 8:30 AM. Runners can request their desired wave time by email."
+    },
+    {
+      "question": "Is the race chip-timed?",
+      "answer": "No. This is a stress-free run with no timing chips, so participants can keep track of their own time."
+    },
+    {
+      "question": "Is packet pickup required?",
+      "answer": "No packet pickup is required. Swag ships to the registration address, and race bibs are provided on race day."
+    },
+    {
+      "question": "What happens if I register late?",
+      "answer": "Shirts for registrations within two weeks of race day will likely arrive after the run because shipping takes time."
+    }
+  ]
+}
