@@ -99,7 +99,7 @@
     "url": "https://runsignup.com/Race/Register/?raceId=199508",
     "platform": "runsignup",
     "cta_label": "Register on RunSignup",
-    "intro": "Choose the 10K, 5K, or mile fun run, then complete registration through the official RunSignup page. Current listed prices include RunSignup fees.",
+    "intro": "Choose the 10K, 5K, or mile fun run, then complete registration through the official RunSignup page. Prices shown include RunSignup fees.",
     "deadline": "Registration ends October 2, 2026 at 9:00 PM EDT for all three events",
     "price_note": "Current listed prices are $48.70 for the 10K, $38.10 for the 5K, and $22.20 for the mile fun run, including RunSignup fees."
   },
@@ -153,7 +153,7 @@
         "id": "refunds-transfers",
         "label": "Refund policy",
         "value": "Refunds are not allowed",
-        "detail": "The official refund policy states that refunds are not allowed for this race.",
+        "detail": "Refunds are not allowed for this race.",
         "source_url": "https://runsignup.com/Race/199508/RefundPolicy",
         "source_path": "runner_decision_checklist.items.refunds-transfers"
       }
@@ -281,7 +281,7 @@
   "schedule": [
     {
       "day": "Saturday, October 3, 2026",
-      "name": "Sponsor parking cover",
+      "name": "Race parking available",
       "time": "6:30 AM – 7:45 AM EDT",
       "location": "Race parking area",
       "applies_to_distances": ["10k-run", "5k-run-walk", "mile-fun-run"]
