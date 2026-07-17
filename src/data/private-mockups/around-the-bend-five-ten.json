@@ -1,0 +1,384 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Around the Bend Five & Ten",
+    "slug": "around-the-bend-five-ten",
+    "short_name": "Around the Bend",
+    "tagline": "10K, 5K, and family mile for the Blessing Box.",
+    "colors": {
+      "primary": "#123A55",
+      "secondary": "#D68A2D",
+      "accent": "#D84A2B",
+      "ink": "#2A1F18"
+    },
+    "hero_image": {
+      "src": "/mockups/7885153516b60c84cf4614d5a86b5c34/around-bend-logo.png",
+      "alt": "Around the Bend Five and Ten race logo with a rural road, runners, and Blessing Box pantry artwork",
+      "caption": "Around the Bend Five & Ten races to stock the Blessing Box community food pantry.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-272539-1769805570.3675-0.bPFrCc.png",
+      "source_label": "RunSignup race-page logo artwork"
+    }
+  },
+  "event": {
+    "date": "2026-10-03",
+    "location": "Strawberry Plains, TN",
+    "timezone": "America/New_York",
+    "venue": "First Baptist Church Strawberry Plains",
+    "address": "3100 W Old Andrew Johnson Hwy, Strawberry Plains, TN 37871"
+  },
+  "distances": [
+    {
+      "id": "10k-run",
+      "name": "Around the Bend Ten(K)",
+      "distance": "10K",
+      "featured": true,
+      "start_time": "8:00 AM EDT",
+      "end_time": "9:45 AM EDT",
+      "price": "$48.70 including fee",
+      "profile": "A runner-only 10K loop on the Big Bend route east of Knoxville with less than 250 feet of gain.",
+      "highlights": [
+        "Runner-only 10K event",
+        "Looped Big Bend course with gradual climbs and back-country scenery",
+        "Age-group awards in 10-year increments"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/StrawberryPlains/AroundTheBend10",
+      "provenance": {
+        "source": "RunSignup Events and Info sections",
+        "source_url": "https://runsignup.com/Race/Events/TN/StrawberryPlains/AroundTheBend10",
+        "confidence": "high",
+        "verified": true,
+        "method": "Events page confirms 10K name, time window, price, runner-only note, and registration deadline; Info copy describes the Big Bend 10K route."
+      }
+    },
+    {
+      "id": "5k-run-walk",
+      "name": "Half The Bend Five(K)",
+      "distance": "5K",
+      "start_time": "8:00 AM EDT",
+      "end_time": "9:15 AM EDT",
+      "price": "$38.10 including fee",
+      "profile": "A 5K run/walk out-and-back route with about 150 feet of elevation gain.",
+      "highlights": [
+        "Run/walk event",
+        "Out-and-back 5K course",
+        "Shirt included for 5K registrants who sign up by the shirt deadline"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/StrawberryPlains/AroundTheBend10",
+      "provenance": {
+        "source": "RunSignup Events and Info sections",
+        "source_url": "https://runsignup.com/Race/Events/TN/StrawberryPlains/AroundTheBend10",
+        "confidence": "high",
+        "verified": true,
+        "method": "Events page confirms 5K name, time window, price, and run/walk note; Info copy describes the 5K route."
+      }
+    },
+    {
+      "id": "mile-fun-run",
+      "name": "Mile Fun Run",
+      "distance": "1 Mile",
+      "start_time": "7:30 AM EDT",
+      "end_time": "7:55 AM EDT",
+      "price": "$22.20 including fee",
+      "profile": "A kids-focused mile where parents may join registered children and strollers are allowed.",
+      "highlights": [
+        "Parents may join registered children",
+        "Strollers are allowed for the mile",
+        "Kids receive a special finisher gift"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/StrawberryPlains/AroundTheBend10",
+      "provenance": {
+        "source": "RunSignup Events and Info sections",
+        "source_url": "https://runsignup.com/Race/Events/TN/StrawberryPlains/AroundTheBend10",
+        "confidence": "high",
+        "verified": true,
+        "method": "Events page confirms the mile name, time window, price, parent participation, stroller note, and registration deadline."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=199508",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Choose the 10K, 5K, or mile fun run, then complete registration through the official RunSignup page. Current listed prices include RunSignup fees.",
+    "deadline": "Registration ends October 2, 2026 at 9:00 PM EDT for all three events",
+    "price_note": "Current listed prices are $48.70 for the 10K, $38.10 for the 5K, and $22.20 for the mile fun run, including RunSignup fees."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before you head to Strawberry Plains.",
+    "intro": "A quick runner checklist for shirts, awards, hydration, parking, and race-day rules.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "swag",
+        "label": "Shirt deadline",
+        "value": "Order by 9/21/26",
+        "detail": "All 5K and 10K registrants receive a custom event T-shirt if registered before September 21, 2026. Mile participants can add a shirt for $12 before the same deadline.",
+        "source_url": "https://runsignup.com/Race/Info/TN/StrawberryPlains/AroundTheBend10",
+        "source_path": "runner_decision_checklist.items.swag"
+      },
+      {
+        "id": "awards",
+        "label": "Awards",
+        "value": "5K and 10K age groups",
+        "detail": "Age-group awards for the 5K and 10K are awarded in 10-year increments. Kids receive a special finisher gift after the mile run.",
+        "source_url": "https://runsignup.com/Race/Info/TN/StrawberryPlains/AroundTheBend10",
+        "source_path": "runner_decision_checklist.items.awards"
+      },
+      {
+        "id": "aid-stations",
+        "label": "Water stops",
+        "value": "Miles 1 and 3",
+        "detail": "Water-only aid stations are available around miles 1 and 3, with restrooms near the start, finish, and registration area.",
+        "source_url": "https://runsignup.com/Race/Info/TN/StrawberryPlains/AroundTheBend10",
+        "source_path": "runner_decision_checklist.items.aid-stations"
+      },
+      {
+        "id": "parking",
+        "label": "Parking plan",
+        "value": "Church west lot and Rush Strong School",
+        "detail": "Parking is available on the west side of the church lot and behind Rush Strong School; the east side of the church lot is reserved for the finish area.",
+        "source_url": "https://runsignup.com/Race/Info/TN/StrawberryPlains/AroundTheBend10",
+        "source_path": "runner_decision_checklist.items.parking"
+      },
+      {
+        "id": "course",
+        "label": "Course rules",
+        "value": "No pets; stroller limits",
+        "detail": "Walkers are encouraged to use the mile or 5K, runners only for the 10K, strollers only in the mile, and no pets are allowed in any event.",
+        "source_url": "https://runsignup.com/Race/Info/TN/StrawberryPlains/AroundTheBend10",
+        "source_path": "runner_decision_checklist.items.course"
+      },
+      {
+        "id": "refunds-transfers",
+        "label": "Refund policy",
+        "value": "Refunds are not allowed",
+        "detail": "The official refund policy states that refunds are not allowed for this race.",
+        "source_url": "https://runsignup.com/Race/199508/RefundPolicy",
+        "source_path": "runner_decision_checklist.items.refunds-transfers"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Around the Bend Five & Ten — October 3, 2026",
+    "meta_description": "Around the Bend Five & Ten in Strawberry Plains, TN: 10K, 5K, and mile fun run details, registration, course maps, parking, shirts, awards, and food-pantry mission."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "7885153516b60c84cf4614d5a86b5c34",
+    "route": "/private/mockups/7885153516b60c84cf4614d5a86b5c34/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/TN/StrawberryPlains/AroundTheBend10",
+    "source_platform": "runsignup",
+    "source_race_id": "199508",
+    "registration_race_id": "199508",
+    "generated_from": "marketing-site approved prospect requalification",
+    "owner_approved_for_generation": true,
+    "prospect_id": "830eee8a-9d61-4811-a83f-cf0f4b5b6d1f",
+    "prospect_score": 90,
+    "qualification_reason": "Strong community and cause fit, multi-distance family participation, verified RunSignup race facts, official Knoxville Endurance calendar listing, and source-backed contact paths. Mockup generation approved by Steve; customer outreach remains unapproved.",
+    "source_urls": [
+      "https://runsignup.com/Race/TN/StrawberryPlains/AroundTheBend10",
+      "https://runsignup.com/Race/Info/TN/StrawberryPlains/AroundTheBend10",
+      "https://runsignup.com/Race/Events/TN/StrawberryPlains/AroundTheBend10",
+      "https://runsignup.com/Race/Register/?raceId=199508",
+      "https://runsignup.com/Race/Donate/TN/StrawberryPlains/AroundTheBend10",
+      "https://runsignup.com/Race/Sponsors/TN/StrawberryPlains/AroundTheBend10",
+      "https://runsignup.com/Race/Volunteer/TN/StrawberryPlains/AroundTheBend10",
+      "https://runsignup.com/Race/199508/RefundPolicy",
+      "https://knoxvilleendurance.com/events-calendar",
+      "https://knoxvilleendurance.com/contact-us-1",
+      "https://www.mapmyrun.com/routes/view/6674341543/",
+      "https://www.mapmyrun.com/routes/view/6674342510/",
+      "https://www.mapmyrun.com/routes/view/6674380791/"
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/TN/StrawberryPlains/AroundTheBend10",
+      "items": [
+        { "path": "identity.name", "source": "RunSignup race listing", "confidence": "high" },
+        { "path": "identity.tagline", "source": "RunSignup race description and donation page", "confidence": "high" },
+        { "path": "identity.hero_image", "source": "RunSignup race-page banner artwork", "confidence": "high" },
+        { "path": "event.date", "source": "RunSignup race header", "confidence": "high" },
+        { "path": "event.location", "source": "RunSignup race header/location section", "confidence": "high" },
+        { "path": "event.venue", "source": "RunSignup location section", "confidence": "high" },
+        { "path": "event.address", "source": "RunSignup location section", "confidence": "high" },
+        { "path": "distances.10k-run", "source": "RunSignup Events and Info sections", "confidence": "high" },
+        { "path": "distances.5k-run-walk", "source": "RunSignup Events and Info sections", "confidence": "high" },
+        { "path": "distances.mile-fun-run", "source": "RunSignup Events and Info sections", "confidence": "high" },
+        { "path": "registration.url", "source": "RunSignup Register link", "confidence": "high" },
+        { "path": "registration.deadline", "source": "RunSignup Events section", "confidence": "high" },
+        { "path": "story", "source": "RunSignup Info and donation sections", "confidence": "high" },
+        { "path": "schedule", "source": "RunSignup Info and Events sections", "confidence": "high" },
+        { "path": "course", "source": "RunSignup Info section and MapMyRun route links", "confidence": "high" },
+        { "path": "travel", "source": "RunSignup Info section", "confidence": "high" },
+        { "path": "sponsors", "source": "RunSignup Sponsors section", "confidence": "high" },
+        { "path": "volunteer", "source": "RunSignup Volunteer section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.swag", "source": "RunSignup Info section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.awards", "source": "RunSignup Info section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.aid-stations", "source": "RunSignup Info section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.parking", "source": "RunSignup Info section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.course", "source": "RunSignup Info section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.refunds-transfers", "source": "RunSignup Refund Policy", "confidence": "high" },
+        { "path": "faqs", "source": "RunSignup FAQ/Info/Refund sections", "confidence": "high" }
+      ],
+      "source_confirmed_distance_ids": [
+        "10k-run",
+        "5k-run-walk",
+        "mile-fun-run"
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "travel",
+        "sponsors",
+        "volunteer",
+        "charity",
+        "faqs",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "No GPX/elevation files were available from the checked public sources; MapMyRun route links are preserved as labeled course resources instead of rendering an unsupported elevation/profile visual.",
+        "The sponsorship contact email and Knoxville Endurance organization email are stored on the marketing-site prospect row only; they are not rendered as runner-facing contact links and no outreach is authorized."
+      ],
+      "summary": "Race basics, event distances, prices, registration deadline, venue/address, mission, shirt deadline, schedule, awards, hydration, restrooms, parking, course restrictions, sponsors, volunteer roles, refund policy, and course-map links are sourced from public RunSignup and Knoxville Endurance pages."
+    },
+    "captured_at": "2026-07-17T20:45:00.000Z"
+  },
+  "course": {
+    "type": "Big Bend road routes",
+    "description": "The 5K is an out-and-back route with about 150 feet of elevation gain. The 10K is a looped Big Bend route with less than 250 feet of gain. Both start near Old Dandridge Pike and Old Andrew Johnson Highway and finish in the east portion of the church parking lot.",
+    "map_links": [
+      { "label": "5K course map", "url": "https://www.mapmyrun.com/routes/view/6674341543/" },
+      { "label": "10K course map", "url": "https://www.mapmyrun.com/routes/view/6674342510/" },
+      { "label": "1-mile walk/run map", "url": "https://www.mapmyrun.com/routes/view/6674380791/" }
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A fall race morning built around community support.",
+    "paragraphs": [
+      "Around the Bend Five & Ten brings runners and families to Strawberry Plains for 10K, 5K, and mile options on the Big Bend route east of Knoxville.",
+      "Proceeds support First Baptist Church of Strawberry Plains and the Blessing Box, a free year-round food pantry for neighbors who are hungry and in need. A portion of the proceeds also supports Tennessee Endurance and local running opportunities."
+    ],
+    "quote": "Racing to stock the Blessing Box.",
+    "quote_byline": "Around the Bend Five & Ten mission",
+    "links": [
+      { "label": "Race info", "url": "https://runsignup.com/Race/TN/StrawberryPlains/AroundTheBend10" },
+      { "label": "Donation page", "url": "https://runsignup.com/Race/Donate/TN/StrawberryPlains/AroundTheBend10" }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Saturday, October 3, 2026",
+      "name": "Sponsor parking cover",
+      "time": "6:30 AM – 7:45 AM EDT",
+      "location": "Race parking area",
+      "applies_to_distances": ["10k-run", "5k-run-walk", "mile-fun-run"]
+    },
+    {
+      "day": "Saturday, October 3, 2026",
+      "name": "Mile Fun Run",
+      "time": "7:30 AM – 7:55 AM EDT",
+      "location": "First Baptist Church Strawberry Plains",
+      "applies_to_distances": ["mile-fun-run"]
+    },
+    {
+      "day": "Saturday, October 3, 2026",
+      "name": "10K and 5K start",
+      "time": "8:00 AM EDT",
+      "location": "Old Dandridge Pike and Old Andrew Johnson Highway",
+      "applies_to_distances": ["10k-run", "5k-run-walk"]
+    },
+    {
+      "day": "Saturday, October 3, 2026",
+      "name": "5K course window",
+      "time": "8:00 AM – 9:15 AM EDT",
+      "location": "Big Bend 5K route",
+      "applies_to_distances": ["5k-run-walk"]
+    },
+    {
+      "day": "Saturday, October 3, 2026",
+      "name": "10K course window",
+      "time": "8:00 AM – 9:45 AM EDT",
+      "location": "Big Bend 10K route",
+      "applies_to_distances": ["10k-run"]
+    }
+  ],
+  "travel": {
+    "items": [
+      {
+        "label": "VENUE",
+        "title": "First Baptist Church Strawberry Plains",
+        "description": "Race staging is at First Baptist Church Strawberry Plains, 3100 W Old Andrew Johnson Highway."
+      },
+      {
+        "label": "PARK",
+        "title": "Plan your parking",
+        "description": "Use the west side of the church lot or rear parking at Rush Strong School; the east side of the church lot is reserved for the finish area."
+      },
+      {
+        "label": "SUPPORT",
+        "title": "Start and finish support",
+        "description": "Restrooms are available near start, finish, and registration. Course water stops are water-only."
+      }
+    ]
+  },
+  "sponsors": [
+    { "name": "Summit Medical Group" },
+    { "name": "Tarr Eye and Vision Center" },
+    { "name": "Attorney C. John Chavis" },
+    { "name": "Clayton-Rutledge" }
+  ],
+  "volunteer": {
+    "headline": "Help the race morning run smoothly.",
+    "description": "Volunteer roles include registration table help, course monitors, and finish-line support.",
+    "signup_url": "https://runsignup.com/Race/Volunteer/TN/StrawberryPlains/AroundTheBend10",
+    "cta_label": "View volunteer roles"
+  },
+  "charity": {
+    "headline": "Supporting the Blessing Box",
+    "description": "Funds help stock First Baptist Church of Strawberry Plains’ free community food pantry for neighbors who are hungry and in need.",
+    "url": "https://runsignup.com/Race/Donate/TN/StrawberryPlains/AroundTheBend10",
+    "cta_label": "Donate on RunSignup"
+  },
+  "faqs": [
+    {
+      "question": "Where does the race take place?",
+      "answer": "Race staging is at First Baptist Church Strawberry Plains, 3100 W Old Andrew Johnson Highway, Strawberry Plains, TN 37871."
+    },
+    {
+      "question": "What distances are offered?",
+      "answer": "Around the Bend offers a 10K run, a 5K run/walk, and a 1-mile fun run."
+    },
+    {
+      "question": "When do the races start?",
+      "answer": "The mile fun run starts at 7:30 AM EDT. The 5K and 10K start at 8:00 AM EDT."
+    },
+    {
+      "question": "Are strollers or pets allowed?",
+      "answer": "Strollers are allowed only in the mile run/walk. Pets are not allowed in any event."
+    },
+    {
+      "question": "Are there restrooms and water stops?",
+      "answer": "Restrooms are available near start, finish, and registration. Water-only stops are available around miles 1 and 3."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "Refunds are not allowed for this race.",
+      "links": [
+        { "label": "Refund policy", "url": "https://runsignup.com/Race/199508/RefundPolicy" }
+      ]
+    }
+  ]
+}
