@@ -3,7 +3,7 @@
     "template": "community",
     "name": "Shelby Bottoms Boogie 15K Run and 5K Run/Walk",
     "slug": "shelby-bottoms-boogie-15k-5k",
-    "tagline": "A Nashville Striders fall classic with certified 15K and 5K courses through Shelby Park and Shelby Bottoms Greenway.",
+    "tagline": "A Nashville Striders 15K and 5K through Shelby Park and Shelby Bottoms Greenway.",
     "hero_image": {
       "src": "/mockups/12f456e4129efe66e2dbbf712ec0faf7/shelby-bottoms-start-line.jpg",
       "alt": "Runners lined up at the Shelby Bottoms Boogie start line in Shelby Park",
@@ -34,7 +34,7 @@
       "featured": true,
       "start_time": "7:30 AM CDT",
       "end_time": "10:00 AM CDT",
-      "price": "$27.50 incl. $2.50 fee",
+      "price": "$27.50 including fee",
       "profile": "Certified 15K course in Shelby Park and along Shelby Bottoms Greenway with common start/finish staging.",
       "highlights": [
         "Certified 15K course",
@@ -56,7 +56,7 @@
       "distance": "5K",
       "start_time": "7:30 AM CDT",
       "end_time": "10:00 AM CDT",
-      "price": "$27.50 incl. $2.50 fee",
+      "price": "$27.50 including fee",
       "profile": "Certified 5K run/walk through Shelby Park and Shelby Bottoms Greenway with the same start/finish as the 15K.",
       "highlights": [
         "Certified 5K course",
@@ -77,9 +77,9 @@
     "url": "https://runsignup.com/Race/Register/?raceId=134006",
     "platform": "runsignup",
     "cta_label": "Register on RunSignup",
-    "intro": "Register through the official RunSignup sign-up page. The public listing shows both races opening at the same time and using online registration for race day.",
+    "intro": "Register through the official RunSignup sign-up page for either the 15K Run or 5K Run/Walk. Both events start at 7:30 AM and use online registration for race day.",
     "deadline": "Current price increases after July 17, 2026 at 11:59 PM CDT; guaranteed shirts if registered before 10/2/26",
-    "price_note": "Both the 15K and 5K Run/Walk are currently listed at $27.50 including the $2.50 RunSignup fee."
+    "price_note": "Both the 15K and 5K Run/Walk are currently $27.50 including the $2.50 RunSignup fee."
   },
   "runner_decision_checklist": {
     "kicker": "Race day notes",
@@ -99,7 +99,7 @@
         "id": "start-time",
         "label": "Start time",
         "value": "Both races start at 7:30 AM",
-        "detail": "RunSignup lists both the 15K Run and the 5K Run/Walk from 7:30 AM CDT to 10:00 AM CDT.",
+        "detail": "Both the 15K Run and 5K Run/Walk run from 7:30 AM CDT to 10:00 AM CDT.",
         "source_url": "https://runsignup.com/Race/TN/Nashville/ShelbyBottomsBoogie15KRunand5KRunWalk",
         "source_path": "runner_decision_checklist.items.start-time"
       },
@@ -107,7 +107,7 @@
         "id": "swag",
         "label": "Shirt deadline",
         "value": "Register before 10/2/26",
-        "detail": "The listing says shirts are guaranteed if registered before October 2, 2026.",
+        "detail": "Register before October 2, 2026 to be guaranteed a race shirt.",
         "source_url": "https://runsignup.com/Race/TN/Nashville/ShelbyBottomsBoogie15KRunand5KRunWalk",
         "source_path": "runner_decision_checklist.items.swag"
       },
@@ -115,7 +115,7 @@
         "id": "aid-stations",
         "label": "Hydration plan",
         "value": "15K course support; 5K start/finish only",
-        "detail": "Hydration is available in the start/finish area. The 15K has course hydration; the 5K does not list course hydration.",
+        "detail": "Hydration is available in the start/finish area. The 15K includes course hydration; 5K runners should plan on start/finish hydration only.",
         "source_url": "https://runsignup.com/Race/TN/Nashville/ShelbyBottomsBoogie15KRunand5KRunWalk",
         "source_path": "runner_decision_checklist.items.aid-stations"
       },
@@ -123,7 +123,7 @@
         "id": "price",
         "label": "Price increase",
         "value": "After July 17 at 11:59 PM",
-        "detail": "Both events are currently listed at $27.50 including the $2.50 fee, with the next price increase after July 17, 2026 at 11:59 PM CDT.",
+        "detail": "Both events are currently $27.50 including the $2.50 fee, with the next price increase after July 17, 2026 at 11:59 PM CDT.",
         "source_url": "https://runsignup.com/Race/TN/Nashville/ShelbyBottomsBoogie15KRunand5KRunWalk",
         "source_path": "runner_decision_checklist.items.price"
       },
@@ -131,7 +131,7 @@
         "id": "course",
         "label": "Course rule",
         "value": "No dogs / no pets",
-        "detail": "The public listing states no dogs and no pets are allowed.",
+        "detail": "No dogs or pets are allowed on the course.",
         "source_url": "https://runsignup.com/Race/TN/Nashville/ShelbyBottomsBoogie15KRunand5KRunWalk",
         "source_path": "runner_decision_checklist.items.course"
       }
@@ -139,7 +139,7 @@
   },
   "seo": {
     "meta_title": "Shelby Bottoms Boogie \u2014 October 17, 2026",
-    "meta_description": "Shelby Bottoms Boogie race details for Nashville, TN: 15K and 5K Run/Walk, Shelby Park location, 7:30 AM start, packet pickup, registration, shirts, and hydration notes."
+    "meta_description": "Shelby Bottoms Boogie in Nashville, TN: 15K and 5K Run/Walk at Shelby Park with 7:30 AM start, packet pickup, registration, shirts, and hydration notes."
   },
   "analytics": {
     "register_click_event_name": "register_click"
@@ -308,7 +308,7 @@
   },
   "course": {
     "type": "Certified park/greenway road courses",
-    "description": "Both races are listed as certified courses in Shelby Park and along the Shelby Bottoms Greenway with a common start/finish near the dripping bird statue.",
+    "description": "Both races use certified courses in Shelby Park and along the Shelby Bottoms Greenway with a common start/finish near the dripping bird statue.",
     "map_links": [
       {
         "label": "Shelby Bottoms Boogie 5K Route",
@@ -328,7 +328,7 @@
       "The event is built for a straightforward race morning: ample free parking, race-morning packet pickup, RunSignup-based race-day registration, and post-race snacks at the finish."
     ],
     "quote": "Both the 15K and 5K feature certified courses in Shelby Park and along the Shelby Bottoms Greenway with a common Start / Finish.",
-    "quote_byline": "RunSignup race listing",
+    "quote_byline": "Nashville Striders race description",
     "links": [
       {
         "label": "Race info",
@@ -375,7 +375,7 @@
       {
         "label": "PK",
         "title": "Free parking",
-        "description": "The race listing notes ample free parking near the event staging area."
+        "description": "Ample free parking is available near the event staging area."
       },
       {
         "label": "PU",
@@ -385,22 +385,22 @@
       {
         "label": "SHRT",
         "title": "Price and shirt deadlines",
-        "description": "The listed price increases after July 17, 2026 at 11:59 PM CDT; register before October 2, 2026 for a guaranteed shirt."
+        "description": "The current price increases after July 17, 2026 at 11:59 PM CDT; register before October 2, 2026 for a guaranteed shirt."
       }
     ]
   },
   "faqs": [
     {
       "question": "Where is the race?",
-      "answer": "The race is listed at Shelby Park, start/finish near the dripping bird statue, 1600 Davidson Street, Nashville, TN 37206."
+      "answer": "The race starts and finishes at Shelby Park near the dripping bird statue, 1600 Davidson Street, Nashville, TN 37206."
     },
     {
       "question": "What events are offered?",
-      "answer": "RunSignup lists a Shelby Bottoms Boogie 15K Run and a Shelby Bottoms Boogie 5K Run/Walk."
+      "answer": "Shelby Bottoms Boogie offers a 15K Run and a 5K Run/Walk."
     },
     {
       "question": "When do the races start?",
-      "answer": "Both the 15K and 5K Run/Walk are listed as starting at 7:30 AM CDT."
+      "answer": "Both the 15K and 5K Run/Walk start at 7:30 AM CDT."
     },
     {
       "question": "When is packet pickup?",
@@ -408,11 +408,11 @@
     },
     {
       "question": "Are pets allowed?",
-      "answer": "No. The public listing states no dogs and no pets allowed."
+      "answer": "No. Dogs and other pets are not allowed on the course."
     },
     {
       "question": "How does race-day registration work?",
-      "answer": "Race-day registration is listed as available through RunSignup only, with no cash transactions onsite on race day."
+      "answer": "Race-day registration is available through RunSignup only, with no cash transactions onsite on race day."
     }
   ]
 }
