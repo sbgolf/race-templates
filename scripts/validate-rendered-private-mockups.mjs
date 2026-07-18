@@ -573,11 +573,11 @@ function validateCommunityDistanceLinkedEntryCards(html, config, errors) {
   for (const distance of distances) {
     const cardPattern = new RegExp(`data-entry-distance-card[^>]*data-distance=["']${escapeRegExp(distance.id)}["']|data-distance=["']${escapeRegExp(distance.id)}["'][^>]*data-entry-distance-card`, 'i');
     if (!cardPattern.test(html)) {
-      errors.push(`Community entry card for ${distance.id} must carry data-distance so it can follow the selected distance toggle.`);
+      errors.push(`Community entry card for ${distance.id} must carry data-distance while showing every registration option in the entry section.`);
     }
   }
-  if (!/community-distance-change/.test(html) || !/data-entry-distance-card/.test(html) || !/entryDistanceCards/.test(html)) {
-    errors.push('Community entry section must listen for the distance picker and hide non-selected registration cards.');
+  if (/data-entry-hidden/.test(html) || /entryDistanceCards/.test(html) || /syncEntryCards/.test(html)) {
+    errors.push('Community entry section must show every registration option instead of hiding non-selected cards from the top distance picker.');
   }
 }
 

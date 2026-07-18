@@ -90,16 +90,4 @@ const showMeasurementReadyPanel = isPrivateMockup && race.private_mockup?.show_m
     });
   });
 
-  function selectedDistanceId(){return document.querySelector('.pk.active')?.getAttribute('data-distance') || document.querySelector('.seg.active')?.getAttribute('data-dist') || document.querySelector('[data-entry-distance-card]')?.getAttribute('data-distance') || '';}
-  function syncEntryCards(){
-    const selected=selectedDistanceId();
-    const entryDistanceCards=document.querySelectorAll('[data-entry-distance-card]');
-    entryDistanceCards.forEach(card=>{
-      const match=!selected || card.getAttribute('data-distance')===selected;
-      card.toggleAttribute('data-entry-hidden',!match);
-    });
-  }
-  syncEntryCards();
-  document.querySelectorAll('.seg').forEach(button=>button.addEventListener('click',()=>setTimeout(syncEntryCards,0)));
-  document.addEventListener('community-distance-change',syncEntryCards);
 </script>

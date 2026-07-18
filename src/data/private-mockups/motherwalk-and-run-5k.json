@@ -1,0 +1,510 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Motherwalk & Run 5K",
+    "slug": "motherwalk-and-run-5k",
+    "tagline": "A Homewood 5K, 1-mile fun run, and virtual option supporting the Norma Livingston Ovarian Cancer Foundation.",
+    "hero_image": {
+      "src": "/mockups/4a7591ac54821a86e83434c2f6a2c4a7/motherwalk-logo.png",
+      "alt": "Motherwalk and Run 5K event logo artwork",
+      "caption": "Motherwalk & Run supports ovarian cancer research and awareness in the Birmingham area.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-21026-1781049865.7868-0.bQkkOj.png",
+      "source_label": "RunSignup race-page logo artwork",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2027-05-08",
+    "location": "Homewood, AL",
+    "timezone": "America/Chicago",
+    "venue": "Homewood Central Park",
+    "address": "Homewood Central Park, Homewood, AL"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "source_url": "https://runsignup.com/Race/Events/AL/Homewood/Motherwalk5K",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/AL/Homewood/Motherwalk5K",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup event list includes 5K in-person and survivor 5K registration options."
+      },
+      "start_time": "8:00 AM CDT",
+      "profile": "A USATF-certified 5K at Homewood Central Park, with overall and age-group awards.",
+      "highlights": [
+        "USATF-certified 5K course AL12051JD",
+        "Top overall and age-group awards",
+        "RaceJoy and course-map resources are available for the 5K"
+      ]
+    },
+    {
+      "id": "1-mile-fun-run",
+      "name": "1 Mile Fun Run",
+      "distance": "1 Mile",
+      "source_url": "https://runsignup.com/Race/Events/AL/Homewood/Motherwalk5K",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/AL/Homewood/Motherwalk5K",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup event list includes 1 Mile Fun Run and survivor 1 Mile Fun Run registration options."
+      },
+      "start_time": "9:00 AM CDT",
+      "profile": "A 1-mile fun run with finisher medals for participants 14 and under.",
+      "highlights": [
+        "Family-friendly 1-mile option",
+        "Finisher medals for fun run participants 14 and under",
+        "Registration closes at 8:45 AM on race morning"
+      ]
+    },
+    {
+      "id": "virtual-run",
+      "name": "Virtual 5K or 1 Mile",
+      "distance": "Virtual",
+      "source_url": "https://runsignup.com/Race/Events/AL/Homewood/Motherwalk5K",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/AL/Homewood/Motherwalk5K",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup event list includes virtual 5K or 1 Mile registration options."
+      },
+      "profile": "A virtual participation option for supporters who want to complete a 5K or 1 mile on their own schedule.",
+      "highlights": [
+        "Virtual 5K or 1-mile participation",
+        "Fundraising and donation paths remain available online",
+        "Useful for remote supporters and teams"
+      ]
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=14213",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Choose the in-person 5K, 1-mile fun run, survivor option, or virtual participation through the official RunSignup page.",
+    "deadline": "Race-day 5K registration and packet pickup close at 7:45 AM; fun-run registration closes at 8:45 AM.",
+    "price_note": "$25 of the race entry fee may be refunded for participants who fundraise at least $250."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before you register.",
+    "intro": "A quick runner checklist for the Motherwalk & Run 5K and 1-mile fun run.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, May 8, 2027",
+        "source_url": "https://runsignup.com/Race/AL/Homewood/Motherwalk5K",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "location",
+        "label": "Race location",
+        "value": "Homewood Central Park, Homewood, AL",
+        "source_url": "https://runsignup.com/Race/AL/Homewood/Motherwalk5K",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "distance",
+        "label": "Ways to participate",
+        "value": "5K, 1-mile fun run, survivor options, and virtual participation",
+        "source_url": "https://runsignup.com/Race/Events/AL/Homewood/Motherwalk5K",
+        "source_path": "runner_decision_checklist.items.distance",
+        "applies_to_distance_ids": [
+          "5k",
+          "1-mile-fun-run",
+          "virtual-run"
+        ]
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Trak Shak Homewood before race day; Homewood Central Park race morning",
+        "detail": "Pre-race packet pickup and registration are scheduled for Wednesday and Friday from 3:00\u20136:00 PM at Trak Shak Homewood. Race-day pickup opens at 6:30 AM at Homewood Central Park.",
+        "source_url": "https://runsignup.com/Race/Info/AL/Homewood/Motherwalk5K",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
+      },
+      {
+        "id": "awards",
+        "label": "Awards",
+        "value": "5K overall and age groups; fun-run finisher medals",
+        "detail": "5K awards include top overall and age groups. Fun Run participants 14 and under receive a finisher medal.",
+        "source_url": "https://runsignup.com/Race/Info/AL/Homewood/Motherwalk5K",
+        "source_path": "runner_decision_checklist.items.awards"
+      },
+      {
+        "id": "swag",
+        "label": "Shirts",
+        "value": "T-shirts for the first 500 registrants",
+        "detail": "Shirt sizes are not guaranteed; shirts are available for the first 500 registrants.",
+        "source_url": "https://runsignup.com/Race/Info/AL/Homewood/Motherwalk5K",
+        "source_path": "runner_decision_checklist.items.swag"
+      },
+      {
+        "id": "refunds-transfers",
+        "label": "Refunds and transfers",
+        "value": "No refunds; transfers allowed by deadline",
+        "detail": "Refunds are not available, and bib-number transfers must be completed by the transfer deadline.",
+        "source_url": "https://runsignup.com/Race/14213/RefundPolicy",
+        "source_path": "runner_decision_checklist.items.refunds-transfers"
+      },
+      {
+        "id": "series",
+        "label": "Cause",
+        "value": "Benefits the Norma Livingston Ovarian Cancer Foundation",
+        "source_url": "https://runsignup.com/Race/AL/Homewood/Motherwalk5K",
+        "source_path": "runner_decision_checklist.items.series"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Motherwalk & Run 5K \u2014 2027-05-08",
+    "meta_description": "Motherwalk & Run 5K in Homewood, AL: 5K, 1-mile fun run, virtual participation, ovarian cancer awareness mission, and official RunSignup registration."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "4a7591ac54821a86e83434c2f6a2c4a7",
+    "route": "/private/mockups/4a7591ac54821a86e83434c2f6a2c4a7/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/AL/Homewood/Motherwalk5K",
+    "source_platform": "runsignup",
+    "source_race_id": "14213",
+    "registration_race_id": "14213",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 95,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Has an official site plus RunSignup registration path. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Cause/sponsor/community proof can support the page. Contact form path found. Official race/org web identity found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/AL/Homewood/Motherwalk5K",
+      "https://runsignup.com/Race/Info/AL/Homewood/Motherwalk5K",
+      "https://runsignup.com/Race/Events/AL/Homewood/Motherwalk5K",
+      "https://runsignup.com/Race/Register/?raceId=14213",
+      "https://runsignup.com/Race/14213/RefundPolicy",
+      "https://motherwalk.com/",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-21026-1781049865.7868-0.bQkkOj.png"
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/AL/Homewood/Motherwalk5K",
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup race listing",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup race description and Motherwalk official site",
+          "confidence": "medium"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "RunSignup race-page logo artwork",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup race header/location section",
+          "confidence": "high"
+        },
+        {
+          "path": "event.venue",
+          "source": "RunSignup race description",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.5k",
+          "source": "RunSignup Events and Info sections",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.1-mile-fun-run",
+          "source": "RunSignup Events and Info sections",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.virtual-run",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "RunSignup Register link",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.deadline",
+          "source": "RunSignup Info schedule",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.price_note",
+          "source": "RunSignup Info fundraising note",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "RunSignup race header",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup race header/location section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup Info section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.awards",
+          "source": "RunSignup Info section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "RunSignup Info section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.refunds-transfers",
+          "source": "RunSignup refund/cancellation copy",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.series",
+          "source": "RunSignup description and Motherwalk official site",
+          "confidence": "medium"
+        },
+        {
+          "path": "schedule",
+          "source": "RunSignup Info schedule",
+          "confidence": "high"
+        },
+        {
+          "path": "course",
+          "source": "RunSignup Info/course-map references",
+          "confidence": "high"
+        },
+        {
+          "path": "story",
+          "source": "RunSignup description and Motherwalk official site",
+          "confidence": "medium"
+        },
+        {
+          "path": "travel",
+          "source": "RunSignup location and packet-pickup copy",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs",
+          "source": "RunSignup Info/refund copy",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "1-mile-fun-run",
+        "virtual-run"
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "travel",
+        "faqs",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "Sponsor names, full race-day logistics beyond the listed schedule, and GPX/elevation files are omitted until verified from public source pages.",
+        "The public organization email found on the Motherwalk site is stored on the marketing-site prospect row only; no race-director outreach is authorized by mockup generation."
+      ],
+      "summary": "Race basics, event date, Homewood location, participation options, packet pickup, race-day schedule, awards, shirt note, refund/transfer language, cause positioning, registration link, course-resource references, and logo artwork are sourced from public RunSignup and Motherwalk pages."
+    },
+    "prospect_id": "c0533ea6-16e4-466f-b155-5c08860b3627",
+    "captured_at": "2026-07-18T01:45:00.000Z"
+  },
+  "schedule": [
+    {
+      "day": "Wednesday, May 5, 2027",
+      "name": "Pre-race packet pickup and registration",
+      "time": "3:00 PM \u2013 6:00 PM CDT",
+      "location": "Trak Shak Homewood",
+      "applies_to_distances": [
+        "5k",
+        "1-mile-fun-run"
+      ],
+      "group_title": "Packet Pickup"
+    },
+    {
+      "day": "Friday, May 7, 2027",
+      "name": "Pre-race packet pickup and registration",
+      "time": "3:00 PM \u2013 6:00 PM CDT",
+      "location": "Trak Shak Homewood",
+      "applies_to_distances": [
+        "5k",
+        "1-mile-fun-run"
+      ],
+      "group_title": "Packet Pickup"
+    },
+    {
+      "day": "Saturday, May 8, 2027",
+      "name": "Race-day registration and packet pickup opens",
+      "time": "6:30 AM CDT",
+      "location": "Homewood Central Park",
+      "applies_to_distances": [
+        "5k",
+        "1-mile-fun-run"
+      ]
+    },
+    {
+      "day": "Saturday, May 8, 2027",
+      "name": "Announcements and survivor recognition",
+      "time": "7:30 AM CDT",
+      "location": "Homewood Central Park",
+      "applies_to_distances": [
+        "5k",
+        "1-mile-fun-run"
+      ]
+    },
+    {
+      "day": "Saturday, May 8, 2027",
+      "name": "5K start",
+      "time": "8:00 AM CDT",
+      "location": "Homewood Central Park",
+      "applies_to_distances": [
+        "5k"
+      ]
+    },
+    {
+      "day": "Saturday, May 8, 2027",
+      "name": "1 Mile Fun Run start",
+      "time": "9:00 AM CDT",
+      "location": "Homewood Central Park",
+      "applies_to_distances": [
+        "1-mile-fun-run"
+      ]
+    },
+    {
+      "day": "Saturday, May 8, 2027",
+      "name": "Awards",
+      "time": "9:15 AM CDT",
+      "location": "Homewood Central Park",
+      "applies_to_distances": [
+        "5k",
+        "1-mile-fun-run"
+      ]
+    }
+  ],
+  "course": {
+    "type": "USATF-certified 5K and 1-mile fun run",
+    "description": "The official race page lists a USATF-certified 5K course, RaceJoy/course-map resources, and a separate 1-mile fun-run route from Homewood Central Park.",
+    "map_links": [
+      {
+        "label": "5K course resources",
+        "url": "https://runsignup.com/Race/AL/Homewood/Motherwalk5K"
+      },
+      {
+        "label": "RaceJoy course map",
+        "url": "https://runsignup.com/Race/AL/Homewood/Motherwalk5K"
+      },
+      {
+        "label": "1 Mile Fun Run route",
+        "url": "https://runsignup.com/Race/AL/Homewood/Motherwalk5K"
+      }
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A Birmingham-area race morning for ovarian cancer awareness.",
+    "paragraphs": [
+      "Motherwalk & Run brings runners, walkers, survivors, teams, and supporters to Homewood Central Park for a 5K, 1-mile fun run, and virtual participation options.",
+      "Race proceeds benefit the Norma Livingston Ovarian Cancer Foundation, with team fundraising and donation paths built into the official registration experience."
+    ],
+    "quote": "Nobody fights alone.",
+    "quote_byline": "Norma Livingston Ovarian Cancer Foundation",
+    "links": [
+      {
+        "label": "Official race page",
+        "url": "https://runsignup.com/Race/AL/Homewood/Motherwalk5K"
+      },
+      {
+        "label": "Motherwalk / foundation site",
+        "url": "https://motherwalk.com/"
+      }
+    ]
+  },
+  "travel": {
+    "items": [
+      {
+        "label": "VENUE",
+        "title": "Homewood Central Park",
+        "description": "Race-day registration, packet pickup, the start, and awards are listed at Homewood Central Park in Homewood, Alabama."
+      },
+      {
+        "label": "PACKET PICKUP",
+        "title": "Trak Shak Homewood",
+        "description": "Pre-race packet pickup and registration are listed at Trak Shak Homewood, 1839 18th Street South."
+      },
+      {
+        "label": "MISSION",
+        "title": "Run, walk, or fundraise",
+        "description": "Participants can join individually or as teams and support the Norma Livingston Ovarian Cancer Foundation through fundraising and donations."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Where is race-day packet pickup?",
+      "answer": "Race-day registration and packet pickup open at 6:30 AM at Homewood Central Park.",
+      "source_url": "https://runsignup.com/Race/Info/AL/Homewood/Motherwalk5K"
+    },
+    {
+      "question": "When does the 5K start?",
+      "answer": "The 5K is scheduled for an 8:00 AM start after announcements and survivor recognition.",
+      "source_url": "https://runsignup.com/Race/Info/AL/Homewood/Motherwalk5K"
+    },
+    {
+      "question": "When does the 1 Mile Fun Run start?",
+      "answer": "The 1 Mile Fun Run is scheduled for a 9:00 AM start.",
+      "source_url": "https://runsignup.com/Race/Info/AL/Homewood/Motherwalk5K"
+    },
+    {
+      "question": "Are refunds available?",
+      "answer": "Refunds are not available; transfers must be completed by the transfer deadline.",
+      "source_url": "https://runsignup.com/Race/14213/RefundPolicy"
+    }
+  ]
+}
