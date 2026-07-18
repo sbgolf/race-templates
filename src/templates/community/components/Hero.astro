@@ -10,8 +10,10 @@ const isPrivateMockup = Boolean(race.private_mockup);
 const editionLabel = race.identity?.edition || (isPrivateMockup ? null : 'Community race');
 const heroEyebrow = [editionLabel, race.event?.location].filter(Boolean).join(' · ');
 const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];
-const heroImage = race.identity?.hero_image?.src || race.private_mockup?.assets?.[0]?.src;
-const heroImageAlt = race.identity?.hero_image?.alt || `Race day image for ${race.identity?.name}`;
+const heroImageConfig = race.identity?.hero_image || {};
+const heroImage = heroImageConfig.src || race.private_mockup?.assets?.[0]?.src;
+const heroImageAlt = heroImageConfig.alt || `Race day image for ${race.identity?.name}`;
+const heroImageFit = heroImageConfig.fit === 'contain' ? 'contain' : 'cover';
 const heroTitle = race.identity?.name || race.identity?.tagline || 'Community race weekend';
 const heroSubtitle = race.identity?.tagline && race.identity.tagline !== heroTitle ? race.identity.tagline : null;
 const heroPhotoMeta = race.identity?.hero_meta || (isPrivateMockup ? (race.event?.date_label || race.event?.date) : [race.event?.date, featuredDistance?.start_time].filter(Boolean).join(' · '));
@@ -45,7 +47,7 @@ const secondaryCtaTarget = hasRunnerChecklist ? 'runner-checklist' : 'course';
           <span class="hero-meta-pill right">{heroPhotoMeta}</span>
         </div>
         {heroImage ? (
-        <div class="ph-img ph-town mockup-photo-fill">
+        <div class:list={["ph-img", "ph-town", "mockup-photo-fill", heroImageFit === 'contain' && "mockup-photo-fill--contain"]}>
           <img src={heroImage} alt={heroImageAlt} loading="eager" decoding="async" />
         </div>
         ) : (
