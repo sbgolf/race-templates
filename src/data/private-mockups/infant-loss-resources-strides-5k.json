@@ -1,0 +1,445 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Infant Loss Resources 19th Annual Strides 5K Run & 1 Mile Walk 2026",
+    "slug": "infant-loss-resources-strides-5k",
+    "tagline": "A St. Louis 5K, 1-mile fun run/walk, and virtual run honoring Pregnancy and Infant Loss Awareness Month.",
+    "hero_image": {
+      "src": "/mockups/fc5a64bf2c1ea0647bc6504bc9d92973/strides-banner.png",
+      "alt": "Infant Loss Resources Strides 5K and 1 Mile Walk event banner artwork",
+      "caption": "Strides brings families, walkers, runners, volunteers, and supporters together at Tower Grove Park.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-94/94084/websiteBanner-lqFBKFdg-bQrC_0.png",
+      "source_label": "RunSignup race-page banner artwork",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-10-18",
+    "location": "St. Louis, MO",
+    "timezone": "America/Chicago",
+    "venue": "Tower Grove Park, Sons of Rest Pavilion",
+    "address": "4257 Northeast Dr., St. Louis, MO 63110"
+  },
+  "distances": [
+    {
+      "id": "in-person-5k-run",
+      "name": "In Person 5K Run",
+      "distance": "5K",
+      "featured": true,
+      "source_url": "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup Events lists In Person 5K Run with an 8:30 AM CDT start."
+      },
+      "start_time": "8:30 AM CDT",
+      "profile": "A 5K run from Tower Grove Park's Sons of Rest Pavilion supporting Infant Loss Resources programs.",
+      "highlights": [
+        "In-person Tower Grove Park event",
+        "Participants can enjoy T-shirts, medals, food, beverages, and family activities",
+        "Team, family, referral, fundraiser, and donation paths are available through registration"
+      ]
+    },
+    {
+      "id": "in-person-1-mile-fun-run-walk",
+      "name": "In Person 1 Mile Fun Run/Walk",
+      "distance": "1 Mile",
+      "source_url": "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup Events lists In Person 1 Mile Fun Run/Walk with an 8:30 AM CDT start."
+      },
+      "start_time": "8:30 AM CDT",
+      "profile": "A family-friendly 1-mile walk/run option at Tower Grove Park.",
+      "highlights": [
+        "Same 8:30 AM start window as the 5K",
+        "Strollers and dogs are welcome",
+        "Kids zone with music, fitness activities, and special visitors"
+      ]
+    },
+    {
+      "id": "virtual-5k-run",
+      "name": "Virtual 5K Run",
+      "distance": "Virtual 5K",
+      "source_url": "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup Events lists Virtual 5K Run as a registration option."
+      },
+      "profile": "A virtual 5K option for supporters who want to participate from their own route.",
+      "highlights": [
+        "Submit results online through the official results flow",
+        "Share participation with the #ILRStrides2026 hashtag",
+        "Useful for families, teams, and supporters outside St. Louis"
+      ]
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=87433",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Choose the in-person 5K, 1-mile fun run/walk, or virtual 5K through the official registration page.",
+    "deadline": "The current registration tier runs through September 1, 2026; the next tier runs September 1 through October 3, 2026.",
+    "price_note": "Current event pricing is $35 plus signup fee, increasing to $40 plus signup fee for the September 1 through October 3 registration tier. Kids 12 and under have a $0 race fee."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before you register.",
+    "intro": "A quick runner checklist for the Strides 5K, 1-mile fun run/walk, and virtual 5K.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Sunday, October 18, 2026",
+        "source_url": "https://runsignup.com/Race/MO/StLouis/StridesforHope",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "location",
+        "label": "Race location",
+        "value": "Tower Grove Park, Sons of Rest Pavilion, St. Louis, MO",
+        "detail": "Use 4257 Northeast Dr., St. Louis, MO 63110 for race-day navigation.",
+        "source_url": "https://runsignup.com/Race/MO/StLouis/StridesforHope",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "distance",
+        "label": "Ways to participate",
+        "value": "In-person 5K run, in-person 1-mile fun run/walk, and virtual 5K run",
+        "source_url": "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope",
+        "source_path": "runner_decision_checklist.items.distance",
+        "applies_to_distance_ids": [
+          "in-person-5k-run",
+          "in-person-1-mile-fun-run-walk",
+          "virtual-5k-run"
+        ]
+      },
+      {
+        "id": "start-time",
+        "label": "In-person start",
+        "value": "8:30 AM CDT",
+        "detail": "Both in-person options start at 8:30 AM at Tower Grove Park.",
+        "source_url": "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope",
+        "source_path": "runner_decision_checklist.items.start-time",
+        "applies_to_distance_ids": [
+          "in-person-5k-run",
+          "in-person-1-mile-fun-run-walk"
+        ]
+      },
+      {
+        "id": "price",
+        "label": "Current pricing",
+        "value": "$35 plus signup fee before the September tier change",
+        "detail": "The next tier is $40 plus signup fee from September 1 through October 3, 2026. Kids 12 and under have a $0 race fee.",
+        "source_url": "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope",
+        "source_path": "runner_decision_checklist.items.price"
+      },
+      {
+        "id": "swag",
+        "label": "Participant notes",
+        "value": "Race day includes T-shirts, medals, food, beverages, and kids activities",
+        "detail": "Strollers and dogs are allowed.",
+        "source_url": "https://runsignup.com/Race/MO/StLouis/StridesforHope",
+        "source_path": "runner_decision_checklist.items.swag"
+      },
+      {
+        "id": "awards",
+        "label": "Awards",
+        "value": "Medals and a 1st Place Awards Ceremony",
+        "source_url": "https://runsignup.com/Race/MO/StLouis/StridesforHope",
+        "source_path": "runner_decision_checklist.items.awards"
+      },
+      {
+        "id": "series",
+        "label": "Cause",
+        "value": "Supports grief support, awareness, and safe sleep education programs",
+        "detail": "Infant Loss Resources serves families throughout Missouri and neighboring communities in Illinois and Kansas.",
+        "source_url": "https://runsignup.com/Race/MO/StLouis/StridesforHope",
+        "source_path": "runner_decision_checklist.items.series"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Infant Loss Resources Strides 5K — 2026-10-18",
+    "meta_description": "Strides 5K in St. Louis: 5K run, 1-mile fun run/walk, virtual 5K, family activities, and official RunSignup registration."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "fc5a64bf2c1ea0647bc6504bc9d92973",
+    "route": "/private/mockups/fc5a64bf2c1ea0647bc6504bc9d92973/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/MO/StLouis/StridesforHope",
+    "source_platform": "runsignup",
+    "source_race_id": "87433",
+    "registration_race_id": "87433",
+    "generated_from": "marketing-site mockup prospect config generator plus source-completeness pass",
+    "owner_approved_for_generation": true,
+    "prospect_score": 95,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Has an official site plus RunSignup registration path. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Cause/sponsor/community proof can support the page. Direct race contact email found. Contact form path found. Official race/org web identity found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/MO/StLouis/StridesforHope",
+      "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope",
+      "https://runsignup.com/Race/Register/?raceId=87433",
+      "https://runsignup.com/rest/race/87433?format=json",
+      "https://www.infantlossresources.org/",
+      "https://www.infantlossresources.org/contact",
+      "https://www.infantlossresources.org/photos",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-94084-1782959950.5664-0.bQrC9o.png",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-94/94084/websiteBanner-lqFBKFdg-bQrC_0.png"
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/MO/StLouis/StridesforHope",
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup race page",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup race description",
+          "confidence": "medium"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "RunSignup race-page banner artwork",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header and race API",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup race header/location section",
+          "confidence": "high"
+        },
+        {
+          "path": "event.venue",
+          "source": "RunSignup race header/location section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.in-person-5k-run",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.in-person-1-mile-fun-run-walk",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.virtual-5k-run",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "RunSignup Register link",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.deadline",
+          "source": "RunSignup Events registration tier dates",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.price_note",
+          "source": "RunSignup Events registration tier pricing",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "RunSignup race header and race API",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup race header/location section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "RunSignup Events registration tier pricing",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "RunSignup race description and race API giveaway fields",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.awards",
+          "source": "RunSignup race description",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.series",
+          "source": "RunSignup race description and Infant Loss Resources official site",
+          "confidence": "medium"
+        },
+        {
+          "path": "schedule",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "story",
+          "source": "RunSignup race description and Infant Loss Resources official site",
+          "confidence": "medium"
+        },
+        {
+          "path": "travel",
+          "source": "RunSignup location and race description",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs",
+          "source": "RunSignup race description and Events section",
+          "confidence": "medium"
+        }
+      ],
+      "source_confirmed_distance_ids": [
+        "in-person-5k-run",
+        "in-person-1-mile-fun-run-walk",
+        "virtual-5k-run"
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "story",
+        "schedule",
+        "travel",
+        "faqs",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "Packet pickup details, refund/transfer policy, course map, GPX/elevation files, and current race-specific sponsor tiers are omitted because no clear public source details were found.",
+        "The official Infant Loss Resources event page still shows an older 2024 Strides date/location, while RunSignup is updated for the 2026 race at Tower Grove Park; this mockup uses the 2026 RunSignup event details.",
+        "Public copy mentions a virtual 1-mile walk, but the current event selector shows Virtual 5K Run; this mockup only renders the current event-selector option.",
+        "The public organization email is stored on the marketing-site prospect row as a routing contact only; no race-director outreach is authorized by mockup generation."
+      ],
+      "summary": "Race name, date, Tower Grove Park venue/address, in-person and virtual participation options, in-person start time, registration link/status, pricing tiers, participant amenities, awards note, mission framing, and banner artwork are sourced from public RunSignup and Infant Loss Resources pages."
+    },
+    "prospect_id": "3935169b-78b5-4002-a3b7-c3da74d1d27f",
+    "captured_at": "2026-07-18T11:46:28.000Z"
+  },
+  "schedule": [
+    {
+      "day": "Sunday, October 18, 2026",
+      "name": "In-person 5K and 1-mile start",
+      "time": "8:30 AM CDT",
+      "location": "Tower Grove Park, Sons of Rest Pavilion",
+      "applies_to_distances": [
+        "in-person-5k-run",
+        "in-person-1-mile-fun-run-walk"
+      ]
+    },
+    {
+      "day": "Sunday, October 18, 2026",
+      "name": "In-person event window",
+      "time": "8:30 AM \u2013 11:30 AM CDT",
+      "location": "Tower Grove Park, Sons of Rest Pavilion",
+      "applies_to_distances": [
+        "in-person-5k-run",
+        "in-person-1-mile-fun-run-walk"
+      ]
+    }
+  ],
+  "story": {
+    "kicker": "Race overview",
+    "title": "A St. Louis race morning for remembrance, support, and safe-sleep education.",
+    "paragraphs": [
+      "Strides gathers families, runners, walkers, volunteers, and donors at Tower Grove Park during Pregnancy and Infant Loss Awareness Month.",
+      "Participation supports Infant Loss Resources programs for grief support, awareness, safe sleep education, and family resources across Missouri and neighboring communities."
+    ],
+    "quote": "Every stride counts.",
+    "quote_byline": "Infant Loss Resources Strides",
+    "links": [
+      {
+        "label": "Official race registration",
+        "url": "https://runsignup.com/Race/MO/StLouis/StridesforHope"
+      },
+      {
+        "label": "Infant Loss Resources",
+        "url": "https://www.infantlossresources.org/"
+      }
+    ]
+  },
+  "travel": {
+    "items": [
+      {
+        "label": "VENUE",
+        "title": "Tower Grove Park, Sons of Rest Pavilion",
+        "description": "The in-person race and walk are listed at the Sons of Rest Pavilion, 4257 Northeast Dr. in St. Louis."
+      },
+      {
+        "label": "FAMILY DAY",
+        "title": "Activities for runners, walkers, kids, and supporters",
+        "description": "Race day includes food, beverages, medals, a kids zone, music, fitness activities, special visitors, and a family-friendly strollers-and-dogs policy."
+      },
+      {
+        "label": "MISSION",
+        "title": "Support, awareness, and safe-sleep education",
+        "description": "The event helps fund Infant Loss Resources programs supporting grieving families and safe infant sleep education."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Where is the in-person race held?",
+      "answer": "The in-person event is at Tower Grove Park's Sons of Rest Pavilion, 4257 Northeast Dr., St. Louis, MO 63110.",
+      "source_url": "https://runsignup.com/Race/MO/StLouis/StridesforHope"
+    },
+    {
+      "question": "What time do the in-person options start?",
+      "answer": "The in-person 5K and 1-mile fun run/walk start at 8:30 AM CDT.",
+      "source_url": "https://runsignup.com/Race/Events/MO/StLouis/StridesforHope"
+    },
+    {
+      "question": "Are strollers and dogs allowed?",
+      "answer": "Yes. The event is family friendly, and strollers and dogs are allowed.",
+      "source_url": "https://runsignup.com/Race/MO/StLouis/StridesforHope"
+    },
+    {
+      "question": "What does the race support?",
+      "answer": "The event supports Infant Loss Resources programs for grief support, awareness, safe sleep education, and family resources.",
+      "source_url": "https://runsignup.com/Race/MO/StLouis/StridesforHope"
+    }
+  ]
+}
