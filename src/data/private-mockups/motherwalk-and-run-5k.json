@@ -45,7 +45,7 @@
       "highlights": [
         "USATF-certified 5K course AL12051JD",
         "Top overall and age-group awards",
-        "RaceJoy/course-map resources linked from the official race page"
+        "RaceJoy and course-map resources are available for the 5K"
       ]
     },
     {
@@ -94,7 +94,7 @@
     "cta_label": "Register on RunSignup",
     "intro": "Choose the in-person 5K, 1-mile fun run, survivor option, or virtual participation through the official RunSignup page.",
     "deadline": "Race-day 5K registration and packet pickup close at 7:45 AM; fun-run registration closes at 8:45 AM.",
-    "price_note": "The official race page notes that $25 of the race entry fee may be refunded for participants who fundraise at least $250."
+    "price_note": "$25 of the race entry fee may be refunded for participants who fundraise at least $250."
   },
   "runner_decision_checklist": {
     "kicker": "Race day notes",
@@ -132,7 +132,7 @@
         "id": "packet-pickup",
         "label": "Packet pickup",
         "value": "Trak Shak Homewood before race day; Homewood Central Park race morning",
-        "detail": "Pre-race packet pickup and registration are listed for Wednesday and Friday from 3:00\u20136:00 PM at Trak Shak Homewood. Race-day pickup opens at 6:30 AM at Homewood Central Park.",
+        "detail": "Pre-race packet pickup and registration are scheduled for Wednesday and Friday from 3:00\u20136:00 PM at Trak Shak Homewood. Race-day pickup opens at 6:30 AM at Homewood Central Park.",
         "source_url": "https://runsignup.com/Race/Info/AL/Homewood/Motherwalk5K",
         "source_path": "runner_decision_checklist.items.packet-pickup"
       },
@@ -156,7 +156,7 @@
         "id": "refunds-transfers",
         "label": "Refunds and transfers",
         "value": "No refunds; transfers allowed by deadline",
-        "detail": "Refunds are not available, and bib-number transfers must be completed by the listed deadline.",
+        "detail": "Refunds are not available, and bib-number transfers must be completed by the transfer deadline.",
         "source_url": "https://runsignup.com/Race/14213/RefundPolicy",
         "source_path": "runner_decision_checklist.items.refunds-transfers"
       },
@@ -365,7 +365,8 @@
       "applies_to_distances": [
         "5k",
         "1-mile-fun-run"
-      ]
+      ],
+      "group_title": "Packet Pickup"
     },
     {
       "day": "Friday, May 7, 2027",
@@ -375,7 +376,8 @@
       "applies_to_distances": [
         "5k",
         "1-mile-fun-run"
-      ]
+      ],
+      "group_title": "Packet Pickup"
     },
     {
       "day": "Saturday, May 8, 2027",
@@ -491,17 +493,17 @@
     },
     {
       "question": "When does the 5K start?",
-      "answer": "The 5K is listed for an 8:00 AM start after announcements and survivor recognition.",
+      "answer": "The 5K is scheduled for an 8:00 AM start after announcements and survivor recognition.",
       "source_url": "https://runsignup.com/Race/Info/AL/Homewood/Motherwalk5K"
     },
     {
       "question": "When does the 1 Mile Fun Run start?",
-      "answer": "The 1 Mile Fun Run is listed for a 9:00 AM start.",
+      "answer": "The 1 Mile Fun Run is scheduled for a 9:00 AM start.",
       "source_url": "https://runsignup.com/Race/Info/AL/Homewood/Motherwalk5K"
     },
     {
       "question": "Are refunds available?",
-      "answer": "Refunds are not available; transfers must be completed by the listed deadline.",
+      "answer": "Refunds are not available; transfers must be completed by the transfer deadline.",
       "source_url": "https://runsignup.com/Race/14213/RefundPolicy"
     }
   ]
