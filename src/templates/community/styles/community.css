@@ -544,8 +544,6 @@ display:grid;
 .etier li{color:rgba(42,31,24,.74);line-height:1.4;display:flex;gap:9px;align-items:flex-start}
 .etier li::before{content:"·";color:var(--accent);font-weight:700;font-size:1.4rem;line-height:1;margin-top:-2px}
 .etier .btn{width:100%;justify-content:center;padding:11px;font-size:.88rem;margin-top:8px}
-.etier[data-entry-hidden]{display:none}
-.entry-grid:has(.etier[data-entry-hidden]){grid-template-columns:minmax(0,420px)}
 
 .charity-note{
   margin-top:32px;
