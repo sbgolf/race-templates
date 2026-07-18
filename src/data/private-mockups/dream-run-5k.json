@@ -5,14 +5,14 @@
     "slug": "dream-run-5k",
     "tagline": "Free 5K and 1-mile walk for the Troy Dream Center.",
     "hero_image": {
-      "src": "/mockups/4e7714c0c8a81de47aecc7cfb0ebbaea/dream-run-banner.png",
-      "alt": "Dream Run 5K event banner artwork with Troy Dream Center branding",
+      "src": "/mockups/4e7714c0c8a81de47aecc7cfb0ebbaea/dream-run-2026-hero.jpg",
+      "alt": "Dream Run 5K Walk 2026 Troy Missouri event artwork from Troy Dream Center",
       "caption": "Dream Run brings runners, walkers, donors, and local agencies together in Troy.",
-      "presentation": "banner",
-      "aspect_ratio": "3.2 / 1",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-115xxx/115351/raceBanner-sdya9Sf9-bI-_N0.png",
-      "source_label": "RunSignup race-page banner artwork",
-      "fit": "contain"
+      "presentation": "photo",
+      "aspect_ratio": "1.6 / 1",
+      "source": "https://troydreamcenter.com/wp-content/uploads/2026/06/troy.jpg",
+      "source_label": "Troy Dream Center events-page Dream Run artwork",
+      "fit": "cover"
     },
     "colors": {
       "primary": "#133B5C",
