@@ -1,0 +1,431 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Dream Run 5K",
+    "slug": "dream-run-5k",
+    "tagline": "Free 5K and 1-mile walk for the Troy Dream Center.",
+    "hero_image": {
+      "src": "/mockups/4e7714c0c8a81de47aecc7cfb0ebbaea/dream-run-2026-hero.jpg",
+      "alt": "Dream Run 5K Walk 2026 Troy Missouri event artwork from Troy Dream Center",
+      "caption": "Dream Run brings runners, walkers, donors, and local agencies together in Troy.",
+      "presentation": "photo",
+      "aspect_ratio": "1.6 / 1",
+      "source": "https://troydreamcenter.com/wp-content/uploads/2026/06/troy.jpg",
+      "source_label": "Troy Dream Center events-page Dream Run artwork",
+      "fit": "cover"
+    },
+    "colors": {
+      "primary": "#133B5C",
+      "secondary": "#F47C20",
+      "accent": "#F2C94C",
+      "ink": "#162033"
+    }
+  },
+  "event": {
+    "date": "2026-10-17",
+    "location": "Troy, MO",
+    "timezone": "America/Chicago",
+    "venue": "Troy Dream Center",
+    "address": "80 Main Street, Troy, MO 63379"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+      "provenance": {
+        "source": "RunSignup race page",
+        "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup shows the 5K event with an 8:00 AM CDT start."
+      },
+      "start_time": "8:00 AM CDT",
+      "profile": "A free 5K through historic downtown Troy with a high-energy finish at the Troy Dream Center.",
+      "highlights": [
+        "Free registration",
+        "Custom Dream Run finisher medal for the first 100 5K finishers",
+        "Supports help, hope, and healing through the Troy Dream Center"
+      ]
+    },
+    {
+      "id": "one-mile-walk",
+      "name": "1-Mile Walk",
+      "distance": "1 Mile",
+      "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+      "provenance": {
+        "source": "RunSignup race page",
+        "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup shows the 1-Mile Walk event with an 8:30 AM CDT start."
+      },
+      "start_time": "8:30 AM CDT",
+      "profile": "A free 1-mile walk option for neighbors, families, and supporters who want a shorter community route.",
+      "highlights": [
+        "Free registration",
+        "Race-morning option for walkers and community supporters",
+        "Part of the same Troy Dream Center race-day gathering"
+      ]
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=115351",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Choose the free 5K or 1-mile walk through the race registration page.",
+    "deadline": "Registration is open through October 17, 2026 at 8:00 AM CDT.",
+    "price_note": "Both the 5K and 1-mile walk have a $0 race fee. Registration closes Saturday, October 17, 2026 at 8:00 AM CDT. Donations are encouraged during October Double the Impact month."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before you register.",
+    "intro": "A quick runner and walker checklist for Dream Run 5K in Troy.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, October 17, 2026",
+        "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "location",
+        "label": "Race location",
+        "value": "Troy Dream Center, 80 Main Street, Troy, MO 63379",
+        "detail": "The route uses historic downtown Troy and finishes in the Troy Dream Center parking lot.",
+        "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "distance",
+        "label": "Ways to participate",
+        "value": "5K and 1-mile walk",
+        "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+        "source_path": "runner_decision_checklist.items.distance",
+        "applies_to_distance_ids": [
+          "5k",
+          "one-mile-walk"
+        ]
+      },
+      {
+        "id": "start-time",
+        "label": "Start times",
+        "value": "5K at 8:00 AM CDT; 1-mile walk at 8:30 AM CDT",
+        "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+        "source_path": "runner_decision_checklist.items.start-time",
+        "applies_to_distance_ids": [
+          "5k",
+          "one-mile-walk"
+        ]
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Friday, October 16, 9:00 AM to 4:00 PM at Troy Dream Center",
+        "detail": "Packets are also available race morning.",
+        "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
+      },
+      {
+        "id": "price",
+        "label": "Race fee",
+        "value": "$0 for both race options",
+        "detail": "Donations help support Troy Dream Center programs during October Double the Impact month.",
+        "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+        "source_path": "runner_decision_checklist.items.price"
+      },
+      {
+        "id": "awards",
+        "label": "5K finisher medals",
+        "value": "Custom Dream Run medals for the first 100 5K finishers",
+        "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+        "source_path": "runner_decision_checklist.items.awards",
+        "applies_to_distance_ids": [
+          "5k"
+        ]
+      },
+      {
+        "id": "post-race",
+        "label": "Resource fair",
+        "value": "Local community support agencies are part of race morning",
+        "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+        "source_path": "runner_decision_checklist.items.post-race"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Dream Run 5K — 2026-10-17",
+    "meta_description": "Dream Run 5K in Troy, Missouri: free 5K, 1-mile walk, packet pickup, resource fair, and RunSignup registration."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "4e7714c0c8a81de47aecc7cfb0ebbaea",
+    "route": "/private/mockups/4e7714c0c8a81de47aecc7cfb0ebbaea/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/MO/Troy/2021DreamRun5k",
+    "source_platform": "runsignup",
+    "source_race_id": "115351",
+    "registration_race_id": "115351",
+    "generated_from": "marketing-site prospect backlog plus source-completeness pass",
+    "owner_approved_for_generation": true,
+    "prospect_score": 95,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Has an official site plus RunSignup registration path. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Cause/sponsor/community proof can support the page. Direct race contact email found. Contact form path found. Official race/org web identity found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/MO/Troy/2021DreamRun5k",
+      "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k",
+      "https://runsignup.com/Race/Register/?raceId=115351",
+      "https://runsignup.com/Race/Donate/MO/Troy/2021DreamRun5k",
+      "https://troydreamcenter.com/events/",
+      "https://troydreamcenter.com/about/",
+      "https://troydreamcenter.com/contact/",
+      "https://d368g9lw5ileu7.cloudfront.net/races/race115351-logo-0.bI-_KH.png",
+      "https://d368g9lw5ileu7.cloudfront.net/races/races-115xxx/115351/raceBanner-sdya9Sf9-bI-_N0.png"
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/MO/Troy/2021DreamRun5k",
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup race page",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup race description and Troy Dream Center event page",
+          "confidence": "medium"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "RunSignup race-page banner artwork",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race page",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup race page and Troy Dream Center contact page",
+          "confidence": "high"
+        },
+        {
+          "path": "event.venue",
+          "source": "RunSignup race page and Troy Dream Center contact page",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.5k",
+          "source": "RunSignup race page",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.one-mile-walk",
+          "source": "RunSignup race page",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "RunSignup registration link",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.deadline",
+          "source": "RunSignup Events registration deadline",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.price_note",
+          "source": "RunSignup Events pricing",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "RunSignup race page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup race page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "RunSignup race page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup race page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup race description",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "RunSignup Events pricing and race description",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.awards",
+          "source": "RunSignup race description",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.post-race",
+          "source": "RunSignup race description",
+          "confidence": "medium"
+        },
+        {
+          "path": "schedule",
+          "source": "RunSignup race description",
+          "confidence": "high"
+        },
+        {
+          "path": "story",
+          "source": "RunSignup race description and Troy Dream Center official pages",
+          "confidence": "medium"
+        },
+        {
+          "path": "travel",
+          "source": "RunSignup race description and Troy Dream Center contact page",
+          "confidence": "medium"
+        },
+        {
+          "path": "faqs",
+          "source": "RunSignup race description and Troy Dream Center official pages",
+          "confidence": "medium"
+        }
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "one-mile-walk"
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "story",
+        "schedule",
+        "travel",
+        "faqs",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "Course map, parking details, shirt information, age-group awards, full race-morning packet pickup hours, and named race-director identity are omitted because no clear public source details were found.",
+        "The Troy Dream Center events page uses Dream Run 5K/Walk while RunSignup uses Dream Run 5K; this mockup uses the current RunSignup race name and includes the 1-mile walk as a participation option.",
+        "The Troy Dream Center event-card learn-more path appears to lead to a different Church Center event; this mockup uses the RunSignup registration path for Dream Run 5K.",
+        "The public organization email is stored on the marketing-site prospect row as a routing contact only; no race-director outreach is authorized by mockup generation."
+      ],
+      "summary": "Race name, date, Troy Dream Center venue/address, distances, start times, free registration, packet pickup, finisher-medal note, resource fair, registration link, mission framing, and banner artwork are sourced from public RunSignup and Troy Dream Center pages."
+    },
+    "prospect_id": "6d84ee8c-f81b-40e4-b52a-d204bb527aef",
+    "captured_at": "2026-07-18T12:34:11.000Z"
+  },
+  "schedule": [
+    {
+      "day": "Friday, October 16, 2026",
+      "name": "Packet pickup",
+      "time": "9:00 AM to 4:00 PM CDT",
+      "location": "Troy Dream Center, 80 Main Street, Troy, MO 63379",
+      "applies_to_distances": [
+        "5k",
+        "one-mile-walk"
+      ]
+    },
+    {
+      "day": "Saturday, October 17, 2026",
+      "name": "5K start",
+      "time": "8:00 AM CDT",
+      "location": "Troy Dream Center",
+      "applies_to_distances": [
+        "5k"
+      ]
+    },
+    {
+      "day": "Saturday, October 17, 2026",
+      "name": "1-mile walk start",
+      "time": "8:30 AM CDT",
+      "location": "Troy Dream Center",
+      "applies_to_distances": [
+        "one-mile-walk"
+      ]
+    }
+  ],
+  "story": {
+    "kicker": "Race overview",
+    "title": "A comeback run for the Troy Dream Center community.",
+    "paragraphs": [
+      "Dream Run began in 2015 when a Troy Buchanan High School sophomore created a 5K to support the Troy Dream Center.",
+      "The race returns to historic downtown Troy with free registration, a 5K, a 1-mile walk, a resource fair, and a finish in the Troy Dream Center parking lot.",
+      "Donations support the Troy Dream Center's residential recovery homes for men and women rebuilding their lives with help, hope, and healing."
+    ],
+    "quote": "Lace up for the ultimate comeback.",
+    "quote_byline": "Dream Run 5K",
+    "links": [
+      {
+        "label": "Race page",
+        "url": "https://runsignup.com/Race/MO/Troy/2021DreamRun5k"
+      },
+      {
+        "label": "Troy Dream Center",
+        "url": "https://troydreamcenter.com/events/"
+      }
+    ]
+  },
+  "travel": {
+    "items": [
+      {
+        "label": "VENUE",
+        "title": "Troy Dream Center",
+        "description": "Race morning centers around Troy Dream Center at 80 Main Street, with a downtown Troy route and parking-lot finish."
+      },
+      {
+        "label": "COMMUNITY",
+        "title": "Resource fair and local support agencies",
+        "description": "Race day includes a resource fair that connects participants with local community support agencies."
+      },
+      {
+        "label": "MISSION",
+        "title": "Help, hope, and healing",
+        "description": "Donations support Troy Dream Center recovery homes for men and women overcoming life-controlling issues."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Where does Dream Run 5K take place?",
+      "answer": "The race is based at Troy Dream Center, 80 Main Street, Troy, MO 63379, with a route through historic downtown Troy and a finish in the Troy Dream Center parking lot.",
+      "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k"
+    },
+    {
+      "question": "What time do the events start?",
+      "answer": "The 5K starts at 8:00 AM CDT. The 1-mile walk starts at 8:30 AM CDT.",
+      "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k"
+    },
+    {
+      "question": "Is registration really free?",
+      "answer": "Yes. Both race options show a $0 race fee, and donations are encouraged to support Troy Dream Center programs.",
+      "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k"
+    },
+    {
+      "question": "When is packet pickup?",
+      "answer": "Packet pickup is Friday, October 16 from 9:00 AM to 4:00 PM at Troy Dream Center, with packets also available race morning.",
+      "source_url": "https://runsignup.com/Race/Info/MO/Troy/2021DreamRun5k"
+    }
+  ]
+}
