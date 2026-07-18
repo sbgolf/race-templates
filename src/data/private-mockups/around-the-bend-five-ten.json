@@ -16,7 +16,8 @@
       "alt": "Around the Bend Five and Ten race logo with a rural road, runners, and Blessing Box pantry artwork",
       "caption": "Around the Bend Five & Ten races to stock the Blessing Box community food pantry.",
       "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-272539-1769805570.3675-0.bPFrCc.png",
-      "source_label": "RunSignup race-page logo artwork"
+      "source_label": "RunSignup race-page logo artwork",
+      "fit": "contain"
     }
   },
   "event": {
