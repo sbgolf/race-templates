@@ -46,7 +46,7 @@ const aboutLinks = [
     </div>
     <div><div class="foot-heading">Race</div><ul>{raceLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div>
     {aboutLinks.length ? <div><div class="foot-heading">About</div><ul>{aboutLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div> : null}
-    <div><div class="foot-heading">Official site</div><ul><li><a href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel}</a></li>{contactUrl ? <li><a href={contactUrl} target="_blank" rel="noopener">{contactLabel}</a></li> : null}</ul></div>
+    <div><div class="foot-heading">Race links</div><ul><li><a href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel}</a></li>{contactUrl ? <li><a href={contactUrl} target="_blank" rel="noopener">{contactLabel}</a></li> : null}</ul></div>
   </div>
   <div class="foot-bottom">
     <span>© {year} {race.identity?.name}{race.organization?.name ? ` · A program of ${race.organization.name}` : ''}</span>

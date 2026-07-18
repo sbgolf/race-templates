@@ -799,12 +799,15 @@ footer{background:var(--ink);color:rgba(250,246,238,.6);font-size:.92rem}
 }
 @media(max-width:560px){
   .community-template .hero,.community-template .hero-inner,.community-template .hero-copy,.community-template .hero-photo{max-width:100%;min-width:0}
+  .community-template,.community-template .hero{width:100%;max-width:100vw;overflow-x:hidden}
+  .community-template .hero *{min-width:0;max-width:100%}
   .community-template .hero-inner{display:flex;flex-direction:column;width:100%;overflow:hidden}
   .community-template .hero-copy,.community-template .hero-photo{width:auto;align-self:stretch}
   .community-template .hero-copy{padding:clamp(20px,5.5vw,28px);overflow:hidden}
   .community-template .hero h1{font-size:clamp(1.55rem,6.7vw,1.85rem);line-height:1.13;overflow-wrap:anywhere}
   .community-template .hero-date{font-size:.98rem;gap:10px;overflow-wrap:anywhere}
   .community-template .hero p.lead{font-size:1rem;overflow-wrap:anywhere}
+  .community-template .hero-cta{display:grid;grid-template-columns:minmax(0,1fr);width:100%}
   .community-template .hero-cta .btn{width:100%;padding-inline:16px}
   .community-template .gallery-grid{grid-template-columns:minmax(0,1fr);grid-template-rows:var(--gallery-rows-mobile, repeat(6,200px))}
   .community-template .gallery-grid .g1,.community-template .gallery-grid .g2,.community-template .gallery-grid .g3,.community-template .gallery-grid .g4,.community-template .gallery-grid .g5,.community-template .gallery-grid .g6,.community-template .gallery-grid .g7,.community-template .gallery-grid .g8,.community-template .gallery-grid .g9{grid-column:1}
