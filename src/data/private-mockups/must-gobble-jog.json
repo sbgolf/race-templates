@@ -44,7 +44,7 @@
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "confidence": "high",
         "verified": true,
-        "method": "The race page includes the 10K event, price, start time, and certification/qualifier statement."
+        "method": "Verified against RunSignup details for the 10K event, price, start time, and certification/qualifier statement."
       }
     },
     {
@@ -64,7 +64,7 @@
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "confidence": "high",
         "verified": true,
-        "method": "The race page includes the timed 5K event, price, start time, and certification/qualifier statement."
+        "method": "Verified against RunSignup details for the timed 5K event, price, start time, and certification/qualifier statement."
       }
     },
     {
@@ -84,7 +84,7 @@
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "confidence": "high",
         "verified": true,
-        "method": "The race page includes the untimed 5K event, price, and start time."
+        "method": "Verified against RunSignup details for the untimed 5K event, price, and start time."
       }
     },
     {
@@ -114,19 +114,19 @@
     "cta_label": "Register on RunSignup",
     "intro": "Register through the official RunSignup sign-up page for the Gobble Jog event option you choose.",
     "deadline": "Registration ends November 26, 2026 for the Tot Trot; price increases vary by event.",
-    "price_note": "The race page includes $40 for Phantom Runner, 10K Timed Run, and 5K Timed Run; $35 for 5K Untimed Walk/Run and 1K Untimed; and $30 for the Tot Trot during this review."
+    "price_note": "Current listed prices are $40 for Phantom Runner, 10K Timed Run, and 5K Timed Run; $35 for 5K Untimed Walk/Run and 1K Untimed; and $30 for the Tot Trot."
   },
   "runner_decision_checklist": {
     "kicker": "Race day notes",
     "headline": "What to know before Thanksgiving morning at the Marietta Square.",
-    "intro": "A confirmed runner checklist for distance choices, official registration, qualifier notes, and how the race supports MUST Ministries.",
+    "intro": "A runner checklist for distance choices, official registration, qualifier notes, and how the race supports MUST Ministries.",
     "footer_cta": false,
     "items": [
       {
         "id": "distance",
         "label": "Choose your option",
         "value": "10K, 5K, 1K, Tot Trot, Phantom",
-        "detail": "The official pages list timed 10K and 5K runs, an untimed 5K, 1K, Tot Trot, and a Phantom Runner option.",
+        "detail": "Runners can choose timed 10K and 5K runs, an untimed 5K, 1K, Tot Trot, and a Phantom Runner option.",
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "source_path": "distances"
       },
@@ -142,15 +142,15 @@
         "id": "course",
         "label": "Timed race note",
         "value": "AJC Peachtree qualifier / USATF Certified",
-        "detail": "RunSignup states the 10K and 5K races are official AJC Peachtree Road Race Qualifiers and USATF Certified.",
+        "detail": "The 10K and 5K races are listed as official AJC Peachtree Road Race Qualifiers and USATF Certified.",
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "source_path": "course.certification"
       },
       {
         "id": "price",
-        "label": "Current fees",
+        "label": "Current prices",
         "value": "$30 to $40",
-        "detail": "The race page includes $40 for Phantom Runner, 10K Timed Run, and 5K Timed Run; $35 for 5K Untimed Walk/Run and 1K Untimed; and $30 for the Tot Trot during this review.",
+        "detail": "Current listed prices are $40 for Phantom Runner, 10K Timed Run, and 5K Timed Run; $35 for 5K Untimed Walk/Run and 1K Untimed; and $30 for the Tot Trot.",
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "source_path": "registration.price_note"
       },
@@ -158,7 +158,7 @@
         "id": "refunds-transfers",
         "label": "Refund policy",
         "value": "Registration fees are non-refundable",
-        "detail": "The official FAQ states that registration fees are non-refundable.",
+        "detail": "Registration fees are listed as non-refundable.",
         "source_url": "https://mustministries.org/events/gobble-jog/",
         "source_path": "faqs.refunds"
       }
