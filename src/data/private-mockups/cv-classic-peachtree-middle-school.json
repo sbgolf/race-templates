@@ -5,9 +5,13 @@
     "slug": "cv-classic-peachtree-middle-school",
     "tagline": "A family-friendly Dunwoody 5K supporting Peachtree Middle School programs and Whole Student Wellness.",
     "hero_image": {
-      "src": "/mockups/33ea6745e501cf2ae179d813a7ba9c5f/peachtree-middle-school-campus.png",
-      "alt": "Peachtree Middle School campus exterior in Dunwoody",
-      "source": "https://pcms.membershiptoolkit.com/assets/00599/12f53213fcf309713a5e431c1fd6f4ae",
+      "src": "/mockups/33ea6745e501cf2ae179d813a7ba9c5f/cv-classic-runners-hero.png",
+      "alt": "Runners breaking from the start line on a track for a 5K road race",
+      "presentation": "photo",
+      "aspect_ratio": "3.75 / 1",
+      "fit": "cover",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/img/race/bannerImgs/template3/runningGroup2_1500-400.png",
+      "source_label": "RunSignup race-page running banner",
       "generated": false
     },
     "colors": {
@@ -335,10 +339,10 @@
     "template": "community",
     "assets": [
       {
-        "src": "/mockups/33ea6745e501cf2ae179d813a7ba9c5f/peachtree-middle-school-campus.png",
-        "alt": "Peachtree Middle School campus exterior in Dunwoody",
-        "caption": "Official Peachtree Middle School site banner used as a campus hero image.",
-        "source": "https://pcms.membershiptoolkit.com/cv_classic_about",
+        "src": "/mockups/33ea6745e501cf2ae179d813a7ba9c5f/cv-classic-runners-hero.png",
+        "alt": "Runners breaking from the start line on a track for a 5K road race",
+        "caption": "Runner-focused race-morning banner from the RunSignup race page.",
+        "source": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic",
         "generated": false
       },
       {
@@ -374,7 +378,8 @@
         "schedule",
         "sponsors",
         "story",
-        "travel"
+        "travel",
+        "identity.hero_image"
       ],
       "source_confirmed_distance_ids": [
         "5k-participant",
@@ -385,11 +390,6 @@
         {
           "path": "identity.name",
           "source": "RunSignup page heading lists CV Classic for Peachtree Middle School",
-          "confidence": "high"
-        },
-        {
-          "path": "identity.hero_image",
-          "source": "Official Peachtree Middle School PTSO CV Classic page uses a Peachtree Middle School campus banner image",
           "confidence": "high"
         },
         {
@@ -461,6 +461,12 @@
           "path": "contacts.race_contact_url",
           "source": "RunSignup provides the official race contact form URL",
           "confidence": "high"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "https://d368g9lw5ileu7.cloudfront.net/img/race/bannerImgs/template3/runningGroup2_1500-400.png",
+          "confidence": "medium",
+          "notes": "RunSignup renders this runners-running banner on the CV Classic race page; selected to avoid using the school campus photo as the hero."
         }
       ]
     },
