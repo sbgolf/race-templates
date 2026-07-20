@@ -1,0 +1,456 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "24th Annual MUST Gobble Jog",
+    "slug": "must-gobble-jog",
+    "tagline": "A Thanksgiving morning tradition on the Marietta Square benefiting MUST Ministries.",
+    "colors": {
+      "primary": "#183A66",
+      "secondary": "#D96B27",
+      "accent": "#F2B84B",
+      "ink": "#2A1F18"
+    },
+    "hero_image": {
+      "src": "/mockups/0ac13c3307621b842c07d90bb31c41d9/gobble-jog-runners-marietta-square.jpg",
+      "alt": "A large group of Gobble Jog runners on a city street near Marietta Square",
+      "caption": "Gobble Jog runners participate on a city street near Marietta Square.",
+      "source": "https://mustministries.org/wp-content/uploads/2025/12/KDP_3448-1024x681.jpg",
+      "source_label": "MUST Ministries Gobble Jog 2025 photo"
+    }
+  },
+  "event": {
+    "date": "2026-11-26",
+    "location": "Marietta, GA",
+    "venue": "The Marietta Square",
+    "address": "39-75 E Park Square, Marietta, GA 30060",
+    "timezone": "America/New_York"
+  },
+  "distances": [
+    {
+      "id": "10k-timed-run",
+      "name": "10K Timed Run",
+      "distance": "10K",
+      "featured": true,
+      "start_time": "7:30 AM EST",
+      "price": "$40",
+      "profile": "Timed 10K on Thanksgiving morning; listed as an official AJC Peachtree Road Race Qualifier and USATF Certified.",
+      "highlights": [
+        "Timed 10K run",
+        "Official AJC Peachtree Road Race Qualifier",
+        "USATF Certified"
+      ],
+      "provenance": {
+        "source": "RunSignup Events and Event Description sections",
+        "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the 10K event, price, start time, and certification/qualifier statement."
+      }
+    },
+    {
+      "id": "5k-timed-run",
+      "name": "5K Timed Run",
+      "distance": "5K Timed",
+      "start_time": "8:45 AM EST",
+      "price": "$40",
+      "profile": "Timed 5K option for runners; listed as an official AJC Peachtree Road Race Qualifier and USATF Certified.",
+      "highlights": [
+        "Timed 5K run",
+        "Official AJC Peachtree Road Race Qualifier",
+        "USATF Certified"
+      ],
+      "provenance": {
+        "source": "RunSignup Events and Event Description sections",
+        "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the timed 5K event, price, start time, and certification/qualifier statement."
+      }
+    },
+    {
+      "id": "5k-untimed-walk-run",
+      "name": "5K Untimed Walk/Run",
+      "distance": "5K Untimed",
+      "start_time": "9:05 AM EST",
+      "price": "$35",
+      "profile": "Untimed 5K walk/run for participants who want a community-focused Thanksgiving morning option.",
+      "highlights": [
+        "Untimed 5K walk/run",
+        "Family-and-friends participation option",
+        "Price increases after August 31, 2026"
+      ],
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the untimed 5K event, price, and start time."
+      }
+    },
+    {
+      "id": "family-support-options",
+      "name": "1K, Tot Trot & Phantom Runner",
+      "distance": "1K / 50 yards / Phantom",
+      "start_time": "8:30 AM, 10:30 AM, or support from anywhere",
+      "price": "$30–$40",
+      "profile": "Family and support options include the 1K Untimed, Tot Trot for kids 4 and under, and Phantom Runner option.",
+      "highlights": [
+        "1K Untimed at 8:30 AM EST",
+        "Tot Trot at 10:30 AM EST for kids 4 and under",
+        "Phantom Runner supports MUST Ministries and includes the official race shirt"
+      ],
+      "provenance": {
+        "source": "RunSignup Events section, RunSignup Event Description, and official MUST Ministries FAQ",
+        "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
+        "confidence": "high",
+        "verified": true,
+        "method": "Official sources list 1K Untimed, Tot Trot, and Phantom Runner as separate options; grouped here to keep the Community concept concise while preserving the official options in copy and schedule."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=207883",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register through the official RunSignup sign-up page for the Gobble Jog event option you choose.",
+    "deadline": "Registration ends November 26, 2026 for the Tot Trot; listed price increases vary by event.",
+    "price_note": "RunSignup lists $40 for Phantom Runner, 10K Timed Run, and 5K Timed Run; $35 for 5K Untimed Walk/Run and 1K Untimed; and $30 for the Tot Trot during this source pass."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before Thanksgiving morning at the Marietta Square.",
+    "intro": "A confirmed runner checklist for distance choices, official registration, qualifier notes, and how the race supports MUST Ministries.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "distance",
+        "label": "Choose your option",
+        "value": "10K, 5K, 1K, Tot Trot, Phantom",
+        "detail": "The official pages list timed 10K and 5K runs, an untimed 5K, 1K, Tot Trot, and a Phantom Runner option.",
+        "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
+        "source_path": "distances"
+      },
+      {
+        "id": "start-time",
+        "label": "Start times",
+        "value": "7:30 AM through 10:30 AM",
+        "detail": "The official MUST Ministries page lists the race-morning sequence: 10K at 7:30 AM, 1K at 8:30 AM, timed 5K at 8:45 AM, untimed 5K at 9:05 AM, and Tot Trot at 10:30 AM.",
+        "source_url": "https://mustministries.org/events/gobble-jog/",
+        "source_path": "schedule"
+      },
+      {
+        "id": "course",
+        "label": "Timed race note",
+        "value": "AJC Peachtree qualifier / USATF Certified",
+        "detail": "RunSignup states the 10K and 5K races are official AJC Peachtree Road Race Qualifiers and USATF Certified.",
+        "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
+        "source_path": "course.certification"
+      },
+      {
+        "id": "price",
+        "label": "Current listed fees",
+        "value": "$30 to $40",
+        "detail": "RunSignup lists $40 for Phantom Runner, 10K Timed Run, and 5K Timed Run; $35 for 5K Untimed Walk/Run and 1K Untimed; and $30 for the Tot Trot during this source pass.",
+        "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
+        "source_path": "registration.price_note"
+      },
+      {
+        "id": "refunds-transfers",
+        "label": "Refund policy",
+        "value": "Registration fees are non-refundable",
+        "detail": "The official FAQ states that registration fees are non-refundable.",
+        "source_url": "https://mustministries.org/events/gobble-jog/",
+        "source_path": "faqs.refunds"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "24th Annual MUST Gobble Jog — November 26, 2026",
+    "meta_description": "Gobble Jog race details for Marietta, GA: 10K, 5K, 1K, Tot Trot, Phantom Runner, official registration, mission, schedule, awards, and FAQs."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "0ac13c3307621b842c07d90bb31c41d9",
+    "route": "/private/mockups/0ac13c3307621b842c07d90bb31c41d9/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
+    "source_platform": "runsignup",
+    "source_race_id": "207883",
+    "registration_race_id": "207883",
+    "generated_from": "marketing-site mockup prospect config generator plus public-source manual enrichment",
+    "owner_approved_for_generation": true,
+    "prospect_id": "d66e8996-e484-4c10-ab3a-0af9b140440f",
+    "prospect_score": 86,
+    "qualification_reason": "Steve approved generating this candidate. The race is an established Thanksgiving community event with multiple participation options, official RunSignup registration, confirmed logistics, a nonprofit mission, public race imagery, and a strong Community-template fit.",
+    "source_urls": [
+      "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
+      "https://runsignup.com/Race/Register/?raceId=207883",
+      "https://runsignup.com/Race/Donate/GA/Marietta/AnnualMUSTGobbleJog26",
+      "https://runsignup.com/Race/207883/RefundPolicy",
+      "https://mustministries.org/events/gobble-jog/",
+      "https://mustministries.org/wp-content/uploads/2025/12/KDP_3448-1024x681.jpg"
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup race header",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup Event Description and official MUST Ministries page",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "MUST Ministries Gobble Jog 2025 photo gallery",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header and official MUST Ministries page",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup race header/place section and official MUST Ministries page",
+          "confidence": "high"
+        },
+        {
+          "path": "event.address",
+          "source": "Official MUST Ministries page lists The Marietta Square, 39-75 E Park Square, Marietta, GA 30060; RunSignup lists Marietta Square, 50 N Park Square NE, Marietta, GA 30060.",
+          "confidence": "medium"
+        },
+        {
+          "path": "event.timezone",
+          "source": "RunSignup race page script and event time labels use America/New_York / EST",
+          "confidence": "high"
+        },
+        {
+          "path": "distances",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "RunSignup Register navigation",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "RunSignup Event Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "RunSignup Events section and official MUST Ministries page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "Official MUST Ministries schedule and RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.refunds-transfers",
+          "source": "Official MUST Ministries Gobble Jog FAQ accordion",
+          "confidence": "high"
+        },
+        {
+          "path": "story",
+          "source": "RunSignup Event Description and official MUST Ministries page",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "Official MUST Ministries Gobble Jog event page and RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "travel.items.volunteers",
+          "source": "Official MUST Ministries page says almost 300 volunteers will support runners and links volunteer opportunities.",
+          "confidence": "high"
+        },
+        {
+          "path": "charity",
+          "source": "RunSignup Event Description and official MUST Ministries page",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs",
+          "source": "Official MUST Ministries Gobble Jog FAQ accordion",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_distance_ids": [
+        "10k-timed-run",
+        "5k-timed-run",
+        "5k-untimed-walk-run",
+        "family-support-options"
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "travel",
+        "charity",
+        "faqs",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "Official sources did not expose a route map, GPX file, elevation profile, parking plan, packet-pickup details, or sponsor tiers during this pass.",
+        "RunSignup lists Marietta Square at 50 N Park Square NE while the official MUST Ministries page lists The Marietta Square at 39-75 E Park Square; the mockup uses the official-site address and keeps the discrepancy in provenance."
+      ],
+      "summary": "Race basics, distance options, times, prices, registration path, location, nonprofit mission, qualifier/certification note, awards/refund FAQs, volunteer/community scale, and public race imagery are backed by RunSignup and the official MUST Ministries Gobble Jog page."
+    },
+    "captured_at": "2026-07-20T00:00:00.000Z"
+  },
+  "course": {
+    "suppress_visual": true,
+    "type": "Thanksgiving road race",
+    "description": "The official sources confirm timed 10K and 5K races, an untimed 5K, 1K, Tot Trot, and Phantom Runner option at the Marietta Square. No route map or elevation profile was available in this pass.",
+    "certification": "RunSignup states the 10K and 5K races are official AJC Peachtree Road Race Qualifiers and USATF Certified.",
+    "map_links": []
+  },
+  "story": {
+    "kicker": "Thanksgiving tradition",
+    "title": "A Marietta Square race morning built around family, gratitude, and neighbors in need.",
+    "paragraphs": [
+      "Gobble Jog brings runners, walkers, families, teams, and volunteers to the Marietta Square on Thanksgiving morning for the 24th Annual race benefiting MUST Ministries.",
+      "The official event page says more than 10,000 runners participate and almost 300 volunteers support race morning, with teams from area companies, schools, and churches coming together for the mission.",
+      "Every registration helps provide food, housing assistance, emergency support, and hope for neighbors facing hunger and homelessness throughout the community."
+    ],
+    "quote": "More than just a race, Gobble Jog is a Thanksgiving tradition that brings our community together for fun, fitness, and a powerful purpose.",
+    "quote_byline": "RunSignup Event Description",
+    "links": [
+      {
+        "label": "RunSignup race page",
+        "url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26"
+      },
+      {
+        "label": "Official Gobble Jog page",
+        "url": "https://mustministries.org/events/gobble-jog/"
+      },
+      {
+        "label": "Donate on RunSignup",
+        "url": "https://runsignup.com/Race/Donate/GA/Marietta/AnnualMUSTGobbleJog26"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Thursday, November 26, 2026",
+      "name": "10K timed run",
+      "time": "7:30 AM EST",
+      "location": "The Marietta Square",
+      "applies_to_distances": [
+        "10k-timed-run"
+      ]
+    },
+    {
+      "day": "Thursday, November 26, 2026",
+      "name": "1K untimed",
+      "time": "8:30 AM EST",
+      "location": "The Marietta Square",
+      "applies_to_distances": [
+        "family-support-options"
+      ]
+    },
+    {
+      "day": "Thursday, November 26, 2026",
+      "name": "5K timed run",
+      "time": "8:45 AM EST",
+      "location": "The Marietta Square",
+      "applies_to_distances": [
+        "5k-timed-run"
+      ]
+    },
+    {
+      "day": "Thursday, November 26, 2026",
+      "name": "5K untimed walk/run",
+      "time": "9:05 AM EST",
+      "location": "The Marietta Square",
+      "applies_to_distances": [
+        "5k-untimed-walk-run"
+      ]
+    },
+    {
+      "day": "Thursday, November 26, 2026",
+      "name": "Tot Trot",
+      "time": "10:30 AM EST",
+      "location": "The Marietta Square",
+      "applies_to_distances": [
+        "family-support-options"
+      ]
+    }
+  ],
+  "travel": {
+    "items": [
+      {
+        "label": "SQ",
+        "title": "Marietta Square start area",
+        "description": "Official sources place race morning at the Marietta Square in Marietta, GA."
+      },
+      {
+        "label": "VOL",
+        "title": "Volunteer-supported morning",
+        "description": "The official event page says almost 300 volunteers will be on hand to support runners."
+      },
+      {
+        "label": "TEAM",
+        "title": "Teams welcome",
+        "description": "The official page says teams from area companies, schools, and churches participate together to support MUST Ministries."
+      }
+    ]
+  },
+  "charity": {
+    "headline": "Benefiting MUST Ministries",
+    "description": "Gobble Jog benefits MUST Ministries. Official race copy says participation helps provide food, housing assistance, emergency assistance, and hope for neighbors facing hunger and homelessness.",
+    "url": "https://runsignup.com/Race/Donate/GA/Marietta/AnnualMUSTGobbleJog26",
+    "cta_label": "Donate on RunSignup",
+    "icon": "♡"
+  },
+  "faqs": [
+    {
+      "question": "Where is the race held?",
+      "answer": "The official MUST Ministries page lists The Marietta Square at 39-75 E Park Square, Marietta, GA 30060; RunSignup lists Marietta Square in Marietta, GA."
+    },
+    {
+      "question": "What race options are available?",
+      "answer": "Official sources list timed 10K and 5K runs, an untimed 5K, 1K, Tot Trot, and a Phantom/Virtual Runner option."
+    },
+    {
+      "question": "Are the 10K and 5K certified or qualifiers?",
+      "answer": "RunSignup states the 10K and 5K races are official AJC Peachtree Road Race Qualifiers and USATF Certified."
+    },
+    {
+      "question": "What is a Phantom Runner?",
+      "answer": "The official FAQ says a Phantom Runner supports Gobble Jog even if they cannot participate on race day and still receives an official race shirt."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "The official Gobble Jog FAQ states that registration fees are non-refundable."
+    },
+    {
+      "question": "Are awards given?",
+      "answer": "The official FAQ says awards are presented for timed race participants only, including top three male and female finishers in each age division plus Overall Finisher and Masters Overall Finisher awards."
+    }
+  ]
+}
