@@ -656,7 +656,7 @@ footer{background:var(--ink);color:rgba(250,246,238,.6);font-size:.92rem}
 .community-template .hero::before{width:46vw;max-width:660px;height:46vw;max-height:660px;right:0;top:0;transform:translate(38%,-38%);background:rgba(120,149,108,.18);border:1px solid rgba(63,95,67,.14)}
 .community-template .hero::after{width:34vw;max-width:460px;height:34vw;max-height:460px;left:0;bottom:0;transform:translate(-38%,38%);background:rgba(166,83,46,.12);border:1px solid rgba(166,83,46,.12)}
 .community-template .hero-inner{max-width:var(--maxw);margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
-.community-template .hero-inner > *{min-width:0}
+.community-template .hero-inner > *{min-width:0;max-width:100%}
 .community-template .hero-copy{background:rgba(251,245,232,.54);border:1px solid rgba(47,39,29,.08);border-radius:28px;padding:clamp(24px,4vw,44px);box-shadow:0 26px 80px -56px rgba(47,39,29,.42);backdrop-filter:blur(8px);min-width:0}
 .community-template .hero-eyebrow{font-family:"Nunito",-apple-system,BlinkMacSystemFont,sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:32px}
 .community-template .hero h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(3rem,6.2vw,5.4rem);font-weight:600;line-height:1.02;letter-spacing:-.035em;text-transform:none;color:var(--forest);margin-bottom:16px;overflow-wrap:normal;word-break:normal;hyphens:auto}
@@ -744,12 +744,16 @@ footer{background:var(--ink);color:rgba(250,246,238,.6);font-size:.92rem}
   .brand span{max-width:calc(100vw - 116px)}
   .hero,.community-template .hero{padding-inline:14px}
   .hero-inner,.community-template .hero-inner{width:100%;max-width:100%;gap:34px}
-  .hero-copy,.community-template .hero-copy{width:100%;max-width:calc(100vw - 28px);padding:clamp(22px,6vw,30px)}
+  .hero-copy,.community-template .hero-copy{width:100%;max-width:100%;padding:clamp(22px,6vw,30px);overflow:hidden}
+  .hero-inner > .reveal,.community-template .hero-inner > .reveal{width:100%;max-width:100%;min-width:0}
   .hero h1,.community-template .hero h1{font-size:clamp(1.6rem,7vw,1.9rem);line-height:1.12;overflow-wrap:normal;word-break:normal;hyphens:auto}
   .hero-tagline,.community-template .hero-tagline,
-  .hero p.lead,.community-template .hero p.lead{max-width:100%;overflow-wrap:normal;word-break:normal;hyphens:auto}
-  .hero-cta .btn,.community-template .hero-cta .btn{width:100%;justify-content:center;text-align:center;white-space:normal}
-  .hero-photo,.community-template .hero-photo{width:100%;max-width:calc(100vw - 28px);border-radius:22px}
+  .hero p.lead,.community-template .hero p.lead{max-width:100%;overflow-wrap:anywhere;word-break:normal;hyphens:auto}
+  .hero-distances,.community-template .hero-distances{width:100%;max-width:100%;min-width:0}
+  .dist-chip,.community-template .dist-chip{max-width:100%;overflow-wrap:anywhere;text-align:center}
+  .hero-cta,.community-template .hero-cta{display:grid;grid-template-columns:minmax(0,1fr);width:100%;max-width:100%;min-width:0}
+  .hero-cta .btn,.community-template .hero-cta .btn{width:100%;min-width:0;max-width:100%;justify-content:center;text-align:center;white-space:normal;overflow-wrap:anywhere;padding-inline:14px}
+  .hero-photo,.community-template .hero-photo{width:100%;max-width:100%;border-radius:22px}
   .hero-meta-strip{top:14px;left:14px;right:14px}
   .hero-meta-pill{font-size:.68rem;padding:6px 10px}
   .entry-price-note{align-items:flex-start;border-radius:16px}
