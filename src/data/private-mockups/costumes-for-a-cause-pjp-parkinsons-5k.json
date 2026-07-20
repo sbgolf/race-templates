@@ -150,10 +150,6 @@
       {
         "label": "Official race page",
         "url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox"
-      },
-      {
-        "label": "Race contact form",
-        "url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox/Contact"
       }
     ]
   },
@@ -197,7 +193,6 @@
       "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
       "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
       "https://runsignup.com/Race/Register/?raceId=110368",
-      "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox/Contact",
       "https://www.pjparkinsons.org/"
     ],
     "contact_sources": [
@@ -207,18 +202,15 @@
         "context": "RunSignup volunteer note and official organization contact source",
         "source_url": "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
         "status": "public_org_contact"
-      },
-      {
-        "type": "form",
-        "url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox/Contact",
-        "context": "RunSignup Race Contact form",
-        "status": "contact_form_only"
       }
     ],
     "assets": [
       {
         "path": "public/mockups/cab74bf960391f44e3c05c3a0882ed22/pjp-parkinsons-5k-banner.jpg",
+        "src": "/mockups/cab74bf960391f44e3c05c3a0882ed22/pjp-parkinsons-5k-banner.jpg",
+        "alt": "Costumes for a Cause for PJP Parkinson's 5k race banner from RunSignup",
         "source_url": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-116/116947/websiteBanner-QcpSuoau-bQs-up.jpg",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-116/116947/websiteBanner-QcpSuoau-bQs-up.jpg",
         "type": "hero_image"
       }
     ],
