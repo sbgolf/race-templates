@@ -1,0 +1,324 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Costumes for a Cause for PJP Parkinson's 5k",
+    "slug": "costumes-for-a-cause-pjp-parkinsons-5k",
+    "tagline": "A Halloween 5K in Sequoyah Hills supporting Parkinson's awareness and East Tennessee families.",
+    "short_name": "PJP Parkinson's 5K",
+    "hero_image": {
+      "src": "/mockups/cab74bf960391f44e3c05c3a0882ed22/pjp-parkinsons-5k-banner.jpg",
+      "alt": "Costumes for a Cause for PJP Parkinson's 5k race banner from the official RunSignup page",
+      "caption": "The RunSignup race banner for Costumes for a Cause for PJP Parkinson's 5k.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-116/116947/websiteBanner-QcpSuoau-bQs-up.jpg",
+      "source_label": "RunSignup race-page banner image"
+    },
+    "colors": {
+      "primary": "#2F5D3B",
+      "secondary": "#F47B20",
+      "accent": "#7B4BA1",
+      "ink": "#231F20"
+    }
+  },
+  "event": {
+    "date": "2026-10-31",
+    "location": "Knoxville, TN",
+    "timezone": "America/New_York",
+    "venue": "Sequoyah Hills",
+    "address": "1400 Cherokee Blvd, Knoxville, TN 37919"
+  },
+  "distances": [
+    {
+      "id": "5k-run",
+      "name": "5K Run",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "9:00 AM EDT",
+      "end_time": "12:00 PM EDT",
+      "price": "$38.10 incl. $3.10 fee",
+      "profile": "An in-person Halloween 5K run in Sequoyah Hills supporting PJP Parkinson's Support.",
+      "highlights": [
+        "Race T-shirt guaranteed with early registration",
+        "Runner raffle ticket and sponsor-donated swag bag",
+        "Awards and prizes for overall and age-group winners"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
+      "provenance": {
+        "source": "RunSignup Events and Info sections",
+        "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the 5K Run, 9:00 AM to 12:00 PM EDT window, current fee-inclusive price, price increase date, and race inclusions."
+      }
+    },
+    {
+      "id": "virtual-walk-5k-run",
+      "name": "Virtual Walk/5K Run",
+      "distance": "Virtual 5K/10K",
+      "price": "$27.50 incl. $2.50 fee",
+      "profile": "A remote participation option for supporters who cannot attend the Knoxville race in person.",
+      "highlights": [
+        "Participate from the gym, neighborhood, or another chosen route",
+        "Supports the same Parkinson's awareness event",
+        "Registration listed through race day afternoon"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the Virtual Walk/5K Run event, virtual 5k/10k copy, current fee-inclusive price, and registration ending time."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=110368",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register through the official RunSignup sign-up page for the in-person 5K or virtual participation option.",
+    "deadline": "5K registration price increases after September 1, 2026 at 9:00 AM EDT; virtual registration ends October 31, 2026 at 1:30 PM EDT",
+    "price_note": "The 5K Run currently shows $38.10 including the RunSignup fee, increasing to $43.40 after September 1. The virtual option currently shows $27.50 including the fee."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before you head to Sequoyah Hills.",
+    "intro": "A quick runner checklist for the Halloween race date, packet pick-up, pricing, included items, and award categories.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, October 31, 2026",
+        "detail": "The official race listing and event description place the 2026 run on Halloween in Sequoyah Hills.",
+        "source_url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "location",
+        "label": "Start area",
+        "value": "Sequoyah Hills, Knoxville",
+        "detail": "RunSignup lists the event location at 1400 Cherokee Blvd in Knoxville, Tennessee.",
+        "source_url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pick-up",
+        "value": "Fleet Feet, October 3",
+        "detail": "The race information page says participants can avoid race-day lines by picking up packets from 4:00 to 6:30 PM at Fleet Feet, 11619 Parkside Dr.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
+      },
+      {
+        "id": "price",
+        "label": "Current 5K price",
+        "value": "$38.10 through Sept. 1",
+        "detail": "The Events page shows the 5K Run at $38.10 including fee until the listed September 1 price increase, then $43.40 including fee.",
+        "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
+        "source_path": "runner_decision_checklist.items.price",
+        "applies_to_distance_ids": ["5k-run"]
+      },
+      {
+        "id": "swag",
+        "label": "Included items",
+        "value": "Swag bag, raffle ticket, shirt",
+        "detail": "RunSignup lists a sponsor-donated swag bag, runner raffle ticket, race T-shirt for participants, and post-race refreshments.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
+        "source_path": "runner_decision_checklist.items.swag"
+      },
+      {
+        "id": "awards",
+        "label": "Awards",
+        "value": "Overall and age-group awards",
+        "detail": "Awards and prizes are listed for top overall male and female runners and top male and female runners in each listed age category.",
+        "source_url": "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
+        "source_path": "runner_decision_checklist.items.awards",
+        "applies_to_distance_ids": ["5k-run"]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "Why runners gather",
+    "title": "Halloween costumes, East Tennessee support, and Parkinson's awareness.",
+    "paragraphs": [
+      "PJP Parkinson's Support frames the 2026 race as an awareness event that brings Parkinson's support groups from across East Tennessee together for patients and families.",
+      "The race description says PJP Parkinson's Support began with an inaugural walk-a-thon, added the 5K run in 2019, and continues the event to champion local support for people living with Parkinson's disease.",
+      "For participants, the page combines a clear 5K start, a virtual option, packet pickup, shirts, awards, raffle items, sponsor swag, and refreshments into one community-focused race morning."
+    ],
+    "links": [
+      {
+        "label": "Official race page",
+        "url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox"
+      },
+      {
+        "label": "Race contact form",
+        "url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox/Contact"
+      }
+    ]
+  },
+  "startline_value": {
+    "headline": "Turn the RunSignup listing into a source-backed race page owners can review privately.",
+    "intro": "This mockup keeps registration on RunSignup while presenting the race story, Halloween theme, runner logistics, and Parkinson's support mission in one focused owner-review route.",
+    "improved": [
+      "Dedicated, noindex private page with a tokenized review route",
+      "Runner-facing checklist assembled from the official RunSignup race and events pages",
+      "Hero imagery captured from the official RunSignup banner instead of a generic sample image"
+    ],
+    "paid_includes": [
+      "Launch-ready landing page copy and layout",
+      "Registration CTA wired back to RunSignup",
+      "Source provenance and uncertainty notes for owner review"
+    ]
+  },
+  "seo": {
+    "meta_title": "Costumes for a Cause for PJP Parkinson's 5k — October 31, 2026",
+    "meta_description": "Costumes for a Cause race details for Knoxville, TN: Halloween 5K, virtual option, Sequoyah Hills location, packet pickup, pricing, awards, and registration."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "cab74bf960391f44e3c05c3a0882ed22",
+    "route": "/private/mockups/cab74bf960391f44e3c05c3a0882ed22/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox",
+    "source_platform": "runsignup",
+    "source_race_id": "110368",
+    "registration_race_id": "110368",
+    "prospect_id": "4f291e0e-d33c-49c9-8b5d-fac006cae560",
+    "captured_at": "2026-07-20T13:34:13Z",
+    "generated_from": "scheduled StartLine Community-lane private mockup task",
+    "owner_approved_for_generation": true,
+    "qualification_reason": "The race has a RunSignup listing, official organization site, public race banner, direct registration path, community/cause positioning, Halloween theme, in-person and virtual participation options, and source-backed runner logistics suitable for the Community template.",
+    "source_urls": [
+      "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox",
+      "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
+      "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
+      "https://runsignup.com/Race/Register/?raceId=110368",
+      "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox/Contact",
+      "https://www.pjparkinsons.org/"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "info@pjparkinsons.org",
+        "context": "RunSignup volunteer note and official organization contact source",
+        "source_url": "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
+        "status": "public_org_contact"
+      },
+      {
+        "type": "form",
+        "url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox/Contact",
+        "context": "RunSignup Race Contact form",
+        "status": "contact_form_only"
+      }
+    ],
+    "assets": [
+      {
+        "path": "public/mockups/cab74bf960391f44e3c05c3a0882ed22/pjp-parkinsons-5k-banner.jpg",
+        "source_url": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-116/116947/websiteBanner-QcpSuoau-bQs-up.jpg",
+        "type": "hero_image"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox",
+      "source_confirmed_sections": [
+        "runner_decision_checklist"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k-run",
+        "virtual-walk-5k-run"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup race listing and metadata",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup race description",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "RunSignup race-page banner image",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header and JSON-LD",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup place section and JSON-LD",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.5k-run",
+          "source": "RunSignup Events section and JSON-LD",
+          "confidence": "high"
+        },
+        {
+          "path": "distances.virtual-walk-5k-run",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "registration",
+          "source": "RunSignup Register and Events pages",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "RunSignup race listing and description",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup place section and JSON-LD",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup Info section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "source": "RunSignup Info section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.awards",
+          "source": "RunSignup Info section",
+          "confidence": "high"
+        },
+        {
+          "path": "story",
+          "source": "RunSignup race description and event sections",
+          "confidence": "high"
+        },
+        {
+          "path": "contact_sources",
+          "source": "RunSignup contact form and public organization email reference",
+          "confidence": "high"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "The mockup uses only source-backed RunSignup and official-site facts. Course-map details, parking instructions, refund policy, and race-day packet pickup were not added because they were not confirmed in the inspected source content.",
+      "items": [
+        "Packet pick-up text on RunSignup currently says 10/3 for an October 31, 2026 race; it was preserved as source text but may need owner confirmation.",
+        "The virtual event page names Virtual Walk/5K Run while its copy also references a virtual 5k/10k; both labels were kept narrow and source-linked."
+      ]
+    }
+  }
+}
