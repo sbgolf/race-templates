@@ -33,7 +33,7 @@
       "featured": true,
       "start_time": "7:30 AM EST",
       "price": "$40",
-      "profile": "Timed 10K on Thanksgiving morning; listed as an official AJC Peachtree Road Race Qualifier and USATF Certified.",
+      "profile": "Timed 10K on Thanksgiving morning; presented as an official AJC Peachtree Road Race Qualifier and USATF Certified.",
       "highlights": [
         "Timed 10K run",
         "Official AJC Peachtree Road Race Qualifier",
@@ -44,7 +44,7 @@
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "confidence": "high",
         "verified": true,
-        "method": "RunSignup lists the 10K event, price, start time, and certification/qualifier statement."
+        "method": "The race page includes the 10K event, price, start time, and certification/qualifier statement."
       }
     },
     {
@@ -53,7 +53,7 @@
       "distance": "5K Timed",
       "start_time": "8:45 AM EST",
       "price": "$40",
-      "profile": "Timed 5K option for runners; listed as an official AJC Peachtree Road Race Qualifier and USATF Certified.",
+      "profile": "Timed 5K option for runners; presented as an official AJC Peachtree Road Race Qualifier and USATF Certified.",
       "highlights": [
         "Timed 5K run",
         "Official AJC Peachtree Road Race Qualifier",
@@ -64,7 +64,7 @@
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "confidence": "high",
         "verified": true,
-        "method": "RunSignup lists the timed 5K event, price, start time, and certification/qualifier statement."
+        "method": "The race page includes the timed 5K event, price, start time, and certification/qualifier statement."
       }
     },
     {
@@ -84,7 +84,7 @@
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "confidence": "high",
         "verified": true,
-        "method": "RunSignup lists the untimed 5K event, price, and start time."
+        "method": "The race page includes the untimed 5K event, price, and start time."
       }
     },
     {
@@ -113,8 +113,8 @@
     "platform": "runsignup",
     "cta_label": "Register on RunSignup",
     "intro": "Register through the official RunSignup sign-up page for the Gobble Jog event option you choose.",
-    "deadline": "Registration ends November 26, 2026 for the Tot Trot; listed price increases vary by event.",
-    "price_note": "RunSignup lists $40 for Phantom Runner, 10K Timed Run, and 5K Timed Run; $35 for 5K Untimed Walk/Run and 1K Untimed; and $30 for the Tot Trot during this source pass."
+    "deadline": "Registration ends November 26, 2026 for the Tot Trot; price increases vary by event.",
+    "price_note": "The race page includes $40 for Phantom Runner, 10K Timed Run, and 5K Timed Run; $35 for 5K Untimed Walk/Run and 1K Untimed; and $30 for the Tot Trot during this review."
   },
   "runner_decision_checklist": {
     "kicker": "Race day notes",
@@ -148,9 +148,9 @@
       },
       {
         "id": "price",
-        "label": "Current listed fees",
+        "label": "Current fees",
         "value": "$30 to $40",
-        "detail": "RunSignup lists $40 for Phantom Runner, 10K Timed Run, and 5K Timed Run; $35 for 5K Untimed Walk/Run and 1K Untimed; and $30 for the Tot Trot during this source pass.",
+        "detail": "The race page includes $40 for Phantom Runner, 10K Timed Run, and 5K Timed Run; $35 for 5K Untimed Walk/Run and 1K Untimed; and $30 for the Tot Trot during this review.",
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "source_path": "registration.price_note"
       },
@@ -223,7 +223,7 @@
         },
         {
           "path": "event.address",
-          "source": "Official MUST Ministries page lists The Marietta Square, 39-75 E Park Square, Marietta, GA 30060; RunSignup lists Marietta Square, 50 N Park Square NE, Marietta, GA 30060.",
+          "source": "Official MUST Ministries page lists The Marietta Square, 39-75 E Park Square, Marietta, GA 30060; The race page includes Marietta Square, 50 N Park Square NE, Marietta, GA 30060.",
           "confidence": "medium"
         },
         {
@@ -315,8 +315,8 @@
     },
     "uncertainty": {
       "items": [
-        "Official sources did not expose a route map, GPX file, elevation profile, parking plan, packet-pickup details, or sponsor tiers during this pass.",
-        "RunSignup lists Marietta Square at 50 N Park Square NE while the official MUST Ministries page lists The Marietta Square at 39-75 E Park Square; the mockup uses the official-site address and keeps the discrepancy in provenance."
+        "Available race pages did not include a route map, GPX file, elevation profile, parking plan, packet-pickup details, or sponsor tiers during this pass.",
+        "The race page includes Marietta Square at 50 N Park Square NE while the official MUST Ministries page lists The Marietta Square at 39-75 E Park Square; the mockup uses the official-site address and keeps the discrepancy in provenance."
       ],
       "summary": "Race basics, distance options, times, prices, registration path, location, nonprofit mission, qualifier/certification note, awards/refund FAQs, volunteer/community scale, and public race imagery are backed by RunSignup and the official MUST Ministries Gobble Jog page."
     },
@@ -430,7 +430,7 @@
   "faqs": [
     {
       "question": "Where is the race held?",
-      "answer": "The official MUST Ministries page lists The Marietta Square at 39-75 E Park Square, Marietta, GA 30060; RunSignup lists Marietta Square in Marietta, GA."
+      "answer": "The official MUST Ministries page lists The Marietta Square at 39-75 E Park Square, Marietta, GA 30060; The race page includes Marietta Square in Marietta, GA."
     },
     {
       "question": "What race options are available?",
