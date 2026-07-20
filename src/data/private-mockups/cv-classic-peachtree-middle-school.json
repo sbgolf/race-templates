@@ -47,7 +47,7 @@
       "provenance": {
         "verified": true,
         "source_url": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic",
-        "method": "RunSignup Events and Description sections list the 5K participant option, 8:00 AM race start, schedule, same-day registration note, price, and course map asset."
+        "method": "Verified against RunSignup event details for the 5K participant option, 8:00 AM race start, schedule, same-day registration note, price, and course map asset."
       },
       "price": "$25"
     },
@@ -58,8 +58,8 @@
       "start_time": "8:00 AM",
       "profile": "Family sponsorship entry that includes a 5K participant",
       "highlights": [
-        "The race page includes this option at $100",
-        "The race description notes family sponsorships earn an additional CV Day Pass for Peachtree Middle School students",
+        "Family sponsorship is listed at $100",
+        "Family sponsorships earn an additional CV Day Pass for Peachtree Middle School students",
         "Registration for this option runs through October 15, 2026"
       ],
       "provenance": {
@@ -76,8 +76,8 @@
       "start_time": "8:00 AM",
       "profile": "Support option for people interested in backing the CV Classic without running",
       "highlights": [
-        "The race page includes the Phantom Runner option at $30",
-        "The race description notes supporters can sign up as a Phantom Runner if they are not interested in running",
+        "Phantom Runner is listed at $30",
+        "Supporters can sign up as a Phantom Runner if they are not interested in running",
         "Registration for this option runs through race morning"
       ],
       "provenance": {
@@ -90,7 +90,7 @@
   ],
   "course": {
     "title": "A school-centered Dunwoody 5K route.",
-    "description": "The official route asset labels the 2026 CV Classic 5K Race Route, starts at the PCMS track, moves through nearby streets around Peachtree Middle School, and finishes in the parking lot.",
+    "description": "The 2026 CV Classic 5K route starts at the PCMS track, moves through nearby streets around Peachtree Middle School, and finishes in the parking lot.",
     "type": "Road 5K",
     "distance_miles": 3.1,
     "image": {
@@ -109,7 +109,7 @@
         "id": "date",
         "label": "Race date",
         "value": "Saturday, November 7, 2026",
-        "detail": "The race page includes Sat November 7, 2026; the Peachtree Middle School PTSO page confirms the 2026 race will be held Saturday, November 7th.",
+        "detail": "The 2026 race is scheduled for Saturday, November 7.",
         "source_path": "runner_decision_checklist.items.date",
         "source_url": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic"
       },
@@ -117,7 +117,7 @@
         "id": "location",
         "label": "Start/finish area",
         "value": "Peachtree Middle School track area",
-        "detail": "The race page includes Peachtree Middle School at 4664 North Peachtree Road, and the description says the race starts and finishes around the school track.",
+        "detail": "The 5K is centered at Peachtree Middle School, 4664 North Peachtree Road, and starts and finishes around the school track.",
         "source_path": "runner_decision_checklist.items.location",
         "source_url": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic"
       },
@@ -125,7 +125,7 @@
         "id": "parking",
         "label": "Parking",
         "value": "Peachtree Middle School, Brook Run Park, and Chesnut Elementary if needed",
-        "detail": "The RunSignup description lists parking availability at these locations.",
+        "detail": "Parking is listed at these school and park locations for race morning.",
         "source_path": "runner_decision_checklist.items.parking",
         "source_url": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic"
       },
@@ -133,7 +133,7 @@
         "id": "packet-pickup",
         "label": "Bib/shirt pickup",
         "value": "Nov. 5, Nov. 6, and race morning windows",
-        "detail": "The race page includes pickup Thursday, November 5 from 4:30–6:30 PM in front of the school, Friday, November 6 from 1:00–3:00 PM in front of the school, and Saturday, November 7 from 6:30–7:30 AM at the track.",
+        "detail": "Race bib/shirt pickup is listed for Thursday, November 5 from 4:30–6:30 PM in front of the school, Friday, November 6 from 1:00–3:00 PM in front of the school, and Saturday, November 7 from 6:30–7:30 AM at the track.",
         "source_path": "runner_decision_checklist.items.packet-pickup",
         "source_url": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic"
       },
@@ -141,7 +141,7 @@
         "id": "awards",
         "label": "Awards",
         "value": "Overall, masters, and age-group awards",
-        "detail": "The race page includes top male/female overall, top masters male/female overall, and top three male/female in age groups from 10 and under through 60 and over.",
+        "detail": "Awards include top male/female overall, top masters male/female overall, and top three male/female in age groups from 10 and under through 60 and over.",
         "source_path": "runner_decision_checklist.items.awards",
         "source_url": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic"
       },
@@ -149,7 +149,7 @@
         "id": "price",
         "label": "Listed prices",
         "value": "$25 5K, $100 family sponsorship, $30 phantom runner",
-        "detail": "The race page includes current base prices for each public entry option before RunSignup processing fees.",
+        "detail": "Current base prices are listed for each public entry option before RunSignup processing fees.",
         "source_path": "runner_decision_checklist.items.price",
         "source_url": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic"
       }
@@ -159,9 +159,9 @@
     "kicker": "Race overview",
     "title": "Run, walk, volunteer, and support Whole Student Wellness.",
     "paragraphs": [
-      "The CV Classic is an annual 5K road race for Peachtree Middle School. Event pages describe the event as a fundraiser and a way to promote cardiovascular health and Whole Student Wellness for students, faculty, and the community.",
+      "The CV Classic is an annual 5K road race for Peachtree Middle School that raises funds while promoting cardiovascular health and Whole Student Wellness for students, faculty, and the community.",
       "The 2026 race morning is centered at Peachtree Middle School, with race-day registration from 7:00 to 7:30 AM, the 5K at 8:00 AM, and an awards ceremony scheduled for 9:00 AM.",
-      "The race page includes standard 5K participation, a family sponsorship with a 5K participant, and a Phantom Runner support option for supporters who are not running."
+      "Families can choose standard 5K participation, a family sponsorship with a 5K participant, or a Phantom Runner support option for supporters who are not running."
     ],
     "image": {
       "src": "/mockups/33ea6745e501cf2ae179d813a7ba9c5f/peachtree-middle-school-logo.jpg",
@@ -322,7 +322,7 @@
   ],
   "seo": {
     "meta_title": "CV Classic for Peachtree Middle School — Dunwoody 5K",
-    "meta_description": "A StartLine private concept for the CV Classic, a family-friendly 5K at Peachtree Middle School in Dunwoody, Georgia."
+    "meta_description": "CV Classic race details for a family-friendly 5K at Peachtree Middle School in Dunwoody, Georgia."
   },
   "private_mockup": {
     "generated": true,
