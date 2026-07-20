@@ -91,7 +91,7 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
 
     {isMultiDistance ? <div class="picker reveal" role="tablist" aria-label="Distance picker">
       {distances.map((distance) => <button class:list={["pk", { active: distance.id === featuredDistance?.id }]} role="tab" aria-selected={distance.id === featuredDistance?.id ? 'true' : 'false'} data-distance={distance.id} onclick="pickDistance(this)">
-        {distance.name} <small>· {distance.distance}</small>
+        <span class="pk-label">{distance.name}</span><small>{distance.distance}</small>
       </button>)}
     </div> : null}
 
