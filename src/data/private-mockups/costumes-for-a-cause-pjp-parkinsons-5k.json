@@ -47,7 +47,7 @@
         "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
         "confidence": "high",
         "verified": true,
-        "method": "RunSignup lists the 5K Run, 9:00 AM to 12:00 PM EDT window, current fee-inclusive price, price increase date, and race inclusions."
+        "method": "The race page includes the 5K Run, 9:00 AM to 12:00 PM EDT window, current fee-inclusive price, price increase date, and race inclusions."
       }
     },
     {
@@ -67,7 +67,7 @@
         "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
         "confidence": "high",
         "verified": true,
-        "method": "RunSignup lists the Virtual Walk/5K Run event, virtual 5k/10k copy, current fee-inclusive price, and registration ending time."
+        "method": "The race page includes the Virtual Walk/5K Run event, virtual 5k/10k copy, current fee-inclusive price, and registration ending time."
       }
     }
   ],
@@ -97,7 +97,7 @@
         "id": "location",
         "label": "Start area",
         "value": "Sequoyah Hills, Knoxville",
-        "detail": "RunSignup lists the event location at 1400 Cherokee Blvd in Knoxville, Tennessee.",
+        "detail": "The race page includes the event location at 1400 Cherokee Blvd in Knoxville, Tennessee.",
         "source_url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox",
         "source_path": "runner_decision_checklist.items.location"
       },
@@ -105,7 +105,7 @@
         "id": "packet-pickup",
         "label": "Packet pick-up",
         "value": "Fleet Feet, October 3",
-        "detail": "The race information page says participants can avoid race-day lines by picking up packets from 4:00 to 6:30 PM at Fleet Feet, 11619 Parkside Dr.",
+        "detail": "Race information notes participants can avoid race-day lines by picking up packets from 4:00 to 6:30 PM at Fleet Feet, 11619 Parkside Dr.",
         "source_url": "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
         "source_path": "runner_decision_checklist.items.packet-pickup"
       },
@@ -122,7 +122,7 @@
         "id": "swag",
         "label": "Included items",
         "value": "Swag bag, raffle ticket, shirt",
-        "detail": "RunSignup lists a sponsor-donated swag bag, runner raffle ticket, race T-shirt for participants, and post-race refreshments.",
+        "detail": "The race page includes a sponsor-donated swag bag, runner raffle ticket, race T-shirt for participants, and post-race refreshments.",
         "source_url": "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
         "source_path": "runner_decision_checklist.items.swag"
       },
@@ -130,7 +130,7 @@
         "id": "awards",
         "label": "Awards",
         "value": "Overall and age-group awards",
-        "detail": "Awards and prizes are listed for top overall male and female runners and top male and female runners in each listed age category.",
+        "detail": "Awards and prizes are scheduled for top overall male and female runners and top male and female runners in each listed age category.",
         "source_url": "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
         "source_path": "runner_decision_checklist.items.awards",
         "applies_to_distance_ids": ["5k-run"]
@@ -142,7 +142,7 @@
     "title": "Halloween costumes, East Tennessee support, and Parkinson's awareness.",
     "paragraphs": [
       "PJP Parkinson's Support frames the 2026 race as an awareness event that brings Parkinson's support groups from across East Tennessee together for patients and families.",
-      "The race description says PJP Parkinson's Support began with an inaugural walk-a-thon, added the 5K run in 2019, and continues the event to champion local support for people living with Parkinson's disease.",
+      "The race description notes PJP Parkinson's Support began with an inaugural walk-a-thon, added the 5K run in 2019, and continues the event to champion local support for people living with Parkinson's disease.",
       "For participants, the page combines a clear 5K start, a virtual option, packet pickup, shirts, awards, raffle items, sponsor swag, and refreshments into one community-focused race morning."
     ],
     "links": [
