@@ -47,13 +47,14 @@
         "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
         "confidence": "high",
         "verified": true,
-        "method": "The race page includes the 5K Run, 9:00 AM to 12:00 PM EDT window, current fee-inclusive price, price increase date, and race inclusions."
+        "method": "Verified against the RunSignup event listing for the 5K Run, 9:00 AM to 12:00 PM EDT window, current fee-inclusive price, price increase date, and race inclusions."
       }
     },
     {
       "id": "virtual-walk-5k-run",
       "name": "Virtual Walk/5K Run",
       "distance": "Virtual 5K/10K",
+      "start_time": "Flexible virtual option",
       "price": "$27.50 incl. $2.50 fee",
       "profile": "A remote participation option for supporters who cannot attend the Knoxville race in person.",
       "highlights": [
@@ -67,7 +68,7 @@
         "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
         "confidence": "high",
         "verified": true,
-        "method": "The race page includes the Virtual Walk/5K Run event, virtual 5k/10k copy, current fee-inclusive price, and registration ending time."
+        "method": "Verified against the RunSignup event listing for the Virtual Walk/5K Run event, virtual 5k/10k copy, current fee-inclusive price, and registration ending time."
       }
     }
   ],
@@ -89,7 +90,7 @@
         "id": "date",
         "label": "Race date",
         "value": "Saturday, October 31, 2026",
-        "detail": "The official race listing and event description place the 2026 run on Halloween in Sequoyah Hills.",
+        "detail": "Halloween race morning is centered in Sequoyah Hills for the 2026 event.",
         "source_url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox",
         "source_path": "runner_decision_checklist.items.date"
       },
@@ -97,7 +98,7 @@
         "id": "location",
         "label": "Start area",
         "value": "Sequoyah Hills, Knoxville",
-        "detail": "The race page includes the event location at 1400 Cherokee Blvd in Knoxville, Tennessee.",
+        "detail": "The in-person race location is 1400 Cherokee Blvd in Knoxville, Tennessee.",
         "source_url": "https://runsignup.com/Race/TN/Knoxville/ParkinsonsAwarenessKnox",
         "source_path": "runner_decision_checklist.items.location"
       },
@@ -113,7 +114,7 @@
         "id": "price",
         "label": "Current 5K price",
         "value": "$38.10 through Sept. 1",
-        "detail": "The Events page shows the 5K Run at $38.10 including fee until the listed September 1 price increase, then $43.40 including fee.",
+        "detail": "The 5K Run is listed at $38.10 including fee until the September 1 price increase, then $43.40 including fee.",
         "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
         "source_path": "runner_decision_checklist.items.price",
         "applies_to_distance_ids": ["5k-run"]
@@ -122,7 +123,7 @@
         "id": "swag",
         "label": "Included items",
         "value": "Swag bag, raffle ticket, shirt",
-        "detail": "The race page includes a sponsor-donated swag bag, runner raffle ticket, race T-shirt for participants, and post-race refreshments.",
+        "detail": "Participants receive a sponsor-donated swag bag, runner raffle ticket, race T-shirt, and post-race refreshments.",
         "source_url": "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
         "source_path": "runner_decision_checklist.items.swag"
       },
@@ -142,7 +143,7 @@
     "title": "Halloween costumes, East Tennessee support, and Parkinson's awareness.",
     "paragraphs": [
       "PJP Parkinson's Support frames the 2026 race as an awareness event that brings Parkinson's support groups from across East Tennessee together for patients and families.",
-      "The race description notes PJP Parkinson's Support began with an inaugural walk-a-thon, added the 5K run in 2019, and continues the event to champion local support for people living with Parkinson's disease.",
+      "PJP Parkinson's Support began with an inaugural walk-a-thon, added the 5K run in 2019, and continues the event to champion local support for people living with Parkinson's disease.",
       "For participants, the page combines a clear 5K start, a virtual option, packet pickup, shirts, awards, raffle items, sponsor swag, and refreshments into one community-focused race morning."
     ],
     "links": [
