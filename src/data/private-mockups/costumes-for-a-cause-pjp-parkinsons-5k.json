@@ -60,7 +60,7 @@
       "highlights": [
         "Participate from the gym, neighborhood, or another chosen route",
         "Supports the same Parkinson's awareness event",
-        "Registration listed through race day afternoon"
+        "Registration remains open through race day afternoon"
       ],
       "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
       "provenance": {
@@ -114,7 +114,7 @@
         "id": "price",
         "label": "Current 5K price",
         "value": "$38.10 through Sept. 1",
-        "detail": "The 5K Run is listed at $38.10 including fee until the September 1 price increase, then $43.40 including fee.",
+        "detail": "The 5K Run is $38.10 including fee until the September 1 price increase, then $43.40 including fee.",
         "source_url": "https://runsignup.com/Race/Events/TN/Knoxville/ParkinsonsAwarenessKnox",
         "source_path": "runner_decision_checklist.items.price",
         "applies_to_distance_ids": ["5k-run"]
@@ -131,7 +131,7 @@
         "id": "awards",
         "label": "Awards",
         "value": "Overall and age-group awards",
-        "detail": "Awards and prizes are scheduled for top overall male and female runners and top male and female runners in each listed age category.",
+        "detail": "Awards and prizes are scheduled for top overall male and female runners and top male and female runners in each age category.",
         "source_url": "https://runsignup.com/Race/Info/TN/Knoxville/ParkinsonsAwarenessKnox",
         "source_path": "runner_decision_checklist.items.awards",
         "applies_to_distance_ids": ["5k-run"]
