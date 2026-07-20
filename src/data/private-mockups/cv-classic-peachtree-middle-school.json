@@ -58,7 +58,7 @@
       "start_time": "8:00 AM",
       "profile": "Family sponsorship entry that includes a 5K participant",
       "highlights": [
-        "Family sponsorship is listed at $100",
+        "Family sponsorship is $100",
         "Family sponsorships earn an additional CV Day Pass for Peachtree Middle School students",
         "Registration for this option runs through October 15, 2026"
       ],
@@ -76,7 +76,7 @@
       "start_time": "8:00 AM",
       "profile": "Support option for people interested in backing the CV Classic without running",
       "highlights": [
-        "Phantom Runner is listed at $30",
+        "Phantom Runner is $30",
         "Supporters can sign up as a Phantom Runner if they are not interested in running",
         "Registration for this option runs through race morning"
       ],
@@ -125,7 +125,7 @@
         "id": "parking",
         "label": "Parking",
         "value": "Peachtree Middle School, Brook Run Park, and Chesnut Elementary if needed",
-        "detail": "Parking is listed at these school and park locations for race morning.",
+        "detail": "Race-morning parking is available at these school and park locations.",
         "source_path": "runner_decision_checklist.items.parking",
         "source_url": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic"
       },
@@ -133,7 +133,7 @@
         "id": "packet-pickup",
         "label": "Bib/shirt pickup",
         "value": "Nov. 5, Nov. 6, and race morning windows",
-        "detail": "Race bib/shirt pickup is listed for Thursday, November 5 from 4:30–6:30 PM in front of the school, Friday, November 6 from 1:00–3:00 PM in front of the school, and Saturday, November 7 from 6:30–7:30 AM at the track.",
+        "detail": "Race bib/shirt pickup is Thursday, November 5 from 4:30–6:30 PM in front of the school, Friday, November 6 from 1:00–3:00 PM in front of the school, and Saturday, November 7 from 6:30–7:30 AM at the track.",
         "source_path": "runner_decision_checklist.items.packet-pickup",
         "source_url": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic"
       },
@@ -147,9 +147,9 @@
       },
       {
         "id": "price",
-        "label": "Listed prices",
+        "label": "Current prices",
         "value": "$25 5K, $100 family sponsorship, $30 phantom runner",
-        "detail": "Current base prices are listed for each public entry option before RunSignup processing fees.",
+        "detail": "Current base prices apply to each public entry option before RunSignup processing fees.",
         "source_path": "runner_decision_checklist.items.price",
         "source_url": "https://runsignup.com/Race/GA/Dunwoody/PeachtreeCVClassic"
       }
