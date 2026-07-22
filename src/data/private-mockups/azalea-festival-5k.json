@@ -1,0 +1,388 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Azalea Festival 5k",
+    "slug": "azalea-festival-5k",
+    "tagline": "A Pickens race-and-walk morning at Doodle Park supporting a local scholarship fund.",
+    "colors": {
+      "primary": "#1F5F3A",
+      "secondary": "#D94F70",
+      "accent": "#F3B43F",
+      "ink": "#223029"
+    },
+    "hero_image": {
+      "src": "/mockups/9c5a0d9e1bceb4477cae21dc235452ce/azalea-finish-line-runner.jpg",
+      "alt": "An Azalea Festival 5k runner crossing the finish line under a blue arch at Doodle Park",
+      "caption": "A runner finishes the Azalea Festival 5k at Doodle Park in Pickens.",
+      "source": "https://runsignup.com/Race/Photos/Location/FinishLine3/SC/Pickens/AzaleaFestival5kRunandWalk",
+      "source_label": "RunSignup RaceDay Photos finish-line album",
+      "presentation": "photo",
+      "aspect_ratio": "3 / 2",
+      "fit": "cover"
+    }
+  },
+  "event": {
+    "date": "2027-04-24",
+    "location": "Pickens, SC",
+    "venue": "Doodle Park",
+    "address": "415 E. Cedar Rock St, Pickens, SC 29671",
+    "timezone": "America/New_York"
+  },
+  "distances": [
+    {
+      "id": "5k-run-walk",
+      "name": "Azalea Festival 5k Run and Walk",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "10:00 AM EDT",
+      "price": "$20",
+      "profile": "Chip-timed 5K run and walk starting and finishing at Doodle Park in Pickens.",
+      "highlights": [
+        "Chip-timed 5K run and walk",
+        "Certified course",
+        "Part of the Pickens County 5k Race Series"
+      ],
+      "provenance": {
+        "source": "RunSignup Events and Description sections",
+        "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
+        "confidence": "high",
+        "verified": true,
+        "method": "Verified against the RunSignup event listing for the event name, distance, price, 10:00 AM EDT start, chip-timed description, series note, and certified-course link."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=72233",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Choose the Azalea Festival 5k Run and Walk option through the race registration page.",
+    "deadline": "Price increases after February 23, 2027 at 7:00 AM EST.",
+    "price_note": "The current race price is $20."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "Key details for runners and walkers planning a Pickens festival morning.",
+    "intro": "A quick scan of the date, start location, course notes, series eligibility, awards, and community beneficiary.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, April 24, 2027",
+        "detail": "Race morning is set for Saturday, April 24, 2027.",
+        "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
+        "source_path": "event.date"
+      },
+      {
+        "id": "start-time",
+        "label": "Start time",
+        "value": "10:00 AM EDT",
+        "detail": "The 5K starts at 10:00 AM EDT, with awards expected around 11:15 AM EDT.",
+        "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
+        "source_path": "distances.5k-run-walk.start_time"
+      },
+      {
+        "id": "location",
+        "label": "Start and finish",
+        "value": "Doodle Park, Pickens",
+        "detail": "The chip-timed race starts and finishes at Doodle Park, 415 E. Cedar Rock St.",
+        "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
+        "source_path": "event.address"
+      },
+      {
+        "id": "course",
+        "label": "Course note",
+        "value": "Certified 5K course",
+        "detail": "Course certification and map resources are available for runners who want to review the route.",
+        "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
+        "source_path": "course.certification"
+      },
+      {
+        "id": "awards",
+        "label": "Awards",
+        "value": "Overall, masters, age groups, and cash awards",
+        "detail": "Awards go three deep for overall and masters divisions, with age-group awards at ten-year intervals and cash awards for the top overall male and female finishers.",
+        "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
+        "source_path": "faqs.awards"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Azalea Festival 5k — April 24, 2027",
+    "meta_description": "Azalea Festival 5k race details for Pickens, SC: date, location, 5K run and walk, registration, course notes, awards, scholarship beneficiary, and festival connection."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "9c5a0d9e1bceb4477cae21dc235452ce",
+    "route": "/private/mockups/9c5a0d9e1bceb4477cae21dc235452ce/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
+    "source_platform": "runsignup",
+    "source_race_id": "72233",
+    "registration_race_id": "72233",
+    "generated_from": "marketing-site community private mockup batch plus public-source manual enrichment",
+    "owner_approved_for_generation": true,
+    "prospect_id": "deee5d28-42ca-4c6e-af8c-849cbfa81c85",
+    "prospect_score": 0,
+    "qualification_reason": "Steve approved generating this Community candidate. The race has a public RunSignup registration path, official Doodle Trail page, confirmed 2027 date and place, community festival context, scholarship beneficiary, certified-course note, and usable RunSignup RaceDay finish-line imagery.",
+    "source_urls": [
+      "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
+      "https://runsignup.com/Race/Register/?raceId=72233",
+      "https://runsignup.com/Race/Donate/SC/Pickens/AzaleaFestival5kRunandWalk",
+      "https://runsignup.com/Race/72233/RefundPolicy",
+      "https://www.doodletrail.com/azalea-festival-5k",
+      "https://certifiedroadraces.com/certificate/?type=r&id=2931",
+      "https://www.strava.com/routes/9722791",
+      "http://www.mapmyrun.com/routes/view/2810786371",
+      "https://runsignup.com/Race/Photos/Location/FinishLine3/SC/Pickens/AzaleaFestival5kRunandWalk"
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup race header",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup description and official Doodle Trail page",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "RunSignup RaceDay Photos finish-line album",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/Photos/Location/FinishLine3/SC/Pickens/AzaleaFestival5kRunandWalk"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup race header",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup race header and place section",
+          "confidence": "high"
+        },
+        {
+          "path": "event.address",
+          "source": "RunSignup place section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "RunSignup Sign Up links",
+          "confidence": "high"
+        },
+        {
+          "path": "course",
+          "source": "RunSignup description, certified-course link, Strava map link, and MapMyRun map link",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "RunSignup race header",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup place and Description sections",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "RunSignup Description section and course links",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.awards",
+          "source": "RunSignup Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "story",
+          "source": "RunSignup Description section and official Doodle Trail page",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "RunSignup Events and Description sections",
+          "confidence": "high"
+        },
+        {
+          "path": "charity",
+          "source": "RunSignup Description section",
+          "confidence": "high"
+        },
+        {
+          "path": "faqs",
+          "source": "RunSignup Description section",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_distance_ids": [
+        "5k-run-walk"
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "charity",
+        "faqs",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "RunSignup's 2027 race page description still includes packet-pickup and shirt cutoff dates written for 2026; those date-specific logistics were not rendered in the mockup.",
+        "The official Doodle Trail Azalea Festival 5k page still references the 2025 race date during this pass; it was used only for the official registration link, festival/course context, and page imagery, while the 2027 date comes from RunSignup.",
+        "No named race director was verified. Existing contact sources are a RunSignup contact form and the DoodleTrail@charter.net routing email from the official site."
+      ],
+      "summary": "Race name, 2027 date, 5K run/walk option, price, start time, location, official registration path, certified-course note, series context, award structure, scholarship beneficiary, and usable official-page imagery are backed by public RunSignup and Doodle Trail sources."
+    },
+    "captured_at": "2026-07-22T13:33:54.000Z"
+  },
+  "course": {
+    "suppress_visual": true,
+    "type": "Certified 5K road course",
+    "description": "The chip-timed 5K starts and finishes at Doodle Park in Pickens and is described as a certified course.",
+    "certification": "The race description links to a certified-course record for the 5K.",
+    "map_links": [
+      {
+        "label": "Course certification",
+        "url": "https://certifiedroadraces.com/certificate/?type=r&id=2931"
+      },
+      {
+        "label": "Course map",
+        "url": "https://www.strava.com/routes/9722791"
+      },
+      {
+        "label": "MapMyRun map",
+        "url": "http://www.mapmyrun.com/routes/view/2810786371"
+      }
+    ]
+  },
+  "story": {
+    "kicker": "Festival weekend in Pickens",
+    "title": "A friendly 5K morning connected to Azalea Festival and a local scholarship fund.",
+    "paragraphs": [
+      "The Azalea Festival 5k Run and Walk brings runners and walkers to Doodle Park for a chip-timed 5K that starts and finishes in Pickens.",
+      "The Azalea Festival 5k Run and Walk is the third race in the Pickens County 5k Race Series; runners who complete three of the four races receive series swag and are eligible for series awards.",
+      "Proceeds support the Beverly Smith Scholarship Fund through the Pickens Women’s Association, a nonprofit civic organization serving the Pickens community."
+    ],
+    "quote": "You can make a difference in the lives of people in the Pickens community and have fun doing it!",
+    "quote_byline": "Race description",
+    "links": [
+      {
+        "label": "Race registration page",
+        "url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk"
+      },
+      {
+        "label": "Doodle Trail race page",
+        "url": "https://www.doodletrail.com/azalea-festival-5k"
+      },
+      {
+        "label": "Pickens County 5k Race Series",
+        "url": "https://www.doodletrail.com/pickens-county-5k-race-series"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Saturday, April 24, 2027",
+      "name": "Azalea Festival 5k Run and Walk",
+      "time": "10:00 AM EDT",
+      "location": "Doodle Park",
+      "applies_to_distances": [
+        "5k-run-walk"
+      ]
+    },
+    {
+      "day": "Saturday, April 24, 2027",
+      "name": "Award ceremony window",
+      "time": "Around 11:15 AM EDT",
+      "location": "Doodle Park",
+      "applies_to_distances": [
+        "5k-run-walk"
+      ]
+    }
+  ],
+  "charity": {
+    "name": "Beverly Smith Scholarship Fund",
+    "headline": "Race proceeds support a Pickens High School scholarship and local charities.",
+    "description": "Race proceeds support the Beverly Smith Scholarship Fund. The Pickens Women’s Association describes the scholarship as honoring Beverly M. Smith and supporting a female graduate from Pickens High School who exhibits exceptional leadership and civic skills.",
+    "cta_label": "Donate on RunSignup",
+    "cta_url": "https://runsignup.com/Race/Donate/SC/Pickens/AzaleaFestival5kRunandWalk"
+  },
+  "faqs": [
+    {
+      "question": "Where does the race start and finish?",
+      "answer": "The race description says the 5K starts and finishes at Doodle Park in Pickens.",
+      "links": [
+        {
+          "label": "Race info page",
+          "url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk"
+        }
+      ]
+    },
+    {
+      "question": "Is the course certified?",
+      "answer": "The event description identifies the 5K as a certified course and links the certification record.",
+      "links": [
+        {
+          "label": "Course certification",
+          "url": "https://certifiedroadraces.com/certificate/?type=r&id=2931"
+        }
+      ]
+    },
+    {
+      "question": "What awards are available?",
+      "answer": "Awards go three deep for overall and masters divisions, with age-group awards at ten-year intervals. The top overall male and female finishers are eligible for cash awards.",
+      "links": [
+        {
+          "label": "Race description",
+          "url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk"
+        }
+      ]
+    },
+    {
+      "question": "What does the race support?",
+      "answer": "Race proceeds support the Beverly Smith Scholarship Fund through the Pickens Women’s Association.",
+      "links": [
+        {
+          "label": "Donate page",
+          "url": "https://runsignup.com/Race/Donate/SC/Pickens/AzaleaFestival5kRunandWalk"
+        }
+      ]
+    },
+    {
+      "question": "Where should runners send race questions?",
+      "answer": "Use the race questions form on the RunSignup page for event-specific questions.",
+      "links": [
+        {
+          "label": "Race questions form",
+          "url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk/Contact"
+        }
+      ]
+    }
+  ]
+}
