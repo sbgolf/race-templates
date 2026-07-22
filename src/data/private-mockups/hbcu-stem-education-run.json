@@ -16,7 +16,8 @@
       "secondary": "#F5B642",
       "accent": "#B8322C",
       "ink": "#16251F"
-    }
+    },
+    "short_name": "HBCU STEM Education Run"
   },
   "event": {
     "date": "2027-04-18",
@@ -112,7 +113,7 @@
     "cta_label": "Register on RunSignup",
     "intro": "Choose the Huntsville 5K, 1-mile family option, virtual 5K, or virtual half marathon through the official registration page.",
     "deadline": "The current public tier runs through September 30, 2026, with later 2027 tiers shown on RunSignup.",
-    "price_note": "Current listed pricing is $30 for the 1-mile option, $40 for the 5K and virtual 5K, and $50 for the virtual half marathon before the October tier change."
+    "price_note": "Base registration prices are $30 for the 1-mile option, $40 for the 5K and virtual 5K, and $50 for the virtual half marathon before the October tier change; RunSignup/provider processing fees may be added at checkout."
   },
   "runner_decision_checklist": {
     "kicker": "Race day notes",
@@ -124,7 +125,7 @@
         "id": "date",
         "label": "Event window",
         "value": "April 1\u201330, 2027",
-        "detail": "The in-person Huntsville 5K and 1-mile options are listed for Sunday, April 18, 2027.",
+        "detail": "The in-person Huntsville 5K and 1-mile options are scheduled for Sunday, April 18, 2027.",
         "source_url": "https://runsignup.com/Race/AL/Huntsville/HBCUSTEMER",
         "source_path": "runner_decision_checklist.items.date"
       },
@@ -132,7 +133,7 @@
         "id": "location",
         "label": "Race location",
         "value": "Oakwood University Wade Hall, Huntsville, AL",
-        "detail": "RunSignup's Place section lists 7000 Adventist Blvd NW, Huntsville, AL 35896.",
+        "detail": "Race-day activities are centered at 7000 Adventist Blvd NW, Huntsville, AL 35896.",
         "source_url": "https://runsignup.com/Race/AL/Huntsville/HBCUSTEMER",
         "source_path": "runner_decision_checklist.items.location"
       },
@@ -153,7 +154,7 @@
         "id": "start-time",
         "label": "In-person start",
         "value": "8:30 AM CDT",
-        "detail": "RunSignup lists both in-person options with an 8:30 AM start and 11:00 AM end on April 18.",
+        "detail": "Both in-person options start at 8:30 AM and close at 11:00 AM on April 18.",
         "source_url": "https://runsignup.com/Race/Events/AL/Huntsville/HBCUSTEMER",
         "source_path": "runner_decision_checklist.items.start-time",
         "applies_to_distance_ids": [
@@ -164,15 +165,15 @@
       {
         "id": "price",
         "label": "Current pricing",
-        "value": "$30 one-mile, $40 5K and virtual 5K, $50 virtual half marathon",
-        "detail": "RunSignup shows price increases after September 30, 2026 at 11:59 PM CDT.",
+        "value": "$30 one-mile, $40 5K and virtual 5K, $50 virtual half marathon base prices",
+        "detail": "Base prices increase after September 30, 2026 at 11:59 PM CDT; RunSignup/provider processing fees may be added at checkout.",
         "source_url": "https://runsignup.com/Race/Events/AL/Huntsville/HBCUSTEMER",
         "source_path": "runner_decision_checklist.items.price"
       },
       {
         "id": "swag",
         "label": "Participant items",
-        "value": "Premium tech shirt, commemorative finisher medal, swag bag, and runner's bib are listed for the 5K",
+        "value": "Premium tech shirt, commemorative finisher medal, swag bag, and runner's bib are included for the 5K",
         "detail": "Virtual options include shipping and digital runner's bibs; the 1-mile option includes a swag bag, bib, and finisher medal.",
         "source_url": "https://runsignup.com/Race/Events/AL/Huntsville/HBCUSTEMER",
         "source_path": "runner_decision_checklist.items.swag"
@@ -181,14 +182,14 @@
         "id": "packet-pickup",
         "label": "Race morning pickup",
         "value": "Onsite packet pickup starts at 7:30 AM",
-        "detail": "RunSignup notes onsite registration ends exactly at 8:15 AM.",
+        "detail": "Onsite registration closes at 8:15 AM.",
         "source_url": "https://runsignup.com/Race/AL/Huntsville/HBCUSTEMER",
         "source_path": "runner_decision_checklist.items.packet-pickup"
       },
       {
         "id": "awards",
         "label": "Awards and presentation",
-        "value": "Award ceremony and scholarship presentation are tentatively listed for 9:45 AM",
+        "value": "Award ceremony and scholarship presentation are tentatively scheduled for 9:45 AM",
         "source_url": "https://runsignup.com/Race/AL/Huntsville/HBCUSTEMER",
         "source_path": "runner_decision_checklist.items.awards"
       }
@@ -449,7 +450,7 @@
     "kicker": "Race overview",
     "title": "A Huntsville race and virtual challenge for HBCU STEM scholarships.",
     "paragraphs": [
-      "HBCU STEMER describes the Education Run as a fitness-driven effort to raise funds and awareness for HBCU STEM students.",
+      "HBCU STEMER presents the Education Run as a fitness-driven effort to raise funds and awareness for HBCU STEM students.",
       "The 2027 race brings participants to Oakwood University in Huntsville for a 5K and 1-mile family run/walk, while virtual 5K and half marathon participants can complete their miles throughout April.",
       "The official mission is to educate, empower, and elevate HBCU STEM students through scholarships and career resources."
     ],
@@ -457,7 +458,7 @@
     "quote_byline": "HBCU STEMER mission statement",
     "links": [
       {
-        "label": "Official race registration",
+        "label": "RunSignup registration",
         "url": "https://runsignup.com/Race/AL/Huntsville/HBCUSTEMER"
       },
       {
@@ -471,29 +472,29 @@
       {
         "label": "VENUE",
         "title": "Oakwood University Wade Hall",
-        "description": "RunSignup lists the race place as Oakwood University Wade Hall at 7000 Adventist Blvd NW in Huntsville."
+        "description": "Race-day activities are centered at Oakwood University Wade Hall, 7000 Adventist Blvd NW in Huntsville."
       },
       {
         "label": "SOUTHEAST DRIVE-IN REACH",
         "title": "Regional access for HBCU alumni and STEM supporters",
-        "description": "RunSignup lists driving distances from Birmingham, Chattanooga, Nashville, Atlanta, Memphis, and Knoxville."
+        "description": "The event page highlights drive-in reach from Birmingham, Chattanooga, Nashville, Atlanta, Memphis, and Knoxville."
       },
       {
         "label": "VIRTUAL WINDOW",
         "title": "Participate from your own course in April",
-        "description": "Virtual 5K and virtual half marathon participants are listed to complete and report results between April 1 and April 30."
+        "description": "Virtual 5K and virtual half marathon participants can complete and report results between April 1 and April 30."
       }
     ]
   },
   "faqs": [
     {
       "question": "When is the in-person Huntsville race?",
-      "answer": "The in-person 5K and 1-mile family run/walk are listed for Sunday, April 18, 2027, with an 8:30 AM CDT start.",
+      "answer": "The in-person 5K and 1-mile family run/walk are scheduled for Sunday, April 18, 2027, with an 8:30 AM CDT start.",
       "source_url": "https://runsignup.com/Race/Events/AL/Huntsville/HBCUSTEMER"
     },
     {
       "question": "What virtual options are available?",
-      "answer": "RunSignup lists a virtual 5K run/walk and a virtual half marathon run/walk, both completed on a participant's own course between April 1 and April 30.",
+      "answer": "The race includes a virtual 5K run/walk and a virtual half marathon run/walk, both completed on a participant's own course between April 1 and April 30.",
       "source_url": "https://runsignup.com/Race/Events/AL/Huntsville/HBCUSTEMER"
     },
     {
@@ -511,7 +512,7 @@
     {
       "src": "/mockups/75ed0f5ef2313695813b856d8d5e50e0/previous-start-2026-web.jpg",
       "alt": "Runners taking off from the starting line at a previous HBCU STEMER Education Run",
-      "caption": "Official HBCU STEMER page imagery shows a previous race start from the Education Run archive.",
+      "caption": "Previous Education Run imagery shows runners taking off together from the start line.",
       "source": "https://assets.tina.io/b774f2c1-4ef4-49b4-a532-771e076cc3ae/057A9890.jpg"
     }
   ]
