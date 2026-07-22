@@ -1,0 +1,281 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "2027 Judy M. Merritt Memorial 5K & Family Fun Day",
+    "slug": "judy-m-merritt-memorial-5k-family-fun-day",
+    "tagline": "Run, walk, or sleep in at Hoover's Veterans Park to support Jefferson State student scholarships.",
+    "short_name": "Judy M. Merritt Memorial 5K",
+    "hero_image": {
+      "src": "/mockups/ba7aedf960cbf4e4eb250744840a67c9/judy-merritt-family-fun-day.jpg",
+      "alt": "Families and volunteers at the Judy M. Merritt Memorial 5K Family Fun Day",
+      "caption": "Family Fun Day photo published on Jefferson State's official 5K page.",
+      "source": "https://www.jeffersonstate.edu/wp-content/uploads/2018/03/5K-2018-cover-photo-2.jpg",
+      "source_label": "Jefferson State Family Fun Day photo"
+    },
+    "colors": {
+      "primary": "#4B2673",
+      "secondary": "#1B6E83",
+      "accent": "#F2B84B",
+      "ink": "#20182A"
+    }
+  },
+  "event": {
+    "date": "2027-03-13",
+    "location": "Birmingham, AL",
+    "timezone": "America/Chicago",
+    "venue": "Hoover's Veterans Park",
+    "address": "4800 Valleydale Road, Birmingham, AL 35242"
+  },
+  "distances": [
+    {
+      "id": "5k-run-walk",
+      "name": "5K Run/Walk",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "9:00 AM CST",
+      "end_time": "12:00 PM CST",
+      "price": "$20 + $2.20 signup fee",
+      "profile": "An in-person 5K run/walk at Hoover's Veterans Park supporting scholarships for Jefferson State Community College students in need.",
+      "highlights": [
+        "Race-day activities include free popcorn, cotton candy, a DJ, face painting, and more",
+        "Swag bag and race shirt included for 5K participants; shirt is only guaranteed before the listed deadline",
+        "Medals for top overall male and female finishers and age-group winners"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+      "provenance": {
+        "source": "RunSignup Events and Race Info sections plus Jefferson State official 5K pages",
+        "source_url": "https://runsignup.com/Race/Events/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+        "confidence": "high",
+        "verified": true,
+        "method": "Verified against RunSignup's 2027 event listing for 5K name, start/end time, price, fee, and price increase; activities, scholarship mission, shirt note, and medal categories checked against RunSignup race description and Jefferson State official pages."
+      }
+    },
+    {
+      "id": "sleep-in-5k-virtual-challenge",
+      "name": "Sleep In 5k! / Virtual Challenge",
+      "distance": "Virtual 5K support option",
+      "start_time": "Support from anywhere",
+      "price": "$15 + $1.90 signup fee",
+      "profile": "A support option for out-of-state participants, anyone who wants to sleep in on race day, T-shirt supporters, and non-runners.",
+      "highlights": [
+        "Supports the same Jefferson State student-scholarship cause",
+        "Designed for supporters who cannot or do not want to attend in person",
+        "Registration is listed through race day on RunSignup"
+      ],
+      "source_url": "https://runsignup.com/Race/Events/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/Events/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+        "confidence": "high",
+        "verified": true,
+        "method": "Verified against the RunSignup event listing for the virtual/sleep-in event name, support-positioning copy, listed price and fee, and registration end date."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=16397",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register through the official RunSignup page for either the in-person 5K or the Sleep In 5k / Virtual Challenge support option.",
+    "deadline": "5K price increases to $25 after February 12, 2027 at 11:59 PM CST; race-day 5K pricing is listed for March 13, 2027.",
+    "price_note": "The 5K is currently listed at $20 plus a $2.20 signup fee, then $25 plus fee from February 13 through March 12, and $30 plus fee on race day. Ages 18 and under are listed at $15 plus a $1.90 signup fee, automatically applied at checkout."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What to know before March 13 at Hoover's Veterans Park.",
+    "intro": "A quick runner checklist for start time, pricing, scholarship mission, packet pickup, activities, and awards.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "start-time",
+        "label": "Start window",
+        "value": "9:00 AM to 12:00 PM CST",
+        "detail": "RunSignup lists the 2027 in-person 5K start at 9:00 AM CST and end at noon.",
+        "source_url": "https://runsignup.com/Race/Events/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+        "source_path": "runner_decision_checklist.items.date-time",
+        "applies_to_distance_ids": ["5k-run-walk"]
+      },
+      {
+        "id": "location",
+        "label": "Race location",
+        "value": "Hoover's Veterans Park",
+        "detail": "The RunSignup place section lists Hoover's Veterans Park, 4800 Valleydale Road, Birmingham, AL 35242.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "series",
+        "label": "Cause",
+        "value": "JSCC student scholarships",
+        "detail": "The race description says all proceeds go to scholarships for Jefferson State Community College students in need.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+        "source_path": "runner_decision_checklist.items.series"
+      },
+      {
+        "id": "post-race",
+        "label": "Family Fun Day",
+        "value": "Popcorn, cotton candy, DJ, face painting",
+        "detail": "The official race description invites participants to enjoy free popcorn, cotton candy, other treats, a DJ, face painting, and more.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+        "source_path": "runner_decision_checklist.items.post-race"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Mar. 11-12 and race morning",
+        "detail": "The race description lists packet pickup in the lobby of the Judy M. Merritt Health Science building on Thursday from 1:00-4:00 PM and Friday from 9:00 AM-4:00 PM, plus race-day pickup from 7:30-8:30 AM at the Veterans Park Pavilion.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
+      },
+      {
+        "id": "awards",
+        "label": "Awards",
+        "value": "Overall and age-group medals",
+        "detail": "Jefferson State's official race details page lists medals for 1st, 2nd, and 3rd place top male and female overall, plus top male and female runners in age categories from 12 & under through 60+.",
+        "source_url": "https://www.jeffersonstate.edu/about-jscc/5k/race-details/",
+        "source_path": "runner_decision_checklist.items.awards",
+        "applies_to_distance_ids": ["5k-run-walk"]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "Why Birmingham gathers",
+    "title": "A community 5K honoring Dr. Judy M. Merritt and supporting student scholarships.",
+    "paragraphs": [
+      "Jefferson State describes the annual Judy M. Merritt Memorial 5K as a race held in honor of former president Dr. Judy M. Merritt, who served as president for 35 years and was the first female president of an Alabama college.",
+      "The 2027 RunSignup page keeps the race centered on the student-scholarship mission: run, walk, or sleep in to support Jefferson State students in need.",
+      "For families, the event pairs a 9:00 AM 5K at Hoover's Veterans Park with Family Fun Day activities including free popcorn, cotton candy, a DJ, face painting, and more."
+    ],
+    "links": [
+      {
+        "label": "Official race page",
+        "url": "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk"
+      },
+      {
+        "label": "Jefferson State 5K page",
+        "url": "https://www.jeffersonstate.edu/5k/"
+      }
+    ]
+  },
+  "startline_value": {
+    "headline": "Turn the RunSignup listing and Jefferson State pages into a source-backed race page for owner review.",
+    "intro": "This private mockup keeps registration on RunSignup while presenting the scholarship mission, Family Fun Day activities, distance options, pricing, packet pickup, and awards in one focused Community-template route.",
+    "improved": [
+      "Tokenized, noindex private preview page for review before any outreach",
+      "Runner-facing checklist assembled from the official RunSignup and Jefferson State pages",
+      "Official Family Fun Day image used for the hero after checking RunSignup and Jefferson State visual assets"
+    ],
+    "paid_includes": [
+      "Launch-ready landing page copy and responsive layout",
+      "Registration CTA wired back to RunSignup",
+      "Source provenance and uncertainty notes for owner review"
+    ]
+  },
+  "seo": {
+    "meta_title": "2027 Judy M. Merritt Memorial 5K & Family Fun Day — March 13, 2027",
+    "meta_description": "Judy M. Merritt Memorial 5K details for Birmingham, AL: Hoover's Veterans Park, 5K and virtual support, pricing, awards, and RunSignup registration."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "ba7aedf960cbf4e4eb250744840a67c9",
+    "route": "/private/mockups/ba7aedf960cbf4e4eb250744840a67c9/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+    "source_platform": "runsignup",
+    "source_race_id": "16397",
+    "registration_race_id": "16397",
+    "prospect_id": "55b33e23-0df5-43c2-8d80-42655205d110",
+    "captured_at": "2026-07-22T00:00:00Z",
+    "generated_from": "scheduled StartLine Community-lane private mockup task with public-source manual enrichment",
+    "owner_approved_for_generation": true,
+    "qualification_reason": "The race has a current 2027 RunSignup listing, official Jefferson State race pages, direct registration path, clear student-scholarship mission, public event imagery, family-day activities, and a Community-template fit.",
+    "source_urls": [
+      "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+      "https://runsignup.com/Race/Events/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+      "https://runsignup.com/Race/Register/?raceId=16397",
+      "https://runsignup.com/Race/Donate/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+      "https://www.jeffersonstate.edu/5k/",
+      "https://www.jeffersonstate.edu/about-jscc/5k/about-the-5k/",
+      "https://www.jeffersonstate.edu/about-jscc/5k/race-details/",
+      "https://www.jeffersonstate.edu/about-jscc/5k/family-fun-day/",
+      "https://www.jeffersonstate.edu/wp-content/uploads/2018/03/5K-2018-cover-photo-2.jpg",
+      "https://d368g9lw5ileu7.cloudfront.net/races/races-16xxx/16397/raceBanner-FH6TPmPx-bMDzFf.png"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "jennifer.booth@jeffersonstate.edu",
+        "context": "Jefferson State official race details page Questions section",
+        "source_url": "https://www.jeffersonstate.edu/about-jscc/5k/race-details/",
+        "status": "public_named_race_contact"
+      },
+      {
+        "type": "contact_form",
+        "value": "https://runsignup.com/Race/Info/AL/Birmingham/JudyMMerrittMemorial5KRunWalk#contactFormSection",
+        "context": "RunSignup Contact This Race / questions form",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+        "status": "provider_contact_form"
+      }
+    ],
+    "assets": [
+      {
+        "path": "public/mockups/ba7aedf960cbf4e4eb250744840a67c9/judy-merritt-family-fun-day.jpg",
+        "src": "/mockups/ba7aedf960cbf4e4eb250744840a67c9/judy-merritt-family-fun-day.jpg",
+        "alt": "Families and volunteers at the Judy M. Merritt Memorial 5K Family Fun Day",
+        "source_url": "https://www.jeffersonstate.edu/wp-content/uploads/2018/03/5K-2018-cover-photo-2.jpg",
+        "source": "https://www.jeffersonstate.edu/wp-content/uploads/2018/03/5K-2018-cover-photo-2.jpg",
+        "type": "hero_image"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
+      "source_confirmed_sections": [
+        "runner_decision_checklist",
+        "story",
+        "startline_value"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k-run-walk",
+        "sleep-in-5k-virtual-challenge"
+      ],
+      "items": [
+        { "path": "identity.name", "source": "RunSignup 2027 race header", "confidence": "high" },
+        { "path": "identity.tagline", "source": "RunSignup race description", "confidence": "high" },
+        { "path": "identity.hero_image", "source": "Jefferson State official Family Fun Day page image after RunSignup/official visual asset pass", "confidence": "high" },
+        { "path": "event.date", "source": "RunSignup 2027 race header", "confidence": "high" },
+        { "path": "event.location", "source": "RunSignup place section", "confidence": "high" },
+        { "path": "distances.5k-run-walk", "source": "RunSignup Events section", "confidence": "high" },
+        { "path": "distances.sleep-in-5k-virtual-challenge", "source": "RunSignup Events section", "confidence": "high" },
+        { "path": "registration.price_note", "source": "RunSignup Registration Details table", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.start-time", "source": "RunSignup Events section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.location", "source": "RunSignup place section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.series", "source": "RunSignup race description and Jefferson State About the 5K page", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.post-race", "source": "RunSignup race description and Jefferson State Family Fun Day page", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.packet-pickup", "source": "RunSignup race description", "confidence": "medium" },
+        { "path": "runner_decision_checklist.items.awards", "source": "Jefferson State Race Details page", "confidence": "high" },
+        { "path": "contact_sources.email", "source": "Jefferson State Race Details Questions section", "confidence": "high" },
+        { "path": "contact_sources.contact_form", "source": "RunSignup Contact This Race link", "confidence": "high" }
+      ],
+      "uncertainties": [
+        "RunSignup's 2027 header and event table are used as authoritative for the 2027 date, times, registration fees, and race ID; some Jefferson State subpages still show 2026 date/pricing copy, so those pages were used only for evergreen mission, awards, contact, map, and Family Fun Day details.",
+        "The packet-pickup dates in the current RunSignup description align to Thursday/Friday before the 2027 race but are not separately confirmed on the Jefferson State 2027 official subpage."
+      ]
+    },
+    "uncertainty": {
+      "summary": "RunSignup confirms the 2027 race header, event options, start/end time, registration URL, pricing tiers, age discount, location, scholarship mission, packet pickup text, and Family Fun Day copy. Jefferson State official subpages confirm the mission, awards, Family Fun Day photo, and public email contact but still display 2026 date/pricing in some areas, so the mockup does not use those stale fields for 2027 date or pricing.",
+      "items": [
+        {
+          "field": "Jefferson State subpage date and pricing",
+          "reason": "Official Jefferson State subpages inspected during generation still showed 2026 date/pricing copy; the 2027 RunSignup listing was used instead for date, times, and fees."
+        },
+        {
+          "field": "packet pickup",
+          "reason": "RunSignup's current description lists Thursday/Friday packet-pickup windows that align with the 2027 calendar, but the separate Jefferson State details subpage has not yet been updated to 2027."
+        }
+      ]
+    }
+  }
+}
