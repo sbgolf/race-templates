@@ -11,14 +11,14 @@
       "ink": "#223029"
     },
     "hero_image": {
-      "src": "/mockups/9c5a0d9e1bceb4477cae21dc235452ce/doodle-trail-park.png",
-      "alt": "Doodle Trail Park path and green space in Pickens",
-      "caption": "Doodle Trail Park in Pickens, home base for the Azalea Festival 5k Run and Walk.",
-      "source": "https://www.doodletrail.com/azalea-festival-5k",
-      "source_label": "Official Doodle Trail page image",
-      "presentation": "banner",
-      "aspect_ratio": "3 / 1",
-      "fit": "contain"
+      "src": "/mockups/9c5a0d9e1bceb4477cae21dc235452ce/azalea-finish-line-runner.jpg",
+      "alt": "An Azalea Festival 5k runner crossing the finish line under a blue arch at Doodle Park",
+      "caption": "A runner finishes the Azalea Festival 5k at Doodle Park in Pickens.",
+      "source": "https://runsignup.com/Race/Photos/Location/FinishLine3/SC/Pickens/AzaleaFestival5kRunandWalk",
+      "source_label": "RunSignup RaceDay Photos finish-line album",
+      "presentation": "photo",
+      "aspect_ratio": "3 / 2",
+      "fit": "cover"
     }
   },
   "event": {
@@ -127,7 +127,7 @@
     "owner_approved_for_generation": true,
     "prospect_id": "deee5d28-42ca-4c6e-af8c-849cbfa81c85",
     "prospect_score": 0,
-    "qualification_reason": "Steve approved generating this Community candidate. The race has a public RunSignup registration path, official Doodle Trail page, confirmed 2027 date and place, community festival context, scholarship beneficiary, certified-course note, and usable official page imagery.",
+    "qualification_reason": "Steve approved generating this Community candidate. The race has a public RunSignup registration path, official Doodle Trail page, confirmed 2027 date and place, community festival context, scholarship beneficiary, certified-course note, and usable RunSignup RaceDay finish-line imagery.",
     "source_urls": [
       "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
       "https://runsignup.com/Race/Register/?raceId=72233",
@@ -136,7 +136,8 @@
       "https://www.doodletrail.com/azalea-festival-5k",
       "https://certifiedroadraces.com/certificate/?type=r&id=2931",
       "https://www.strava.com/routes/9722791",
-      "http://www.mapmyrun.com/routes/view/2810786371"
+      "http://www.mapmyrun.com/routes/view/2810786371",
+      "https://runsignup.com/Race/Photos/Location/FinishLine3/SC/Pickens/AzaleaFestival5kRunandWalk"
     ],
     "provenance": {
       "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
@@ -153,8 +154,9 @@
         },
         {
           "path": "identity.hero_image",
-          "source": "Official Doodle Trail Azalea Festival 5k page image; RunSignup visual pass found only a small race logo plus a generic RunSignup banner background, so the official park image was the best race/place-backed hero.",
-          "confidence": "high"
+          "source": "RunSignup RaceDay Photos finish-line album",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/Photos/Location/FinishLine3/SC/Pickens/AzaleaFestival5kRunandWalk"
         },
         {
           "path": "event.date",
