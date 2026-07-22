@@ -90,7 +90,7 @@
         "id": "start-time",
         "label": "Start window",
         "value": "9:00 AM to 12:00 PM CST",
-        "detail": "RunSignup lists the 2027 in-person 5K start at 9:00 AM CST and end at noon.",
+        "detail": "The in-person 5K starts at 9:00 AM CST and is scheduled through noon.",
         "source_url": "https://runsignup.com/Race/Events/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
         "source_path": "runner_decision_checklist.items.date-time",
         "applies_to_distance_ids": ["5k-run-walk"]
@@ -99,7 +99,7 @@
         "id": "location",
         "label": "Race location",
         "value": "Hoover's Veterans Park",
-        "detail": "The RunSignup place section lists Hoover's Veterans Park, 4800 Valleydale Road, Birmingham, AL 35242.",
+        "detail": "The race is hosted at Hoover's Veterans Park, 4800 Valleydale Road, Birmingham, AL 35242.",
         "source_url": "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
         "source_path": "runner_decision_checklist.items.location"
       },
@@ -107,7 +107,7 @@
         "id": "series",
         "label": "Cause",
         "value": "JSCC student scholarships",
-        "detail": "The race description says all proceeds go to scholarships for Jefferson State Community College students in need.",
+        "detail": "All proceeds support scholarships for Jefferson State Community College students in need.",
         "source_url": "https://runsignup.com/Race/AL/Birmingham/JudyMMerrittMemorial5KRunWalk",
         "source_path": "runner_decision_checklist.items.series"
       },
