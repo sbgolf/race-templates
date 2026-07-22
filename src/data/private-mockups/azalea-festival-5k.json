@@ -3,7 +3,7 @@
     "template": "community",
     "name": "Azalea Festival 5k",
     "slug": "azalea-festival-5k",
-    "tagline": "A Pickens race-and-walk morning at Doodle Park during Azalea Festival weekend.",
+    "tagline": "A Pickens race-and-walk morning at Doodle Park supporting a local scholarship fund.",
     "colors": {
       "primary": "#1F5F3A",
       "secondary": "#D94F70",
@@ -15,7 +15,10 @@
       "alt": "Doodle Trail Park path and green space in Pickens",
       "caption": "Doodle Trail Park in Pickens, home base for the Azalea Festival 5k Run and Walk.",
       "source": "https://www.doodletrail.com/azalea-festival-5k",
-      "source_label": "Official Doodle Trail Azalea Festival 5k page image"
+      "source_label": "Official Doodle Trail page image",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1",
+      "fit": "contain"
     }
   },
   "event": {
@@ -54,7 +57,7 @@
     "cta_label": "Register on RunSignup",
     "intro": "Choose the Azalea Festival 5k Run and Walk option through the race registration page.",
     "deadline": "Price increases after February 23, 2027 at 7:00 AM EST.",
-    "price_note": "The current listed race price is $20."
+    "price_note": "The current race price is $20."
   },
   "runner_decision_checklist": {
     "kicker": "Race day notes",
@@ -66,7 +69,7 @@
         "id": "date",
         "label": "Race date",
         "value": "Saturday, April 24, 2027",
-        "detail": "The RunSignup race header lists the Azalea Festival 5k for Saturday, April 24, 2027.",
+        "detail": "Race morning is set for Saturday, April 24, 2027.",
         "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
         "source_path": "event.date"
       },
@@ -74,7 +77,7 @@
         "id": "start-time",
         "label": "Start time",
         "value": "10:00 AM EDT",
-        "detail": "The race listing shows a 10:00 AM EDT start and an 11:15 AM EDT event end time.",
+        "detail": "The 5K starts at 10:00 AM EDT, with awards expected around 11:15 AM EDT.",
         "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
         "source_path": "distances.5k-run-walk.start_time"
       },
@@ -82,7 +85,7 @@
         "id": "location",
         "label": "Start and finish",
         "value": "Doodle Park, Pickens",
-        "detail": "The description says the chip-timed race starts and finishes at Doodle Park; the place section lists 415 E. Cedar Rock St.",
+        "detail": "The chip-timed race starts and finishes at Doodle Park, 415 E. Cedar Rock St.",
         "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
         "source_path": "event.address"
       },
@@ -90,7 +93,7 @@
         "id": "course",
         "label": "Course note",
         "value": "Certified 5K course",
-        "detail": "The race description links the course certification and course map resources.",
+        "detail": "Course certification and map resources are available for runners who want to review the route.",
         "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
         "source_path": "course.certification"
       },
@@ -98,7 +101,7 @@
         "id": "awards",
         "label": "Awards",
         "value": "Overall, masters, age groups, and cash awards",
-        "detail": "Awards are listed three deep for overall and masters divisions, with age group awards at ten-year intervals and cash awards for the top overall male and female finishers.",
+        "detail": "Awards go three deep for overall and masters divisions, with age-group awards at ten-year intervals and cash awards for the top overall male and female finishers.",
         "source_url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk",
         "source_path": "faqs.awards"
       }
@@ -281,7 +284,7 @@
     "title": "A friendly 5K morning connected to Azalea Festival and a local scholarship fund.",
     "paragraphs": [
       "The Azalea Festival 5k Run and Walk brings runners and walkers to Doodle Park for a chip-timed 5K that starts and finishes in Pickens.",
-      "The race is listed as the third race in the Pickens County 5k Race Series, where runners who complete three of the four races receive series swag and are eligible for series awards.",
+      "The Azalea Festival 5k Run and Walk is the third race in the Pickens County 5k Race Series; runners who complete three of the four races receive series swag and are eligible for series awards.",
       "Proceeds support the Beverly Smith Scholarship Fund through the Pickens Women’s Association, a nonprofit civic organization serving the Pickens community."
     ],
     "quote": "You can make a difference in the lives of people in the Pickens community and have fun doing it!",
@@ -292,7 +295,7 @@
         "url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk"
       },
       {
-        "label": "Official Doodle Trail race page",
+        "label": "Doodle Trail race page",
         "url": "https://www.doodletrail.com/azalea-festival-5k"
       },
       {
@@ -324,7 +327,7 @@
   "charity": {
     "name": "Beverly Smith Scholarship Fund",
     "headline": "Race proceeds support a Pickens High School scholarship and local charities.",
-    "description": "All proceeds from the race are listed for the Beverly Smith Scholarship Fund. The Pickens Women’s Association describes the scholarship as honoring Beverly M. Smith and supporting a female graduate from Pickens High School who exhibits exceptional leadership and civic skills.",
+    "description": "Race proceeds support the Beverly Smith Scholarship Fund. The Pickens Women’s Association describes the scholarship as honoring Beverly M. Smith and supporting a female graduate from Pickens High School who exhibits exceptional leadership and civic skills.",
     "cta_label": "Donate on RunSignup",
     "cta_url": "https://runsignup.com/Race/Donate/SC/Pickens/AzaleaFestival5kRunandWalk"
   },
@@ -350,8 +353,8 @@
       ]
     },
     {
-      "question": "What awards are listed?",
-      "answer": "Awards are listed three deep for overall and masters divisions, with age-group awards at ten-year intervals. The top overall male and female finishers are listed for cash awards.",
+      "question": "What awards are available?",
+      "answer": "Awards go three deep for overall and masters divisions, with age-group awards at ten-year intervals. The top overall male and female finishers are eligible for cash awards.",
       "links": [
         {
           "label": "Race description",
@@ -361,11 +364,21 @@
     },
     {
       "question": "What does the race support?",
-      "answer": "Race proceeds are listed for the Beverly Smith Scholarship Fund through the Pickens Women’s Association.",
+      "answer": "Race proceeds support the Beverly Smith Scholarship Fund through the Pickens Women’s Association.",
       "links": [
         {
           "label": "Donate page",
           "url": "https://runsignup.com/Race/Donate/SC/Pickens/AzaleaFestival5kRunandWalk"
+        }
+      ]
+    },
+    {
+      "question": "Where should runners send race questions?",
+      "answer": "Use the race questions form on the RunSignup page for event-specific questions.",
+      "links": [
+        {
+          "label": "Race questions form",
+          "url": "https://runsignup.com/Race/SC/Pickens/AzaleaFestival5kRunandWalk/Contact"
         }
       ]
     }

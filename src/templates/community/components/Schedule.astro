@@ -17,7 +17,7 @@ const isSingleDistance = (race.distances || []).length === 1;
     <div class="sched-head reveal">
       <div class="kicker">Race Schedule</div>
       <h2 class="sec-title">{isSingleDistance ? <>Key <em>times</em>.</> : <>Race weekend <em>plan</em>.</>}</h2>
-      <p class="lead">{isSingleDistance ? 'Confirmed schedule items from the race configuration.' : 'Schedule below filters based on your selected distance.'}</p>
+      <p class="lead">{isSingleDistance ? 'Race-day times and locations at a glance.' : 'Schedule below filters based on your selected distance.'}</p>
       {!isSingleDistance ? (
       <div class="sched-filter">
         <span class="dot"></span>
