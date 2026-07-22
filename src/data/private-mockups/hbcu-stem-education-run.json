@@ -5,11 +5,11 @@
     "slug": "hbcu-stem-education-run",
     "tagline": "A Huntsville 5K, 1-mile family run/walk, and virtual challenge supporting HBCU STEM scholarships and career resources.",
     "hero_image": {
-      "src": "/mockups/75ed0f5ef2313695813b856d8d5e50e0/hero-raceinfo-banner.jpg",
-      "alt": "Black woman running on the HBCU STEMER Education Run information page",
-      "caption": "HBCU STEMER frames the Education Run around movement, community, and support for HBCU STEM students.",
-      "source": "https://assets.tina.io/b774f2c1-4ef4-49b4-a532-771e076cc3ae/raceInfo_Banner_largeScreen.jpg",
-      "source_label": "Official HBCU STEMER Education Run page hero image"
+      "src": "/mockups/75ed0f5ef2313695813b856d8d5e50e0/hero-education-run-2026.jpg",
+      "alt": "Smiling participant wearing a 2026 HBCU STEM Education Run shirt on race day",
+      "caption": "Previous Education Run imagery brings the race-day energy and community mission into focus.",
+      "source": "https://assets.tina.io/b774f2c1-4ef4-49b4-a532-771e076cc3ae/057A0866.jpg",
+      "source_label": "Official HBCU STEMER previous events photo"
     },
     "colors": {
       "primary": "#1F5E45",
@@ -370,6 +370,11 @@
           "path": "faqs",
           "source": "RunSignup race description and events detail",
           "confidence": "medium"
+        },
+        {
+          "field": "identity.hero_image",
+          "source_url": "https://www.hbcustemer.com/raceinfo",
+          "notes": "Official HBCU STEMER previous-events photo selected as hero image."
         }
       ],
       "source_confirmed_distance_ids": [
