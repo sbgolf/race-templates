@@ -1,0 +1,368 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Amanda Pair Foundation Legacy Run presented by Alabama Oncology",
+    "slug": "amanda-pair-foundation-legacy-run",
+    "tagline": "Run, walk, and move together to overcome cancer.",
+    "short_name": "Amanda Pair Legacy Run",
+    "hero_image": {
+      "src": "/mockups/1f6107111286c011a7b25ae2325e39e1/assets/legacy-run-previous-race.jpg",
+      "alt": "Legacy Run participants moving together on a Liberty Park road during a previous Amanda Pair Foundation event",
+      "caption": "A previous Amanda Pair Foundation Legacy Run scene from the official Foundation event page.",
+      "source": "https://images.squarespace-cdn.com/content/v1/6337a3b3828b3619e5d09243/a937f65f-a24d-4623-b0cf-a58f37368578/IMG_0365.jpg",
+      "source_label": "Official Amanda Pair Foundation Legacy Run event page",
+      "presentation": "photo"
+    },
+    "colors": {
+      "primary": "#53B9C7",
+      "secondary": "#5B5B5B",
+      "accent": "#F5E8C8",
+      "ink": "#2F3437"
+    }
+  },
+  "event": {
+    "date": "2026-11-14",
+    "location": "Birmingham, AL",
+    "timezone": "America/Chicago",
+    "venue": "Vestavia Hills Elementary Liberty Park",
+    "address": "17035 Liberty Pkwy, Birmingham, AL 35242"
+  },
+  "distances": [
+    {
+      "id": "5k-run-walk",
+      "name": "5K Run/Walk",
+      "distance": "5K",
+      "featured": true,
+      "price": "$0",
+      "profile": "A family-friendly 5K open to walkers and runners of all ages, looping through Liberty Park and beginning and ending at Vestavia Hills Elementary Liberty Park.",
+      "highlights": [
+        "Open to walkers and runners of all ages",
+        "Liberty Park community loop",
+        "Race shirt included for registrants by October 27"
+      ],
+      "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+      "provenance": {
+        "source": "RunSignup Events and Description sections",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the 5K Run/Walk event at $0 and the description states the Legacy Run is a family-friendly 5K for walkers and runners of all ages in Liberty Park."
+      }
+    },
+    {
+      "id": "family-fun-run-walk",
+      "name": "Family Fun Run/Walk",
+      "distance": "Fun Run",
+      "price": "$0",
+      "profile": "A family-oriented run/walk option for participants who want a shorter, lower-pressure way to join race morning.",
+      "highlights": [
+        "Family-friendly race morning option",
+        "Registration shows $0 before opening",
+        "Supports the Amanda Pair Foundation mission"
+      ],
+      "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists Family Fun Run/Walk as an event with $0 shown before registration opens."
+      }
+    },
+    {
+      "id": "liberty-park-middle-school-timed-mile",
+      "name": "Liberty Park Middle School Timed Mile",
+      "distance": "1 Mile",
+      "start_time": "9:00 AM CDT",
+      "price": "$0",
+      "profile": "A timed mile option for Liberty Park Middle School, with a 9:00 AM race-morning start.",
+      "highlights": [
+        "Timed mile event",
+        "9:00 AM race-morning start",
+        "Part of the Legacy Run race morning"
+      ],
+      "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists Liberty Park Middle School Timed Mile (9am) as an event with $0 shown before registration opens."
+      }
+    },
+    {
+      "id": "virtual-option",
+      "name": "Virtual Option",
+      "distance": "Virtual",
+      "price": "$0",
+      "profile": "A remote participation option for supporters who cannot attend in Birmingham on race morning.",
+      "highlights": [
+        "Participate from anywhere",
+        "Registration shows $0 before opening",
+        "Donation options are available online"
+      ],
+      "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+      "provenance": {
+        "source": "RunSignup Events and Description sections",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists Virtual Option as an event, and the race description points supporters to online donation options if they cannot participate."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=137160",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Choose the 5K Run/Walk, Family Fun Run/Walk, Liberty Park Middle School Timed Mile, or Virtual Option for the 5th Annual Legacy Run.",
+    "deadline": "Everyone who registers by October 27 will get a race shirt.",
+    "price_note": "RunSignup currently shows $0 for each event before registration opens."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day details",
+    "headline": "What to know before joining the Legacy Run at Liberty Park.",
+    "intro": "Key participant details for the 2026 Amanda Pair Foundation Legacy Run presented by Alabama Oncology.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, November 14, 2026",
+        "detail": "The 5th Annual Legacy Run is scheduled for Saturday, November 14, 2026.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+        "source_path": "event.date"
+      },
+      {
+        "id": "location",
+        "label": "Start and finish",
+        "value": "Vestavia Hills Elementary Liberty Park",
+        "detail": "The race begins and ends at Vestavia Hills Elementary Liberty Park at 17035 Liberty Pkwy in Birmingham.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+        "source_path": "event.venue"
+      },
+      {
+        "id": "course",
+        "label": "Course style",
+        "value": "Liberty Park community loop",
+        "detail": "The 5K loops around the Liberty Park community and is open to walkers and runners of all ages.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+        "source_path": "course.description"
+      },
+      {
+        "id": "swag",
+        "label": "Shirt deadline",
+        "value": "Register by October 27",
+        "detail": "Everyone registered by October 27 will get a race shirt.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+        "source_path": "registration.deadline"
+      },
+      {
+        "id": "parking",
+        "label": "Parking",
+        "value": "Liberty Park Middle School",
+        "detail": "Participant parking is available at Liberty Park Middle School.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+        "source_path": "travel.parking"
+      },
+      {
+        "id": "post-race",
+        "label": "Race impact",
+        "value": "Memorial scholarship funding",
+        "detail": "The majority of proceeds support a memorial scholarship created by the Foundation and Vestavia Hills Elementary Liberty Park PTO in Amanda's memory.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+        "source_path": "story.impact"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Amanda Pair Foundation Legacy Run — November 14, 2026",
+    "meta_description": "Join the Amanda Pair Foundation Legacy Run presented by Alabama Oncology in Birmingham for a family-friendly Liberty Park 5K, fun run, timed mile, and virtual option."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "1f6107111286c011a7b25ae2325e39e1",
+    "route": "/private/mockups/1f6107111286c011a7b25ae2325e39e1/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+    "source_platform": "runsignup",
+    "source_race_id": "137160",
+    "registration_race_id": "137160",
+    "generated_from": "StartLine Community private mockup batch item 1",
+    "owner_approved_for_generation": true,
+    "qualification_reason": "Steve's batch selected this candidate. The race has an official RunSignup listing, official Amanda Pair Foundation event page, multiple community-friendly events, family impact story, sponsor context, race-day logistics, verified official imagery, and a direct organization inbox from the batch.",
+    "source_urls": [
+      "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+      "https://runsignup.com/Race/Events/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+      "https://runsignup.com/Race/Register/?raceId=137160",
+      "https://amandapair.org/",
+      "https://www.amandapair.org/legacy-run",
+      "https://www.amandapair.org/contact"
+    ],
+    "contact_sources": [
+      {
+        "type": "direct_email",
+        "value_masked": "i***@amandapairfoundation.org",
+        "url": "batch-provided candidate contact source",
+        "context": "Direct organization inbox supplied in the approved batch; email intentionally masked and no outreach sent.",
+        "status": "eligible_direct_org_inbox_verified_in_batch"
+      },
+      {
+        "type": "form",
+        "url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark#contactFormSection",
+        "context": "RunSignup Race Contact Info form is visible on the race page.",
+        "status": "contact_form_visible"
+      }
+    ],
+    "assets": [
+      {
+        "src": "/mockups/1f6107111286c011a7b25ae2325e39e1/assets/legacy-run-previous-race.jpg",
+        "alt": "Legacy Run participants moving together on a Liberty Park road during a previous Amanda Pair Foundation event",
+        "caption": "Previous Legacy Run race-day scene at Liberty Park.",
+        "source": "https://images.squarespace-cdn.com/content/v1/6337a3b3828b3619e5d09243/a937f65f-a24d-4623-b0cf-a58f37368578/IMG_0365.jpg",
+        "generated": false
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark",
+      "items": [
+        { "path": "identity.name", "source": "RunSignup race header", "confidence": "high" },
+        { "path": "identity.hero_image", "source": "Official Amanda Pair Foundation Legacy Run page imagery", "confidence": "high" },
+        { "path": "event.date", "source": "RunSignup race header and official Amanda Pair Foundation Legacy Run page", "confidence": "high" },
+        { "path": "event.location", "source": "RunSignup race header and Place section", "confidence": "high" },
+        { "path": "event.venue", "source": "RunSignup Description and Place sections", "confidence": "high" },
+        { "path": "distances", "source": "RunSignup Events section", "confidence": "high" },
+        { "path": "registration", "source": "RunSignup Events/Register sections and race description", "confidence": "high" },
+        { "path": "runner_decision_checklist", "source": "RunSignup Description section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.date", "source": "RunSignup race header and official Amanda Pair Foundation Legacy Run page", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.location", "source": "RunSignup Place and Description sections", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.course", "source": "RunSignup Description section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.swag", "source": "RunSignup Description section shirt deadline note", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.parking", "source": "RunSignup Description section parking note", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.post-race", "source": "RunSignup Race Impact section", "confidence": "high" },
+        { "path": "course", "source": "RunSignup Description section", "confidence": "high" },
+        { "path": "story", "source": "RunSignup Description section and official Amanda Pair Foundation Legacy Run page", "confidence": "high" },
+        { "path": "sponsors", "source": "Official Amanda Pair Foundation Legacy Run page sponsor carousel", "confidence": "high" },
+        { "path": "contact_sources", "source": "Approved batch direct inbox plus RunSignup Race Contact Info section", "confidence": "medium" }
+      ],
+      "source_confirmed_distance_ids": ["5k-run-walk", "family-fun-run-walk", "liberty-park-middle-school-timed-mile", "virtual-option"],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "travel",
+        "sponsors",
+        "faqs",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "summary": "Core race facts, date, location, listed events, current displayed prices, registration path, shirt deadline, parking note, Foundation impact story, official sponsor/title-sponsor context, RunSignup contact form, batch direct inbox eligibility, and official imagery are verified. Exact 2026 start schedule beyond the timed mile event name, final registration pricing after registration opens, packet pickup timing, course map/GPX/elevation details, and final 2026 sponsor list were not visible during this pass.",
+      "items": [
+        "RunSignup currently shows $0 for listed events before registration opens; final paid pricing may appear later.",
+        "Only the Liberty Park Middle School Timed Mile includes a time in the visible event name; the mockup does not invent other start times.",
+        "No public route map, GPX file, elevation profile, or packet-pickup schedule was visible on checked source pages.",
+        "The official Foundation page shows Alabama Oncology in the sponsor carousel and the race title lists Alabama Oncology as presenting sponsor; the page also shows sponsorship opportunities for November 2026, so sponsor content is kept conservative."
+      ]
+    },
+    "captured_at": "2026-07-23T00:00:00.000Z"
+  },
+  "course": {
+    "suppress_visual": true,
+    "type": "Family-friendly Liberty Park road/community route",
+    "description": "The Legacy Run 5K loops around the Liberty Park community, beginning and ending at Vestavia Hills Elementary Liberty Park. No public route map, GPX file, or elevation profile is currently posted.",
+    "highlights": [
+      "Begins and ends at Vestavia Hills Elementary Liberty Park",
+      "Loops around the Liberty Park community",
+      "Open to walkers and runners of all ages"
+    ],
+    "map_links": []
+  },
+  "story": {
+    "kicker": "Overcome cancer together",
+    "title": "A family-friendly Legacy Run supporting care, research, and Amanda's memorial scholarship.",
+    "paragraphs": [
+      "The Amanda Pair Foundation Legacy Run presented by Alabama Oncology returns to Birmingham on Saturday, November 14, 2026 for its 5th annual race morning.",
+      "Named for Amanda Pair, a beloved wife, mother, friend, and community member who courageously battled lung cancer until her death at age 40 in June 2022, the Foundation works to overcome cancer through caring for families, funding research, and investing in the next generation.",
+      "The majority of proceeds from the Legacy Run are directed to a memorial scholarship created in Amanda's memory by the Foundation and the Vestavia Hills Elementary Liberty Park PTO, awarded annually to a senior VHELP alumni at VHHS through 2035."
+    ],
+    "links": [
+      {
+        "label": "RunSignup race page",
+        "url": "https://runsignup.com/Race/AL/Birmingham/AmandaPairFoundationLegacyRuninthePark"
+      },
+      {
+        "label": "Amanda Pair Foundation Legacy Run page",
+        "url": "https://www.amandapair.org/legacy-run"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Saturday, November 14, 2026",
+      "name": "Liberty Park Middle School Timed Mile",
+      "time": "9:00 AM CDT",
+      "location": "Vestavia Hills Elementary Liberty Park",
+      "applies_to_distances": ["liberty-park-middle-school-timed-mile"]
+    }
+  ],
+  "travel": {
+    "items": [
+      {
+        "label": "START",
+        "title": "Vestavia Hills Elementary Liberty Park",
+        "description": "Race morning begins and ends at Vestavia Hills Elementary Liberty Park, 17035 Liberty Pkwy, Birmingham, AL 35242."
+      },
+      {
+        "label": "PARK",
+        "title": "Liberty Park Middle School parking",
+        "description": "Participant parking is available at Liberty Park Middle School."
+      },
+      {
+        "label": "SHIRT",
+        "title": "October 27 shirt deadline",
+        "description": "Everyone registered by October 27 will get a race shirt."
+      }
+    ]
+  },
+  "sponsors": [
+    {
+      "name": "Alabama Oncology",
+      "tier": "Presenting Sponsor"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is the race held?",
+      "answer": "The race begins and ends at Vestavia Hills Elementary Liberty Park, located at 17035 Liberty Pkwy in Birmingham, AL 35242."
+    },
+    {
+      "question": "What events are offered?",
+      "answer": "Race weekend includes the 5K Run/Walk, Family Fun Run/Walk, Liberty Park Middle School Timed Mile at 9:00 AM, and a Virtual Option."
+    },
+    {
+      "question": "Is this race walker-friendly?",
+      "answer": "Yes. The Legacy Run is a family-friendly 5K open to walkers and runners of all ages."
+    },
+    {
+      "question": "What is the shirt deadline?",
+      "answer": "Everyone who registers by October 27 will get a race shirt."
+    },
+    {
+      "question": "Where should participants park?",
+      "answer": "Participant parking is available at Liberty Park Middle School."
+    },
+    {
+      "question": "What does the race support?",
+      "answer": "The majority of proceeds support a memorial scholarship created in Amanda Pair's memory by the Foundation and the Vestavia Hills Elementary Liberty Park PTO."
+    }
+  ]
+}
