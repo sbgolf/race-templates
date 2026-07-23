@@ -37,7 +37,7 @@
       "price": "$45",
       "profile": "A festive 5K at Brown Family Park at Nexton with hot cocoa at the finish, a hoodie for 5K racers, a cocoa cup, and post-race holiday festivities.",
       "highlights": [
-        "9:30 AM start with an 11:00 AM listed event end",
+        "9:30 AM start with a late-morning finish window",
         "5K racers receive a commemorative warm hoodie, free cocoa cup, and other goodies",
         "Holiday costume contest, photos with Santa and Mrs. Claus, hot cocoa, and awards after the race"
       ],
@@ -77,8 +77,8 @@
     "platform": "runsignup",
     "cta_label": "Register on RunSignup",
     "intro": "Registration opens in September for the 5K Run and mandatory kids run registration.",
-    "deadline": "RunSignup lists registration opening September 14, 2026 at 6:00 AM EDT for the 5K Run and September 15, 2026 at 6:00 AM EDT for the Kids Run; the official Fleet Feet page states registration opens September 15.",
-    "price_note": "Current listed prices are $45 for the 5K Run and $0 for the Kids Run."
+    "deadline": "Registration opens in mid-September, with the 5K Run and Kids Run opening on adjacent September dates across the race pages.",
+    "price_note": "Current prices are $45 for the 5K Run and $0 for the Kids Run."
   },
   "runner_decision_checklist": {
     "kicker": "Race day details",
@@ -106,7 +106,7 @@
         "id": "packet-pickup",
         "label": "Packet pickup",
         "value": "Thu/Fri store pickup + race morning",
-        "detail": "Packet pickup is listed for Thursday 12/17 from 10 AM to 6 PM at Fleet Feet Mt Pleasant, Friday 12/18 from 10 AM to 6 PM at Fleet Feet Summerville, and Saturday 12/19 from 7:30 AM to 9:00 AM at the race site under the Fleet Feet tents.",
+        "detail": "Packet pickup is available Thursday 12/17 from 10 AM to 6 PM at Fleet Feet Mt Pleasant, Friday 12/18 from 10 AM to 6 PM at Fleet Feet Summerville, and Saturday 12/19 from 7:30 AM to 9:00 AM at the race site under the Fleet Feet tents.",
         "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
         "source_path": "description.packet-pickup"
       },
@@ -272,27 +272,7 @@
     ]
   },
   "schedule": [
-    {
-      "day": "Thursday, December 17, 2026",
-      "name": "Packet pickup at Fleet Feet Mt Pleasant",
-      "time": "10:00 AM–6:00 PM EST",
-      "location": "Fleet Feet Mt Pleasant, 881 Houston Northcutt Blvd",
-      "applies_to_distances": ["5k-run", "kids-run"]
-    },
-    {
-      "day": "Friday, December 18, 2026",
-      "name": "Packet pickup at Fleet Feet Summerville",
-      "time": "10:00 AM–6:00 PM EST",
-      "location": "Fleet Feet Summerville, 117 E Richardson Ave",
-      "applies_to_distances": ["5k-run", "kids-run"]
-    },
-    {
-      "day": "Saturday, December 19, 2026",
-      "name": "Race-site packet pickup",
-      "time": "7:30–9:00 AM EST",
-      "location": "Brown Family Park at Nexton under the Fleet Feet tents",
-      "applies_to_distances": ["5k-run", "kids-run"]
-    },
+
     {
       "day": "Saturday, December 19, 2026",
       "name": "One-mile kids fun run",
@@ -345,7 +325,7 @@
     },
     {
       "question": "What do 5K runners receive?",
-      "answer": "The event says 5K racers receive a warm commemorative hoodie, a free cocoa cup, and other goodies."
+      "answer": "5K racers receive a warm commemorative hoodie, a free cocoa cup, and other goodies."
     },
     {
       "question": "Is kids run registration required?",
@@ -357,11 +337,11 @@
     },
     {
       "question": "What is the refund policy?",
-      "answer": "The race is held rain or shine and the event states that refunds are not issued."
+      "answer": "The race is held rain or shine and refunds are not issued."
     },
     {
       "question": "Who benefits from the race?",
-      "answer": "RunSignup states that proceeds benefit East Cooper Community Outreach, The Lowcountry Food Bank, and The Navigation Center."
+      "answer": "Proceeds benefit East Cooper Community Outreach, The Lowcountry Food Bank, and The Navigation Center."
     }
   ]
 }
