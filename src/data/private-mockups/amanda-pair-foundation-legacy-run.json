@@ -308,10 +308,43 @@
   "schedule": [
     {
       "day": "Saturday, November 14, 2026",
+      "group_title": "Race Day",
+      "name": "Arrive at Vestavia Hills Elementary Liberty Park",
+      "time": "Race morning",
+      "location": "17035 Liberty Pkwy, Birmingham, AL 35242",
+      "applies_to_distances": ["5k-run-walk", "family-fun-run-walk", "liberty-park-middle-school-timed-mile"]
+    },
+    {
+      "day": "Saturday, November 14, 2026",
+      "group_title": "Race Day",
       "name": "Liberty Park Middle School Timed Mile",
       "time": "9:00 AM CDT",
       "location": "Vestavia Hills Elementary Liberty Park",
       "applies_to_distances": ["liberty-park-middle-school-timed-mile"]
+    },
+    {
+      "day": "Saturday, November 14, 2026",
+      "group_title": "Race Day",
+      "name": "5K Run/Walk around Liberty Park",
+      "time": "Race morning",
+      "location": "Begins and ends at Vestavia Hills Elementary Liberty Park",
+      "applies_to_distances": ["5k-run-walk"]
+    },
+    {
+      "day": "Saturday, November 14, 2026",
+      "group_title": "Race Day",
+      "name": "Family Fun Run/Walk",
+      "time": "Race morning",
+      "location": "Vestavia Hills Elementary Liberty Park",
+      "applies_to_distances": ["family-fun-run-walk"]
+    },
+    {
+      "day": "Saturday, November 14, 2026",
+      "group_title": "Race Day",
+      "name": "Virtual option",
+      "time": "Anytime on race weekend",
+      "location": "Complete from your own course",
+      "applies_to_distances": ["virtual-option"]
     }
   ],
   "travel": {
