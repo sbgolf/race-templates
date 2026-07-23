@@ -1,0 +1,347 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "13th Annual Cocoa Cup 5K",
+    "slug": "cocoa-cup-5k",
+    "tagline": "Run, laugh, and sip your way to Summerville's coziest finish line.",
+    "short_name": "Cocoa Cup 5K",
+    "hero_image": {
+      "src": "/mockups/9dc50869c05198d25a2bad9df3365379/assets/cocoa-cup-start-kids-race.png",
+      "alt": "Cocoa Cup runners and families gathered at the start of the kids race",
+      "caption": "A Cocoa Cup race-day start scene from the official Fleet Feet Charleston event page.",
+      "source": "https://nmcdn.io/bf48b01813174d27941cb0fe2037c1cb/3a6d5f36375f4f1eb73df8738b35c214/files/cocoacupstartkidsrace-process-sc1440x600-t1696445656.png?v=f9ce84fbf2",
+      "source_label": "Official Fleet Feet Charleston Cocoa Cup page",
+      "presentation": "photo"
+    },
+    "colors": {
+      "primary": "#7A2E1B",
+      "secondary": "#D35F2D",
+      "accent": "#F5C16C",
+      "ink": "#241513"
+    }
+  },
+  "event": {
+    "date": "2026-12-19",
+    "location": "Summerville, SC",
+    "timezone": "America/New_York",
+    "venue": "Brown Family Park at Nexton",
+    "address": "Brown Family Park at Nexton, Summerville, SC 29486"
+  },
+  "distances": [
+    {
+      "id": "5k-run",
+      "name": "13th Annual Cocoa Cup 5K Run",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "9:30 AM EST",
+      "price": "$45",
+      "profile": "A festive 5K at Brown Family Park at Nexton with hot cocoa at the finish, a hoodie for 5K racers, a cocoa cup, and post-race holiday festivities.",
+      "highlights": [
+        "9:30 AM start with a late-morning finish window",
+        "5K racers receive a commemorative warm hoodie, free cocoa cup, and other goodies",
+        "Holiday costume contest, photos with Santa and Mrs. Claus, hot cocoa, and awards after the race"
+      ],
+      "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+      "provenance": {
+        "source": "RunSignup Events and Description sections; official Fleet Feet Charleston Cocoa Cup page",
+        "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the 5K Run price, 9:30 AM EST start, and race-day perks; the official Fleet Feet page repeats the date, 9:30 AM start, Brown Family Park at Nexton venue, hoodie/cocoa cup perks, and festivities."
+      }
+    },
+    {
+      "id": "kids-run",
+      "name": "Kids Run",
+      "distance": "1 Mile",
+      "start_time": "9:00 AM EST",
+      "price": "$0",
+      "profile": "A free one-mile kids fun run for ages 12 and under before the 5K begins.",
+      "highlights": [
+        "Starts at 9:00 AM EST",
+        "Registration is mandatory for the kids run",
+        "Open to ages 12 and under"
+      ],
+      "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+      "provenance": {
+        "source": "RunSignup Events and Description sections; official Fleet Feet Charleston Cocoa Cup page",
+        "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the Kids Run at $0, 9:00 AM EST, and open to ages 12 and under; the description and official page call it a one-mile kids fun run."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=51119",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Registration opens in September for the 5K Run and mandatory kids run registration.",
+    "deadline": "Registration opens in mid-September, with the 5K Run and Kids Run opening on adjacent September dates across the race pages.",
+    "price_note": "Current prices are $45 for the 5K Run and $0 for the Kids Run."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race day details",
+    "headline": "What runners and families need for Cocoa Cup morning.",
+    "intro": "The key details for planning race morning at Brown Family Park at Nexton.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "location",
+        "label": "Start area",
+        "value": "Brown Family Park at Nexton",
+        "detail": "The Cocoa Cup 5K is held at Brown Family Park at Nexton in Summerville, SC 29486.",
+        "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+        "source_path": "event.venue"
+      },
+      {
+        "id": "start-time",
+        "label": "Start times",
+        "value": "9:00 AM kids run; 9:30 AM 5K",
+        "detail": "The one-mile kids fun run begins at 9:00 AM and the 5K starts at 9:30 AM, followed by holiday festivities, hot cocoa, and awards.",
+        "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+        "source_path": "schedule"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Thu/Fri store pickup + race morning",
+        "detail": "Packet pickup is available Thursday 12/17 from 10 AM to 6 PM at Fleet Feet Mt Pleasant, Friday 12/18 from 10 AM to 6 PM at Fleet Feet Summerville, and Saturday 12/19 from 7:30 AM to 9:00 AM at the race site under the Fleet Feet tents.",
+        "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+        "source_path": "description.packet-pickup"
+      },
+      {
+        "id": "swag",
+        "label": "5K perks",
+        "value": "Hoodie, cocoa cup, and goodies",
+        "detail": "5K racers receive a commemorative warm hoodie, a free cocoa cup, and other goodies.",
+        "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+        "source_path": "description.swag"
+      },
+      {
+        "id": "post-race",
+        "label": "Holiday extras",
+        "value": "Costumes, Santa photos, hot cocoa",
+        "detail": "Race-day activities include a holiday costume contest, pictures with Santa and Mrs. Claus, hot cocoa, and an awards ceremony after the 5K.",
+        "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+        "source_path": "description.activities"
+      },
+      {
+        "id": "refunds-transfers",
+        "label": "Race policies",
+        "value": "Rain or shine; no refunds; no pets",
+        "detail": "The race is held rain or shine, refunds are not issued, strollers are welcome, and participants are asked to leave furry friends at home.",
+        "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+        "source_path": "description.policies"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "13th Annual Cocoa Cup 5K — December 19, 2026",
+    "meta_description": "Run the Cocoa Cup 5K at Brown Family Park at Nexton in Summerville with a kids run, hot cocoa, hoodie, costume contest, Santa photos, and holiday festivities."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "9dc50869c05198d25a2bad9df3365379",
+    "route": "/private/mockups/9dc50869c05198d25a2bad9df3365379/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+    "source_platform": "runsignup",
+    "source_race_id": "51119",
+    "registration_race_id": "51119",
+    "generated_from": "marketing-site community mockup batch after Steve approval",
+    "owner_approved_for_generation": true,
+    "qualification_reason": "Steve's batch selected this candidate. The race has an official RunSignup listing, an official Fleet Feet Charleston event page, family-friendly 5K/kids-run structure, strong holiday community details, sponsor/beneficiary proof, usable official race imagery, and a publicly visible direct Fleet Feet email source suitable for private mockup eligibility.",
+    "source_urls": [
+      "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+      "https://runsignup.com/Race/Info/SC/Summerville/CocoaCup5K",
+      "https://runsignup.com/Race/Events/SC/Summerville/CocoaCup5K",
+      "https://runsignup.com/Race/Register/?raceId=51119",
+      "https://www.fleetfeet.com/s/mountpleasant/community/cocoa-cup-5k",
+      "http://www.mapmyrun.com/routes/view/3766065439"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "danielle@fleetfeetmountpleasant.com",
+        "context": "RunSignup description and official Fleet Feet Charleston Cocoa Cup page list Danielle/Danielle Galluccio for sponsorship inquiries; direct organization-domain email is public and race-adjacent.",
+        "source_url": "https://www.fleetfeet.com/s/mountpleasant/community/cocoa-cup-5k",
+        "status": "public_direct_org_race_contact"
+      },
+      {
+        "type": "email",
+        "value": "jennifer@fleetfeetmountpleasant.com",
+        "context": "RunSignup description lists Jennifer Roberts for Cocoa Cup volunteer information; public direct organization-domain email.",
+        "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+        "status": "public_direct_org_race_contact"
+      },
+      {
+        "type": "form",
+        "url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K#contactFormSection",
+        "context": "RunSignup Race Contact Info form also exists on the race page.",
+        "status": "contact_form_available"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K",
+      "items": [
+        { "path": "identity.name", "source": "RunSignup race header", "confidence": "high" },
+        { "path": "identity.tagline", "source": "RunSignup Description section and official Fleet Feet Charleston Cocoa Cup page", "confidence": "high" },
+        { "path": "identity.hero_image", "source": "Official Fleet Feet Charleston Cocoa Cup page hero image", "confidence": "high" },
+        { "path": "event.date", "source": "RunSignup race header and official Fleet Feet page", "confidence": "high" },
+        { "path": "event.location", "source": "RunSignup race header and Place section", "confidence": "high" },
+        { "path": "event.venue", "source": "RunSignup Place section and official Fleet Feet page", "confidence": "high" },
+        { "path": "distances", "source": "RunSignup Events section and official Fleet Feet page", "confidence": "high" },
+        { "path": "registration", "source": "RunSignup Events/Register sections and official Fleet Feet page", "confidence": "high" },
+        { "path": "runner_decision_checklist", "source": "RunSignup Description and official Fleet Feet page", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.location", "source": "RunSignup Place section and official Fleet Feet page", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.start-time", "source": "RunSignup Events and Description sections", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.packet-pickup", "source": "RunSignup Packet Pick-Up description", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.swag", "source": "RunSignup Description and official Fleet Feet page", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.post-race", "source": "RunSignup Race Day Activities and Race Day Schedule", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.refunds-transfers", "source": "RunSignup race policies in Description section", "confidence": "high" },
+        { "path": "course", "source": "RunSignup MapMyRun course map link and official Fleet Feet scenic-course language", "confidence": "medium" },
+        { "path": "story", "source": "RunSignup Description and official Fleet Feet page", "confidence": "high" },
+        { "path": "schedule", "source": "RunSignup Description and Events sections", "confidence": "high" },
+        { "path": "travel", "source": "RunSignup Place and packet pickup details", "confidence": "high" },
+        { "path": "faqs", "source": "RunSignup Description section", "confidence": "high" },
+        { "path": "contact_sources", "source": "RunSignup Description and official Fleet Feet Charleston Cocoa Cup page", "confidence": "high" }
+      ],
+      "source_confirmed_distance_ids": ["5k-run", "kids-run"],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "travel",
+        "faqs",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "summary": "Core race facts, date, location, venue, events, prices, start times, registration opening notes, packet pickup windows, hot cocoa/hoodie/holiday activity details, no-refund/no-pets/stroller policies, beneficiary notes, MapMyRun course link, official race imagery, and public direct Fleet Feet contact emails are verified. The exact 2026 course certification status was not stated, so the mockup does not claim certification.",
+      "items": [
+        "RunSignup exposes a MapMyRun course-map link, but no GPX file, elevation profile, or turn-by-turn route details were captured in this pass.",
+        "RunSignup says the 5K opens September 14 while the description and official Fleet Feet page say registration opens September 15; the mockup preserves both details in registration notes instead of simplifying them to a single date.",
+        "Beneficiary language is source-backed, but the official page names 2025 race beneficiaries while RunSignup says proceeds from this race will benefit East Cooper Community Outreach, The Lowcountry Food Bank, and The Navigation Center.",
+        "The official page sponsor list is labeled 2025 Sponsors, so the mockup does not render a current-year sponsor grid."
+      ]
+    },
+    "captured_at": "2026-07-23T00:00:00.000Z"
+  },
+  "course": {
+    "suppress_visual": false,
+    "type": "Festive road 5K at Nexton",
+    "description": "The 5K runs from Brown Family Park at Nexton on a scenic course, with a public MapMyRun course map linked from the RunSignup page.",
+    "highlights": [
+      "Brown Family Park at Nexton race site",
+      "MapMyRun course map linked from RunSignup",
+      "Family-friendly race morning with one-mile kids run before the 5K"
+    ],
+    "map_links": [
+      {
+        "label": "View Course Map",
+        "url": "http://www.mapmyrun.com/routes/view/3766065439"
+      }
+    ]
+  },
+  "story": {
+    "kicker": "Holiday community race",
+    "title": "A cozy Summerville race morning with cocoa, costumes, kids, and community impact.",
+    "paragraphs": [
+      "The 13th Annual Cocoa Cup 5K returns to Brown Family Park at Nexton on Saturday, December 19, 2026, pairing a 9:30 AM 5K with a free one-mile kids fun run at 9:00 AM.",
+      "Runners can race for a PR or come for the cocoa: the event promises a festive course, a hot cocoa finish, a warm commemorative hoodie for 5K racers, a cocoa cup, other goodies, and plenty of holiday smiles.",
+      "Race-day activities include a holiday costume contest, photos with Santa and Mrs. Claus, awards, and proceeds benefiting East Cooper Community Outreach, The Lowcountry Food Bank, and The Navigation Center."
+    ],
+    "links": [
+      {
+        "label": "RunSignup race page",
+        "url": "https://runsignup.com/Race/SC/Summerville/CocoaCup5K"
+      },
+      {
+        "label": "Official Fleet Feet Charleston Cocoa Cup page",
+        "url": "https://www.fleetfeet.com/s/mountpleasant/community/cocoa-cup-5k"
+      }
+    ]
+  },
+  "schedule": [
+
+    {
+      "day": "Saturday, December 19, 2026",
+      "name": "One-mile kids fun run",
+      "time": "9:00 AM EST",
+      "location": "Brown Family Park at Nexton",
+      "applies_to_distances": ["kids-run"]
+    },
+    {
+      "day": "Saturday, December 19, 2026",
+      "name": "5K start",
+      "time": "9:30 AM EST",
+      "location": "Brown Family Park at Nexton",
+      "applies_to_distances": ["5k-run"]
+    },
+    {
+      "day": "Saturday, December 19, 2026",
+      "name": "Holiday festivities, hot cocoa, and awards",
+      "time": "After the 5K",
+      "location": "Brown Family Park at Nexton",
+      "applies_to_distances": ["5k-run", "kids-run"]
+    }
+  ],
+  "travel": {
+    "items": [
+      {
+        "label": "PARK",
+        "title": "Brown Family Park at Nexton",
+        "description": "Race morning is based at Brown Family Park at Nexton in Summerville, SC 29486."
+      },
+      {
+        "label": "PKT",
+        "title": "Two store pickup options",
+        "description": "Pick up packets Thursday at Fleet Feet Mt Pleasant or Friday at Fleet Feet Summerville from 10:00 AM to 6:00 PM."
+      },
+      {
+        "label": "RACE",
+        "title": "Race-morning pickup",
+        "description": "Saturday packet pickup is scheduled from 7:30 AM to 9:00 AM at the race site under the Fleet Feet tents."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Where is the Cocoa Cup 5K held?",
+      "answer": "The race is held at Brown Family Park at Nexton in Summerville, SC 29486."
+    },
+    {
+      "question": "What time do the races start?",
+      "answer": "The one-mile kids fun run starts at 9:00 AM EST and the 5K starts at 9:30 AM EST."
+    },
+    {
+      "question": "What do 5K runners receive?",
+      "answer": "5K racers receive a warm commemorative hoodie, a free cocoa cup, and other goodies."
+    },
+    {
+      "question": "Is kids run registration required?",
+      "answer": "Yes. The kids run is free, open to ages 12 and under, and registration is mandatory."
+    },
+    {
+      "question": "Are strollers or pets allowed?",
+      "answer": "Strollers are welcome. For participant safety and comfort, the race asks that furry friends stay at home."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "The race is held rain or shine and refunds are not issued."
+    },
+    {
+      "question": "Who benefits from the race?",
+      "answer": "Proceeds benefit East Cooper Community Outreach, The Lowcountry Food Bank, and The Navigation Center."
+    }
+  ]
+}
