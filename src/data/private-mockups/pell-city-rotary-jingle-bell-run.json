@@ -3,7 +3,7 @@
     "template": "community",
     "name": "Pell City Rotary Club Jingle Bell 5K, 10K & Fun Run",
     "slug": "pell-city-rotary-jingle-bell-run",
-    "tagline": "A festive Lakeside Park race morning with certified 5K and 10K courses, a 1-mile Fun Run, Santa, awards, and community-team energy.",
+    "tagline": "Certified 5K/10K courses, a 1-mile Fun Run, Santa, awards, and team spirit at Lakeside Park.",
     "short_name": "Pell City Jingle Bell Run",
     "hero_image": {
       "src": "/mockups/e58b5831a165cd50550e1243e97678cc/pell-city-jingle-bell-2024-scene.jpg",
@@ -39,7 +39,7 @@
       "highlights": [
         "Certified course number AL25014JE",
         "Cash awards for the top three male and female finishers",
-        "Top-three age-group medals for listed age groups"
+        "Top-three age-group medals across race age groups"
       ],
       "source_url": "https://runsignup.com/Race/AL/PellCity/PellCityRotaryClubJingleBellRun",
       "provenance": {
@@ -58,8 +58,8 @@
       "price": "$50",
       "profile": "The longer certified race option shares the 8:00 AM start and Lakeside Park setting with the 5K.",
       "highlights": [
-        "Certified course number AL25014JE listed for returning courses",
-        "Cash awards listed for first through third male and female finishers",
+        "Certified course number AL25014JE for returning courses",
+        "Cash awards for first through third male and female finishers",
         "Top-three age-group medals for 5K/10K finishers"
       ],
       "source_url": "https://runsignup.com/Race/AL/PellCity/PellCityRotaryClubJingleBellRun",
@@ -102,7 +102,7 @@
     "price_note": "Current registration prices are $40 for the 5K Run, $50 for the 10K Run, and $35 for the 1 Mile Fun Run."
   },
   "runner_decision_checklist": {
-    "kicker": "Race day notes",
+    "kicker": "Race day details",
     "headline": "What to know before jingling through Lakeside Park.",
     "intro": "Key race-day details for the 2026 Pell City Rotary Club Jingle Bell race morning.",
     "footer_cta": false,
@@ -127,7 +127,7 @@
         "id": "course",
         "label": "Course note",
         "value": "Certified returning courses",
-        "detail": "The 5K and 10K repeat the 2025 courses and remain certified, with Course Number AL25014JE listed.",
+        "detail": "The 5K and 10K repeat the 2025 courses and remain certified as Course Number AL25014JE.",
         "source_url": "https://runsignup.com/Race/AL/PellCity/PellCityRotaryClubJingleBellRun",
         "source_path": "course.certification"
       },
@@ -135,7 +135,7 @@
         "id": "packet-pickup",
         "label": "Packet pickup",
         "value": "7:00–7:45 AM",
-        "detail": "The race-day schedule lists registration and packet pickup from 7:00 to 7:45 AM before the opening ceremony and race start.",
+        "detail": "Registration and packet pickup run from 7:00 to 7:45 AM before the opening ceremony and race start.",
         "source_url": "https://runsignup.com/Race/AL/PellCity/PellCityRotaryClubJingleBellRun",
         "source_path": "schedule.packet-pickup"
       },
@@ -151,7 +151,7 @@
         "id": "refunds-transfers",
         "label": "Pets and strollers",
         "value": "Leashed pets; strollers from back",
-        "detail": "The race notes ask pet owners to follow Pell City Animal Ordinance and Lakeside Park rules, keep pets on a leash, clean up after them, and have stroller participants start from the back because the course includes mixed surfaces.",
+        "detail": "Pets should stay leashed under Pell City Animal Ordinance and Lakeside Park rules; stroller participants should start from the back because the course includes mixed surfaces.",
         "source_url": "https://runsignup.com/Race/AL/PellCity/PellCityRotaryClubJingleBellRun",
         "source_path": "faqs.pets-strollers"
       }
@@ -159,7 +159,7 @@
   },
   "seo": {
     "meta_title": "Pell City Rotary Club Jingle Bell Run — December 12, 2026",
-    "meta_description": "A festive Lakeside Park race morning with 5K, 10K, 1 Mile Fun Run, certified courses, awards, Santa, registration, and race-day notes."
+    "meta_description": "Join the Pell City Jingle Bell Run at Lakeside Park for certified 5K and 10K courses, a 1 Mile Fun Run, Santa, awards, and team spirit."
   },
   "analytics": {
     "register_click_event_name": "register_click"
@@ -247,8 +247,8 @@
   "course": {
     "suppress_visual": true,
     "type": "Certified holiday road race at Lakeside Park",
-    "description": "The 5K and 10K races repeat the 2025 courses and remain certified, with Course Number AL25014JE listed. No public route map, GPX file, or elevation profile is currently posted.",
-    "certification": "Course Number AL25014JE is listed for the returning certified 5K and 10K courses.",
+    "description": "The 5K and 10K races repeat the 2025 courses and remain certified as Course Number AL25014JE. No public route map, GPX file, or elevation profile is currently posted.",
+    "certification": "Course Number AL25014JE covers the returning certified 5K and 10K courses.",
     "highlights": [
       "Lakeside Park start/finish area",
       "Certified 5K and 10K courses",
@@ -343,7 +343,7 @@
     },
     {
       "question": "Are the 5K and 10K certified?",
-      "answer": "Both courses repeat the 2025 courses and remain certified, with Course Number AL25014JE listed."
+      "answer": "Both courses repeat the 2025 courses and remain certified as Course Number AL25014JE."
     },
     {
       "question": "What is included with registration?",
@@ -351,7 +351,7 @@
     },
     {
       "question": "Are pets allowed?",
-      "answer": "The race notes say pets are welcome if owners follow the Pell City Animal Ordinance and Lakeside Park Rules, keep pets on a leash, clean up after them, and remain responsible for their pet's actions."
+      "answer": "Pets are welcome when owners follow the Pell City Animal Ordinance and Lakeside Park Rules, keep pets on a leash, clean up after them, and remain responsible for their pet's actions."
     },
     {
       "question": "Is the race stroller-friendly?",
