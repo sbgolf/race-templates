@@ -97,21 +97,21 @@
     "url": "https://runsignup.com/Race/Register/?raceId=154502",
     "platform": "runsignup",
     "cta_label": "Register on RunSignup",
-    "intro": "Register through the official RunSignup page for the 5K Run, 10K Run, or 1 Mile Fun Run.",
+    "intro": "Choose the 5K Run, 10K Run, or 1 Mile Fun Run and reserve your spot for race morning.",
     "deadline": "Prices increase after November 29, 2026 at 11:59 PM CST; registrations must be submitted by November 29 to guarantee a T-shirt size and swag bag.",
-    "price_note": "Current RunSignup event listings show $40 for the 5K Run, $50 for the 10K Run, and $35 for the 1 Mile Fun Run."
+    "price_note": "Current registration prices are $40 for the 5K Run, $50 for the 10K Run, and $35 for the 1 Mile Fun Run."
   },
   "runner_decision_checklist": {
     "kicker": "Race day notes",
     "headline": "What to know before jingling through Lakeside Park.",
-    "intro": "A quick verified checklist for the 2026 Pell City Rotary Club Jingle Bell race morning.",
+    "intro": "Key race-day details for the 2026 Pell City Rotary Club Jingle Bell race morning.",
     "footer_cta": false,
     "items": [
       {
         "id": "location",
         "label": "Start area",
         "value": "Lakeside Park",
-        "detail": "RunSignup lists the place as Lakeside Park in Pell City, AL 35128.",
+        "detail": "Race morning is based at Lakeside Park in Pell City, AL 35128.",
         "source_url": "https://runsignup.com/Race/AL/PellCity/PellCityRotaryClubJingleBellRun",
         "source_path": "event.venue"
       },
@@ -127,7 +127,7 @@
         "id": "course",
         "label": "Course note",
         "value": "Certified returning courses",
-        "detail": "RunSignup says the 5K and 10K repeat the 2025 courses and remain certified, with Course Number AL25014JE listed.",
+        "detail": "The 5K and 10K repeat the 2025 courses and remain certified, with Course Number AL25014JE listed.",
         "source_url": "https://runsignup.com/Race/AL/PellCity/PellCityRotaryClubJingleBellRun",
         "source_path": "course.certification"
       },
@@ -143,7 +143,7 @@
         "id": "swag",
         "label": "Included items",
         "value": "T-shirt, swag bag, refreshments",
-        "detail": "RunSignup says the registration fee includes a race T-shirt, swag bag, and post-race refreshments, with November 29 as the guarantee deadline for T-shirt size and swag bag.",
+        "detail": "Registration includes a race T-shirt, swag bag, and post-race refreshments, with November 29 as the guarantee deadline for T-shirt size and swag bag.",
         "source_url": "https://runsignup.com/Race/AL/PellCity/PellCityRotaryClubJingleBellRun",
         "source_path": "registration.deadline"
       },
@@ -159,7 +159,7 @@
   },
   "seo": {
     "meta_title": "Pell City Rotary Club Jingle Bell Run — December 12, 2026",
-    "meta_description": "Pell City Rotary Club Jingle Bell Run details: 5K, 10K, 1 Mile Fun Run, Lakeside Park, certified courses, schedule, awards, registration, and race-day notes."
+    "meta_description": "A festive Lakeside Park race morning with 5K, 10K, 1 Mile Fun Run, certified courses, awards, Santa, registration, and race-day notes."
   },
   "analytics": {
     "register_click_event_name": "register_click"
@@ -247,11 +247,11 @@
   "course": {
     "suppress_visual": true,
     "type": "Certified holiday road race at Lakeside Park",
-    "description": "RunSignup says the 5K and 10K races repeat the 2025 courses and remain certified, listing Course Number AL25014JE. The source pages checked did not expose a public route map, GPX file, or elevation profile.",
-    "certification": "RunSignup lists Course Number AL25014JE for the returning certified 5K and 10K courses.",
+    "description": "The 5K and 10K races repeat the 2025 courses and remain certified, with Course Number AL25014JE listed. No public route map, GPX file, or elevation profile is currently posted.",
+    "certification": "Course Number AL25014JE is listed for the returning certified 5K and 10K courses.",
     "highlights": [
       "Lakeside Park start/finish area",
-      "Certified 5K and 10K courses listed by RunSignup",
+      "Certified 5K and 10K courses",
       "Mixed surfaces noted in race-day stroller guidance"
     ],
     "map_links": []
@@ -261,7 +261,7 @@
     "title": "A Jingle Bell morning for runners, families, teams, and Santa at Lakeside Park.",
     "paragraphs": [
       "The Pell City Rotary Club Jingle Bell Run returns to Lakeside Park on Saturday, December 12, 2026 with 5K and 10K races plus a 1-mile Fun Run/Walk.",
-      "RunSignup frames the race morning around certified returning courses, cash prizes for top finishers, age-group medals, best-dressed awards, post-race refreshments, and a visit from Santa Claus from 8:00 AM to 10:00 AM.",
+      "Race morning includes certified returning courses, cash prizes for top finishers, age-group medals, best-dressed awards, post-race refreshments, and a visit from Santa Claus from 8:00 AM to 10:00 AM.",
       "The team participation contest is also back: the team with the most registered participants receives a donation to the organization or charity of its choice."
     ],
     "links": [
@@ -317,7 +317,7 @@
       {
         "label": "PARK",
         "title": "Lakeside Park venue",
-        "description": "The RunSignup Place section lists Lakeside Park in Pell City, AL 35128 as the race location."
+        "description": "Lakeside Park in Pell City, AL 35128 is the race location."
       },
       {
         "label": "PKT",
@@ -327,7 +327,7 @@
       {
         "label": "INFO",
         "title": "Parking details pending",
-        "description": "RunSignup says to check back closer to race day for important parking details."
+        "description": "Check back closer to race day for important parking details."
       }
     ]
   },
@@ -335,19 +335,19 @@
   "faqs": [
     {
       "question": "Where is the 2026 race held?",
-      "answer": "RunSignup lists the place as Lakeside Park in Pell City, AL 35128."
+      "answer": "The 2026 race is held at Lakeside Park in Pell City, AL 35128."
     },
     {
       "question": "What events are offered?",
-      "answer": "RunSignup lists the 5K Run, 10K Run, and 1 Mile Fun Run."
+      "answer": "Race morning includes the 5K Run, 10K Run, and 1 Mile Fun Run."
     },
     {
       "question": "Are the 5K and 10K certified?",
-      "answer": "The RunSignup description says both courses repeat the 2025 courses and remain certified, with Course Number AL25014JE listed."
+      "answer": "Both courses repeat the 2025 courses and remain certified, with Course Number AL25014JE listed."
     },
     {
       "question": "What is included with registration?",
-      "answer": "RunSignup says the registration fee includes a race T-shirt, swag bag, and post-race refreshments. Registrations must be submitted by November 29 to guarantee a T-shirt size and swag bag."
+      "answer": "Registration includes a race T-shirt, swag bag, and post-race refreshments. Register by November 29 to guarantee a T-shirt size and swag bag."
     },
     {
       "question": "Are pets allowed?",
@@ -355,11 +355,11 @@
     },
     {
       "question": "Is the race stroller-friendly?",
-      "answer": "RunSignup notes the course includes asphalt running paths, roadways, grass, and a wooden bridge, which may not be ideal for strollers; stroller participants are asked to keep children with them and start from the back of the starting line."
+      "answer": "The course includes asphalt running paths, roadways, grass, and a wooden bridge, which may not be ideal for strollers; stroller participants are asked to keep children with them and start from the back of the starting line."
     },
     {
       "question": "What is the refund or transfer policy?",
-      "answer": "RunSignup states that registration fees are non-refundable and transfers to another person are not permitted."
+      "answer": "Registration fees are non-refundable and transfers to another person are not permitted."
     }
   ]
 }
