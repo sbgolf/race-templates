@@ -142,7 +142,7 @@
         "id": "course",
         "label": "Timed race note",
         "value": "AJC Peachtree qualifier / USATF Certified",
-        "detail": "The 10K and 5K races are listed as official AJC Peachtree Road Race Qualifiers and USATF Certified.",
+        "detail": "The 10K and 5K carry official AJC Peachtree Road Race Qualifier and USATF Certified credentials.",
         "source_url": "https://runsignup.com/Race/GA/Marietta/AnnualMUSTGobbleJog26",
         "source_path": "course.certification"
       },
@@ -158,7 +158,7 @@
         "id": "refunds-transfers",
         "label": "Refund policy",
         "value": "Registration fees are non-refundable",
-        "detail": "Registration fees are listed as non-refundable.",
+        "detail": "Registration fees are non-refundable.",
         "source_url": "https://mustministries.org/events/gobble-jog/",
         "source_path": "faqs.refunds"
       }
