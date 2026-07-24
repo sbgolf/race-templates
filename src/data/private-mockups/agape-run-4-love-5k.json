@@ -10,6 +10,16 @@
       "secondary": "#E84C3D",
       "accent": "#F4B942",
       "ink": "#1F2A44"
+    },
+    "hero_image": {
+      "src": "/mockups/87a87e48f4fa4707a2d74ff328170b35/agape-runsignup-logo.png",
+      "alt": "AGAPE Run 4 Love 5K logo from the official RunSignup race page",
+      "caption": "The current RunSignup race logo keeps the hero visual source-backed without showing conflicting banner date text.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-256452-1751401866.1926-0.bOzewk.png",
+      "source_label": "Official RunSignup AGAPE Run 4 Love 5K logo",
+      "presentation": "logo",
+      "fit": "contain",
+      "aspect_ratio": "1 / 1"
     }
   },
   "event": {
@@ -164,7 +174,7 @@
     {
       "name": "TowerPoint",
       "tier": "Presented by",
-      "url": "https://agapeatlanta.org/agape-run-4-love-5k/"
+      "url": "https://towerpoint.com/"
     },
     {
       "name": "Hamilton Capital Partners, LLC",
@@ -237,7 +247,7 @@
     "generated_from": "Steve-approved eligible backlog mockup generation",
     "owner_approved_for_generation": true,
     "show_measurement_panel": true,
-    "qualification_reason": "Steve approved generating this eligible candidate. The race has current RunSignup registration, an official Agape event page with organization contact and mission detail, and family-friendly Community-template fit. The visible hero avoids the stale official banner because that banner conflicts with current RunSignup date/time details.",
+    "qualification_reason": "Steve approved generating this eligible candidate. The race has current RunSignup registration, an official Agape event page with organization contact and mission detail, and family-friendly Community-template fit. The visible hero uses the current RunSignup race logo instead of banner artwork because the banner contains conflicting date/time text versus the current RunSignup listing.",
     "source_urls": [
       "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
       "https://agapeatlanta.org/agape-run-4-love-5k/",
@@ -260,7 +270,8 @@
         "schedule",
         "story",
         "sponsors",
-        "runner_decision_checklist"
+        "runner_decision_checklist",
+        "identity.hero_image"
       ],
       "source_confirmed_distance_ids": [
         "tot-trot",
@@ -281,9 +292,10 @@
         },
         {
           "path": "identity.hero_image",
-          "source": "No visible hero image rendered",
+          "source": "Official RunSignup AGAPE Run 4 Love 5K logo",
           "confidence": "high",
-          "notes": "The official banner artwork is intentionally not used as the visible hero because it contains conflicting date/time text versus the current RunSignup listing."
+          "notes": "Uses the logo asset instead of the official banner because the banner contains conflicting 2026 date/time text versus the current listing.",
+          "source_url": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-256452-1751401866.1926-0.bOzewk.png"
         },
         {
           "path": "event.date",
