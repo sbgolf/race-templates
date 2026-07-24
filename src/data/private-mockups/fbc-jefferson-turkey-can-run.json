@@ -1,0 +1,385 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "18th Annual FBC Jefferson Turkey Can Run",
+    "slug": "fbc-jefferson-turkey-can-run",
+    "short_name": "Turkey Can Run",
+    "tagline": "A Thanksgiving Day 5K through historic downtown Jefferson supporting the FBC Jefferson Food Bank.",
+    "hero_image": {
+      "src": "/mockups/290a220028b9b9cd400ffeb8286d54c9/fbc-jefferson-turkey-can-run-social.jpg",
+      "alt": "Turkey Can Run race graphic with Thanksgiving-themed artwork",
+      "caption": "Turkey Can Run event artwork from the official RunSignup page.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race5196-social1200x630.bCEbaX.jpg",
+      "source_label": "RunSignup Turkey Can Run social image",
+      "presentation": "banner",
+      "aspect_ratio": "1200 / 630",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#7B2D26",
+      "secondary": "#D96B27",
+      "accent": "#F2B84B",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-11-26",
+    "location": "Jefferson, GA",
+    "timezone": "America/New_York",
+    "venue": "First Baptist Church Jefferson",
+    "address": "246 Washington St., Jefferson, GA 30549"
+  },
+  "distances": [
+    {
+      "id": "5k-run-walk",
+      "name": "5K Run/Walk",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "8:00 AM EST",
+      "price": "$15 + 15 canned food items",
+      "profile": "A Thanksgiving morning 5K run/walk through historic downtown Jefferson benefiting the FBC Jefferson Food Bank.",
+      "highlights": [
+        "8:00 AM EST Thanksgiving Day start",
+        "USATF certified course #GA24018WC",
+        "AJC Peachtree Road Race qualifying race"
+      ],
+      "source_url": "https://runsignup.com/Race/GA/Jefferson/FBCJeffersonTurkeyCanRun",
+      "provenance": {
+        "source": "RunSignup event listing and FBC Turkey Can Run page",
+        "source_url": "https://runsignup.com/Race/GA/Jefferson/FBCJeffersonTurkeyCanRun",
+        "confidence": "high",
+        "verified": true,
+        "method": "Verified from RunSignup and official FBC event page for date, start, distance, certification, and cause."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=5196",
+    "platform": "runsignup",
+    "cta_label": "Continue to RunSignup registration",
+    "status": "sold_out",
+    "status_label": "Confirm registration status",
+    "status_detail": "The source shows active sign-up details alongside sold out wording, and race-day registration is not available.",
+    "intro": "Confirm the current RunSignup registration status before planning entry; official sources show active sign-up details alongside sold out wording.",
+    "deadline": "Registration ends November 20, 2026 at 11:59 PM EST when available, and race-day registration is not available.",
+    "price_note": "The entry fee is $15 plus 15 canned food items; paid entry by November 20 guarantees a long-sleeve T-shirt."
+  },
+  "schedule": [
+    {
+      "day": "Monday, November 23, 2026",
+      "name": "Advance race number and T-shirt pickup",
+      "time": "5:00–7:00 PM",
+      "location": "FBC Jefferson fellowship hall",
+      "group_title": "Advance packet pickup"
+    },
+    {
+      "day": "Tuesday, November 24, 2026",
+      "name": "Advance race number and T-shirt pickup",
+      "time": "5:00–7:00 PM",
+      "location": "FBC Jefferson fellowship hall",
+      "group_title": "Advance packet pickup"
+    },
+    {
+      "day": "Wednesday, November 25, 2026",
+      "name": "Advance race number and T-shirt pickup",
+      "time": "5:00–7:00 PM",
+      "location": "FBC Jefferson fellowship hall",
+      "group_title": "Advance packet pickup"
+    },
+    {
+      "day": "Thursday, November 26, 2026",
+      "name": "Race-day packet pickup",
+      "time": "7:00 AM",
+      "location": "Education Building"
+    },
+    {
+      "day": "Thursday, November 26, 2026",
+      "name": "5K Run/Walk start",
+      "time": "8:00 AM EST",
+      "location": "First Baptist Church Jefferson",
+      "applies_to_distances": [
+        "5k-run-walk"
+      ]
+    }
+  ],
+  "story": {
+    "kicker": "Thanksgiving purpose",
+    "title": "Run, walk, and bring cans for Jackson County families.",
+    "paragraphs": [
+      "The Turkey Can Run benefits the FBC Jefferson Food Bank, which serves hundreds of Jackson County families in need every year. Participants are asked to pair the entry fee with canned food items such as tuna, chicken, green beans, corn, peas, jelly, peanut butter, and other non-perishable foods."
+    ],
+    "links": [
+      {
+        "label": "FBC event information",
+        "url": "https://www.fbcjefferson.org/turkey-can-run-2/"
+      },
+      {
+        "label": "RunSignup registration",
+        "url": "https://runsignup.com/Race/GA/Jefferson/FBCJeffersonTurkeyCanRun"
+      }
+    ]
+  },
+  "sponsors": [
+    {
+      "name": "Priss Ellie’s Gifts and Decor",
+      "tier": "Featured sponsor",
+      "url": "https://runsignup.com/Race/Sponsors/GA/Jefferson/FBCJeffersonTurkeyCanRun"
+    },
+    {
+      "name": "Publix",
+      "tier": "Featured sponsor",
+      "url": "https://runsignup.com/Race/Sponsors/GA/Jefferson/FBCJeffersonTurkeyCanRun"
+    },
+    {
+      "name": "Billy Cain Ford",
+      "tier": "Featured sponsor",
+      "url": "https://runsignup.com/Race/Sponsors/GA/Jefferson/FBCJeffersonTurkeyCanRun"
+    },
+    {
+      "name": "Runner’s Fit Race Works",
+      "tier": "Featured sponsor",
+      "url": "https://runsignup.com/Race/Sponsors/GA/Jefferson/FBCJeffersonTurkeyCanRun"
+    }
+  ],
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What runners need before Thanksgiving morning in Jefferson.",
+    "intro": "A concise checklist for registration, packet pickup, parking, food-bank donations, and the certified 5K course.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "distance",
+        "label": "Event format",
+        "value": "Thanksgiving Day 5K",
+        "detail": "The event is a 5K run/walk through historic downtown Jefferson.",
+        "source_url": "https://runsignup.com/Race/GA/Jefferson/FBCJeffersonTurkeyCanRun",
+        "source_path": "distances"
+      },
+      {
+        "id": "start-time",
+        "label": "Race start",
+        "value": "8:00 AM EST",
+        "detail": "The 5K starts at 8:00 AM on Thanksgiving morning.",
+        "source_url": "https://runsignup.com/Race/GA/Jefferson/FBCJeffersonTurkeyCanRun",
+        "source_path": "schedule"
+      },
+      {
+        "id": "price",
+        "label": "Entry + food donation",
+        "value": "$15 + 15 canned items",
+        "detail": "Participants pair the entry fee with canned food items for the FBC Jefferson Food Bank.",
+        "source_url": "https://runsignup.com/Race/GA/Jefferson/FBCJeffersonTurkeyCanRun",
+        "source_path": "registration.price_note"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Advance pickup or 7:00 AM race day",
+        "detail": "Advance pickup is offered Monday through Wednesday at the fellowship hall; race-day pickup starts in the Education Building.",
+        "source_url": "https://www.fbcjefferson.org/turkey-can-run-2/",
+        "source_path": "schedule"
+      },
+      {
+        "id": "parking",
+        "label": "Race-day parking",
+        "value": "Jefferson High School",
+        "detail": "FBC notes that church-lot parking is not available; participants may park at Jefferson High School with no shuttle service.",
+        "source_url": "https://www.fbcjefferson.org/turkey-can-run-2/",
+        "source_path": "race_day.parking"
+      },
+      {
+        "id": "course",
+        "label": "Certified course",
+        "value": "USATF #GA24018WC",
+        "detail": "The course is USA Track & Field certified and qualifies as an AJC Peachtree Road Race qualifier.",
+        "source_url": "https://www.fbcjefferson.org/turkey-can-run-2/",
+        "source_path": "course.certification"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Is race-day registration available?",
+      "answer": "No. The event page states that race-day registration is not available.",
+      "links": [
+        {
+          "label": "Race information",
+          "url": "https://www.fbcjefferson.org/turkey-can-run-2/"
+        }
+      ]
+    },
+    {
+      "question": "Where do the canned goods go?",
+      "answer": "The canned food donations support the FBC Jefferson Food Bank and families in Jackson County.",
+      "links": [
+        {
+          "label": "Food bank race details",
+          "url": "https://runsignup.com/Race/GA/Jefferson/FBCJeffersonTurkeyCanRun"
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "meta_title": "18th Annual FBC Jefferson Turkey Can Run — November 26, 2026",
+    "meta_description": "Turkey Can Run details for Jefferson, GA: Thanksgiving Day 5K, packet pickup, parking, canned food donation, certified course, and RunSignup registration."
+  },
+  "private_mockup": {
+    "access_token": "290a220028b9b9cd400ffeb8286d54c9",
+    "route": "/private/mockups/290a220028b9b9cd400ffeb8286d54c9/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/GA/Jefferson/FBCJeffersonTurkeyCanRun",
+    "source_platform": "runsignup",
+    "source_race_id": "5196",
+    "registration_race_id": "5196",
+    "captured_at": "2026-07-24T01:56:32Z",
+    "generated_from": "Steve-approved eligible backlog mockup generation",
+    "owner_approved_for_generation": true,
+    "show_measurement_panel": true,
+    "qualification_reason": "Steve approved generating this eligible candidate. The race has current official RunSignup registration, FBC event details, strong Thanksgiving community/food-bank purpose, official race imagery, and a public routing contact.",
+    "source_urls": [
+      "https://runsignup.com/Race/GA/Jefferson/FBCJeffersonTurkeyCanRun",
+      "https://runsignup.com/TurkeyCanRun",
+      "https://www.fbcjefferson.org/turkey-can-run-2/",
+      "https://runsignup.com/Race/Sponsors/GA/Jefferson/FBCJeffersonTurkeyCanRun"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "admin@fbcjefferson.org",
+        "context": "Public routing inbox referenced in RunSignup sponsorship/contact context; not a named race director.",
+        "source_url": "https://runsignup.com/Race/Sponsors/GA/Jefferson/FBCJeffersonTurkeyCanRun",
+        "status": "public_routing_org_contact"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/GA/Jefferson/FBCJeffersonTurkeyCanRun",
+      "source_confirmed_sections": [
+        "distances",
+        "registration",
+        "schedule",
+        "story",
+        "sponsors",
+        "runner_decision_checklist",
+        "faqs"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k-run-walk"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup and FBC event page title",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup description and FBC event page",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "RunSignup Open Graph race image",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup header and FBC event page",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup Place section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances",
+          "source": "RunSignup event listing and FBC event page",
+          "confidence": "high"
+        },
+        {
+          "path": "registration",
+          "source": "RunSignup event listing and FBC event page",
+          "confidence": "medium"
+        },
+        {
+          "path": "schedule",
+          "source": "FBC pre-race/race-day information and RunSignup time",
+          "confidence": "high"
+        },
+        {
+          "path": "story",
+          "source": "RunSignup description and FBC event page food-bank copy",
+          "confidence": "high"
+        },
+        {
+          "path": "sponsors",
+          "source": "RunSignup sponsor page",
+          "confidence": "medium"
+        },
+        {
+          "path": "faqs",
+          "source": "FBC event page and RunSignup details",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "source": "RunSignup and FBC event details",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "RunSignup event listing",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup Time section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "RunSignup and FBC registration details",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "source": "FBC pre-race/race-day information",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.parking",
+          "source": "FBC race-day information",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "source": "FBC route information",
+          "confidence": "high"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "RunSignup showed active registration details but also conflicting sold-out wording. The mockup avoids claiming the event is sold out and uses cautious online-registration/no-race-day-registration copy.",
+      "items": [
+        {
+          "field": "registration.status",
+          "status": "source_conflict",
+          "note": "RunSignup showed Sign Up/spots/deadline information alongside sold-out wording; confirm exact availability before outreach."
+        },
+        {
+          "field": "sponsors",
+          "status": "partial",
+          "note": "Only representative source-visible sponsors are included in the mockup; full sponsor hierarchy may require visual confirmation."
+        }
+      ]
+    },
+    "uncertainties": [
+      {
+        "path": "sponsors",
+        "note": "Featured sponsors are shown as selected examples; official RunSignup sponsor page includes a larger sponsor roster.",
+        "resolution": "Use “Featured sponsor” tier label unless a complete sponsor-roster rendering is added."
+      }
+    ]
+  }
+}

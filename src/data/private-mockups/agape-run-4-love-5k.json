@@ -1,0 +1,371 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "AGAPE Run 4 Love 5K",
+    "slug": "agape-run-4-love-5k",
+    "short_name": "Run 4 Love 5K",
+    "tagline": "A Westside Atlanta family 5K supporting Agape students and families.",
+    "colors": {
+      "primary": "#2C5AA0",
+      "secondary": "#E84C3D",
+      "accent": "#F4B942",
+      "ink": "#1F2A44"
+    }
+  },
+  "event": {
+    "date": "2026-11-14",
+    "location": "Atlanta, GA",
+    "timezone": "America/New_York",
+    "venue": "Shirley Franklin Park",
+    "address": "1660 Johnson Road NW, Atlanta, GA 30318"
+  },
+  "distances": [
+    {
+      "id": "tot-trot",
+      "name": "Tot Trot",
+      "distance": "Tot Trot",
+      "start_time": "9:25 AM ET",
+      "price": "$0",
+      "profile": "A free opening option for the youngest participants before the kids run and 5K.",
+      "highlights": [
+        "9:25 AM ET start",
+        "$0 registration",
+        "Part of the family-friendly Run 4 Love morning"
+      ],
+      "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+        "confidence": "high",
+        "verified": true,
+        "method": "Verified from the current RunSignup event options and start times."
+      }
+    },
+    {
+      "id": "kids-fun-run",
+      "name": "Kid’s Fun Run",
+      "distance": "1/2 mile",
+      "start_time": "9:40 AM ET",
+      "price": "$10",
+      "profile": "A half-mile kids option between the Tot Trot and the 5K.",
+      "highlights": [
+        "9:40 AM ET start",
+        "Half-mile distance",
+        "$10 registration"
+      ],
+      "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+        "confidence": "high",
+        "verified": true,
+        "method": "Verified from the current RunSignup event options, distance, price, and start time."
+      }
+    },
+    {
+      "id": "5k-run",
+      "name": "5K Run",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "10:00 AM ET",
+      "price": "$40",
+      "profile": "A 5K at Shirley Franklin Park supporting Agape’s work with underserved Atlanta families.",
+      "highlights": [
+        "10:00 AM ET start",
+        "Shirley Franklin Park / Westside Park location",
+        "Supports Agape students and families"
+      ],
+      "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+      "provenance": {
+        "source": "RunSignup Events section and Agape official event page mission copy",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+        "confidence": "high",
+        "verified": true,
+        "method": "Verified from the current RunSignup 5K option; Agape source supports mission framing."
+      }
+    },
+    {
+      "id": "virtual-phantom-runner",
+      "name": "Virtual Race / Phantom Runner",
+      "distance": "Virtual",
+      "start_time": "Flexible",
+      "price": "$45",
+      "profile": "A support-from-anywhere option for people who want to back Agape without joining the in-person course.",
+      "highlights": [
+        "Virtual / phantom supporter option",
+        "$45 registration",
+        "Registration supports Agape’s community programs"
+      ],
+      "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+        "confidence": "high",
+        "verified": true,
+        "method": "Verified from the current RunSignup virtual race / phantom runner option."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=186129",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Registration is available through the current RunSignup page for the 5K, kids events, and virtual / phantom runner option.",
+    "deadline": "Most listed options show registration ending November 8, 2026.",
+    "price_note": "Featured race options include $0 Tot Trot, $10 Kids Fun Run, $40 5K Run, and $45 Virtual Race / Phantom Runner; check RunSignup for any additional supporter-level entry choices."
+  },
+  "schedule": [
+    {
+      "day": "Saturday, November 14, 2026",
+      "name": "Tot Trot",
+      "time": "9:25 AM ET",
+      "location": "Shirley Franklin Park",
+      "applies_to_distances": [
+        "tot-trot"
+      ]
+    },
+    {
+      "day": "Saturday, November 14, 2026",
+      "name": "Kid’s Fun Run",
+      "time": "9:40 AM ET",
+      "location": "Shirley Franklin Park",
+      "applies_to_distances": [
+        "kids-fun-run"
+      ]
+    },
+    {
+      "day": "Saturday, November 14, 2026",
+      "name": "5K Run",
+      "time": "10:00 AM ET",
+      "location": "Shirley Franklin Park",
+      "applies_to_distances": [
+        "5k-run"
+      ]
+    }
+  ],
+  "story": {
+    "kicker": "Community purpose",
+    "title": "Miles that support Agape students and families.",
+    "paragraphs": [
+      "Run 4 Love raises awareness and support for Agape’s year-round work with underserved Atlanta families, including academic achievement, reading proficiency, character development, after-school programs, and summer enrichment."
+    ],
+    "links": [
+      {
+        "label": "Agape event information",
+        "url": "https://agapeatlanta.org/agape-run-4-love-5k/"
+      },
+      {
+        "label": "RunSignup registration",
+        "url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun"
+      }
+    ]
+  },
+  "sponsors": [
+    {
+      "name": "TowerPoint",
+      "tier": "Presented by",
+      "url": "https://agapeatlanta.org/agape-run-4-love-5k/"
+    },
+    {
+      "name": "Hamilton Capital Partners, LLC",
+      "tier": "Climb Sponsor",
+      "url": "https://runsignup.com/Race/186129/Sponsor/977778"
+    }
+  ],
+  "runner_decision_checklist": {
+    "kicker": "Race day notes",
+    "headline": "What families need before Run 4 Love morning.",
+    "intro": "A quick checklist for distance choice, location, current registration, and how participation supports Agape.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "distance",
+        "label": "Choose your option",
+        "value": "Tot Trot, kids run, 5K, virtual",
+        "detail": "The current registration page includes family race options, a 5K, and a virtual / phantom runner option; additional supporter-level entry choices may be available in RunSignup checkout.",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+        "source_path": "distances"
+      },
+      {
+        "id": "location",
+        "label": "Start area",
+        "value": "Shirley Franklin Park",
+        "detail": "The in-person events gather at Shirley Franklin Park, 1660 Johnson Road NW in Atlanta.",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+        "source_path": "event.location"
+      },
+      {
+        "id": "start-time",
+        "label": "Start sequence",
+        "value": "9:25 AM, 9:40 AM, 10:00 AM",
+        "detail": "The morning sequence begins with the Tot Trot, continues with the half-mile kids run, and finishes with the 5K start.",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+        "source_path": "schedule"
+      },
+      {
+        "id": "price",
+        "label": "Current pricing",
+        "value": "$0 to $45 featured options",
+        "detail": "Featured race options range from the free Tot Trot to the virtual / phantom runner entry; check RunSignup for any additional supporter-level entry choices.",
+        "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+        "source_path": "registration.price_note"
+      },
+      {
+        "id": "post-race",
+        "label": "Why it matters",
+        "value": "Supports Agape families",
+        "detail": "Participation supports Agape’s academic, character, after-school, summer, and year-round family programs.",
+        "source_url": "https://agapeatlanta.org/agape-run-4-love-5k/",
+        "source_path": "story.body"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "AGAPE Run 4 Love 5K — November 14, 2026",
+    "meta_description": "Run 4 Love 5K details for Atlanta: 5K, kids run, Tot Trot, virtual supporter option, Shirley Franklin Park location, registration, and Agape mission."
+  },
+  "private_mockup": {
+    "access_token": "87a87e48f4fa4707a2d74ff328170b35",
+    "route": "/private/mockups/87a87e48f4fa4707a2d74ff328170b35/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+    "source_platform": "runsignup",
+    "source_race_id": "186129",
+    "registration_race_id": "186129",
+    "captured_at": "2026-07-24T01:56:32Z",
+    "generated_from": "Steve-approved eligible backlog mockup generation",
+    "owner_approved_for_generation": true,
+    "show_measurement_panel": true,
+    "qualification_reason": "Steve approved generating this eligible candidate. The race has current RunSignup registration, an official Agape event page with organization contact and mission detail, and family-friendly Community-template fit. The visible hero avoids the stale official banner because that banner conflicts with current RunSignup date/time details.",
+    "source_urls": [
+      "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+      "https://agapeatlanta.org/agape-run-4-love-5k/",
+      "https://runsignup.com/Race/186129/Sponsor/977778"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "nalexander@agapeatlanta.org",
+        "context": "Official Agape event page lists Special Events Manager Nichole Alexander-Thornhill for sponsorship and participation information.",
+        "source_url": "https://agapeatlanta.org/agape-run-4-love-5k/",
+        "status": "public_direct_org_race_contact"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/GA/Atlanta/AGAPERunForLove5KKidsFunRun",
+      "source_confirmed_sections": [
+        "distances",
+        "registration",
+        "schedule",
+        "story",
+        "sponsors",
+        "runner_decision_checklist"
+      ],
+      "source_confirmed_distance_ids": [
+        "tot-trot",
+        "kids-fun-run",
+        "5k-run",
+        "virtual-phantom-runner"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "RunSignup race header",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.tagline",
+          "source": "RunSignup event context and Agape mission page",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.hero_image",
+          "source": "No visible hero image rendered",
+          "confidence": "high",
+          "notes": "The official banner artwork is intentionally not used as the visible hero because it contains conflicting date/time text versus the current RunSignup listing."
+        },
+        {
+          "path": "event.date",
+          "source": "RunSignup JSON-LD startDate/current event listing",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "RunSignup Place section",
+          "confidence": "high"
+        },
+        {
+          "path": "distances",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "registration",
+          "source": "RunSignup Register/Events sections",
+          "confidence": "high"
+        },
+        {
+          "path": "schedule",
+          "source": "RunSignup Events section start times",
+          "confidence": "high"
+        },
+        {
+          "path": "story",
+          "source": "Agape official event page and RunSignup mission copy",
+          "confidence": "high"
+        },
+        {
+          "path": "sponsors",
+          "source": "Agape official event page and RunSignup sponsor page",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "source": "RunSignup Events/Place sections and Agape official event page",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "RunSignup Events section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup Place section",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup Events section start times",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "RunSignup Events section prices",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.post-race",
+          "source": "Agape official event page mission/program copy",
+          "confidence": "high"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "RunSignup contains current 2026 registration/date details; Agape’s official event page still shows 2025 date copy. The mockup uses RunSignup for current race timing and Agape for organization story/contact context.",
+      "items": [
+        {
+          "field": "event.date",
+          "status": "source_conflict",
+          "note": "RunSignup current listing/JSON-LD says November 14, 2026; Agape page still shows a 2025 event date."
+        },
+        {
+          "field": "sponsors",
+          "status": "partial",
+          "note": "Only source-visible sponsor/presenter examples are included; full 2026 sponsor slate may change."
+        }
+      ]
+    }
+  }
+}
