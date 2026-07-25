@@ -1,0 +1,181 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "14th Annual Andrew Monroe Memorial Scholarship 5K Run/Walk",
+    "slug": "andrew-monroe-memorial-scholarship-5k",
+    "tagline": "The 14th Annual Andrew Monroe Memorial Scholarship 5K Run/Walk takes place on the #1 Rated Siesta Key Beach in beautiful",
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2027-01-10",
+    "location": "Sarasota, FL",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
+      }
+    },
+    {
+      "id": "1-miles",
+      "name": "1 Miles",
+      "distance": "1 Miles",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "This private mockup uses currently visible race details and leaves unverified sections out for now.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2027-01-10",
+        "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "5K, 1 Miles",
+        "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+        "applies_to_distance_ids": [
+          "5k",
+          "1-miles"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Sarasota, FL",
+        "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "14th Annual Andrew Monroe Memorial Scholarship 5K Run/Walk — 2027-01-10",
+    "meta_description": "14th Annual Andrew Monroe Memorial Scholarship 5K Run/Walk is a private race website mockup for Sarasota, FL."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "a2b1b8ccd65f682673d42105e131d289",
+    "route": "/private/mockups/a2b1b8ccd65f682673d42105e131d289/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+    "source_platform": "runsignup",
+    "source_race_id": "20834",
+    "registration_race_id": "20834",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 87,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Has an official site plus RunSignup registration path. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Cause/sponsor/community proof can support the page. Contact form path found. Official race/org web identity found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+      "http://www.andrewmonroe.com/"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+          "path": "identity.name"
+        },
+        {
+          "field": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+          "path": "event.date"
+        },
+        {
+          "field": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+          "path": "event.location"
+        },
+        {
+          "field": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+          "path": "distances"
+        },
+        {
+          "field": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+          "path": "registration.url"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+          "confidence": "medium",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.location"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Schedule, packet pickup, awards, sponsors, course maps, pricing, and hero imagery need a deeper source pass before owner-review readiness."
+    },
+    "captured_at": "2026-07-25T18:27:00Z"
+  }
+}

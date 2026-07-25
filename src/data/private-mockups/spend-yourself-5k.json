@@ -1,0 +1,193 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "15th Annual Spend Yourself® 5K Run/3K Walk",
+    "slug": "spend-yourself-5k",
+    "tagline": "The primary purpose of this race is to raise funds that provide a meaningful hand up to those in need. While race regist",
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-11-08",
+    "location": "Falls Church, VA",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k"
+      }
+    },
+    {
+      "id": "3k",
+      "name": "3K",
+      "distance": "3K",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k"
+      }
+    },
+    {
+      "id": "virtual-5k-run-3k",
+      "name": "Virtual 5K Run/3K Walk",
+      "distance": "Virtual 5K Run/3K Walk",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "This private mockup uses currently visible race details and leaves unverified sections out for now.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-11-08",
+        "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "5K, 3K, Virtual 5K Run/3K Walk",
+        "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+        "applies_to_distance_ids": [
+          "5k",
+          "3k",
+          "virtual-5k-run-3k"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Falls Church, VA",
+        "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "15th Annual Spend Yourself® 5K Run/3K Walk — 2026-11-08",
+    "meta_description": "15th Annual Spend Yourself® 5K Run/3K Walk is a private race website mockup for Falls Church, VA."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "c96f3762075d53c0a7aef6c251844908",
+    "route": "/private/mockups/c96f3762075d53c0a7aef6c251844908/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+    "source_platform": "runsignup",
+    "source_race_id": "5010",
+    "registration_race_id": "5010",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 83,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Has an official site plus RunSignup registration path. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Contact path is available. Cause/sponsor/community proof can support the page. Contact form path found. Official race/org web identity found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+      "https://columbia.church/event/spend-yourself-5k/"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+          "path": "identity.name"
+        },
+        {
+          "field": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+          "path": "event.date"
+        },
+        {
+          "field": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+          "path": "event.location"
+        },
+        {
+          "field": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+          "path": "distances"
+        },
+        {
+          "field": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+          "path": "registration.url"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+          "confidence": "medium",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.location"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/VA/FallsChurch/SpendYourself5k"
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Schedule, packet pickup, awards, sponsors, course maps, pricing, and hero imagery need a deeper source pass before owner-review readiness."
+    },
+    "captured_at": "2026-07-25T18:27:00Z"
+  }
+}
