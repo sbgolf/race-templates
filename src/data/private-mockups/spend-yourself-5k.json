@@ -10,7 +10,15 @@
       "accent": "#9F4A26",
       "ink": "#2A1F18"
     },
-    "short_name": "Spend Yourself 5K"
+    "short_name": "Spend Yourself 5K",
+    "hero_image": {
+      "src": "/mockups/c96f3762075d53c0a7aef6c251844908/spend-yourself-runsignup-logo.png",
+      "alt": "Spend Yourself 5K Run/3K Walk official race logo",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-11891-1776167302.2465-0.bP3IMg.png",
+      "fit": "contain",
+      "presentation": "logo",
+      "aspect_ratio": "1 / 1"
+    }
   },
   "event": {
     "date": "2026-11-08",
@@ -219,7 +227,16 @@
       ],
       "summary": "Public race facts were checked against official race sources; deeper sponsor, photo, and final pre-send details can still be reviewed before customer outreach."
     },
-    "captured_at": "2026-07-25T18:27:00Z"
+    "captured_at": "2026-07-25T18:27:00Z",
+    "assets": [
+      {
+        "type": "image",
+        "role": "hero",
+        "src": "/mockups/c96f3762075d53c0a7aef6c251844908/spend-yourself-runsignup-logo.png",
+        "alt": "Spend Yourself 5K Run/3K Walk official race logo",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-11891-1776167302.2465-0.bP3IMg.png"
+      }
+    ]
   },
   "schedule": [
     {

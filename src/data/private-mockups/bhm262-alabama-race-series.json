@@ -10,7 +10,15 @@
       "accent": "#9F4A26",
       "ink": "#2A1F18"
     },
-    "short_name": "BHM26.2"
+    "short_name": "BHM26.2",
+    "hero_image": {
+      "src": "/mockups/800f6932ac5e074243ed43e3bc3d9894/bhm262-runsignup-banner.png",
+      "alt": "BHM26.2 official race banner artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-48xxx/48055/raceBanner-G8RDSJhr-bNTH-V.png",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "1200 / 630"
+    }
   },
   "event": {
     "date": "2026-10-04",
@@ -289,7 +297,16 @@
       ],
       "summary": "Public race facts were checked against official race sources; deeper sponsor, photo, and final pre-send details can still be reviewed before customer outreach."
     },
-    "captured_at": "2026-07-25T18:27:00Z"
+    "captured_at": "2026-07-25T18:27:00Z",
+    "assets": [
+      {
+        "type": "image",
+        "role": "hero",
+        "src": "/mockups/800f6932ac5e074243ed43e3bc3d9894/bhm262-runsignup-banner.png",
+        "alt": "BHM26.2 official race banner artwork",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-48xxx/48055/raceBanner-G8RDSJhr-bNTH-V.png"
+      }
+    ]
   },
   "schedule": [
     {
