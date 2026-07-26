@@ -130,6 +130,7 @@ for (const file of files) {
       validateSingleDistanceCopy(config, confirmedDistanceIds, errors);
       validateRunnerDecisionChecklist(config, confirmedSections, confirmedDistanceIds, errors);
       validatePrivateValueContractMetadata(config, errors);
+      validateCustomerReadyVisualAsset(config, errors);
     }
 
     validateBannedText(config, errors);
@@ -152,6 +153,39 @@ for (const file of files) {
 if (failed) {
   console.error('Private mockup validation failed. Remove sample leakage, add provenance/uncertainty, and only render source-supported sections.');
   process.exit(1);
+}
+
+function validateCustomerReadyVisualAsset(config, errors) {
+  const privateMockup = config.private_mockup;
+  const heroImage = config.identity?.hero_image;
+  const approvedFallback = privateMockup?.visual_fallback_approved === true;
+  const fallbackApprovalNote = String(privateMockup?.visual_fallback_approval_note || '').trim();
+  const isTemplateDemo = privateMockup?.owner_approved_for_generation !== true && (
+    privateMockup?.generated === true || /\bPrivate Concept\b/i.test(String(config.identity?.edition || ''))
+  );
+
+  if (isTemplateDemo) return;
+
+  if (approvedFallback && fallbackApprovalNote.length < 20) {
+    errors.push('private_mockup.visual_fallback_approval_note: Explicitly approved fallback visuals must include a clear owner-approved reason.');
+  }
+
+  if (approvedFallback) return;
+
+  if (!isObject(heroImage) || !heroImage.src) {
+    errors.push('identity.hero_image.src: Customer-ready private mockups must include a source-captured or generated hero visual; do not ship the template SVG/town fallback. Set private_mockup.visual_fallback_approved only with explicit owner approval.');
+    return;
+  }
+
+  if (!/^\/mockups\/[a-f0-9]{32,}\//i.test(heroImage.src)) {
+    errors.push('identity.hero_image.src: Customer-ready private hero visuals must live under /mockups/<access-token>/ for stable private review.');
+  }
+
+  const hasTraceableSource = Boolean(heroImage.generated === true || (typeof heroImage.source === 'string' && /^https?:\/\//i.test(heroImage.source)));
+  if (!hasTraceableSource) {
+    errors.push('identity.hero_image.source: Customer-ready private hero visuals must include a public source URL, or set generated: true for approved generated art.');
+  }
+
 }
 
 function validatePrivateValueContractMetadata(config, errors) {

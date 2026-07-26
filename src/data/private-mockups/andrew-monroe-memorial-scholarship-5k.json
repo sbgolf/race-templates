@@ -10,7 +10,15 @@
       "accent": "#9F4A26",
       "ink": "#2A1F18"
     },
-    "short_name": "Andrew Monroe 5K"
+    "short_name": "Andrew Monroe 5K",
+    "hero_image": {
+      "src": "/mockups/a2b1b8ccd65f682673d42105e131d289/andrew-monroe-runsignup-logo.png",
+      "alt": "Andrew Monroe Memorial Scholarship 5K Run/Walk official race logo",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race20834-scaled-logo-0.bys0f6.png",
+      "fit": "contain",
+      "presentation": "logo",
+      "aspect_ratio": "1 / 1"
+    }
   },
   "event": {
     "date": "2027-01-10",
@@ -234,7 +242,16 @@
       ],
       "summary": "Public race facts were checked against official race sources; deeper sponsor, photo, and final pre-send details can still be reviewed before customer outreach."
     },
-    "captured_at": "2026-07-25T18:27:00Z"
+    "captured_at": "2026-07-25T18:27:00Z",
+    "assets": [
+      {
+        "type": "image",
+        "role": "hero",
+        "src": "/mockups/a2b1b8ccd65f682673d42105e131d289/andrew-monroe-runsignup-logo.png",
+        "alt": "Andrew Monroe Memorial Scholarship 5K Run/Walk official race logo",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race20834-scaled-logo-0.bys0f6.png"
+      }
+    ]
   },
   "schedule": [
     {
