@@ -1,22 +1,23 @@
 {
   "identity": {
     "template": "community",
-    "name": "BHM26.2 2026- The Alabama Race Series",
+    "name": "BHM26.2 2026",
     "slug": "bhm262-alabama-race-series",
-    "tagline": "Alabama’s fully charitable race series for Magic Moments, with marathon, relay, half marathon, 10K, 5K, fun run, and virtual options.",
+    "tagline": "Alabama’s charitable race series for Magic Moments.",
     "colors": {
       "primary": "#294735",
       "secondary": "#D89B2A",
       "accent": "#9F4A26",
       "ink": "#2A1F18"
-    }
+    },
+    "short_name": "BHM26.2"
   },
   "event": {
     "date": "2026-10-04",
-    "location": "The Finley Center / Hoover Metropolitan Complex, Hoover, AL",
+    "location": "The Finley Center, Hoover, AL",
     "timezone": "America/Chicago",
-    "venue": "The Finley Center / Hoover Metropolitan Complex",
-    "address": "Hoover, AL 35244"
+    "venue": "The Finley Center",
+    "address": "5508 Stadium Trace Pkwy, Hoover, AL 35244"
   },
   "distances": [
     {
@@ -145,7 +146,7 @@
       {
         "id": "location",
         "label": "Race hub",
-        "value": "The Finley Center / Hoover Metropolitan Complex, Hoover, AL",
+        "value": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL 35244",
         "source_url": "http://bhm262.com/",
         "source_path": "runner_decision_checklist.items.location"
       },
@@ -295,7 +296,7 @@
       "day": "Saturday, October 3, 2026",
       "name": "Expo and packet pickup",
       "time": "10:00 AM – 4:00 PM",
-      "location": "The Finley Center",
+      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
       "applies_to_distances": [
         "marathon",
         "marathon-relay",
@@ -309,7 +310,7 @@
       "day": "Sunday, October 4, 2026",
       "name": "Marathon, Half Marathon, Relay, and Virtual Options",
       "time": "7:00 AM",
-      "location": "Hoover Metropolitan Complex / The Finley Center",
+      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
       "applies_to_distances": [
         "marathon",
         "half-marathon",
@@ -321,7 +322,7 @@
       "day": "Sunday, October 4, 2026",
       "name": "10K and 5K start",
       "time": "7:15 AM",
-      "location": "Hoover Metropolitan Complex / The Finley Center",
+      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
       "applies_to_distances": [
         "10k",
         "5k"
@@ -331,7 +332,7 @@
       "day": "Sunday, October 4, 2026",
       "name": "After Party",
       "time": "7:30 AM – 2:00 PM",
-      "location": "The Finley Center",
+      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
       "applies_to_distances": [
         "marathon",
         "marathon-relay",
@@ -345,7 +346,7 @@
       "day": "Sunday, October 4, 2026",
       "name": "Fun Run start",
       "time": "10:00 AM",
-      "location": "Hoover Metropolitan Complex / The Finley Center",
+      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
       "applies_to_distances": [
         "fun-run"
       ]

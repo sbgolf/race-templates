@@ -9,7 +9,8 @@
       "secondary": "#D89B2A",
       "accent": "#9F4A26",
       "ink": "#2A1F18"
-    }
+    },
+    "short_name": "Andrew Monroe 5K"
   },
   "event": {
     "date": "2027-01-10",
@@ -53,7 +54,8 @@
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
-      }
+      },
+      "start_time": "Submit virtually January 8–14, 2027"
     }
   ],
   "registration": {

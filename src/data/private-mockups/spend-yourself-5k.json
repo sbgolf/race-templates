@@ -3,13 +3,14 @@
     "template": "community",
     "name": "15th Annual Spend Yourself® 5K Run/3K Walk",
     "slug": "spend-yourself-5k",
-    "tagline": "Race to feed the hungry with in-person 5K, 3K, and virtual options supporting Spend Yourself ministries.",
+    "tagline": "Race to feed the hungry through local and global ministry.",
     "colors": {
       "primary": "#294735",
       "secondary": "#D89B2A",
       "accent": "#9F4A26",
       "ink": "#2A1F18"
-    }
+    },
+    "short_name": "Spend Yourself 5K"
   },
   "event": {
     "date": "2026-11-08",
