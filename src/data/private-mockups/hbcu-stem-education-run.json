@@ -78,7 +78,7 @@
         "source_url": "https://runsignup.com/Race/Events/AL/Huntsville/HBCUSTEMER",
         "confidence": "high",
         "verified": true,
-        "method": "RunSignup lists the Virtual 5K Run/Walk as an April 1–30, 2027 virtual option."
+        "method": "RunSignup lists the Virtual 5K Run/Walk as an April 1\u201330, 2027 virtual option."
       },
       "profile": "A virtual option for supporters who complete a 5K on their own course during the April event window.",
       "highlights": [
@@ -97,7 +97,7 @@
         "source_url": "https://runsignup.com/Race/Events/AL/Huntsville/HBCUSTEMER",
         "confidence": "high",
         "verified": true,
-        "method": "RunSignup lists the Virtual Half Marathon Run/Walk as an April 1–30, 2027 virtual option."
+        "method": "RunSignup lists the Virtual Half Marathon Run/Walk as an April 1\u201330, 2027 virtual option."
       },
       "profile": "A virtual half marathon challenge for remote supporters participating during the April window.",
       "highlights": [
@@ -124,7 +124,7 @@
       {
         "id": "date",
         "label": "Event window",
-        "value": "April 1–30, 2027",
+        "value": "April 1\u201330, 2027",
         "detail": "The in-person Huntsville 5K and 1-mile options are scheduled for Sunday, April 18, 2027.",
         "source_url": "https://runsignup.com/Race/AL/Huntsville/HBCUSTEMER",
         "source_path": "runner_decision_checklist.items.date"
@@ -213,7 +213,7 @@
     }
   ],
   "seo": {
-    "meta_title": "7th Annual HBCU STEM Education Run — 2027-04-18",
+    "meta_title": "7th Annual HBCU STEM Education Run \u2014 2027-04-18",
     "meta_description": "Huntsville HBCU STEM Education Run: 5K, 1-mile family run/walk, virtual 5K, virtual half marathon, scholarship mission, and official RunSignup registration."
   },
   "analytics": {
@@ -399,7 +399,7 @@
     },
     "uncertainty": {
       "items": [
-        "RunSignup's race header and API list the full event window as April 1–30, 2027, while the in-person 5K and 1-mile events are listed for April 18, 2027; the mockup presents both and uses April 18 as the in-person race date.",
+        "RunSignup's race header and API list the full event window as April 1\u201330, 2027, while the in-person 5K and 1-mile events are listed for April 18, 2027; the mockup presents both and uses April 18 as the in-person race date.",
         "The RunSignup Place section lists Oakwood University Wade Hall at 7000 Adventist Blvd NW, while the race API address field lists Oakwood University Campus Drive NW with a different Huntsville ZIP; the mockup uses the more specific visible Place-section address.",
         "Course map, elevation, refund policy, and packet pickup location beyond the public race-morning schedule are omitted because public details were not found.",
         "The public organization email is recorded as a routing contact only; no outreach or email send was performed."
@@ -409,15 +409,30 @@
     "prospect_id": "0009bd39-0ec3-4150-a823-78f6b9166462",
     "captured_at": "2026-07-21T13:34:45.000Z",
     "outreach": {
-      "send_status": "hold",
-      "hold_reason": "Steve explicitly requested holding this mockup; no outreach should be sent until a later explicit approval.",
+      "send_status": "sent",
+      "hold_reason": "Steve later asked to hold further action/follow-up for this race after the original email had already been sent.",
       "steve_approval": {
-        "status": "hold",
-        "recorded_at": "2026-07-26T17:53:55Z",
-        "channel": "telegram",
-        "note": "Steve said to hold on the 7th Annual HBCU STEM Education Run."
+        "status": "sent_then_future_hold",
+        "approved_at": "2026-07-22T02:42:03.344Z",
+        "channel": "telegram/db",
+        "note": "Outreach already sent before later hold; hold applies to future follow-up only."
       },
-      "history": []
+      "history": [
+        {
+          "status": "sent",
+          "sent_at": "2026-07-22T02:42:03.344Z",
+          "provider": "resend",
+          "provider_id": "14d74a16-fbaf-4e45-8620-bf6f6d759ca1",
+          "note": "Existing race_mockup_outreach row verified; future follow-up held."
+        },
+        {
+          "status": "future_follow_up_hold",
+          "requested_at": "2026-07-24T03:11:42.782Z",
+          "note": "Steve requested holding further action for this race."
+        }
+      ],
+      "sent_at": "2026-07-22T02:42:03.344Z",
+      "future_follow_up_hold": true
     }
   },
   "schedule": [

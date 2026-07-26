@@ -45,6 +45,21 @@ try {
   assert.equal(ok.manifest.summary.approved_to_send, 1);
   assert.equal(ok.manifest.mockups[0].production_url, 'https://mockups.startlinesites.com/private/mockups/token/');
 
+  const sent = structuredClone(baseConfig);
+  sent.private_mockup.outreach = {
+    send_status: 'sent',
+    sent_at: '2026-07-21T14:14:55.533Z',
+    history: [{ status: 'sent', sent_at: '2026-07-21T14:14:55.533Z', provider_id: 'provider-message-id' }]
+  };
+  const sentResult = await run({ rootDir: tmp, quiet: true, configs: [sent] });
+  assert.equal(sentResult.errors.length, 0);
+  assert.equal(sentResult.manifest.summary.sent, 1);
+  assert.equal(sentResult.manifest.summary.approved_to_send, 0);
+
+  const sentWithoutEvidence = structuredClone(baseConfig);
+  sentWithoutEvidence.private_mockup.outreach = { send_status: 'sent' };
+  await assert.rejects(() => run({ rootDir: tmp, quiet: true, configs: [sentWithoutEvidence] }), /pre-send outreach gate failed/);
+
   const held = structuredClone(baseConfig);
   held.private_mockup.outreach = {
     send_status: 'hold',

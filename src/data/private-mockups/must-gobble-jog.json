@@ -92,7 +92,7 @@
       "name": "1K, Tot Trot & Phantom Runner",
       "distance": "1K / 50 yards / Phantom",
       "start_time": "8:30 AM, 10:30 AM, or support from anywhere",
-      "price": "$30–$40",
+      "price": "$30\u2013$40",
       "profile": "Family and support options include the 1K Untimed, Tot Trot for kids 4 and under, and Phantom Runner option.",
       "highlights": [
         "1K Untimed at 8:30 AM EST",
@@ -165,7 +165,7 @@
     ]
   },
   "seo": {
-    "meta_title": "24th Annual MUST Gobble Jog — November 26, 2026",
+    "meta_title": "24th Annual MUST Gobble Jog \u2014 November 26, 2026",
     "meta_description": "Gobble Jog race details for Marietta, GA: 10K, 5K, 1K, Tot Trot, Phantom Runner, official registration, mission, schedule, awards, and FAQs."
   },
   "analytics": {
@@ -322,13 +322,13 @@
     },
     "captured_at": "2026-07-20T00:00:00.000Z",
     "outreach": {
-      "send_status": "approved_to_send",
+      "send_status": "sent",
       "production_url": "https://mockups.startlinesites.com/private/mockups/0ac13c3307621b842c07d90bb31c41d9/",
       "steve_approval": {
-        "status": "approved",
-        "approved_at": "2026-07-26T17:53:55Z",
-        "channel": "telegram",
-        "note": "Steve approved sending the 24th Annual MUST Gobble Jog mockup to the official routing email on file."
+        "status": "sent",
+        "approved_at": "2026-07-21T14:14:55.533Z",
+        "channel": "telegram/db",
+        "note": "Outreach already sent; send approval should not be requested again."
       },
       "contact": {
         "type": "official_routing_email",
@@ -336,7 +336,16 @@
         "status": "official_routing_email_on_file",
         "source": "marketing-site prospect/contact record referenced by Steve approval"
       },
-      "history": []
+      "history": [
+        {
+          "status": "sent",
+          "sent_at": "2026-07-21T14:14:55.533Z",
+          "provider": "resend",
+          "provider_id": "9dd5a7fc-22c0-44e9-9515-6aa5306dc17c",
+          "note": "Existing race_mockup_outreach row verified; do not resurface for Send approval."
+        }
+      ],
+      "sent_at": "2026-07-21T14:14:55.533Z"
     }
   },
   "course": {
@@ -442,7 +451,7 @@
     "description": "Gobble Jog benefits MUST Ministries. Official race copy says participation helps provide food, housing assistance, emergency assistance, and hope for neighbors facing hunger and homelessness.",
     "url": "https://runsignup.com/Race/Donate/GA/Marietta/AnnualMUSTGobbleJog26",
     "cta_label": "Donate on RunSignup",
-    "icon": "♡"
+    "icon": "\u2661"
   },
   "faqs": [
     {

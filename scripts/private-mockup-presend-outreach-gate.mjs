@@ -4,7 +4,8 @@ import path from 'node:path';
 
 const root = process.cwd();
 const DEFAULT_PUBLIC_BASE_URL = 'https://mockups.startlinesites.com';
-const SEND_STATUSES = new Set(['approved_to_send', 'sent']);
+const SEND_STATUSES = new Set(['approved_to_send']);
+const SENT_STATUSES = new Set(['sent', 'already_sent']);
 const HOLD_STATUSES = new Set(['hold', 'held']);
 const EMAIL_CONTACT_TYPES = new Set(['email', 'direct_email', 'official_routing_email', 'routing_email']);
 const ELIGIBLE_CONTACT_STATUSES = new Set([
@@ -62,7 +63,7 @@ export async function run({ rootDir = root, quiet = false, configs: providedConf
     summary: {
       mockups: mockups.length,
       approved_to_send: mockups.filter((mockup) => mockup.send_status === 'approved_to_send').length,
-      sent: mockups.filter((mockup) => mockup.send_status === 'sent').length,
+      sent: mockups.filter((mockup) => SENT_STATUSES.has(mockup.send_status)).length,
       held: mockups.filter((mockup) => mockup.is_held).length,
       live_smoked: mockups.filter((mockup) => mockup.production_smoke?.checked).length,
       errors: errors.length,
@@ -99,6 +100,7 @@ async function validateMockup({ config, file, rootDir, live, publicBaseUrl, fetc
   const outreach = privateMockup.outreach || {};
   const sendStatus = outreach.send_status || (outreach.hold === true ? 'hold' : 'not_requested');
   const isHeld = HOLD_STATUSES.has(sendStatus) || outreach.hold === true;
+  const isSent = SENT_STATUSES.has(sendStatus);
   const sendRequested = SEND_STATUSES.has(sendStatus);
   const displayFile = path.relative(rootDir, file);
   const productionUrl = outreach.production_url || buildProductionUrl(publicBaseUrl, privateMockup.route);
@@ -128,6 +130,10 @@ async function validateMockup({ config, file, rootDir, live, publicBaseUrl, fetc
 
   if (sentRecords.length > 1) {
     errors.push(`${displayFile}: duplicate outreach send records detected (${sentRecords.length}); verify no duplicate outreach rows before sending.`);
+  }
+
+  if (isSent && sentRecords.length === 0) {
+    errors.push(`${displayFile}: sent outreach status must include sent_at or a sent history record.`);
   }
 
   if (sendRequested) {
@@ -227,9 +233,15 @@ function sentHistory(outreach) {
   const records = [];
   if (outreach.sent_at) records.push({ sent_at: outreach.sent_at });
   if (Array.isArray(outreach.history)) {
-    records.push(...outreach.history.filter((entry) => entry?.status === 'sent' || entry?.sent_at));
+    records.push(...outreach.history.filter((entry) => entry?.status === 'sent' || (!entry?.status && entry?.sent_at)));
   }
-  return records;
+  const seen = new Set();
+  return records.filter((entry) => {
+    const key = entry?.sent_at || entry?.provider_id || JSON.stringify(entry);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 function summarizeContact(contact) {
