@@ -112,7 +112,10 @@ npm run validate:private-mockups
 npm run validate:private-mockup-facts
 npm run build
 npm run validate:rendered-private-mockups
+npm run qa:private-mockups
 ```
+
+`npm run qa:private-mockups` writes `dist/private/mockup-qa-manifest.json`, verifies every rendered private mockup has resolvable image references, and captures/validates required mobile + desktop screenshot records using local Chrome when available. Use `CHROME_PATH=/path/to/chrome npm run qa:private-mockups` if Chrome is not at the default macOS path. Use `npm run qa:private-mockups:manifest` only when screenshot files already exist under `dist/private/mockup-qa-screenshots/<access-token>/mobile.png` and `desktop.png`.
 
 Output:
 
@@ -120,8 +123,10 @@ Output:
 - Captured public images: `public/mockups/<access-token>/`
 - Static preview route after build/deploy: `/private/mockups/<access-token>/`
 - Source fact matrix after `npm run validate:private-mockup-facts`: `dist/private/mockup-fact-matrix.json`
+- QA manifest after `npm run qa:private-mockups`: `dist/private/mockup-qa-manifest.json`
+- QA screenshots after `npm run qa:private-mockups`: `dist/private/mockup-qa-screenshots/<access-token>/{mobile,desktop}.png`
 
-The validation flow has three private-mockup gates: `npm run validate:private-mockups` checks source-backed config data before rendering, `npm run validate:private-mockup-facts` writes a source fact matrix and blocks owner-approved mockups unless required facts (race name, date, location, distances, registration URL) have both rendered values and URL-backed/source-approved evidence, and `npm run validate:rendered-private-mockups` checks the built private pages after `npm run build`.
+The validation flow has four private-mockup gates: `npm run validate:private-mockups` checks source-backed config data before rendering, `npm run validate:private-mockup-facts` writes a source fact matrix and blocks owner-approved mockups unless required facts (race name, date, location, distances, registration URL) have both rendered values and URL-backed/source-approved evidence, `npm run validate:rendered-private-mockups` checks the built private pages after `npm run build`, and `npm run qa:private-mockups` creates the visual-readiness manifest while failing missing/broken/placeholder-like rendered visuals or missing mobile/desktop screenshot coverage.
 
 ## What the generator does
 
