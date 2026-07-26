@@ -3,7 +3,7 @@
     "template": "community",
     "name": "14th Annual Andrew Monroe Memorial Scholarship 5K Run/Walk",
     "slug": "andrew-monroe-memorial-scholarship-5k",
-    "tagline": "The 14th Annual Andrew Monroe Memorial Scholarship 5K Run/Walk takes place on the #1 Rated Siesta Key Beach in beautiful",
+    "tagline": "A Siesta Key Beach scholarship 5K, 1 Mile Walk, and virtual race supporting Riverview High School students and local community needs.",
     "colors": {
       "primary": "#294735",
       "secondary": "#D89B2A",
@@ -13,29 +13,44 @@
   },
   "event": {
     "date": "2027-01-10",
-    "location": "Sarasota, FL",
-    "timezone": "America/Chicago"
+    "location": "Siesta Key Public Beach, Sarasota, FL",
+    "timezone": "America/New_York",
+    "venue": "Siesta Key Public Beach",
+    "address": "948 Beach Rd, Sarasota, FL 34242"
   },
   "distances": [
     {
       "id": "5k",
-      "name": "5K",
+      "name": "Andrew Monroe 5K",
       "distance": "5K",
       "featured": true,
+      "start_time": "8:15 AM EST",
       "provenance": {
-        "source": "prospect discovery output",
-        "confidence": "medium",
+        "source": "RunSignup Events section",
+        "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
       }
     },
     {
-      "id": "1-miles",
-      "name": "1 Miles",
-      "distance": "1 Miles",
+      "id": "1-mile-walk",
+      "name": "1 Mile Walk",
+      "distance": "1 Mile",
+      "start_time": "8:20 AM EST",
       "provenance": {
-        "source": "prospect discovery output",
-        "confidence": "medium",
+        "source": "RunSignup Events section",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
+      }
+    },
+    {
+      "id": "virtual-race",
+      "name": "Virtual Race",
+      "distance": "Virtual Race",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
       }
@@ -44,42 +59,61 @@
   "registration": {
     "url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
     "platform": "runsignup",
-    "cta_label": "Register on RunSignup"
+    "cta_label": "Register on RunSignup",
+    "intro": "Register on RunSignup for the 5K, 1 Mile Walk, or Virtual Race.",
+    "price_note": "Current public event pricing shows $35 for each listed option before checkout fees."
   },
   "runner_decision_checklist": {
     "headline": "Key race details before you register",
-    "intro": "This private mockup uses currently visible race details and leaves unverified sections out for now.",
+    "intro": "Review the essentials—date, location, event options, and registration—before choosing your race.",
     "items": [
       {
         "id": "date",
         "label": "Race date",
-        "value": "2027-01-10",
+        "value": "Sunday, January 10, 2027",
         "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
         "source_path": "runner_decision_checklist.items.date"
       },
       {
         "id": "distance",
-        "label": "Distances",
-        "value": "5K, 1 Miles",
+        "label": "Event options",
+        "value": "Andrew Monroe 5K, 1 Mile Walk, and Virtual Race",
         "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
         "applies_to_distance_ids": [
           "5k",
-          "1-miles"
+          "1-mile-walk",
+          "virtual-race"
         ],
         "source_path": "runner_decision_checklist.items.distance"
       },
       {
         "id": "location",
-        "label": "Location",
-        "value": "Sarasota, FL",
+        "label": "Start area",
+        "value": "Siesta Key Public Beach, 948 Beach Rd, Sarasota, FL",
         "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
         "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "price",
+        "label": "Registration",
+        "value": "RunSignup registration is open for listed options",
+        "detail": "Current public pricing shows $35 for each listed option before checkout fees.",
+        "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+        "source_path": "runner_decision_checklist.items.price"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Friday and Saturday early pickup windows",
+        "detail": "The official page lists Friday pickup from 4:00–7:00 PM and Saturday pickup from 10:00 AM–2:00 PM at New Balance Sarasota locations.",
+        "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
       }
     ]
   },
   "seo": {
     "meta_title": "14th Annual Andrew Monroe Memorial Scholarship 5K Run/Walk — 2027-01-10",
-    "meta_description": "14th Annual Andrew Monroe Memorial Scholarship 5K Run/Walk is a private race website mockup for Sarasota, FL."
+    "meta_description": "Race details for 14th Annual Andrew Monroe Memorial Scholarship 5K Run/Walk in Siesta Key Public Beach, Sarasota, FL."
   },
   "analytics": {
     "register_click_event_name": "register_click"
@@ -158,6 +192,27 @@
           "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
           "confidence": "high",
           "path": "runner_decision_checklist.items.location"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "field": "runner_decision_checklist.items.packet-pickup",
+          "source": "official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
+        },
+        {
+          "path": "schedule",
+          "field": "schedule",
+          "source": "RunSignup and official site race details",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
         }
       ],
       "source_confirmed_sections": [
@@ -165,17 +220,88 @@
         "event",
         "distances",
         "registration",
-        "runner_decision_checklist"
+        "runner_decision_checklist",
+        "schedule"
       ],
       "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
     },
     "uncertainty": {
       "items": [
-        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
-        "Source facts must be rechecked before a customer-sendable mockup is approved."
+        "Customer outreach remains unapproved and should not be sent until Steve approves a send gate.",
+        "Sponsor/photo polish can be expanded in a later pass if this candidate moves from owner review to customer outreach."
       ],
-      "summary": "Schedule, packet pickup, awards, sponsors, course maps, pricing, and hero imagery need a deeper source pass before owner-review readiness."
+      "summary": "Public race facts were checked against official race sources; deeper sponsor, photo, and final pre-send details can still be reviewed before customer outreach."
     },
     "captured_at": "2026-07-25T18:27:00Z"
-  }
+  },
+  "schedule": [
+    {
+      "day": "Friday, January 8, 2027",
+      "name": "Early packet pickup",
+      "time": "4:00 PM – 7:00 PM",
+      "location": "New Balance, 315 Cattlemen Rd, Suite 1, Sarasota",
+      "applies_to_distances": [
+        "5k",
+        "1-mile-walk"
+      ]
+    },
+    {
+      "day": "Saturday, January 9, 2027",
+      "name": "Early packet pickup",
+      "time": "10:00 AM – 2:00 PM",
+      "location": "New Balance Sarasota, 1872 Stickney Point Rd, Sarasota",
+      "applies_to_distances": [
+        "5k",
+        "1-mile-walk"
+      ]
+    },
+    {
+      "day": "Sunday, January 10, 2027",
+      "name": "Race-day sign-up",
+      "time": "7:00 AM – 8:00 AM",
+      "location": "Siesta Key Public Beach",
+      "applies_to_distances": [
+        "5k",
+        "1-mile-walk"
+      ]
+    },
+    {
+      "day": "Sunday, January 10, 2027",
+      "name": "Color Guard and opening",
+      "time": "8:00 AM",
+      "location": "Siesta Key Public Beach",
+      "applies_to_distances": [
+        "5k",
+        "1-mile-walk"
+      ]
+    },
+    {
+      "day": "Sunday, January 10, 2027",
+      "name": "Andrew Monroe 5K start",
+      "time": "8:15 AM",
+      "location": "Siesta Key Public Beach",
+      "applies_to_distances": [
+        "5k"
+      ]
+    },
+    {
+      "day": "Sunday, January 10, 2027",
+      "name": "1 Mile Walk start",
+      "time": "8:20 AM",
+      "location": "Siesta Key Public Beach",
+      "applies_to_distances": [
+        "1-mile-walk"
+      ]
+    },
+    {
+      "day": "Sunday, January 10, 2027",
+      "name": "Awards",
+      "time": "9:20 AM",
+      "location": "Siesta Key Public Beach",
+      "applies_to_distances": [
+        "5k",
+        "1-mile-walk"
+      ]
+    }
+  ]
 }
