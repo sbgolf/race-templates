@@ -407,7 +407,33 @@
       "summary": "Race name, event window, in-person date, venue, address, distances, start time, registration link, current price tiers, participant items, mission framing, source imagery, schedule, and official contact routes are sourced from public RunSignup and HBCU STEMER pages."
     },
     "prospect_id": "0009bd39-0ec3-4150-a823-78f6b9166462",
-    "captured_at": "2026-07-21T13:34:45.000Z"
+    "captured_at": "2026-07-21T13:34:45.000Z",
+    "outreach": {
+      "send_status": "sent",
+      "hold_reason": "Steve later asked to hold further action/follow-up for this race after the original email had already been sent.",
+      "steve_approval": {
+        "status": "sent_then_future_hold",
+        "approved_at": "2026-07-22T02:42:03.344Z",
+        "channel": "telegram/db",
+        "note": "Outreach already sent before later hold; hold applies to future follow-up only."
+      },
+      "history": [
+        {
+          "status": "sent",
+          "sent_at": "2026-07-22T02:42:03.344Z",
+          "provider": "resend",
+          "provider_id": "14d74a16-fbaf-4e45-8620-bf6f6d759ca1",
+          "note": "Existing race_mockup_outreach row verified; future follow-up held."
+        },
+        {
+          "status": "future_follow_up_hold",
+          "requested_at": "2026-07-24T03:11:42.782Z",
+          "note": "Steve requested holding further action for this race."
+        }
+      ],
+      "sent_at": "2026-07-22T02:42:03.344Z",
+      "future_follow_up_hold": true
+    }
   },
   "schedule": [
     {
