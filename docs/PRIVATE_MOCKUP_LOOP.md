@@ -109,6 +109,7 @@ Avoid guarantees and disparaging language. Do not promise registration growth, c
 npm run mockup:private -- --url https://example-race-site.org --slug example-race
 npm run validate:config
 npm run validate:private-mockups
+npm run validate:private-mockup-facts
 npm run build
 npm run validate:rendered-private-mockups
 ```
@@ -118,8 +119,9 @@ Output:
 - Config: `src/data/private-mockups/<race-slug>.json`
 - Captured public images: `public/mockups/<access-token>/`
 - Static preview route after build/deploy: `/private/mockups/<access-token>/`
+- Source fact matrix after `npm run validate:private-mockup-facts`: `dist/private/mockup-fact-matrix.json`
 
-The validation flow has two private-mockup gates: `npm run validate:private-mockups` checks source-backed config data before rendering, and `npm run validate:rendered-private-mockups` checks the built private pages after `npm run build`.
+The validation flow has three private-mockup gates: `npm run validate:private-mockups` checks source-backed config data before rendering, `npm run validate:private-mockup-facts` writes a source fact matrix and blocks owner-approved mockups unless required facts (race name, date, location, distances, registration URL) have both rendered values and URL-backed/source-approved evidence, and `npm run validate:rendered-private-mockups` checks the built private pages after `npm run build`.
 
 ## What the generator does
 

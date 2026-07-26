@@ -10,6 +10,8 @@
     "validate:config": "node scripts/validate-config.mjs",
     "validate:private-mockups": "node scripts/validate-private-mockups.mjs",
     "validate:rendered-private-mockups": "node scripts/validate-rendered-private-mockups.mjs",
+    "validate:private-mockup-facts": "node scripts/private-mockup-fact-matrix.mjs",
+    "test:private-mockup-fact-matrix": "node scripts/test-private-mockup-fact-matrix.mjs",
     "test:private-mockup-generator": "node scripts/test-private-mockup-generator.mjs",
     "test:performance-layout-guards": "node scripts/test-performance-layout-guards.mjs",
     "launch:check": "node scripts/launch-check.mjs",
