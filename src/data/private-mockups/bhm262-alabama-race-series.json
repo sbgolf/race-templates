@@ -1,0 +1,355 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "BHM26.2 2026",
+    "slug": "bhm262-alabama-race-series",
+    "tagline": "Run for Magic Moments.",
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    },
+    "short_name": "BHM26.2"
+  },
+  "event": {
+    "date": "2026-10-04",
+    "location": "The Finley Center, Hoover, AL",
+    "timezone": "America/Chicago",
+    "venue": "The Finley Center",
+    "address": "5508 Stadium Trace Pkwy, Hoover, AL 35244"
+  },
+  "distances": [
+    {
+      "id": "marathon",
+      "name": "Marathon",
+      "distance": "26.2 Miles",
+      "featured": true,
+      "start_time": "7:00 AM CDT",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
+      }
+    },
+    {
+      "id": "half-marathon",
+      "name": "Half Marathon",
+      "distance": "13.1 Miles",
+      "start_time": "7:00 AM CDT",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
+      }
+    },
+    {
+      "id": "10k",
+      "name": "10K",
+      "distance": "10K",
+      "start_time": "7:15 AM CDT",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
+      }
+    },
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "start_time": "7:15 AM CDT",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
+      }
+    },
+    {
+      "id": "fun-run",
+      "name": "Fun Run",
+      "distance": "Fun Run",
+      "start_time": "10:00 AM CDT",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
+      },
+      "omit_registration_cta": true
+    },
+    {
+      "id": "marathon-relay",
+      "name": "5-Person Marathon Relay",
+      "distance": "Marathon Relay",
+      "start_time": "7:00 AM CDT",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
+      },
+      "omit_registration_cta": true
+    },
+    {
+      "id": "virtual-options",
+      "name": "Virtual Options",
+      "distance": "Virtual Options",
+      "start_time": "7:00 AM CDT",
+      "provenance": {
+        "source": "RunSignup Events section",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
+      },
+      "omit_registration_cta": true
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/AL/Hoover/bhm262",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register on RunSignup for the full race series, including in-person, relay, fun run, and virtual options.",
+    "price_note": "Current public pricing starts at $25 for the Fun Run, $45 for the 5K, $55 for the 10K, $85 for the Half Marathon, $100 for the Marathon, $235 for the 5-Person Marathon Relay, and $45–$100 for Virtual Options before checkout fees."
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials—date, location, event options, and registration—before choosing your race.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Sunday, October 4, 2026",
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "Marathon, 5-Person Marathon Relay, Half Marathon, 10K, 5K, Fun Run, and Virtual Options",
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262",
+        "applies_to_distance_ids": [
+          "marathon",
+          "marathon-relay",
+          "half-marathon",
+          "10k",
+          "5k",
+          "fun-run",
+          "virtual-options"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Race hub",
+        "value": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL 35244",
+        "source_url": "http://bhm262.com/",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "price",
+        "label": "Registration",
+        "value": "RunSignup registration is open for the race series",
+        "detail": "Public pricing currently ranges from $25 for the Fun Run to $235 for the 5-Person Marathon Relay before checkout fees.",
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262",
+        "source_path": "runner_decision_checklist.items.price"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Expo and packet pickup",
+        "value": "Saturday, October 3 at The Finley Center",
+        "detail": "The official race page lists expo and packet pickup from 10:00 AM–4:00 PM at The Finley Center.",
+        "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "BHM26.2 2026 — October 4, 2026",
+    "meta_description": "Race details for BHM26.2 2026 at The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "800f6932ac5e074243ed43e3bc3d9894",
+    "route": "/private/mockups/800f6932ac5e074243ed43e3bc3d9894/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/AL/Hoover/bhm262",
+    "source_platform": "runsignup",
+    "source_race_id": "48055",
+    "registration_race_id": "48055",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 82,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Has an official site plus RunSignup registration path. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Cause/sponsor/community proof can support the page. Contact form path found. Official race/org web identity found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/AL/Hoover/bhm262",
+      "http://bhm262.com/"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/bhm262",
+          "path": "identity.name"
+        },
+        {
+          "field": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/bhm262",
+          "path": "event.date"
+        },
+        {
+          "field": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/bhm262",
+          "path": "event.location"
+        },
+        {
+          "field": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/bhm262",
+          "path": "distances"
+        },
+        {
+          "field": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/bhm262",
+          "path": "registration.url"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/bhm262",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/bhm262",
+          "confidence": "medium",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/bhm262",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.location"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "field": "runner_decision_checklist.items.packet-pickup",
+          "source": "official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
+        },
+        {
+          "path": "schedule",
+          "field": "schedule",
+          "source": "RunSignup race description and Events section",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "schedule"
+      ],
+      "source_url": "https://runsignup.com/Race/AL/Hoover/bhm262"
+    },
+    "uncertainty": {
+      "items": [
+        "Customer outreach remains unapproved and should not be sent until Steve approves a send gate.",
+        "Sponsor/photo polish can be expanded in a later pass if this candidate moves from owner review to customer outreach."
+      ],
+      "summary": "Public race facts were checked against official race sources; deeper sponsor, photo, and final pre-send details can still be reviewed before customer outreach."
+    },
+    "captured_at": "2026-07-25T18:27:00Z"
+  },
+  "schedule": [
+    {
+      "day": "Saturday, October 3, 2026",
+      "name": "Expo and packet pickup",
+      "time": "10:00 AM – 4:00 PM",
+      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
+      "applies_to_distances": [
+        "marathon",
+        "marathon-relay",
+        "half-marathon",
+        "10k",
+        "5k",
+        "fun-run"
+      ]
+    },
+    {
+      "day": "Sunday, October 4, 2026",
+      "name": "Marathon, Half Marathon, Relay, and Virtual Options",
+      "time": "7:00 AM",
+      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
+      "applies_to_distances": [
+        "marathon",
+        "half-marathon",
+        "marathon-relay",
+        "virtual-options"
+      ]
+    },
+    {
+      "day": "Sunday, October 4, 2026",
+      "name": "10K and 5K start",
+      "time": "7:15 AM",
+      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
+      "applies_to_distances": [
+        "10k",
+        "5k"
+      ]
+    },
+    {
+      "day": "Sunday, October 4, 2026",
+      "name": "After Party",
+      "time": "7:30 AM – 2:00 PM",
+      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
+      "applies_to_distances": [
+        "marathon",
+        "marathon-relay",
+        "half-marathon",
+        "10k",
+        "5k",
+        "fun-run"
+      ]
+    },
+    {
+      "day": "Sunday, October 4, 2026",
+      "name": "Fun Run start",
+      "time": "10:00 AM",
+      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
+      "applies_to_distances": [
+        "fun-run"
+      ]
+    }
+  ]
+}
