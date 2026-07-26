@@ -320,7 +320,24 @@
       ],
       "summary": "Race basics, distance options, times, prices, registration path, location, nonprofit mission, qualifier/certification note, awards/refund FAQs, volunteer/community scale, and public race imagery are backed by RunSignup and the official MUST Ministries Gobble Jog page."
     },
-    "captured_at": "2026-07-20T00:00:00.000Z"
+    "captured_at": "2026-07-20T00:00:00.000Z",
+    "outreach": {
+      "send_status": "approved_to_send",
+      "production_url": "https://mockups.startlinesites.com/private/mockups/0ac13c3307621b842c07d90bb31c41d9/",
+      "steve_approval": {
+        "status": "approved",
+        "approved_at": "2026-07-26T17:53:55Z",
+        "channel": "telegram",
+        "note": "Steve approved sending the 24th Annual MUST Gobble Jog mockup to the official routing email on file."
+      },
+      "contact": {
+        "type": "official_routing_email",
+        "value_masked": "official routing email on file",
+        "status": "official_routing_email_on_file",
+        "source": "marketing-site prospect/contact record referenced by Steve approval"
+      },
+      "history": []
+    }
   },
   "course": {
     "suppress_visual": true,
