@@ -270,7 +270,14 @@ for (const file of files) {
     .filter((placement) => !(suppressRegistrationDecision && placement === 'registration-decision-card'));
   const minimumRegistrationCtaCount = requiredPlacements.length + 1;
   if (registrationAnchors.length < minimumRegistrationCtaCount) errors.push(`Only ${registrationAnchors.length} registration CTAs point to the official registration URL; expected at least ${minimumRegistrationCtaCount}.`);
-  if (template === 'community' && registrationAnchors.length > 8) errors.push(`Community private mockup renders ${registrationAnchors.length} official registration CTAs; expected 8 or fewer after structural CTA reduction.`);
+  if (template === 'community') {
+    const configuredDistanceCount = asArray(config?.distances).filter((distance) => !distance?.omit_registration_cta).length;
+    const expectedGlobalCtaCount = requiredPlacements.length + (placements.includes('footer-official') ? 1 : 0);
+    const maximumRegistrationCtaCount = Math.max(8, configuredDistanceCount + expectedGlobalCtaCount);
+    if (registrationAnchors.length > maximumRegistrationCtaCount) {
+      errors.push(`Community private mockup renders ${registrationAnchors.length} official registration CTAs; expected ${maximumRegistrationCtaCount} or fewer while showing every configured registration option.`);
+    }
+  }
   for (const required of requiredPlacements) {
     if (!placements.includes(required)) errors.push(`Missing required register-click placement "${required}".`);
   }

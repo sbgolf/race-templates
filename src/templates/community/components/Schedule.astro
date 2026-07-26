@@ -9,6 +9,11 @@ const scheduleByDay = schedule.reduce((groups, item) => {
 }, {});
 const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];
 const isSingleDistance = (race.distances || []).length === 1;
+const groupTitleForDay = (day, items = []) => {
+  if (items[0]?.group_title) return items[0].group_title;
+  if (/packet|pickup/i.test(items.map((item) => item.name || '').join(' '))) return 'Packet pickup';
+  return day.includes('Friday') ? 'Packet Pickup' : 'Race Day';
+};
 ---
 
 {schedule.length > 0 ? (
@@ -27,9 +32,14 @@ const isSingleDistance = (race.distances || []).length === 1;
     </div>
 
     <div class="timeline">
-      {Object.entries(scheduleByDay).map(([day, items]) => <div class="tl-day">
+      {Object.entries(scheduleByDay).map(([day, items]) => {
+        const dayVisible = isSingleDistance || items.some((item) => {
+          const appliesTo = item.applies_to_distances || ['all'];
+          return appliesTo.includes('all') || appliesTo.includes(featuredDistance?.id);
+        });
+        return <div class="tl-day" data-hide={String(!dayVisible)}>
         <div class="date">{day}</div>
-        <h3>{items[0]?.group_title || (day.includes('Friday') ? 'Packet Pickup' : 'Race Day')}</h3>
+        <h3>{groupTitleForDay(day, items)}</h3>
         {items.map((item) => {
           const appliesTo = item.applies_to_distances || ['all'];
           const visible = isSingleDistance || appliesTo.includes('all') || appliesTo.includes(featuredDistance?.id);
@@ -41,7 +51,7 @@ const isSingleDistance = (race.distances || []).length === 1;
             <div class="tl-event-time">{item.time}</div>
           </div>;
         })}
-      </div>)}
+      </div>})}
     </div>
   </div>
 </section>
@@ -56,6 +66,10 @@ const isSingleDistance = (race.distances || []).length === 1;
       const distances=item.dataset.distance || 'all';
       const visible=distances==='all'||distances.split(',').includes(selected);
       item.dataset.hide=String(!visible);
+    });
+    document.querySelectorAll('.tl-day').forEach((day)=>{
+      const hasVisibleEvent=[...day.querySelectorAll('.tl-event')].some((item)=>item.dataset.hide!=='true');
+      day.dataset.hide=String(!hasVisibleEvent);
     });
   });
 </script>

@@ -87,8 +87,7 @@
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
-      },
-      "omit_registration_cta": true
+      }
     },
     {
       "id": "marathon-relay",
@@ -100,8 +99,7 @@
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
-      },
-      "omit_registration_cta": true
+      }
     },
     {
       "id": "virtual-options",
@@ -113,8 +111,7 @@
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262"
-      },
-      "omit_registration_cta": true
+      }
     }
   ],
   "registration": {
@@ -170,7 +167,7 @@
         "id": "packet-pickup",
         "label": "Expo and packet pickup",
         "value": "Saturday, October 3 at The Finley Center",
-        "detail": "The official race page lists expo and packet pickup from 10:00 AM–4:00 PM at The Finley Center.",
+        "detail": "Expo and packet pickup are scheduled from 10:00 AM–4:00 PM at The Finley Center.",
         "source_url": "https://runsignup.com/Race/AL/Hoover/BHM262",
         "source_path": "runner_decision_checklist.items.packet-pickup"
       }
@@ -345,20 +342,7 @@
         "5k"
       ]
     },
-    {
-      "day": "Sunday, October 4, 2026",
-      "name": "After Party",
-      "time": "7:30 AM – 2:00 PM",
-      "location": "The Finley Center, 5508 Stadium Trace Pkwy, Hoover, AL",
-      "applies_to_distances": [
-        "marathon",
-        "marathon-relay",
-        "half-marathon",
-        "10k",
-        "5k",
-        "fun-run"
-      ]
-    },
+
     {
       "day": "Sunday, October 4, 2026",
       "name": "Fun Run start",

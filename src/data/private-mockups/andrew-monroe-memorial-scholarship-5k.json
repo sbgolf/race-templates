@@ -62,8 +62,7 @@
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk"
-      },
-      "start_time": "Submit virtually January 8–14, 2027"
+      }
     }
   ],
   "registration": {
@@ -115,7 +114,7 @@
         "id": "packet-pickup",
         "label": "Packet pickup",
         "value": "Friday and Saturday early pickup windows",
-        "detail": "The official page lists Friday pickup from 4:00–7:00 PM and Saturday pickup from 10:00 AM–2:00 PM at New Balance Sarasota locations.",
+        "detail": "Early pickup is scheduled Friday from 4:00–7:00 PM and Saturday from 10:00 AM–2:00 PM at New Balance Sarasota locations.",
         "source_url": "https://runsignup.com/Race/FL/Sarasota/AndrewMonroeMemorialScholarship5KRunWalk",
         "source_path": "runner_decision_checklist.items.packet-pickup"
       }
@@ -256,6 +255,7 @@
   "schedule": [
     {
       "day": "Friday, January 8, 2027",
+      "group_title": "Packet pickup",
       "name": "Early packet pickup",
       "time": "4:00 PM – 7:00 PM",
       "location": "New Balance, 315 Cattlemen Rd, Suite 1, Sarasota",
@@ -266,6 +266,7 @@
     },
     {
       "day": "Saturday, January 9, 2027",
+      "group_title": "Packet pickup",
       "name": "Early packet pickup",
       "time": "10:00 AM – 2:00 PM",
       "location": "New Balance Sarasota, 1872 Stickney Point Rd, Sarasota",
