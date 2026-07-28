@@ -1,0 +1,233 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Hammond Rotary Shamrock Run",
+    "slug": "hammond-rotary-shamrock-run-2026",
+    "tagline": "A Hammond Rotary community race supporting local service.",
+    "hero_image": {
+      "src": "/mockups/e5069dabaa290c54e4d541bf8e5e9803/hammond-rotary-shamrock-logo.png",
+      "alt": "Hammond Rotary Shamrock Run event logo",
+      "caption": "Hammond Rotary Shamrock Run event logo.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-63929-1730916372.4793-0.bNk7au.png",
+      "source_label": "RunSignup event logo",
+      "presentation": "logo",
+      "fit": "contain",
+      "aspect_ratio": "300 / 251"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    },
+    "short_name": "Shamrock Run"
+  },
+  "event": {
+    "date": "2027-03-20",
+    "location": "Hammond, LA",
+    "timezone": "America/Chicago",
+    "venue": "Renaissance Festival grounds",
+    "address": "46468 River Rd, Hammond, LA 70401"
+  },
+  "distances": [
+    {
+      "id": "3-1-miles",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+        "verified": true
+      }
+    },
+    {
+      "id": "6-2-miles",
+      "name": "10K",
+      "distance": "10K",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+        "verified": true
+      }
+    },
+    {
+      "id": "1-miles",
+      "name": "1 Mile",
+      "distance": "1 Mile",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+        "verified": true
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the date, location, distance options, and registration path before signing up.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2027-03-20",
+        "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+        "source_path": "event.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "5K, 10K, 1 Mile",
+        "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+        "applies_to_distance_ids": [
+          "3-1-miles",
+          "6-2-miles",
+          "1-miles"
+        ],
+        "source_path": "distances"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Renaissance Festival grounds, 46468 River Rd, Hammond, LA",
+        "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+        "source_path": "event.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Hammond Rotary Shamrock Run \u2014 2027-03-20",
+    "meta_description": "Race details, registration link, and key runner information for the Hammond Rotary Shamrock Run in Hammond, Louisiana."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "e5069dabaa290c54e4d541bf8e5e9803",
+    "route": "/private/mockups/e5069dabaa290c54e4d541bf8e5e9803/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+    "source_platform": "runsignup",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 83,
+    "source_urls": [
+      "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+      "http://hammondrotary.com/"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium"
+        },
+        {
+          "field": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun",
+          "confidence": "high",
+          "verified": true
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "registration",
+        "distances",
+        "event",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/LA/Hammond/HammondRotaryShamrockRun"
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Generated from public RunSignup/official race sources; detailed race-day logistics should be confirmed by the race team before any production customer site."
+    },
+    "captured_at": "2026-07-28T15:30:00Z"
+  }
+}
