@@ -1,0 +1,256 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Freedom Splash 5K",
+    "slug": "race-ready-events-freedom-splash-5k",
+    "tagline": "A Race Ready Events portfolio race page.",
+    "colors": {
+      "primary": "#B9272D",
+      "secondary": "#123B5D",
+      "accent": "#F5B334",
+      "ink": "#241A1A"
+    },
+    "short_name": "Freedom Splash 5K",
+    "hero_image": {
+      "src": "/mockups/a4b32ed583f4461797bb4a5bd7c24a81/race-ready-events-action.jpg",
+      "alt": "Runners at a Race Ready Events-supported race start",
+      "source": "https://racereadyevents.com/",
+      "fit": "cover",
+      "presentation": "photo"
+    }
+  },
+  "organization": {
+    "name": "Race Ready Events",
+    "url": "https://racereadyevents.com/"
+  },
+  "event": {
+    "date": "2027-05-31",
+    "location": "Lawrence County High School Track, Lawrenceburg, TN",
+    "timezone": "America/Chicago",
+    "venue": "Lawrence County High School Track",
+    "address": "1800 Springer Road, Lawrenceburg, TN 38464"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "provenance": {
+        "source": "official event registration/details page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k"
+      },
+      "start_time": "9:00 AM CDT"
+    },
+    {
+      "id": "one-mile-fun-run",
+      "name": "1 Mile Fun Run",
+      "distance": "1 Mile",
+      "provenance": {
+        "source": "official event registration/details page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k"
+      },
+      "start_time": "10:00 AM CDT"
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+    "platform": "runsignup",
+    "cta_label": "Continue to official registration",
+    "intro": "Register on RunSignup for the Freedom Splash 5K and 1 Mile Fun Run.",
+    "price_note": "Current public pricing is handled on RunSignup and may change by registration date."
+  },
+  "runner_decision_checklist": {
+    "headline": "Key details before registration",
+    "intro": "Review the essentials before continuing to the official registration flow.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Monday, May 31, 2027",
+        "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+        "source_path": "runner_decision_checklist.items.date",
+        "detail": "The event page lists the Memorial Day race date."
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "5K and 1 Mile Fun Run",
+        "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+        "source_path": "runner_decision_checklist.items.distance",
+        "detail": "Both event options are listed on the registration page.",
+        "applies_to_distance_ids": [
+          "5k",
+          "one-mile-fun-run"
+        ]
+      },
+      {
+        "id": "location",
+        "label": "Race location",
+        "value": "Lawrence County High School Track, Lawrenceburg, TN",
+        "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+        "source_path": "runner_decision_checklist.items.location",
+        "detail": "The race starts and finishes at the track."
+      },
+      {
+        "id": "start-time",
+        "label": "Start times",
+        "value": "5K at 9:00 AM and 1 Mile Fun Run at 10:00 AM",
+        "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+        "source_path": "runner_decision_checklist.items.start-time",
+        "detail": "Start times are shown on the event listing.",
+        "applies_to_distance_ids": [
+          "5k",
+          "one-mile-fun-run"
+        ]
+      }
+    ]
+  },
+  "startline_value": {
+    "headline": "A portfolio-ready event page for Race Ready Events.",
+    "intro": "This page shows how one Race Ready Events-supported race can live inside a consistent portfolio system while still sending runners to the official registration flow.",
+    "improved": [
+      "Gives each event a polished runner-facing landing page before the RunSignup handoff.",
+      "Keeps date, location, distances, and start times easy to compare on mobile.",
+      "Creates a repeatable format Race Ready Events could reuse across multiple managed or timed events."
+    ],
+    "paid_includes": [
+      "A reusable event-page structure for Race Ready Events portfolio races.",
+      "SEO-ready event details and clear official registration CTAs.",
+      "Sponsor and community sections can be added when each race has source-backed details.",
+      "StartLine complements RunSignup and timing workflows rather than replacing them."
+    ]
+  },
+  "seo": {
+    "meta_title": "Freedom Splash 5K \u2014 Race Ready Events",
+    "meta_description": "Race details for Freedom Splash 5K, organized into a clear runner-facing page with official registration links."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "a4b32ed583f4461797bb4a5bd7c24a81",
+    "route": "/private/mockups/a4b32ed583f4461797bb4a5bd7c24a81/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+    "source_platform": "runsignup",
+    "source_race_id": "202784",
+    "registration_race_id": "202784",
+    "generated_from": "manual Lane D operator portfolio mockup workflow",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "D",
+    "prospect_type": "race_management_company",
+    "email_template_key": "operator_portfolio_v1",
+    "operator_company": "Race Ready Events",
+    "operator_contact_email": "info@racereadyevents.com",
+    "operator_prospect_id": "71be187f-5eaa-4f89-9ff0-7bcdf4c0fc61",
+    "source_urls": [
+      "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+      "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+      "https://racereadyevents.com/",
+      "https://racereadyevents.com/services",
+      "https://racereadyevents.com/"
+    ],
+    "captured_at": "2026-07-28T21:24:23Z",
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+      "source_confirmed_sections": [
+        "runner_decision_checklist"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "one-mile-fun-run"
+      ],
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+          "path": "identity.name"
+        },
+        {
+          "field": "event.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+          "path": "event.date"
+        },
+        {
+          "field": "event.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+          "path": "event.location"
+        },
+        {
+          "field": "distances",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+          "path": "distances"
+        },
+        {
+          "field": "registration.url",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+          "path": "registration.url"
+        },
+        {
+          "field": "identity.hero_image",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racereadyevents.com/",
+          "path": "identity.hero_image"
+        },
+        {
+          "field": "organization.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racereadyevents.com/services",
+          "path": "organization.name"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+          "path": "runner_decision_checklist.items.location"
+        },
+        {
+          "field": "runner_decision_checklist.items.start-time",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/TN/Lawrenceburg/FreedomSplash5k",
+          "path": "runner_decision_checklist.items.start-time"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "This Lane D private mockup uses one representative event to demonstrate a reusable operator portfolio website system. Outreach is not approved or sent.",
+      "items": [
+        "Race Ready Events has broad official operator/service evidence; this mockup uses Freedom Splash 5K as one representative event example.",
+        "The source page is the authority for registration availability and current pricing."
+      ]
+    }
+  }
+}
