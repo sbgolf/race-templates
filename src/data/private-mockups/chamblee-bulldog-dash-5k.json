@@ -1,0 +1,210 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Chamblee Bulldog Dash 5K",
+    "slug": "chamblee-bulldog-dash-5k",
+    "tagline": "A school-community 5K for Chamblee Middle and High.",
+    "hero_image": {
+      "src": "/mockups/1d203968975158df868999f13d0f98d6/chamblee-bulldog-dash-banner.jpg",
+      "alt": "Chamblee Bulldog Dash 5K banner artwork",
+      "caption": "Chamblee Bulldog Dash 5K event artwork.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-138xxx/138285/raceBanner-6Kyh66q9-bNXFxF.jpg",
+      "source_label": "RunSignup race banner",
+      "presentation": "banner",
+      "fit": "contain",
+      "aspect_ratio": "3 / 1"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    },
+    "short_name": "Bulldog Dash 5K"
+  },
+  "event": {
+    "date": "2027-03-06",
+    "location": "Chamblee, GA",
+    "timezone": "America/New_York",
+    "venue": "Chamblee Middle School / Chamblee High School area",
+    "address": "3601 Sexton Woods Drive, Chamblee, GA 30341"
+  },
+  "distances": [
+    {
+      "id": "3-1-miles",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+        "verified": true
+      },
+      "start_time": "8:00 AM ET"
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the date, location, distance options, and registration path before signing up.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2027-03-06",
+        "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+        "source_path": "event.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distance",
+        "value": "5K",
+        "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+        "applies_to_distance_ids": [
+          "3-1-miles"
+        ],
+        "source_path": "distances"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Chamblee, GA \u2014 3601 Sexton Woods Drive",
+        "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+        "source_path": "event.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Chamblee Bulldog Dash 5K \u2014 2027-03-06",
+    "meta_description": "Race details, registration link, school-community context, and key runner information for the Chamblee Bulldog Dash 5K."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "1d203968975158df868999f13d0f98d6",
+    "route": "/private/mockups/1d203968975158df868999f13d0f98d6/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+    "source_platform": "runsignup",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 84,
+    "source_urls": [
+      "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+      "http://bulldogdash5k.com/"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium"
+        },
+        {
+          "field": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "RunSignup public race page",
+          "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K",
+          "confidence": "high",
+          "verified": true
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "registration",
+        "distances",
+        "event",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/GA/Chamblee/ChambleeBulldogDash5K"
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Generated from public RunSignup/official race sources; detailed race-day logistics should be confirmed by the race team before any production customer site."
+    },
+    "captured_at": "2026-07-28T15:30:00Z"
+  }
+}
