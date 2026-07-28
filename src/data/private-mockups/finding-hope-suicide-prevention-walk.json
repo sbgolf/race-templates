@@ -1,0 +1,277 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Finding Hope Suicide Prevention 1-Mile Walk",
+    "slug": "finding-hope-suicide-prevention-walk",
+    "short_name": "Finding Hope Walk",
+    "tagline": "Walk together at LSUE to raise awareness, honor loved ones, and support local suicide-prevention resources.",
+    "hero_image": {
+      "src": "/mockups/4b4b71642b82d8d65ddcedd4c85e67cf/finding-hope-walk-2026-artwork.png",
+      "alt": "Finding Hope Suicide Prevention Walk event artwork for the November 7, 2026 walk at LSUE",
+      "caption": "Finding Hope event artwork for the November 7 walk.",
+      "source": "https://static.wixstatic.com/media/2b9cc3_752934ffb3f2457380b962cf0699b9cc~mv2.png/v1/fill/w_754,h_764,al_c,q_90,enc_avif,quality_auto/FHSP%202026%201%20Mile%20Walk.png",
+      "source_label": "Living Healed Finding Hope walk page",
+      "presentation": "logo",
+      "fit": "contain",
+      "aspect_ratio": "1 / 1"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-11-07",
+    "location": "Eunice, LA",
+    "venue": "LSUE Campus",
+    "address": "2048 Johnson Hwy, Eunice, LA 70535",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "one-mile-walk",
+      "name": "Finding Hope Suicide Prevention 1-Mile Walk",
+      "distance": "1 Mile",
+      "featured": true,
+      "start_time": "8:00 AM CST",
+      "price": "$0",
+      "profile": "A free one-mile community walk at LSUE dedicated to connection, remembrance, awareness, and support for suicide-prevention work in Eunice.",
+      "highlights": [
+        "Free 1-mile walk on Saturday, November 7, 2026",
+        "Walk-up registration and pre-registered participant sign-in begin at 8:00 AM",
+        "Community resource tables and educational breakout sessions follow the walk"
+      ],
+      "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+      "provenance": {
+        "source": "RunSignup Events and Description sections; Living Healed Finding Hope walk page",
+        "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+        "confidence": "high",
+        "verified": true,
+        "method": "RunSignup lists the event name, distance, $0 price, 8:00 AM CST time, registration deadline, and LSUE/Eunice location; the Living Healed page confirms the 2026 date and LSUE setting."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=205321",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register for the free one-mile walk and plan your Finding Hope morning at LSUE.",
+    "deadline": "Registration ends November 7, 2026 at 8:00 AM CST.",
+    "price_note": "The one-mile walk is listed as free to enter."
+  },
+  "runner_decision_checklist": {
+    "kicker": "Walk day details",
+    "headline": "What participants need before Finding Hope morning at LSUE.",
+    "intro": "A quick guide to the walk time, location, purpose, and community-resource activities planned for the morning.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "location",
+        "label": "Walk site",
+        "value": "LSUE Campus",
+        "detail": "The walk is held at LSUE Campus, 2048 Johnson Hwy, Eunice, LA 70535.",
+        "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+        "source_path": "event.venue"
+      },
+      {
+        "id": "start-time",
+        "label": "Morning start",
+        "value": "8:00 AM CST",
+        "detail": "Walk-up registration and pre-registered participant sign-in begin at 8:00 AM, followed by the welcome, reflection, bracelet presentation, bubble exercise, and the one-mile walk.",
+        "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+        "source_path": "schedule"
+      },
+      {
+        "id": "post-race",
+        "label": "After the walk",
+        "value": "Resource tables and workshops",
+        "detail": "The schedule continues at 10:00 AM with vendor booths, community resource tables, educational breakout workshops, survivor-family stories, recognition, and an 11:30 AM closing call to action.",
+        "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+        "source_path": "description.schedule"
+      },
+      {
+        "id": "series",
+        "label": "Where proceeds help",
+        "value": "Prevention, education, and local support",
+        "detail": "Money raised supports Living Healed services including suicide-prevention trainings, grief support groups, and educational groups on mental health topics such as anxiety, depression, parenting, trauma, and coping strategies.",
+        "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+        "source_path": "description.impact"
+      },
+      {
+        "id": "awards",
+        "label": "2025 community response",
+        "value": "Nearly 400 participants; over $14,000 raised",
+        "detail": "The 2025 walk drew nearly 400 participants and raised more than $14,000, validating the need for continued community education on suicide prevention.",
+        "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+        "source_path": "description.2025-response"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Finding Hope Suicide Prevention 1-Mile Walk — November 7, 2026",
+    "meta_description": "Join the free Finding Hope Suicide Prevention 1-Mile Walk at LSUE in Eunice, Louisiana, supporting awareness, remembrance, education, and local mental-health resources."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "4b4b71642b82d8d65ddcedd4c85e67cf",
+    "route": "/private/mockups/4b4b71642b82d8d65ddcedd4c85e67cf/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+    "source_platform": "runsignup",
+    "source_race_id": "205321",
+    "registration_race_id": "205321",
+    "generated_from": "marketing-site community mockup batch after Steve approval",
+    "owner_approved_for_generation": true,
+    "prospect_score": 87,
+    "qualification_reason": "Steve approved starting work on the saved refill/backlog candidates. This candidate has a strong Community fit, a source-backed RunSignup listing, an official Living Healed page, current date/location/distance/registration facts, usable official event artwork, and a public direct Living Healed contact email for later owner-approved outreach consideration.",
+    "source_urls": [
+      "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+      "https://runsignup.com/Race/Info/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+      "https://runsignup.com/Race/Register/?raceId=205321",
+      "https://runsignup.com/Race/Donate/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+      "https://runsignup.com/Race/205321/RefundPolicy",
+      "https://www.iamlivinghealed.org/findinghopesuicidepreventionwalk"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "jennifer@iamlivinghealed.org",
+        "context": "Living Healed footer lists a public organization email on the official Finding Hope walk page; recommended as an official routing contact unless a named race-director email is later confirmed.",
+        "source_url": "https://www.iamlivinghealed.org/findinghopesuicidepreventionwalk",
+        "status": "public_official_routing_email",
+        "confidence": "medium",
+        "recommended": true
+      },
+      {
+        "type": "form",
+        "url": "https://runsignup.com/Race/Info/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk#contactFormSection",
+        "context": "RunSignup Race Contact Info form is available, but no contact form should be used without explicit Steve approval.",
+        "status": "contact_form_available"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk",
+      "items": [
+        { "path": "identity.name", "source": "RunSignup race header", "confidence": "high" },
+        { "path": "identity.tagline", "source": "RunSignup Description section and Living Healed page", "confidence": "high" },
+        { "path": "identity.hero_image", "source": "Official Living Healed Finding Hope walk artwork", "confidence": "high" },
+        { "path": "event.date", "source": "RunSignup race header and Living Healed page", "confidence": "high" },
+        { "path": "event.location", "source": "RunSignup race header and Place section", "confidence": "high" },
+        { "path": "event.venue", "source": "RunSignup Place section and Living Healed heading", "confidence": "high" },
+        { "path": "distances", "source": "RunSignup Events section", "confidence": "high" },
+        { "path": "registration", "source": "RunSignup Events and Sign Up links", "confidence": "high" },
+        { "path": "runner_decision_checklist", "source": "RunSignup Description section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.location", "source": "RunSignup Place section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.start-time", "source": "RunSignup Events and Description schedule", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.post-race", "source": "RunSignup Description schedule", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.series", "source": "RunSignup Description impact section", "confidence": "high" },
+        { "path": "runner_decision_checklist.items.awards", "source": "RunSignup Description 2025 community response paragraph", "confidence": "high" },
+        { "path": "course", "source": "RunSignup Place and Description sections", "confidence": "medium" },
+        { "path": "story", "source": "RunSignup Description section and Living Healed page", "confidence": "high" },
+        { "path": "schedule", "source": "RunSignup Description schedule", "confidence": "high" },
+        { "path": "faqs", "source": "RunSignup Description, Contact Info, and Registration sections", "confidence": "medium" },
+        { "path": "contact_sources", "source": "Living Healed official page footer and RunSignup Race Contact Info", "confidence": "medium" }
+      ],
+      "source_confirmed_distance_ids": ["one-mile-walk"],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "course",
+        "story",
+        "schedule",
+        "faqs",
+        "identity.hero_image"
+      ]
+    },
+    "uncertainty": {
+      "summary": "Core name, date, location, venue, one-mile distance, free price, 8:00 AM registration/sign-in time, official registration URL, walk-day schedule, cause/impact copy, 2025 participation/fundraising proof, official event artwork, RunSignup contact form, and a public Living Healed routing email are verified. No course map, packet-pickup details, sponsor grid, awards, GPX, or elevation source was found in this pass, so those sections are omitted.",
+      "items": [
+        "The description says the one-mile walk begins after opening remarks and reflection, but only an 8:00 AM event time is listed. The mockup does not invent a separate walk-start time.",
+        "The official artwork is event-specific and source-backed; no larger source-backed race-day photo clearly tied to the walk itself was found during this pass.",
+        "The Living Healed email is an official organization routing email, not a confirmed named race-director address."
+      ]
+    },
+    "captured_at": "2026-07-28T14:19:12Z"
+  },
+  "course": {
+    "suppress_visual": true,
+    "type": "Community one-mile walk",
+    "description": "The source pages describe a one-mile walk at LSUE but do not publish a map, GPX file, or turn-by-turn route, so this concept keeps the course section focused on verified distance and setting.",
+    "highlights": [
+      "One-mile walk at LSUE Campus",
+      "Welcome, reflection, worship music, bracelets, and bubble exercise before the walk",
+      "Community resources and educational workshops after the walk"
+    ]
+  },
+  "story": {
+    "kicker": "Community hope walk",
+    "title": "A one-mile morning of remembrance, support, and local suicide-prevention resources.",
+    "paragraphs": [
+      "The 2nd Annual Finding Hope Suicide Prevention 1-Mile Walk brings families, friends, and supporters to LSUE Campus on Saturday, November 7, 2026.",
+      "The morning is built around connection and healing, with a welcome, reflection, worship music, Finding Hope bracelets, a bubble exercise, the one-mile walk, resource tables, educational workshops, and survivor-family stories.",
+      "Proceeds support Living Healed services including prevention trainings, grief support groups, and educational groups on mental-health topics such as anxiety, depression, parenting, trauma, and coping strategies."
+    ],
+    "stats": [
+      { "label": "2025 participation", "value": "Nearly 400 participants" },
+      { "label": "2025 impact", "value": "Over $14,000 raised" },
+      { "label": "2026 focus", "value": "Prevention training and support groups" }
+    ]
+  },
+  "schedule": [
+    {
+      "day": "Saturday, November 7, 2026",
+      "time": "8:00 AM CST",
+      "name": "Registration, sign-in, and opening moments",
+      "location": "LSUE Campus",
+      "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk"
+    },
+    {
+      "day": "Saturday, November 7, 2026",
+      "time": "10:00 AM CST",
+      "name": "Community resources and workshops",
+      "location": "Vendor booths, resource tables, breakout workshops, stories, and recognition",
+      "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk"
+    },
+    {
+      "day": "Saturday, November 7, 2026",
+      "time": "11:30 AM CST",
+      "name": "Closing remarks and call to action",
+      "location": "LSUE Campus",
+      "source_url": "https://runsignup.com/Race/LA/Eunice/FindingHopeSuicidePrevention5KFunRunMileWalk"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "/mockups/4b4b71642b82d8d65ddcedd4c85e67cf/finding-hope-community-photo.jpg",
+      "alt": "Living Healed community members gathered together",
+      "caption": "Community members walking together for Finding Hope.",
+      "source": "https://static.wixstatic.com/media/2b9cc3_730ff4abe572482c9a595582efb3665c~mv2.jpeg/v1/crop/x_0,y_284,w_1350,h_1233/fill/w_798,h_700,al_c,q_85,enc_auto/IMG_4562.jpeg"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How much does the walk cost?",
+      "answer": "The Finding Hope Suicide Prevention 1-Mile Walk is listed as free to enter."
+    },
+    {
+      "question": "Where is the walk held?",
+      "answer": "The walk is listed at LSUE Campus, 2048 Johnson Hwy, Eunice, LA 70535."
+    },
+    {
+      "question": "What happens after the walk?",
+      "answer": "The official schedule includes vendor booths, community resource tables, educational breakout workshops, survivor-family stories, recognition, and closing remarks."
+    },
+    {
+      "question": "Who can answer race questions?",
+      "answer": "Questions can be directed through the race contact options provided by the organizers."
+    }
+  ]
+}
