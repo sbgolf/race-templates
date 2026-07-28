@@ -1,0 +1,276 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Ocean City Running Festival",
+    "slug": "corrigan-sports-ocean-city-running-festival",
+    "tagline": "A portfolio-style race page for Corrigan Sports Enterprises.",
+    "colors": {
+      "primary": "#075B7A",
+      "secondary": "#F47B20",
+      "accent": "#F6C453",
+      "ink": "#14212B"
+    },
+    "short_name": "OC Running Festival",
+    "hero_image": {
+      "src": "/mockups/cf6d1ab4786f4a2da1f17d8c9e0735bb/ocean-city-running-festival-hero.jpg",
+      "alt": "Ocean City Running Festival official event artwork",
+      "source": "https://www.corrigansports.com/event/ocean-city-marathon/",
+      "fit": "cover",
+      "presentation": "photo"
+    }
+  },
+  "organization": {
+    "name": "Corrigan Sports Enterprises",
+    "url": "https://www.corrigansports.com/"
+  },
+  "event": {
+    "date": "2026-11-14",
+    "location": "Ocean City Inlet, Ocean City, MD",
+    "timezone": "America/New_York",
+    "venue": "Ocean City Inlet",
+    "address": "Ocean City, MD 21842"
+  },
+  "distances": [
+    {
+      "id": "marathon",
+      "name": "Marathon",
+      "distance": "26.2 Miles",
+      "provenance": {
+        "source": "official event registration/details page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://www.ocmdrunfest.com/Race/MD/OceanCity/OceanCityRunningFestival"
+      }
+    },
+    {
+      "id": "half-marathon",
+      "name": "Half-Marathon",
+      "distance": "13.1 Miles",
+      "provenance": {
+        "source": "official event registration/details page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://www.ocmdrunfest.com/Race/MD/OceanCity/OceanCityRunningFestival"
+      }
+    },
+    {
+      "id": "8k",
+      "name": "8K",
+      "distance": "8K",
+      "provenance": {
+        "source": "official event registration/details page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://www.ocmdrunfest.com/Race/MD/OceanCity/OceanCityRunningFestival"
+      }
+    },
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "provenance": {
+        "source": "official event registration/details page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://www.ocmdrunfest.com/Race/MD/OceanCity/OceanCityRunningFestival"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://www.ocmdrunfest.com/Race/Register/?raceId=140586",
+    "platform": "runsignup",
+    "cta_label": "Continue to official registration",
+    "intro": "Register through the official Ocean City Running Festival registration flow.",
+    "price_note": "Current race availability and prices are confirmed on the official registration page."
+  },
+  "runner_decision_checklist": {
+    "headline": "Key details before registration",
+    "intro": "Review the essentials before continuing to the official registration flow.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, November 14, 2026",
+        "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+        "source_path": "runner_decision_checklist.items.date",
+        "detail": "The Corrigan Sports event listing gives the race date."
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "Marathon, Half-Marathon, 8K, 5K, and virtual options",
+        "source_url": "https://www.ocmdrunfest.com/Race/MD/OceanCity/OceanCityRunningFestival",
+        "source_path": "runner_decision_checklist.items.distance",
+        "detail": "The official event registration page lists these event options.",
+        "applies_to_distance_ids": [
+          "marathon",
+          "half-marathon",
+          "8k",
+          "5k"
+        ]
+      },
+      {
+        "id": "location",
+        "label": "Race location",
+        "value": "Ocean City Inlet in Ocean City, Maryland",
+        "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+        "source_path": "runner_decision_checklist.items.location",
+        "detail": "The Corrigan Sports event listing identifies Ocean City Inlet as the event location."
+      },
+      {
+        "id": "series",
+        "label": "Operator portfolio fit",
+        "value": "Corrigan Sports lists Ocean City Marathon / Ocean City Running Festival in its event portfolio.",
+        "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+        "source_path": "runner_decision_checklist.items.series",
+        "detail": "This keeps the Corrigan portfolio connection clear while giving runners a focused event page."
+      }
+    ]
+  },
+  "startline_value": {
+    "headline": "A portfolio-ready event page for Corrigan Sports Enterprises.",
+    "intro": "This page shows how a Corrigan Sports portfolio event can get a polished event-specific page while preserving the official registration flow.",
+    "improved": [
+      "Turns a multi-distance event into a mobile-first runner decision page.",
+      "Keeps event date, location, distances, and official registration link easy to find.",
+      "Shows how Corrigan Sports could use a consistent structure across its race portfolio."
+    ],
+    "paid_includes": [
+      "A reusable landing-page system for a portfolio of events.",
+      "Structured race details and SEO-ready metadata for each event.",
+      "Sponsor and promotional content can be added when source-backed.",
+      "StartLine complements registration, timing, and event operations rather than replacing them."
+    ]
+  },
+  "seo": {
+    "meta_title": "Ocean City Running Festival \u2014 Corrigan Sports Enterprises",
+    "meta_description": "Race details for Ocean City Running Festival, organized into a clear runner-facing page with official registration links."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "cf6d1ab4786f4a2da1f17d8c9e0735bb",
+    "route": "/private/mockups/cf6d1ab4786f4a2da1f17d8c9e0735bb/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+    "source_platform": "official_site",
+    "source_race_id": "140586",
+    "registration_race_id": "140586",
+    "generated_from": "manual Lane D operator portfolio mockup workflow",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "D",
+    "prospect_type": "race_management_company",
+    "email_template_key": "operator_portfolio_v1",
+    "operator_company": "Corrigan Sports Enterprises",
+    "operator_contact_email": "customerservice@corrigansports.com",
+    "operator_prospect_id": "54cbb424-be80-4b95-9ab3-f91b3bb52406",
+    "source_urls": [
+      "https://www.corrigansports.com/event/ocean-city-marathon/",
+      "https://www.ocmdrunfest.com/Race/Register/?raceId=140586",
+      "https://www.corrigansports.com/",
+      "https://www.corrigansports.com/services/event-management/",
+      "https://www.corrigansports.com/event/ocean-city-marathon/"
+    ],
+    "captured_at": "2026-07-28T21:24:23Z",
+    "provenance": {
+      "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+      "source_confirmed_sections": [
+        "runner_decision_checklist"
+      ],
+      "source_confirmed_distance_ids": [
+        "marathon",
+        "half-marathon",
+        "8k",
+        "5k"
+      ],
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+          "path": "identity.name"
+        },
+        {
+          "field": "event.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+          "path": "event.date"
+        },
+        {
+          "field": "event.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+          "path": "event.location"
+        },
+        {
+          "field": "distances",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+          "path": "distances"
+        },
+        {
+          "field": "registration.url",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.ocmdrunfest.com/Race/Register/?raceId=140586",
+          "path": "registration.url"
+        },
+        {
+          "field": "identity.hero_image",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+          "path": "identity.hero_image"
+        },
+        {
+          "field": "organization.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.corrigansports.com/services/event-management/",
+          "path": "organization.name"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.ocmdrunfest.com/Race/MD/OceanCity/OceanCityRunningFestival",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+          "path": "runner_decision_checklist.items.location"
+        },
+        {
+          "field": "runner_decision_checklist.items.series",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.corrigansports.com/event/ocean-city-marathon/",
+          "path": "runner_decision_checklist.items.series"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "This Lane D private mockup uses one representative event to demonstrate a reusable operator portfolio website system. Outreach is not approved or sent.",
+      "items": [
+        "The Corrigan listing uses Ocean City Marathon while the event site brands the event as Ocean City Running Festival.",
+        "Detailed source-backed start times were not included in this first-pass mockup."
+      ]
+    }
+  }
+}
