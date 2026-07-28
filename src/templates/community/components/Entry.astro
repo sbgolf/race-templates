@@ -2,7 +2,11 @@
 import { registerClickAttributes } from "../../../shared/analytics/register-click.mjs";
 const { race } = Astro.props;
 const registerUrl = race.registration?.url || '#';
-const distanceMeta = (distance) => [distance?.distance, distance?.start_time, distance?.age_range].filter(Boolean).join(' · ');
+const distanceMeta = (distance) => {
+  const values = [distance?.start_time, distance?.age_range].filter(Boolean);
+  if (distance?.distance && distance.distance !== distance.name) values.unshift(distance.distance);
+  return values.join(' · ');
+};
 const hasDistancePricing = (race.distances || []).some((distance) => distance?.price);
 const priceNote = !hasDistancePricing && race.registration?.price_note ? race.registration.price_note : '';
 ---
