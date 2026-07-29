@@ -1,0 +1,229 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "20th Annual Fleet Feet Run For Your Heart 5K/10K and Kids Dash",
+    "slug": "fleet-feet-run-for-your-heart",
+    "tagline": "20th Annual Fleet Feet Run For Your Heart 5K/10K and Kids Dash is a community race in Stuart, FL.",
+    "hero_image": {
+      "src": "/mockups/89c5d2c2eb396bad977a27e473161764/assets/fleet-feet-run-for-your-heart-banner.png",
+      "alt": "Fleet Feet Run For Your Heart official 2027 race banner showing runners at the start line",
+      "caption": "Official RunSignup 2027 banner artwork for Fleet Feet Run For Your Heart.",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-26xxx/26154/raceBanner-k42xKBX9-bQd2sJ.png",
+      "source_label": "RunSignup 2027 race banner image",
+      "presentation": "photo"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2027-02-13",
+    "location": "Stuart, FL",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart"
+      }
+    },
+    {
+      "id": "10k",
+      "name": "10K",
+      "distance": "10K",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart"
+      }
+    },
+    {
+      "id": "virtual-run-for-your-heart-5k-10k",
+      "name": "VIRTUAL - Run For Your Heart 5K/10K",
+      "distance": "VIRTUAL - Run for Your Heart 5K/10K",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart"
+      }
+    },
+    {
+      "id": "20-yards",
+      "name": "20 Yards",
+      "distance": "20 Yards",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "This private mockup only uses details already visible in the approved source data.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2027-02-13",
+        "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "5K, 10K, VIRTUAL - Run for Your Heart 5K/10K, 20 Yards",
+        "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+        "applies_to_distance_ids": [
+          "5k",
+          "10k",
+          "virtual-run-for-your-heart-5k-10k",
+          "20-yards"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Stuart, FL",
+        "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "20th Annual Fleet Feet Run For Your Heart 5K/10K and Kids Dash \u2014 2027-02-13",
+    "meta_description": "Race details for 20th Annual Fleet Feet Run For Your Heart 5K/10K and Kids Dash in Stuart, FL."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "89c5d2c2eb396bad977a27e473161764",
+    "route": "/private/mockups/89c5d2c2eb396bad977a27e473161764/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+    "source_platform": "runsignup",
+    "source_race_id": "26154",
+    "registration_race_id": "26154",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 81,
+    "qualification_reason": "Some local/community language. Multi-distance or family participation format. Participation-oriented copy fits Community template. Appears registration-platform-first, a strong StartLine opportunity. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Direct race contact email found. Contact form path found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+          "path": "identity.name"
+        },
+        {
+          "field": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+          "path": "event.date"
+        },
+        {
+          "field": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+          "path": "event.location"
+        },
+        {
+          "field": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+          "path": "distances"
+        },
+        {
+          "field": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+          "path": "registration.url"
+        },
+        {
+          "field": "identity.hero_image",
+          "source": "RunSignup 2027 race banner image",
+          "source_url": "https://d368g9lw5ileu7.cloudfront.net/races/races-26xxx/26154/raceBanner-k42xKBX9-bQd2sJ.png",
+          "confidence": "high",
+          "path": "identity.hero_image"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "path": "runner_decision_checklist.items.date",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+          "confidence": "high"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "path": "runner_decision_checklist.items.distance",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+          "confidence": "medium"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "path": "runner_decision_checklist.items.location",
+          "source": "prospect discovery output",
+          "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/FL/Stuart/FleetFeetRunForYourHeart"
+    },
+    "uncertainty": {
+      "items": [
+        "Customer outreach remains unapproved and should not be sent until Steve approves a send gate.",
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Generated from public RunSignup prospect facts for owner review; deeper schedule, sponsor, pricing, and pre-send details should be rechecked before customer outreach."
+    },
+    "captured_at": "2026-07-29T00:00:00Z",
+    "assets": [
+      {
+        "type": "image",
+        "role": "hero",
+        "src": "/mockups/89c5d2c2eb396bad977a27e473161764/assets/fleet-feet-run-for-your-heart-banner.png",
+        "alt": "Fleet Feet Run For Your Heart official 2027 race banner showing runners at the start line",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-26xxx/26154/raceBanner-k42xKBX9-bQd2sJ.png"
+      }
+    ]
+  }
+}
