@@ -29,6 +29,14 @@ const aboutLinks = [
   hasSponsors ? { href: '#sponsors', label: 'Sponsors' } : null,
   hasFaq ? { href: '#faq', label: 'FAQ' } : null
 ].filter(Boolean);
+const operatorCompany = race.private_mockup?.operator_company;
+const isOperatorPortfolioMockup = race.private_mockup?.campaign_lane === 'D' || race.private_mockup?.email_template_key === 'operator_portfolio_v1';
+const relationshipAttribution = race.footer?.relationship_attribution
+  || (isOperatorPortfolioMockup && operatorCompany
+    ? ` · A representative event page for ${operatorCompany}`
+    : race.organization?.name
+      ? ` · A program of ${race.organization.name}`
+      : '');
 ---
 
 <footer>
@@ -49,7 +57,7 @@ const aboutLinks = [
     <div><div class="foot-heading">Race links</div><ul><li><a href={registerUrl} target="_blank" rel="noopener" {...registerAttrs}>{registerLabel}</a></li>{contactUrl ? <li><a href={contactUrl} target="_blank" rel="noopener">{contactLabel}</a></li> : null}</ul></div>
   </div>
   <div class="foot-bottom">
-    <span>© {year} {race.identity?.name}{race.organization?.name ? ` · A program of ${race.organization.name}` : ''}</span>
+    <span>© {year} {race.identity?.name}{relationshipAttribution}</span>
     {!isPrivateMockup ? <span>Powered by StartLine Sites</span> : null}
   </div>
 </footer>
