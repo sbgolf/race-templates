@@ -10,7 +10,9 @@
       "caption": "Official RunSignup banner artwork for Breaking Free 5K and Fun Run COLOR RUN.",
       "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-201xxx/201285/raceBanner-xrvSKQla-bPSd5c.png",
       "source_label": "RunSignup race banner image",
-      "presentation": "artwork"
+      "presentation": "banner",
+      "fit": "contain",
+      "aspect_ratio": "3 / 1"
     },
     "colors": {
       "primary": "#294735",
