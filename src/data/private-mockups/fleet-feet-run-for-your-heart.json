@@ -10,7 +10,9 @@
       "caption": "Official RunSignup 2027 banner artwork for Fleet Feet Run For Your Heart.",
       "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-26xxx/26154/raceBanner-k42xKBX9-bQd2sJ.png",
       "source_label": "RunSignup 2027 race banner image",
-      "presentation": "photo"
+      "presentation": "banner",
+      "fit": "contain",
+      "aspect_ratio": "3 / 1"
     },
     "colors": {
       "primary": "#294735",
