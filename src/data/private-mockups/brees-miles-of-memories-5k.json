@@ -1,0 +1,416 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "5th Annual Bree’s Miles of Memories 5K & Fun Run",
+    "slug": "brees-miles-of-memories-5k",
+    "short_name": "Bree’s Miles of Memories",
+    "tagline": "A Seuss-themed Canton race celebrating Bree’s legacy and organ-donation awareness.",
+    "colors": {
+      "primary": "#7c3aed",
+      "secondary": "#0f766e",
+      "accent": "#f59e0b",
+      "ink": "#1f2937"
+    },
+    "hero_image": {
+      "src": "/mockups/68b3f76f907bedb271e530ab73f823d6/hero.png",
+      "alt": "Bree’s Miles of Memories official race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-146xxx/146351/raceBanner-s0ERnpN6-bNtPw5.png",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1"
+    }
+  },
+  "event": {
+    "date": "2027-03-06",
+    "location": "Etowah River Park, Canton, GA",
+    "timezone": "America/New_York",
+    "venue": "Etowah River Park",
+    "address": "600 Brown Industrial Parkway, Canton, GA 30114"
+  },
+  "organization": {
+    "name": "Bree’s Legacy",
+    "url": "https://www.thebreannaleigh.com/breesmilesofmemories"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "9:15 AM EST",
+      "highlights": [
+        "Official Peachtree Road Race qualifying event.",
+        "Listed at $25 when captured"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup public race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+      }
+    },
+    {
+      "id": "1k-fun-run",
+      "name": "1K Fun Run",
+      "distance": "1K",
+      "start_time": "9:30 AM EST",
+      "highlights": [
+        "Family-friendly Fun Run following the 5K.",
+        "Listed at $20 when captured"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup public race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+      }
+    },
+    {
+      "id": "virtual-5k",
+      "name": "Virtual 5K",
+      "distance": "Virtual 5K",
+      "highlights": [
+        "Run or walk 3.1 miles wherever you choose and submit your time through RunSignup.",
+        "Listed at $30 when captured"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup public race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register on RunSignup for Bree’s Miles of Memories.",
+    "price_note": "5K $25; 1K Fun Run $20; Virtual 5K $30 when captured; registration opens August 1, 2026"
+  },
+  "startline_value": {
+    "headline": "A clearer race page for runners, families, teams, and supporters.",
+    "intro": "This private concept organizes the public Bree’s Miles of Memories details into a mobile-first path from event overview to registration, while keeping RunSignup as the official registration source.",
+    "improved": [
+      "Places date, venue, distance options, pricing note, and start times near the registration decision.",
+      "Highlights the cause/community story and participation options from the public race page.",
+      "Keeps runner questions scannable before sending visitors to official registration."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees — just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "Bree’s Legacy",
+    "title": "A joyful Canton race carrying Bree’s memory forward",
+    "paragraphs": [
+      "Bree’s Miles of Memories 5K is scheduled for Saturday, March 6, 2027 at Etowah River Park in Canton, Georgia.",
+      "The Dr. Seuss-themed race celebrates Breanna “Bree” Leigh Chadwick and supports Bree’s Legacy through organ-donation awareness, children, families, teachers, and community outreach."
+    ],
+    "image": {
+      "src": "/mockups/68b3f76f907bedb271e530ab73f823d6/story.png",
+      "alt": "Bree’s Miles of Memories official race/source graphic",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race146351-logo-0.bKoHon.png"
+    }
+  },
+  "schedule": [
+    {
+      "day": "Saturday, March 6, 2027",
+      "name": "5K start",
+      "time": "9:15 AM",
+      "location": "Etowah River Park",
+      "applies_to_distances": [
+        "5k"
+      ],
+      "provenance": {
+        "source": "RunSignup public race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+      }
+    },
+    {
+      "day": "Saturday, March 6, 2027",
+      "name": "1K Fun Run start",
+      "time": "9:30 AM",
+      "location": "Etowah River Park",
+      "applies_to_distances": [
+        "1k-fun-run"
+      ],
+      "provenance": {
+        "source": "RunSignup public race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where does the race take place?",
+      "answer": "Race day takes place at 600 Brown Industrial Parkway, Canton, GA 30114.",
+      "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+    },
+    {
+      "question": "What event options are listed?",
+      "answer": "The public race page lists 5K, 1K Fun Run, Virtual 5K.",
+      "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+    },
+    {
+      "question": "Where should runners register?",
+      "answer": "Registration remains on the official RunSignup race page.",
+      "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+    }
+  ],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials — date, venue, event options, price note, and start times — before continuing to official registration.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, March 6, 2027",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
+        "source_path": "event.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "5K, 1K Fun Run, Virtual 5K",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
+        "applies_to_distance_ids": [
+          "5k",
+          "1k-fun-run",
+          "virtual-5k"
+        ],
+        "source_path": "distances"
+      },
+      {
+        "id": "location",
+        "label": "Race day location",
+        "value": "600 Brown Industrial Parkway, Canton, GA 30114",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
+        "source_path": "event.address"
+      },
+      {
+        "id": "start-time",
+        "label": "Start times",
+        "value": "5K at 9:15 AM EST; 1K Fun Run at 9:30 AM EST",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
+        "applies_to_distance_ids": [
+          "5k",
+          "1k-fun-run"
+        ],
+        "source_path": "distances"
+      },
+      {
+        "id": "price",
+        "label": "Registration note",
+        "value": "5K $25; 1K Fun Run $20; Virtual 5K $30 when captured; registration opens August 1, 2026",
+        "detail": "Registration prices can change on RunSignup; this concept keeps the official registration link as the source of truth.",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
+        "source_path": "registration.price_note"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Bree’s Miles of Memories — March 6, 2027",
+    "meta_description": "Race details for Bree’s Miles of Memories at Etowah River Park, Canton, GA."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
+    "source_platform": "runsignup",
+    "source_race_id": "146351",
+    "registration_race_id": "146351",
+    "captured_at": "2026-07-30T22:59:49.426Z",
+    "access_token": "68b3f76f907bedb271e530ab73f823d6",
+    "race_slug": "brees-miles-of-memories-5k",
+    "route": "/private/mockups/68b3f76f907bedb271e530ab73f823d6/",
+    "template": "community",
+    "generated_from": "source-backed manual private mockup config authored after owner generation approval",
+    "owner_approved_for_generation": true,
+    "prospect_id": "aa1da2bb-3a6d-43cb-8b4d-81df546ff1d8",
+    "prospect_score": null,
+    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and official race/source assets.",
+    "source_urls": [
+      "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
+      "https://www.thebreannaleigh.com/breesmilesofmemories",
+      "https://d368g9lw5ileu7.cloudfront.net/races/races-146xxx/146351/raceBanner-s0ERnpN6-bNtPw5.png",
+      "https://d368g9lw5ileu7.cloudfront.net/races/race146351-logo-0.bKoHon.png"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "info@thebreannaleigh.com",
+        "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
+        "confidence": "high",
+        "recommended": true
+      }
+    ],
+    "assets": [
+      {
+        "type": "image",
+        "role": "hero",
+        "src": "/mockups/68b3f76f907bedb271e530ab73f823d6/hero.png",
+        "alt": "Bree’s Miles of Memories official race artwork",
+        "caption": "Official race/source artwork used for private concept direction.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-146xxx/146351/raceBanner-s0ERnpN6-bNtPw5.png"
+      },
+      {
+        "type": "image",
+        "role": "story",
+        "src": "/mockups/68b3f76f907bedb271e530ab73f823d6/story.png",
+        "alt": "Bree’s Miles of Memories official race/source graphic",
+        "caption": "Official race/source graphic from the public race sources.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race146351-logo-0.bKoHon.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
+      "captured_at": "2026-07-30T22:59:49.426Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "schedule",
+        "story",
+        "faqs"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "1k-fun-run",
+        "virtual-5k"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "event.venue",
+          "field": "event.venue",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "event.address",
+          "field": "event.address",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "registration.price_note",
+          "field": "registration.price_note",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "field": "runner_decision_checklist.items.start-time",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "faqs",
+          "field": "faqs",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        },
+        {
+          "path": "organization.name",
+          "field": "organization.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Public race facts were checked against official race sources; customer outreach remains unapproved and was not performed.",
+      "items": [
+        "Customer outreach remains unapproved and should not be sent until Steve approves a send gate.",
+        "Registration pricing can change on RunSignup; the price note records the public value visible at capture time."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on public official race sources. No customer outreach was sent."
+  }
+}
