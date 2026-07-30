@@ -9,13 +9,15 @@ const distanceMeta = (distance) => {
 };
 const hasDistancePricing = (race.distances || []).some((distance) => distance?.price);
 const priceNote = !hasDistancePricing && race.registration?.price_note ? race.registration.price_note : '';
+const entryKicker = race.registration?.kicker || 'Register';
+const entryHeadline = race.registration?.headline;
 ---
 
 <section class="entry" id="entry">
   <div class="wrap">
     <div class="reveal">
-      <div class="kicker">Register</div>
-      <h2 class="sec-title">{(race.distances || []).length === 1 ? <>Review the <em>{race.distances?.[0]?.name || 'race'}</em>.</> : <>Pick a distance, <em>save your spot</em>.</>}</h2>
+      <div class="kicker">{entryKicker}</div>
+      <h2 class="sec-title">{entryHeadline || ((race.distances || []).length === 1 ? <>Review the <em>{race.distances?.[0]?.name || 'race'}</em>.</> : <>Pick a distance, <em>save your spot</em>.</>)}</h2>
       <p class="lead">{race.registration?.intro || `${race.registration?.opens ? `Registration opens ${race.registration.opens}. ` : ''}${(race.distances || []).length === 1 ? 'Use the official race link for registration details and current availability.' : 'Choose your distance and complete registration through the official race platform.'}`}</p>
       {priceNote ? <p class="entry-price-note">{priceNote}</p> : null}
     </div>
