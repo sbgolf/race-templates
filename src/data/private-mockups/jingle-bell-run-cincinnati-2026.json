@@ -13,7 +13,7 @@
     },
     "hero_image": {
       "src": "/mockups/7e091912c9b81173d5f5d8f0053eca2f/hero.png",
-      "alt": "Jingle Bell Run Cincinnati official race artwork",
+      "alt": "Jingle Bell Run Cincinnati race artwork",
       "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-143/143420/websiteBanner-v3gGxRh9-bQqV2N.png",
       "fit": "contain",
       "presentation": "banner",
@@ -40,11 +40,11 @@
       "start_time": "8:00 AM EST",
       "highlights": [
         "For runners who want the full race-day experience and official results.",
-        "Listed at $40 when captured"
+        "$40 registration option"
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
       }
@@ -56,11 +56,11 @@
       "start_time": "8:00 AM EST",
       "highlights": [
         "For runners who want the full race-day experience.",
-        "Listed at $35 when captured"
+        "$35 registration option"
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
       }
@@ -71,11 +71,11 @@
       "distance": "Virtual",
       "highlights": [
         "Choose this option to receive a shirt and fundraise for a cure.",
-        "Listed at $45 when captured"
+        "$45 registration option"
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
       }
@@ -86,14 +86,14 @@
     "platform": "runsignup",
     "cta_label": "Register on RunSignup",
     "intro": "Register on RunSignup for Jingle Bell Run Cincinnati.",
-    "price_note": "5K Timed $40; 5K Untimed $35; Virtual Jingler $45 when captured"
+    "price_note": "5K Timed $40; 5K Untimed $35; Virtual Jingler $45; confirm latest prices on RunSignup"
   },
   "startline_value": {
     "headline": "A clearer race page for runners, families, teams, and supporters.",
     "intro": "This private concept organizes the public Jingle Bell Run Cincinnati details into a mobile-first path from event overview to registration, while keeping RunSignup as the official registration source.",
     "improved": [
       "Places date, venue, distance options, pricing note, and start times near the registration decision.",
-      "Highlights the cause/community story and participation options from the public race page.",
+      "Highlights the cause/community story and participation options from the race page.",
       "Keeps runner questions scannable before sending visitors to official registration."
     ],
     "paid_includes": [
@@ -112,7 +112,7 @@
     ],
     "image": {
       "src": "/mockups/7e091912c9b81173d5f5d8f0053eca2f/story.png",
-      "alt": "Jingle Bell Run Cincinnati official race/source graphic",
+      "alt": "Jingle Bell Run Cincinnati race graphic",
       "source": "https://d368g9lw5ileu7.cloudfront.net/races/race136851-logo-0.bJlCUb.png"
     }
   },
@@ -126,7 +126,7 @@
         "5k-timed"
       ],
       "provenance": {
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
       }
@@ -140,7 +140,7 @@
         "5k-untimed"
       ],
       "provenance": {
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
       }
@@ -154,7 +154,7 @@
     },
     {
       "question": "What event options are listed?",
-      "answer": "The public race page lists 5K Timed, 5K Untimed, Virtual Jingler.",
+      "answer": "Race options include 5K Timed, 5K Untimed, Virtual Jingler.",
       "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
     },
     {
@@ -207,7 +207,7 @@
       {
         "id": "price",
         "label": "Registration note",
-        "value": "5K Timed $40; 5K Untimed $35; Virtual Jingler $45 when captured",
+        "value": "5K Timed $40; 5K Untimed $35; Virtual Jingler $45; confirm latest prices on RunSignup",
         "detail": "Registration prices can change on RunSignup; this concept keeps the official registration link as the source of truth.",
         "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
         "source_path": "registration.price_note"
@@ -237,7 +237,7 @@
     "owner_approved_for_generation": true,
     "prospect_id": "9ac65955-1e5c-4f60-99bc-9e501cd3fa75",
     "prospect_score": null,
-    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and official race/source assets.",
+    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and race materials.",
     "source_urls": [
       "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
       "https://www.arthritis.org/",
@@ -258,16 +258,16 @@
         "type": "image",
         "role": "hero",
         "src": "/mockups/7e091912c9b81173d5f5d8f0053eca2f/hero.png",
-        "alt": "Jingle Bell Run Cincinnati official race artwork",
-        "caption": "Official race/source artwork used for private concept direction.",
+        "alt": "Jingle Bell Run Cincinnati race artwork",
+        "caption": "Race artwork highlighting the event brand.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-143/143420/websiteBanner-v3gGxRh9-bQqV2N.png"
       },
       {
         "type": "image",
         "role": "story",
         "src": "/mockups/7e091912c9b81173d5f5d8f0053eca2f/story.png",
-        "alt": "Jingle Bell Run Cincinnati official race/source graphic",
-        "caption": "Official race/source graphic from the public race sources.",
+        "alt": "Jingle Bell Run Cincinnati race graphic",
+        "caption": "Race graphic from race materials.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/races/race136851-logo-0.bJlCUb.png"
       }
     ],
@@ -411,6 +411,6 @@
         "Registration pricing can change on RunSignup; the price note records the public value visible at capture time."
       ]
     },
-    "notes": "Generated only from source-backed facts found on public official race sources. No customer outreach was sent."
+    "notes": "Generated only from source-backed facts found on race materials. No customer outreach was sent."
   }
 }

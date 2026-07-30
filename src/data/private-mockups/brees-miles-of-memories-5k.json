@@ -13,7 +13,7 @@
     },
     "hero_image": {
       "src": "/mockups/68b3f76f907bedb271e530ab73f823d6/hero.png",
-      "alt": "Bree’s Miles of Memories official race artwork",
+      "alt": "Bree’s Miles of Memories race artwork",
       "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-146xxx/146351/raceBanner-s0ERnpN6-bNtPw5.png",
       "fit": "contain",
       "presentation": "banner",
@@ -40,11 +40,11 @@
       "start_time": "9:15 AM EST",
       "highlights": [
         "Official Peachtree Road Race qualifying event.",
-        "Listed at $25 when captured"
+        "$25 registration option"
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
       }
@@ -60,7 +60,7 @@
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
       }
@@ -71,11 +71,11 @@
       "distance": "Virtual 5K",
       "highlights": [
         "Run or walk 3.1 miles wherever you choose and submit your time through RunSignup.",
-        "Listed at $30 when captured"
+        "$30 registration option"
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
       }
@@ -93,7 +93,7 @@
     "intro": "This private concept organizes the public Bree’s Miles of Memories details into a mobile-first path from event overview to registration, while keeping RunSignup as the official registration source.",
     "improved": [
       "Places date, venue, distance options, pricing note, and start times near the registration decision.",
-      "Highlights the cause/community story and participation options from the public race page.",
+      "Highlights the cause/community story and participation options from the race page.",
       "Keeps runner questions scannable before sending visitors to official registration."
     ],
     "paid_includes": [
@@ -112,7 +112,7 @@
     ],
     "image": {
       "src": "/mockups/68b3f76f907bedb271e530ab73f823d6/story.png",
-      "alt": "Bree’s Miles of Memories official race/source graphic",
+      "alt": "Bree’s Miles of Memories race graphic",
       "source": "https://d368g9lw5ileu7.cloudfront.net/races/race146351-logo-0.bKoHon.png"
     }
   },
@@ -126,7 +126,7 @@
         "5k"
       ],
       "provenance": {
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
       }
@@ -140,7 +140,7 @@
         "1k-fun-run"
       ],
       "provenance": {
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
       }
@@ -154,7 +154,7 @@
     },
     {
       "question": "What event options are listed?",
-      "answer": "The public race page lists 5K, 1K Fun Run, Virtual 5K.",
+      "answer": "Race options include 5K, 1K Fun Run, Virtual 5K.",
       "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun"
     },
     {
@@ -237,7 +237,7 @@
     "owner_approved_for_generation": true,
     "prospect_id": "aa1da2bb-3a6d-43cb-8b4d-81df546ff1d8",
     "prospect_score": null,
-    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and official race/source assets.",
+    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and race materials.",
     "source_urls": [
       "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
       "https://www.thebreannaleigh.com/breesmilesofmemories",
@@ -258,16 +258,16 @@
         "type": "image",
         "role": "hero",
         "src": "/mockups/68b3f76f907bedb271e530ab73f823d6/hero.png",
-        "alt": "Bree’s Miles of Memories official race artwork",
-        "caption": "Official race/source artwork used for private concept direction.",
+        "alt": "Bree’s Miles of Memories race artwork",
+        "caption": "Race artwork highlighting the event brand.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-146xxx/146351/raceBanner-s0ERnpN6-bNtPw5.png"
       },
       {
         "type": "image",
         "role": "story",
         "src": "/mockups/68b3f76f907bedb271e530ab73f823d6/story.png",
-        "alt": "Bree’s Miles of Memories official race/source graphic",
-        "caption": "Official race/source graphic from the public race sources.",
+        "alt": "Bree’s Miles of Memories race graphic",
+        "caption": "Race graphic from race materials.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/races/race146351-logo-0.bKoHon.png"
       }
     ],
@@ -411,6 +411,6 @@
         "Registration pricing can change on RunSignup; the price note records the public value visible at capture time."
       ]
     },
-    "notes": "Generated only from source-backed facts found on public official race sources. No customer outreach was sent."
+    "notes": "Generated only from source-backed facts found on race materials. No customer outreach was sent."
   }
 }

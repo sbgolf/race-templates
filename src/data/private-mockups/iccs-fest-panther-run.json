@@ -13,7 +13,7 @@
     },
     "hero_image": {
       "src": "/mockups/0481013f2250f1c3ed7902a1a3e052f6/hero.jpg",
-      "alt": "ICCS Panther Run official race artwork",
+      "alt": "ICCS Panther Run race artwork",
       "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-121xxx/121533/raceBanner-at8ceSB6-bNj9Ro.jpg",
       "fit": "contain",
       "presentation": "banner",
@@ -44,7 +44,7 @@
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
       }
@@ -56,11 +56,11 @@
       "start_time": "7:30 AM CDT",
       "highlights": [
         "Out-and-back 5K route with a Shell Beach Drive section.",
-        "Listed at $40 when captured"
+        "$40 registration option"
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
       }
@@ -72,11 +72,11 @@
       "start_time": "10:45 AM CDT",
       "highlights": [
         "A one-mile color run connected to ICCS Fest.",
-        "Listed at $30 when captured"
+        "$30 registration option"
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
       }
@@ -94,7 +94,7 @@
     "intro": "This private concept organizes the public ICCS Panther Run details into a mobile-first path from event overview to registration, while keeping RunSignup as the official registration source.",
     "improved": [
       "Places date, venue, distance options, pricing note, and start times near the registration decision.",
-      "Highlights the cause/community story and participation options from the public race page.",
+      "Highlights the cause/community story and participation options from the race page.",
       "Keeps runner questions scannable before sending visitors to official registration."
     ],
     "paid_includes": [
@@ -113,7 +113,7 @@
     ],
     "image": {
       "src": "/mockups/0481013f2250f1c3ed7902a1a3e052f6/story.png",
-      "alt": "ICCS Panther Run official race/source graphic",
+      "alt": "ICCS Panther Run race graphic",
       "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-128109-1733251996.5638-0.bNt1oC.png"
     }
   },
@@ -127,7 +127,7 @@
         "10k"
       ],
       "provenance": {
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
       }
@@ -141,7 +141,7 @@
         "5k"
       ],
       "provenance": {
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
       }
@@ -155,7 +155,7 @@
         "one-mile-color-run"
       ],
       "provenance": {
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
       }
@@ -169,7 +169,7 @@
     },
     {
       "question": "What event options are listed?",
-      "answer": "The public race page lists ICCS Panther 10K, ICCS Panther 5K, ICCS Panther 1 Mile Color Run.",
+      "answer": "Race options include ICCS Panther 10K, ICCS Panther 5K, ICCS Panther 1 Mile Color Run.",
       "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
     },
     {
@@ -253,7 +253,7 @@
     "owner_approved_for_generation": true,
     "prospect_id": "5cd09cf9-8220-4e71-9ffb-6591d796351f",
     "prospect_score": null,
-    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and official race/source assets.",
+    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and race materials.",
     "source_urls": [
       "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
       "https://www.iccschool.org/",
@@ -274,16 +274,16 @@
         "type": "image",
         "role": "hero",
         "src": "/mockups/0481013f2250f1c3ed7902a1a3e052f6/hero.jpg",
-        "alt": "ICCS Panther Run official race artwork",
-        "caption": "Official race/source artwork used for private concept direction.",
+        "alt": "ICCS Panther Run race artwork",
+        "caption": "Race artwork highlighting the event brand.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-121xxx/121533/raceBanner-at8ceSB6-bNj9Ro.jpg"
       },
       {
         "type": "image",
         "role": "story",
         "src": "/mockups/0481013f2250f1c3ed7902a1a3e052f6/story.png",
-        "alt": "ICCS Panther Run official race/source graphic",
-        "caption": "Official race/source graphic from the public race sources.",
+        "alt": "ICCS Panther Run race graphic",
+        "caption": "Race graphic from race materials.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-128109-1733251996.5638-0.bNt1oC.png"
       }
     ],
@@ -427,6 +427,6 @@
         "Registration pricing can change on RunSignup; the price note records the public value visible at capture time."
       ]
     },
-    "notes": "Generated only from source-backed facts found on public official race sources. No customer outreach was sent."
+    "notes": "Generated only from source-backed facts found on race materials. No customer outreach was sent."
   }
 }

@@ -13,7 +13,7 @@
     },
     "hero_image": {
       "src": "/mockups/08cb4f25f52802b909107880fcfd1d2a/hero.png",
-      "alt": "Jingle Bell Run Orlando official race artwork",
+      "alt": "Jingle Bell Run Orlando race artwork",
       "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-241/241484/websiteBanner-bmmnXQFg-bQqV3s.png",
       "fit": "contain",
       "presentation": "banner",
@@ -40,11 +40,11 @@
       "start_time": "8:00 AM EST",
       "highlights": [
         "For runners who want the full race-day experience.",
-        "Listed at $35 when captured"
+        "$35 registration option"
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/FL/Orlando/JingleBellRunOrlando"
       }
@@ -56,11 +56,11 @@
       "start_time": "8:00 AM EST",
       "highlights": [
         "For runners and walkers who want a shorter Jingle Bell distance.",
-        "Listed at $35 when captured"
+        "$35 registration option"
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/FL/Orlando/JingleBellRunOrlando"
       }
@@ -71,11 +71,11 @@
       "distance": "Virtual",
       "highlights": [
         "Choose this option to receive a shirt and fundraise for a cure.",
-        "Listed at $45 when captured"
+        "$45 registration option"
       ],
       "provenance": {
         "verified": true,
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/FL/Orlando/JingleBellRunOrlando"
       }
@@ -93,7 +93,7 @@
     "intro": "This private concept organizes the public Jingle Bell Run Orlando details into a mobile-first path from event overview to registration, while keeping RunSignup as the official registration source.",
     "improved": [
       "Places date, venue, distance options, pricing note, and start times near the registration decision.",
-      "Highlights the cause/community story and participation options from the public race page.",
+      "Highlights the cause/community story and participation options from the race page.",
       "Keeps runner questions scannable before sending visitors to official registration."
     ],
     "paid_includes": [
@@ -108,11 +108,11 @@
     "title": "A Baldwin Park holiday race experience for runners, walkers, and teams",
     "paragraphs": [
       "The 2026 Jingle Bell Run - Orlando, FL is scheduled for Saturday, December 12, 2026 at Baldwin Park in Orlando.",
-      "The public race page positions the event as a festive celebration supporting the Arthritis Foundation and the millions of adults and children living with arthritis."
+      "The race page positions the event as a festive celebration supporting the Arthritis Foundation and the millions of adults and children living with arthritis."
     ],
     "image": {
       "src": "/mockups/08cb4f25f52802b909107880fcfd1d2a/story.png",
-      "alt": "Jingle Bell Run Orlando official race/source graphic",
+      "alt": "Jingle Bell Run Orlando race graphic",
       "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-241484-1782774630.0146-0.bQqVTM.png"
     }
   },
@@ -126,7 +126,7 @@
         "5k-untimed"
       ],
       "provenance": {
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/FL/Orlando/JingleBellRunOrlando"
       }
@@ -140,7 +140,7 @@
         "one-mile"
       ],
       "provenance": {
-        "source": "RunSignup public race page Events section",
+        "source": "RunSignup race page Events section",
         "confidence": "high",
         "source_url": "https://runsignup.com/Race/FL/Orlando/JingleBellRunOrlando"
       }
@@ -154,7 +154,7 @@
     },
     {
       "question": "What event options are listed?",
-      "answer": "The public race page lists 5K Untimed, 1 Mile, Virtual Jingler.",
+      "answer": "Race options include 5K Untimed, 1 Mile, Virtual Jingler.",
       "source_url": "https://runsignup.com/Race/FL/Orlando/JingleBellRunOrlando"
     },
     {
@@ -237,7 +237,7 @@
     "owner_approved_for_generation": true,
     "prospect_id": "18c79d60-5c2f-4e2c-82e9-cb4a1c970e42",
     "prospect_score": null,
-    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and official race/source assets.",
+    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and race materials.",
     "source_urls": [
       "https://runsignup.com/Race/FL/Orlando/JingleBellRunOrlando",
       "https://www.arthritis.org/",
@@ -258,16 +258,16 @@
         "type": "image",
         "role": "hero",
         "src": "/mockups/08cb4f25f52802b909107880fcfd1d2a/hero.png",
-        "alt": "Jingle Bell Run Orlando official race artwork",
-        "caption": "Official race/source artwork used for private concept direction.",
+        "alt": "Jingle Bell Run Orlando race artwork",
+        "caption": "Race artwork highlighting the event brand.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-241/241484/websiteBanner-bmmnXQFg-bQqV3s.png"
       },
       {
         "type": "image",
         "role": "story",
         "src": "/mockups/08cb4f25f52802b909107880fcfd1d2a/story.png",
-        "alt": "Jingle Bell Run Orlando official race/source graphic",
-        "caption": "Official race/source graphic from the public race sources.",
+        "alt": "Jingle Bell Run Orlando race graphic",
+        "caption": "Race graphic from race materials.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-241484-1782774630.0146-0.bQqVTM.png"
       }
     ],
@@ -411,6 +411,6 @@
         "Registration pricing can change on RunSignup; the price note records the public value visible at capture time."
       ]
     },
-    "notes": "Generated only from source-backed facts found on public official race sources. No customer outreach was sent."
+    "notes": "Generated only from source-backed facts found on race materials. No customer outreach was sent."
   }
 }
