@@ -1,0 +1,282 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Doral Turkey Trot",
+    "slug": "racetime-doral-turkey-trot",
+    "tagline": "Thanksgiving 5K in Doral.",
+    "colors": {
+      "primary": "#D45528",
+      "secondary": "#123D5A",
+      "accent": "#F2B84B",
+      "ink": "#241A1A"
+    },
+    "short_name": "Doral Turkey Trot",
+    "hero_image": {
+      "src": "/mockups/472792ca90e1f5ff88300d92e3c43ff3/doral-turkey-trot-banner.png",
+      "alt": "Doral Turkey Trot official event artwork",
+      "source": "https://racetime.me/races/doral-turkey-trot/",
+      "fit": "contain",
+      "presentation": "banner"
+    }
+  },
+  "organization": {
+    "name": "RaceTime",
+    "url": "https://racetime.me/",
+    "role_label": "RaceTime"
+  },
+  "event": {
+    "date": "2026-11-26",
+    "date_label": "Thursday, November 26, 2026",
+    "time": "07:30",
+    "location": "CityPlace Doral, Doral, FL",
+    "timezone": "America/New_York",
+    "venue": "CityPlace Doral",
+    "address": "8300 NW 36th Street, Doral, FL 33166"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "7:30 AM",
+      "profile": "Thanksgiving morning 5K for runners, walkers, strollers, and families at CityPlace Doral.",
+      "highlights": [
+        "Family-friendly Thanksgiving race morning in Doral",
+        "Walkers, strollers, and all fitness levels are welcome",
+        "Top overall and age-group awards are part of the 5K"
+      ],
+      "provenance": {
+        "source": "official event page and Haku registration page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://racetime.me/races/doral-turkey-trot/"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://events.hakuapp.com/0922acb88374f901c525",
+    "platform": "haku",
+    "cta_label": "Continue to official registration",
+    "intro": "Register through the official Haku event flow for the Doral Turkey Trot 5K.",
+    "price_note": "The 5K fee is $40, increasing to $45 on October 2, 2026."
+  },
+  "runner_decision_checklist": {
+    "headline": "Key details before registration",
+    "intro": "Review the essentials before continuing to the official registration flow.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Thursday, November 26, 2026 at 7:30 AM",
+        "source_url": "https://racetime.me/races/doral-turkey-trot/",
+        "source_path": "runner_decision_checklist.items.date",
+        "detail": "Thanksgiving morning start at CityPlace Doral."
+      },
+      {
+        "id": "distance",
+        "label": "Event option",
+        "value": "5K run/walk",
+        "source_url": "https://events.hakuapp.com/0922acb88374f901c525",
+        "source_path": "runner_decision_checklist.items.distance",
+        "detail": "The event is positioned for runners, walkers, strollers, and families.",
+        "applies_to_distance_ids": [
+          "5k"
+        ]
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Nov. 24\u201325, 10 AM\u20135 PM at Ola Club; limited race-site pickup Nov. 26, 5:15\u20136:15 AM",
+        "source_url": "https://racetime.me/races/doral-turkey-trot/",
+        "source_path": "runner_decision_checklist.items.packet-pickup",
+        "detail": "Race morning pickup is limited, so the pre-race pickup window should be easy to find."
+      },
+      {
+        "id": "price",
+        "label": "Current fee",
+        "value": "$40 for the 5K; increases to $45 on October 2, 2026",
+        "source_url": "https://events.hakuapp.com/0922acb88374f901c525",
+        "source_path": "runner_decision_checklist.items.price",
+        "detail": "The price deadline gives runners a clear reason to register before the next increase."
+      },
+      {
+        "id": "series",
+        "label": "Operator portfolio fit",
+        "value": "RaceTime presents this event alongside other upcoming races in its event portfolio.",
+        "source_url": "https://racetime.me/events/",
+        "source_path": "runner_decision_checklist.items.series",
+        "detail": "One consistent event-page system could support multiple RaceTime-managed or timed events."
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "time": "Nov. 24\u201325, 10:00 AM\u20135:00 PM",
+      "title": "Packet pickup",
+      "location": "Ola Club, 8135 NW 56th St, Miami, FL 33166"
+    },
+    {
+      "time": "Nov. 26, 5:15\u20136:15 AM",
+      "title": "Limited race-site packet pickup",
+      "location": "CityPlace Doral"
+    },
+    {
+      "time": "Nov. 26, 7:30 AM",
+      "title": "5K start",
+      "location": "CityPlace Doral"
+    }
+  ],
+  "startline_value": {
+    "headline": "A portfolio-ready event page for RaceTime.",
+    "intro": "This representative page shows how one RaceTime event could become a polished runner-facing landing page while registration stays in the official Haku flow.",
+    "improved": [
+      "Makes the Thanksgiving date, venue, fee deadline, packet pickup, and registration path scannable on mobile.",
+      "Keeps RaceTime's event-management relationship visible without replacing Haku registration.",
+      "Creates a repeatable structure RaceTime could reuse across its timed and managed event portfolio."
+    ],
+    "paid_includes": [
+      "A reusable operator portfolio page system for selected RaceTime events.",
+      "SEO-ready event details and clear official registration CTAs.",
+      "Flexible sections for packet pickup, awards, sponsors, and partner details when source-backed.",
+      "StartLine complements Haku, timing, and registration workflows rather than replacing them."
+    ]
+  },
+  "seo": {
+    "meta_title": "Doral Turkey Trot \u2014 RaceTime",
+    "meta_description": "Race details for Doral Turkey Trot, organized into a clear runner-facing page with Haku registration links."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "472792ca90e1f5ff88300d92e3c43ff3",
+    "route": "/private/mockups/472792ca90e1f5ff88300d92e3c43ff3/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://racetime.me/races/doral-turkey-trot/",
+    "source_platform": "official_site",
+    "source_race_id": "doral-turkey-trot",
+    "registration_race_id": "0922acb88374f901c525",
+    "generated_from": "manual Lane D operator portfolio mockup workflow",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "D",
+    "prospect_type": "race_management_company",
+    "email_template_key": "operator_portfolio_v1",
+    "operator_company": "RaceTime",
+    "operator_contact_email": "info@racetime.me",
+    "operator_prospect_id": "bb9e1a1b-d143-4a5f-ac25-61534a244a7a",
+    "source_urls": [
+      "https://racetime.me/",
+      "https://racetime.me/events/",
+      "https://racetime.me/race-management/",
+      "https://racetime.me/contact/",
+      "https://racetime.me/races/doral-turkey-trot/",
+      "https://events.hakuapp.com/0922acb88374f901c525"
+    ],
+    "captured_at": "2026-07-30T18:00:00Z",
+    "provenance": {
+      "source_url": "https://racetime.me/races/doral-turkey-trot/",
+      "source_confirmed_sections": [
+        "runner_decision_checklist",
+        "schedule"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k"
+      ],
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racetime.me/races/doral-turkey-trot/",
+          "path": "identity.name"
+        },
+        {
+          "field": "event.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racetime.me/races/doral-turkey-trot/",
+          "path": "event.date"
+        },
+        {
+          "field": "event.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racetime.me/races/doral-turkey-trot/",
+          "path": "event.location"
+        },
+        {
+          "field": "distances",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racetime.me/races/doral-turkey-trot/",
+          "path": "distances"
+        },
+        {
+          "field": "registration.url",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://events.hakuapp.com/0922acb88374f901c525",
+          "path": "registration.url"
+        },
+        {
+          "field": "identity.hero_image",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racetime.me/races/doral-turkey-trot/",
+          "path": "identity.hero_image"
+        },
+        {
+          "field": "organization.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racetime.me/race-management/",
+          "path": "organization.name"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racetime.me/races/doral-turkey-trot/",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://events.hakuapp.com/0922acb88374f901c525",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.packet-pickup",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racetime.me/races/doral-turkey-trot/",
+          "path": "runner_decision_checklist.items.packet-pickup"
+        },
+        {
+          "field": "runner_decision_checklist.items.price",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://events.hakuapp.com/0922acb88374f901c525",
+          "path": "runner_decision_checklist.items.price"
+        },
+        {
+          "field": "runner_decision_checklist.items.series",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://racetime.me/events/",
+          "path": "runner_decision_checklist.items.series"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "This Lane D private mockup uses Doral Turkey Trot as a representative RaceTime event to demonstrate a reusable operator portfolio website system. Outreach is not approved or sent.",
+      "items": [
+        "No official sponsor list or charity beneficiary was found on the reviewed RaceTime or Haku pages.",
+        "RaceTime and Leon Sport Brand are both listed as organizers; this mockup frames the page as RaceTime-representative rather than RaceTime-owned."
+      ]
+    }
+  }
+}

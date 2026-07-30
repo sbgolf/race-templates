@@ -1,0 +1,377 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Burning River Endurance Run & Relay",
+    "slug": "western-reserve-burning-river",
+    "tagline": "Ultra weekend in Ohio.",
+    "colors": {
+      "primary": "#C7522A",
+      "secondary": "#223B32",
+      "accent": "#E7A941",
+      "ink": "#1D2521"
+    },
+    "short_name": "Burning River",
+    "hero_image": {
+      "src": "/mockups/da6022beab7d4929ac01bc5417344a0f/burning-river-trail.jpg",
+      "alt": "Trail runners at the Burning River Endurance Run & Relay",
+      "source": "https://www.westernreserveracing.com/burning-river-endurance-run-and-relay",
+      "fit": "cover",
+      "presentation": "photo"
+    }
+  },
+  "organization": {
+    "name": "Western Reserve Racing",
+    "url": "https://www.westernreserveracing.com/",
+    "role_label": "Western Reserve Racing"
+  },
+  "event": {
+    "date": "2026-07-25",
+    "date_label": "July 25\u201326, 2026",
+    "time": "02:00",
+    "location": "Cuyahoga Falls, OH",
+    "timezone": "America/New_York",
+    "venue": "Sheraton Suites Akron Cuyahoga Falls",
+    "address": "1989 Front Street, Cuyahoga Falls, OH 44221"
+  },
+  "distances": [
+    {
+      "id": "100-mile",
+      "name": "100 Mile",
+      "distance": "100 mi",
+      "featured": true,
+      "start_time": "2:00 AM / 4:00 AM",
+      "profile": "Out-and-back ultra from Cuyahoga Falls to Silver Springs Park and back.",
+      "cutoff": "32/30 hour cutoff",
+      "highlights": [
+        "Western States qualifier",
+        "Third leg of the Midwest Grand Slam of Ultrarunning",
+        "Pacers may accompany 100M runners starting at mile 50"
+      ],
+      "provenance": {
+        "source": "official WRR and RunSignup event pages",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver"
+      }
+    },
+    {
+      "id": "50-mile",
+      "name": "50 Mile",
+      "distance": "50 mi",
+      "start_time": "5:30 AM",
+      "profile": "Point-to-point route from Cuyahoga Falls to Silver Springs Park.",
+      "cutoff": "15 hour cutoff",
+      "highlights": [
+        "Front-half 50 mile course option",
+        "Trail-focused Northeast Ohio endurance challenge"
+      ],
+      "provenance": {
+        "source": "official RunSignup event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver"
+      }
+    },
+    {
+      "id": "back-half-50-mile",
+      "name": "Back Half 50 Mile",
+      "distance": "50 mi",
+      "start_time": "4:00 PM",
+      "profile": "Point-to-point night run from Silver Springs Park to Cuyahoga Falls.",
+      "cutoff": "18 hour cutoff",
+      "highlights": [
+        "Back-half course option with evening start",
+        "Finishes in Cuyahoga Falls"
+      ],
+      "provenance": {
+        "source": "official RunSignup event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver"
+      }
+    },
+    {
+      "id": "marathon",
+      "name": "Marathon",
+      "distance": "26.2 mi",
+      "start_time": "6:30 AM / 8:00 AM",
+      "profile": "Point-to-point route from Oak Hill to Silver Springs Park.",
+      "cutoff": "14/12.5 hour cutoff",
+      "highlights": [
+        "Marathon-distance trail option",
+        "Fundraising minimum available for charity entries"
+      ],
+      "provenance": {
+        "source": "official RunSignup event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver"
+      }
+    },
+    {
+      "id": "relay",
+      "name": "100 Mile 8 Person Relay",
+      "distance": "100 mi relay",
+      "start_time": "7:00 AM",
+      "profile": "Eight-person relay on the same out-and-back course as the 100 mile event.",
+      "cutoff": "27 hour cutoff",
+      "highlights": [
+        "Team relay format",
+        "Shared 100 mile route experience"
+      ],
+      "provenance": {
+        "source": "official RunSignup event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver",
+    "platform": "runsignup",
+    "cta_label": "View Burning River on RunSignup",
+    "kicker": "Event options",
+    "headline": "Review the Burning River race menu.",
+    "intro": "This representative page organizes the 2026 Burning River options while preserving the existing RunSignup event-info flow.",
+    "price_note": "The 2026 pricing schedule ranged from December through July by distance; check RunSignup for archived details or any future availability updates."
+  },
+  "runner_decision_checklist": {
+    "headline": "Key details for the representative event page",
+    "intro": "Review the essentials this portfolio-style layout brings forward from the event-info flow.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race weekend",
+        "value": "July 25\u201326, 2026",
+        "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver",
+        "source_path": "runner_decision_checklist.items.date",
+        "detail": "The 20th anniversary race weekend spans Saturday and Sunday."
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "100 Mile, 50 Mile, Back Half 50 Mile, Marathon, Pacer Registration, and 100 Mile 8 Person Relay",
+        "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver",
+        "source_path": "runner_decision_checklist.items.distance",
+        "detail": "A large event menu benefits from clear mobile comparison before athletes choose the right event-info path.",
+        "applies_to_distance_ids": [
+          "100-mile",
+          "50-mile",
+          "back-half-50-mile",
+          "marathon",
+          "relay"
+        ]
+      },
+      {
+        "id": "course",
+        "label": "Course setting",
+        "value": "Routes travel through Northeast Ohio, including Cuyahoga Valley National Park and Summit Metro Parks.",
+        "source_url": "https://www.westernreserveracing.com/burning-river-endurance-run-and-relay",
+        "source_path": "runner_decision_checklist.items.course",
+        "detail": "The course setting is a major decision point for trail and ultra runners."
+      },
+      {
+        "id": "series",
+        "label": "Fundraising impact",
+        "value": "Fundraising supports Cuyahoga Valley National Park, Summit Metro Parks Foundation, and Boston Township.",
+        "source_url": "https://runsignup.com/Race/BurningRiver/Page/Fundraising",
+        "source_path": "runner_decision_checklist.items.series",
+        "detail": "Fundraising minimums vary by event option."
+      },
+      {
+        "id": "awards",
+        "label": "Operator portfolio fit",
+        "value": "Western Reserve Racing presents a broad race calendar across Northeast Ohio events.",
+        "source_url": "https://www.westernreserveracing.com/race-calendar/",
+        "source_path": "runner_decision_checklist.items.awards",
+        "detail": "A consistent portfolio system could help athletes navigate complex race options while preserving WRR event-info workflows."
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "time": "2:00 / 4:00 AM",
+      "title": "100 Mile starts",
+      "location": "Cuyahoga Falls"
+    },
+    {
+      "time": "5:30 AM",
+      "title": "50 Mile start",
+      "location": "Cuyahoga Falls"
+    },
+    {
+      "time": "6:30 / 8:00 AM",
+      "title": "Marathon starts",
+      "location": "Oak Hill"
+    },
+    {
+      "time": "7:00 AM",
+      "title": "100 Mile 8 Person Relay start",
+      "location": "Cuyahoga Falls"
+    },
+    {
+      "time": "4:00 PM",
+      "title": "Back Half 50 Mile start",
+      "location": "Silver Springs Park"
+    }
+  ],
+  "startline_value": {
+    "headline": "A portfolio-ready event page for Western Reserve Racing.",
+    "intro": "This representative page shows how a complex Western Reserve Racing endurance event could become a clear, mobile-friendly portfolio page while event details remain in the existing RunSignup flow.",
+    "improved": [
+      "Organizes multiple ultra, marathon, pacer, and relay options into scannable athlete decision points.",
+      "Highlights course setting, cutoffs, fundraising impact, and the RunSignup event-info path.",
+      "Creates a repeatable structure Western Reserve Racing could apply across its broader event calendar."
+    ],
+    "paid_includes": [
+      "A reusable operator portfolio page system for selected Western Reserve Racing events.",
+      "Structured event content and SEO metadata for search discovery.",
+      "Flexible race-detail modules for GPX links, guide PDFs, sponsors, fundraising, and volunteer paths when source-backed.",
+      "StartLine complements RunSignup and timing operations rather than replacing them."
+    ]
+  },
+  "seo": {
+    "meta_title": "Burning River Endurance Run & Relay \u2014 Western Reserve Racing",
+    "meta_description": "Event details for Burning River Endurance Run & Relay, organized as a clear representative portfolio page for Western Reserve Racing."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "da6022beab7d4929ac01bc5417344a0f",
+    "route": "/private/mockups/da6022beab7d4929ac01bc5417344a0f/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://www.westernreserveracing.com/burning-river-endurance-run-and-relay",
+    "source_platform": "official_site",
+    "source_race_id": "burning-river",
+    "registration_race_id": "20553",
+    "generated_from": "manual Lane D operator portfolio mockup workflow",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "D",
+    "prospect_type": "race_management_company",
+    "email_template_key": "operator_portfolio_v1",
+    "operator_company": "Western Reserve Racing",
+    "operator_contact_email": "help@westernreserveracing.com",
+    "operator_prospect_id": "9118669a-1935-444d-a106-fecbe0035f41",
+    "source_urls": [
+      "https://www.westernreserveracing.com/",
+      "https://www.westernreserveracing.com/race-calendar/",
+      "https://www.westernreserveracing.com/contact",
+      "https://www.westernreserveracing.com/burning-river-endurance-run-and-relay",
+      "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver",
+      "https://runsignup.com/Race/Events/OH/CuyahogaFalls/BurningRiver",
+      "https://runsignup.com/Race/BurningRiver/Page/Fundraising"
+    ],
+    "captured_at": "2026-07-30T18:00:00Z",
+    "provenance": {
+      "source_url": "https://www.westernreserveracing.com/burning-river-endurance-run-and-relay",
+      "source_confirmed_sections": [
+        "runner_decision_checklist",
+        "schedule"
+      ],
+      "source_confirmed_distance_ids": [
+        "100-mile",
+        "50-mile",
+        "back-half-50-mile",
+        "marathon",
+        "relay"
+      ],
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.westernreserveracing.com/burning-river-endurance-run-and-relay",
+          "path": "identity.name"
+        },
+        {
+          "field": "event.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver",
+          "path": "event.date"
+        },
+        {
+          "field": "event.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver",
+          "path": "event.location"
+        },
+        {
+          "field": "distances",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver",
+          "path": "distances"
+        },
+        {
+          "field": "registration.url",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver",
+          "path": "registration.url"
+        },
+        {
+          "field": "identity.hero_image",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.westernreserveracing.com/burning-river-endurance-run-and-relay",
+          "path": "identity.hero_image"
+        },
+        {
+          "field": "organization.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.westernreserveracing.com/contact",
+          "path": "organization.name"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/CuyahogaFalls/BurningRiver",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.course",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.westernreserveracing.com/burning-river-endurance-run-and-relay",
+          "path": "runner_decision_checklist.items.course"
+        },
+        {
+          "field": "runner_decision_checklist.items.series",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/BurningRiver/Page/Fundraising",
+          "path": "runner_decision_checklist.items.series"
+        },
+        {
+          "field": "runner_decision_checklist.items.awards",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.westernreserveracing.com/race-calendar/",
+          "path": "runner_decision_checklist.items.awards"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "This Lane D private mockup uses Burning River Endurance Run & Relay as a representative Western Reserve Racing event to demonstrate a reusable operator portfolio website system. Outreach is not approved or sent.",
+      "items": [
+        "The official RunSignup pages showed a registration-state conflict: one view showed Pacer Registration open while event-info rows reported online registration closed/ended.",
+        "The listed July 25\u201326, 2026 event date should be date-sanity checked before any outreach because this mockup is being generated after race weekend.",
+        "The participant guide PDF was linked from official sources but not fully extracted during this generation pass."
+      ]
+    }
+  }
+}
