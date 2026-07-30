@@ -1,0 +1,443 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Cedar 5K & 1 Mile",
+    "slug": "cedar-5k-1-mile",
+    "short_name": "Cedar 5K",
+    "tagline": "Run, walk, and fundraise for Food For Our Journey.",
+    "colors": {
+      "primary": "#064b2a",
+      "secondary": "#6f9e2f",
+      "accent": "#c97732",
+      "ink": "#183226"
+    },
+    "hero_image": {
+      "src": "/mockups/95be47610c0f2e778af245b34cd5db4f/cedar-run-2027-banner.jpg",
+      "alt": "2027 Cedar Run 5K and Cedar Shake Fun Run official race banner benefiting Food For Our Journey",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-23/23125/websiteBanner-4qhpKgfW-bQrN-B.jpg",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1"
+    }
+  },
+  "event": {
+    "date": "2027-04-17",
+    "location": "St. Elias Maronite Catholic Church, Birmingham, AL",
+    "timezone": "America/Chicago",
+    "venue": "St. Elias Maronite Catholic Church",
+    "address": "836 8th St. South, Birmingham, AL 35205"
+  },
+  "organization": {
+    "name": "St. Elias Maronite Catholic Church",
+    "url": "https://stelias.org/"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "8:00 AM CDT",
+      "map_label": "USATF Certified AL26016JE",
+      "highlights": [
+        "Chip timed 5K",
+        "Cotton short-sleeve T-shirts and race goodie bags to the first 200 registrants"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup Events and Information sections",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+      }
+    },
+    {
+      "id": "one-mile-fun-run",
+      "name": "1 Mile Fun Run",
+      "distance": "1 Mile",
+      "start_time": "9:00 AM CDT",
+      "map_label": "1 Mile Fun Run course map",
+      "highlights": [
+        "Run or walk 1 Mile Fun Run",
+        "Fun Run participants each receive a finisher's award"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup Events and Race Day schedule",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register on RunSignup for the 5K, 1 Mile Fun Run, or SleepIn option.",
+    "price_note": "Public event cards showed $17.76 and a price increase after September 7, 2026 at 11:59 PM CDT when captured."
+  },
+  "startline_value": {
+    "headline": "A clearer race page for families, runners, walkers, and fundraising teams.",
+    "intro": "This private concept organizes the public Cedar 5K & 1 Mile details into a mobile-first path from event overview to registration, while keeping the official RunSignup registration link in front of runners.",
+    "improved": [
+      "Places date, venue, distance options, pricing note, and start times near the registration decision.",
+      "Highlights the Food For Our Journey beneficiary and team/fundraising details from the public race page.",
+      "Keeps schedule and packet pickup details scannable for race-week questions."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees \u2014 just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "St. Elias Cedar Run",
+    "title": "A Birmingham race weekend supporting Food For Our Journey",
+    "paragraphs": [
+      "The St. Elias Cedar 5K & 1 Mile Cedar Shake Fun Run/Walk is scheduled for Saturday, April 17, 2027 at St. Elias Maronite Catholic Church in Birmingham.",
+      "The race benefits Food For Our Journey, a faith-based initiative that uses a food truck to deliver meals to hungry neighbors and build relationships with people who may not be able to reach fixed meal distribution locations."
+    ],
+    "image": {
+      "src": "/mockups/95be47610c0f2e778af245b34cd5db4f/1-6e6f3ff4fa.png",
+      "alt": "Saint Elias Cedar Run 5K logo beside Food For Our Journey beneficiary mark",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race16317-socialShareLargeImage.bNJscg.png"
+    }
+  },
+  "schedule": [
+    {
+      "day": "Friday, April 16, 2027",
+      "name": "Pre-race packet pickup",
+      "time": "11:00 AM \u2013 6:00 PM",
+      "location": "St. Elias Maronite Catholic Church, 836 8th St. South, Birmingham, AL 35205",
+      "applies_to_distances": [
+        "5k",
+        "one-mile-fun-run"
+      ],
+      "provenance": {
+        "source": "RunSignup Information section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+      }
+    },
+    {
+      "day": "Saturday, April 17, 2027",
+      "name": "Registration opens",
+      "time": "6:30 AM",
+      "location": "St. Elias Maronite Catholic Church",
+      "applies_to_distances": [
+        "5k",
+        "one-mile-fun-run"
+      ],
+      "provenance": {
+        "source": "RunSignup Race Day schedule",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+      }
+    },
+    {
+      "day": "Saturday, April 17, 2027",
+      "name": "5K start",
+      "time": "8:00 AM",
+      "location": "St. Elias Maronite Catholic Church",
+      "applies_to_distances": [
+        "5k"
+      ],
+      "provenance": {
+        "source": "RunSignup Race Day schedule",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+      }
+    },
+    {
+      "day": "Saturday, April 17, 2027",
+      "name": "1 Mile Fun Run start",
+      "time": "9:00 AM",
+      "location": "St. Elias Maronite Catholic Church",
+      "applies_to_distances": [
+        "one-mile-fun-run"
+      ],
+      "provenance": {
+        "source": "RunSignup Race Day schedule",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+      }
+    },
+    {
+      "day": "Saturday, April 17, 2027",
+      "name": "Awards ceremony",
+      "time": "9:30 AM",
+      "location": "St. Elias Maronite Catholic Church",
+      "applies_to_distances": [
+        "5k",
+        "one-mile-fun-run"
+      ],
+      "provenance": {
+        "source": "RunSignup Race Day schedule",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where does the race take place?",
+      "answer": "Race day is listed at St. Elias Maronite Catholic Church, 836 8th St. South, Birmingham, AL 35205.",
+      "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+    },
+    {
+      "question": "What does the race benefit?",
+      "answer": "RunSignup states that the race benefits Food For Our Journey, a faith-based initiative that delivers meals to hungry neighbors using a food truck.",
+      "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+    },
+    {
+      "question": "Are teams part of the event?",
+      "answer": "The public race page lists team registration, largest team, fastest team, and team spirit awards, with team registration closing Wednesday, April 14, 2027.",
+      "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+    }
+  ],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials \u2014 date, venue, events, price note, and beneficiary \u2014 before continuing to official registration.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, April 17, 2027",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K",
+        "source_path": "event.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "5K, 1 Mile Fun Run, and SleepIn option",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K",
+        "applies_to_distance_ids": [
+          "5k",
+          "one-mile-fun-run"
+        ],
+        "source_path": "distances"
+      },
+      {
+        "id": "location",
+        "label": "Race day location",
+        "value": "St. Elias Maronite Catholic Church, 836 8th St. South, Birmingham, AL 35205",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K",
+        "source_path": "event.address"
+      },
+      {
+        "id": "start-time",
+        "label": "Start times",
+        "value": "5K at 8:00 AM CDT; 1 Mile Fun Run at 9:00 AM CDT",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K",
+        "applies_to_distance_ids": [
+          "5k",
+          "one-mile-fun-run"
+        ],
+        "source_path": "schedule"
+      },
+      {
+        "id": "price",
+        "label": "Registration note",
+        "value": "Public event cards showed $17.76 before the listed September 7, 2026 price increase",
+        "detail": "Registration prices can change on RunSignup; this concept keeps the official registration link as the source of truth.",
+        "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K",
+        "source_path": "registration.price_note"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Cedar 5K & 1 Mile \u2014 April 17, 2027",
+    "meta_description": "Race details for Cedar 5K & 1 Mile at St. Elias Maronite Catholic Church in Birmingham, Alabama."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K",
+    "source_platform": "runsignup",
+    "source_race_id": "16317",
+    "registration_race_id": "16317",
+    "captured_at": "2026-07-30T13:34:00.842Z",
+    "access_token": "95be47610c0f2e778af245b34cd5db4f",
+    "race_slug": "cedar-5k-1-mile",
+    "route": "/private/mockups/95be47610c0f2e778af245b34cd5db4f/",
+    "template": "community",
+    "generated_from": "race-templates private mockup generator plus source-backed QA authoring",
+    "owner_approved_for_generation": true,
+    "prospect_id": "645ddae5-e1c7-4fba-8717-e5029a81a605",
+    "prospect_score": null,
+    "qualification_reason": "Existing eligible Community-lane prospect supplied by Steve's StartLine batch. Public RunSignup page confirms date, venue, registration path, distances, schedule, beneficiary, team/fundraising signals, and official race-branded assets.",
+    "source_urls": [
+      "https://runsignup.com/Race/AL/Birmingham/Cedar5K",
+      "https://stelias.org/",
+      "https://stelias.org/contact/"
+    ],
+    "assets": [
+      {
+        "type": "image",
+        "role": "hero",
+        "src": "/mockups/95be47610c0f2e778af245b34cd5db4f/cedar-run-2027-banner.jpg",
+        "alt": "2027 Cedar Run 5K and Cedar Shake Fun Run official race banner benefiting Food For Our Journey",
+        "caption": "Official RunSignup race-site banner used for private concept direction.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-23/23125/websiteBanner-4qhpKgfW-bQrN-B.jpg"
+      },
+      {
+        "type": "image",
+        "role": "story",
+        "src": "/mockups/95be47610c0f2e778af245b34cd5db4f/1-6e6f3ff4fa.png",
+        "alt": "Saint Elias Cedar Run 5K logo beside Food For Our Journey beneficiary mark",
+        "caption": "Official race/beneficiary graphic from the public race page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race16317-socialShareLargeImage.bNJscg.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K",
+      "captured_at": "2026-07-30T13:34:00.842Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "schedule",
+        "story",
+        "faqs"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "one-mile-fun-run"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "event.venue",
+          "field": "event.venue",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "event.address",
+          "field": "event.address",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "registration.price_note",
+          "field": "registration.price_note",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "field": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "schedule",
+          "field": "schedule",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "faqs",
+          "field": "faqs",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Birmingham/Cedar5K"
+        },
+        {
+          "path": "organization.name",
+          "field": "organization.name",
+          "source": "St. Elias website header/contact page",
+          "confidence": "high",
+          "source_url": "https://stelias.org/"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Public race facts were checked against official race sources; customer outreach remains unapproved and was not performed.",
+      "items": [
+        "Customer outreach remains unapproved and should not be sent until Steve approves a send gate.",
+        "Registration pricing can change on RunSignup; the price note records the public value and increase date visible at capture time."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on public official race sources. No customer outreach was sent."
+  }
+}
