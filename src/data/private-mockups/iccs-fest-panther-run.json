@@ -40,7 +40,7 @@
       "start_time": "7:30 AM CDT",
       "highlights": [
         "10K through Margaret Place District and along Shell Beach Drive.",
-        "Listed at $60 when captured"
+        "$60 registration option"
       ],
       "provenance": {
         "verified": true,
@@ -87,7 +87,7 @@
     "platform": "runsignup",
     "cta_label": "Register on RunSignup",
     "intro": "Register on RunSignup for ICCS Panther Run.",
-    "price_note": "10K $60; 5K $40; 1 Mile Color Run $30 before listed race-day pricing when captured"
+    "price_note": "10K $60; 5K $40; 1 Mile Color Run $30; confirm latest prices on RunSignup"
   },
   "startline_value": {
     "headline": "A clearer race page for runners, families, teams, and supporters.",
@@ -223,8 +223,8 @@
       {
         "id": "price",
         "label": "Registration note",
-        "value": "10K $60; 5K $40; 1 Mile Color Run $30 before listed race-day pricing when captured",
-        "detail": "Registration prices can change on RunSignup; this concept keeps the official registration link as the source of truth.",
+        "value": "10K $60; 5K $40; 1 Mile Color Run $30; confirm latest prices on RunSignup",
+        "detail": "Registration prices can change on RunSignup; this concept keeps the RunSignup registration link as the latest details.",
         "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
         "source_path": "registration.price_note"
       }

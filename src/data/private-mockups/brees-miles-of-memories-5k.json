@@ -56,7 +56,7 @@
       "start_time": "9:30 AM EST",
       "highlights": [
         "Family-friendly Fun Run following the 5K.",
-        "Listed at $20 when captured"
+        "$20 registration option"
       ],
       "provenance": {
         "verified": true,
@@ -86,7 +86,7 @@
     "platform": "runsignup",
     "cta_label": "Register on RunSignup",
     "intro": "Register on RunSignup for Bree’s Miles of Memories.",
-    "price_note": "5K $25; 1K Fun Run $20; Virtual 5K $30 when captured; registration opens August 1, 2026"
+    "price_note": "5K $25; 1K Fun Run $20; Virtual 5K $30; registration opens August 1, 2026"
   },
   "startline_value": {
     "headline": "A clearer race page for runners, families, teams, and supporters.",
@@ -207,8 +207,8 @@
       {
         "id": "price",
         "label": "Registration note",
-        "value": "5K $25; 1K Fun Run $20; Virtual 5K $30 when captured; registration opens August 1, 2026",
-        "detail": "Registration prices can change on RunSignup; this concept keeps the official registration link as the source of truth.",
+        "value": "5K $25; 1K Fun Run $20; Virtual 5K $30; registration opens August 1, 2026",
+        "detail": "Registration prices can change on RunSignup; this concept keeps the RunSignup registration link as the latest details.",
         "source_url": "https://runsignup.com/Race/GA/Canton/BreesMilesofMemories5KandFunRun",
         "source_path": "registration.price_note"
       }
