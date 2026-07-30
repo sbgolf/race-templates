@@ -90,11 +90,11 @@
   },
   "startline_value": {
     "headline": "A clearer race page for runners, families, teams, and supporters.",
-    "intro": "This private concept organizes the public Jingle Bell Run Cincinnati details into a mobile-first path from event overview to registration, while keeping RunSignup as the official registration source.",
+    "intro": "This private concept organizes the public Jingle Bell Run Cincinnati details into a mobile-first path from event overview to registration, while keeping RunSignup as the RunSignup registration path.",
     "improved": [
       "Places date, venue, distance options, pricing note, and start times near the registration decision.",
       "Highlights the cause/community story and participation options from the race page.",
-      "Keeps runner questions scannable before sending visitors to official registration."
+      "Keeps runner questions scannable before sending visitors to RunSignup registration."
     ],
     "paid_includes": [
       "Mobile-first implementation shaped around the runner registration path.",
@@ -159,13 +159,13 @@
     },
     {
       "question": "Where should runners register?",
-      "answer": "Registration remains on the official RunSignup race page.",
+      "answer": "Registration remains on the RunSignup registration page.",
       "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
     }
   ],
   "runner_decision_checklist": {
     "headline": "Key race details before you register",
-    "intro": "Review the essentials — date, venue, event options, price note, and start times — before continuing to official registration.",
+    "intro": "Review the essentials — date, venue, event options, price note, and start times — before continuing to RunSignup registration.",
     "items": [
       {
         "id": "date",
@@ -208,7 +208,7 @@
         "id": "price",
         "label": "Registration note",
         "value": "5K Timed $40; 5K Untimed $35; Virtual Jingler $45; confirm latest prices on RunSignup",
-        "detail": "Registration prices can change on RunSignup; this concept keeps the official registration link as the source of truth.",
+        "detail": "Registration prices can change on RunSignup; this concept keeps the RunSignup registration link as the latest details.",
         "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
         "source_path": "registration.price_note"
       }
