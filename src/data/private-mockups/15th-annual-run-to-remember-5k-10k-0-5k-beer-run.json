@@ -1,0 +1,376 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "15th annual Run to Remember 5K/10K and half-kilometer Beer Run",
+    "tagline": "A San Antonio family race supporting Alzheimer\u2019s Association fundraising through Beard vs Beans.",
+    "edition": "San Antonio, TX",
+    "hero_image": {
+      "src": "/mockups/f895d8e1a0d6f3d2ebe0776cb1b45af0/1-26473cf4d8.jpg",
+      "alt": "Public race-site image captured for concept direction",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race67307-socialShareLargeImage.bQpiGb.jpg"
+    },
+    "colors": {
+      "primary": "#C6643D",
+      "secondary": "#6B8E6F"
+    },
+    "slug": "15th-annual-run-to-remember-5k-10k-0-5k-beer-run",
+    "short_name": "Run to Remember"
+  },
+  "event": {
+    "date": "2027-04-24",
+    "location": "Mission County Park, San Antonio, TX",
+    "venue": "Mission County Park",
+    "address": "6030 Padre Drive, San Antonio, TX 78214"
+  },
+  "organization": {
+    "name": "Beard vs Beans",
+    "url": "https://www.beardvsbeans.com/"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K Run/Walk",
+      "distance": "5K",
+      "featured": true,
+      "highlights": [
+        "Family-friendly 5K option benefiting Alzheimer\u2019s Association fundraising."
+      ],
+      "map_label": "5K",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K",
+        "method": "RunSignup event listing/description"
+      }
+    },
+    {
+      "id": "10k",
+      "name": "10K",
+      "distance": "10K",
+      "featured": false,
+      "highlights": [
+        "Longer 10K option for race-day runners."
+      ],
+      "map_label": "10K",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K",
+        "method": "RunSignup event listing/description"
+      }
+    },
+    {
+      "id": "beer-run",
+      "name": ".5K Beer Race",
+      "distance": "half-kilometer",
+      "featured": false,
+      "highlights": [
+        "Post-5K/10K beer race option with event swag noted on the race page."
+      ],
+      "map_label": "half-kilometer",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K",
+        "method": "RunSignup event listing/description"
+      }
+    },
+    {
+      "id": "kids-run",
+      "name": ".5K Kids Run",
+      "distance": "half-kilometer Kids Run",
+      "featured": false,
+      "highlights": [
+        "Kids run option listed by RunSignup."
+      ],
+      "map_label": "half-kilometer Kids Run",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K",
+        "method": "RunSignup event listing/description"
+      }
+    },
+    {
+      "id": "virtual",
+      "name": "Sleep-In Donation/Virtual",
+      "distance": "Virtual",
+      "featured": false,
+      "highlights": [
+        "Donation/virtual option for remote supporters."
+      ],
+      "map_label": "Virtual",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K",
+        "method": "RunSignup event listing/description"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=67307",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "startline_value": {
+    "headline": "A race website concept built around registration intent \u2014 not just a prettier homepage.",
+    "intro": "StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.",
+    "improved": [
+      "Reduced runner friction by placing key race facts near the registration path.",
+      "Surfaced trust signals from configured distances, schedule details, and FAQs when available.",
+      "Made registration CTAs easier to find on mobile and desktop with measurement-ready registration-click tracking."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees \u2014 just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "About Run to Remember",
+    "paragraphs": [
+      "Run to Remember is a San Antonio 5K/10K, half-kilometer Beer Run, and kids race organized by the Beard vs Beans family fundraising effort.",
+      "The event raises funds for the Alzheimer\u2019s Association of San Antonio and South Texas while keeping the race-day experience lighthearted and community-centered.",
+      "The race page highlights medals, shirts, family participation, team fundraising, and RunSignup registration as the official path."
+    ],
+    "image": {
+      "src": "/mockups/f895d8e1a0d6f3d2ebe0776cb1b45af0/2-f72e2aa968.jpg",
+      "alt": "Course or race image for 15th annual Run to Remember 5K/10K and half-kilometer Beer Run",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-67xxx/67307/raceBanner-gaP6UIjZ-bQpilb.jpg"
+    }
+  },
+  "schedule": [],
+  "faqs": [
+    {
+      "question": "Where does the race take place?",
+      "answer": "RunSignup lists Mission County Park at 6030 Padre Drive in San Antonio.",
+      "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K"
+    },
+    {
+      "question": "What cause does the event support?",
+      "answer": "Race details say proceeds benefit the Alzheimer\u2019s Association of San Antonio and South Texas.",
+      "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K"
+    },
+    {
+      "question": "What event options are listed?",
+      "answer": "RunSignup lists 5K, 10K, half-kilometer Beer Race, half-kilometer Kids Run, assisted wheelchair duo options, and a sleep-in/virtual donation option.",
+      "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K"
+    }
+  ],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials from the public race page before continuing to the official RunSignup registration path.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, April 24, 2027",
+        "source_path": "event.date",
+        "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "5K Run/Walk, 10K, half-kilometer Beer Race, half-kilometer Kids Run, Sleep-In Donation/Virtual",
+        "source_path": "distances",
+        "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K",
+        "applies_to_distance_ids": [
+          "5k",
+          "10k",
+          "beer-run",
+          "kids-run",
+          "virtual"
+        ]
+      },
+      {
+        "id": "location",
+        "label": "Race-day location",
+        "value": "6030 Padre Drive, San Antonio, TX 78214",
+        "source_path": "event.address",
+        "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K"
+      },
+      {
+        "id": "price",
+        "label": "Registration check",
+        "value": "RunSignup registration page is the official registration path.",
+        "source_path": "registration.url",
+        "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "15th annual Run to Remember 5K/10K and half-kilometer Beer Run \u2014 Race Website Preview",
+    "meta_description": "Run to Remember is a San Antonio 5K/10K, half-kilometer Beer Run, and kids race organized by the Beard vs Beans family fundraising effort."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K",
+    "captured_at": "2026-07-31T14:12:43.025Z",
+    "access_token": "f895d8e1a0d6f3d2ebe0776cb1b45af0",
+    "race_slug": "15th-annual-run-to-remember-5k-10k-0-5k-beer-run",
+    "route": "/private/mockups/f895d8e1a0d6f3d2ebe0776cb1b45af0/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/f895d8e1a0d6f3d2ebe0776cb1b45af0/1-26473cf4d8.jpg",
+        "alt": "Public race-site image captured for concept direction",
+        "caption": "Public race-site image used for concept direction.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race67307-socialShareLargeImage.bQpiGb.jpg"
+      },
+      {
+        "src": "/mockups/f895d8e1a0d6f3d2ebe0776cb1b45af0/2-f72e2aa968.jpg",
+        "alt": "Public race-site image captured for concept direction",
+        "caption": "Additional public race-site visual reference.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-67xxx/67307/raceBanner-gaP6UIjZ-bQpilb.jpg"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K",
+      "captured_at": "2026-07-31T14:12:43.025Z",
+      "source_confirmed_sections": [
+        "runner_decision_checklist",
+        "identity",
+        "event",
+        "organization",
+        "registration",
+        "distances",
+        "story",
+        "faqs"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "10k",
+        "beer-run",
+        "kids-run",
+        "virtual"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "h1",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "JSON-LD startDate",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "JSON-LD location",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "registration link: \"Sign Up\"",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "JSON-LD startDate",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "event name/title: \"15th annual Run to Remember 5K/10K and half-kilometer Beer Run\"",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "JSON-LD location",
+          "confidence": "high"
+        },
+        {
+          "path": "private_mockup.assets[0]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[1]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[2]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[3]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "organization.name",
+          "source": "official race/org URL and RunSignup external race URL",
+          "confidence": "medium"
+        },
+        {
+          "path": "event.venue",
+          "source": "RunSignup public races API/address detail",
+          "confidence": "high"
+        },
+        {
+          "path": "event.address",
+          "source": "RunSignup public races API/address detail",
+          "confidence": "high"
+        },
+        {
+          "path": "story.paragraphs",
+          "source": "RunSignup public race description",
+          "confidence": "medium"
+        },
+        {
+          "path": "seo.meta_description",
+          "source": "RunSignup public race description",
+          "confidence": "medium"
+        },
+        {
+          "path": "distances[0]",
+          "source": "RunSignup event listing: 5K Run/Walk",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[1]",
+          "source": "RunSignup event listing: 10K",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[2]",
+          "source": "RunSignup event listing: half-kilometer Beer Race",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[3]",
+          "source": "RunSignup event listing: half-kilometer Kids Run",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[4]",
+          "source": "RunSignup event listing: Sleep-In Donation/Virtual",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "registration link/status from RunSignup public race page",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "confidence": {
+      "high": 8,
+      "medium": 7,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "Some source facts were not available with high confidence and were omitted from rendered sections.",
+      "items": [
+        "Start time was not found in the race page; omitted from distance details.",
+        "Current entry price was not found with high confidence; omitted from distance cards.",
+        "Course certification/sanctioning was not found with high confidence; omitted from course details.",
+        "Aid-station count was not found with high confidence; omitted from course details.",
+        "Course profile descriptors were not found with high confidence; omitted from course details."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups."
+  }
+}
