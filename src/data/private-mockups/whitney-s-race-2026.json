@@ -1,0 +1,232 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Whitney's Race 2026",
+    "slug": "whitney-s-race-2026",
+    "tagline": "Run for pancreatic cancer research, care, and more time together.",
+    "hero_image": {
+      "src": "/mockups/a3023a95797e48259a58480dbf0490db/whitneys-race-logo.png",
+      "alt": "Whitney's Race 2026 official race artwork",
+      "caption": "Official RunSignup race logo",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race70473-logo-0.bClqJO.png",
+      "source_label": "Official RunSignup race logo",
+      "presentation": "logo",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-10-31",
+    "location": "Fort Smith, AR",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "RunSignup discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+        "verified": true
+      },
+      "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace"
+    },
+    {
+      "id": "10k",
+      "name": "10K",
+      "distance": "10K",
+      "provenance": {
+        "source": "RunSignup discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+        "verified": true
+      },
+      "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace"
+    },
+    {
+      "id": "1-mile-kids-fun",
+      "name": "1 Mile KIDS FUN RUN!",
+      "distance": "1 Mile KIDS FUN RUN!",
+      "provenance": {
+        "source": "RunSignup discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+        "verified": true
+      },
+      "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace"
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "This private mockup only uses details already visible in the approved source data.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-10-31",
+        "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "5K, 10K, 1 Mile KIDS FUN RUN!",
+        "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+        "applies_to_distance_ids": [
+          "5k",
+          "10k",
+          "1-mile-kids-fun"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Fort Smith, AR",
+        "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Whitney's Race 2026 \u2014 2026-10-31",
+    "meta_description": "Whitney's Race 2026 race information and registration details for runners in Fort Smith, AR."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "a3023a95797e48259a58480dbf0490db",
+    "route": "/private/mockups/a3023a95797e48259a58480dbf0490db/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+    "source_platform": "runsignup",
+    "source_race_id": "70473",
+    "registration_race_id": "70473",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 0,
+    "source_urls": [
+      "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+      "https://www.whitneymarsh.org/events/whitneys-race-2025",
+      "https://whitneymarsh.org/",
+      "https://d368g9lw5ileu7.cloudfront.net/races/race70473-logo-0.bClqJO.png"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "path": "identity.name",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace"
+        },
+        {
+          "field": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "path": "event.date",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace"
+        },
+        {
+          "field": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "path": "event.location",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace"
+        },
+        {
+          "field": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium",
+          "path": "distances",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace"
+        },
+        {
+          "field": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "path": "registration.url",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.location"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/AR/FortSmith/WhitneysRace",
+      "source_confirmed_distance_ids": [
+        "5k",
+        "10k",
+        "1-mile-kids-fun"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Generated from RunSignup and official/event source details available during discovery; schedule, pricing, packet pickup, awards, sponsors, course maps, and imagery should be rechecked before customer outreach."
+    },
+    "captured_at": "2026-07-31T20:23:17Z"
+  }
+}
