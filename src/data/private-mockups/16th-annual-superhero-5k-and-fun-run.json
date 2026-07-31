@@ -108,13 +108,24 @@
     "paragraphs": [
       "The 16th Annual Superhero 5K & Fun Run is a foster-care awareness event at Nathan Benderson Park in Sarasota.",
       "Bridge a Life uses the superhero theme to bring child welfare agencies, families, runners, walkers, and the local community together around youth in foster care across Sarasota, Manatee, and DeSoto Counties.",
-      "Race morning includes a Kids\u2019 Fun Run, a chip-timed 5K, costume/team-spirit awards, packet pickup details, and RunSignup registration as the RunSignup registration."
+      "Race morning includes a Kids\u2019 Fun Run, a chip-timed 5K, costume/team-spirit awards, packet pickup details, and RunSignup registration."
     ]
   },
   "schedule": [
     {
       "day": "Saturday, February 6, 2027",
-      "name": "Race-day registration and packet pickup",
+      "name": "Race-day registration",
+      "time": "6:45\u20137:45 AM",
+      "location": "Nathan Benderson Park",
+      "provenance": {
+        "source": "RunSignup race page details",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/FL/Sarasota/BridgealifeSuperhero5KandFunRun"
+      }
+    },
+    {
+      "day": "Saturday, February 6, 2027",
+      "name": "Day-of packet pickup",
       "time": "6:45\u20138:30 AM",
       "location": "Nathan Benderson Park",
       "provenance": {
@@ -181,7 +192,7 @@
     },
     {
       "question": "Where should runners register?",
-      "answer": "The RunSignup registration remains the RunSignup registration page.",
+      "answer": "Registration is handled through RunSignup.",
       "source_url": "https://runsignup.com/Race/FL/Sarasota/BridgealifeSuperhero5KandFunRun"
     }
   ],
