@@ -1,0 +1,432 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "ICCS Fest and Panther Run",
+    "slug": "iccs-fest-panther-run",
+    "short_name": "ICCS Panther Run",
+    "tagline": "Run, walk, and celebrate with ICCS through Lake Charles’ Margaret Place District.",
+    "colors": {
+      "primary": "#7f1d1d",
+      "secondary": "#111827",
+      "accent": "#f97316",
+      "ink": "#1f2937"
+    },
+    "hero_image": {
+      "src": "/mockups/0481013f2250f1c3ed7902a1a3e052f6/hero.jpg",
+      "alt": "ICCS Panther Run race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-121xxx/121533/raceBanner-at8ceSB6-bNj9Ro.jpg",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1"
+    }
+  },
+  "event": {
+    "date": "2026-10-25",
+    "location": "ICCS, Lake Charles, LA",
+    "timezone": "America/Chicago",
+    "venue": "Immaculate Conception Cathedral School",
+    "address": "1536 Ryan Street, Lake Charles, LA 70601"
+  },
+  "organization": {
+    "name": "Immaculate Conception Cathedral School",
+    "url": "https://www.iccschool.org/"
+  },
+  "distances": [
+    {
+      "id": "10k",
+      "name": "ICCS Panther 10K",
+      "distance": "10K",
+      "featured": true,
+      "start_time": "7:30 AM CDT",
+      "highlights": [
+        "10K through Margaret Place District and along Shell Beach Drive.",
+        "$60 registration option"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+      }
+    },
+    {
+      "id": "5k",
+      "name": "ICCS Panther 5K",
+      "distance": "5K",
+      "start_time": "7:30 AM CDT",
+      "highlights": [
+        "Out-and-back 5K route with a Shell Beach Drive section.",
+        "$40 registration option"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+      }
+    },
+    {
+      "id": "one-mile-color-run",
+      "name": "ICCS Panther 1 Mile Color Run",
+      "distance": "1 Mile",
+      "start_time": "10:45 AM CDT",
+      "highlights": [
+        "A one-mile color run connected to ICCS Fest.",
+        "$30 registration option"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register on RunSignup for ICCS Panther Run.",
+    "price_note": "10K $60; 5K $40; 1 Mile Color Run $30; confirm latest prices on RunSignup"
+  },
+  "startline_value": {
+    "headline": "A clearer race page for runners, families, teams, and supporters.",
+    "intro": "This private concept organizes the public ICCS Panther Run details into a mobile-first path from event overview to registration, while keeping RunSignup as the RunSignup registration path.",
+    "improved": [
+      "Places date, venue, distance options, pricing note, and start times near the registration decision.",
+      "Highlights the cause/community story and participation options from the race page.",
+      "Keeps runner questions scannable before sending visitors to RunSignup registration."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees — just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "ICCS Fest",
+    "title": "A Lake Charles school-community race tied to ICCS Fest",
+    "paragraphs": [
+      "ICCS PTO will hold its annual Panther Run/Walk 10K, 5K, and 1-Mile Color Run on Sunday, October 25, 2026.",
+      "The races wind through the Margaret Place District and along Shell Beach Drive, with proceeds benefiting the faculty, staff, and children of ICCS."
+    ],
+    "image": {
+      "src": "/mockups/0481013f2250f1c3ed7902a1a3e052f6/story.png",
+      "alt": "ICCS Panther Run race graphic",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-128109-1733251996.5638-0.bNt1oC.png"
+    }
+  },
+  "schedule": [
+    {
+      "day": "Sunday, October 25, 2026",
+      "name": "ICCS Panther 10K start",
+      "time": "7:30 AM",
+      "location": "Immaculate Conception Cathedral School",
+      "applies_to_distances": [
+        "10k"
+      ],
+      "provenance": {
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+      }
+    },
+    {
+      "day": "Sunday, October 25, 2026",
+      "name": "ICCS Panther 5K start",
+      "time": "7:30 AM",
+      "location": "Immaculate Conception Cathedral School",
+      "applies_to_distances": [
+        "5k"
+      ],
+      "provenance": {
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+      }
+    },
+    {
+      "day": "Sunday, October 25, 2026",
+      "name": "ICCS Panther 1 Mile Color Run start",
+      "time": "10:45 AM",
+      "location": "Immaculate Conception Cathedral School",
+      "applies_to_distances": [
+        "one-mile-color-run"
+      ],
+      "provenance": {
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where does the race take place?",
+      "answer": "Race day takes place at 1536 Ryan Street, Lake Charles, LA 70601.",
+      "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+    },
+    {
+      "question": "What event options are listed?",
+      "answer": "Race options include ICCS Panther 10K, ICCS Panther 5K, ICCS Panther 1 Mile Color Run.",
+      "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+    },
+    {
+      "question": "Where should runners register?",
+      "answer": "Registration remains on the RunSignup registration page.",
+      "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+    }
+  ],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials — date, venue, event options, price note, and start times — before continuing to RunSignup registration.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Sunday, October 25, 2026",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
+        "source_path": "event.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "ICCS Panther 10K, ICCS Panther 5K, ICCS Panther 1 Mile Color Run",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
+        "applies_to_distance_ids": [
+          "10k",
+          "5k",
+          "one-mile-color-run"
+        ],
+        "source_path": "distances"
+      },
+      {
+        "id": "location",
+        "label": "Race day location",
+        "value": "1536 Ryan Street, Lake Charles, LA 70601",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
+        "source_path": "event.address"
+      },
+      {
+        "id": "start-time",
+        "label": "Start times",
+        "value": "ICCS Panther 10K at 7:30 AM CDT; ICCS Panther 5K at 7:30 AM CDT; ICCS Panther 1 Mile Color Run at 10:45 AM CDT",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
+        "applies_to_distance_ids": [
+          "10k",
+          "5k",
+          "one-mile-color-run"
+        ],
+        "source_path": "distances"
+      },
+      {
+        "id": "price",
+        "label": "Registration note",
+        "value": "10K $60; 5K $40; 1 Mile Color Run $30; confirm latest prices on RunSignup",
+        "detail": "Registration prices can change on RunSignup; this concept keeps the RunSignup registration link as the latest details.",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
+        "source_path": "registration.price_note"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "ICCS Panther Run — October 25, 2026",
+    "meta_description": "Race details for ICCS Panther Run at ICCS, Lake Charles, LA."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
+    "source_platform": "runsignup",
+    "source_race_id": "121533",
+    "registration_race_id": "121533",
+    "captured_at": "2026-07-30T22:59:49.426Z",
+    "access_token": "0481013f2250f1c3ed7902a1a3e052f6",
+    "race_slug": "iccs-fest-panther-run",
+    "route": "/private/mockups/0481013f2250f1c3ed7902a1a3e052f6/",
+    "template": "community",
+    "generated_from": "source-backed manual private mockup config authored after owner generation approval",
+    "owner_approved_for_generation": true,
+    "prospect_id": "5cd09cf9-8220-4e71-9ffb-6591d796351f",
+    "prospect_score": null,
+    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and race materials.",
+    "source_urls": [
+      "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
+      "https://www.iccschool.org/",
+      "https://d368g9lw5ileu7.cloudfront.net/races/races-121xxx/121533/raceBanner-at8ceSB6-bNj9Ro.jpg",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-128109-1733251996.5638-0.bNt1oC.png"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "jhart@iccsweb.com",
+        "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
+        "confidence": "high",
+        "recommended": true
+      }
+    ],
+    "assets": [
+      {
+        "type": "image",
+        "role": "hero",
+        "src": "/mockups/0481013f2250f1c3ed7902a1a3e052f6/hero.jpg",
+        "alt": "ICCS Panther Run race artwork",
+        "caption": "Race artwork highlighting the event brand.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-121xxx/121533/raceBanner-at8ceSB6-bNj9Ro.jpg"
+      },
+      {
+        "type": "image",
+        "role": "story",
+        "src": "/mockups/0481013f2250f1c3ed7902a1a3e052f6/story.png",
+        "alt": "ICCS Panther Run race graphic",
+        "caption": "Race graphic from race materials.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-128109-1733251996.5638-0.bNt1oC.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun",
+      "captured_at": "2026-07-30T22:59:49.426Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "schedule",
+        "story",
+        "faqs"
+      ],
+      "source_confirmed_distance_ids": [
+        "10k",
+        "5k",
+        "one-mile-color-run"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "event.venue",
+          "field": "event.venue",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "event.address",
+          "field": "event.address",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "registration.price_note",
+          "field": "registration.price_note",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "field": "runner_decision_checklist.items.start-time",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "faqs",
+          "field": "faqs",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        },
+        {
+          "path": "organization.name",
+          "field": "organization.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/LakeCharles/ICCSPantherRun"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Public race facts were checked against official race sources; customer outreach remains unapproved and was not performed.",
+      "items": [
+        "Customer outreach remains unapproved and should not be sent until Steve approves a send gate.",
+        "Registration pricing can change on RunSignup; the price note records the public value visible at capture time."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on race materials. No customer outreach was sent."
+  }
+}

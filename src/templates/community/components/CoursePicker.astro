@@ -41,7 +41,7 @@ const buildProfile = (distance) => {
 const featuredProfile = buildProfile(featuredDistance);
 const hasFeaturedElevationProfile = Boolean(featuredProfile);
 const suppressCourseVisual = race.course?.suppress_visual === true;
-const courseVisualImage = suppressCourseVisual ? null : (race.course?.image || race.course?.map_image || (!hasFeaturedElevationProfile ? race.story?.image : null));
+const courseVisualImage = suppressCourseVisual ? null : (race.course?.image || race.course?.map_image);
 const hasCourseVisualImage = Boolean(courseVisualImage?.src);
 const detailRows = [
   ['Distance', featuredDistance?.distance, 'dDistance'],

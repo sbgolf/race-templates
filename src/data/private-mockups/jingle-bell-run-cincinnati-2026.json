@@ -1,0 +1,416 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "2026 Jingle Bell Run - Cincinnati, OH",
+    "slug": "jingle-bell-run-cincinnati-2026",
+    "short_name": "Jingle Bell Run Cincinnati",
+    "tagline": "Holiday miles from Northern Kentucky Convention Center for the Arthritis Foundation.",
+    "colors": {
+      "primary": "#991b1b",
+      "secondary": "#166534",
+      "accent": "#facc15",
+      "ink": "#1f2937"
+    },
+    "hero_image": {
+      "src": "/mockups/7e091912c9b81173d5f5d8f0053eca2f/hero.png",
+      "alt": "Jingle Bell Run Cincinnati race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-143/143420/websiteBanner-v3gGxRh9-bQqV2N.png",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1"
+    }
+  },
+  "event": {
+    "date": "2026-12-12",
+    "location": "Northern Kentucky Convention Center, Covington, KY",
+    "timezone": "America/New_York",
+    "venue": "Northern Kentucky Convention Center",
+    "address": "Northern Kentucky Convention Center, Covington, KY 41011"
+  },
+  "organization": {
+    "name": "Arthritis Foundation",
+    "url": "https://www.arthritis.org/"
+  },
+  "distances": [
+    {
+      "id": "5k-timed",
+      "name": "5K Timed",
+      "distance": "5K",
+      "featured": true,
+      "start_time": "8:00 AM EST",
+      "highlights": [
+        "For runners who want the full race-day experience and official results.",
+        "$40 registration option"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+      }
+    },
+    {
+      "id": "5k-untimed",
+      "name": "5K Untimed",
+      "distance": "5K",
+      "start_time": "8:00 AM EST",
+      "highlights": [
+        "For runners who want the full race-day experience.",
+        "$35 registration option"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+      }
+    },
+    {
+      "id": "virtual-jingler",
+      "name": "Virtual Jingler",
+      "distance": "Virtual",
+      "highlights": [
+        "Choose this option to receive a shirt and fundraise for a cure.",
+        "$45 registration option"
+      ],
+      "provenance": {
+        "verified": true,
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup",
+    "intro": "Register on RunSignup for Jingle Bell Run Cincinnati.",
+    "price_note": "5K Timed $40; 5K Untimed $35; Virtual Jingler $45; confirm latest prices on RunSignup"
+  },
+  "startline_value": {
+    "headline": "A clearer race page for runners, families, teams, and supporters.",
+    "intro": "This private concept organizes the public Jingle Bell Run Cincinnati details into a mobile-first path from event overview to registration, while keeping RunSignup as the RunSignup registration path.",
+    "improved": [
+      "Places date, venue, distance options, pricing note, and start times near the registration decision.",
+      "Highlights the cause/community story and participation options from the race page.",
+      "Keeps runner questions scannable before sending visitors to RunSignup registration."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees — just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "Jingle Bell Run",
+    "title": "A Cincinnati-area holiday run that fuels the fight against arthritis",
+    "paragraphs": [
+      "The 2026 Jingle Bell Run - Cincinnati, OH is scheduled for Saturday, December 12, 2026 at Northern Kentucky Convention Center in Covington.",
+      "The race brings festive gear, jingle bells, team fundraising, and community energy together for the Arthritis Foundation."
+    ],
+    "image": {
+      "src": "/mockups/7e091912c9b81173d5f5d8f0053eca2f/story.png",
+      "alt": "Jingle Bell Run Cincinnati race graphic",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race136851-logo-0.bJlCUb.png"
+    }
+  },
+  "schedule": [
+    {
+      "day": "Saturday, December 12, 2026",
+      "name": "5K Timed start",
+      "time": "8:00 AM",
+      "location": "Northern Kentucky Convention Center",
+      "applies_to_distances": [
+        "5k-timed"
+      ],
+      "provenance": {
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+      }
+    },
+    {
+      "day": "Saturday, December 12, 2026",
+      "name": "5K Untimed start",
+      "time": "8:00 AM",
+      "location": "Northern Kentucky Convention Center",
+      "applies_to_distances": [
+        "5k-untimed"
+      ],
+      "provenance": {
+        "source": "RunSignup race page Events section",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where does the race take place?",
+      "answer": "Race day takes place at Northern Kentucky Convention Center, Covington, KY 41011.",
+      "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+    },
+    {
+      "question": "What event options are listed?",
+      "answer": "Race options include 5K Timed, 5K Untimed, Virtual Jingler.",
+      "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+    },
+    {
+      "question": "Where should runners register?",
+      "answer": "Registration remains on the RunSignup registration page.",
+      "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+    }
+  ],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials — date, venue, event options, price note, and start times — before continuing to RunSignup registration.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, December 12, 2026",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
+        "source_path": "event.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "5K Timed, 5K Untimed, Virtual Jingler",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
+        "applies_to_distance_ids": [
+          "5k-timed",
+          "5k-untimed",
+          "virtual-jingler"
+        ],
+        "source_path": "distances"
+      },
+      {
+        "id": "location",
+        "label": "Race day location",
+        "value": "Northern Kentucky Convention Center, Covington, KY 41011",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
+        "source_path": "event.address"
+      },
+      {
+        "id": "start-time",
+        "label": "Start times",
+        "value": "5K Timed at 8:00 AM EST; 5K Untimed at 8:00 AM EST",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
+        "applies_to_distance_ids": [
+          "5k-timed",
+          "5k-untimed"
+        ],
+        "source_path": "distances"
+      },
+      {
+        "id": "price",
+        "label": "Registration note",
+        "value": "5K Timed $40; 5K Untimed $35; Virtual Jingler $45; confirm latest prices on RunSignup",
+        "detail": "Registration prices can change on RunSignup; this concept keeps the RunSignup registration link as the latest details.",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
+        "source_path": "registration.price_note"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Jingle Bell Run Cincinnati — December 12, 2026",
+    "meta_description": "Race details for Jingle Bell Run Cincinnati at Northern Kentucky Convention Center, Covington, KY."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
+    "source_platform": "runsignup",
+    "source_race_id": "136851",
+    "registration_race_id": "136851",
+    "captured_at": "2026-07-30T22:59:49.426Z",
+    "access_token": "7e091912c9b81173d5f5d8f0053eca2f",
+    "race_slug": "jingle-bell-run-cincinnati-2026",
+    "route": "/private/mockups/7e091912c9b81173d5f5d8f0053eca2f/",
+    "template": "community",
+    "generated_from": "source-backed manual private mockup config authored after owner generation approval",
+    "owner_approved_for_generation": true,
+    "prospect_id": "9ac65955-1e5c-4f60-99bc-9e501cd3fa75",
+    "prospect_score": null,
+    "qualification_reason": "Existing qualified Community-lane prospect approved by Steve for private mockup generation after email-contact validation. Public race sources confirm date, venue, registration path, distance options, contact path, and race materials.",
+    "source_urls": [
+      "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
+      "https://www.arthritis.org/",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-143/143420/websiteBanner-v3gGxRh9-bQqV2N.png",
+      "https://d368g9lw5ileu7.cloudfront.net/races/race136851-logo-0.bJlCUb.png"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "value": "event@arthritis.org",
+        "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
+        "confidence": "high",
+        "recommended": true
+      }
+    ],
+    "assets": [
+      {
+        "type": "image",
+        "role": "hero",
+        "src": "/mockups/7e091912c9b81173d5f5d8f0053eca2f/hero.png",
+        "alt": "Jingle Bell Run Cincinnati race artwork",
+        "caption": "Race artwork highlighting the event brand.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericWebsites-143/143420/websiteBanner-v3gGxRh9-bQqV2N.png"
+      },
+      {
+        "type": "image",
+        "role": "story",
+        "src": "/mockups/7e091912c9b81173d5f5d8f0053eca2f/story.png",
+        "alt": "Jingle Bell Run Cincinnati race graphic",
+        "caption": "Race graphic from race materials.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race136851-logo-0.bJlCUb.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH",
+      "captured_at": "2026-07-30T22:59:49.426Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist",
+        "schedule",
+        "story",
+        "faqs"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k-timed",
+        "5k-untimed",
+        "virtual-jingler"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "event.venue",
+          "field": "event.venue",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "event.address",
+          "field": "event.address",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "registration.price_note",
+          "field": "registration.price_note",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "field": "runner_decision_checklist.items.start-time",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "faqs",
+          "field": "faqs",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        },
+        {
+          "path": "organization.name",
+          "field": "organization.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/KY/Covington/JingleBellRunCincinnatiOH"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Public race facts were checked against official race sources; customer outreach remains unapproved and was not performed.",
+      "items": [
+        "Customer outreach remains unapproved and should not be sent until Steve approves a send gate.",
+        "Registration pricing can change on RunSignup; the price note records the public value visible at capture time."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on race materials. No customer outreach was sent."
+  }
+}
