@@ -1,0 +1,261 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "AlexTru Foundation 5K/10K",
+    "slug": "alextru-foundation-4th-annual-5k-now-on-october-31-2026",
+    "tagline": "Run, walk, and support young adults facing cancer treatment.",
+    "hero_image": {
+      "src": "/mockups/81b25320cdfc5995393ebe7cee394345/alextru-race-logo.png",
+      "alt": "AlexTru Foundation - 4th Annual 5k \u2014 now on October 31, 2026! official race artwork",
+      "caption": "Official RunSignup race logo",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race142256-logo-0.bJ1B8T.png",
+      "source_label": "Official RunSignup race logo",
+      "presentation": "logo",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    },
+    "short_name": "AlexTru Foundation 5K"
+  },
+  "event": {
+    "date": "2026-10-31",
+    "location": "West Palm Beach, FL",
+    "timezone": "America/New_York"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "RunSignup discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+        "verified": true
+      },
+      "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k"
+    },
+    {
+      "id": "400m",
+      "name": "Kids 400m Dash",
+      "distance": "400m",
+      "provenance": {
+        "source": "RunSignup discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+        "verified": true
+      },
+      "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k"
+    },
+    {
+      "id": "5k-virtual",
+      "name": "Virtual 5K",
+      "distance": "Virtual 5K",
+      "provenance": {
+        "source": "RunSignup discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+        "verified": true
+      },
+      "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k"
+    },
+    {
+      "id": "10k-registration-all-ages",
+      "name": "10K",
+      "distance": "10K",
+      "provenance": {
+        "source": "RunSignup discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+        "verified": true
+      },
+      "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k"
+    },
+    {
+      "id": "10k-virtual",
+      "name": "Virtual 10K",
+      "distance": "Virtual 10K",
+      "provenance": {
+        "source": "RunSignup discovery output",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+        "verified": true
+      },
+      "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k"
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "This private mockup only uses details already visible in the approved source data.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-10-31",
+        "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "5K, Kids 400m Dash, Virtual 5K, 10K, Virtual 10K",
+        "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+        "applies_to_distance_ids": [
+          "5k",
+          "400m",
+          "5k-virtual",
+          "10k-registration-all-ages",
+          "10k-virtual"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "West Palm Beach, FL",
+        "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "AlexTru Foundation 5K \u2014 2026-10-31",
+    "meta_description": "AlexTru Foundation 5K/10K race information and registration details for runners in West Palm Beach, FL."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "81b25320cdfc5995393ebe7cee394345",
+    "route": "/private/mockups/81b25320cdfc5995393ebe7cee394345/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+    "source_platform": "runsignup",
+    "source_race_id": "142256",
+    "registration_race_id": "142256",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 0,
+    "source_urls": [
+      "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+      "https://alextru.org/",
+      "https://d368g9lw5ileu7.cloudfront.net/races/race142256-logo-0.bJ1B8T.png",
+      "https://findarace.com/us/events/alextru-foundation-4th-annual-5k-now-on-october-31-2026"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "path": "identity.name",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k"
+        },
+        {
+          "field": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "path": "event.date",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k"
+        },
+        {
+          "field": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "path": "event.location",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k"
+        },
+        {
+          "field": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium",
+          "path": "distances",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k"
+        },
+        {
+          "field": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high",
+          "path": "registration.url",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+          "confidence": "high",
+          "path": "runner_decision_checklist.items.location"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/FL/WestPalmBeach/AlexTruFoundationFirstAnnual5k",
+      "source_confirmed_distance_ids": [
+        "5k",
+        "400m",
+        "5k-virtual",
+        "10k-registration-all-ages",
+        "10k-virtual"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Generated from RunSignup and official/event source details available during discovery; schedule, pricing, packet pickup, awards, sponsors, course maps, and imagery should be rechecked before customer outreach."
+    },
+    "captured_at": "2026-07-31T20:23:17Z"
+  }
+}
