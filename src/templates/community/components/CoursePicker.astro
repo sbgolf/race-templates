@@ -7,6 +7,10 @@ const isMultiDistance = distances.length > 1;
 const lead = isMultiDistance
   ? 'Select an event option to review the confirmed race details available here.'
   : 'Review the confirmed race details available here.';
+const normalizeDetailValue = (value) => String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+const isDistinctDistanceValue = (distance) => Boolean(
+  distance?.distance && normalizeDetailValue(distance.distance) !== normalizeDetailValue(distance.name)
+);
 const getElevationProfile = (distance) => {
   if (Array.isArray(distance?.elevation_profile) && distance.elevation_profile.length >= 2) return distance.elevation_profile;
   if (distance?.featured && Array.isArray(race.course?.elevation_profile) && race.course.elevation_profile.length >= 2) return race.course.elevation_profile;
@@ -45,18 +49,18 @@ const courseVisualImage = suppressCourseVisual ? null : (race.course?.image || r
 const hasCourseVisualImage = Boolean(courseVisualImage?.src);
 const detailRows = [
   ['Event option', featuredDistance?.name, 'dName'],
-  ['Distance', featuredDistance?.distance, 'dDistance'],
+  ['Distance', isDistinctDistanceValue(featuredDistance) ? featuredDistance?.distance : undefined, 'dDistance'],
   ['Total Ascent', featuredDistance?.elevation_gain, 'dGain'],
   ['Start Time', featuredDistance?.start_time, 'dStart'],
   ['Aid Stations', featuredDistance?.aid_stations === undefined ? undefined : String(featuredDistance.aid_stations), 'dAid'],
   ['Course Profile', featuredDistance?.profile, 'dProfile'],
   ['Certification', featuredDistance?.certification, 'dCert']
-].filter(([, value]) => value);
+];
 const distanceData = Object.fromEntries(distances.map((distance) => {
   const profile = buildProfile(distance);
   return [distance.id, {
     name: distance.name,
-    distance: distance.distance,
+    distance: isDistinctDistanceValue(distance) ? distance.distance : '',
     gain: distance.elevation_gain || '',
     start: distance.start_time || '',
     aid: distance.aid_stations === undefined ? '' : String(distance.aid_stations),
@@ -92,7 +96,7 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
 
     {isMultiDistance ? <div class="picker reveal" role="tablist" aria-label="Distance picker">
       {distances.map((distance) => <button class:list={["pk", { active: distance.id === featuredDistance?.id }]} role="tab" aria-selected={distance.id === featuredDistance?.id ? 'true' : 'false'} data-distance={distance.id} onclick="pickDistance(this)">
-        <span class="pk-label">{distance.name}</span><small>{distance.distance}</small>
+        <span class="pk-label">{distance.name}</span>{isDistinctDistanceValue(distance) ? <small>{distance.distance}</small> : null}
       </button>)}
     </div> : null}
 
@@ -130,7 +134,7 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
       </div> : null}
 
       <div class="course-details reveal">
-        {detailRows.map(([label, value, id]) => <div class="detail-row">
+        {detailRows.map(([label, value, id]) => <div class="detail-row" hidden={!value}>
           <span class="l">{label}</span>
           <span class="v" id={id} class:list={[{ cert: id === 'dCert' }]}>{value}</span>
         </div>)}
@@ -148,7 +152,13 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
     const data=distanceData[selected];
     if(!data) return;
 
-    const setText = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
+    const setText = (id, value) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = value || '';
+      const row = el.closest('.detail-row');
+      if (row) row.hidden = !value;
+    };
     setText('dName', data.name);
     setText('dDistance', data.distance);
     setText('dGain', data.gain);

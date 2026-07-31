@@ -624,6 +624,17 @@ async function validateCommunityAuditGuards(html, anchors, config, errors) {
   }
 
   const entryRegistrationAnchors = anchors.filter((anchor) => anchor.attrs['data-analytics-placement']?.startsWith('entry-distance-'));
+  const courseDetailRows = extractCommunityCourseDetailRows(html);
+  const eventOptionRow = courseDetailRows.find((row) => normalizeRenderedValue(row.label) === 'event option');
+  const distanceRow = courseDetailRows.find((row) => normalizeRenderedValue(row.label) === 'distance');
+  if (eventOptionRow && distanceRow && normalizeRenderedValue(eventOptionRow.value) === normalizeRenderedValue(distanceRow.value)) {
+    errors.push('Community Course details repeat the same value for Event option and Distance; hide Distance unless it adds distinct source-backed detail.');
+  }
+  extractCommunityPickerOptions(html).forEach((option) => {
+    if (option.subline && normalizeRenderedValue(option.label) === normalizeRenderedValue(option.subline)) {
+      errors.push(`Community distance picker repeats "${option.label}" as both option label and subline; hide the subline unless it adds distinct detail.`);
+    }
+  });
   const communitySlug = String(config?.private_mockup?.slug || config?.identity?.slug || config?.identity?.name || '').toLowerCase();
   if (communitySlug.includes('tom-king')) {
     const checklistItems = asArray(config?.runner_decision_checklist?.items);
@@ -668,6 +679,32 @@ async function validateCommunityAuditGuards(html, anchors, config, errors) {
 function extractImages(html) {
   return [...String(html || '').matchAll(/<div\b([^>]*)>\s*<img\b([^>]*)>/gi)]
     .map((match) => ({ contextClass: parseAttrs(match[1] || '').class || '', attrs: parseAttrs(match[2] || '') }));
+}
+
+function extractCommunityCourseDetailRows(html) {
+  return [...String(html || '').matchAll(/<div\b[^>]*class=["'][^"']*\bdetail-row\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/gi)]
+    .map((match) => {
+      const rowHtml = match[1] || '';
+      const label = visibleText(rowHtml.match(/<span\b[^>]*class=["'][^"']*\bl\b[^"']*["'][^>]*>([\s\S]*?)<\/span>/i)?.[1] || '');
+      const value = visibleText(rowHtml.match(/<span\b[^>]*class=["'][^"']*\bv\b[^"']*["'][^>]*>([\s\S]*?)<\/span>/i)?.[1] || '');
+      return { label, value };
+    })
+    .filter((row) => row.label || row.value);
+}
+
+function extractCommunityPickerOptions(html) {
+  return [...String(html || '').matchAll(/<button\b[^>]*class=["'][^"']*\bpk\b[^"']*["'][^>]*>([\s\S]*?)<\/button>/gi)]
+    .map((match) => {
+      const buttonHtml = match[1] || '';
+      const label = visibleText(buttonHtml.match(/<span\b[^>]*class=["'][^"']*\bpk-label\b[^"']*["'][^>]*>([\s\S]*?)<\/span>/i)?.[1] || '');
+      const subline = visibleText(buttonHtml.match(/<small\b[^>]*>([\s\S]*?)<\/small>/i)?.[1] || '');
+      return { label, subline };
+    })
+    .filter((option) => option.label || option.subline);
+}
+
+function normalizeRenderedValue(value) {
+  return String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
 }
 
 function cssRuleForSelector(css, selector) {
