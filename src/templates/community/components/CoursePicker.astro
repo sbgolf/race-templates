@@ -5,8 +5,8 @@ const featuredDistance = distances.find((distance) => distance.featured) || dist
 const courseLocation = race.event?.venue || race.event?.location || 'Start / finish';
 const isMultiDistance = distances.length > 1;
 const lead = isMultiDistance
-  ? 'Select an event distance to review the available course details.'
-  : 'Review the available course details.';
+  ? 'Select an event option to review the confirmed race details available here.'
+  : 'Review the confirmed race details available here.';
 const getElevationProfile = (distance) => {
   if (Array.isArray(distance?.elevation_profile) && distance.elevation_profile.length >= 2) return distance.elevation_profile;
   if (distance?.featured && Array.isArray(race.course?.elevation_profile) && race.course.elevation_profile.length >= 2) return race.course.elevation_profile;
@@ -44,6 +44,7 @@ const suppressCourseVisual = race.course?.suppress_visual === true;
 const courseVisualImage = suppressCourseVisual ? null : (race.course?.image || race.course?.map_image);
 const hasCourseVisualImage = Boolean(courseVisualImage?.src);
 const detailRows = [
+  ['Event option', featuredDistance?.name, 'dName'],
   ['Distance', featuredDistance?.distance, 'dDistance'],
   ['Total Ascent', featuredDistance?.elevation_gain, 'dGain'],
   ['Start Time', featuredDistance?.start_time, 'dStart'],
@@ -148,6 +149,7 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
     if(!data) return;
 
     const setText = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
+    setText('dName', data.name);
     setText('dDistance', data.distance);
     setText('dGain', data.gain);
     setText('dStart', data.start);

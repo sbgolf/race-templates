@@ -2,7 +2,7 @@
   "identity": {
     "template": "community",
     "name": "30th Annual Shelter for Help in Emergency 5K Run/Walk for Shelter",
-    "tagline": "Charlottesville 5K supporting survivor services.",
+    "tagline": "Charlottesville charity 5K.",
     "edition": "Charlottesville, VA",
     "hero_image": {
       "src": "/mockups/cef6d6c1bb90fd837f52c97a792e1301/1-40925d440d.jpg",
@@ -74,7 +74,7 @@
     "paragraphs": [
       "The 30th Annual 5K Run/Walk for Shelter supports the Shelter for Help in Emergency in Charlottesville.",
       "Since 1979, the Shelter has supported and empowered victims of domestic and intimate partner violence through residential and community-based outreach services.",
-      "Race details include a Saturday morning start on Charlottesville\u2019s Downtown Mall, packet pickup information, awards, and RunSignup registration."
+      "Race details include a Saturday morning start on Charlottesville\u2019s Downtown Mall, awards, and RunSignup registration."
     ]
   },
   "schedule": [
@@ -87,17 +87,6 @@
         "source": "RunSignup race page details",
         "confidence": "medium",
         "source_url": "https://runsignup.com/Race/VA/Charlottesville/5KRunWalkforShelter"
-      }
-    },
-    {
-      "day": "Friday, October 31, 2026",
-      "name": "Packet pickup",
-      "time": "8:30 AM\u20136:00 PM",
-      "location": "Scrappy Elephant, 1745 Allied St Suite C, Charlottesville, VA 22903",
-      "provenance": {
-        "source": "RunSignup race page packet pickup details",
-        "confidence": "medium",
-        "source_url": "https://runsignup.com/Race/VA/Charlottesville/5KRunWalkforShelter#mainContent"
       }
     }
   ],
