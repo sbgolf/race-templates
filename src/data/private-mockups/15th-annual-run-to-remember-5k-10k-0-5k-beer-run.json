@@ -1,13 +1,16 @@
 {
   "identity": {
     "template": "community",
-    "name": "15th annual Run to Remember 5K/10K and half-kilometer Beer Run",
-    "tagline": "A San Antonio family race supporting Alzheimer\u2019s Association fundraising through Beard vs Beans.",
+    "name": "15th annual Run to Remember 5K/10K and 0.5k Beer Run",
+    "tagline": "San Antonio run/walk supporting local Alzheimer\u2019s fundraising.",
     "edition": "San Antonio, TX",
     "hero_image": {
-      "src": "/mockups/f895d8e1a0d6f3d2ebe0776cb1b45af0/1-26473cf4d8.jpg",
-      "alt": "Public race-site image captured for concept direction",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race67307-socialShareLargeImage.bQpiGb.jpg"
+      "src": "/mockups/f895d8e1a0d6f3d2ebe0776cb1b45af0/2-f72e2aa968.jpg",
+      "alt": "Run to Remember runners on the Mission County Park path",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-67xxx/67307/raceBanner-gaP6UIjZ-bQpilb.jpg",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "1200 / 630"
     },
     "colors": {
       "primary": "#C6643D",
@@ -63,7 +66,7 @@
       "distance": "half-kilometer",
       "featured": false,
       "highlights": [
-        "Post-5K/10K beer race option with event swag noted on the race page."
+        "Post-5K/10K beer race option with event swag noted on race details."
       ],
       "map_label": "half-kilometer",
       "provenance": {
@@ -93,13 +96,45 @@
       "distance": "Virtual",
       "featured": false,
       "highlights": [
-        "Donation/virtual option for remote supporters."
+        "Sleep-in donation and virtual support option.",
+        "No in-person course is required for this option."
       ],
       "map_label": "Virtual",
       "provenance": {
         "verified": true,
         "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K",
         "method": "RunSignup event listing/description"
+      },
+      "start_time": "Support remotely"
+    },
+    {
+      "id": "assisted-wheelchair-5k",
+      "name": "Assisted Wheelchair Duo 5k",
+      "distance": "5K assisted wheelchair duo",
+      "featured": false,
+      "highlights": [
+        "Assisted wheelchair duo option for the 5K."
+      ],
+      "map_label": "5K",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/Register/?raceId=67307",
+        "method": "RunSignup event listing"
+      }
+    },
+    {
+      "id": "assisted-wheelchair-10k",
+      "name": "Assisted Wheelchair Duo 10k",
+      "distance": "10K assisted wheelchair duo",
+      "featured": false,
+      "highlights": [
+        "Assisted wheelchair duo option for the 10K."
+      ],
+      "map_label": "10K",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/Register/?raceId=67307",
+        "method": "RunSignup event listing"
       }
     }
   ],
@@ -127,37 +162,32 @@
     "kicker": "Race overview",
     "title": "About Run to Remember",
     "paragraphs": [
-      "Run to Remember is a San Antonio 5K/10K, half-kilometer Beer Run, and kids race organized by the Beard vs Beans family fundraising effort.",
+      "Run to Remember is a San Antonio 5K/10K, half-kilometer Beer Run, and kids race organized by the Beard vs Beans fundraising effort.",
       "The event raises funds for the Alzheimer\u2019s Association of San Antonio and South Texas while keeping the race-day experience lighthearted and community-centered.",
-      "The race page highlights medals, shirts, family participation, team fundraising, and RunSignup registration as the official path."
-    ],
-    "image": {
-      "src": "/mockups/f895d8e1a0d6f3d2ebe0776cb1b45af0/2-f72e2aa968.jpg",
-      "alt": "Course or race image for 15th annual Run to Remember 5K/10K and half-kilometer Beer Run",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-67xxx/67307/raceBanner-gaP6UIjZ-bQpilb.jpg"
-    }
+      "Race details highlight medals, shirts, family participation, team fundraising, and RunSignup registration."
+    ]
   },
   "schedule": [],
   "faqs": [
     {
       "question": "Where does the race take place?",
-      "answer": "RunSignup lists Mission County Park at 6030 Padre Drive in San Antonio.",
+      "answer": "Race options include Mission County Park at 6030 Padre Drive in San Antonio.",
       "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K"
     },
     {
       "question": "What cause does the event support?",
-      "answer": "Race details say proceeds benefit the Alzheimer\u2019s Association of San Antonio and South Texas.",
+      "answer": "Race details explain proceeds benefit the Alzheimer\u2019s Association of San Antonio and South Texas.",
       "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K"
     },
     {
       "question": "What event options are listed?",
-      "answer": "RunSignup lists 5K, 10K, half-kilometer Beer Race, half-kilometer Kids Run, assisted wheelchair duo options, and a sleep-in/virtual donation option.",
+      "answer": "Race options include 5K, 10K, 0.5k Beer Race, 0.5k Kids Run, assisted wheelchair duo options, and a sleep-in/virtual donation option.",
       "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K"
     }
   ],
   "runner_decision_checklist": {
     "headline": "Key race details before you register",
-    "intro": "Review the essentials from the public race page before continuing to the official RunSignup registration path.",
+    "intro": "Review the essential race details before continuing to RunSignup registration.",
     "items": [
       {
         "id": "date",
@@ -169,7 +199,7 @@
       {
         "id": "distance",
         "label": "Event options",
-        "value": "5K Run/Walk, 10K, half-kilometer Beer Race, half-kilometer Kids Run, Sleep-In Donation/Virtual",
+        "value": "5K Run/Walk, 10K, 0.5K Beer Race, 0.5K Kids Run, Sleep-In Donation/Virtual, Assisted Wheelchair Duo 5k, Assisted Wheelchair Duo 10k",
         "source_path": "distances",
         "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K",
         "applies_to_distance_ids": [
@@ -177,7 +207,9 @@
           "10k",
           "beer-run",
           "kids-run",
-          "virtual"
+          "virtual",
+          "assisted-wheelchair-5k",
+          "assisted-wheelchair-10k"
         ]
       },
       {
@@ -190,15 +222,16 @@
       {
         "id": "price",
         "label": "Registration check",
-        "value": "RunSignup registration page is the official registration path.",
+        "value": "Registration is handled through RunSignup.",
         "source_path": "registration.url",
         "source_url": "https://runsignup.com/Race/TX/SanAntonio/RuntoRemember5K10K"
       }
     ]
   },
   "seo": {
-    "meta_title": "15th annual Run to Remember 5K/10K and half-kilometer Beer Run \u2014 Race Website Preview",
-    "meta_description": "Run to Remember is a San Antonio 5K/10K, half-kilometer Beer Run, and kids race organized by the Beard vs Beans family fundraising effort."
+    "meta_title": "15th annual Run to Remember 5K/10K and 0.5k Beer Run \u2014 Race Website Preview",
+    "meta_description": "Run to Remember is a San Antonio 5K/10K, 0.5k Beer Run, and kids race organized by the Beard vs Beans fundraising effort.",
+    "title": "15th annual Run to Remember 5K/10K and 0.5k Beer Run \u2014 race website"
   },
   "private_mockup": {
     "generated": true,
@@ -211,15 +244,9 @@
     "template": "community",
     "assets": [
       {
-        "src": "/mockups/f895d8e1a0d6f3d2ebe0776cb1b45af0/1-26473cf4d8.jpg",
-        "alt": "Public race-site image captured for concept direction",
-        "caption": "Public race-site image used for concept direction.",
-        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race67307-socialShareLargeImage.bQpiGb.jpg"
-      },
-      {
         "src": "/mockups/f895d8e1a0d6f3d2ebe0776cb1b45af0/2-f72e2aa968.jpg",
-        "alt": "Public race-site image captured for concept direction",
-        "caption": "Additional public race-site visual reference.",
+        "alt": "Run to Remember runners on the Mission County Park path",
+        "caption": "Run to Remember runners on the Mission County Park path.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-67xxx/67307/raceBanner-gaP6UIjZ-bQpilb.jpg"
       }
     ],
@@ -241,7 +268,9 @@
         "10k",
         "beer-run",
         "kids-run",
-        "virtual"
+        "virtual",
+        "assisted-wheelchair-5k",
+        "assisted-wheelchair-10k"
       ],
       "items": [
         {
@@ -353,6 +382,16 @@
           "path": "runner_decision_checklist.items.price",
           "source": "registration link/status from RunSignup public race page",
           "confidence": "medium"
+        },
+        {
+          "path": "distances[5]",
+          "source": "RunSignup event listing: Assisted Wheelchair Duo 5k",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[6]",
+          "source": "RunSignup event listing: Assisted Wheelchair Duo 10k",
+          "confidence": "high"
         }
       ]
     },
@@ -364,7 +403,7 @@
     "uncertainty": {
       "summary": "Some source facts were not available with high confidence and were omitted from rendered sections.",
       "items": [
-        "Start time was not found in the race page; omitted from distance details.",
+        "Start time was not found in race details; omitted from distance details.",
         "Current entry price was not found with high confidence; omitted from distance cards.",
         "Course certification/sanctioning was not found with high confidence; omitted from course details.",
         "Aid-station count was not found with high confidence; omitted from course details.",

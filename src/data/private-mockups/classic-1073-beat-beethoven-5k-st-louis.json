@@ -2,12 +2,15 @@
   "identity": {
     "template": "community",
     "name": "Classic 107.3 Beat Beethoven 5K",
-    "tagline": "A St. Louis classical-music race where runners try to finish before Beethoven\u2019s Fifth ends.",
+    "tagline": "St. Louis 5K where runners try to beat Beethoven\u2019s Fifth.",
     "edition": "Maryland Heights, MO",
     "hero_image": {
-      "src": "/mockups/2d3600321ac7838640bc1ccafadc1ba4/1-2799f14ca8.png",
-      "alt": "Public race-site image captured for concept direction",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race139345-socialShareLargeImage.bPAsUr.png"
+      "src": "/mockups/2d3600321ac7838640bc1ccafadc1ba4/2-ff83cfc8ad.png",
+      "alt": "Classic 107.3 station logo",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-145914-1747240989.8883-0.bOjmGD.png",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "1200 / 630"
     },
     "colors": {
       "primary": "#C6643D",
@@ -64,14 +67,16 @@
       "distance": "Virtual 5K",
       "featured": false,
       "highlights": [
-        "Virtual option listed on RunSignup."
+        "Complete a virtual 5K through the RunSignup virtual option.",
+        "See RunSignup for virtual participation details."
       ],
       "map_label": "Virtual 5K",
       "provenance": {
         "verified": true,
         "source_url": "https://runsignup.com/Race/MO/MarylandHeights/Classic1073BeatBeethoven5K",
         "method": "RunSignup event listing/description"
-      }
+      },
+      "start_time": "Complete virtually"
     }
   ],
   "registration": {
@@ -101,23 +106,18 @@
       "Classic 107.3 Beat Beethoven 5K brings runners and walkers to Creve Coeur Lake Park for a music-forward community event.",
       "The 5K challenge is simple and memorable: finish before the end of Beethoven\u2019s famous Symphony No. 5, roughly 33 minutes.",
       "The event supports Classic 107.3 - Radio Arts Foundation, the community-supported arts and classical radio station in St. Louis."
-    ],
-    "image": {
-      "src": "/mockups/2d3600321ac7838640bc1ccafadc1ba4/2-ff83cfc8ad.png",
-      "alt": "Course or race image for Classic 107.3 Beat Beethoven 5K",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-145914-1747240989.8883-0.bOjmGD.png"
-    }
+    ]
   },
   "schedule": [],
   "faqs": [
     {
       "question": "Where does the race take place?",
-      "answer": "RunSignup lists Creve Coeur Lake Park at 13725 Marine Ave in Maryland Heights, MO.",
+      "answer": "Race options include Creve Coeur Lake Park at 13725 Marine Ave in Maryland Heights, MO.",
       "source_url": "https://runsignup.com/Race/MO/MarylandHeights/Classic1073BeatBeethoven5K"
     },
     {
       "question": "What is the Beat Beethoven challenge?",
-      "answer": "Race details say the goal is to finish before Beethoven\u2019s Fifth Symphony ends, about 33 minutes.",
+      "answer": "Race details explain the goal is to finish before Beethoven\u2019s Fifth Symphony ends, about 33 minutes.",
       "source_url": "https://runsignup.com/Race/MO/MarylandHeights/Classic1073BeatBeethoven5K"
     },
     {
@@ -128,7 +128,7 @@
   ],
   "runner_decision_checklist": {
     "headline": "Key race details before you register",
-    "intro": "Review the essentials from the public race page before continuing to the official RunSignup registration path.",
+    "intro": "Review the essential race details before continuing to RunSignup registration.",
     "items": [
       {
         "id": "date",
@@ -159,7 +159,7 @@
       {
         "id": "price",
         "label": "Registration check",
-        "value": "RunSignup registration page is the official registration path.",
+        "value": "Registration opens August 1, 2026 on RunSignup.",
         "source_path": "registration.url",
         "source_url": "https://runsignup.com/Race/MO/MarylandHeights/Classic1073BeatBeethoven5K"
       }
@@ -180,15 +180,9 @@
     "template": "community",
     "assets": [
       {
-        "src": "/mockups/2d3600321ac7838640bc1ccafadc1ba4/1-2799f14ca8.png",
-        "alt": "Public race-site image captured for concept direction",
-        "caption": "Public race-site image used for concept direction.",
-        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race139345-socialShareLargeImage.bPAsUr.png"
-      },
-      {
         "src": "/mockups/2d3600321ac7838640bc1ccafadc1ba4/2-ff83cfc8ad.png",
-        "alt": "Public race-site image captured for concept direction",
-        "caption": "Additional public race-site visual reference.",
+        "alt": "Classic 107.3 station logo",
+        "caption": "Classic 107.3 race partner artwork.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-145914-1747240989.8883-0.bOjmGD.png"
       }
     ],
@@ -336,7 +330,7 @@
     "uncertainty": {
       "summary": "Some source facts were not available with high confidence and were omitted from rendered sections.",
       "items": [
-        "Start time was not found in the race page; omitted from distance details.",
+        "Start time was not found in race details; omitted from distance details.",
         "Current entry price was not found with high confidence; omitted from distance cards.",
         "Course certification/sanctioning was not found with high confidence; omitted from course details.",
         "Aid-station count was not found with high confidence; omitted from course details.",

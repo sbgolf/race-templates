@@ -2,12 +2,15 @@
   "identity": {
     "template": "community",
     "name": "30th Annual Shelter for Help in Emergency 5K Run/Walk for Shelter",
-    "tagline": "A Charlottesville 5K supporting trauma-informed services for survivors of domestic and intimate partner violence.",
+    "tagline": "Charlottesville 5K supporting survivor services.",
     "edition": "Charlottesville, VA",
     "hero_image": {
       "src": "/mockups/cef6d6c1bb90fd837f52c97a792e1301/1-40925d440d.jpg",
-      "alt": "Public race-site image captured for concept direction",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race50482-social1200x630.bzIG4A.jpg"
+      "alt": "Shelter for Help in Emergency logo",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race50482-social1200x630.bzIG4A.jpg",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "1200 / 630"
     },
     "colors": {
       "primary": "#C6643D",
@@ -35,7 +38,7 @@
       "start_time": "8:00 AM",
       "highlights": [
         "Annual 5K Run/Walk staged from the Charlottesville Downtown Mall.",
-        "Awards include top overall, masters, and age-group categories according to the race page."
+        "Awards include top overall and masters categories, plus grab bag prizes."
       ],
       "map_label": "5K",
       "provenance": {
@@ -71,13 +74,8 @@
     "paragraphs": [
       "The 30th Annual 5K Run/Walk for Shelter supports the Shelter for Help in Emergency in Charlottesville.",
       "Since 1979, the Shelter has supported and empowered victims of domestic and intimate partner violence through residential and community-based outreach services.",
-      "Race details include a Saturday race morning on Charlottesville\u2019s Downtown Mall, packet pickup details, awards, and RunSignup as the official registration path."
-    ],
-    "image": {
-      "src": "/mockups/cef6d6c1bb90fd837f52c97a792e1301/2-3f3fbbff4e.png",
-      "alt": "Course or race image for 30th Annual Shelter for Help in Emergency 5K Run/Walk for Shelter",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race50482-logo-0.bzIG4A.png"
-    }
+      "Race details include a Saturday morning start on Charlottesville\u2019s Downtown Mall, packet pickup information, awards, and RunSignup registration."
+    ]
   },
   "schedule": [
     {
@@ -90,12 +88,23 @@
         "confidence": "medium",
         "source_url": "https://runsignup.com/Race/VA/Charlottesville/5KRunWalkforShelter"
       }
+    },
+    {
+      "day": "Friday, October 31, 2026",
+      "name": "Packet pickup",
+      "time": "8:30 AM\u20136:00 PM",
+      "location": "Scrappy Elephant, 1745 Allied St Suite C, Charlottesville, VA 22903",
+      "provenance": {
+        "source": "RunSignup race page packet pickup details",
+        "confidence": "medium",
+        "source_url": "https://runsignup.com/Race/VA/Charlottesville/5KRunWalkforShelter#mainContent"
+      }
     }
   ],
   "faqs": [
     {
       "question": "Where is race day?",
-      "answer": "RunSignup lists the Charlottesville Downtown Mall as the race-day location.",
+      "answer": "Race options include the Charlottesville Downtown Mall as the race-day location.",
       "source_url": "https://runsignup.com/Race/VA/Charlottesville/5KRunWalkforShelter"
     },
     {
@@ -105,13 +114,13 @@
     },
     {
       "question": "Is registration open?",
-      "answer": "The discovery data marked registration as not open at capture time, so the official RunSignup page should be checked before outreach.",
+      "answer": "The race details showed registration as not yet open, so the RunSignup page should be checked before planning race day.",
       "source_url": "https://runsignup.com/Race/VA/Charlottesville/5KRunWalkforShelter"
     }
   ],
   "runner_decision_checklist": {
     "headline": "Key race details before you register",
-    "intro": "Review the essentials from the public race page before continuing to the official RunSignup registration path.",
+    "intro": "Review the essential race details before continuing to RunSignup registration.",
     "items": [
       {
         "id": "date",
@@ -140,7 +149,7 @@
       {
         "id": "price",
         "label": "Registration check",
-        "value": "Check the official RunSignup page for current open/closed status before outreach.",
+        "value": "Registration opens September 2, 2026 at 12:01 AM EDT on RunSignup.",
         "source_path": "registration.url",
         "source_url": "https://runsignup.com/Race/VA/Charlottesville/5KRunWalkforShelter"
       }
@@ -162,15 +171,9 @@
     "assets": [
       {
         "src": "/mockups/cef6d6c1bb90fd837f52c97a792e1301/1-40925d440d.jpg",
-        "alt": "Public race-site image captured for concept direction",
-        "caption": "Public race-site image used for concept direction.",
+        "alt": "Shelter for Help in Emergency logo",
+        "caption": "Shelter for Help in Emergency race beneficiary artwork.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/races/race50482-social1200x630.bzIG4A.jpg"
-      },
-      {
-        "src": "/mockups/cef6d6c1bb90fd837f52c97a792e1301/2-3f3fbbff4e.png",
-        "alt": "Public race-site image captured for concept direction",
-        "caption": "Additional public race-site visual reference.",
-        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race50482-logo-0.bzIG4A.png"
       }
     ],
     "provenance": {
@@ -296,7 +299,7 @@
     "uncertainty": {
       "summary": "Some source facts were not available with high confidence and were omitted from rendered sections.",
       "items": [
-        "Start time was not found in the race page; omitted from distance details.",
+        "Start time was not found in race details; omitted from distance details.",
         "Current entry price was not found with high confidence; omitted from distance cards.",
         "Course certification/sanctioning was not found with high confidence; omitted from course details.",
         "Aid-station count was not found with high confidence; omitted from course details.",

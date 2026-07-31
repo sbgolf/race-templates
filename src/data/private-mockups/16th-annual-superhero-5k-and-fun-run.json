@@ -2,12 +2,15 @@
   "identity": {
     "template": "community",
     "name": "16th Annual Superhero 5K and Fun Run",
-    "tagline": "A Sarasota foster-care awareness race where everyday heroes run, walk, and celebrate together.",
+    "tagline": "Sarasota foster-care awareness run/walk.",
     "edition": "Sarasota, FL",
     "hero_image": {
-      "src": "/mockups/5bfcb1fad881aa536ac6edd2870a01c8/1-142281908e.png",
-      "alt": "Public race-site image captured for concept direction",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race48910-socialShareLargeImage.bOpSa-.png"
+      "src": "/mockups/5bfcb1fad881aa536ac6edd2870a01c8/2-a45d3e5b4c.png",
+      "alt": "Bridge a Life Superhero Race artwork for February 6, 2027",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-55613-1780426084.8802-0.bQhYvK.png",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "1200 / 630"
     },
     "colors": {
       "primary": "#C6643D",
@@ -67,14 +70,16 @@
       "distance": "Virtual 5K",
       "featured": false,
       "highlights": [
-        "Virtual option listed on RunSignup for supporters who cannot attend in person."
+        "Run your own 5K at your own place while supporting Bridge a Life.",
+        "See RunSignup for virtual participation details."
       ],
       "map_label": "Virtual 5K",
       "provenance": {
         "verified": true,
         "source_url": "https://runsignup.com/Race/FL/Sarasota/BridgealifeSuperhero5KandFunRun",
         "method": "RunSignup event listing/description"
-      }
+      },
+      "start_time": "Complete on your own schedule"
     }
   ],
   "registration": {
@@ -103,19 +108,14 @@
     "paragraphs": [
       "The 16th Annual Superhero 5K & Fun Run is a foster-care awareness event at Nathan Benderson Park in Sarasota.",
       "Bridge a Life uses the superhero theme to bring child welfare agencies, families, runners, walkers, and the local community together around youth in foster care across Sarasota, Manatee, and DeSoto Counties.",
-      "Race morning includes a Kids\u2019 Fun Run, a chip-timed 5K, costume/team-spirit awards, packet pickup details, and RunSignup registration as the official registration path."
-    ],
-    "image": {
-      "src": "/mockups/5bfcb1fad881aa536ac6edd2870a01c8/2-a45d3e5b4c.png",
-      "alt": "Course or race image for 16th Annual Superhero 5K and Fun Run",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-55613-1780426084.8802-0.bQhYvK.png"
-    }
+      "Race morning includes a Kids\u2019 Fun Run, a chip-timed 5K, costume/team-spirit awards, packet pickup details, and RunSignup registration as the RunSignup registration."
+    ]
   },
   "schedule": [
     {
       "day": "Saturday, February 6, 2027",
-      "name": "Race-day registration / packet pickup",
-      "time": "6:45 AM",
+      "name": "Race-day registration and packet pickup",
+      "time": "6:45\u20138:30 AM",
       "location": "Nathan Benderson Park",
       "provenance": {
         "source": "RunSignup race page details",
@@ -171,23 +171,23 @@
   "faqs": [
     {
       "question": "Where is race day staged?",
-      "answer": "Race details say the start/finish line is on the island near the rowing finish tower at Nathan Benderson Park.",
+      "answer": "Race details explain the start/finish line is on the island near the rowing finish tower at Nathan Benderson Park.",
       "source_url": "https://runsignup.com/Race/FL/Sarasota/BridgealifeSuperhero5KandFunRun"
     },
     {
       "question": "What event options are listed?",
-      "answer": "RunSignup lists the Superhero 5K, Superhero Fun Run, and Virtual Superhero 5K.",
+      "answer": "Race options include the Superhero 5K, Superhero Fun Run, and Virtual Superhero 5K.",
       "source_url": "https://runsignup.com/Race/FL/Sarasota/BridgealifeSuperhero5KandFunRun"
     },
     {
       "question": "Where should runners register?",
-      "answer": "The official registration path remains the RunSignup registration page.",
+      "answer": "The RunSignup registration remains the RunSignup registration page.",
       "source_url": "https://runsignup.com/Race/FL/Sarasota/BridgealifeSuperhero5KandFunRun"
     }
   ],
   "runner_decision_checklist": {
     "headline": "Key race details before you register",
-    "intro": "Review the essentials from the public race page before continuing to the official RunSignup registration path.",
+    "intro": "Review the essential race details before continuing to RunSignup registration.",
     "items": [
       {
         "id": "date",
@@ -218,7 +218,7 @@
       {
         "id": "price",
         "label": "Registration check",
-        "value": "RunSignup registration page is the official registration path.",
+        "value": "Registration is handled through RunSignup, including the in-person and virtual options.",
         "source_path": "registration.url",
         "source_url": "https://runsignup.com/Race/FL/Sarasota/BridgealifeSuperhero5KandFunRun"
       }
@@ -239,15 +239,9 @@
     "template": "community",
     "assets": [
       {
-        "src": "/mockups/5bfcb1fad881aa536ac6edd2870a01c8/1-142281908e.png",
-        "alt": "Public race-site image captured for concept direction",
-        "caption": "Public race-site image used for concept direction.",
-        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race48910-socialShareLargeImage.bOpSa-.png"
-      },
-      {
         "src": "/mockups/5bfcb1fad881aa536ac6edd2870a01c8/2-a45d3e5b4c.png",
-        "alt": "Public race-site image captured for concept direction",
-        "caption": "Additional public race-site visual reference.",
+        "alt": "Bridge a Life Superhero Race artwork for February 6, 2027",
+        "caption": "Bridge a Life Superhero Race artwork.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-55613-1780426084.8802-0.bQhYvK.png"
       }
     ],
@@ -416,7 +410,7 @@
     "uncertainty": {
       "summary": "Some source facts were not available with high confidence and were omitted from rendered sections.",
       "items": [
-        "Start time was not found in the race page; omitted from distance details.",
+        "Start time was not found in race details; omitted from distance details.",
         "Current entry price was not found with high confidence; omitted from distance cards.",
         "Course certification/sanctioning was not found with high confidence; omitted from course details.",
         "Aid-station count was not found with high confidence; omitted from course details.",

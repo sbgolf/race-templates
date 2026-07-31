@@ -2,12 +2,15 @@
   "identity": {
     "template": "community",
     "name": "AIMHigh-Keep Pressing 5K/10K/13.1M",
-    "tagline": "A Henderson race weekend built around fitness, community teams, and the Keep Pressing spirit.",
+    "tagline": "Henderson community race with 5K, 10K, half marathon, and kids options.",
     "edition": "Henderson, NC",
     "hero_image": {
       "src": "/mockups/6a2545884ca90a0cecce4e2715e4ab84/1-975b44a762.jpg",
-      "alt": "Public race-site image captured for concept direction",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race121711-social1200x630.bIZeNC.jpg"
+      "alt": "Keep Pressing race artwork for 5K and 10K options",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race121711-social1200x630.bIZeNC.jpg",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "1200 / 630"
     },
     "colors": {
       "primary": "#C6643D",
@@ -113,20 +116,15 @@
     "title": "About AIMHigh-Keep Pressing",
     "paragraphs": [
       "AIMHigh-Keep Pressing is a Henderson community race organized to inspire runners and walkers to stay true on their fitness journey.",
-      "The RunSignup page highlights 5K, 10K, 13.1-mile, and kids fun run options plus individual/team registration.",
+      "Choose from kids fun run, 5K, 10K, and 13.1-mile options, with individual and team registration handled through RunSignup.",
       "The event\u2019s Keep Pressing Award recognizes the team, organization, or business with the most registered participants."
-    ],
-    "image": {
-      "src": "/mockups/6a2545884ca90a0cecce4e2715e4ab84/2-15147a8d33.png",
-      "alt": "Course or race image for AIMHigh-Keep Pressing 5K/10K/13.1M",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-128287-1769452207.12-0.bPD7kV.png"
-    }
+    ]
   },
   "schedule": [],
   "faqs": [
     {
       "question": "Where is the race based?",
-      "answer": "RunSignup lists Downtown Henderson, NC with an address at 200 Breckenridge Street.",
+      "answer": "Race options include Downtown Henderson, NC with an address at 200 Breckenridge Street.",
       "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K"
     },
     {
@@ -136,13 +134,13 @@
     },
     {
       "question": "Is registration open?",
-      "answer": "The discovery data marked registration as not open at capture time, so the official RunSignup page should be checked before outreach.",
+      "answer": "Registration opens August 31, 2026 on RunSignup; check RunSignup for the latest availability.",
       "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K"
     }
   ],
   "runner_decision_checklist": {
     "headline": "Key race details before you register",
-    "intro": "Review the essentials from the public race page before continuing to the official RunSignup registration path.",
+    "intro": "Review the essential race details before continuing to RunSignup registration.",
     "items": [
       {
         "id": "date",
@@ -174,7 +172,7 @@
       {
         "id": "price",
         "label": "Registration check",
-        "value": "Check the official RunSignup page for current open/closed status before outreach.",
+        "value": "Registration opens August 31, 2026 on RunSignup.",
         "source_path": "registration.url",
         "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K"
       }
@@ -196,15 +194,9 @@
     "assets": [
       {
         "src": "/mockups/6a2545884ca90a0cecce4e2715e4ab84/1-975b44a762.jpg",
-        "alt": "Public race-site image captured for concept direction",
-        "caption": "Public race-site image used for concept direction.",
+        "alt": "Keep Pressing race artwork for 5K and 10K options",
+        "caption": "Keep Pressing race artwork.",
         "source": "https://d368g9lw5ileu7.cloudfront.net/races/race121711-social1200x630.bIZeNC.jpg"
-      },
-      {
-        "src": "/mockups/6a2545884ca90a0cecce4e2715e4ab84/2-15147a8d33.png",
-        "alt": "Public race-site image captured for concept direction",
-        "caption": "Additional public race-site visual reference.",
-        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-128287-1769452207.12-0.bPD7kV.png"
       }
     ],
     "provenance": {
@@ -264,52 +256,52 @@
         },
         {
           "path": "private_mockup.assets[0]",
-          "source": "public image URL on source page",
+          "source": "public image URL on race page",
           "confidence": "medium"
         },
         {
           "path": "private_mockup.assets[1]",
-          "source": "public image URL on source page",
+          "source": "public image URL on race page",
           "confidence": "medium"
         },
         {
           "path": "private_mockup.assets[2]",
-          "source": "public image URL on source page",
+          "source": "public image URL on race page",
           "confidence": "medium"
         },
         {
           "path": "private_mockup.assets[3]",
-          "source": "public image URL on source page",
+          "source": "public image URL on race page",
           "confidence": "medium"
         },
         {
           "path": "private_mockup.assets[4]",
-          "source": "public image URL on source page",
+          "source": "public image URL on race page",
           "confidence": "medium"
         },
         {
           "path": "private_mockup.assets[5]",
-          "source": "public image URL on source page",
+          "source": "public image URL on race page",
           "confidence": "medium"
         },
         {
           "path": "private_mockup.assets[6]",
-          "source": "public image URL on source page",
+          "source": "public image URL on race page",
           "confidence": "medium"
         },
         {
           "path": "private_mockup.assets[7]",
-          "source": "public image URL on source page",
+          "source": "public image URL on race page",
           "confidence": "medium"
         },
         {
           "path": "private_mockup.assets[8]",
-          "source": "public image URL on source page",
+          "source": "public image URL on race page",
           "confidence": "medium"
         },
         {
           "path": "private_mockup.assets[9]",
-          "source": "public image URL on source page",
+          "source": "public image URL on race page",
           "confidence": "medium"
         },
         {
@@ -372,7 +364,7 @@
     "uncertainty": {
       "summary": "Some source facts were not available with high confidence and were omitted from rendered sections.",
       "items": [
-        "Start time was not found in the source page; omitted from distance details.",
+        "Start time was not found in the race page; omitted from distance details.",
         "Current entry price was not found with high confidence; omitted from distance cards.",
         "Course certification/sanctioning was not found with high confidence; omitted from course details.",
         "Aid-station count was not found with high confidence; omitted from course details.",
