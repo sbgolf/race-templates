@@ -1,0 +1,376 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "AIMHigh-Keep Pressing 5K/10K/13.1M",
+    "tagline": "Henderson community race with 5K, 10K, half marathon, and kids options.",
+    "edition": "Henderson, NC",
+    "hero_image": {
+      "src": "/mockups/6a2545884ca90a0cecce4e2715e4ab84/1-975b44a762.jpg",
+      "alt": "Keep Pressing race artwork for 5K and 10K options",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race121711-social1200x630.bIZeNC.jpg",
+      "fit": "contain",
+      "presentation": "banner",
+      "aspect_ratio": "1200 / 630"
+    },
+    "colors": {
+      "primary": "#C6643D",
+      "secondary": "#6B8E6F"
+    },
+    "slug": "aimhigh-keep-pressing-5k-10k-13-1m",
+    "short_name": "AIMHigh-Keep Pressing"
+  },
+  "event": {
+    "date": "2027-05-01",
+    "location": "Downtown Henderson, NC",
+    "venue": "Downtown Henderson",
+    "address": "200 Breckenridge Street, Henderson, NC 27536"
+  },
+  "organization": {
+    "name": "AIMHigh-Keep Pressing",
+    "url": "http://www.keeppressing.org/"
+  },
+  "distances": [
+    {
+      "id": "kids-fun-run",
+      "name": "Kids Fun Run",
+      "distance": "Kids Fun Run",
+      "featured": true,
+      "highlights": [
+        "Youth event option listed by RunSignup."
+      ],
+      "map_label": "Kids Fun Run",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K",
+        "method": "RunSignup event listing/description"
+      }
+    },
+    {
+      "id": "5k",
+      "name": "AIMHigh-Keep Pressing 5K",
+      "distance": "5K",
+      "featured": false,
+      "highlights": [
+        "Community-oriented 5K option through Downtown Henderson."
+      ],
+      "map_label": "5K",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K",
+        "method": "RunSignup event listing/description"
+      }
+    },
+    {
+      "id": "10k",
+      "name": "AIMHigh-Keep Pressing 10K",
+      "distance": "10K",
+      "featured": false,
+      "highlights": [
+        "10K option for runners wanting a longer race-day challenge."
+      ],
+      "map_label": "10K",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K",
+        "method": "RunSignup event listing/description"
+      }
+    },
+    {
+      "id": "half-marathon",
+      "name": "AIMHigh-Keep Pressing 13.1M",
+      "distance": "13.1M",
+      "featured": false,
+      "highlights": [
+        "Half marathon option is part of the listed race lineup."
+      ],
+      "map_label": "13.1M",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K",
+        "method": "RunSignup event listing/description"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K#mainContent",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "startline_value": {
+    "headline": "A race website concept built around registration intent \u2014 not just a prettier homepage.",
+    "intro": "StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.",
+    "improved": [
+      "Reduced runner friction by placing key race facts near the registration path.",
+      "Surfaced trust signals from configured distances, schedule details, and FAQs when available.",
+      "Made registration CTAs easier to find on mobile and desktop with measurement-ready registration-click tracking."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees \u2014 just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "About AIMHigh-Keep Pressing",
+    "paragraphs": [
+      "AIMHigh-Keep Pressing is a Henderson community race organized to inspire runners and walkers to stay true on their fitness journey.",
+      "Choose from kids fun run, 5K, 10K, and 13.1-mile options, with individual and team registration handled through RunSignup.",
+      "The event\u2019s Keep Pressing Award recognizes the team, organization, or business with the most registered participants."
+    ]
+  },
+  "schedule": [],
+  "faqs": [
+    {
+      "question": "Where is the race based?",
+      "answer": "Race options include Downtown Henderson, NC with an address at 200 Breckenridge Street.",
+      "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K"
+    },
+    {
+      "question": "What race options are listed?",
+      "answer": "Kids Fun Run, 5K, 10K, and 13.1M options are listed on RunSignup.",
+      "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K"
+    },
+    {
+      "question": "Is registration open?",
+      "answer": "Registration opens August 31, 2026 on RunSignup; check RunSignup for the latest availability.",
+      "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K"
+    }
+  ],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essential race details before continuing to RunSignup registration.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, May 1, 2027",
+        "source_path": "event.date",
+        "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "Kids Fun Run, AIMHigh-Keep Pressing 5K, AIMHigh-Keep Pressing 10K, AIMHigh-Keep Pressing 13.1M",
+        "source_path": "distances",
+        "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K",
+        "applies_to_distance_ids": [
+          "kids-fun-run",
+          "5k",
+          "10k",
+          "half-marathon"
+        ]
+      },
+      {
+        "id": "location",
+        "label": "Race-day location",
+        "value": "200 Breckenridge Street, Henderson, NC 27536",
+        "source_path": "event.address",
+        "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K"
+      },
+      {
+        "id": "price",
+        "label": "Registration check",
+        "value": "Registration opens August 31, 2026 on RunSignup.",
+        "source_path": "registration.url",
+        "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "AIMHigh-Keep Pressing 5K/10K/13.1M \u2014 Race Website Preview",
+    "meta_description": "AIMHigh-Keep Pressing is a Henderson community race organized to inspire runners and walkers to stay true on their fitness journey."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K",
+    "captured_at": "2026-07-31T14:12:40.910Z",
+    "access_token": "6a2545884ca90a0cecce4e2715e4ab84",
+    "race_slug": "aimhigh-keep-pressing-5k-10k-13-1m",
+    "route": "/private/mockups/6a2545884ca90a0cecce4e2715e4ab84/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/6a2545884ca90a0cecce4e2715e4ab84/1-975b44a762.jpg",
+        "alt": "Keep Pressing race artwork for 5K and 10K options",
+        "caption": "Keep Pressing race artwork.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race121711-social1200x630.bIZeNC.jpg"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/NC/Henderson/AIMHighKeepPressing5K",
+      "captured_at": "2026-07-31T14:12:40.910Z",
+      "source_confirmed_sections": [
+        "runner_decision_checklist",
+        "identity",
+        "event",
+        "organization",
+        "registration",
+        "distances",
+        "story",
+        "faqs"
+      ],
+      "source_confirmed_distance_ids": [
+        "kids-fun-run",
+        "5k",
+        "10k",
+        "half-marathon"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "source": "h1",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "source": "JSON-LD startDate",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "source": "JSON-LD location",
+          "confidence": "high"
+        },
+        {
+          "path": "registration.url",
+          "source": "registration link: \"Skip to main content\"",
+          "confidence": "medium"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "source": "JSON-LD startDate",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "source": "event name/title: \"AIMHigh-Keep Pressing 5K/10K/13.1M\"",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "source": "JSON-LD location",
+          "confidence": "high"
+        },
+        {
+          "path": "private_mockup.assets[0]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[1]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[2]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[3]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[4]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[5]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[6]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[7]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[8]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "private_mockup.assets[9]",
+          "source": "public image URL on race page",
+          "confidence": "medium"
+        },
+        {
+          "path": "organization.name",
+          "source": "official race/org URL and RunSignup external race URL",
+          "confidence": "medium"
+        },
+        {
+          "path": "event.venue",
+          "source": "RunSignup public races API/address detail",
+          "confidence": "high"
+        },
+        {
+          "path": "event.address",
+          "source": "RunSignup public races API/address detail",
+          "confidence": "high"
+        },
+        {
+          "path": "story.paragraphs",
+          "source": "RunSignup public race description",
+          "confidence": "medium"
+        },
+        {
+          "path": "seo.meta_description",
+          "source": "RunSignup public race description",
+          "confidence": "medium"
+        },
+        {
+          "path": "distances[0]",
+          "source": "RunSignup event listing: Kids Fun Run",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[1]",
+          "source": "RunSignup event listing: AIMHigh-Keep Pressing 5K",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[2]",
+          "source": "RunSignup event listing: AIMHigh-Keep Pressing 10K",
+          "confidence": "high"
+        },
+        {
+          "path": "distances[3]",
+          "source": "RunSignup event listing: AIMHigh-Keep Pressing 13.1M",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "source": "registration link/status from RunSignup public race page",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "confidence": {
+      "high": 8,
+      "medium": 13,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "Some source facts were not available with high confidence and were omitted from rendered sections.",
+      "items": [
+        "Start time was not found in the race page; omitted from distance details.",
+        "Current entry price was not found with high confidence; omitted from distance cards.",
+        "Course certification/sanctioning was not found with high confidence; omitted from course details.",
+        "Aid-station count was not found with high confidence; omitted from course details.",
+        "Course profile descriptors were not found with high confidence; omitted from course details."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups."
+  }
+}
