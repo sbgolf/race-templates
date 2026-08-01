@@ -1,0 +1,227 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Miles for Milestones 5k",
+    "slug": "miles-for-milestones-5k",
+    "tagline": "Join us for the inaugural Miles for Milestones 5K & Fall Festival! Hosted by Milestones Therapy and Wellness and the Mot",
+    "hero_image": {
+      "src": "/mockups/bd47b1c96fef66007d9a3278dcc0ff51/official-hero.png",
+      "alt": "Miles for Milestones 5k official race artwork",
+      "source": "https://d2mkojm4rk40ta.cloudfront.net/us-east-1-src/prod/clientUploads/2026-07/23/1/211664/b13efbfc-f891-40d6-b168-9e4481975d8a-bQyQKP_1800x600.png",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-10-31",
+    "location": "Knoxville, TN",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k"
+      }
+    },
+    {
+      "id": "100-yards",
+      "name": "100 Yards",
+      "distance": "100 Yards",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "This private mockup only uses details already visible in the approved source data.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-10-31",
+        "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "5K, 100 Yards",
+        "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "applies_to_distance_ids": [
+          "5k",
+          "100-yards"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Knoxville, TN",
+        "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Miles for Milestones 5k — 2026-10-31",
+    "meta_description": "Miles for Milestones 5k race information and registration details for runners in Knoxville, TN."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "bd47b1c96fef66007d9a3278dcc0ff51",
+    "route": "/private/mockups/bd47b1c96fef66007d9a3278dcc0ff51/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+    "source_platform": "runsignup",
+    "source_race_id": "211664",
+    "registration_race_id": "211664",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 94,
+    "source_urls": [
+      "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-287743-1784851163.3409-0.bQyQRB.png",
+      "https://d2mkojm4rk40ta.cloudfront.net/us-east-1-src/prod/clientUploads/2026-07/23/1/211664/b13efbfc-f891-40d6-b168-9e4481975d8a-bQyQKP_1800x600.png"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium"
+        },
+        {
+          "field": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+          "confidence": "high"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+          "confidence": "medium"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_paths": {
+        "identity.hero_image": "https://d2mkojm4rk40ta.cloudfront.net/us-east-1-src/prod/clientUploads/2026-07/23/1/211664/b13efbfc-f891-40d6-b168-9e4481975d8a-bQyQKP_1800x600.png",
+        "identity.name": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "event.date": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "event.location": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "runner_decision_checklist.items.date": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "runner_decision_checklist.items.distance": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "runner_decision_checklist.items.location": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "distances.0.name": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "distances.0.distance": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "distances.1.name": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k",
+        "distances.1.distance": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k"
+      },
+      "source_url": "https://runsignup.com/Race/TN/Knoxville/MilesForMilestones5k"
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Start time and operational details were not source-confirmed in the discovery artifact, so this mockup only uses verified race basics from the public source page."
+    },
+    "captured_at": "2026-08-01T01:35:00Z"
+  }
+}

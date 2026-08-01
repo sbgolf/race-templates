@@ -1,0 +1,269 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Frozen Rails 5K & 10K",
+    "slug": "frozen-rails-5k-and-10k",
+    "tagline": "Kick off the new year with a healthy start in historic Midway, KY! Join us for the 10 th Annual Frozen Rails 5K & 10K in",
+    "hero_image": {
+      "src": "/mockups/9ecd1b21eefd1c3bf02eef441457e5ee/official-hero.jpg",
+      "alt": "Frozen Rails 5K & 10K official race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-40xxx/40248/raceBanner-0Ly1dF6Y-bEonEY-medium.jpg",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1",
+      "fit": "cover"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2027-01-01",
+    "location": "Midway, KY",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "3-1-miles",
+      "name": "3.1 Miles",
+      "distance": "3.1 Miles",
+      "featured": true,
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
+      }
+    },
+    {
+      "id": "6-2-miles",
+      "name": "6.2 Miles",
+      "distance": "6.2 Miles",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
+      }
+    },
+    {
+      "id": "1-miles",
+      "name": "1 Miles",
+      "distance": "1 Miles",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
+      }
+    },
+    {
+      "id": "1k",
+      "name": "1K",
+      "distance": "1K",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
+      }
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer",
+      "distance": "Volunteer",
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "This private mockup only uses details already visible in the approved source data.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2027-01-01",
+        "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "3.1 Miles, 6.2 Miles, 1 Miles, 1K, Volunteer",
+        "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "applies_to_distance_ids": [
+          "3-1-miles",
+          "6-2-miles",
+          "1-miles",
+          "1k",
+          "volunteer"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Midway, KY",
+        "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Frozen Rails 5K & 10K — 2027-01-01",
+    "meta_description": "Frozen Rails 5K & 10K race information and registration details for runners in Midway, KY."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "9ecd1b21eefd1c3bf02eef441457e5ee",
+    "route": "/private/mockups/9ecd1b21eefd1c3bf02eef441457e5ee/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+    "source_platform": "runsignup",
+    "source_race_id": "40248",
+    "registration_race_id": "40248",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 94,
+    "source_urls": [
+      "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-46974-1765829005.7402-0.bPqgMn.jpg",
+      "https://d368g9lw5ileu7.cloudfront.net/races/races-40xxx/40248/raceBanner-0Ly1dF6Y-bEonEY-medium.jpg"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "event.date",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "event.location",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "field": "distances",
+          "source": "prospect discovery output",
+          "confidence": "medium"
+        },
+        {
+          "field": "registration.url",
+          "source": "prospect discovery output",
+          "confidence": "high"
+        },
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+          "confidence": "high"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+          "confidence": "high"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+          "confidence": "high"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+          "confidence": "medium"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+          "confidence": "high"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup discovery output",
+          "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+          "confidence": "high"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_paths": {
+        "identity.hero_image": "https://d368g9lw5ileu7.cloudfront.net/races/races-40xxx/40248/raceBanner-0Ly1dF6Y-bEonEY-medium.jpg",
+        "identity.name": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "event.date": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "event.location": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "runner_decision_checklist.items.date": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "runner_decision_checklist.items.distance": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "runner_decision_checklist.items.location": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "distances.0.name": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "distances.0.distance": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "distances.1.name": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "distances.1.distance": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "distances.2.name": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "distances.2.distance": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "distances.3.name": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "distances.3.distance": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "distances.4.name": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+        "distances.4.distance": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
+      },
+      "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Start time and operational details were not source-confirmed in the discovery artifact, so this mockup only uses verified race basics from the public source page."
+    },
+    "captured_at": "2026-08-01T01:35:00Z"
+  }
+}
