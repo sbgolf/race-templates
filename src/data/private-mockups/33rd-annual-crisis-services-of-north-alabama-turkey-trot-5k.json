@@ -1,0 +1,212 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "33rd Annual Crisis Services of North Alabama Turkey Trot 5k",
+    "slug": "33rd-annual-crisis-services-of-north-alabama-turkey-trot-5k",
+    "tagline": "33rd Annual Crisis Services of North Alabama Turkey Trot 5k is a community race in Huntsville, AL.",
+    "hero_image": {
+      "src": "/mockups/8376b8a5fa905718989e4dfd6785b992/official-hero.png",
+      "alt": "33rd Annual Crisis Services of North Alabama Turkey Trot 5k official race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-107255-1723046476.6156-0.bMS5Pm.png",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-11-26",
+    "location": "Huntsville, AL",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials before choosing your race-day option.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-11-26",
+        "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "5K",
+        "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot",
+        "applies_to_distance_ids": [
+          "5k"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Huntsville, AL",
+        "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "33rd Annual Crisis Services of North Alabama Turkey Trot 5k — 2026-11-26",
+    "meta_description": "33rd Annual Crisis Services of North Alabama Turkey Trot 5k race information, registration path, and key runner details for Huntsville, AL."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "8376b8a5fa905718989e4dfd6785b992",
+    "route": "/private/mockups/8376b8a5fa905718989e4dfd6785b992/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot",
+    "source_platform": "runsignup",
+    "source_race_id": "100614",
+    "registration_race_id": "100614",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 87,
+    "qualification_reason": "Recertification failed: Official event/contact/about pages and search results show no usable direct or routing email; only web/contact-form style paths.",
+    "source_urls": [
+      "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot",
+      "https://csna.org/turkeytrot",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-107255-1723046476.6156-0.bMS5Pm.png"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot",
+      "captured_at": "2026-08-03T16:30:00.000Z",
+      "source_confirmed_distance_ids": [
+        "5k"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Public race facts were checked against official race sources; customer outreach remains unapproved and was not performed."
+    },
+    "prospect_id": "6d09b0b6-6c1f-4c6f-94c9-9ee5ad39cc9d",
+    "owner_approval_status": "not_requested",
+    "outreach_approved": false,
+    "outreach_sent": false,
+    "contact_quality": "not_reviewed",
+    "qualification_status_at_generation": "skipped",
+    "assets": [
+      {
+        "type": "hero_image",
+        "src": "/mockups/8376b8a5fa905718989e4dfd6785b992/official-hero.png",
+        "source_url": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-107255-1723046476.6156-0.bMS5Pm.png",
+        "verified": true
+      }
+    ],
+    "generated": true,
+    "captured_at": "2026-08-03T16:30:00.000Z",
+    "race_slug": "33rd-annual-crisis-services-of-north-alabama-turkey-trot-5k",
+    "contact_sources": [
+      {
+        "url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot/Contact",
+        "type": "form",
+        "label": "RunSignup race contact path"
+      }
+    ]
+  }
+}
