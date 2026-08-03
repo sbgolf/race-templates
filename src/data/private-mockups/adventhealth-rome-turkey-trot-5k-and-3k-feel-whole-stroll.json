@@ -27,7 +27,7 @@
   "distances": [
     {
       "id": "5k",
-      "name": "5K",
+      "name": "5K Race",
       "distance": "5K",
       "featured": true,
       "provenance": {
@@ -35,18 +35,25 @@
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/GA/Rome/AdventHealthTurkeyTrotKAndKFeelWholeStroll"
-      }
+      },
+      "start_time": "9:00 AM EST",
+      "price": "Youth early bird $25 / adult early bird $30; race day $40",
+      "registration_window": "Early bird through Oct. 18; online pre-registration through Nov. 21",
+      "certification": "USATF-certified 5K course; Peachtree Road Race qualifier"
     },
     {
       "id": "3k",
-      "name": "3K",
+      "name": "Feel Whole 3K Stroll",
       "distance": "3K",
       "provenance": {
         "source": "Public official race source",
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/GA/Rome/AdventHealthTurkeyTrotKAndKFeelWholeStroll"
-      }
+      },
+      "start_time": "9:05 AM EST",
+      "price": "Race day $40; confirm current 3K pricing on RunSignup",
+      "registration_window": "Online pre-registration through Nov. 21"
     }
   ],
   "registration": {
@@ -67,8 +74,8 @@
       },
       {
         "id": "distance",
-        "label": "Distances",
-        "value": "5K, 3K",
+        "label": "Event options",
+        "value": "5K Race, Feel Whole 3K Stroll",
         "source_url": "https://runsignup.com/Race/GA/Rome/AdventHealthTurkeyTrotKAndKFeelWholeStroll",
         "applies_to_distance_ids": [
           "5k",
@@ -179,9 +186,9 @@
         }
       ],
       "source_confirmed_sections": [
-        "identity",
-        "event",
         "distances",
+        "event",
+        "identity",
         "registration",
         "runner_decision_checklist"
       ],

@@ -27,7 +27,7 @@
   "distances": [
     {
       "id": "1-mile",
-      "name": "1 Mile",
+      "name": "1-Mile Fun Run or Walk",
       "distance": "1 Mile",
       "featured": true,
       "provenance": {
@@ -35,12 +35,17 @@
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
-      }
+      },
+      "start_time": "7:30 AM EDT - 9:00 AM EDT",
+      "price": "$40; kids 13 & under $30 regular pricing",
+      "registration_window": "Registration opens Aug. 14, 2026 at 12:00 AM EDT"
     },
     {
-      "id": "virtual-fun-run-or",
+      "id": "virtual-fun-run-or-walk",
       "name": "Virtual Fun Run or Walk",
-      "distance": "Virtual Fun Run or Walk",
+      "distance": "Virtual",
+      "price": "$40",
+      "registration_window": "Registration opens Aug. 14, 2026 at 12:00 AM EDT",
       "provenance": {
         "source": "Public official race source",
         "confidence": "high",
@@ -50,14 +55,17 @@
     },
     {
       "id": "5k",
-      "name": "5K",
+      "name": "5K Manasota Track Club - Sanctioned Run",
       "distance": "5K",
       "provenance": {
         "source": "Public official race source",
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
-      }
+      },
+      "start_time": "8:00 AM EDT - 9:00 AM EDT",
+      "price": "$40; kids 13 & under $30 regular pricing",
+      "registration_window": "Registration opens Aug. 14, 2026 at 12:00 AM EDT"
     }
   ],
   "registration": {
@@ -78,12 +86,12 @@
       },
       {
         "id": "distance",
-        "label": "Distances",
-        "value": "1 Mile, Virtual Fun Run or Walk, 5K",
+        "label": "Event options",
+        "value": "1-Mile Fun Run or Walk, Virtual Fun Run or Walk, 5K Manasota Track Club - Sanctioned Run",
         "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles",
         "applies_to_distance_ids": [
           "1-mile",
-          "virtual-fun-run-or",
+          "virtual-fun-run-or-walk",
           "5k"
         ],
         "source_path": "runner_decision_checklist.items.distance"
@@ -190,9 +198,9 @@
         }
       ],
       "source_confirmed_sections": [
-        "identity",
-        "event",
         "distances",
+        "event",
+        "identity",
         "registration",
         "runner_decision_checklist"
       ],
@@ -200,7 +208,7 @@
       "captured_at": "2026-08-03T16:30:00.000Z",
       "source_confirmed_distance_ids": [
         "1-mile",
-        "virtual-fun-run-or",
+        "virtual-fun-run-or-walk",
         "5k"
       ]
     },

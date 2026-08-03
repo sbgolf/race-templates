@@ -26,10 +26,13 @@
   },
   "distances": [
     {
-      "id": "5k",
-      "name": "5K",
+      "id": "5k-adult",
+      "name": "5K Run/Walk Ages 17 Years and Up",
       "distance": "5K",
       "featured": true,
+      "start_time": "8:00 AM CST - 10:00 AM CST",
+      "price": "$25",
+      "registration_window": "Registration opens Sep. 7, 2026 at 2:00 PM CDT",
       "provenance": {
         "source": "Public official race source",
         "confidence": "high",
@@ -38,9 +41,40 @@
       }
     },
     {
-      "id": "fun-run",
-      "name": "Fun Run",
-      "distance": "Fun Run",
+      "id": "5k-youth",
+      "name": "5K Run/Walk Ages 16 Years and Below",
+      "distance": "5K",
+      "start_time": "8:00 AM CST - 10:00 AM CST",
+      "price": "$20",
+      "registration_window": "Registration opens Sep. 7, 2026 at 2:00 PM CDT",
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+      }
+    },
+    {
+      "id": "fun-run-adult",
+      "name": "Fun Run Ages 17 Years and Up",
+      "distance": "1 Mile Fun Run",
+      "start_time": "9:00 AM CST - 10:00 AM CST",
+      "price": "$25",
+      "registration_window": "Registration opens Sep. 7, 2026 at 2:00 PM CDT",
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+      }
+    },
+    {
+      "id": "fun-run-youth",
+      "name": "Fun Run Ages 16 Years and Below",
+      "distance": "1 Mile Fun Run",
+      "start_time": "9:00 AM CST - 10:00 AM CST",
+      "price": "$20",
+      "registration_window": "Registration opens Sep. 7, 2026 at 2:00 PM CDT",
       "provenance": {
         "source": "Public official race source",
         "confidence": "high",
@@ -67,12 +101,14 @@
       },
       {
         "id": "distance",
-        "label": "Distances",
-        "value": "5K, Fun Run",
+        "label": "Event options",
+        "value": "5K Run/Walk Ages 17 Years and Up, 5K Run/Walk Ages 16 Years and Below, Fun Run Ages 17 Years and Up, Fun Run Ages 16 Years and Below",
         "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot",
         "applies_to_distance_ids": [
-          "5k",
-          "fun-run"
+          "5k-adult",
+          "5k-youth",
+          "fun-run-adult",
+          "fun-run-youth"
         ],
         "source_path": "runner_decision_checklist.items.distance"
       },
@@ -178,17 +214,19 @@
         }
       ],
       "source_confirmed_sections": [
-        "identity",
-        "event",
         "distances",
+        "event",
+        "identity",
         "registration",
         "runner_decision_checklist"
       ],
       "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot",
       "captured_at": "2026-08-03T16:30:00.000Z",
       "source_confirmed_distance_ids": [
-        "5k",
-        "fun-run"
+        "5k-adult",
+        "5k-youth",
+        "fun-run-adult",
+        "fun-run-youth"
       ]
     },
     "uncertainty": {

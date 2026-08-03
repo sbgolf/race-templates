@@ -27,7 +27,7 @@
   "distances": [
     {
       "id": "5k",
-      "name": "5K",
+      "name": "5K Run/Walk",
       "distance": "5K",
       "featured": true,
       "provenance": {
@@ -35,18 +35,21 @@
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
-      }
+      },
+      "start_time": "8:00 AM EST",
+      "profile": "Thanksgiving morning 5K walk/run"
     },
     {
       "id": "kids-fun-run",
       "name": "Kids Fun Run",
-      "distance": "Kids Fun Run",
+      "distance": "Fun run",
       "provenance": {
         "source": "Public official race source",
         "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
-      }
+      },
+      "profile": "Kids fun run for all ages; exact start time not listed on public source"
     }
   ],
   "registration": {
@@ -67,8 +70,8 @@
       },
       {
         "id": "distance",
-        "label": "Distances",
-        "value": "5K, Kids Fun Run",
+        "label": "Event options",
+        "value": "5K Run/Walk, Kids Fun Run",
         "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
         "applies_to_distance_ids": [
           "5k",
@@ -177,9 +180,9 @@
         }
       ],
       "source_confirmed_sections": [
-        "identity",
-        "event",
         "distances",
+        "event",
+        "identity",
         "registration",
         "runner_decision_checklist"
       ],

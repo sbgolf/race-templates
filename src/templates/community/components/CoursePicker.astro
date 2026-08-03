@@ -50,8 +50,10 @@ const hasCourseVisualImage = Boolean(courseVisualImage?.src);
 const detailRows = [
   ['Event option', featuredDistance?.name, 'dName'],
   ['Distance', isDistinctDistanceValue(featuredDistance) ? featuredDistance?.distance : undefined, 'dDistance'],
-  ['Total Ascent', featuredDistance?.elevation_gain, 'dGain'],
+  ['Entry fee', featuredDistance?.price, 'dPrice'],
   ['Start Time', featuredDistance?.start_time, 'dStart'],
+  ['Registration', featuredDistance?.registration_window || featuredDistance?.registration_status, 'dRegistration'],
+  ['Total Ascent', featuredDistance?.elevation_gain, 'dGain'],
   ['Aid Stations', featuredDistance?.aid_stations === undefined ? undefined : String(featuredDistance.aid_stations), 'dAid'],
   ['Course Profile', featuredDistance?.profile, 'dProfile'],
   ['Certification', featuredDistance?.certification, 'dCert']
@@ -61,8 +63,10 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
   return [distance.id, {
     name: distance.name,
     distance: isDistinctDistanceValue(distance) ? distance.distance : '',
-    gain: distance.elevation_gain || '',
+    price: distance.price || '',
     start: distance.start_time || '',
+    registration: distance.registration_window || distance.registration_status || '',
+    gain: distance.elevation_gain || '',
     aid: distance.aid_stations === undefined ? '' : String(distance.aid_stations),
     profile: distance.profile || '',
     certification: distance.certification || '',
@@ -161,8 +165,10 @@ const distanceData = Object.fromEntries(distances.map((distance) => {
     };
     setText('dName', data.name);
     setText('dDistance', data.distance);
-    setText('dGain', data.gain);
+    setText('dPrice', data.price);
     setText('dStart', data.start);
+    setText('dRegistration', data.registration);
+    setText('dGain', data.gain);
     setText('dAid', data.aid);
     setText('dProfile', data.profile);
     setText('dCert', data.certification);
