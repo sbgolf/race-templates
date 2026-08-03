@@ -27,9 +27,26 @@
   "distances": [
     {
       "id": "5k",
-      "name": "5K",
+      "name": "5K Run/Walk/Trot",
       "distance": "5K",
       "featured": true,
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot"
+      },
+      "start_time": "8:00 AM CST",
+      "certification": "USATF certified course",
+      "profile": "Wave starts; chip-timed by RunningLane"
+    },
+    {
+      "id": "tiny-tot-turkey-trot",
+      "name": "Tiny Tot Turkey Trot",
+      "distance": "100-yard dash",
+      "start_time": "9:00 AM CST",
+      "price": "Free; no advance registration needed",
+      "profile": "Kids ages 5 and under with Tina Turkey",
       "provenance": {
         "source": "Public official race source",
         "confidence": "high",
@@ -56,11 +73,12 @@
       },
       {
         "id": "distance",
-        "label": "Distances",
-        "value": "5K",
+        "label": "Event options",
+        "value": "5K Run/Walk/Trot, Tiny Tot Turkey Trot",
         "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot",
         "applies_to_distance_ids": [
-          "5k"
+          "5k",
+          "tiny-tot-turkey-trot"
         ],
         "source_path": "runner_decision_checklist.items.distance"
       },
@@ -165,16 +183,17 @@
         }
       ],
       "source_confirmed_sections": [
-        "identity",
-        "event",
         "distances",
+        "event",
+        "identity",
         "registration",
         "runner_decision_checklist"
       ],
       "source_url": "https://runsignup.com/Race/AL/Huntsville/CrisisServicesofNorthAlabamasTurkeyTrot",
       "captured_at": "2026-08-03T16:30:00.000Z",
       "source_confirmed_distance_ids": [
-        "5k"
+        "5k",
+        "tiny-tot-turkey-trot"
       ]
     },
     "uncertainty": {

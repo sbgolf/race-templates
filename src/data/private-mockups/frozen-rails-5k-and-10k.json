@@ -26,46 +26,71 @@
   },
   "distances": [
     {
-      "id": "3-1-miles",
-      "name": "3.1 Miles",
-      "distance": "3.1 Miles",
+      "id": "5k-run-walk",
+      "name": "5K Run/Walk",
+      "distance": "5K",
       "featured": true,
+      "start_time": "2:00 PM EST",
+      "price": "$25",
+      "registration_window": "Price increases after Sep. 30, 2026 at 11:59 PM EDT",
       "provenance": {
-        "source": "prospect discovery output",
-        "confidence": "medium",
+        "source": "Public official race source",
+        "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
       }
     },
     {
-      "id": "6-2-miles",
-      "name": "6.2 Miles",
-      "distance": "6.2 Miles",
+      "id": "10k-run",
+      "name": "10K Run",
+      "distance": "10K",
+      "start_time": "2:00 PM EST",
+      "price": "$25",
+      "registration_window": "Price increases after Sep. 30, 2026 at 11:59 PM EDT",
       "provenance": {
-        "source": "prospect discovery output",
-        "confidence": "medium",
+        "source": "Public official race source",
+        "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
       }
     },
     {
-      "id": "1-miles",
-      "name": "1 Miles",
-      "distance": "1 Miles",
+      "id": "1-mile-fun-run-walk",
+      "name": "1 Mile Fun Run/Walk",
+      "distance": "1 Mile",
+      "start_time": "2:02 PM EST",
+      "price": "$25",
+      "registration_window": "Price increases after Nov. 30, 2026 at 11:59 PM EST",
       "provenance": {
-        "source": "prospect discovery output",
-        "confidence": "medium",
+        "source": "Public official race source",
+        "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
       }
     },
     {
-      "id": "1k",
-      "name": "1K",
+      "id": "little-rails-1k-kids-run",
+      "name": "Little Rails 1K Kids' Run",
       "distance": "1K",
+      "start_time": "1:40 PM EST",
+      "price": "$15",
+      "registration_window": "Price increases after Nov. 30, 2026 at 11:59 PM EST",
       "provenance": {
-        "source": "prospect discovery output",
-        "confidence": "medium",
+        "source": "Public official race source",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
+      }
+    },
+    {
+      "id": "virtual-runner-walker",
+      "name": "Virtual Runner/Walker",
+      "distance": "Virtual",
+      "price": "$30",
+      "registration_window": "Registration ends Dec. 31, 2026 at 11:59 PM EST",
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "high",
         "verified": true,
         "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
       }
@@ -79,7 +104,10 @@
         "confidence": "medium",
         "verified": true,
         "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
-      }
+      },
+      "start_time": "12:30 PM EST - 4:00 PM EST",
+      "price": "$0",
+      "registration_window": "Registration ends Dec. 31, 2026 at 11:59 PM EST"
     }
   ],
   "registration": {
@@ -100,14 +128,15 @@
       },
       {
         "id": "distance",
-        "label": "Distances",
-        "value": "3.1 Miles, 6.2 Miles, 1 Miles, 1K, Volunteer",
+        "label": "Event options",
+        "value": "5K Run/Walk, 10K Run, 1 Mile Fun Run/Walk, Little Rails 1K Kids' Run, Virtual Runner/Walker, Volunteer",
         "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
         "applies_to_distance_ids": [
-          "3-1-miles",
-          "6-2-miles",
-          "1-miles",
-          "1k",
+          "5k-run-walk",
+          "10k-run",
+          "1-mile-fun-run-walk",
+          "little-rails-1k-kids-run",
+          "virtual-runner-walker",
           "volunteer"
         ],
         "source_path": "runner_decision_checklist.items.distance"
@@ -230,9 +259,9 @@
         }
       ],
       "source_confirmed_sections": [
-        "identity",
-        "event",
         "distances",
+        "event",
+        "identity",
         "registration",
         "runner_decision_checklist"
       ],
@@ -255,7 +284,15 @@
         "distances.4.name": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
         "distances.4.distance": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
       },
-      "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
+      "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
+      "source_confirmed_distance_ids": [
+        "5k-run-walk",
+        "10k-run",
+        "1-mile-fun-run-walk",
+        "little-rails-1k-kids-run",
+        "virtual-runner-walker",
+        "volunteer"
+      ]
     },
     "uncertainty": {
       "items": [
