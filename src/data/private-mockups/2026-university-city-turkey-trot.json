@@ -38,9 +38,9 @@
       }
     },
     {
-      "id": "1k",
-      "name": "1K",
-      "distance": "1K",
+      "id": "kids-fun-run",
+      "name": "Kids Fun Run",
+      "distance": "Kids Fun Run",
       "provenance": {
         "source": "Public official race source",
         "confidence": "high",
@@ -68,11 +68,11 @@
       {
         "id": "distance",
         "label": "Distances",
-        "value": "5K, 1K",
+        "value": "5K, Kids Fun Run",
         "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
         "applies_to_distance_ids": [
           "5k",
-          "1k"
+          "kids-fun-run"
         ],
         "source_path": "runner_decision_checklist.items.distance"
       },
@@ -187,7 +187,7 @@
       "captured_at": "2026-08-03T16:30:00.000Z",
       "source_confirmed_distance_ids": [
         "5k",
-        "1k"
+        "kids-fun-run"
       ]
     },
     "uncertainty": {
