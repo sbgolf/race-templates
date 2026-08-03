@@ -1,0 +1,249 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "41st Annual Run for the Turtles",
+    "slug": "41st-annual-run-for-the-turtles",
+    "tagline": "41st Annual Run for the Turtles is a community race in Siesta Key, FL.",
+    "hero_image": {
+      "src": "/mockups/ca9198ba98c9b1178342b11a60b4b6c2/official-hero.jpg",
+      "alt": "41st Annual Run for the Turtles official race artwork",
+      "source": "https://mote.org/wp-content/uploads/2024/05/2024-04-06_RunForTheTurtles33-1024x683.jpg",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2027-04-03",
+    "location": "Siesta Key, FL",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "1-mile",
+      "name": "1 Mile",
+      "distance": "1 Mile",
+      "featured": true,
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+      }
+    },
+    {
+      "id": "virtual-fun-run-or",
+      "name": "Virtual Fun Run or Walk",
+      "distance": "Virtual Fun Run or Walk",
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+      }
+    },
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials before choosing your race-day option.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2027-04-03",
+        "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "1 Mile, Virtual Fun Run or Walk, 5K",
+        "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles",
+        "applies_to_distance_ids": [
+          "1-mile",
+          "virtual-fun-run-or",
+          "5k"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Siesta Key, FL",
+        "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "41st Annual Run for the Turtles — 2027-04-03",
+    "meta_description": "41st Annual Run for the Turtles race information, registration path, and key runner details for Siesta Key, FL."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "ca9198ba98c9b1178342b11a60b4b6c2",
+    "route": "/private/mockups/ca9198ba98c9b1178342b11a60b4b6c2/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles",
+    "source_platform": "runsignup",
+    "source_race_id": "38154",
+    "registration_race_id": "38154",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 95,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Has an official site plus RunSignup registration path. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Cause/sponsor/community proof can support the page. Direct race contact email found. Contact form path found. Official race/org web identity found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles",
+      "https://mote.org/support/signature-events/run-for-the-turtles/",
+      "https://d368g9lw5ileu7.cloudfront.net/races/race38154-logo-0.bGzY-v.png",
+      "https://mote.org/wp-content/uploads/2024/05/2024-04-06_RunForTheTurtles33-1024x683.jpg"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles",
+      "captured_at": "2026-08-03T16:30:00.000Z",
+      "source_confirmed_distance_ids": [
+        "1-mile",
+        "virtual-fun-run-or",
+        "5k"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Public race facts were checked against official race sources; customer outreach remains unapproved and was not performed."
+    },
+    "prospect_id": "c1f93a9c-ad2f-4596-8a88-911d1e0229c1",
+    "owner_approval_status": "not_requested",
+    "outreach_approved": false,
+    "outreach_sent": false,
+    "contact_quality": "direct_or_routing_email",
+    "qualification_status_at_generation": "qualified_for_mockup",
+    "assets": [
+      {
+        "type": "hero_image",
+        "src": "/mockups/ca9198ba98c9b1178342b11a60b4b6c2/official-hero.jpg",
+        "source_url": "https://mote.org/wp-content/uploads/2024/05/2024-04-06_RunForTheTurtles33-1024x683.jpg",
+        "verified": true
+      }
+    ],
+    "generated": true,
+    "captured_at": "2026-08-03T16:30:00.000Z",
+    "race_slug": "41st-annual-run-for-the-turtles",
+    "contact_sources": [
+      {
+        "url": "https://runsignup.com/Race/FL/SiestaKey/RunfortheTurtles/Contact",
+        "type": "form",
+        "label": "RunSignup race contact path"
+      },
+      {
+        "type": "email",
+        "email": "ddwyer@mote.org",
+        "label": "Mote sponsorship/event contact",
+        "notes": "Named official org/event sponsorship contact, not explicitly race director.",
+        "value": "ddwyer@mote.org",
+        "confidence": "high",
+        "source_url": "https://mote.org/support/signature-events/run-for-the-turtles/",
+        "recommended": true
+      }
+    ]
+  }
+}

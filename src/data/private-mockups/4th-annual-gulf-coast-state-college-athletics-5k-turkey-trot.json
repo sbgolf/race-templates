@@ -1,0 +1,236 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "4th Annual Gulf Coast State College Athletics 5k Turkey Trot",
+    "slug": "4th-annual-gulf-coast-state-college-athletics-5k-turkey-trot",
+    "tagline": "4th Annual Gulf Coast State College Athletics 5k Turkey Trot is a community race in Panama City, FL.",
+    "hero_image": {
+      "src": "/mockups/de962b7b132f60891530bb713fa048e6/official-hero.jpg",
+      "alt": "4th Annual Gulf Coast State College Athletics 5k Turkey Trot official race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-151xxx/151597/raceBanner-sYeau4BZ-bM-Q4D.jpg",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-11-26",
+    "location": "Panama City, FL",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+      }
+    },
+    {
+      "id": "1-mile",
+      "name": "1 Mile",
+      "distance": "1 Mile",
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials before choosing your race-day option.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-11-26",
+        "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distances",
+        "value": "5K, 1 Mile",
+        "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot",
+        "applies_to_distance_ids": [
+          "5k",
+          "1-mile"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Panama City, FL",
+        "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "4th Annual Gulf Coast State College Athletics 5k Turkey Trot — 2026-11-26",
+    "meta_description": "4th Annual Gulf Coast State College Athletics 5k Turkey Trot race information, registration path, and key runner details for Panama City, FL."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "de962b7b132f60891530bb713fa048e6",
+    "route": "/private/mockups/de962b7b132f60891530bb713fa048e6/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot",
+    "source_platform": "runsignup",
+    "source_race_id": "151597",
+    "registration_race_id": "151597",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 95,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Has an official site plus RunSignup registration path. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Cause/sponsor/community proof can support the page. Direct race contact email found. Contact form path found. Official race/org web identity found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot",
+      "https://www.facebook.com/GCSCAthletics",
+      "https://www.wjhg.com/2025/11/27/gulf-coast-state-college-hosts-3rd-annual-turkey-trot/",
+      "https://d368g9lw5ileu7.cloudfront.net/races/races-151xxx/151597/raceBanner-sYeau4BZ-bM-Q4D.jpg"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "Public official race source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot",
+      "captured_at": "2026-08-03T16:30:00.000Z",
+      "source_confirmed_distance_ids": [
+        "5k",
+        "1-mile"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Public race facts were checked against official race sources; customer outreach remains unapproved and was not performed."
+    },
+    "prospect_id": "ae5242f9-ec88-40bf-8acd-d60eb445602f",
+    "owner_approval_status": "not_requested",
+    "outreach_approved": false,
+    "outreach_sent": false,
+    "contact_quality": "direct_or_routing_email",
+    "qualification_status_at_generation": "qualified_for_mockup",
+    "assets": [
+      {
+        "type": "hero_image",
+        "src": "/mockups/de962b7b132f60891530bb713fa048e6/official-hero.jpg",
+        "source_url": "https://d368g9lw5ileu7.cloudfront.net/races/races-151xxx/151597/raceBanner-sYeau4BZ-bM-Q4D.jpg",
+        "verified": true
+      }
+    ],
+    "generated": true,
+    "captured_at": "2026-08-03T16:30:00.000Z",
+    "race_slug": "4th-annual-gulf-coast-state-college-athletics-5k-turkey-trot",
+    "contact_sources": [
+      {
+        "url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot/Contact",
+        "type": "form",
+        "label": "RunSignup race contact path"
+      },
+      {
+        "type": "email",
+        "email": "events@gulfcoast.edu",
+        "label": "RunSignup race director contact",
+        "notes": "RunSignup Race Contact Info exposes direct mailto.",
+        "value": "events@gulfcoast.edu",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/FL/PanamaCity/GulfCoastStateCollegeAthletics5kTurkeyTrot",
+        "recommended": true
+      }
+    ]
+  }
+}
