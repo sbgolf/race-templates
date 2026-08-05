@@ -1,0 +1,202 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Trach Families presents Breath of Life 5K",
+    "slug": "trach-families-presents-breath-of-life-5k",
+    "tagline": "Join us to help benefit tracheostomy families in the southeast Tennessee region. The funds raised from this race will allow us the ability t",
+    "hero_image": {
+      "src": "/mockups/c862676e9d6ff8df6bb544af4ecdb926/official-hero.jpg",
+      "alt": "Trach Families presents Breath of Life 5K official race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-244383-1768787447.5883-0.bPBy33.jpg",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2027-04-24",
+    "location": "Chattanooga, TN",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "Breath of Life 5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK"
+      }
+    },
+    {
+      "id": "one-mile",
+      "name": "1 Mile Walk",
+      "distance": "1 Mile",
+      "provenance": {
+        "source": "Public official race source",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials before choosing your race-day option.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2027-04-24",
+        "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "Breath of Life 5K, 1 Mile Walk",
+        "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK",
+        "applies_to_distance_ids": [
+          "5k",
+          "one-mile"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Chattanooga, TN",
+        "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Trach Families presents Breath of Life 5K — 2027-04-24",
+    "meta_description": "Trach Families presents Breath of Life 5K race information and registration details for runners in Chattanooga, TN."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "c862676e9d6ff8df6bb544af4ecdb926",
+    "route": "/private/mockups/c862676e9d6ff8df6bb544af4ecdb926/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK",
+    "source_platform": "runsignup",
+    "source_race_id": "176443",
+    "registration_race_id": "176443",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 89,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Appears registration-platform-first, a strong StartLine opportunity. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Cause/sponsor/community proof can support the page. Contact form path found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK",
+      "https://chattanoogatrachfamilies.com/",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-244383-1768787447.5883-0.bPBy33.jpg"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK"
+        },
+        {
+          "field": "event.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK"
+        },
+        {
+          "field": "event.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK"
+        },
+        {
+          "field": "distances",
+          "source": "Public official race source",
+          "confidence": "medium",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK"
+        },
+        {
+          "field": "registration.url",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK",
+          "path": "runner_decision_checklist.items.location"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/TN/Chattanooga/TrachFamiliesPresentsBreathOfLifeK"
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Only facts visible in public race/registration sources were used; unsourced schedule, sponsor, map, GPX, and operational details are intentionally omitted."
+    },
+    "captured_at": "2026-08-05T17:31:56.741Z",
+    "assets": [
+      {
+        "type": "hero_image",
+        "src": "/mockups/c862676e9d6ff8df6bb544af4ecdb926/official-hero.jpg",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-244383-1768787447.5883-0.bPBy33.jpg",
+        "license": "public race source",
+        "captured_at": "2026-08-05T17:31:56.741Z"
+      }
+    ]
+  }
+}
