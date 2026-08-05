@@ -1,0 +1,190 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Beck 5K / Santa's Jingle Beer Run",
+    "slug": "beck-5k-santas-jingle-beer-run",
+    "tagline": "Beck 5K Presents: Santa's Jingle Beer Run 2026 Looking for a great way to help others and have a good time? Join us this year and enjoy a ru",
+    "hero_image": {
+      "src": "/mockups/0d36be94ab0ffd21b33c138561de06b6/official-hero.jpg",
+      "alt": "Beck 5K / Santa's Jingle Beer Run official race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-24089-1785165563.9159-0.bQz3B7.jpg",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-12-05",
+    "location": "Palatka, FL",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "prospect discovery output",
+        "confidence": "medium",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/FL/Palatka/Beck5K",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials before choosing your race-day option.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-12-05",
+        "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Distance",
+        "value": "5K",
+        "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K",
+        "applies_to_distance_ids": [
+          "5k"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Palatka, FL",
+        "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K",
+        "source_path": "runner_decision_checklist.items.location"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Beck 5K / Santa's Jingle Beer Run — 2026-12-05",
+    "meta_description": "Beck 5K / Santa's Jingle Beer Run race information and registration details for runners in Palatka, FL."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "0d36be94ab0ffd21b33c138561de06b6",
+    "route": "/private/mockups/0d36be94ab0ffd21b33c138561de06b6/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K",
+    "source_platform": "runsignup",
+    "source_race_id": "17281",
+    "registration_race_id": "17281",
+    "generated_from": "marketing-site mockup prospect config generator",
+    "owner_approved_for_generation": true,
+    "prospect_score": 89,
+    "qualification_reason": "Strong local/community language. Cause, nonprofit, or fundraising language is present. Multi-distance or family participation format. Participation-oriented copy fits Community template. Appears registration-platform-first, a strong StartLine opportunity. Race date has useful outreach runway. Recurring/established race signal. Current web presence likely has room for a standalone race site. Core date/location/distance facts are available. Registration URL is available. Schedule/logistics source detail is available. Contact path is available. Cause/sponsor/community proof can support the page. Contact form path found. No prior outreach flagged in input.",
+    "source_urls": [
+      "https://runsignup.com/Race/FL/Palatka/Beck5K",
+      "http://www.checkbeck.com/",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-24089-1785165563.9159-0.bQz3B7.jpg"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "field": "identity.name",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K"
+        },
+        {
+          "field": "event.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K"
+        },
+        {
+          "field": "event.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K"
+        },
+        {
+          "field": "distances",
+          "source": "Public official race source",
+          "confidence": "medium",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K"
+        },
+        {
+          "field": "registration.url",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K",
+          "path": "runner_decision_checklist.items.date"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K",
+          "path": "runner_decision_checklist.items.distance"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "source": "Public official race source",
+          "confidence": "high",
+          "verified": true,
+          "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K",
+          "path": "runner_decision_checklist.items.location"
+        }
+      ],
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/FL/Palatka/Beck5K"
+    },
+    "uncertainty": {
+      "items": [
+        "Schedule, packet pickup, awards, sponsors, GPX, maps, and elevation are omitted unless separately verified from source pages.",
+        "Source facts must be rechecked before a customer-sendable mockup is approved."
+      ],
+      "summary": "Only facts visible in public race/registration sources were used; unsourced schedule, sponsor, map, GPX, and operational details are intentionally omitted."
+    },
+    "captured_at": "2026-08-05T17:31:56.381Z",
+    "assets": [
+      {
+        "type": "hero_image",
+        "src": "/mockups/0d36be94ab0ffd21b33c138561de06b6/official-hero.jpg",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-24089-1785165563.9159-0.bQz3B7.jpg",
+        "license": "public race source",
+        "captured_at": "2026-08-05T17:31:56.381Z"
+      }
+    ]
+  }
+}
