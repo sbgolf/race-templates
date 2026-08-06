@@ -1,0 +1,257 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Bradford Park Turkey Trot",
+    "slug": "bradford-park-turkey-trot",
+    "tagline": "A neighborhood Thanksgiving-season 5K supporting Harrisburg Crisis Assistance Ministry and the Harrisburg Food Pantry.",
+    "hero_image": {
+      "src": "/mockups/35797b668bcc70eaa082e40f166857d2/official-logo.png",
+      "alt": "Bradford Park Turkey Trot official turkey artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-46721-1755099156.7288-0.bONlau.png",
+      "presentation": "logo",
+      "aspect_ratio": "1 / 1",
+      "fit": "contain"
+    },
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-11-07",
+    "location": "Harrisburg, NC",
+    "timezone": "America/New_York"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "source": "RunSignup public race page and public races API",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "story": {
+    "kicker": "Neighborhood tradition",
+    "title": "A Harrisburg 5K built around family, neighbors, and food-pantry support.",
+    "paragraphs": [
+      "Bradford Park Turkey Trot gives runners and walkers a simple Thanksgiving-season race experience with a community purpose. Public race copy highlights support for Harrisburg Crisis Assistance Ministry and encourages canned-good donations for the Harrisburg Food Pantry."
+    ]
+  },
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials for race day, the cause, and the registration path.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-11-07",
+        "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event option",
+        "value": "5K",
+        "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot",
+        "applies_to_distance_ids": [
+          "5k"
+        ],
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Harrisburg, NC",
+        "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "series",
+        "label": "Community cause",
+        "value": "The race supports Harrisburg Crisis Assistance Ministry and invites canned goods for the Harrisburg Food Pantry.",
+        "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot",
+        "source_path": "runner_decision_checklist.items.series"
+      },
+      {
+        "id": "awards",
+        "label": "Awards and prizes",
+        "value": "The public race copy describes prizes for overall, teen, youth, and best dressed participants.",
+        "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot",
+        "source_path": "runner_decision_checklist.items.awards"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Bradford Park Turkey Trot — 2026-11-07",
+    "meta_description": "Bradford Park Turkey Trot race information, registration path, and key runner details for Harrisburg, NC."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "35797b668bcc70eaa082e40f166857d2",
+    "route": "/private/mockups/35797b668bcc70eaa082e40f166857d2/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot",
+    "source_platform": "runsignup",
+    "source_race_id": "39989",
+    "registration_race_id": "39989",
+    "generated_from": "marketing-site RunSignup prospect audit",
+    "owner_approved_for_generation": true,
+    "prospect_score": 100,
+    "qualification_reason": "Community fit, RunSignup-first, ideal outreach runway, source-rich enough for a focused 5K mockup, and source-backed routing/direct email found.",
+    "source_urls": [
+      "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-46721-1755099156.7288-0.bONlau.png"
+    ],
+    "provenance": {
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup public race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup public race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup public race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup public race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup public race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.series",
+          "field": "runner_decision_checklist.items.series",
+          "source": "RunSignup public race page description",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.awards",
+          "field": "runner_decision_checklist.items.awards",
+          "source": "RunSignup public race page description",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "RunSignup public race logo asset",
+          "confidence": "high",
+          "source_url": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-46721-1755099156.7288-0.bONlau.png"
+        }
+      ],
+      "source_confirmed_sections": [
+        "distances",
+        "event",
+        "identity",
+        "registration",
+        "story",
+        "runner_decision_checklist"
+      ],
+      "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot",
+      "captured_at": "2026-08-06T00:00:00.000Z",
+      "source_confirmed_distance_ids": [
+        "5k"
+      ]
+    },
+    "uncertainty": {
+      "items": [
+        "The public RunSignup banner artwork includes older 2024/15th annual date text, so it was not used as the hero image.",
+        "Detailed packet pickup timing, awards, sponsors, course map, GPX, elevation, and pricing are omitted until reverified from current source pages.",
+        "The race page description includes prior schedule phrasing that may not match the 2026 event date; schedule details should be rechecked before customer send approval."
+      ],
+      "summary": "Public race facts were checked against RunSignup source data; customer outreach remains unapproved and was not performed."
+    },
+    "owner_approval_status": "not_requested",
+    "outreach_approved": false,
+    "outreach_sent": false,
+    "contact_quality": "direct_or_routing_email",
+    "qualification_status_at_generation": "qualified_for_mockup",
+    "assets": [
+      {
+        "type": "hero_image",
+        "src": "/mockups/35797b668bcc70eaa082e40f166857d2/official-logo.png",
+        "source_url": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-46721-1755099156.7288-0.bONlau.png",
+        "verified": true
+      }
+    ],
+    "generated": true,
+    "captured_at": "2026-08-06T00:00:00.000Z",
+    "race_slug": "bradford-park-turkey-trot",
+    "contact_sources": [
+      {
+        "url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot/Contact",
+        "type": "form",
+        "label": "RunSignup race contact path"
+      },
+      {
+        "type": "email",
+        "email": "bradfordparksocialcommittee@gmail.com",
+        "label": "RunSignup race contact email",
+        "notes": "RunSignup Race Contact Info exposes this direct/routing email in public page copy.",
+        "value": "bradfordparksocialcommittee@gmail.com",
+        "confidence": "high",
+        "source_url": "https://runsignup.com/Race/NC/Harrisburg/BradfordParkTurkeyTrot",
+        "recommended": true
+      }
+    ]
+  }
+}
