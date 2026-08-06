@@ -1,8 +1,8 @@
 {
   "identity": {
     "template": "community",
-    "name": "2026 University City Turkey Trot",
-    "tagline": "A Charlotte Thanksgiving morning 5K and kids fun run tied to Sickle Cell Partners of the Carolinas.",
+    "name": "Cape Fear Habitat Turkey Trot",
+    "tagline": "A Thanksgiving Day 5K and 1-mile fundraiser helping Cape Fear Habitat build homes.",
     "colors": {
       "primary": "#294735",
       "secondary": "#D89B2A",
@@ -10,9 +10,9 @@
       "ink": "#2A1F18"
     },
     "hero_image": {
-      "src": "/mockups/edf278c468b86c0f5cf9844b62738e64/official-hero.jpg",
-      "alt": "2026 University City Turkey Trot event image",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-24608-1764475759.4269-0.bPk8nV.jpg",
+      "src": "/mockups/fb3c4e9e5975fa0939dabb2616b48bdb/official-hero.png",
+      "alt": "Cape Fear Habitat Turkey Trot event image",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-122199-1779293603.2121-0.bQdD2J.png",
       "presentation": "banner",
       "aspect_ratio": "3 / 1",
       "fit": "contain"
@@ -20,41 +20,41 @@
   },
   "event": {
     "date": "2026-11-26",
-    "location": "3024 Prosperity Church Road, Charlotte, NC, 28269",
+    "location": "Live Oak Bank Pavilion, 10 Cowan Street, Wilmington, NC, 28401",
     "timezone": "America/New_York"
   },
   "distances": [
     {
-      "id": "2026-university-city-turkey-trot",
-      "name": "2026 University City Turkey Trot",
-      "distance": "3.1K",
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
       "featured": true,
       "provenance": {
         "verified": true,
-        "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
+        "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
         "source": "RunSignup race page and public races API",
         "confidence": "high"
       },
-      "map_label": "2026 University City Turkey Trot",
+      "map_label": "5K",
       "highlights": []
     },
     {
-      "id": "2026-university-city-turkey-trot-fun-run",
-      "name": "2026 University City Turkey Trot Fun Run",
-      "distance": "1K",
+      "id": "1-mile",
+      "name": "1 Mile",
+      "distance": "1 Mile",
       "featured": false,
       "provenance": {
         "verified": true,
-        "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
+        "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
         "source": "RunSignup race page and public races API",
         "confidence": "high"
       },
-      "map_label": "2026 University City Turkey Trot Fun Run",
+      "map_label": "1 Mile",
       "highlights": []
     }
   ],
   "registration": {
-    "url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
+    "url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
     "platform": "runsignup",
     "cta_label": "Register on RunSignup"
   },
@@ -74,13 +74,29 @@
   },
   "story": {
     "kicker": "Race overview",
-    "title": "A Charlotte Thanksgiving morning 5K and kids fun run tied to Sickle Cell Partners of the Carolinas.",
+    "title": "A Thanksgiving Day 5K and 1-mile fundraiser helping Cape Fear Habitat build homes.",
     "paragraphs": [
-      "University City Turkey Trot gives Charlotte runners a Thanksgiving-morning 5K run/walk and kids fun run.",
-      "The mockup keeps the race-specific inbox, charity connection, and RunSignup registration path easy to find."
+      "Cape Fear Habitat Turkey Trot moves the Thanksgiving tradition to downtown Wilmington while keeping the race focused on family, fitness, costumes, and Habitat\u2019s mission.",
+      "The page can foreground the new Live Oak Bank Pavilion location, 5K and 1-mile options, parking notes, costume contest, and registration path."
     ]
   },
-  "schedule": [],
+  "schedule": [
+    {
+      "time": "7:30 AM",
+      "label": "Costume contest judging window begins",
+      "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
+    },
+    {
+      "time": "8:30 AM",
+      "label": "Costume contest judging window ends",
+      "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
+    },
+    {
+      "time": "9:15 AM",
+      "label": "Costume contest winners announced",
+      "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
+    }
+  ],
   "faqs": [],
   "runner_decision_checklist": {
     "headline": "Key race details before you register",
@@ -90,49 +106,56 @@
         "id": "date",
         "label": "Race date",
         "value": "2026-11-26",
-        "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
+        "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
         "source_path": "runner_decision_checklist.items.date"
       },
       {
         "id": "distance",
         "label": "Event options",
-        "value": "2026 University City Turkey Trot, 2026 University City Turkey Trot Fun Run",
-        "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
+        "value": "5K, 1 Mile",
+        "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
         "source_path": "runner_decision_checklist.items.distance"
       },
       {
         "id": "location",
         "label": "Location",
-        "value": "3024 Prosperity Church Road, Charlotte, NC, 28269",
-        "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
+        "value": "Live Oak Bank Pavilion, 10 Cowan Street, Wilmington, NC, 28401",
+        "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
         "source_path": "runner_decision_checklist.items.location"
       },
       {
         "id": "facebook",
         "label": "Registration path",
         "value": "Registration continues through RunSignup.",
-        "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
+        "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
         "source_path": "runner_decision_checklist.items.facebook"
       },
       {
         "id": "price",
-        "label": "Event options",
-        "value": "The public race listing includes a 5K Run/Walk and Kids Fun Run.",
-        "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
+        "label": "New location",
+        "value": "The 2026 start/finish is listed at Live Oak Bank Pavilion in downtown Wilmington.",
+        "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
         "source_path": "runner_decision_checklist.items.price"
       },
       {
-        "id": "packet-pickup",
-        "label": "Race inbox",
-        "value": "A race-specific University City Turkey Trot inbox is available for follow-up.",
-        "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
-        "source_path": "runner_decision_checklist.items.packet-pickup"
+        "id": "parking",
+        "label": "Parking",
+        "value": "Street parking is free in downtown Wilmington on Thanksgiving, with legal street and lot parking available first-come, first-served.",
+        "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
+        "source_path": "runner_decision_checklist.items.parking"
+      },
+      {
+        "id": "series",
+        "label": "Cause",
+        "value": "Registration supports Cape Fear Habitat\u2019s work building homes, communities, and hope.",
+        "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
+        "source_path": "runner_decision_checklist.items.series"
       }
     ]
   },
   "seo": {
-    "meta_title": "2026 University City Turkey Trot - Race Website Preview",
-    "meta_description": "2026 University City Turkey Trot race details, event options, location, and registration path."
+    "meta_title": "Cape Fear Habitat Turkey Trot - Race Website Preview",
+    "meta_description": "Cape Fear Habitat Turkey Trot race details, event options, location, and registration path."
   },
   "analytics": {
     "register_click_event_name": "register_click"
@@ -140,46 +163,46 @@
   "private_mockup": {
     "generated": true,
     "noindex": true,
-    "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
+    "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
     "captured_at": "2026-08-06T21:26:56.037142Z",
-    "access_token": "edf278c468b86c0f5cf9844b62738e64",
-    "race_slug": "2026-university-city-turkey-trot",
-    "route": "/private/mockups/edf278c468b86c0f5cf9844b62738e64/",
+    "access_token": "fb3c4e9e5975fa0939dabb2616b48bdb",
+    "race_slug": "cape-fear-habitat-turkey-trot",
+    "route": "/private/mockups/fb3c4e9e5975fa0939dabb2616b48bdb/",
     "template": "community",
     "source_platform": "runsignup",
-    "source_race_id": "17800",
-    "registration_race_id": "17800",
+    "source_race_id": "115622",
+    "registration_race_id": "115622",
     "source_urls": [
-      "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
-      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-24608-1764475759.4269-0.bPk8nV.jpg",
-      "https://sicklecellpartnersofthecarolinas.org/contact-donate/"
+      "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
+      "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-122199-1779293603.2121-0.bQdD2J.png",
+      "https://runsignup.com/Race/WrightsvilleBeachTurkeyTrot/Page/Volunteer"
     ],
     "contact_sources": [
       {
         "type": "form",
         "label": "RunSignup race contact path",
-        "url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K/Contact"
+        "url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot/Contact"
       },
       {
         "type": "email",
         "label": "Verified routing email on file",
-        "masked_email": "un***@gmail.com",
-        "source_url": "https://sicklecellpartnersofthecarolinas.org/contact-donate/",
-        "source_context": "Sickle Cell Partners public contact page includes race-specific and organization inboxes; RunSignup identifies Sickle Cell Partners as beneficiary/sponsor.",
+        "masked_email": "he***@capefearhabitat.org",
+        "source_url": "https://runsignup.com/Race/WrightsvilleBeachTurkeyTrot/Page/Volunteer",
+        "source_context": "RunSignup Volunteer page says: Questions? Contact our Volunteer Program Manager at heather@capefearhabitat.org. Official org site also lists info@capefearhabitat.org.",
         "recommended": true,
         "confidence": "high"
       }
     ],
     "assets": [
       {
-        "src": "/mockups/edf278c468b86c0f5cf9844b62738e64/official-hero.jpg",
-        "alt": "2026 University City Turkey Trot event image",
+        "src": "/mockups/fb3c4e9e5975fa0939dabb2616b48bdb/official-hero.png",
+        "alt": "Cape Fear Habitat Turkey Trot event image",
         "caption": "Event image for race day.",
-        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-24608-1764475759.4269-0.bPk8nV.jpg"
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-122199-1779293603.2121-0.bQdD2J.png"
       }
     ],
     "provenance": {
-      "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K",
+      "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot",
       "captured_at": "2026-08-06T21:26:56.037142Z",
       "source_confirmed_sections": [
         "identity",
@@ -187,11 +210,12 @@
         "distances",
         "registration",
         "story",
-        "runner_decision_checklist"
+        "runner_decision_checklist",
+        "schedule"
       ],
       "source_confirmed_distance_ids": [
-        "2026-university-city-turkey-trot",
-        "2026-university-city-turkey-trot-fun-run"
+        "5k",
+        "1-mile"
       ],
       "items": [
         {
@@ -199,98 +223,105 @@
           "field": "identity.name",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "event.date",
           "field": "event.date",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "event.location",
           "field": "event.location",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "distances",
           "field": "distances",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "registration.url",
           "field": "registration.url",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "story.paragraphs",
           "field": "story.paragraphs",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "runner_decision_checklist",
           "field": "runner_decision_checklist",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "identity.hero_image",
           "field": "identity.hero_image",
           "source": "Public race artwork",
           "confidence": "high",
-          "source_url": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-24608-1764475759.4269-0.bPk8nV.jpg"
+          "source_url": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-122199-1779293603.2121-0.bQdD2J.png"
         },
         {
           "path": "runner_decision_checklist.items.date",
           "field": "runner_decision_checklist.items.date",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "runner_decision_checklist.items.distance",
           "field": "runner_decision_checklist.items.distance",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "runner_decision_checklist.items.location",
           "field": "runner_decision_checklist.items.location",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "runner_decision_checklist.items.facebook",
           "field": "runner_decision_checklist.items.facebook",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
           "path": "runner_decision_checklist.items.price",
           "field": "runner_decision_checklist.items.price",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         },
         {
-          "path": "runner_decision_checklist.items.packet-pickup",
-          "field": "runner_decision_checklist.items.packet-pickup",
+          "path": "runner_decision_checklist.items.parking",
+          "field": "runner_decision_checklist.items.parking",
           "source": "RunSignup race page and public races API",
           "confidence": "high",
-          "source_url": "https://runsignup.com/Race/NC/Charlotte/UniversityCityTurkeyTrot5K"
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
+        },
+        {
+          "path": "runner_decision_checklist.items.series",
+          "field": "runner_decision_checklist.items.series",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/NC/Wilmington/WrightsvilleBeachTurkeyTrot"
         }
       ]
     },
