@@ -1,0 +1,363 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Escape the Elves 5K",
+    "tagline": "A festive Oakwood 5K, fun run, and virtual option hosted by South Hall Rotary.",
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    },
+    "hero_image": {
+      "src": "/mockups/3545042f540511e77de075a62d18bcfe/official-hero.png",
+      "alt": "Escape the Elves 5K event image",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race10974-logo-0.bLxTyY.png",
+      "presentation": "banner",
+      "aspect_ratio": "3 / 1",
+      "fit": "contain"
+    }
+  },
+  "event": {
+    "date": "2026-12-12",
+    "location": "Oakwood Community Center, 4101 Railroad St,, Oakwood, GA, 30566",
+    "timezone": "America/New_York"
+  },
+  "organization": {
+    "name": "South Hall Rotary causes including the South Hall Food Pantry"
+  },
+  "distances": [
+    {
+      "id": "escape-the-elves-5k",
+      "name": "Escape the Elves 5k",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+        "source": "RunSignup race page and public races API",
+        "confidence": "high"
+      },
+      "map_label": "Escape the Elves 5k",
+      "highlights": []
+    },
+    {
+      "id": "escape-the-elves-fun-run",
+      "name": "Escape the Elves Fun Run",
+      "distance": "1K",
+      "featured": false,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+        "source": "RunSignup race page and public races API",
+        "confidence": "high"
+      },
+      "map_label": "Escape the Elves Fun Run",
+      "highlights": []
+    },
+    {
+      "id": "escape-the-elves-virtual-runner",
+      "name": "Escape the Elves Virtual Runner",
+      "distance": "Escape the Elves Virtual Runner",
+      "featured": false,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+        "source": "RunSignup race page and public races API",
+        "confidence": "high"
+      },
+      "map_label": "Escape the Elves Virtual Runner",
+      "highlights": []
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "startline_value": {
+    "headline": "A race website concept built around registration intent, not just a prettier homepage.",
+    "intro": "StartLine Sites reorganizes the information runners need before they register: date, location, distance, schedule, policies, and the registration link.",
+    "improved": [
+      "Placed key race facts near the registration path.",
+      "Made event options easier to scan on mobile and desktop.",
+      "Kept registration calls to action connected to measurable click intent."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A festive Oakwood 5K, fun run, and virtual option hosted by South Hall Rotary.",
+    "paragraphs": [
+      "Escape the Elves brings a holiday-themed 5K to Downtown Oakwood, with Buddy the Elf, hidden elves on the course, festive outfits, and a community breakfast option.",
+      "The race benefits South Hall Rotary causes including the South Hall Food Pantry, scholarships, ShelterBox, Alzheimer\u2019s research through CART, and local community programs."
+    ]
+  },
+  "schedule": [
+    {
+      "time": "7:30 AM",
+      "label": "Race-day packet pickup begins at Oakwood Community Center",
+      "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+    },
+    {
+      "time": "8:30 AM",
+      "label": "5K start",
+      "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+    },
+    {
+      "time": "8:45 AM",
+      "label": "Fun run start",
+      "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+    },
+    {
+      "time": "9:30 AM",
+      "label": "Awards ceremony",
+      "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+    },
+    {
+      "time": "9:45 AM",
+      "label": "Course closes",
+      "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+    }
+  ],
+  "faqs": [],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials for race day, event options, and the registration path.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-12-12",
+        "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "Escape the Elves 5k, Escape the Elves Fun Run, Escape the Elves Virtual Runner",
+        "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Oakwood Community Center, 4101 Railroad St,, Oakwood, GA, 30566",
+        "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "facebook",
+        "label": "Registration path",
+        "value": "Registration continues through RunSignup.",
+        "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+        "source_path": "runner_decision_checklist.items.facebook"
+      },
+      {
+        "id": "course",
+        "label": "Course",
+        "value": "The 5K course is described as USATF Certified.",
+        "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+        "source_path": "runner_decision_checklist.items.course"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Packet pickup is planned for Thursday, Dec. 11 from 3:00 to 7:00 PM and Friday, Dec. 12 from 9:00 AM to 3:00 PM at 5512 Main St, Flowery Branch.",
+        "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
+      },
+      {
+        "id": "swag",
+        "label": "Shirt cutoff",
+        "value": "Race shirts are guaranteed for runners registered by December 5.",
+        "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+        "source_path": "runner_decision_checklist.items.swag"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Escape the Elves 5K - Race Website Preview",
+    "meta_description": "Escape the Elves 5K race details, event options, location, and registration path."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+    "captured_at": "2026-08-06T21:26:56.037142Z",
+    "access_token": "3545042f540511e77de075a62d18bcfe",
+    "race_slug": "escape-the-elves-5k",
+    "route": "/private/mockups/3545042f540511e77de075a62d18bcfe/",
+    "template": "community",
+    "source_platform": "runsignup",
+    "source_race_id": "10974",
+    "registration_race_id": "10974",
+    "source_urls": [
+      "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+      "https://d368g9lw5ileu7.cloudfront.net/races/race10974-logo-0.bLxTyY.png",
+      "https://shrotary.org/"
+    ],
+    "contact_sources": [
+      {
+        "type": "form",
+        "label": "RunSignup race contact path",
+        "url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K/Contact"
+      },
+      {
+        "type": "email",
+        "label": "Verified routing email on file",
+        "masked_email": "in***@shrotary.org",
+        "source_url": "https://shrotary.org/",
+        "source_context": "South Hall Rotary official site JOIN US section includes mailto info@shrotary.org. RunSignup identifies race as hosted by South Hall Rotary.",
+        "recommended": true,
+        "confidence": "high"
+      }
+    ],
+    "assets": [
+      {
+        "src": "/mockups/3545042f540511e77de075a62d18bcfe/official-hero.png",
+        "alt": "Escape the Elves 5K event image",
+        "caption": "Event image for race day.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race10974-logo-0.bLxTyY.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K",
+      "captured_at": "2026-08-06T21:26:56.037142Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "story",
+        "runner_decision_checklist",
+        "schedule"
+      ],
+      "source_confirmed_distance_ids": [
+        "escape-the-elves-5k",
+        "escape-the-elves-fun-run",
+        "escape-the-elves-virtual-runner"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "field": "runner_decision_checklist",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "identity.hero_image",
+          "field": "identity.hero_image",
+          "source": "Public race artwork",
+          "confidence": "high",
+          "source_url": "https://d368g9lw5ileu7.cloudfront.net/races/race10974-logo-0.bLxTyY.png"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.facebook",
+          "field": "runner_decision_checklist.items.facebook",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "field": "runner_decision_checklist.items.course",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "field": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "field": "runner_decision_checklist.items.swag",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Oakwood/SouthHallRotary5K"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Only source-backed race facts are shown; details that were not visible in public sources should be confirmed by the race organizer before launch.",
+      "items": [
+        "Confirm final race-day logistics, prices, and packet-pickup details with the organizer before publishing a live customer site."
+      ]
+    }
+  }
+}
