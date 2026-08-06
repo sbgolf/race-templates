@@ -9,9 +9,10 @@ const scheduleByDay = schedule.reduce((groups, item) => {
 }, {});
 const featuredDistance = race.distances?.find((distance) => distance.featured) || race.distances?.[0];
 const isSingleDistance = (race.distances || []).length === 1;
+const scheduleItemName = (item = {}) => item.name || item.label || item.title || '';
 const groupTitleForDay = (day, items = []) => {
   if (items[0]?.group_title) return items[0].group_title;
-  if (/packet|pickup/i.test(items.map((item) => item.name || '').join(' '))) return 'Packet pickup';
+  if (/packet|pickup/i.test(items.map(scheduleItemName).join(' '))) return 'Packet pickup';
   return day.includes('Friday') ? 'Packet Pickup' : 'Race Day';
 };
 ---
@@ -43,9 +44,10 @@ const groupTitleForDay = (day, items = []) => {
         {items.map((item) => {
           const appliesTo = item.applies_to_distances || ['all'];
           const visible = isSingleDistance || appliesTo.includes('all') || appliesTo.includes(featuredDistance?.id);
+          const eventName = scheduleItemName(item);
           return <div class="tl-event" data-distance={appliesTo.join(',')} data-hide={String(!visible)}>
             <div>
-              <div class="tl-event-name">{item.name}</div>
+              <div class="tl-event-name">{eventName}</div>
               {item.location ? <small>{item.location}</small> : null}
             </div>
             <div class="tl-event-time">{item.time}</div>

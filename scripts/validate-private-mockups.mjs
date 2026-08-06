@@ -128,6 +128,7 @@ for (const file of files) {
       validateRenderedSections(config, confirmedSections, errors);
       validateDistances(config, confirmedDistanceIds, errors);
       validateSingleDistanceCopy(config, confirmedDistanceIds, errors);
+      validateScheduleItems(config, errors);
       validateRunnerDecisionChecklist(config, confirmedSections, confirmedDistanceIds, errors);
       validatePrivateValueContractMetadata(config, errors);
       validateCustomerReadyVisualAsset(config, errors);
@@ -260,7 +261,7 @@ function validateTomKingClassicCommunityFixes(config, errors) {
     errors.push('Tom King half marathon elevation gain must match MapMyRun total ascent: 232 ft gain.');
   }
 
-  const scheduleText = asArray(config.schedule).map((item) => `${item?.name || ''} ${item?.time || ''} ${(item?.applies_to_distances || []).join(',')}`).join(' | ');
+  const scheduleText = asArray(config.schedule).map((item) => `${scheduleItemName(item)} ${item?.time || ''} ${(item?.applies_to_distances || []).join(',')}`).join(' | ');
   if (!/5K course closes\s+9:15 AM\s+5k/i.test(scheduleText)) {
     errors.push('Tom King schedule must include the verified 5K course close at 9:15 AM for the 5K distance.');
   }
@@ -288,6 +289,19 @@ function validateTomKingClassicCommunityFixes(config, errors) {
   if (!/Contact (?:the )?Race/i.test(`${faqText} ${storyLinksText}`) || !/#contactFormSection/i.test(`${faqText} ${storyLinksText}`)) {
     errors.push('Tom King mockup must include a simple Contact the Race link to the RunSignup contact form.');
   }
+}
+
+function validateScheduleItems(config, errors) {
+  asArray(config.schedule).forEach((item, index) => {
+    const base = `schedule[${index}]`;
+    if (!isObject(item)) {
+      errors.push(`${base}: Schedule item must be an object.`);
+      return;
+    }
+    if (!scheduleItemName(item).trim()) {
+      errors.push(`${base}.name: Schedule item must include a visible name, label, or title; otherwise the Race Day card renders only the time.`);
+    }
+  });
 }
 
 function isDisplayCopyPath(jsonPath) {
@@ -426,6 +440,10 @@ function hasRenderableValue(value) {
 
 function asArray(value) {
   return Array.isArray(value) ? value : [];
+}
+
+function scheduleItemName(item = {}) {
+  return String(item?.name || item?.label || item?.title || '');
 }
 
 function isObject(value) {
