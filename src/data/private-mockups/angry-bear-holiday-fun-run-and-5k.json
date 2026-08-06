@@ -1,0 +1,354 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Angry Bear Holiday Fun Run and 5K",
+    "tagline": "A festive Massillon fun run and 5K supporting Jackson High School Baseball.",
+    "hero_image": {
+      "src": "/mockups/2809a42408f16f7619110e3a76389673/1-8b9eece84e.png",
+      "alt": "Angry Bear Holiday Fun Run and 5K race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-239368-1751038104.1309-0.bOxRIy.png"
+    },
+    "colors": {
+      "primary": "#C6643D",
+      "secondary": "#6B8E6F"
+    }
+  },
+  "event": {
+    "date": "2026-12-05",
+    "location": "7600 Fulton Dr NW, Massillon, OH 44646",
+    "venue": "Jackson High School",
+    "timezone": "America/New_York"
+  },
+  "organization": {
+    "name": "Jackson High School Baseball"
+  },
+  "distances": [
+    {
+      "id": "kids-fun-run",
+      "name": "1 Mile Kids Fun Run",
+      "distance": "1 mi",
+      "featured": false,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "1 Mile Kids Fun Run",
+      "highlights": []
+    },
+    {
+      "id": "5k",
+      "name": "5K Run/Walk",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "5K Run/Walk",
+      "highlights": []
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "startline_value": {
+    "headline": "A race website concept built around registration intent \u2014 not just a prettier homepage.",
+    "intro": "StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.",
+    "improved": [
+      "Reduced runner friction by placing key race facts near the registration path.",
+      "Surfaced trust signals from configured distances, schedule details, and FAQs when available.",
+      "Made registration CTAs easier to find on mobile and desktop with measurement-ready registration-click tracking."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees \u2014 just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A festive Massillon fun run and 5K supporting Jackson High School Baseball.",
+    "paragraphs": [
+      "Angry Bear Holiday Fun Run and 5K is a winter-themed family event supporting Jackson High School Baseball.",
+      "The afternoon includes a kids fun run, a 5K run/walk, music, Santa, costume judging, medals, snacks, and holiday activities."
+    ]
+  },
+  "schedule": [
+    {
+      "time": "Friday, December 4, 5:00 PM to 7:00 PM",
+      "label": "Packet pickup",
+      "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+    },
+    {
+      "time": "Saturday, December 5, 3:30 PM",
+      "label": "Packet pickup and Santa arrive",
+      "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+    },
+    {
+      "time": "4:15 PM",
+      "label": "1 Mile Kids Fun Run begins",
+      "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+    },
+    {
+      "time": "4:30 PM",
+      "label": "Costume contest judging",
+      "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+    },
+    {
+      "time": "5:00 PM",
+      "label": "5K Run/Walk begins",
+      "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+    }
+  ],
+  "faqs": [],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials for race day, event options, and the registration path.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-12-05",
+        "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "1 Mile Kids Fun Run, 5K Run/Walk",
+        "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "7600 Fulton Dr NW, Massillon, OH 44646",
+        "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "swag",
+        "label": "Shirts",
+        "value": "A no-shirt option is available; shirts are not guaranteed after November 15.",
+        "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+        "source_path": "runner_decision_checklist.items.swag"
+      },
+      {
+        "id": "price",
+        "label": "Discounts",
+        "value": "Student and family pricing options are available for the 5K.",
+        "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+        "source_path": "runner_decision_checklist.items.price"
+      },
+      {
+        "id": "series",
+        "label": "Race contact",
+        "value": "Use the RunSignup race contact path for race questions.",
+        "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+        "source_path": "runner_decision_checklist.items.series"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Angry Bear Holiday Fun Run and 5K - Race Website Preview",
+    "meta_description": "Angry Bear Holiday Fun Run and 5K race details, event options, location, and registration path for Jackson High School."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+    "captured_at": "2026-08-06T17:35:31.587Z",
+    "access_token": "2809a42408f16f7619110e3a76389673",
+    "race_slug": "angry-bear-holiday-fun-run-and-5k",
+    "route": "/private/mockups/2809a42408f16f7619110e3a76389673/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/2809a42408f16f7619110e3a76389673/1-8b9eece84e.png",
+        "alt": "Angry Bear Holiday Fun Run and 5K race artwork 1",
+        "caption": "Official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-239368-1751038104.1309-0.bOxRIy.png"
+      },
+      {
+        "src": "/mockups/2809a42408f16f7619110e3a76389673/2-69563f69cf.png",
+        "alt": "Angry Bear Holiday Fun Run and 5K race artwork 2",
+        "caption": "Additional official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-172xxx/172322/raceBanner-ao8y9Gsv-bOMIcU.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun",
+      "captured_at": "2026-08-06T17:35:31.587Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "story",
+        "runner_decision_checklist",
+        "schedule"
+      ],
+      "source_confirmed_distance_ids": [
+        "kids-fun-run",
+        "5k"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "event.venue",
+          "field": "event.venue",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "schedule",
+          "field": "schedule",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "field": "runner_decision_checklist",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "field": "runner_decision_checklist.items.swag",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.series",
+          "field": "runner_decision_checklist.items.series",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "distances.kids-fun-run",
+          "field": "distances.kids-fun-run",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "distances.5k",
+          "field": "distances.5k",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "RunSignup public race image assets",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/OH/Massillon/AngryBearHolidayRun"
+        }
+      ]
+    },
+    "confidence": {
+      "high": 7,
+      "medium": 8,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "Public race facts were checked against RunSignup source data; customer outreach remains unapproved and was not performed.",
+      "items": [
+        "Fine-grained pricing deadlines, sponsor tier hierarchy, and course maps should be rechecked immediately before any customer send if the source page changes.",
+        "Customer outreach remains gated by Steve approval."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups.",
+    "source_confirmed_sections": [
+      "identity",
+      "event",
+      "distances",
+      "registration",
+      "story",
+      "schedule",
+      "runner_decision_checklist"
+    ]
+  }
+}

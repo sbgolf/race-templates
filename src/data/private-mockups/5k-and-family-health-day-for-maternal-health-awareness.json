@@ -1,0 +1,317 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "5K & Family Health Day for Maternal Health Awareness",
+    "tagline": "A Savannah 5K and free Family Health Day raising awareness for maternal health.",
+    "hero_image": {
+      "src": "/mockups/876221a31b13dc4acad156b2223efee3/1-609bd316c5.jpg",
+      "alt": "5K & Family Health Day for Maternal Health Awareness race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race136966-social1200x630.bJl2hu.jpg"
+    },
+    "colors": {
+      "primary": "#C6643D",
+      "secondary": "#6B8E6F"
+    }
+  },
+  "event": {
+    "date": "2027-03-13",
+    "location": "1850 East Montgomery Crossroad, Savannah, GA 31406",
+    "venue": "Lake Mayer Park",
+    "timezone": "America/New_York"
+  },
+  "organization": {
+    "name": "5K & Family Health Day for Maternal Health Awareness"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K & Family Health Day Race",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "5K & Family Health Day Race",
+      "highlights": []
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness",
+    "platform": "runsignup",
+    "cta_label": "View RunSignup race page"
+  },
+  "startline_value": {
+    "headline": "A race website concept built around registration intent \u2014 not just a prettier homepage.",
+    "intro": "StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.",
+    "improved": [
+      "Reduced runner friction by placing key race facts near the registration path.",
+      "Surfaced trust signals from configured distances, schedule details, and FAQs when available.",
+      "Made registration CTAs easier to find on mobile and desktop with measurement-ready registration-click tracking."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees \u2014 just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A Savannah 5K and free Family Health Day raising awareness for maternal health.",
+    "paragraphs": [
+      "This Savannah charity race raises funds and awareness for maternal and infant health while supporting economically vulnerable women and families.",
+      "The morning pairs a 5K race with a free Family Health Day, community baby shower, health screenings, family-friendly activities, wellness resources, and support for Savannah Care Center."
+    ]
+  },
+  "schedule": [
+    {
+      "time": "November 1, 2026",
+      "label": "Registration opens",
+      "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+    },
+    {
+      "time": "Saturday, March 13, 2027",
+      "label": "Race and Family Health Day",
+      "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+    }
+  ],
+  "faqs": [],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials for race day, event options, and the registration path.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2027-03-13",
+        "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "5K & Family Health Day Race",
+        "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "1850 East Montgomery Crossroad, Savannah, GA 31406",
+        "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "start-time",
+        "label": "Registration status",
+        "value": "Registration opens November 1, 2026.",
+        "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness",
+        "source_path": "runner_decision_checklist.items.start-time"
+      },
+      {
+        "id": "price",
+        "label": "Registration fee",
+        "value": "5K registration is $35.",
+        "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness",
+        "source_path": "runner_decision_checklist.items.price"
+      },
+      {
+        "id": "series",
+        "label": "Beneficiary",
+        "value": "Proceeds benefit Savannah Care Center.",
+        "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness",
+        "source_path": "runner_decision_checklist.items.series"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "5K & Family Health Day for Maternal Health Awareness - Race Website Preview",
+    "meta_description": "5K & Family Health Day for Maternal Health Awareness race details, event options, location, and registration path for Lake Mayer Park."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness",
+    "captured_at": "2026-08-06T17:35:35.446Z",
+    "access_token": "876221a31b13dc4acad156b2223efee3",
+    "race_slug": "5k-and-family-health-day-for-maternal-health-awareness",
+    "route": "/private/mockups/876221a31b13dc4acad156b2223efee3/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/876221a31b13dc4acad156b2223efee3/1-609bd316c5.jpg",
+        "alt": "5K & Family Health Day for Maternal Health Awareness race artwork 1",
+        "caption": "Official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race136966-social1200x630.bJl2hu.jpg"
+      },
+      {
+        "src": "/mockups/876221a31b13dc4acad156b2223efee3/2-0a4147b382.jpg",
+        "alt": "5K & Family Health Day for Maternal Health Awareness race artwork 2",
+        "caption": "Additional official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-143535-1740151424.9985-0.bNUjQa.jpg"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness",
+      "captured_at": "2026-08-06T17:35:35.446Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "story",
+        "runner_decision_checklist",
+        "schedule"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "event.venue",
+          "field": "event.venue",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "schedule",
+          "field": "schedule",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "field": "runner_decision_checklist",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "distances.5k",
+          "field": "distances.5k",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "RunSignup public race image assets",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "field": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        },
+        {
+          "path": "runner_decision_checklist.items.series",
+          "field": "runner_decision_checklist.items.series",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Savannah/5KFamilyFunDayforMaternalHealthAwareness"
+        }
+      ]
+    },
+    "confidence": {
+      "high": 7,
+      "medium": 9,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "Public race facts were checked against RunSignup source data; customer outreach remains unapproved and was not performed.",
+      "items": [
+        "Fine-grained pricing deadlines, sponsor tier hierarchy, and course maps should be rechecked immediately before any customer send if the source page changes.",
+        "Customer outreach remains gated by Steve approval."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups.",
+    "source_confirmed_sections": [
+      "identity",
+      "event",
+      "distances",
+      "registration",
+      "story",
+      "schedule",
+      "runner_decision_checklist"
+    ]
+  }
+}
