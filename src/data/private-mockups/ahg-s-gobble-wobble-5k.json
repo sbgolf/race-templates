@@ -1,0 +1,339 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "AHG'S Gobble Wobble 5k",
+    "tagline": "A first-year Bossier City Gobble Wobble supporting American Heritage Girls Troop LA-0401.",
+    "hero_image": {
+      "src": "/mockups/9243d667732fb82834ad579722d662a4/1-ac17e7fdb8.png",
+      "alt": "AHG'S Gobble Wobble 5k race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-285462-1782233425.3288-0.bQoRLr.png"
+    },
+    "colors": {
+      "primary": "#C6643D",
+      "secondary": "#6B8E6F"
+    }
+  },
+  "event": {
+    "date": "2026-11-21",
+    "location": "3131 Arthur Ray Teague Pkwy, Bossier City, LA 71112",
+    "venue": "Arthur Ray Teague Boat Launch",
+    "timezone": "America/New_York"
+  },
+  "organization": {
+    "name": "American Heritage Girls Troop LA-0401"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "AHG'S Gobble Wobble 5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "AHG'S Gobble Wobble 5K",
+      "highlights": []
+    },
+    {
+      "id": "fun-run",
+      "name": "10 & Under Fun Run",
+      "distance": "0.5 mi",
+      "featured": false,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "10 & Under Fun Run",
+      "highlights": []
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "startline_value": {
+    "headline": "A race website concept built around registration intent \u2014 not just a prettier homepage.",
+    "intro": "StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.",
+    "improved": [
+      "Reduced runner friction by placing key race facts near the registration path.",
+      "Surfaced trust signals from configured distances, schedule details, and FAQs when available.",
+      "Made registration CTAs easier to find on mobile and desktop with measurement-ready registration-click tracking."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees \u2014 just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A first-year Bossier City Gobble Wobble supporting American Heritage Girls Troop LA-0401.",
+    "paragraphs": [
+      "This Bossier City Thanksgiving-season race supports American Heritage Girls Troop LA-0401, a faith-based character and leadership program for girls ages 5 to 17.",
+      "The morning includes a 5K plus a 10-and-under half-mile fun run at Arthur Ray Teague Parkway Boat Launch, with age-group medals for the 5K."
+    ]
+  },
+  "schedule": [
+    {
+      "time": "7:50 AM",
+      "label": "10 & Under Fun Run begins",
+      "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+    },
+    {
+      "time": "8:00 AM",
+      "label": "5K begins",
+      "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+    }
+  ],
+  "faqs": [],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials for race day, event options, and the registration path.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-11-21",
+        "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "AHG'S Gobble Wobble 5K, 10 & Under Fun Run",
+        "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "3131 Arthur Ray Teague Pkwy, Bossier City, LA 71112",
+        "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Packet pickup runs Friday, November 20, with race-day pickup also available.",
+        "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+        "source_path": "runner_decision_checklist.items.packet-pickup"
+      },
+      {
+        "id": "swag",
+        "label": "Shirt cutoff",
+        "value": "Shirt sizes are not guaranteed after November 8 at 11:59 PM.",
+        "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+        "source_path": "runner_decision_checklist.items.swag"
+      },
+      {
+        "id": "price",
+        "label": "Pricing",
+        "value": "5K registration steps from $20 early bird to $35 from November 12 through race day.",
+        "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+        "source_path": "runner_decision_checklist.items.price"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "AHG'S Gobble Wobble 5k - Race Website Preview",
+    "meta_description": "AHG'S Gobble Wobble 5k race details, event options, location, and registration path for Arthur Ray Teague Boat Launch."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+    "captured_at": "2026-08-06T17:35:27.744Z",
+    "access_token": "9243d667732fb82834ad579722d662a4",
+    "race_slug": "ahg-s-gobble-wobble-5k",
+    "route": "/private/mockups/9243d667732fb82834ad579722d662a4/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/9243d667732fb82834ad579722d662a4/1-ac17e7fdb8.png",
+        "alt": "AHG'S Gobble Wobble 5k race artwork 1",
+        "caption": "Official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-285462-1782233425.3288-0.bQoRLr.png"
+      },
+      {
+        "src": "/mockups/9243d667732fb82834ad579722d662a4/2-26ae068b05.png",
+        "alt": "AHG'S Gobble Wobble 5k race artwork 2",
+        "caption": "Additional official race artwork for the event page.",
+        "source": "https://d2mkojm4rk40ta.cloudfront.net/us-east-1-src/prod/clientUploads/2026-07/27/1/209798/faa4ae21-b77e-4e3f-aecf-6bf2aa2cf839-bQz1LT.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k",
+      "captured_at": "2026-08-06T17:35:27.744Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "story",
+        "runner_decision_checklist",
+        "schedule"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "fun-run"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "event.venue",
+          "field": "event.venue",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "schedule",
+          "field": "schedule",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "field": "runner_decision_checklist",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "runner_decision_checklist.items.packet-pickup",
+          "field": "runner_decision_checklist.items.packet-pickup",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "field": "runner_decision_checklist.items.swag",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "distances.5k",
+          "field": "distances.5k",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "distances.fun-run",
+          "field": "distances.fun-run",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "RunSignup public race image assets",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/LA/BossierCity/AHGGobbleWobble5k"
+        }
+      ]
+    },
+    "confidence": {
+      "high": 6,
+      "medium": 9,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "Public race facts were checked against RunSignup source data; customer outreach remains unapproved and was not performed.",
+      "items": [
+        "Fine-grained pricing deadlines, sponsor tier hierarchy, and course maps should be rechecked immediately before any customer send if the source page changes.",
+        "Customer outreach remains gated by Steve approval."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups.",
+    "source_confirmed_sections": [
+      "identity",
+      "event",
+      "distances",
+      "registration",
+      "story",
+      "schedule",
+      "runner_decision_checklist"
+    ]
+  }
+}

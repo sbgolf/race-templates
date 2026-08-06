@@ -1,0 +1,388 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Angry Bird Turkey Run (5K/10K/1-Mile/Little Turkeys Trot)",
+    "tagline": "A family-friendly Loganville turkey run with 10K, 5K, 1-mile, and kids dash options.",
+    "hero_image": {
+      "src": "/mockups/e143d0ad7b19fbbbee5999dd1a17f4d5/1-bd3b598b0b.png",
+      "alt": "Angry Bird Turkey Run (5K/10K/1-Mile/Little Turkeys Trot) race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-248687-1783028312.9467-0.bQrTPy.png"
+    },
+    "colors": {
+      "primary": "#C6643D",
+      "secondary": "#6B8E6F"
+    }
+  },
+  "event": {
+    "date": "2026-11-22",
+    "location": "175 Ozora Rd, Loganville, GA 30052",
+    "venue": "Bay Creek Park",
+    "timezone": "America/New_York"
+  },
+  "organization": {
+    "name": "We Run Gwinnett"
+  },
+  "distances": [
+    {
+      "id": "10k",
+      "name": "10K",
+      "distance": "10K",
+      "featured": true,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "10K",
+      "highlights": []
+    },
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": false,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "5K",
+      "highlights": []
+    },
+    {
+      "id": "one-mile",
+      "name": "1 Mile Fun Run/Walk",
+      "distance": "1 mi",
+      "featured": false,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "1 Mile Fun Run/Walk",
+      "highlights": []
+    },
+    {
+      "id": "kids-dash",
+      "name": "Little Turkey Trot",
+      "distance": "50 yd",
+      "featured": false,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "Little Turkey Trot",
+      "highlights": []
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "startline_value": {
+    "headline": "A race website concept built around registration intent \u2014 not just a prettier homepage.",
+    "intro": "StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.",
+    "improved": [
+      "Reduced runner friction by placing key race facts near the registration path.",
+      "Surfaced trust signals from configured distances, schedule details, and FAQs when available.",
+      "Made registration CTAs easier to find on mobile and desktop with measurement-ready registration-click tracking."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees \u2014 just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A family-friendly Loganville turkey run with 10K, 5K, 1-mile, and kids dash options.",
+    "paragraphs": [
+      "Angry Bird Turkey Run brings runners, walkers, families, and kids to Bay Creek Park for a pre-Thanksgiving morning hosted by We Run Gwinnett.",
+      "The official race page describes a 10K, 5K, 1-mile fun run or walk, and Little Turkeys Trot, with awards, festive energy, and a paved park course."
+    ]
+  },
+  "schedule": [
+    {
+      "time": "7:25 AM",
+      "label": "Little Turkey Trot begins",
+      "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+    },
+    {
+      "time": "7:30 AM",
+      "label": "10K, 5K, and 1 Mile Fun Run/Walk begin",
+      "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+    },
+    {
+      "time": "9:30 AM",
+      "label": "10K cutoff",
+      "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+    }
+  ],
+  "faqs": [],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials for race day, event options, and the registration path.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2026-11-22",
+        "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "10K, 5K, 1 Mile Fun Run/Walk, Little Turkey Trot",
+        "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "175 Ozora Rd, Loganville, GA 30052",
+        "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "course",
+        "label": "Course",
+        "value": "The 10K is described as two laps of the 5K course through Bay Creek Park.",
+        "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+        "source_path": "runner_decision_checklist.items.course"
+      },
+      {
+        "id": "awards",
+        "label": "Awards",
+        "value": "Awards include top overall male/female and age-group recognition.",
+        "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+        "source_path": "runner_decision_checklist.items.awards"
+      },
+      {
+        "id": "swag",
+        "label": "Medal note",
+        "value": "The source notes 1-mile participants do not receive finisher medals.",
+        "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+        "source_path": "runner_decision_checklist.items.swag"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "Angry Bird Turkey Run (5K/10K/1-Mile/Little Turkeys Trot) - Race Website Preview",
+    "meta_description": "Angry Bird Turkey Run (5K/10K/1-Mile/Little Turkeys Trot) race details, event options, location, and registration path for Bay Creek Park."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+    "captured_at": "2026-08-06T17:35:30.699Z",
+    "access_token": "e143d0ad7b19fbbbee5999dd1a17f4d5",
+    "race_slug": "angry-bird-turkey-run-5k-10k-1-mile-little-turkeys-trot",
+    "route": "/private/mockups/e143d0ad7b19fbbbee5999dd1a17f4d5/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/e143d0ad7b19fbbbee5999dd1a17f4d5/1-bd3b598b0b.png",
+        "alt": "Angry Bird Turkey Run (5K/10K/1-Mile/Little Turkeys Trot) race artwork 1",
+        "caption": "Official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-248687-1783028312.9467-0.bQrTPy.png"
+      },
+      {
+        "src": "/mockups/e143d0ad7b19fbbbee5999dd1a17f4d5/2-4d0fc0d038.jpg",
+        "alt": "Angry Bird Turkey Run (5K/10K/1-Mile/Little Turkeys Trot) race artwork 2",
+        "caption": "Additional official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/img/race/bannerImgs/template2/raceGroup_1200-400.jpg"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun",
+      "captured_at": "2026-08-06T17:35:30.699Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "story",
+        "runner_decision_checklist",
+        "schedule"
+      ],
+      "source_confirmed_distance_ids": [
+        "10k",
+        "5k",
+        "one-mile",
+        "kids-dash"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "event.venue",
+          "field": "event.venue",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "schedule",
+          "field": "schedule",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "field": "runner_decision_checklist",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "distances.10k",
+          "field": "distances.10k",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "distances.5k",
+          "field": "distances.5k",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "distances.one-mile",
+          "field": "distances.one-mile",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "distances.kids-dash",
+          "field": "distances.kids-dash",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "RunSignup public race image assets",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.course",
+          "field": "runner_decision_checklist.items.course",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.awards",
+          "field": "runner_decision_checklist.items.awards",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "field": "runner_decision_checklist.items.swag",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/GA/Loganville/AngryBirdTurkeyRun"
+        }
+      ]
+    },
+    "confidence": {
+      "high": 10,
+      "medium": 7,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "Public race facts were checked against RunSignup source data; customer outreach remains unapproved and was not performed.",
+      "items": [
+        "Fine-grained pricing deadlines, sponsor tier hierarchy, and course maps should be rechecked immediately before any customer send if the source page changes.",
+        "Customer outreach remains gated by Steve approval."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups.",
+    "source_confirmed_sections": [
+      "identity",
+      "event",
+      "distances",
+      "registration",
+      "story",
+      "schedule",
+      "runner_decision_checklist"
+    ]
+  }
+}

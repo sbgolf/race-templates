@@ -1,0 +1,354 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "SMHS PAC and HSEP Gumbo Run 5K & 1 Mile Fun Run",
+    "tagline": "A Baton Rouge school-community run supporting Scotlandville Magnet High School NAF Academies.",
+    "hero_image": {
+      "src": "/mockups/24254b41753b3759a531849d26b99cc2/1-d05ccfd179.jpg",
+      "alt": "SMHS PAC and HSEP Gumbo Run 5K & 1 Mile Fun Run race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/race69686-social382x200.bLGCrQ.jpg"
+    },
+    "colors": {
+      "primary": "#C6643D",
+      "secondary": "#6B8E6F"
+    }
+  },
+  "event": {
+    "date": "2027-02-13",
+    "location": "9870 Scotland Avenue, Baton Rouge, LA 70807",
+    "venue": "Scotlandville Magnet High School",
+    "timezone": "America/New_York"
+  },
+  "organization": {
+    "name": "SMHS PAC and HSEP"
+  },
+  "distances": [
+    {
+      "id": "one-mile",
+      "name": "9th Annual Gumbo Run 1 Mile Fun Run",
+      "distance": "1 mi",
+      "featured": false,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "9th Annual Gumbo Run 1 Mile Fun Run",
+      "highlights": []
+    },
+    {
+      "id": "5k",
+      "name": "9th Annual Gumbo Run & Walk 5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "9th Annual Gumbo Run & Walk 5K",
+      "highlights": []
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "startline_value": {
+    "headline": "A race website concept built around registration intent \u2014 not just a prettier homepage.",
+    "intro": "StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.",
+    "improved": [
+      "Reduced runner friction by placing key race facts near the registration path.",
+      "Surfaced trust signals from configured distances, schedule details, and FAQs when available.",
+      "Made registration CTAs easier to find on mobile and desktop with measurement-ready registration-click tracking."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees \u2014 just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A Baton Rouge school-community run supporting Scotlandville Magnet High School NAF Academies.",
+    "paragraphs": [
+      "The Gumbo Run brings the Scotlandville Magnet High School community together for a 1-mile fun run and 5K run/walk.",
+      "Proceeds benefit SMHS NAF Academies, with gumbo served to racers as they finish and awards following the race."
+    ]
+  },
+  "schedule": [
+    {
+      "time": "8:00 AM",
+      "label": "Race-day registration begins in front of the school",
+      "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+    },
+    {
+      "time": "8:30 AM",
+      "label": "Guest speakers and warm up",
+      "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+    },
+    {
+      "time": "9:00 AM",
+      "label": "1 Mile Fun Run/Walk",
+      "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+    },
+    {
+      "time": "9:30 AM",
+      "label": "5K Run/Walk begins after the 1 Mile",
+      "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+    },
+    {
+      "time": "After finish",
+      "label": "Gumbo and awards ceremony",
+      "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+    }
+  ],
+  "faqs": [],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials for race day, event options, and the registration path.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2027-02-13",
+        "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "9th Annual Gumbo Run 1 Mile Fun Run, 9th Annual Gumbo Run & Walk 5K",
+        "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "9870 Scotland Avenue, Baton Rouge, LA 70807",
+        "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "parking",
+        "label": "Parking",
+        "value": "Parking is available near the gym, with additional spaces across from the school on Central Road.",
+        "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+        "source_path": "runner_decision_checklist.items.parking"
+      },
+      {
+        "id": "price",
+        "label": "Entry fees",
+        "value": "Entry fees include 1 Mile registration at $10 and 5K options for adults, students, children, and teams.",
+        "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+        "source_path": "runner_decision_checklist.items.price"
+      },
+      {
+        "id": "swag",
+        "label": "Participant items",
+        "value": "Participants receive a t-shirt and bib race number.",
+        "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+        "source_path": "runner_decision_checklist.items.swag"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "SMHS PAC and HSEP Gumbo Run 5K & 1 Mile Fun Run - Race Website Preview",
+    "meta_description": "SMHS PAC and HSEP Gumbo Run 5K & 1 Mile Fun Run race details, event options, location, and registration path for Scotlandville Magnet High School."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+    "captured_at": "2026-08-06T17:35:34.629Z",
+    "access_token": "24254b41753b3759a531849d26b99cc2",
+    "race_slug": "smhs-pac-and-hsep-gumbo-run-5k-and-1-mile-fun-run",
+    "route": "/private/mockups/24254b41753b3759a531849d26b99cc2/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/24254b41753b3759a531849d26b99cc2/1-d05ccfd179.jpg",
+        "alt": "SMHS PAC and HSEP Gumbo Run 5K & 1 Mile Fun Run race artwork 1",
+        "caption": "Official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/race69686-social382x200.bLGCrQ.jpg"
+      },
+      {
+        "src": "/mockups/24254b41753b3759a531849d26b99cc2/2-44137285e8.jpg",
+        "alt": "SMHS PAC and HSEP Gumbo Run 5K & 1 Mile Fun Run race artwork 2",
+        "caption": "Additional official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/img/race/bannerImgs/defaultBannerImgs/websiteBanner-1200-400-run-12.jpg"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun",
+      "captured_at": "2026-08-06T17:35:34.629Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "story",
+        "runner_decision_checklist",
+        "schedule"
+      ],
+      "source_confirmed_distance_ids": [
+        "one-mile",
+        "5k"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "event.venue",
+          "field": "event.venue",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "schedule",
+          "field": "schedule",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "field": "runner_decision_checklist",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.parking",
+          "field": "runner_decision_checklist.items.parking",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "field": "runner_decision_checklist.items.swag",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "distances.one-mile",
+          "field": "distances.one-mile",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "distances.5k",
+          "field": "distances.5k",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "RunSignup public race image assets",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/LA/BatonRouge/HornetPACChristmasGumboRun5K1MileFunRun"
+        }
+      ]
+    },
+    "confidence": {
+      "high": 7,
+      "medium": 7,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "Public race facts were checked against RunSignup source data; customer outreach remains unapproved and was not performed.",
+      "items": [
+        "Fine-grained pricing deadlines, sponsor tier hierarchy, and course maps should be rechecked immediately before any customer send if the source page changes.",
+        "Customer outreach remains gated by Steve approval."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups.",
+    "source_confirmed_sections": [
+      "identity",
+      "event",
+      "distances",
+      "registration",
+      "story",
+      "schedule",
+      "runner_decision_checklist"
+    ]
+  }
+}

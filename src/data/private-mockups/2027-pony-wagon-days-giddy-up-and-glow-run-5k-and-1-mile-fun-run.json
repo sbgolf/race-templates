@@ -1,0 +1,349 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "2027 Pony Wagon Days Giddy Up & Glow Run 5K & 1 Mile Fun Run",
+    "tagline": "A Saint Paris glow run with 5K and 1-mile options supporting Pony Wagon Days.",
+    "hero_image": {
+      "src": "/mockups/3b246674aa5ec50d53bfce197c94a67d/1-381e82df39.jpg",
+      "alt": "2027 Pony Wagon Days Giddy Up & Glow Run 5K & 1 Mile Fun Run race artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/img/imageGallery/runWalk/abstract-runners.bQt9MC.jpg"
+    },
+    "colors": {
+      "primary": "#C6643D",
+      "secondary": "#6B8E6F"
+    }
+  },
+  "event": {
+    "date": "2027-05-22",
+    "location": "9464 W. US HWY 36, Saint Paris, OH 43072",
+    "venue": "Graham Elementary School",
+    "timezone": "America/New_York"
+  },
+  "organization": {
+    "name": "Pony Wagon Days"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "Giddy Up & Glow Run 5K",
+      "distance": "5K",
+      "featured": true,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "Giddy Up & Glow Run 5K",
+      "highlights": []
+    },
+    {
+      "id": "one-mile",
+      "name": "1 Mile Fun Run/Walk",
+      "distance": "1 mi",
+      "featured": false,
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+        "source": "RunSignup race page",
+        "confidence": "high"
+      },
+      "map_label": "1 Mile Fun Run/Walk",
+      "highlights": []
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+    "platform": "runsignup",
+    "cta_label": "View RunSignup race page"
+  },
+  "startline_value": {
+    "headline": "A race website concept built around registration intent \u2014 not just a prettier homepage.",
+    "intro": "StartLine Sites reorganizes the information runners need before they register: date, location, distance, course details, schedule, policies, and the official registration link. The goal is to reduce friction, surface trust signals, and make the next click easier to find on mobile and desktop.",
+    "improved": [
+      "Reduced runner friction by placing key race facts near the registration path.",
+      "Surfaced trust signals from configured distances, schedule details, and FAQs when available.",
+      "Made registration CTAs easier to find on mobile and desktop with measurement-ready registration-click tracking."
+    ],
+    "paid_includes": [
+      "Mobile-first implementation shaped around the runner registration path.",
+      "SEO-ready page structure and event metadata for clearer discovery and sharing.",
+      "Registration-click tracking setup so runner intent can be measured after launch.",
+      "No registration-growth guarantees \u2014 just a clearer, faster, more measurable path from runner interest to registration click-through."
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "A Saint Paris glow run with 5K and 1-mile options supporting Pony Wagon Days.",
+    "paragraphs": [
+      "Pony Wagon Days Giddy Up & Glow Run is a family-friendly evening glow run at Graham Elementary School.",
+      "The event offers a 5K, a 1-mile fun run/walk, glow gear, music, photo opportunities, water stations, and a glow after party, with proceeds supporting Pony Wagon Days."
+    ]
+  },
+  "schedule": [
+    {
+      "time": "6:30 PM to 7:30 PM",
+      "label": "Check-in",
+      "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+    },
+    {
+      "time": "7:50 PM",
+      "label": "Line-up",
+      "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+    },
+    {
+      "time": "8:00 PM",
+      "label": "Race start",
+      "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+    },
+    {
+      "time": "Until 10:00 PM",
+      "label": "Glow after party",
+      "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+    }
+  ],
+  "faqs": [],
+  "runner_decision_checklist": {
+    "headline": "Key race details before you register",
+    "intro": "Review the essentials for race day, event options, and the registration path.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "2027-05-22",
+        "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "Giddy Up & Glow Run 5K, 1 Mile Fun Run/Walk",
+        "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "9464 W. US HWY 36, Saint Paris, OH 43072",
+        "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "start-time",
+        "label": "Registration status",
+        "value": "Registration opens March 20, 2027.",
+        "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+        "source_path": "runner_decision_checklist.items.start-time"
+      },
+      {
+        "id": "price",
+        "label": "Pricing options",
+        "value": "Pricing includes shirt-and-glow-gear packages plus budget-friendly run-only options.",
+        "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+        "source_path": "runner_decision_checklist.items.price"
+      },
+      {
+        "id": "swag",
+        "label": "Included items",
+        "value": "Glow gear and an event shirt are included with package options.",
+        "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+        "source_path": "runner_decision_checklist.items.swag"
+      }
+    ]
+  },
+  "seo": {
+    "meta_title": "2027 Pony Wagon Days Giddy Up & Glow Run 5K & 1 Mile Fun Run - Race Website Preview",
+    "meta_description": "2027 Pony Wagon Days Giddy Up & Glow Run 5K & 1 Mile Fun Run race details, event options, location, and registration path for Graham Elementary School."
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+    "captured_at": "2026-08-06T17:35:36.477Z",
+    "access_token": "3b246674aa5ec50d53bfce197c94a67d",
+    "race_slug": "2027-pony-wagon-days-giddy-up-and-glow-run-5k-and-1-mile-fun-run",
+    "route": "/private/mockups/3b246674aa5ec50d53bfce197c94a67d/",
+    "template": "community",
+    "assets": [
+      {
+        "src": "/mockups/3b246674aa5ec50d53bfce197c94a67d/1-381e82df39.jpg",
+        "alt": "2027 Pony Wagon Days Giddy Up & Glow Run 5K & 1 Mile Fun Run race artwork 1",
+        "caption": "Official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/img/imageGallery/runWalk/abstract-runners.bQt9MC.jpg"
+      },
+      {
+        "src": "/mockups/3b246674aa5ec50d53bfce197c94a67d/2-17c81a7151.png",
+        "alt": "2027 Pony Wagon Days Giddy Up & Glow Run 5K & 1 Mile Fun Run race artwork 2",
+        "caption": "Additional official race artwork for the event page.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/img/imageGallery/misc/map-bkg-img-lg.bM13tl.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun",
+      "captured_at": "2026-08-06T17:35:36.477Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "distances",
+        "registration",
+        "story",
+        "runner_decision_checklist",
+        "schedule"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "one-mile"
+      ],
+      "items": [
+        {
+          "path": "identity.name",
+          "field": "identity.name",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "event.date",
+          "field": "event.date",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "event.location",
+          "field": "event.location",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "event.venue",
+          "field": "event.venue",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "distances",
+          "field": "distances",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "registration.url",
+          "field": "registration.url",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "story.paragraphs",
+          "field": "story.paragraphs",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "schedule",
+          "field": "schedule",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "runner_decision_checklist",
+          "field": "runner_decision_checklist",
+          "source": "RunSignup race page and public races API",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "distances.5k",
+          "field": "distances.5k",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "distances.one-mile",
+          "field": "distances.one-mile",
+          "source": "RunSignup event list",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "private_mockup.assets",
+          "field": "private_mockup.assets",
+          "source": "RunSignup public race image assets",
+          "confidence": "medium",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.date",
+          "field": "runner_decision_checklist.items.date",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.distance",
+          "field": "runner_decision_checklist.items.distance",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.location",
+          "field": "runner_decision_checklist.items.location",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.start-time",
+          "field": "runner_decision_checklist.items.start-time",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.price",
+          "field": "runner_decision_checklist.items.price",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        },
+        {
+          "path": "runner_decision_checklist.items.swag",
+          "field": "runner_decision_checklist.items.swag",
+          "source": "RunSignup race page",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/OH/SaintParis/PonyWagonDaysGiddyUpGlowRun"
+        }
+      ]
+    },
+    "confidence": {
+      "high": 6,
+      "medium": 9,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "Public race facts were checked against RunSignup source data; customer outreach remains unapproved and was not performed.",
+      "items": [
+        "Fine-grained pricing deadlines, sponsor tier hierarchy, and course maps should be rechecked immediately before any customer send if the source page changes.",
+        "Customer outreach remains gated by Steve approval."
+      ]
+    },
+    "notes": "Generated only from source-backed facts found on the public page. Sample race data and boilerplate are intentionally not copied into private mockups.",
+    "source_confirmed_sections": [
+      "identity",
+      "event",
+      "distances",
+      "registration",
+      "story",
+      "schedule",
+      "runner_decision_checklist"
+    ]
+  }
+}
