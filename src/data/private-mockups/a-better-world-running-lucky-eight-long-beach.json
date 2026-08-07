@@ -1,0 +1,317 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Lucky Eight 5K 10K 15K Half Marathon",
+    "slug": "a-better-world-running-lucky-eight-long-beach",
+    "short_name": "Lucky Eight Long Beach",
+    "tagline": "A Long Beach 5K, 10K, 15K, and half marathon from A Better World Running.",
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    },
+    "hero_image": {
+      "src": "/mockups/7d3ee0befbad292df8c74fddd07b385b/official-hero.png",
+      "alt": "Lucky Eight 5K 10K 15K Half Marathon event artwork",
+      "source": "https://static.wixstatic.com/media/79c6f7_024b207fa1fa4adfbe492babe8fabf40~mv2.png/v1/fill/w_220,h_330,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/79c6f7_024b207fa1fa4adfbe492babe8fabf40~mv2.png",
+      "fit": "contain",
+      "presentation": "banner"
+    }
+  },
+  "organization": {
+    "name": "A Better World Running",
+    "url": "https://www.abetterworldrunning.com/",
+    "role_label": "A Better World Running"
+  },
+  "event": {
+    "date": "2026-08-08",
+    "date_label": "Saturday, August 8, 2026",
+    "location": "5400 E. Ocean Blvd., Long Beach, CA 90803",
+    "timezone": "America/Los_Angeles"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "profile": "5K registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+      }
+    },
+    {
+      "id": "10k",
+      "name": "10K",
+      "distance": "10K",
+      "featured": false,
+      "profile": "10K registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+      }
+    },
+    {
+      "id": "15k",
+      "name": "15K",
+      "distance": "15K",
+      "featured": false,
+      "profile": "15K registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+      }
+    },
+    {
+      "id": "half-marathon",
+      "name": "Half Marathon",
+      "distance": "Half Marathon",
+      "featured": false,
+      "profile": "Half Marathon registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://www.active.com/long-beach-ca/running/distance-running-races/lucky-8-5k-10k-15k-half-marathon-2026",
+    "platform": "active",
+    "cta_label": "Continue to official registration",
+    "intro": "Registration options are handled through the event page and listed registration paths."
+  },
+  "runner_decision_checklist": {
+    "headline": "Key details before registration",
+    "intro": "Review the essentials before continuing to the official registration flow.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, August 8, 2026",
+        "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "5400 E. Ocean Blvd., Long Beach, CA 90803",
+        "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "5K, 10K, 15K, Half Marathon",
+        "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "facebook",
+        "label": "Registration path",
+        "value": "Registration options are handled through the event page and listed registration paths.",
+        "source_url": "https://www.active.com/long-beach-ca/running/distance-running-races/lucky-8-5k-10k-15k-half-marathon-2026",
+        "source_path": "runner_decision_checklist.items.facebook"
+      },
+      {
+        "id": "series",
+        "label": "Operator portfolio fit",
+        "value": "A Better World Running publishes a public 2026-2027 race calendar with multiple Southern California event listings.",
+        "source_url": "https://www.abetterworldrunning.com/calendar-best-running-races",
+        "source_path": "runner_decision_checklist.items.series",
+        "detail": "This representative event demonstrates a repeatable event-page system for the operator portfolio."
+      }
+    ]
+  },
+  "schedule": [],
+  "story": {
+    "kicker": "Race overview",
+    "title": "A Long Beach 5K, 10K, 15K, and half marathon from A Better World Running.",
+    "paragraphs": [
+      "Lucky Eight is a representative A Better World Running event with four race distances along the Long Beach path.",
+      "The mockup makes the race date, start location, distance menu, and official registration path easier to scan while fitting a repeatable calendar-driven event-page system."
+    ]
+  },
+  "startline_value": {
+    "headline": "A portfolio-ready event page for A Better World Running.",
+    "intro": "This representative page shows how one A Better World Running event could become a polished runner-facing landing page while registration stays in the official event flow.",
+    "improved": [
+      "Makes date, venue, event options, and registration path scannable on mobile.",
+      "Keeps the operator relationship visible without replacing the official registration system.",
+      "Creates a repeatable structure that can extend across a broader operator event portfolio."
+    ],
+    "paid_includes": [
+      "A reusable operator portfolio page system for selected events.",
+      "SEO-ready event details and clear official registration CTAs.",
+      "Flexible sections for schedule, packet pickup, awards, sponsors, and partner details when source-backed.",
+      "StartLine complements timing, event management, and registration workflows rather than replacing them."
+    ],
+    "proof_points": []
+  },
+  "seo": {
+    "meta_title": "Lucky Eight 5K 10K 15K Half Marathon \u2014 A Better World Running",
+    "meta_description": "Race details for Lucky Eight 5K 10K 15K Half Marathon, organized into a clear runner-facing page with official registration links."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "7d3ee0befbad292df8c74fddd07b385b",
+    "route": "/private/mockups/7d3ee0befbad292df8c74fddd07b385b/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb",
+    "source_platform": "official_site",
+    "source_race_id": "lucky-eight-8-8-26-lb",
+    "registration_race_id": "lucky-8-5k-10k-15k-half-marathon-2026",
+    "generated_from": "manual Lane D operator portfolio mockup workflow",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "D",
+    "prospect_type": "race_management_company",
+    "email_template_key": "operator_portfolio_v1",
+    "operator_company": "A Better World Running",
+    "operator_contact_email": "abetterworldrunning@gmail.com",
+    "operator_prospect_id": "a8747c8e-c149-4310-a4e7-49e792de0e21",
+    "source_urls": [
+      "https://www.abetterworldrunning.com/",
+      "https://www.abetterworldrunning.com/calendar-best-running-races",
+      "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb",
+      "https://raceascend.com/event.html?embed=1&theme=light&id=bc48f9d9-6712-4dce-9037-db5843bdd44e&simple=1",
+      "https://www.active.com/long-beach-ca/running/distance-running-races/lucky-8-5k-10k-15k-half-marathon-2026"
+    ],
+    "captured_at": "2026-08-06T00:00:00Z",
+    "assets": [
+      {
+        "src": "/mockups/7d3ee0befbad292df8c74fddd07b385b/official-hero.png",
+        "alt": "Lucky Eight 5K 10K 15K Half Marathon event artwork",
+        "caption": "Event artwork for race day.",
+        "source": "https://static.wixstatic.com/media/79c6f7_024b207fa1fa4adfbe492babe8fabf40~mv2.png/v1/fill/w_220,h_330,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/79c6f7_024b207fa1fa4adfbe492babe8fabf40~mv2.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb",
+      "source_confirmed_sections": [
+        "event",
+        "story",
+        "distances",
+        "runner_decision_checklist",
+        "registration",
+        "identity"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "10k",
+        "15k",
+        "half-marathon"
+      ],
+      "items": [
+        {
+          "field": "identity.name",
+          "path": "identity.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+        },
+        {
+          "field": "event.date",
+          "path": "event.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+        },
+        {
+          "field": "event.location",
+          "path": "event.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+        },
+        {
+          "field": "distances",
+          "path": "distances",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+        },
+        {
+          "field": "registration.url",
+          "path": "registration.url",
+          "source": "official event registration link",
+          "confidence": "high",
+          "source_url": "https://www.active.com/long-beach-ca/running/distance-running-races/lucky-8-5k-10k-15k-half-marathon-2026"
+        },
+        {
+          "field": "organization.name",
+          "path": "organization.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.abetterworldrunning.com/calendar-best-running-races"
+        },
+        {
+          "field": "runner_decision_checklist",
+          "path": "runner_decision_checklist",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "path": "runner_decision_checklist.items.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "path": "runner_decision_checklist.items.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "path": "runner_decision_checklist.items.distance",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.abetterworldrunning.com/lucky-eight-8-8-26-lb"
+        },
+        {
+          "field": "runner_decision_checklist.items.facebook",
+          "path": "runner_decision_checklist.items.facebook",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://raceascend.com/event.html?embed=1&theme=light&id=bc48f9d9-6712-4dce-9037-db5843bdd44e&simple=1"
+        },
+        {
+          "field": "runner_decision_checklist.items.series",
+          "path": "runner_decision_checklist.items.series",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.abetterworldrunning.com/calendar-best-running-races"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Only verified public race facts are shown; operational details not visible in public materials should be confirmed by the race organizer before launch.",
+      "items": [
+        "Confirm final race-day logistics, pricing, and packet-pickup details with the organizer before publishing a live customer site."
+      ]
+    }
+  },
+  "footer": {
+    "relationship_attribution": " \u00b7 A representative event page for A Better World Running"
+  }
+}

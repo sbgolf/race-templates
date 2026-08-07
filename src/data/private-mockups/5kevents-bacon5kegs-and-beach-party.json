@@ -1,0 +1,287 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Bacon and Beer - Bacon5Kegs",
+    "slug": "5kevents-bacon5kegs-and-beach-party",
+    "short_name": "Bacon5Kegs",
+    "tagline": "A Racine 5K run/walk and beach party from the 5Kevents calendar.",
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    },
+    "hero_image": {
+      "src": "/mockups/337d58369f78a50e60f957c69c415db6/official-hero.jpg",
+      "alt": "Bacon and Beer - Bacon5Kegs event artwork",
+      "source": "https://cfimages.raceentry.com/logo/bacon5kegs-and-beach-party-registration-logo-55031.jpg?v=1675615379",
+      "fit": "contain",
+      "presentation": "banner"
+    }
+  },
+  "organization": {
+    "name": "5Kevents",
+    "url": "https://5kevents.org/home.html",
+    "role_label": "5Kevents"
+  },
+  "event": {
+    "date": "2026-09-05",
+    "date_label": "Saturday, September 5, 2026",
+    "location": "Festival Park, 5 Fifth Street, Racine, WI",
+    "timezone": "America/Chicago"
+  },
+  "distances": [
+    {
+      "id": "5k-run-walk",
+      "name": "5K Run/Walk",
+      "distance": "5K Run/Walk",
+      "featured": true,
+      "profile": "5K Run/Walk registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information"
+      }
+    },
+    {
+      "id": "remote-runner",
+      "name": "Remote Runner",
+      "distance": "Remote Runner",
+      "featured": false,
+      "profile": "Remote Runner registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://5kevents.raceentry.com/races/bacon5kegs-and-beach-party/2026/register",
+    "platform": "raceentry",
+    "cta_label": "Continue to official registration",
+    "intro": "Registration continues through the official RaceEntry flow for the 5Kevents listing."
+  },
+  "runner_decision_checklist": {
+    "headline": "Key details before registration",
+    "intro": "Review the essentials before continuing to the official registration flow.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, September 5, 2026",
+        "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Festival Park, 5 Fifth Street, Racine, WI",
+        "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "5K Run/Walk, Remote Runner",
+        "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "facebook",
+        "label": "Registration path",
+        "value": "Registration continues through the official RaceEntry flow for the 5Kevents listing.",
+        "source_url": "https://5kevents.raceentry.com/races/bacon5kegs-and-beach-party/2026/register",
+        "source_path": "runner_decision_checklist.items.facebook"
+      },
+      {
+        "id": "series",
+        "label": "Operator portfolio fit",
+        "value": "5Kevents describes full-service race management and maintains a public RaceEntry event listing portal.",
+        "source_url": "https://5kevents.raceentry.com/",
+        "source_path": "runner_decision_checklist.items.series",
+        "detail": "This representative event demonstrates a repeatable event-page system for the operator portfolio."
+      }
+    ]
+  },
+  "schedule": [],
+  "story": {
+    "kicker": "Race overview",
+    "title": "A Racine 5K run/walk and beach party from the 5Kevents calendar.",
+    "paragraphs": [
+      "Bacon and Beer - Bacon5Kegs is a representative 5Kevents event with a clear race-information page and registration flow.",
+      "The mockup organizes the race date, location, event options, and registration path into a mobile-first page that could be repeated across the operator calendar."
+    ]
+  },
+  "startline_value": {
+    "headline": "A portfolio-ready event page for 5Kevents.",
+    "intro": "This representative page shows how one 5Kevents event could become a polished runner-facing landing page while registration stays in the official event flow.",
+    "improved": [
+      "Makes date, venue, event options, and registration path scannable on mobile.",
+      "Keeps the operator relationship visible without replacing the official registration system.",
+      "Creates a repeatable structure that can extend across a broader operator event portfolio."
+    ],
+    "paid_includes": [
+      "A reusable operator portfolio page system for selected events.",
+      "SEO-ready event details and clear official registration CTAs.",
+      "Flexible sections for schedule, packet pickup, awards, sponsors, and partner details when source-backed.",
+      "StartLine complements timing, event management, and registration workflows rather than replacing them."
+    ],
+    "proof_points": []
+  },
+  "seo": {
+    "meta_title": "Bacon and Beer - Bacon5Kegs \u2014 5Kevents",
+    "meta_description": "Race details for Bacon and Beer - Bacon5Kegs, organized into a clear runner-facing page with official registration links."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "337d58369f78a50e60f957c69c415db6",
+    "route": "/private/mockups/337d58369f78a50e60f957c69c415db6/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information",
+    "source_platform": "raceentry",
+    "source_race_id": "bacon5kegs-and-beach-party-2026",
+    "registration_race_id": "bacon5kegs-and-beach-party-2026",
+    "generated_from": "manual Lane D operator portfolio mockup workflow",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "D",
+    "prospect_type": "race_management_company",
+    "email_template_key": "operator_portfolio_v1",
+    "operator_company": "5Kevents",
+    "operator_contact_email": "SupportStaff@5Kevents.org",
+    "operator_prospect_id": "1b442d48-de3f-4fb1-9166-5ed8a410ed1f",
+    "source_urls": [
+      "https://5kevents.org/home.html",
+      "https://5kevents.org/contact.html",
+      "https://5kevents.raceentry.com/",
+      "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information",
+      "https://5kevents.raceentry.com/races/bacon5kegs-and-beach-party/2026/register"
+    ],
+    "captured_at": "2026-08-06T00:00:00Z",
+    "assets": [
+      {
+        "src": "/mockups/337d58369f78a50e60f957c69c415db6/official-hero.jpg",
+        "alt": "Bacon and Beer - Bacon5Kegs event artwork",
+        "caption": "Event artwork for race day.",
+        "source": "https://cfimages.raceentry.com/logo/bacon5kegs-and-beach-party-registration-logo-55031.jpg?v=1675615379"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information",
+      "source_confirmed_sections": [
+        "event",
+        "story",
+        "distances",
+        "runner_decision_checklist",
+        "registration",
+        "identity"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k-run-walk",
+        "remote-runner"
+      ],
+      "items": [
+        {
+          "field": "identity.name",
+          "path": "identity.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information"
+        },
+        {
+          "field": "event.date",
+          "path": "event.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information"
+        },
+        {
+          "field": "event.location",
+          "path": "event.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information"
+        },
+        {
+          "field": "distances",
+          "path": "distances",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information"
+        },
+        {
+          "field": "registration.url",
+          "path": "registration.url",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/races/bacon5kegs-and-beach-party/2026/register"
+        },
+        {
+          "field": "organization.name",
+          "path": "organization.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/"
+        },
+        {
+          "field": "runner_decision_checklist",
+          "path": "runner_decision_checklist",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "path": "runner_decision_checklist.items.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "path": "runner_decision_checklist.items.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "path": "runner_decision_checklist.items.distance",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/bacon5kegs-and-beach-party/race-information"
+        },
+        {
+          "field": "runner_decision_checklist.items.facebook",
+          "path": "runner_decision_checklist.items.facebook",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/races/bacon5kegs-and-beach-party/2026/register"
+        },
+        {
+          "field": "runner_decision_checklist.items.series",
+          "path": "runner_decision_checklist.items.series",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://5kevents.raceentry.com/"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Only verified public race facts are shown; operational details not visible in public materials should be confirmed by the race organizer before launch.",
+      "items": [
+        "Confirm final race-day logistics, pricing, and packet-pickup details with the organizer before publishing a live customer site."
+      ]
+    }
+  },
+  "footer": {
+    "relationship_attribution": " \u00b7 A representative event page for 5Kevents"
+  }
+}
