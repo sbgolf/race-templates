@@ -10,13 +10,14 @@
       "ink": "#2A1F18"
     },
     "hero_image": {
-      "src": "/mockups/9ecd1b21eefd1c3bf02eef441457e5ee/official-hero.jpg",
-      "alt": "Frozen Rails 5K & 10K event image",
-      "source": "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-46974-1765829005.7402-0.bPqgMn.jpg",
+      "src": "/mockups/9ecd1b21eefd1c3bf02eef441457e5ee/official-banner.jpg",
+      "alt": "Frozen Rails 5K & 10K official banner artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-40xxx/40248/raceBanner-0Ly1dF6Y-bEonEY.jpg",
       "presentation": "banner",
-      "aspect_ratio": "3 / 1",
       "fit": "contain"
-    }
+    },
+    "slug": "frozen-rails-5k-and-10k",
+    "short_name": "Frozen Rails"
   },
   "event": {
     "date": "2027-01-01",
@@ -36,7 +37,8 @@
         "confidence": "high"
       },
       "map_label": "5K Run/Walk",
-      "highlights": []
+      "highlights": [],
+      "profile": ""
     },
     {
       "id": "10k-run",
@@ -50,7 +52,8 @@
         "confidence": "high"
       },
       "map_label": "10K Run",
-      "highlights": []
+      "highlights": [],
+      "profile": ""
     },
     {
       "id": "1-mile-fun-run-walk",
@@ -64,7 +67,8 @@
         "confidence": "high"
       },
       "map_label": "1 Mile Fun Run/Walk",
-      "highlights": []
+      "highlights": [],
+      "profile": ""
     },
     {
       "id": "little-rails-1k-kids-run",
@@ -78,7 +82,8 @@
         "confidence": "high"
       },
       "map_label": "Little Rails 1K Kids' Run",
-      "highlights": []
+      "highlights": [],
+      "profile": ""
     },
     {
       "id": "virtual-runner-walker",
@@ -92,7 +97,8 @@
         "confidence": "high"
       },
       "map_label": "Virtual Runner/Walker",
-      "highlights": []
+      "highlights": [],
+      "profile": ""
     }
   ],
   "registration": {
@@ -101,8 +107,8 @@
     "cta_label": "Register on RunSignup"
   },
   "startline_value": {
-    "headline": "A race website concept built around registration intent, not just a prettier homepage.",
-    "intro": "StartLine Sites reorganizes the information runners need before they register: date, location, distance, schedule, policies, and the registration link.",
+    "headline": "A portfolio-ready event page for RaceRise.",
+    "intro": "This representative page shows how one RaceRise event could become a polished runner-facing landing page while registration stays in the official RunSignup flow.",
     "improved": [
       "Placed key race facts near the registration path.",
       "Made event options easier to scan on mobile and desktop.",
@@ -112,14 +118,15 @@
       "Mobile-first implementation shaped around the runner registration path.",
       "SEO-ready page structure and event metadata for clearer discovery and sharing.",
       "Registration-click tracking setup so runner intent can be measured after launch."
-    ]
+    ],
+    "proof_points": []
   },
   "story": {
     "kicker": "Race overview",
     "title": "A New Year\u2019s Day 5K, 10K, mile, and kids run through historic Midway.",
     "paragraphs": [
-      "Frozen Rails turns New Year\u2019s Day into a community race afternoon in Midway, with 5K, 10K, 1-mile, kids, virtual, and volunteer options on RunSignup.",
-      "The page should make the full event menu, start times, pricing windows, and registration path easy to scan from a phone."
+      "Frozen Rails gives RaceRise a representative multi-option event page with 5K, 10K, mile, kids, virtual, and volunteer paths connected to RunSignup.",
+      "The page should make the full event menu, start times, pricing windows, and registration path easy to scan from a phone while fitting a repeatable operator portfolio system."
     ]
   },
   "schedule": [],
@@ -169,6 +176,14 @@
         "value": "Current public pricing starts at $25 for the 5K, 10K, and 1-mile, $15 for the kids run, and $30 for virtual registration.",
         "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
         "source_path": "runner_decision_checklist.items.price"
+      },
+      {
+        "id": "series",
+        "label": "Operator portfolio fit",
+        "value": "RaceRise lists Frozen Rails on its public upcoming-races calendar and is identified with chip timing on the event page.",
+        "source_url": "https://www.racerise.com/upcoming-races",
+        "source_path": "runner_decision_checklist.items.series",
+        "detail": "This representative event demonstrates a repeatable event-page system for the operator portfolio."
       }
     ]
   },
@@ -194,7 +209,11 @@
     "source_urls": [
       "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
       "https://d368g9lw5ileu7.cloudfront.net/uploads/generic/genericImage-websiteLogo-46974-1765829005.7402-0.bPqgMn.jpg",
-      "https://www.racerise.com/"
+      "https://www.racerise.com/",
+      "https://www.racerise.com/upcoming-races",
+      "https://www.racerise.com/contact-us",
+      "https://runsignup.com/Timer/Calendar/?widgetId=13705&font=Open+Sans&headerFont=Open+Sans&hideTabs=T&hideTopLinks=T&mobileWidgetUrl=www.racerise.com",
+      "https://d368g9lw5ileu7.cloudfront.net/races/races-40xxx/40248/raceBanner-0Ly1dF6Y-bEonEY.jpg"
     ],
     "contact_sources": [
       {
@@ -214,6 +233,12 @@
     ],
     "assets": [
       {
+        "src": "/mockups/9ecd1b21eefd1c3bf02eef441457e5ee/official-banner.jpg",
+        "alt": "Frozen Rails 5K & 10K official banner artwork",
+        "caption": "Event banner for race day.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-40xxx/40248/raceBanner-0Ly1dF6Y-bEonEY.jpg"
+      },
+      {
         "src": "/mockups/9ecd1b21eefd1c3bf02eef441457e5ee/official-hero.jpg",
         "alt": "Frozen Rails 5K & 10K event image",
         "caption": "Event image for race day.",
@@ -224,12 +249,12 @@
       "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway",
       "captured_at": "2026-08-06T21:26:56.037142Z",
       "source_confirmed_sections": [
-        "identity",
         "event",
-        "distances",
-        "registration",
         "story",
-        "runner_decision_checklist"
+        "distances",
+        "runner_decision_checklist",
+        "registration",
+        "identity"
       ],
       "source_confirmed_distance_ids": [
         "5k-run-walk",
@@ -336,14 +361,37 @@
           "source": "RunSignup race page and public races API",
           "confidence": "high",
           "source_url": "https://runsignup.com/Race/KY/Midway/NewYearsDay5KInMidway"
+        },
+        {
+          "field": "runner_decision_checklist.items.series",
+          "path": "runner_decision_checklist.items.series",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.racerise.com/upcoming-races"
         }
       ]
     },
     "uncertainty": {
-      "summary": "Only source-backed race facts are shown; details that were not visible in public sources should be confirmed by the race organizer before launch.",
+      "summary": "Only verified public race facts are shown; operational details not visible in public materials should be confirmed by the race organizer before launch.",
       "items": [
         "Confirm final race-day logistics, prices, and packet-pickup details with the organizer before publishing a live customer site."
       ]
-    }
+    },
+    "generated_from": "manual Lane D operator portfolio mockup workflow",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "D",
+    "prospect_type": "race_management_company",
+    "email_template_key": "operator_portfolio_v1",
+    "operator_company": "RaceRise",
+    "operator_contact_email": "BobBaney12@gmail.com",
+    "operator_prospect_id": "ad9e2c51-079f-4631-b398-f55bdc1691cc"
+  },
+  "organization": {
+    "name": "RaceRise",
+    "url": "https://www.racerise.com/",
+    "role_label": "RaceRise"
+  },
+  "footer": {
+    "relationship_attribution": " \u00b7 A representative event page for RaceRise"
   }
 }

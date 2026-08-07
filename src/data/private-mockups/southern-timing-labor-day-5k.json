@@ -1,0 +1,272 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Labor Day 5K",
+    "slug": "southern-timing-labor-day-5k",
+    "short_name": "Labor Day 5K",
+    "tagline": "An Orlando 5K with Southern Timing support and RunSignup registration.",
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    },
+    "hero_image": {
+      "src": "/mockups/1cb51beed01563f7d68121240325d68c/official-hero.png",
+      "alt": "Labor Day 5K event artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-165xxx/165234/raceBanner-GtruRut3-bMrlGc.png",
+      "fit": "contain",
+      "presentation": "banner"
+    }
+  },
+  "organization": {
+    "name": "Southern Timing",
+    "url": "https://www.southerntimingfl.com/",
+    "role_label": "Southern Timing"
+  },
+  "event": {
+    "date": "2026-09-06",
+    "date_label": "Sunday, September 6, 2026",
+    "location": "Harbor Park, 4990 New Broad St, Orlando, FL 32814",
+    "timezone": "America/New_York"
+  },
+  "distances": [
+    {
+      "id": "5k-run-walk",
+      "name": "5K Run/Walk",
+      "distance": "5K Run/Walk",
+      "featured": true,
+      "profile": "5K Run/Walk registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=165234",
+    "platform": "runsignup",
+    "cta_label": "Continue to official registration",
+    "intro": "Registration continues through the official RunSignup event page."
+  },
+  "runner_decision_checklist": {
+    "headline": "Key details before registration",
+    "intro": "Review the essentials before continuing to the official registration flow.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Sunday, September 6, 2026",
+        "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Harbor Park, 4990 New Broad St, Orlando, FL 32814",
+        "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "5K Run/Walk",
+        "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "facebook",
+        "label": "Registration path",
+        "value": "Registration continues through the official RunSignup event page.",
+        "source_url": "https://runsignup.com/Race/Register/?raceId=165234",
+        "source_path": "runner_decision_checklist.items.facebook"
+      },
+      {
+        "id": "series",
+        "label": "Operator portfolio fit",
+        "value": "Southern Timing lists the Labor Day 5K on its public event calendar and the race page identifies Southern Timing for RFID chip timing.",
+        "source_url": "https://www.southerntimingfl.com/events-calendar",
+        "source_path": "runner_decision_checklist.items.series",
+        "detail": "This representative event demonstrates a repeatable event-page system for the operator portfolio."
+      }
+    ]
+  },
+  "schedule": [],
+  "story": {
+    "kicker": "Race overview",
+    "title": "An Orlando 5K with Southern Timing support and RunSignup registration.",
+    "paragraphs": [
+      "Labor Day 5K is a representative Southern Timing event with a straightforward 5K registration path and Orlando race-day setting.",
+      "The page can make date, location, timing relationship, and registration details clear while demonstrating a reusable system for more events on the operator calendar."
+    ]
+  },
+  "startline_value": {
+    "headline": "A portfolio-ready event page for Southern Timing.",
+    "intro": "This representative page shows how one Southern Timing event could become a polished runner-facing landing page while registration stays in the official event flow.",
+    "improved": [
+      "Makes date, venue, event options, and registration path scannable on mobile.",
+      "Keeps the operator relationship visible without replacing the official registration system.",
+      "Creates a repeatable structure that can extend across a broader operator event portfolio."
+    ],
+    "paid_includes": [
+      "A reusable operator portfolio page system for selected events.",
+      "SEO-ready event details and clear official registration CTAs.",
+      "Flexible sections for schedule, packet pickup, awards, sponsors, and partner details when source-backed.",
+      "StartLine complements timing, event management, and registration workflows rather than replacing them."
+    ],
+    "proof_points": []
+  },
+  "seo": {
+    "meta_title": "Labor Day 5K \u2014 Southern Timing",
+    "meta_description": "Race details for Labor Day 5K, organized into a clear runner-facing page with official registration links."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "1cb51beed01563f7d68121240325d68c",
+    "route": "/private/mockups/1cb51beed01563f7d68121240325d68c/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K",
+    "source_platform": "runsignup",
+    "source_race_id": "165234",
+    "registration_race_id": "165234",
+    "generated_from": "manual Lane D operator portfolio mockup workflow",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "D",
+    "prospect_type": "race_management_company",
+    "email_template_key": "operator_portfolio_v1",
+    "operator_company": "Southern Timing",
+    "operator_contact_email": "info@southerntimingfl.com",
+    "operator_prospect_id": "f1b7000d-2e80-4ad9-a7d4-1da80baf9d8e",
+    "source_urls": [
+      "https://www.southerntimingfl.com/",
+      "https://www.southerntimingfl.com/events-calendar",
+      "https://www.southerntimingfl.com/labor-day-5k",
+      "https://www.southerntimingfl.com/contact",
+      "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K"
+    ],
+    "captured_at": "2026-08-06T00:00:00Z",
+    "assets": [
+      {
+        "src": "/mockups/1cb51beed01563f7d68121240325d68c/official-hero.png",
+        "alt": "Labor Day 5K event artwork",
+        "caption": "Event artwork for race day.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-165xxx/165234/raceBanner-GtruRut3-bMrlGc.png"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K",
+      "source_confirmed_sections": [
+        "event",
+        "story",
+        "distances",
+        "runner_decision_checklist",
+        "registration",
+        "identity"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k-run-walk"
+      ],
+      "items": [
+        {
+          "field": "identity.name",
+          "path": "identity.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K"
+        },
+        {
+          "field": "event.date",
+          "path": "event.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K"
+        },
+        {
+          "field": "event.location",
+          "path": "event.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K"
+        },
+        {
+          "field": "distances",
+          "path": "distances",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K"
+        },
+        {
+          "field": "registration.url",
+          "path": "registration.url",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/Register/?raceId=165234"
+        },
+        {
+          "field": "organization.name",
+          "path": "organization.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.southerntimingfl.com/events-calendar"
+        },
+        {
+          "field": "runner_decision_checklist",
+          "path": "runner_decision_checklist",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "path": "runner_decision_checklist.items.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "path": "runner_decision_checklist.items.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "path": "runner_decision_checklist.items.distance",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/FL/Orlando/5thAnnualLaborDay5K"
+        },
+        {
+          "field": "runner_decision_checklist.items.facebook",
+          "path": "runner_decision_checklist.items.facebook",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/Register/?raceId=165234"
+        },
+        {
+          "field": "runner_decision_checklist.items.series",
+          "path": "runner_decision_checklist.items.series",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.southerntimingfl.com/events-calendar"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Only verified public race facts are shown; operational details not visible in public materials should be confirmed by the race organizer before launch.",
+      "items": [
+        "Confirm final race-day logistics, pricing, and packet-pickup details with the organizer before publishing a live customer site."
+      ]
+    }
+  },
+  "footer": {
+    "relationship_attribution": " \u00b7 A representative event page for Southern Timing"
+  }
+}

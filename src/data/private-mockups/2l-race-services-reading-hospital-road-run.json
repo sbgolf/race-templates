@@ -1,0 +1,301 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "Reading Hospital Road Run",
+    "slug": "2l-race-services-reading-hospital-road-run",
+    "short_name": "Reading Hospital Road Run",
+    "tagline": "A 2L Race Services featured race with half marathon, 5K, and 1-mile options.",
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    },
+    "hero_image": {
+      "src": "/mockups/019c1ac69f39245219459da96495ef79/official-hero.jpg",
+      "alt": "Reading Hospital Road Run event artwork",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-97xxx/97035/raceBanner-eeF467CO-bG9uTd.jpg",
+      "fit": "contain",
+      "presentation": "banner"
+    }
+  },
+  "organization": {
+    "name": "2L Race Services",
+    "url": "https://www.2lraceservices.com/",
+    "role_label": "2L Race Services"
+  },
+  "event": {
+    "date": "2026-10-18",
+    "date_label": "Sunday, October 18, 2026",
+    "location": "West Reading, PA 19611",
+    "timezone": "America/New_York"
+  },
+  "distances": [
+    {
+      "id": "half-marathon",
+      "name": "Half Marathon",
+      "distance": "Half Marathon",
+      "featured": true,
+      "profile": "Half Marathon registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+      }
+    },
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": false,
+      "profile": "5K registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+      }
+    },
+    {
+      "id": "1-mile-fun-walk-run",
+      "name": "1 Mile Fun Walk/Run",
+      "distance": "1 Mile Fun Walk/Run",
+      "featured": false,
+      "profile": "1 Mile Fun Walk/Run registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=97035",
+    "platform": "runsignup",
+    "cta_label": "Continue to official registration",
+    "intro": "Registration continues through the official RunSignup event page."
+  },
+  "runner_decision_checklist": {
+    "headline": "Key details before registration",
+    "intro": "Review the essentials before continuing to the official registration flow.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Sunday, October 18, 2026",
+        "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "West Reading, PA 19611",
+        "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "Half Marathon, 5K, 1 Mile Fun Walk/Run",
+        "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "facebook",
+        "label": "Registration path",
+        "value": "Registration continues through the official RunSignup event page.",
+        "source_url": "https://runsignup.com/Race/Register/?raceId=97035",
+        "source_path": "runner_decision_checklist.items.facebook"
+      },
+      {
+        "id": "series",
+        "label": "Operator portfolio fit",
+        "value": "2L Race Services highlights the Reading Hospital Road Run from its Event Management featured-races section.",
+        "source_url": "https://www.2lraceservices.com/event-management",
+        "source_path": "runner_decision_checklist.items.series",
+        "detail": "This representative event demonstrates a repeatable event-page system for the operator portfolio."
+      }
+    ]
+  },
+  "schedule": [],
+  "story": {
+    "kicker": "Race overview",
+    "title": "A 2L Race Services featured race with half marathon, 5K, and 1-mile options.",
+    "paragraphs": [
+      "Reading Hospital Road Run gives 2L Race Services a representative multi-distance road-race page with an official RunSignup registration path.",
+      "The mockup organizes the half marathon, 5K, and 1-mile options with date, location, and registration details in a repeatable operator-ready format."
+    ]
+  },
+  "startline_value": {
+    "headline": "A portfolio-ready event page for 2L Race Services.",
+    "intro": "This representative page shows how one 2L Race Services event could become a polished runner-facing landing page while registration stays in the official event flow.",
+    "improved": [
+      "Makes date, venue, event options, and registration path scannable on mobile.",
+      "Keeps the operator relationship visible without replacing the official registration system.",
+      "Creates a repeatable structure that can extend across a broader operator event portfolio."
+    ],
+    "paid_includes": [
+      "A reusable operator portfolio page system for selected events.",
+      "SEO-ready event details and clear official registration CTAs.",
+      "Flexible sections for schedule, packet pickup, awards, sponsors, and partner details when source-backed.",
+      "StartLine complements timing, event management, and registration workflows rather than replacing them."
+    ],
+    "proof_points": []
+  },
+  "seo": {
+    "meta_title": "Reading Hospital Road Run \u2014 2L Race Services",
+    "meta_description": "Race details for Reading Hospital Road Run, organized into a clear runner-facing page with official registration links."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "019c1ac69f39245219459da96495ef79",
+    "route": "/private/mockups/019c1ac69f39245219459da96495ef79/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun",
+    "source_platform": "runsignup",
+    "source_race_id": "97035",
+    "registration_race_id": "97035",
+    "generated_from": "manual Lane D operator portfolio mockup workflow",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "D",
+    "prospect_type": "race_management_company",
+    "email_template_key": "operator_portfolio_v1",
+    "operator_company": "2L Race Services",
+    "operator_contact_email": "info@2lraceservices.com",
+    "operator_prospect_id": "51a744af-8501-4c04-86ac-f59ef7d9601a",
+    "source_urls": [
+      "https://www.2lraceservices.com/",
+      "https://www.2lraceservices.com/event-management",
+      "https://www.2lraceservices.com/schedule",
+      "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+    ],
+    "captured_at": "2026-08-06T00:00:00Z",
+    "assets": [
+      {
+        "src": "/mockups/019c1ac69f39245219459da96495ef79/official-hero.jpg",
+        "alt": "Reading Hospital Road Run event artwork",
+        "caption": "Event artwork for race day.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-97xxx/97035/raceBanner-eeF467CO-bG9uTd.jpg"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun",
+      "source_confirmed_sections": [
+        "event",
+        "story",
+        "distances",
+        "runner_decision_checklist",
+        "registration",
+        "identity"
+      ],
+      "source_confirmed_distance_ids": [
+        "half-marathon",
+        "5k",
+        "1-mile-fun-walk-run"
+      ],
+      "items": [
+        {
+          "field": "identity.name",
+          "path": "identity.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+        },
+        {
+          "field": "event.date",
+          "path": "event.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+        },
+        {
+          "field": "event.location",
+          "path": "event.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+        },
+        {
+          "field": "distances",
+          "path": "distances",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+        },
+        {
+          "field": "registration.url",
+          "path": "registration.url",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/Register/?raceId=97035"
+        },
+        {
+          "field": "organization.name",
+          "path": "organization.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.2lraceservices.com/event-management"
+        },
+        {
+          "field": "runner_decision_checklist",
+          "path": "runner_decision_checklist",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "path": "runner_decision_checklist.items.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "path": "runner_decision_checklist.items.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "path": "runner_decision_checklist.items.distance",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/PA/WestReading/ReadingHospitalRoadRun"
+        },
+        {
+          "field": "runner_decision_checklist.items.facebook",
+          "path": "runner_decision_checklist.items.facebook",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://runsignup.com/Race/Register/?raceId=97035"
+        },
+        {
+          "field": "runner_decision_checklist.items.series",
+          "path": "runner_decision_checklist.items.series",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://www.2lraceservices.com/event-management"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Only verified public race facts are shown; operational details not visible in public materials should be confirmed by the race organizer before launch.",
+      "items": [
+        "Confirm final race-day logistics, pricing, and packet-pickup details with the organizer before publishing a live customer site."
+      ]
+    }
+  },
+  "footer": {
+    "relationship_attribution": " \u00b7 A representative event page for 2L Race Services"
+  }
+}

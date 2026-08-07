@@ -1,0 +1,293 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "The Inferno 5K + 10K",
+    "slug": "bishops-events-the-inferno-5k-10k",
+    "short_name": "The Inferno",
+    "tagline": "A Bishop's Events 5K and 10K race at Dirt Farm Brewing.",
+    "colors": {
+      "primary": "#294735",
+      "secondary": "#D89B2A",
+      "accent": "#9F4A26",
+      "ink": "#2A1F18"
+    },
+    "hero_image": {
+      "src": "/mockups/d2705e6ca2beacf5ca66de69e2811f6d/official-hero.jpg",
+      "alt": "The Inferno 5K + 10K event artwork",
+      "source": "https://dirtfarmbrewing.com/wp-content/uploads/2024/01/IMG_7118-scaled-e1704316247407.jpg",
+      "fit": "contain",
+      "presentation": "banner"
+    }
+  },
+  "organization": {
+    "name": "Bishop's Events",
+    "url": "https://bishopsevents.com/",
+    "role_label": "Bishop's Events"
+  },
+  "event": {
+    "date": "2026-08-29",
+    "date_label": "Saturday, August 29, 2026",
+    "location": "Dirt Farm Brewing, Bluemont, VA",
+    "timezone": "America/New_York"
+  },
+  "distances": [
+    {
+      "id": "5k",
+      "name": "5K",
+      "distance": "5K",
+      "featured": true,
+      "profile": "5K registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/"
+      }
+    },
+    {
+      "id": "10k",
+      "name": "10K",
+      "distance": "10K",
+      "featured": false,
+      "profile": "10K registration option.",
+      "highlights": [],
+      "provenance": {
+        "source": "official event page",
+        "confidence": "high",
+        "verified": true,
+        "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/"
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://bishopsevents.com/event/2026-the-inferno-5k-10k/",
+    "platform": "official_site",
+    "cta_label": "Continue to official registration",
+    "intro": "Registration continues through the official Bishop's Events event page."
+  },
+  "runner_decision_checklist": {
+    "headline": "Key details before registration",
+    "intro": "Review the essentials before continuing to the official registration flow.",
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, August 29, 2026",
+        "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/",
+        "source_path": "runner_decision_checklist.items.date"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "value": "Dirt Farm Brewing, Bluemont, VA",
+        "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/",
+        "source_path": "runner_decision_checklist.items.location"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "5K, 10K",
+        "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/",
+        "source_path": "runner_decision_checklist.items.distance"
+      },
+      {
+        "id": "facebook",
+        "label": "Registration path",
+        "value": "Registration continues through the official Bishop's Events event page.",
+        "source_url": "https://bishopsevents.com/event/2026-the-inferno-5k-10k/",
+        "source_path": "runner_decision_checklist.items.facebook"
+      },
+      {
+        "id": "series",
+        "label": "Operator portfolio fit",
+        "value": "Bishop's Events maintains public event-category listings and the Dirt Farm event page points runners to Bishop's Events registration.",
+        "source_url": "https://bishopsevents.com/events/category/5k/list/",
+        "source_path": "runner_decision_checklist.items.series",
+        "detail": "This representative event demonstrates a repeatable event-page system for the operator portfolio."
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "time": "Aug. 29, 11:30 AM",
+      "title": "5K and 10K start",
+      "location": "Dirt Farm Brewing"
+    }
+  ],
+  "story": {
+    "kicker": "Race overview",
+    "title": "A Bishop's Events 5K and 10K race at Dirt Farm Brewing.",
+    "paragraphs": [
+      "The Inferno gives Bishop's Events a representative brewery race page with two distance options and a direct official registration path.",
+      "The mockup shows how event details, start time, location, and registration can sit in one polished runner-facing page for a broader event calendar."
+    ]
+  },
+  "startline_value": {
+    "headline": "A portfolio-ready event page for Bishop's Events.",
+    "intro": "This representative page shows how one Bishop's Events event could become a polished runner-facing landing page while registration stays in the official event flow.",
+    "improved": [
+      "Makes date, venue, event options, and registration path scannable on mobile.",
+      "Keeps the operator relationship visible without replacing the official registration system.",
+      "Creates a repeatable structure that can extend across a broader operator event portfolio."
+    ],
+    "paid_includes": [
+      "A reusable operator portfolio page system for selected events.",
+      "SEO-ready event details and clear official registration CTAs.",
+      "Flexible sections for schedule, packet pickup, awards, sponsors, and partner details when source-backed.",
+      "StartLine complements timing, event management, and registration workflows rather than replacing them."
+    ],
+    "proof_points": []
+  },
+  "seo": {
+    "meta_title": "The Inferno 5K + 10K \u2014 Bishop's Events",
+    "meta_description": "Race details for The Inferno 5K + 10K, organized into a clear runner-facing page with official registration links."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "private_mockup": {
+    "access_token": "d2705e6ca2beacf5ca66de69e2811f6d",
+    "route": "/private/mockups/d2705e6ca2beacf5ca66de69e2811f6d/",
+    "noindex": true,
+    "template": "community",
+    "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/",
+    "source_platform": "official_site",
+    "source_race_id": "2026-the-inferno-5k-10k",
+    "registration_race_id": "2026-the-inferno-5k-10k",
+    "generated_from": "manual Lane D operator portfolio mockup workflow",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "D",
+    "prospect_type": "race_management_company",
+    "email_template_key": "operator_portfolio_v1",
+    "operator_company": "Bishop's Events",
+    "operator_contact_email": "BishopsEvents@yahoo.com",
+    "operator_prospect_id": "4dca9ab9-29b1-42d2-ac08-38ac94ece5dd",
+    "source_urls": [
+      "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/",
+      "https://bishopsevents.com/event/2026-the-inferno-5k-10k/",
+      "https://bishopsevents.com/events/category/5k/list/",
+      "https://bishopsevents.com/contact/"
+    ],
+    "captured_at": "2026-08-06T00:00:00Z",
+    "assets": [
+      {
+        "src": "/mockups/d2705e6ca2beacf5ca66de69e2811f6d/official-hero.jpg",
+        "alt": "The Inferno 5K + 10K event artwork",
+        "caption": "Event artwork for race day.",
+        "source": "https://dirtfarmbrewing.com/wp-content/uploads/2024/01/IMG_7118-scaled-e1704316247407.jpg"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/",
+      "source_confirmed_sections": [
+        "event",
+        "story",
+        "distances",
+        "runner_decision_checklist",
+        "registration",
+        "schedule",
+        "identity"
+      ],
+      "source_confirmed_distance_ids": [
+        "5k",
+        "10k"
+      ],
+      "items": [
+        {
+          "field": "identity.name",
+          "path": "identity.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/"
+        },
+        {
+          "field": "event.date",
+          "path": "event.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/"
+        },
+        {
+          "field": "event.location",
+          "path": "event.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/"
+        },
+        {
+          "field": "distances",
+          "path": "distances",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/"
+        },
+        {
+          "field": "registration.url",
+          "path": "registration.url",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://bishopsevents.com/event/2026-the-inferno-5k-10k/"
+        },
+        {
+          "field": "organization.name",
+          "path": "organization.name",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://bishopsevents.com/events/category/5k/list/"
+        },
+        {
+          "field": "runner_decision_checklist",
+          "path": "runner_decision_checklist",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/"
+        },
+        {
+          "field": "runner_decision_checklist.items.date",
+          "path": "runner_decision_checklist.items.date",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/"
+        },
+        {
+          "field": "runner_decision_checklist.items.location",
+          "path": "runner_decision_checklist.items.location",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/"
+        },
+        {
+          "field": "runner_decision_checklist.items.distance",
+          "path": "runner_decision_checklist.items.distance",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://dirtfarmbrewing.com/event/bishops-events-the-inferno-race/"
+        },
+        {
+          "field": "runner_decision_checklist.items.facebook",
+          "path": "runner_decision_checklist.items.facebook",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://bishopsevents.com/event/2026-the-inferno-5k-10k/"
+        },
+        {
+          "field": "runner_decision_checklist.items.series",
+          "path": "runner_decision_checklist.items.series",
+          "source": "official source",
+          "confidence": "high",
+          "source_url": "https://bishopsevents.com/events/category/5k/list/"
+        }
+      ]
+    },
+    "uncertainty": {
+      "summary": "Only verified public race facts are shown; operational details not visible in public materials should be confirmed by the race organizer before launch.",
+      "items": [
+        "Confirm final race-day logistics, pricing, and packet-pickup details with the organizer before publishing a live customer site."
+      ]
+    }
+  },
+  "footer": {
+    "relationship_attribution": " \u00b7 A representative event page for Bishop's Events"
+  }
+}
