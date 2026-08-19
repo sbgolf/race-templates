@@ -1,0 +1,410 @@
+{
+  "identity": {
+    "template": "community",
+    "name": "2026 Hytrol Industrial Park 5K/10K",
+    "slug": "hytrol-industrial-park-5k-10k",
+    "short_name": "Hytrol Industrial Park",
+    "tagline": "A 30-year Jonesboro tradition supporting the Jonesboro Church Health Center.",
+    "edition": "Jonesboro, Arkansas",
+    "hero_image": {
+      "src": "/mockups/e1997daac9c34938ef6f5ba38c9a5d17/2-8057495ded.jpg",
+      "alt": "Hytrol Industrial Park race participants wearing finisher medals near the finish area",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-127xxx/127604/raceBanner-r878aAjT-bOWwxP.jpg",
+      "source_label": "Official RunSignup race banner",
+      "presentation": "photo",
+      "aspect_ratio": "3.5 / 1",
+      "fit": "cover",
+      "generated": false
+    },
+    "colors": {
+      "primary": "#284A38",
+      "secondary": "#C66A3A",
+      "accent": "#E1A646",
+      "ink": "#2A1F18"
+    }
+  },
+  "event": {
+    "date": "2026-11-14",
+    "date_label": "Saturday, November 14, 2026",
+    "time": "09:00",
+    "location": "2020 Hytrol Street, Jonesboro, AR 72401",
+    "venue": "Hytrol",
+    "timezone": "America/Chicago"
+  },
+  "organization": {
+    "name": "Hytrol and Dan’s Health Club",
+    "role_label": "Host organization"
+  },
+  "distances": [
+    {
+      "id": "hytrol-5k",
+      "name": "Hytrol 5K",
+      "distance": "5K",
+      "distance_miles": 3.1,
+      "featured": true,
+      "start_time": "9:00 AM CST",
+      "price": "$25",
+      "profile": "Road 5K through Hytrol Industrial Park in Jonesboro.",
+      "map_label": "Hytrol Industrial Park 5K",
+      "highlights": [
+        "Walkers are welcome in the 5K.",
+        "Current base price is $25 before the November 2, 2026 price increase.",
+        "Race proceeds benefit the Jonesboro Church Health Center."
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "method": "RunSignup Events and Description sections list the Hytrol 5K, 9:00 AM CST start, $25 current price, course setting, and beneficiary."
+      }
+    },
+    {
+      "id": "hytrol-10k",
+      "name": "Hytrol 10K",
+      "distance": "10K",
+      "distance_miles": 6.2,
+      "featured": false,
+      "start_time": "9:00 AM CST",
+      "price": "$35",
+      "profile": "Road 10K through Hytrol Industrial Park in Jonesboro.",
+      "map_label": "Hytrol Industrial Park 10K",
+      "highlights": [
+        "Walkers are welcome in the 10K.",
+        "Current base price is $35 before the November 2, 2026 price increase.",
+        "Course details, awards, and timing information are noted as coming closer to race day."
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "method": "RunSignup Events and Description sections list the Hytrol 10K, 9:00 AM CST start, $35 current price, course setting, and later course/awards/timing note."
+      }
+    },
+    {
+      "id": "spirit-runner",
+      "name": "Spirit Runner",
+      "distance": "Support option",
+      "featured": false,
+      "start_time": "Support option",
+      "price": "$25",
+      "profile": "Support option for people who want to contribute without participating on course.",
+      "highlights": [
+        "Listed by RunSignup as Spirit Runner (Not Participating).",
+        "Current base price is $25 before the November 2, 2026 price increase."
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "method": "RunSignup Events section lists Spirit Runner (Not Participating), price, and price-increase timing."
+      }
+    }
+  ],
+  "registration": {
+    "url": "https://runsignup.com/Race/Register/?raceId=127604",
+    "platform": "runsignup",
+    "cta_label": "Register on RunSignup"
+  },
+  "course": {
+    "title": "A community 5K/10K through Hytrol Industrial Park.",
+    "description": "Participants can choose between a 5K or 10K through Hytrol Industrial Park in Jonesboro. Detailed route imagery was not available in the verified public race information, so this concept keeps the course section focused on confirmed race options and registration guidance.",
+    "type": "Road 5K/10K"
+  },
+  "runner_decision_checklist": {
+    "kicker": "Race-day checklist",
+    "headline": "What runners and walkers need before signing up.",
+    "intro": "A clear, phone-friendly summary of the date, location, event options, prices, packet pickup, and official RunSignup registration path.",
+    "footer_cta": false,
+    "items": [
+      {
+        "id": "date",
+        "label": "Race date",
+        "value": "Saturday, November 14, 2026",
+        "detail": "The race starts at 9:00 AM CST.",
+        "source_path": "event.date",
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K"
+      },
+      {
+        "id": "location",
+        "label": "Start/finish area",
+        "value": "2020 Hytrol Street, Jonesboro, AR 72401",
+        "detail": "Race-day packet pickup is listed near the start/finish line directly in front of Hytrol.",
+        "source_path": "event.location",
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K"
+      },
+      {
+        "id": "distance",
+        "label": "Event options",
+        "value": "Hytrol 5K, Hytrol 10K, and Spirit Runner support option",
+        "detail": "The 5K and 10K are both listed with a 9:00 AM CST start; the Spirit Runner option is for non-participating supporters.",
+        "source_path": "distances",
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "applies_to_distance_ids": [
+          "hytrol-5k",
+          "hytrol-10k",
+          "spirit-runner"
+        ]
+      },
+      {
+        "id": "price",
+        "label": "Current base prices",
+        "value": "$25 5K, $35 10K, $25 Spirit Runner",
+        "detail": "RunSignup lists a price increase beginning November 2, 2026: 5K and Spirit Runner to $35, 10K to $50.",
+        "source_path": "runner_decision_checklist.items.price",
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K"
+      },
+      {
+        "id": "packet-pickup",
+        "label": "Packet pickup",
+        "value": "Nov. 13 at Dan’s Health Club; race morning at Hytrol",
+        "detail": "Early packet pickup is Friday, November 13 from 8:00 AM to 7:30 PM at Dan’s Health Club at Hytrol. Race-day pickup is Saturday, November 14 from 7:00 to 8:30 AM near the start/finish line.",
+        "source_path": "runner_decision_checklist.items.packet-pickup",
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K"
+      },
+      {
+        "id": "series",
+        "label": "Community beneficiary",
+        "value": "Jonesboro Church Health Center",
+        "detail": "Race proceeds support affordable healthcare access in the community through JCHC.",
+        "source_path": "story.paragraphs.series",
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K"
+      },
+      {
+        "id": "swag",
+        "label": "Shirt deadline",
+        "value": "Register by October 21, 2026 to guarantee a race shirt",
+        "detail": "After the deadline, shirts are listed as first-come, first-served while supplies last.",
+        "source_path": "runner_decision_checklist.items.swag",
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K"
+      }
+    ]
+  },
+  "story": {
+    "kicker": "Race overview",
+    "title": "Thirty years of movement, giving back, and community pride in Jonesboro.",
+    "paragraphs": [
+      "The 2026 Hytrol Industrial Park 5K/10K marks 30 consecutive years of bringing the community together through running, walking, and giving back.",
+      "Participants can choose the 5K, the 10K, or a Spirit Runner support option, with registration continuing through the official RunSignup flow.",
+      "Proceeds benefit the Jonesboro Church Health Center, supporting affordable healthcare access for uninsured and underinsured community members."
+    ],
+    "image": {
+      "src": "/mockups/e1997daac9c34938ef6f5ba38c9a5d17/2-8057495ded.jpg",
+      "alt": "Hytrol Industrial Park race participants with medals near the finish area",
+      "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-127xxx/127604/raceBanner-r878aAjT-bOWwxP.jpg",
+      "generated": false
+    }
+  },
+  "schedule": [
+    {
+      "day": "Friday, November 13, 2026",
+      "name": "Early packet pickup",
+      "time": "8:00 AM – 7:30 PM",
+      "location": "Dan’s Health Club at Hytrol, Door S35 at the back of the building",
+      "applies_to_distances": [
+        "hytrol-5k",
+        "hytrol-10k",
+        "spirit-runner"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "method": "RunSignup Packet Pickup section."
+      }
+    },
+    {
+      "day": "Saturday, November 14, 2026",
+      "name": "Race-day packet pickup",
+      "time": "7:00 AM – 8:30 AM",
+      "location": "Registration table near the start/finish line, directly in front of Hytrol",
+      "applies_to_distances": [
+        "hytrol-5k",
+        "hytrol-10k",
+        "spirit-runner"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "method": "RunSignup Packet Pickup section."
+      }
+    },
+    {
+      "day": "Saturday, November 14, 2026",
+      "name": "5K and 10K start",
+      "time": "9:00 AM CST",
+      "location": "Hytrol Industrial Park",
+      "applies_to_distances": [
+        "hytrol-5k",
+        "hytrol-10k"
+      ],
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "method": "RunSignup Events and Race Date sections."
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where does registration happen?",
+      "answer": "Registration stays on the official RunSignup page. This race website concept makes the event information easier to scan, then sends runners to RunSignup to complete registration and payment.",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "method": "Registration CTA and RunSignup page routing."
+      }
+    },
+    {
+      "question": "Who benefits from the race?",
+      "answer": "Race proceeds benefit the Jonesboro Church Health Center, which provides affordable healthcare services for uninsured and underinsured community members.",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "method": "RunSignup Description section and corroborating Jonesboro Right Now article."
+      }
+    },
+    {
+      "question": "Are walkers welcome?",
+      "answer": "Yes. Walkers are welcome in both the 5K and 10K.",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "method": "RunSignup Additional Race Information section."
+      }
+    },
+    {
+      "question": "When is the race-shirt deadline?",
+      "answer": "RunSignup states that runners should register by October 21, 2026 to guarantee a race shirt. After that, shirts are available first-come, first-served while supplies last.",
+      "provenance": {
+        "verified": true,
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "method": "RunSignup Race Shirts section."
+      }
+    }
+  ],
+  "startline_value": {
+    "headline": "A dedicated race page that complements RunSignup.",
+    "intro": "This concept keeps registration and payment on RunSignup while giving runners a clearer, more polished place to understand the event before they click through.",
+    "improved": [
+      "Places date, location, distances, pricing, packet pickup, and beneficiary details in one mobile-friendly path.",
+      "Presents the Jonesboro Church Health Center community story with more context than a registration-first listing.",
+      "Keeps repeated registration calls to action pointed at the official RunSignup registration flow."
+    ],
+    "paid_includes": [
+      "Standard package recommendation: a polished dedicated race-marketing website with source-backed event sections and registration-click measurement.",
+      "Starter package fallback: a leaner launch page if the organizer wants to start with the essentials only.",
+      "No registration replacement, no payment processing migration, and no guaranteed growth claim."
+    ],
+    "proof_points": []
+  },
+  "seo": {
+    "meta_title": "2026 Hytrol Industrial Park 5K/10K — Race Details",
+    "meta_description": "Race details for the 2026 Hytrol Industrial Park 5K/10K in Jonesboro, including date, location, event options, packet pickup, beneficiary, and RunSignup registration."
+  },
+  "analytics": {
+    "register_click_event_name": "register_click"
+  },
+  "footer": {
+    "relationship_attribution": " · Registration continues on RunSignup"
+  },
+  "private_mockup": {
+    "generated": true,
+    "noindex": true,
+    "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+    "captured_at": "2026-08-19T12:51:52.901Z",
+    "access_token": "e1997daac9c34938ef6f5ba38c9a5d17",
+    "race_slug": "hytrol-industrial-park-5k-10k",
+    "route": "/private/mockups/e1997daac9c34938ef6f5ba38c9a5d17/",
+    "template": "community",
+    "source_platform": "runsignup",
+    "source_race_id": "127604",
+    "registration_race_id": "127604",
+    "source_urls": [
+      "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+      "https://runsignup.com/Race/Register/?raceId=127604",
+      "https://www.fleetfeet.com/races/ar/jonesboro/127604-2026-hytrol-industrial-park-5k-10k",
+      "https://jonesbororightnow.com/news/268862-hytrol-industrial-park-5k-10k-to-benefit-jonesboro-church-health-center/",
+      "https://d368g9lw5ileu7.cloudfront.net/races/races-127xxx/127604/raceBanner-r878aAjT-bOWwxP.jpg"
+    ],
+    "contact_sources": [
+      {
+        "type": "email",
+        "label": "Verified race coordinator routing email on RunSignup",
+        "masked_email": "hf******@hytrol.com",
+        "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+        "source_context": "RunSignup Questions section lists Race Coordinator: Hannah Freeland and a Hytrol routing email.",
+        "recommended": true,
+        "confidence": "high"
+      },
+      {
+        "type": "form",
+        "label": "RunSignup Race Contact Info form",
+        "url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K/Contact",
+        "confidence": "high"
+      }
+    ],
+    "assets": [
+      {
+        "src": "/mockups/e1997daac9c34938ef6f5ba38c9a5d17/2-8057495ded.jpg",
+        "alt": "Hytrol Industrial Park race participants wearing finisher medals near the finish area",
+        "caption": "Official race banner used as the hero visual.",
+        "source": "https://d368g9lw5ileu7.cloudfront.net/races/races-127xxx/127604/raceBanner-r878aAjT-bOWwxP.jpg"
+      }
+    ],
+    "provenance": {
+      "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K",
+      "captured_at": "2026-08-19T12:51:52.901Z",
+      "source_confirmed_sections": [
+        "identity",
+        "event",
+        "organization",
+        "distances",
+        "registration",
+        "course",
+        "runner_decision_checklist",
+        "story",
+        "schedule",
+        "faqs"
+      ],
+      "source_confirmed_distance_ids": [
+        "hytrol-5k",
+        "hytrol-10k",
+        "spirit-runner"
+      ],
+      "items": [
+        { "path": "identity.name", "field": "identity.name", "source": "RunSignup H1/page title", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "identity.hero_image", "field": "identity.hero_image", "source": "Official RunSignup race banner", "confidence": "high", "source_url": "https://d368g9lw5ileu7.cloudfront.net/races/races-127xxx/127604/raceBanner-r878aAjT-bOWwxP.jpg" },
+        { "path": "event.date", "field": "event.date", "source": "RunSignup page header and Description Race Date", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "event.location", "field": "event.location", "source": "RunSignup Place section", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "organization.name", "field": "organization.name", "source": "Jonesboro Right Now article states Hytrol and Dan’s Health Club host the event", "confidence": "medium", "source_url": "https://jonesbororightnow.com/news/268862-hytrol-industrial-park-5k-10k-to-benefit-jonesboro-church-health-center/" },
+        { "path": "distances", "field": "distances", "source": "RunSignup Events section", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "registration.url", "field": "registration.url", "source": "RunSignup Sign Up/Register link", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "runner_decision_checklist.items.date", "field": "runner_decision_checklist.items.date", "source": "RunSignup Race Date", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "runner_decision_checklist.items.location", "field": "runner_decision_checklist.items.location", "source": "RunSignup Place and Packet Pickup sections", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "runner_decision_checklist.items.distance", "field": "runner_decision_checklist.items.distance", "source": "RunSignup Events section", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "runner_decision_checklist.items.price", "field": "runner_decision_checklist.items.price", "source": "RunSignup Registration Fees section", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "runner_decision_checklist.items.packet-pickup", "field": "runner_decision_checklist.items.packet-pickup", "source": "RunSignup Packet Pickup section", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "runner_decision_checklist.items.series", "field": "runner_decision_checklist.items.series", "source": "RunSignup Description and Jonesboro Right Now article", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "runner_decision_checklist.items.swag", "field": "runner_decision_checklist.items.swag", "source": "RunSignup Race Shirts section", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "schedule", "field": "schedule", "source": "RunSignup Packet Pickup and Race Date sections", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" },
+        { "path": "private_mockup.contact_sources", "field": "private_mockup.contact_sources", "source": "RunSignup Questions/Race Contact sections", "confidence": "high", "source_url": "https://runsignup.com/Race/AR/Jonesboro/HytrolIndustrialPark5K10K" }
+      ]
+    },
+    "confidence": {
+      "high": 14,
+      "medium": 1,
+      "low": 0
+    },
+    "uncertainty": {
+      "summary": "The mockup uses verified public race facts. Course map details, awards, and final timing details should be confirmed by the organizer before a live customer site because the source says those details will be announced closer to race day.",
+      "items": [
+        "Detailed course map/route imagery was not found in the verified public source and is intentionally omitted.",
+        "Awards and full timing information are listed as coming closer to race day and are intentionally not invented.",
+        "The direct contact path is verified from RunSignup, but no external outreach is authorized by this asset-preparation task."
+      ]
+    },
+    "generated_from": "owner-approved Candidate 10 Phase 2A-1C asset preparation",
+    "owner_approved_for_generation": true,
+    "campaign_lane": "A",
+    "prospect_type": "community_race",
+    "commercial_offer": "StartLine Sites pilot offer",
+    "recommended_tier": "Standard",
+    "fallback_tier": "Starter"
+  }
+}
